@@ -1,6 +1,6 @@
 <?php
  function conexionDB(){
-     $db = new mysqli('localhost','root','1234','neon_store');
+     $db = new mysqli('localhost','root','1234','ghxumdmy_neonledstore');
 
      if(!$db){
          echo "no se conecto";
