@@ -1,0 +1,19 @@
+{
+    "name": "miguel/ned_lead_store",
+    "description": "Neon House Led Store",
+    "type":"project",
+    "authors": [
+        {
+            "name": "miguelPretell12",
+            "email": "migpretellp@uch.pe"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Model\\": "./models",
+            "MVC\\": "./",
+            "Controllers\\": "./controllers"
+        }
+    }
+}
