@@ -42,8 +42,8 @@ class ActiveRecord {
             if(property_exists($objeto, $key)){
                 $objeto->$key = $value;
             }
-            return $objeto;
         }
+        return $objeto;
     }
 
     public static function consultarSQL($query){
@@ -70,7 +70,7 @@ class ActiveRecord {
     }
 
     // metodo listar
-    public function listar(){
+    public static function listar(){
         $query = "SELECT * FROM ".static::$tabla;
         $resultado = static::consultarSQL($query);
         return $resultado;
