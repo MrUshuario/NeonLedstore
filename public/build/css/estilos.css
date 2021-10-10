@@ -1,0 +1,18 @@
+.form-color {
+    display: block;
+    margin-top: 10px;
+}
+.none {
+    display: none;
+}
+
+.tabla {
+    margin: 10px 0;
+    height: 400px;
+    overflow-y: scroll;
+}
+
+.sticky {
+    position: sticky;
+    top: 0;
+}
