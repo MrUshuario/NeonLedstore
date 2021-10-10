@@ -1,6 +1,7 @@
 <?php 
 namespace Controllers;
 
+use Model\Color;
 use Model\Users;
 use MVC\Router;
 
@@ -58,4 +59,5 @@ class AdminController  {
         $id = $_SESSION['id'];
         $router->render("dashboard/index",["id"=>$id]);
     }
+    
 }

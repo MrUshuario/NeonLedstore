@@ -1,12 +1,3 @@
-<!--<h1>Hola mundo</h1>
-<form action="" method="post" id="formLogin">
-    <input type="text" id="user">
-    <br>
-    <input type="password" id="pass">
-    <bR>
-    <input type="submit">
-</form>
--->
 <div class="login">
     <div class="titulo-login">
         <h1>Bienvenido al login de Neon House Store</h1>

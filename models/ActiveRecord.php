@@ -75,6 +75,12 @@ class ActiveRecord {
         $resultado = static::consultarSQL($query);
         return $resultado;
     }
+
+    public static function listarNombre($nombre) {
+        $query = "SELECT * FROM ".static::$tabla. " WHERE nombre like '%".$nombre."%'";
+        $resultado = static::consultarSQL($query);
+        return $resultado;
+    }
     
     // metodo crear
     public function crear(){
@@ -85,7 +91,7 @@ class ActiveRecord {
         $string1 = join("','",array_values($atributos));
 
         //Insertar en la base de datos
-        $query = "INSERT INTO ".static::$tabla." ($string) values (' $string1 ')";
+        $query = "INSERT INTO ".static::$tabla." ($string) values ('$string1')";
         $resultado = self::$db->query($query);
 
         return $resultado;

@@ -9,27 +9,37 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
     
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <link rel="stylesheet" href="build/css/plugins/bootstrap/bootstrap.css">
+    
+    <link rel="stylesheet" href="build/css/bootstrap.min.css">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="build/css/plugins/bootstrap/dataTables.bootstrap.min.css">
+
+
     <link rel="stylesheet" href="build/css/plugins/node-waves/waves.css">
     <link rel="stylesheet" href="build/css/plugins/animate-css/animate.css">
-    <link rel="stylesheet" href="build/css/plugins/jquery-datatable/skin/bootstrap/dataTables.bootstrap.css">
+
     <link rel="stylesheet" href="build/css/style.css">
     <link rel="stylesheet" href="build/css/themes/all-themes.css">
+    <link rel="stylesheet" href="build/css/estilos.css">
+    <script src="build/js/sweetalert.min.js"></script>  
+
+    <script src="build/js/jquery.min.js"></script>
+    <script src="build/js/plugins/DataTable/jquery.dataTables.min.js"></script>
+    <script src="build/js/plugins/DataTable/dataTables.bootstrap.min.js"></script>
 </head>
 <body>
     <?php echo $contenido ?>
-    
-    <script src="build/js/jquery.min.js"></script>
-    <script src="build/js/plugins/bootstrap/bootstrap.js"></script>
-    <script src="build/js/plugins/bootstrap-select/bootstrap-select.js"></script>
+
+    <script src="build/js/plugins/bootstrap/bootstrap.min.js"></script>
+
     <script src="build/js/plugins/jquery-slimscroll/jquery.slimscroll.js"></script>
     <script src="build/js/plugins/node-waves/waves.js"></script>
-    <script src="build/js/plugins/jquery-datatable/jquery.dataTables.js"></script>
-    <script src="build/js/plugins/jquery-datatable/skin/bootstrap/dataTables.bootstrap.js"></script>
     <script src="build/js/admin.js"></script>
-    <script src="build/js/pages/tables/jquery-datatable.js"></script>
     <script src="build/js/demo.js"></script>
-    <script src="build/js/login.js"></script>
+
+    <!-- <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script> -->
+    <!-- <script src="build/js/plugins/bootstrap-select/bootstrap-select.js"></script> -->
+    <!-- <script src="build/js/plugins/jquery-datatable/jquery.dataTables.js"></script> -->
+    <!-- <script src="build/js/plugins/jquery-datatable/skin/bootstrap/dataTables.bootstrap.js"></script> -->
 </body>
 </html>

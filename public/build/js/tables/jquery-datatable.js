@@ -1,10 +1,10 @@
 $(function () {
-    $('.js-basic-example').DataTable({
+    $('#js-basic-example').DataTable({
         responsive: true
     });
 
     //Exportable table
-    $('.js-exportable').DataTable({
+    $('#js-basic-example').DataTable({
         dom: 'Bfrtip',
         responsive: true,
         buttons: [

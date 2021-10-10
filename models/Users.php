@@ -32,13 +32,6 @@ class Users extends ActiveRecord{
         return $resultado;
     }
 
-    public function guardarSession($resul){
-        session_start();
-        $user = $resul->fetch_object();
-        $_SESSION['idUser'] = $user->id;
-
-    }
-
     public function passwordAuth($resultado) {
         $user = $resultado->fetch_object();
         // Iniciar session
