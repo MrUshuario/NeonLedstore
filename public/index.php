@@ -22,10 +22,10 @@ $router->post('/login/verificar',[AdminController::class,'index1']);
 
     // method post
     $router->post('/color/buscar',[ColorController::class,'buscarNombre']);
-    $router->post('/color/getColor',[ColorController::class,'getColor']);
     $router->post('/color/eliminar',[ColorController::class,'eliminarColor']);
     $router->post('/color/guardar',[ColorController::class,'crearColor']);
     $router->post('/color/editar',[ColorController::class,'editColor']);
+    $router->post('/color/getColor',[ColorController::class,'getColor']);
 
 $router->comprobarRutas();
 
