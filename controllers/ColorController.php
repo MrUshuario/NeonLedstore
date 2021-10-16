@@ -51,11 +51,8 @@ class ColorController {
                 ]);
             }
             
+            echo $json;
         }
-        
-        $router->renderAjax("verificar",[
-            "json"=>$json
-        ]);
     }
 
     public static function editColor(Router $router){
@@ -66,9 +63,7 @@ class ColorController {
 
         $json = json_encode($dd);
 
-        $router->renderAjax("verificar",[
-            "json"=>$json
-        ]);
+        echo $json;
     }
 
     public static function buscarNombre(Router $router) {
@@ -78,8 +73,10 @@ class ColorController {
             $json = json_encode([
                 "resp"=>$listar
             ]);
+
+            echo $json;
         }
-        $router->renderAjax("verificar",["json"=>$json]);
+        
     }
 
     public static function getColor(Router $router){
@@ -90,11 +87,9 @@ class ColorController {
             $json = json_encode([
                 "color"=>$color
             ]);
+            
+            echo $json;
         }
-
-        $router->renderAjax('verificar',[
-            "json"=>$json
-        ]);
     }
 
     public static function eliminarColor(Router $router){
@@ -104,9 +99,8 @@ class ColorController {
             $color = Color::find($id);
             $el = $color->eliminar();
             $json = json_encode($el);
+        
+            echo $json;
         }
-        $router->renderAjax('verificar',[
-            "json"=>$json
-        ]);
     }
 }

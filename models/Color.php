@@ -2,6 +2,8 @@
 
 namespace Model;
 
+use Model\ActiveRecord;
+
 class Color extends ActiveRecord{
     protected static $tabla = "tab_color";
     protected static $columnaDB = ["id","nombre","rgb"];

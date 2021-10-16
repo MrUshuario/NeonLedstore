@@ -3,7 +3,9 @@
 require_once __DIR__.'/../includes/app.php';
 
 use Controllers\AdminController;
+use Controllers\CategoriaController;
 use Controllers\ColorController;
+use Controllers\ProductoController;
 use MVC\Router;
 
 $router = new Router();
@@ -26,6 +28,25 @@ $router->post('/login/verificar',[AdminController::class,'index1']);
     $router->post('/color/guardar',[ColorController::class,'crearColor']);
     $router->post('/color/editar',[ColorController::class,'editColor']);
     $router->post('/color/getColor',[ColorController::class,'getColor']);
+
+//Productos
+    // method get
+    $router->get('/producto',[ProductoController::class,'index']);
+
+    // method post
+    $router->post('/producto/guardar',[ProductoController::class,'guardar']);
+
+
+//Categoria
+    // method get
+    $router->get('/categoria',[CategoriaController::class, 'index']);
+    $router->get('/categoria/listar',[CategoriaController::class, 'listados']);
+
+    // method post
+    $router->post('/categoria/crear',[CategoriaController::class, 'crear']);
+    $router->post('/categoria/estado',[CategoriaController::class,'cambiarEstado']);
+    $router->post('/categoria/getCategoria',[CategoriaController::class,'getCategoria']);
+    $router->post('/categoria/actualizar',[CategoriaController::class,'actualizar']);
 
 $router->comprobarRutas();
 

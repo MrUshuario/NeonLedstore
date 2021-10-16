@@ -73,6 +73,7 @@ class ActiveRecord {
     public static function listar(){
         $query = "SELECT * FROM ".static::$tabla;
         $resultado = static::consultarSQL($query);
+        // $resultado = self::$db->query($query);
         return $resultado;
     }
 
@@ -117,6 +118,8 @@ class ActiveRecord {
 
         return $resultado;
     }
+
+    
 
     // metodo eliminar
     public function eliminar(){
