@@ -35,12 +35,13 @@ $(document).ready(function(){
                         console.log(json);
 
                         if(json.res){
+                            cierreModel("modalCategoria");
                             llenarTabla();
                             swal({
                                 title:"Registro completo",
                                 icon:"success"
                             })
-
+                            
                         }else{
                             swal({
                                 title:"Error en el registro",
@@ -50,9 +51,6 @@ $(document).ready(function(){
                     }
                 })
             }else{
-                // Id de actualizar
-                // let id = document.querySelector("").value;
-
                 //=======================================
                 formData.append("cat_nombre",nombre);
                 formData.append("cat_imagen",imagen);
@@ -66,12 +64,12 @@ $(document).ready(function(){
                     processData: false,
                     contentType: false,
                     success: function(response){
-                        // let json = JSON.parse(response);
-                        // const {resp} = json;
-                        // if(resp){
-                        //     llenarTabla();
-                        // }
-                        // console.log(json)
+                        let json = JSON.parse(response);
+                        const {resp, cat} = json;
+                        if(resp){
+                            cierreModel("modalCategoria");
+                            llenarTabla();
+                        }
                     }
                 })
             }
@@ -141,6 +139,40 @@ $(document).ready(function(){
             }
         })
     })
+
+    $(document).on('click',"#delete",function(e){
+        swal({
+            title: "Estas seguro de eliminar esta categoria ?",
+            icon: "warning",
+            buttons: true,
+            dangerMode: true,
+          }).then(ef =>{
+              if(ef){
+                  const id = e.target.dataset.idcategoria;
+                  console.log(id)
+                  $.ajax({
+                      type: "POST",
+                      url:"/categoria/eliminar",
+                      data: {id:id},
+                      success: function(ef){
+                        let json = JSON.parse(ef);
+                        if(json.res){
+                            swal({
+                                title: 'Se elimino correctamente la categoria',
+                                icon: 'success'
+                            })
+                            llenarTabla();
+                        }else {
+                            swal({
+                                title:'No se pudo eliminar, al estar alineado con otro datos',
+                                icon:'error'
+                            });
+                        }
+                      }
+                  })
+              }
+          })
+    })
 })
 
 function limpiarHtml(){
@@ -163,7 +195,7 @@ function llenarTabla(){
                 const row = document.createElement('tr');
                 
                 row.innerHTML = `
-                    <td><img width="160px" src="imagenes/${cat_imagen}"></td>
+                    <td><img width="160px" src="imagenes/${cat_imagen}" id="imgrow"></td>
                     <td>${cat_nombre}</td>
                     <td>${cat_link}</td>
                     <td>
@@ -181,4 +213,85 @@ function llenarTabla(){
     });
 }
 
+function cierreModel(idModel){
+    const modal = document.querySelector(`#${idModel}`);
+    const modalfondo = document.querySelector(".modal-backdrop.fade");
+    modal.classList.add('none');
+    modal.classList.remove('show')
+    modalfondo.classList.remove('show');
+    $("#formCategoria").trigger('reset');
+}
+
+function resetearCerrar(){
+    const cerrar = document.querySelector("#cerrar");
+    const btnRegistrar = document.querySelector("#model-register");
+    cerrar.addEventListener('click',()=>{
+        $("#formCategoria").trigger('reset');
+    });
+
+    btnRegistrar.addEventListener('click',()=>{
+        $("#formCategoria").trigger('reset');
+        $("#id").val("");
+        const img = document.querySelector("#img img");
+        img.src="";
+        img.alt="";
+        img.width=0;
+        img.height=0;
+    })
+}
+
+function buscarNombre(){
+    $("#buscarnombre").keyup(function (){
+        let inputNombre = $("#buscarnombre").val();
+        if( inputNombre === ""){
+            llenarTabla();
+        }else {
+            const data = {
+                nombre : inputNombre
+            }
+            $.ajax({
+                url: "/categoria/buscar",
+                data:data,
+                type: "POST",
+                success: (response) => {
+                    let json = JSON.parse(response);
+                    console.log(json);
+                    const lists = json.list;
+                    limpiarHtml();
+                    if(lists.length != 0){
+                        lists.forEach(list => {
+                            const { cat_nombre, cat_imagen, cat_estado, cat_link, id } = list;
+                            const row = document.createElement('tr');
+                            //Importante en DataTable ya te inclue los TR solo pongan los td
+                            row.innerHTML = `
+                            <td><img width="160px" src="imagenes/${cat_imagen}" id="imgrow"></td>
+                            <td>${cat_nombre}</td>
+                            <td>${cat_link}</td>
+                            <td>
+                                <input type="button" id="btnEstado" class="btn ${cat_estado.toLowerCase() == 'activo' ? 'btn-success':'btn-danger'}" data-id="${id}" value="${cat_estado.toUpperCase()}">
+                            </td>
+                            <td>
+                            <button class="btn btn-warning" id="edit" data-bs-toggle="modal" data-idcategoria=${id} data-bs-target="#modalCategoria" >Edit</button>
+                            <button class="btn btn-danger" id="delete" data-idcategoria=${id}>Delete</button>
+                            </td>
+                            `;
+                            
+                            contenedorTabla.appendChild(row);
+                        });
+                    }else {
+                        const row = document.createElement("tr");
+                        row.innerHTML = `
+                            <td colspan="5" class="text-center">
+                                No se encontraron resultado
+                            </td>
+                        `;
+                        contenedorTabla.appendChild(row);
+                    }
+                }
+            });
+        }
+    });
+}
 llenarTabla()
+resetearCerrar()
+buscarNombre()

@@ -7,7 +7,7 @@
             <img src="build/img/user.png" width="48" height="48" alt="User" />
         </div>
         <div class="info-container">
-            <div class="name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:black"s>John Doe</div>
+            <div class="name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:black">John Doe</div>
             <div class="email" style="color:black">john.doe@example.com</div>
             <div class="btn-group user-helper-dropdown">
                 <i class="material-icons" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="color:black">keyboard_arrow_down</i>

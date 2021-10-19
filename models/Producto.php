@@ -27,5 +27,21 @@ class Producto  extends ActiveRecord{
         $this->pro_tamano = $args['pro_tamano'] ?? null;
         $this->pro_estado = $args['pro_estado'] ?? null;
     }
+    public function setImagen($img){
+        //Eliminar la imagen previa al editar o eliminar
+        /*if(!is_null($this->id)){
+            $this->borrarImagen();
+        }*/
 
+        //Asignar al atributo de imagen el nombre de la imagen
+        if($img){
+            $this->pro_imagen = $img;
+        }
+    }
+
+    public static function listarCatXProd(){
+        $query = "SELECT p.id as id, pro_nombre, pro_descripcion, pro_precio, pro_imagen, pro_tamano, pro_estado, cat_nombre as pro_categoria FROM tab_producto p inner join tab_categorias c ON c.id = p.pro_categoria ";
+        $resultado = static::consultarSQL($query);
+        return $resultado;
+    }
 }

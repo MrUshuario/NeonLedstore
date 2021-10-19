@@ -37,6 +37,10 @@ class Categoria extends ActiveRecord{
 
     public function borrarImagen(){
         //Comprobar si existe el archivo
+        $existArchivo = file_exists(CARPETA_IMAGENES.$this->cat_imagen);
+        if($existArchivo){
+            unlink(CARPETA_IMAGENES.$this->cat_imagen);
+        }
     }
 
     public function actualizarEstado(){
@@ -48,6 +52,12 @@ class Categoria extends ActiveRecord{
     public function actualizarSinImg(){   
         $query = "UPDATE ".static::$tabla." SET cat_nombre= '".$this->cat_nombre."', cat_link='".$this->cat_link."', cat_estado='".$this->cat_estado."' WHERE id=".$this->id." limit 1";
         $resultado = self::$db->query($query);
+        return $resultado;
+    }
+
+    public static function listarNombre($nombre) {
+        $query = "SELECT * FROM ".static::$tabla. " WHERE cat_nombre like '%".$nombre."%'";
+        $resultado = static::consultarSQL($query);
         return $resultado;
     }
 }

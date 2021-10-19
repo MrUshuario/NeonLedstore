@@ -16,3 +16,18 @@
     position: sticky;
     top: 0;
 }
+
+.tmn-input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tmn-input input[type="number"]{
+    width: 80px;
+    border: none;
+    border: 1px solid rgb(181, 181, 181);
+    border-radius: 5px;
+    margin:0 10px ;
+    padding: 8px 10px;
+}

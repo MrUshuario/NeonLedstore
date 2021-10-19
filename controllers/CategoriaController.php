@@ -22,8 +22,8 @@ class CategoriaController
 
             $nombreImg = md5(uniqid(rand(), true)) . ".webp";
 
-            if ($_FILES['cat_imagen']['tmp_name']) {
-                $image = Image::make($_FILES['cat_imagen']['tmp_name'])->fit(800, 600);
+            if ($_FILES['pro_imagen']['tmp_name']) {
+                $image = Image::make($_FILES['pro_imagen']['tmp_name'])->fit(800, 600);
                 $categoria->setImagen($nombreImg);
             }
 
@@ -119,9 +119,37 @@ class CategoriaController
             
             echo json_encode([
                 "resp" => $resultado,
-                "cat"=> $categoria
+                "cat"=> Categoria::find($_POST['id'])
             ]);;
         }
         
+    }
+
+    public static function eliminar(){
+        if($_SERVER['REQUEST_METHOD']==='POST'){
+            $id = $_POST['id'];
+            $id = filter_var($id, FILTER_VALIDATE_INT);
+
+            $categoria = Categoria::find($id);
+            $resultado = $categoria->eliminar();
+            if($resultado){
+                $categoria->borrarImagen();
+            }
+            
+            echo json_encode([
+                "res"=>$resultado
+            ]);
+        }
+    }
+
+    public static function buscarNomCat(){
+        if($_SERVER['REQUEST_METHOD'] === 'POST'){
+            $cat_nombre = $_POST['nombre'];
+            $resultado = Categoria::listarNombre($cat_nombre);
+
+            echo json_encode([
+                "list"=> $resultado
+            ]);
+        }
     }
 }

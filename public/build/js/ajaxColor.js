@@ -77,7 +77,7 @@ const contenedor = document.querySelector("#tablacolor tbody");
                                         ${rgb}
                                     </td>
                                     <td idColor="${id}">
-                                        <button class="btn btn-warning" id="edit" >Edit</button>
+                                        <button class="btn btn-warning" id="edit" data-bs-toggle="modal" data-bs-target="#modalColor" >Edit</button>
                                         <button class="btn btn-danger" id="delete" >Delete</button>
                                     </td>
                                 `;

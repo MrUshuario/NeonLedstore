@@ -13,9 +13,7 @@ class ColorController {
         $json = json_encode([
             "listado" => $listado
         ]);
-        $router->renderAjax("verificar",[
-            "json"=>$json
-        ]);
+        echo $json;
     }
 
     public static function Color(Router $router){
@@ -36,7 +34,8 @@ class ColorController {
                     $json = json_encode([
                         "STATUS"=>1,
                         "mensaje"=>"Registro correctamente",
-                        "listas"=>$listado
+                        "listas"=>$listado,
+                        "c"=>$color
                     ]);
                 } else {
                     $json = json_encode([
@@ -47,7 +46,8 @@ class ColorController {
             }else {
                 $json = json_encode([
                     "STATUS"=>3,
-                    "mensaje"=>"Nombre del color ya registrado"
+                    "mensaje"=>"Nombre del color ya registrado",
+                    "c"=>$color
                 ]);
             }
             

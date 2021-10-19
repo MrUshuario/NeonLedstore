@@ -14,29 +14,57 @@
                     Registrar Producto
                 </button>
 
-                <div class="modal fade" id="modalProducto" tabindex="-1" aria-labelledby="modalColor" aria-hidden="true">
+                <div class="modal fade" id="modalProducto" tabindex="-1" aria-labelledby="modalProducto" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-scrollable">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title" id="modalColor">Guardar Producto</h5>
+                                <h5 class="modal-title">Guardar Producto</h5>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="cerrar"></button>
                             </div>
                             <div class="modal-body">
-                            <form action="post" id="formProducto">
-                                <input type="hidden" id="id">
-                                <div class="mb-3">
-                                    <label for="nombre">Nombre de color</label>
-                                    <input type="text" class="form-control" id="nombre">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="">Imagen</label>
-                                    <input type="file" id="imagen">
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="reset" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                                    <button type="button" class="btn btn-primary" id="save">Guardar</button>
-                                </div>
-                            </form>
+                                <form id="formProducto" enctype="multipart/form-data">
+                                    <input type="hidden" id="id">
+                                    <div class="mb-3">
+                                        <label for="pro_categoria">Categoría</label>
+                                        <select id="pro_categoria" class="form-control">
+                                            <option value="">--Seleccione--</option>
+                                        </select>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="">Nombre de Producto</label>
+                                        <input type="text" id="pro_nombre" class="form-control">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="">descripcion</label>
+                                        <textarea id="pro_descripcion" class="form-control" cols="30" rows="10"></textarea>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="">Precio</label>
+                                        <input type="number" id="pro_precio" class="form-control" step="0.05" >
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="">Imagen</label>
+                                        <input type="file" id="pro_imagen" class="form-control">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="">Tamaño de Imagen</label>
+                                        <div class="tmn-input">
+                                        <input type="number" step="0.10" min="1.0" id="t-1"> X <input type="number" step="0.10" min="1.0" id="t-2" >
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="pro_estado">estado</label>
+                                        <select id="pro_estado" class="form-control">
+                                            <option value="">-SELECCIONE--</option>
+                                            <option value="ACTIVO">ACTIVO</option>
+                                            <option value="INACTIVO">INACTIVO</option>
+                                        </select>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="reset" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                        <button type="submit" class="btn btn-primary" id="save">Guardar</button>
+                                    </div>
+                                </form>
                             </div>
                             
                         </div>
@@ -47,13 +75,14 @@
                     <input type="text" id="buscarnombre">
                 </div>
                 <div class="table-responsive tabla">
-                    <table class="table table-striped table-hover table-light table-fixed" id="tablacolor">
+                    <table class="table table-striped table-hover table-light table-fixed" id="tablaproducto">
                         <thead class="table-dark sticky" >
                             <tr>
                                 <th>#</th>
                                 <th>Nombre</th>
                                 <th>precio</th>
                                 <th>estado</th>
+                                <th></th>
                             </tr>
                         </thead>
                         <tbody >
