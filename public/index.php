@@ -41,6 +41,7 @@ $router = new Router();
     $router->post('/producto/getProForm',[ProductoController::class,'getProductoId']);
     $router->post('/producto/estado',[ProductoController::class,"estado"]);
     $router->post("/producto/eliminar",[ProductoController::class,"eliminar"]);
+    $router->post("/producto/buscarNombre",[ProductoController::class,"buscarNombre"]);
 
 //Categoria
     // method get

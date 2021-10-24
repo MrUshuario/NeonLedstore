@@ -102,14 +102,15 @@ class ProductoController
         }
     }
 
-    public static function estado(){
-        if($_SERVER['REQUEST_METHOD'] == 'POST'){
+    public static function estado()
+    {
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $producto = new Producto($_POST);
 
-            if($producto->pro_estado =='Activo'){
+            if ($producto->pro_estado == 'Activo') {
                 $producto->pro_estado = "Inactivo";
                 $resultado = $producto->editEstado();
-            }else{
+            } else {
                 $producto->pro_estado = "Activo";
                 $resultado = $producto->editEstado();
             }
@@ -121,19 +122,31 @@ class ProductoController
         }
     }
 
-    public static function eliminar(){
-        if($_SERVER['REQUEST_METHOD'] == 'POST'){
+    public static function eliminar()
+    {
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $id = $_POST['id'];
             $id = filter_var($id, FILTER_VALIDATE_INT);
 
             $producto = Producto::find($id);
             $resultado = $producto->eliminar();
-            if($resultado){
+            if ($resultado) {
                 $producto->borrarImagen();
             }
-            
+
             echo json_encode([
-                "res"=>$resultado
+                "res" => $resultado
+            ]);
+        }
+    }
+
+    public static function buscarNombre()
+    {
+        if($_SERVER['REQUEST_METHOD'] == 'POST'){
+            $producto = new Producto($_POST);
+
+            echo json_encode([
+                "producto" => $producto->buscarNombre()
             ]);
         }
     }

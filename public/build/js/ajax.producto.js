@@ -9,6 +9,7 @@ $(document).ready(function(){
   estado();
   resetear();
   eliminarProducto();
+  buscarNombre();
 });
 
 function getCategoria() {
@@ -254,5 +255,59 @@ function eliminarProducto(){
         }
       })
     });
+  });
+}
+
+function buscarNombre(){
+  $(document).on("keyup","#buscarnombre",function(e){
+    if(e.target.value == ""){
+      llenarTabla();
+    }else {
+      $.ajax({
+        url:"/producto/buscarNombre",
+        type:"POST",
+        data: {pro_nombre: e.target.value},
+        success: function(response){
+          limpiarHTML();
+          const json = JSON.parse(response);
+          const { producto } = JSON.parse(response);
+          if(producto.length != 0 ){
+            producto.forEach(pr => {
+              const {id, pro_categoria, pro_nombre, pro_descripcion, pro_precio, pro_imagen, pro_tamano, pro_estado} = pr;
+              const row = document.createElement("tr");
+              row.innerHTML = `
+              <td>
+                <img src="/imagenes/${pro_imagen}" width="150" height="150">
+              </td>
+              <td>
+                ${pro_nombre} - ${pro_categoria}
+              </td>
+              <td>
+                ${pro_precio}
+              </td>
+              <td>
+                <button id="btnEstado" data-idpro="${id}" class="btn ${pro_estado.toLowerCase() == 'activo'? 'btn-success' : 'btn-danger'}" >${pro_estado}</button>
+              </td>
+              <td>
+                <button class="btn btn-warning" id="edit" data-bs-toggle="modal" data-idproducto=${id} data-bs-target="#modalProducto" >Edit</button>
+                <button class="btn btn-danger" data-idproducto=${id}  id="delete">Delete</button>
+              </td>
+              `;
+    
+              contenedorProducto.appendChild(row);
+            });
+          }else{
+            const row = document.createElement("tr");
+            row.innerHTML = `
+              <td colspan="5" class="text-center">
+                No se encontraron resultado
+              </td>
+            `;
+            contenedorProducto.appendChild(row);
+          }
+        }
+      });
+    }
+    
   });
 }
