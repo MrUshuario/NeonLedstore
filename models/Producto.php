@@ -58,4 +58,10 @@ class Producto  extends ActiveRecord{
         $resultado = self::$db->query($query);
         return $resultado;
     }
+
+    public function editEstado(){
+        $query = "UPDATE ".static::$tabla." SET pro_estado='".$this->pro_estado."' WHERE id=".$this->id;
+        $resultado =self::$db->query($query);
+        return $resultado;
+    } 
 }

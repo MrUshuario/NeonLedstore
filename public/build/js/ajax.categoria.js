@@ -1,4 +1,5 @@
 const contenedorTabla = document.querySelector("#tablacategoria tbody");
+const contentImg = document.querySelector("#img");
 
 $(document).ready(function(){
     $("#formCategoria").submit(e=>{
@@ -9,7 +10,7 @@ $(document).ready(function(){
         let link = $("#cat_link").val().trim();
         let estado = $("#cat_estado").val().trim();
 
-        if(nombre === "" || link === "" || estado === "null"){
+        if( imagen == undefined || nombre === "" || link === "" || estado === "null"){
             swal({
                 title:"Completar los campos requeridos",
                 icon:"error"
@@ -69,7 +70,6 @@ $(document).ready(function(){
                         if(resp){
                             cierreModel("modalCategoria");
                             llenarTabla();
-                            console.log(imagen);
                         }
                     }
                 })
@@ -92,12 +92,11 @@ $(document).ready(function(){
             success: resp =>{
                 let json = JSON.parse(resp);
                 console.log(json.estado);
+                e.target.value=json.estado;
                 if(json.estado == "ACTIVO"){
-                    e.target.value=json.estado;
                     e.target.classList.remove('btn-danger');
                     e.target.classList.add('btn-success');
                 }else {
-                    e.target.value=json.estado;
                     e.target.classList.remove('btn-success');
                     e.target.classList.add('btn-danger');
                 }
@@ -121,7 +120,6 @@ $(document).ready(function(){
 
                 const idC = document.querySelector('#id');
                 const nombre = document.querySelector('#cat_nombre');
-                const inputImg = document.querySelector("#img");
                 const link = document.querySelector('#cat_link');
                 const estado = document.querySelector("#cat_estado");
 
@@ -131,12 +129,12 @@ $(document).ready(function(){
                 estado.value = cat_estado;
 
                 // Poner las imagenes
-                const img = document.querySelector('img');
+                const img = document.createElement('img');
                 img.src=`/imagenes/${cat_imagen}`;
                 img.alt= cat_nombre;
                 img.width= 150;
                 img.height= 150;
-                inputImg.appendChild(img);
+                contentImg.appendChild(img);
             }
         })
     })
@@ -233,12 +231,7 @@ function resetearCerrar(){
     btnRegistrar.addEventListener('click',()=>{
         $("#formCategoria").trigger('reset');
         $("#id").val("");
-        const img = document.querySelector("#img");
-        img.removeChild(img.firstChild)
-        // img.src="";
-        // img.alt="";
-        // img.width=0;
-        // img.height=0;
+        contentImg.remove(contentImg.firstChild);
     })
 }
 

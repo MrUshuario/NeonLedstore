@@ -1,10 +1,14 @@
 const contenedorProducto = document.querySelector("#tablaproducto tbody");
+const imgc = document.querySelector("#imgc");
 
 $(document).ready(function(){
   llenarTabla();
   getCategoria();
   crearXedit();
-  getCatForm();
+  getProdForm();
+  estado();
+  resetear();
+  eliminarProducto();
 });
 
 function getCategoria() {
@@ -54,7 +58,7 @@ function crearXedit() {
     formData.append("pro_estado", estado);
 
     if (id == "") {
-      if( estado == "" || categoria == "" || nombre=="" || precio == "" || tm1 == "" || tm2 == "" ){
+      if( imagen == undefined || estado == "" || categoria == "" || nombre=="" || precio == "" || tm1 == "" || tm2 == "" ){
         swal({
           title:"Completar los campos requeridos",
           icon: "error"
@@ -68,6 +72,7 @@ function crearXedit() {
           processData: false,  // tell jQuery not to process the data
           contentType: false,
           success: function (e) {
+            cierreModel("modalProducto");
             llenarTabla();
             swal({
               title:"Registro Exitoso",
@@ -77,7 +82,6 @@ function crearXedit() {
         });
       }
     } else {
-
       formData.append("id", id);
       $.ajax({
         url: "/producto/editar",
@@ -88,9 +92,8 @@ function crearXedit() {
         success: function (e) { 
           const json = JSON.parse(e);
           const resp = json.res;
-          console.log(resp);
-          console.log(imagen);
           if(resp){
+            cierreModel("modalProducto");
             llenarTabla();
             swal({
               title:"Editado correctamente",
@@ -129,7 +132,7 @@ function llenarTabla(){
           </td>
           <td>
             <button class="btn btn-warning" id="edit" data-bs-toggle="modal" data-idproducto=${id} data-bs-target="#modalProducto" >Edit</button>
-            <button class="btn btn-danger" id="delete">Delete</button>
+            <button class="btn btn-danger" data-idproducto=${id}  id="delete">Delete</button>
           </td>
         `;
         contenedorProducto.appendChild(row);
@@ -138,15 +141,13 @@ function llenarTabla(){
   })
 }
 
-function getCatForm(){
+function getProdForm(){
   $(document).on("click","#edit", function(e){
     const idpro = e.target.dataset.idproducto;
     const title = document.querySelector("#title");
     const btnSave = document.querySelector("#save");
     title.textContent ="Editar Producto";
     btnSave.textContent = "Actualizar";
-
-    console.log(idpro);
     $.ajax({
       url:"/producto/getProForm",
       type:"POST",
@@ -168,12 +169,12 @@ function getCatForm(){
         $("#pro_estado").val(pro_estado);
 
         // Poner las imagenes
-        const img = document.querySelector('#imgc');
+        const img = document.createElement('img');
         img.src=`/imagenes/${pro_imagen}`;
         img.alt= pro_nombre;
         img.width= 150;
         img.height= 150;
-        inputImg.appendChild(img);
+        imgc.appendChild(img);
       }
     });
   });
@@ -183,4 +184,75 @@ function limpiarHTML(){
   while(contenedorProducto.firstChild){
     contenedorProducto.removeChild(contenedorProducto.firstChild);
   }
+}
+
+function estado(){
+  $(document).on("click","#btnEstado",function(e){
+    const idpro = e.target.dataset.idpro;
+    const estadoText = e.target.textContent;
+
+    $.ajax({
+      url: "/producto/estado",
+      type: "POST",
+      data:{id: idpro, pro_estado: estadoText},
+      success: function(ef){
+        const json = JSON.parse(ef);
+        const { pro_estado, resultado } = json;
+        console.log(pro_estado, resultado)
+        e.target.textContent = pro_estado;
+        if(pro_estado == 'Activo'){
+          e.target.classList.remove("btn-danger");
+          e.target.classList.add("btn-success");
+        }else {
+          e.target.classList.remove("btn-success");
+          e.target.classList.add("btn-danger");
+        }
+      }
+    });
+  })
+}
+
+function resetear(){
+    const cerrar = document.querySelector("#cerrar");
+    const btnRegistrar = document.querySelector("#model-register");
+    cerrar.addEventListener('click',()=>{
+        $("#formProducto").trigger('reset');
+    });
+
+    btnRegistrar.addEventListener('click',()=>{
+        $("#formProducto").trigger('reset');
+        $("#id").val("");
+        imgc.remove(imgc.firstChild);
+    })
+}
+
+function cierreModel(idModel){
+  const modal = document.querySelector(`#${idModel}`);
+  const modalfondo = document.querySelector(".modal-backdrop.fade");
+  modal.classList.add('none');
+  modal.classList.remove('show')
+  modalfondo.classList.remove('show');
+  $("#formProducto").trigger('reset');
+}
+
+function eliminarProducto(){
+  $(document).on("click","#delete",function(ef){
+    swal({
+      title: "¿ Estas seguro de eliminar este producto?",
+      icon: "warning",
+      buttons: true,
+      dangerMode: true,
+    }).then(function(e){
+      const idpro = ef.target.dataset.idproducto;
+      $.ajax({
+        url:"/producto/eliminar",
+        type: "POST",
+        data: {id: idpro},
+        success: function(e){
+          console.log(e)
+          llenarTabla();
+        }
+      })
+    });
+  });
 }

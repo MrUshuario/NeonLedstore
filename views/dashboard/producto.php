@@ -46,8 +46,7 @@
                                         <label for="">Imagen</label>
                                         <input type="file" id="pro_imagen" class="form-control">
                                     </div>
-                                    <div id="img">
-                                        <img id="imgc">
+                                    <div id="imgc">
                                     </div>
                                     <div class="mb-3">
                                         <label for="">Tamaño de producto</label>
