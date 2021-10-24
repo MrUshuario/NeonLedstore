@@ -37,7 +37,8 @@ $router = new Router();
 
     // method post
     $router->post('/producto/crear',[ProductoController::class,'guardar']);
-    $router->post('/producto/actualizar',[ProductoController::class,'actualizar']);
+    $router->post('/producto/editar',[ProductoController::class,'actualizar']);
+    $router->post('/producto/getProForm',[ProductoController::class,'getProductoId']);
 
 //Categoria
     // method get

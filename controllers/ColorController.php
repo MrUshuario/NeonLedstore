@@ -56,14 +56,18 @@ class ColorController {
     }
 
     public static function editColor(Router $router){
-        $color = new Color();
-        $color->sincronizar($_POST);
+        
+        if($_SERVER['REQUEST_METHOD'] == 'POST'){
+            $color = Color::find($_POST['id']);
+            $color->sincronizar($_POST);
 
-        $dd = $color->actualizar();
+            $dd = $color->actualizar();
 
-        $json = json_encode($dd);
+            $json = json_encode($dd);
 
-        echo $json;
+            echo $json;
+        }
+        
     }
 
     public static function buscarNombre(Router $router) {

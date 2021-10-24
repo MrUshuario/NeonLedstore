@@ -21,10 +21,9 @@ class ProductoController {
     }
 
     public static function guardar(){
-
         if($_SERVER['REQUEST_METHOD'] == 'POST'){
-           $producto = new Producto($_POST);
-           $nombreImg = md5(uniqid(rand(), true)) . ".webp";
+            $producto = new Producto($_POST);
+            $nombreImg = md5(uniqid(rand(), true)) . ".webp";
 
             if ($_FILES['pro_imagen']['tmp_name']) {
                 $image = Image::make($_FILES['pro_imagen']['tmp_name'])->fit(800, 600);
@@ -53,5 +52,46 @@ class ProductoController {
         echo json_encode([
             "lists"=>$producto
         ]);
+    }
+
+    public static function getProductoId(){
+        if($_SERVER['REQUEST_METHOD'] == 'POST' ){
+            $id = $_POST['id'];
+            $id = filter_var($id, FILTER_VALIDATE_INT);
+
+            $producto = Producto::find($id);
+
+            echo json_encode([
+                "producto"=> $producto
+            ]);
+        }
+    }
+
+    public static function actualizar(){
+        if($_SERVER['REQUEST_METHOD'] == 'POST'){
+            $producto = Producto::find($_POST['id']);
+            $producto->sincronizar($_POST);
+            $nombreImg = md5(uniqid(rand(), true)). ".webp";
+
+            if( $producto->pro_imagen !== 'undefined'){
+                if($_FILES['pro_imagen']['tmp_name']){
+                    $image = Image::make($_FILES['pro_imagen']['tmp_name'])->fit(800,600);
+                    $producto->setImagen($nombreImg);
+                }
+
+                if($_FILES['pro_imagen']['tmp_name']){
+                    $image->save(CARPETA_IMAGENES.$nombreImg);
+                }
+
+                $resultado = $producto->actualizar();
+            }else {
+                $resultado = $producto->editSinImg();
+            }
+
+            echo json_encode([
+                "dir"=> $_POST,
+                "res" => $resultado
+            ]);
+        }
     }
 }

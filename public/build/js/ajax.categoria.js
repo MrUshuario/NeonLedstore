@@ -69,6 +69,7 @@ $(document).ready(function(){
                         if(resp){
                             cierreModel("modalCategoria");
                             llenarTabla();
+                            console.log(imagen);
                         }
                     }
                 })
@@ -232,11 +233,12 @@ function resetearCerrar(){
     btnRegistrar.addEventListener('click',()=>{
         $("#formCategoria").trigger('reset');
         $("#id").val("");
-        const img = document.querySelector("#img img");
-        img.src="";
-        img.alt="";
-        img.width=0;
-        img.height=0;
+        const img = document.querySelector("#img");
+        img.removeChild(img.firstChild)
+        // img.src="";
+        // img.alt="";
+        // img.width=0;
+        // img.height=0;
     })
 }
 

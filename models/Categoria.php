@@ -9,7 +9,7 @@ class Categoria extends ActiveRecord{
     protected static $tabla = 'tab_categorias';
     protected static $columnaDB   = ['id','cat_nombre','cat_imagen','cat_link','cat_estado'];
 
-    public $id;
+    public $id; 
     public $cat_nombre;
     public $cat_imagen;
     public $cat_link;
@@ -39,7 +39,8 @@ class Categoria extends ActiveRecord{
         //Comprobar si existe el archivo
         $existArchivo = file_exists(CARPETA_IMAGENES.$this->cat_imagen);
         if($existArchivo){
-            unlink(CARPETA_IMAGENES.$this->cat_imagen);
+            // unlink(CARPETA_IMAGENES.$this->cat_imagen);
+            return $this->cat_imagen;
         }
     }
 

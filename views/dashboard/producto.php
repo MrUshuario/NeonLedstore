@@ -18,7 +18,7 @@
                     <div class="modal-dialog modal-dialog-scrollable">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title">Guardar Producto</h5>
+                                <h5 class="modal-title" id="title">Guardar Producto</h5>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="cerrar"></button>
                             </div>
                             <div class="modal-body">
@@ -46,8 +46,11 @@
                                         <label for="">Imagen</label>
                                         <input type="file" id="pro_imagen" class="form-control">
                                     </div>
+                                    <div id="img">
+                                        <img id="imgc">
+                                    </div>
                                     <div class="mb-3">
-                                        <label for="">Tamaño de Imagen</label>
+                                        <label for="">Tamaño de producto</label>
                                         <div class="tmn-input">
                                         <input type="number" step="0.10" min="1.0" id="t-1"> X <input type="number" step="0.10" min="1.0" id="t-2" >
                                         </div>
@@ -56,8 +59,8 @@
                                         <label for="pro_estado">estado</label>
                                         <select id="pro_estado" class="form-control">
                                             <option value="">-SELECCIONE--</option>
-                                            <option value="ACTIVO">ACTIVO</option>
-                                            <option value="INACTIVO">INACTIVO</option>
+                                            <option value="Activo">ACTIVO</option>
+                                            <option value="Inactivo">INACTIVO</option>
                                         </select>
                                     </div>
                                     <div class="modal-footer">
@@ -79,7 +82,7 @@
                         <thead class="table-dark sticky" >
                             <tr>
                                 <th>#</th>
-                                <th>Nombre</th>
+                                <th>Producto - categoría</th>
                                 <th>precio</th>
                                 <th>estado</th>
                                 <th></th>

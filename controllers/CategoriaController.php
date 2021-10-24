@@ -22,8 +22,8 @@ class CategoriaController
 
             $nombreImg = md5(uniqid(rand(), true)) . ".webp";
 
-            if ($_FILES['pro_imagen']['tmp_name']) {
-                $image = Image::make($_FILES['pro_imagen']['tmp_name'])->fit(800, 600);
+            if ($_FILES['cat_imagen']['tmp_name']) {
+                $image = Image::make($_FILES['cat_imagen']['tmp_name'])->fit(800, 600);
                 $categoria->setImagen($nombreImg);
             }
 
@@ -35,7 +35,7 @@ class CategoriaController
             $resultado = $categoria->crear();
 
             $json = json_encode([
-                'res' => $resultado
+                'res' => $categoria
             ]);
             echo $json;
         }
@@ -96,8 +96,8 @@ class CategoriaController
 
     public static function actualizar()
     {
-        $categoria = new Categoria();
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $categoria = Categoria::find($_POST['id']);
             $categoria->sincronizar($_POST);
 
             $nombreImg = md5(uniqid(rand(), true)) . ".webp";
@@ -119,7 +119,7 @@ class CategoriaController
             
             echo json_encode([
                 "resp" => $resultado,
-                "cat"=> Categoria::find($_POST['id'])
+                "img"=> $_POST
             ]);;
         }
         

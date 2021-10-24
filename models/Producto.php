@@ -29,9 +29,9 @@ class Producto  extends ActiveRecord{
     }
     public function setImagen($img){
         //Eliminar la imagen previa al editar o eliminar
-        /*if(!is_null($this->id)){
+        if(!is_null($this->id)){
             $this->borrarImagen();
-        }*/
+        }
 
         //Asignar al atributo de imagen el nombre de la imagen
         if($img){
@@ -39,9 +39,23 @@ class Producto  extends ActiveRecord{
         }
     }
 
+    public function borrarImagen(){
+        //Comprobar si existe el archivo
+        $existArchivo = file_exists(CARPETA_IMAGENES.$this->pro_imagen);
+        if($existArchivo){
+            unlink(CARPETA_IMAGENES.$this->pro_imagen);
+        }
+    }
+
     public static function listarCatXProd(){
         $query = "SELECT p.id as id, pro_nombre, pro_descripcion, pro_precio, pro_imagen, pro_tamano, pro_estado, cat_nombre as pro_categoria FROM tab_producto p inner join tab_categorias c ON c.id = p.pro_categoria ";
         $resultado = static::consultarSQL($query);
+        return $resultado;
+    }
+
+    public function editSinImg(){
+        $query = "UPDATE ".static::$tabla." SET pro_nombre='".$this->pro_nombre."', pro_descripcion='".$this->pro_descripcion."', pro_precio='".$this->pro_precio."', pro_tamano='".$this->pro_tamano."', pro_estado='".$this->pro_estado."' where id = ".$this->id;
+        $resultado = self::$db->query($query);
         return $resultado;
     }
 }
