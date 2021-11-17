@@ -34,9 +34,7 @@ class Users extends ActiveRecord{
 
     public function passwordAuth($resultado) {
         $user = $resultado->fetch_object();
-        // Iniciar session
-        session_start();
-        
+        // Iniciar session        
         $autenticar = password_verify($this->pass,$user->pass);
 
         if($autenticar){

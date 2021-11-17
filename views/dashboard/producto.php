@@ -92,6 +92,15 @@
                         </tbody>
                     </table>
                 </div>
+                <div id="paginacion" class="">
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination">
+                    <li class="page-item" id="inicio"><a class="page-link" href="/producto?pag=<?php echo $_GET['pag'] - 1; ?>">Previous</a></li>
+                    
+                    <li class="page-item" id="end"><a class="page-link" href="/producto?pag=<?php echo $_GET['pag'] + 1; ?>">Next</a></li>
+                    </ul>
+                </nav>
+                </div>
             </div>
         </div>
     </section>

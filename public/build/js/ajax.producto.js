@@ -2,7 +2,7 @@ const contenedorProducto = document.querySelector("#tablaproducto tbody");
 const imgc = document.querySelector("#imgc");
 
 $(document).ready(function(){
-  llenarTabla();
+  llenarTablaPaginacion();
   getCategoria();
   crearXedit();
   getProdForm();
@@ -108,14 +108,17 @@ function crearXedit() {
 }
 
 function llenarTabla(){
+  const url = new URL(window.location.href);
+  const get = parseInt(url.searchParams.get('pag'));
   $.ajax({
     type:"GET",
-    url:"/producto/getProducto",
+    url: `/producto/pagination?pag=${get}`,
     success: function(e){
       let json =JSON.parse(e);
-      const lists = json.lists;
+      const {res, pags} = json;
+
       limpiarHTML();
-      lists.forEach((list)=>{
+      res.forEach((list)=>{
         const row = document.createElement("tr");
         const { id, pro_categoria, pro_nombre, pro_descripcion, pro_precio, pro_imagen, pro_tamano, pro_estado } = list;
         row.innerHTML = `
@@ -138,6 +141,54 @@ function llenarTabla(){
         `;
         contenedorProducto.appendChild(row);
       });
+
+      if(url.searchParams.get('pag') == null){
+        window.location = `/producto?pag=1`;
+      }else if( get > pags || get <= 0) {
+        window.location = `/producto?pag=1`;
+      }
+            
+      get <= 1 ? inicio.classList.add('disabled'): inicio.classList.remove('disabled');
+      get >= pags ? end.classList.add('disabled'): end.classList.remove('disabled');
+
+    }
+  })
+}
+
+function llenarTablaPaginacion(){
+  const url = new URL(window.location.href);
+  const get = parseInt(url.searchParams.get('pag'));
+
+  $.ajax({
+    url:`/producto/pagination?pag=${get}`,
+    type:'GET',
+    success: function(e){
+      let json =JSON.parse(e);
+      const {res, pags} = json;
+
+      const pag = document.querySelector(".pagination");
+      
+      const end =document.querySelector("#end");      
+      const inicio =document.querySelector("#inicio");
+
+      const url = new URL(window.location.href);
+      const get = parseInt(url.searchParams.get('pag'));
+      for(i=0; i<pags; i++){
+        const li = document.createElement("li");
+        li.classList.add('page-item')
+        const a = document.createElement("a");
+        a.classList.add("page-link");
+        a.href=`/producto?pag=${i+1}`;
+        a.id="pag";
+        a.innerHTML =`
+          ${i+1}
+        `;
+        li.appendChild(a);
+        pag.insertBefore(li,end);
+        get == i+1 ? li.classList.add('active') : li.classList.remove('active');
+      }
+
+      llenarTabla();
     }
   })
 }
@@ -245,16 +296,17 @@ function eliminarProducto(){
       dangerMode: true,
     }).then(function(e){
       const idpro = ef.target.dataset.idproducto;
-      $.ajax({
-        url:"/producto/eliminar",
-        type: "POST",
-        data: {id: idpro},
-        success: function(e){
-          console.log(e)
-          llenarTabla();
-        }
-      })
-    });
+      if(e){
+         $.ajax({
+         url:"/producto/eliminar",
+         type: "POST",
+         data: {id: idpro},
+         success: function(){
+           llenarTabla();
+         }
+       })
+      }
+    })
   });
 }
 

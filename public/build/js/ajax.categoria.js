@@ -10,16 +10,16 @@ $(document).ready(function(){
         let link = $("#cat_link").val().trim();
         let estado = $("#cat_estado").val().trim();
 
-        if( imagen == undefined || nombre === "" || link === "" || estado === "null"){
-            swal({
-                title:"Completar los campos requeridos",
-                icon:"error"
-            })
-        }else {
-            const formData = new FormData();
+        const formData = new FormData();
 
-            let id = $("#id").val();
-            if(id == ""){
+        let id = $("#id").val();
+        if(id == "" ){
+            if(imagen != undefined||  nombre === "" || link === "" || estado === "null"){
+                swal({
+                    title:"Completar los campos requeridos",
+                    icon:"error"
+                })
+            }else {
                 formData.append("cat_nombre",nombre);
                 formData.append("cat_imagen",imagen);
                 formData.append("cat_link",link);
@@ -33,7 +33,6 @@ $(document).ready(function(){
                     contentType: false,
                     success: function(resp){
                         let json = JSON.parse(resp);
-                        console.log(json);
 
                         if(json.res){
                             cierreModel("modalCategoria");
@@ -42,7 +41,7 @@ $(document).ready(function(){
                                 title:"Registro completo",
                                 icon:"success"
                             })
-                            
+                                
                         }else{
                             swal({
                                 title:"Error en el registro",
@@ -51,6 +50,9 @@ $(document).ready(function(){
                         }
                     }
                 })
+            }
+
+                
             }else{
                 //=======================================
                 formData.append("cat_nombre",nombre);
@@ -74,7 +76,6 @@ $(document).ready(function(){
                     }
                 })
             }
-        }
 
     })
 
@@ -181,14 +182,17 @@ function limpiarHtml(){
 }
 
 function llenarTabla(){
+    const url = new URL(window.location.href);
+    const get = parseInt(url.searchParams.get('pag'));
     $.ajax({
-        url:"/categoria/listar",
+        url:`/categoria/pagination?pag=${get}`,
         type:'GET',
-        success: resp => {
-            let json = JSON.parse(resp);
-            const listas = json.listas;
+        success: function(e) {
+            let json =JSON.parse(e);
+            const {res, pags} = json;
+
             limpiarHtml();
-            listas.forEach(lista => {
+            res.forEach(lista => {
                 const { id, cat_nombre, cat_imagen, cat_link, cat_estado } = lista;
                 
                 const row = document.createElement('tr');
@@ -208,6 +212,16 @@ function llenarTabla(){
 
                 contenedorTabla.appendChild(row);
             });
+
+            if(url.searchParams.get('pag') == null){
+                window.location = `/producto?pag=1`;
+              }else if( get > pags || get <= 0) {
+                window.location = `/producto?pag=1`;
+              }
+                    
+              get <= 1 ? inicio.classList.add('disabled'): inicio.classList.remove('disabled');
+              get >= pags ? end.classList.add('disabled'): end.classList.remove('disabled');
+        
         }
     });
 }
@@ -287,6 +301,47 @@ function buscarNombre(){
         }
     });
 }
+
+function prueba2(){
+    const url = new URL(window.location.href);
+    const get = parseInt(url.searchParams.get('pag'));
+
+    $.ajax({
+        url: `/categoria/pagination?pag=${get}`,
+        type: 'GET',
+        success: function(e){
+            let json =JSON.parse(e);
+            const {res, pags} = json;
+
+            const pag = document.querySelector(".pagination");
+            
+            const end =document.querySelector("#end");      
+            const inicio =document.querySelector("#inicio");
+
+            const url = new URL(window.location.href);
+            const get = parseInt(url.searchParams.get('pag'));
+            for(i=0; i<pags; i++){
+                const li = document.createElement("li");
+                li.classList.add('page-item')
+                const a = document.createElement("a");
+                a.classList.add("page-link");
+                a.href=`/categoria?pag=${i+1}`;
+                a.id="pag";
+                a.innerHTML =`
+                ${i+1}
+                `;
+                li.appendChild(a);
+                pag.insertBefore(li,end);
+                get == i+1 ? li.classList.add('active') : li.classList.remove('active');
+            }
+
+            llenarTabla();
+        }
+    });
+}
+
+prueba2();
+
 llenarTabla()
 resetearCerrar()
 buscarNombre()

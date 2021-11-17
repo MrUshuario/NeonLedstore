@@ -11,7 +11,10 @@ class CategoriaController
 {
 
     public static function index(Router $router)
-    {
+    {   
+        if(empty($_GET['pag'])){
+            header("location: /producto?pag=1");
+        }
         $router->render('dashboard/categoria', []);
     }
 
@@ -151,5 +154,16 @@ class CategoriaController
                 "list"=> $resultado
             ]);
         }
+    }
+
+    public static function pagination(){
+        $cat = new Categoria();
+        $get = filter_var($_GET['pag'], FILTER_VALIDATE_INT);
+
+        $pagination = $cat->listarLimit(2, $get);
+        echo json_encode([
+            "pags"=>$pagination['pags'],
+            "res"=>$pagination['limit']
+        ]);
     }
 }

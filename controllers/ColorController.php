@@ -2,6 +2,8 @@
 
 
 namespace Controllers;
+
+use COM;
 use Model\Color;
 use MVC\Router;
 
@@ -17,6 +19,9 @@ class ColorController {
     }
 
     public static function Color(Router $router){
+        if(empty($_GET['pag'])){
+            header("location: /color?pag=1");
+        }
         $router->render("dashboard/color",[]);
     }
 
@@ -91,7 +96,7 @@ class ColorController {
             $json = json_encode([
                 "color"=>$color
             ]);
-            
+             
             echo $json;
         }
     }
@@ -106,5 +111,16 @@ class ColorController {
         
             echo $json;
         }
+    }
+
+    public static function pagination(){
+        $color = new Color();
+        $get = filter_var($_GET['pag'], FILTER_VALIDATE_INT);
+
+        $pagination = $color->listarLimit(4, $get);
+        echo json_encode([
+            "pags"=>$pagination['pags'],
+            "res"=>$pagination['limit']
+        ]);
     }
 }

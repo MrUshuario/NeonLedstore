@@ -49,13 +49,10 @@ class AdminController  {
                 ]);
             }
         }
-        $router->renderAjax("verificar",[
-            "json"=>$json
-        ]);
+        echo $json;
     }
 
     public static function dashboard(Router $router){
-        session_start();
         $id = $_SESSION['id'];
         $router->render("dashboard/index",["id"=>$id]);
     }

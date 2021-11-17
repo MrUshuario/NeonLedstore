@@ -9,7 +9,7 @@ class Producto  extends ActiveRecord
     protected static $tabla = 'tab_producto';
     protected static $columnaDB = ['id', 'pro_categoria', 'pro_nombre', 'pro_descripcion', 'pro_precio', 'pro_imagen', 'pro_tamano', 'pro_estado'];
 
-    public $id;
+    public $id; 
     public $pro_categoria;
     public $pro_nombre;
     public $pro_descripcion;
@@ -72,7 +72,7 @@ class Producto  extends ActiveRecord
         return $resultado;
     }
 
-    public function buscarNombre()
+    public function searchNombre()
     {
         $query="select p.id as id, pro_nombre, pro_descripcion, pro_precio, pro_imagen, pro_tamano, pro_estado, cat_nombre as pro_categoria from ".static::$tabla." p inner join tab_categorias c ON c.id = p.pro_categoria where pro_nombre LIKE '%".$this->pro_nombre."%'";
         $resultado = static::consultarSQL($query);

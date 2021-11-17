@@ -136,4 +136,26 @@ class ActiveRecord {
         $resultado = static::consultarSQL($query);
         return array_shift($resultado);
     }
+
+    public function listarLimit($data, $get){
+        $this->datoPagina = $data;
+        $this->pagGet = $get;
+
+        return ["pags"=>$this->paginacion(),"limit"=>$this->limit()];
+    }
+
+    public function paginacion(){
+        $datos = count($this->listar());
+        $paginas = $datos / $this->datoPagina ;
+        
+        return ceil($paginas);
+    }
+
+    public function limit(){
+        
+        $iniciar = ($this->pagGet-1)* $this->datoPagina;
+        $sql = "SELECT * FROM ".static::$tabla." LIMIT ".$iniciar.",".$this->datoPagina."";
+        $resultado = static::consultarSQL($sql);
+        return $resultado;
+    }
 }

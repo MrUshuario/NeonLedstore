@@ -26,7 +26,7 @@
                                 <input type="hidden" id="id">
                                 <div class="mb-3">
                                     <label for="nombre">Nombre de color</label>
-                                    <input type="text" class="form-control" id="nombre">
+                                    <input type="text" class="form-control" id="nombreColor">
                                 </div>
                                 <div class="mb-3 flex">
                                     <label for="rgb">Color</label>
@@ -59,6 +59,16 @@
                             
                         </tbody>
                     </table>
+                </div>
+
+                <div id="paginacion" class="">
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination">
+                    <li class="page-item" id="inicio"><a class="page-link" href="/color?pag=<?php echo $_GET['pag'] - 1; ?>">Previous</a></li>
+                    
+                    <li class="page-item" id="end"><a class="page-link" href="/color?pag=<?php echo $_GET['pag'] + 1; ?>">Next</a></li>
+                    </ul>
+                </nav>
                 </div>
             </div>
         </div>

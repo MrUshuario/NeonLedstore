@@ -15,37 +15,7 @@ const contenedor = document.querySelector("#tablacolor tbody");
             contenedor.removeChild(contenedor.firstChild);
         }
     }
-// Llena la tabla con datos ya guardados dentro de la base de datos
-    function llenarTabla(){
-        $.ajax({
-            url: "/color/listar",
-            type: 'GET',
-            success: (response)=>{
-                const json = JSON.parse(response);
-                const listar = json.listado;
-                limpiarHtml();
-                listar.forEach(lista=>{
-                    const { nombre, rgb, id } = lista;
-                    const row = document.createElement('tr');
-                    //Importante en DataTable ya te inclue los TR solo pongan los td
-                    row.innerHTML = `
-                        <td class="col">
-                            ${nombre}
-                        </td>
-                        <td class="col">
-                            ${rgb}
-                        </td>
-                        <td idColor="${id}">
-                            <button class="btn btn-warning" id="edit" data-bs-toggle="modal" data-bs-target="#modalColor" >Edit</button>
-                            <button class="btn btn-danger" id="delete" data-idcolor=${id}>Delete</button>
-                        </td>
-                    `;
-                    contenedor.appendChild(row);
-                });
-                
-            }
-        })
-    }
+
 // Buscar el nombre del color 
     function buscarNombre(){
         $("#buscarnombre").keyup(function (){
@@ -114,7 +84,6 @@ const contenedor = document.querySelector("#tablacolor tbody");
     }
     
 buscarNombre();
-llenarTabla();
 resetearCerrar();
 
 //
@@ -123,7 +92,7 @@ $(document).ready(function(){
         e.preventDefault();
         //Variables del formulario
         let rgb =  $('#rgb').val();
-        let nombre = $('#nombre').val().toLowerCase().trim();
+        let nombre = $('#nombreColor').val().toLowerCase().trim();
         let id = $('#id').val();
         const modal = document.querySelector('#save');
         modal.textContent = "Guardar";
@@ -223,19 +192,19 @@ $(document).ready(function(){
                 let json = JSON.parse(response);
                 const {id, nombre, rgb} = json.color;
                 $("#id").val(id);
-                $("#nombre").val(nombre);
+                $("#nombreColor").val(nombre);
                 $("#rgb").val(rgb);
 
                 const idc = document.querySelector("#id");
-                const nom = document.querySelector("#nombre");
+                const nom = document.querySelector("#nombreColor");
                 const rg = document.querySelector("#rgb");
                 
+                nom.value = nombre;
                 nom.textContent = nombre;
                 rg.textContent = rgb; 
             }
             
         });
-        e.preventDefault();
         
     });
 
@@ -256,7 +225,7 @@ $(document).ready(function(){
                     type: 'POST',
                     success: (resp)=>{
                         console.log(resp)
-                        llenarTabla();
+                        colorPaginacionTabla();
                     }
                 })
               swal("Color eliminado correctamente!", {
@@ -266,3 +235,85 @@ $(document).ready(function(){
           });
     })
 })
+
+// Llena la tabla con datos ya guardados dentro de la base de datos
+    function llenarTabla(){
+        const url = new URL(window.location.href);
+        const get = parseInt(url.searchParams.get('pag'));
+        $.ajax({
+            url: `/color/pagination?pag=${get}`,
+            type: 'GET',
+            success: (e)=>{
+                let json =JSON.parse(e);
+                const {res, pags} = json;
+                limpiarHtml();
+                res.forEach(lista=>{
+                    const { nombre, rgb, id } = lista;
+                    const row = document.createElement('tr');
+                    //Importante en DataTable ya te inclue los TR solo pongan los td
+                    row.innerHTML = `
+                        <td class="col">
+                            ${nombre}
+                        </td>
+                        <td class="col">
+                            ${rgb}
+                        </td>
+                        <td idColor="${id}">
+                            <button class="btn btn-warning" id="edit" data-bs-toggle="modal" data-bs-target="#modalColor" >Edit</button>
+                            <button class="btn btn-danger" id="delete" data-idcolor=${id}>Delete</button>
+                        </td>
+                    `;
+                    contenedor.appendChild(row);
+                });
+                if(url.searchParams.get('pag') == null){
+                    window.location = `/color?pag=1`;
+                  }else if( get > pags || get <= 0) {
+                    window.location = `/color?pag=1`;
+                  }
+                        
+                  get <= 1 ? inicio.classList.add('disabled'): inicio.classList.remove('disabled');
+                  get >= pags ? end.classList.add('disabled'): end.classList.remove('disabled');
+        
+            }
+        })
+    }
+    
+function colorPaginacionTabla() {
+    const url = new URL(window.location.href);
+  const get = parseInt(url.searchParams.get('pag'));
+
+  $.ajax({
+    url:`/color/pagination?pag=${get}`,
+    type:'GET',
+    success: function(e){
+      let json =JSON.parse(e);
+      const {res, pags} = json;
+
+      const pag = document.querySelector(".pagination");
+      
+      const end =document.querySelector("#end");      
+      const inicio =document.querySelector("#inicio");
+
+      const url = new URL(window.location.href);
+      const get = parseInt(url.searchParams.get('pag'));
+      for(i=0; i<pags; i++){
+        const li = document.createElement("li");
+        li.classList.add('page-item')
+        const a = document.createElement("a");
+        a.classList.add("page-link");
+        a.href=`/color?pag=${i+1}`;
+        a.id="pag";
+        a.innerHTML =`
+          ${i+1}
+        `;
+        li.appendChild(a);
+        pag.insertBefore(li,end);
+        get == i+1 ? li.classList.add('active') : li.classList.remove('active');
+      }
+
+      llenarTabla();
+    }
+  })
+}
+
+colorPaginacionTabla();

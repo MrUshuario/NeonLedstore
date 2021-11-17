@@ -11,7 +11,23 @@ class ProductoController
 {
     public static function index(Router $router)
     {
+        if(empty($_GET['pag'])){
+            header("location: /producto?pag=1");
+        }
         $router->render('dashboard/producto', []);
+    }
+
+    public static function pagination(){
+        $pr = new Producto();
+        if(empty($_GET['pag'])){
+            header("location: /producto?pag=1");
+        }
+        $get = filter_var($_GET['pag'], FILTER_VALIDATE_INT);
+        $pagination = $pr->listarLimit(2, $get);
+        echo json_encode([
+            "pags"=>$pagination['pags'],
+            "res"=> $pagination['limit']
+        ]);
     }
 
     public static function obtenerCat()
@@ -53,6 +69,7 @@ class ProductoController
     public static function getProducto()
     {
         $producto = Producto::listarCatXProd();
+        $pr = new Producto();
 
         echo json_encode([
             "lists" => $producto
@@ -146,7 +163,7 @@ class ProductoController
             $producto = new Producto($_POST);
 
             echo json_encode([
-                "producto" => $producto->buscarNombre()
+                "producto" => $producto->searchNombre()
             ]);
         }
     }

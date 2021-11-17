@@ -21,6 +21,7 @@ $router = new Router();
     // method get
     $router->get('/color',[ColorController::class,'Color']);
     $router->get('/color/listar',[ColorController::class,'listarColor']);
+    $router->get('/color/pagination',[ColorController::class,'pagination']);
 
     // method post
     $router->post('/color/buscar',[ColorController::class,'buscarNombre']);
@@ -34,6 +35,7 @@ $router = new Router();
     $router->get('/producto',[ProductoController::class,'index']);
     $router->get('/producto/getCategoria',[ProductoController::class,'obtenerCat']);
     $router->get('/producto/getProducto',[ProductoController::class,'getProducto']);
+    $router->get("/producto/pagination",[ProductoController::class,"pagination"]);
 
     // method post
     $router->post('/producto/crear',[ProductoController::class,'guardar']);
@@ -47,6 +49,7 @@ $router = new Router();
     // method get
     $router->get('/categoria',[CategoriaController::class, 'index']);
     $router->get('/categoria/listar',[CategoriaController::class, 'listados']);
+    $router->get('/categoria/pagination',[CategoriaController::class,'pagination']);
 
     // method post
     $router->post('/categoria/crear',[CategoriaController::class, 'crear']);
@@ -55,6 +58,10 @@ $router = new Router();
     $router->post('/categoria/actualizar',[CategoriaController::class,'actualizar']);
     $router->post('/categoria/eliminar',[CategoriaController::class,'eliminar']);
     $router->post("/categoria/buscar",[CategoriaController::class,'buscarNomCat']);
+
+//Cliente
+    //method get
+    $router->get('/cliente',[ClienteController::class,'index']);
 
 $router->comprobarRutas();
 

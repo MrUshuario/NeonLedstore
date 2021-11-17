@@ -7,8 +7,9 @@
             <img src="build/img/user.png" width="48" height="48" alt="User" />
         </div>
         <div class="info-container">
-            <div class="name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:black">John Doe</div>
-            <div class="email" style="color:black">john.doe@example.com</div>
+            <div class="name" data-toggle="dropdown" id="nombre"
+            aria-haspopup="true" aria-expanded="false" style="color:black">John Doe</div>
+            <div class="email" style="color:black" id="email">john.doe@example.com</div>
             <div class="btn-group user-helper-dropdown">
                 <i class="material-icons" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="color:black">keyboard_arrow_down</i>
                 <ul class="dropdown-menu pull-right">
@@ -27,7 +28,7 @@
     <!-- Menu -->
     <div class="menu">
         <ul class="list">
-            <li class="header">MAIN NAVIGATION</li>
+            <li class="header">Menú</li>
             <li class="<?= end($currentURL) == 'dashboard' ? 'active' : 'inactive' ?>">
                 <a href="/dashboard">
                     <i class="material-icons">home</i>
@@ -35,15 +36,21 @@
                 </a>
             </li>
             <li class="<?= end($currentURL) == 'users' ? 'active' : 'inactive' ?>">
-                <a href="/">
-                    <i class="material-icons">people</i>
+                <a href="/cliente">
+                    <i class="material-icons">Clientes</i>
                     <span>Clientes</span>
                 </a>
             </li>
             <li class="<?= end($currentURL) == 'products' ? 'active' : 'inactive' ?>">
-                <a href="/">
+                <a href="/producto">
                     <i class="material-icons">shopping_basket</i>
                     <span>Productos</span>
+                </a>
+            </li>
+            <li class="<?= end($currentURL) == 'products' ? 'active' : 'inactive' ?>">
+                <a href="/categoria">
+                    <i class="material-icons">category</i>
+                    <span>Categoria</span>
                 </a>
             </li>
         </ul>
@@ -62,7 +69,7 @@
 </aside>
 <!-- #END# Left Sidebar -->
 <!-- Right Sidebar -->
-<aside id="rightsidebar" class="right-sidebar">
+<!-- <aside id="rightsidebar" class="right-sidebar">
     <div class="tab-content">
         <div role="tabpanel" class="tab-pane fade in active in active" id="skins">
             <ul class="demo-choose-skin">
@@ -149,5 +156,5 @@
             </ul>
         </div>
     </div>
-</aside>
+</aside> -->
 <!-- #END# Right Sidebar -->
