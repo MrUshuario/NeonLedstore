@@ -9,12 +9,44 @@
     <!-- CONTENT -->
     <section class="content">
         <div class="container-fluid">
-            <div class="block-header">
-                <button type="button" id="model-register" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalProducto">
-                    Registrar Producto
-                </button>
 
-                <div class="modal fade" id="modalProducto" tabindex="-1" aria-labelledby="modalProducto" aria-hidden="true">
+            <div class="row clearfix">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="card">
+                        <div class="header">
+                            <h2>
+                                PRODUCTOS
+                            </h2>
+                            <ul class="header-dropdown m-t-5">
+                                <button type="button" id="model-register" class="btn bg-teal waves-effect" data-bs-toggle="modal" data-bs-target="#modalProducto">
+                                    <i class="material-icons">add_circle</i>
+                                    <span>AGREGAR NUEVO</span>
+                                </button>
+                            </ul>
+                        </div>
+                        <div class="body">
+                            
+                            <div class="table-responsive">
+                                <table class="table table-striped table-hover table-light table-fixed w-100" id="tablaproducto">
+                                    <thead class="table-dark sticky">
+                                     <tr>
+                                            <th>Categoria</th>
+                                            <th>Producto</th>
+                                            <th>precio</th>
+                                            <th>estado</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody >
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="modalProducto" tabindex="-1" aria-labelledby="modalProducto" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-scrollable">
                         <div class="modal-content">
                             <div class="modal-header">
@@ -46,8 +78,7 @@
                                         <label for="">Imagen</label>
                                         <input type="file" id="pro_imagen" class="form-control">
                                     </div>
-                                    <div id="imgc">
-                                    </div>
+                                    <img id="pro_img">
                                     <div class="mb-3">
                                         <label for="">Tamaño de producto</label>
                                         <div class="tmn-input">
@@ -72,36 +103,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="m-1">
-                    <label for="buscarnombre">Buscar :</label>
-                    <input type="text" id="buscarnombre">
-                </div>
-                <div class="table-responsive tabla">
-                    <table class="table table-striped table-hover table-light table-fixed" id="tablaproducto">
-                        <thead class="table-dark sticky" >
-                            <tr>
-                                <th>#</th>
-                                <th>Producto - categoría</th>
-                                <th>precio</th>
-                                <th>estado</th>
-                                <th></th>
-                            </tr>
-                        </thead>
-                        <tbody >
-                            
-                        </tbody>
-                    </table>
-                </div>
-                <div id="paginacion" class="">
-                <nav aria-label="Page navigation example">
-                    <ul class="pagination">
-                    <li class="page-item" id="inicio"><a class="page-link" href="/producto?pag=<?php echo $_GET['pag'] - 1; ?>">Previous</a></li>
-                    
-                    <li class="page-item" id="end"><a class="page-link" href="/producto?pag=<?php echo $_GET['pag'] + 1; ?>">Next</a></li>
-                    </ul>
-                </nav>
-                </div>
-            </div>
+
+            
         </div>
     </section>
 

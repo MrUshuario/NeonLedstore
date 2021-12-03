@@ -10,7 +10,7 @@
     <section class="content">
         <div class="container-fluid">
             <div class="block-header">
-                <?php  echo $id ?>
+                <?php  echo $_SESSION['id'] ?>
             </div>
         </div>
     </section>

@@ -11,7 +11,7 @@
     
     
     <link rel="stylesheet" href="build/css/bootstrap.min.css">
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="build/css/plugins/bootstrap/dataTables.bootstrap.min.css">
 
 
@@ -21,13 +21,14 @@
     <link rel="stylesheet" href="build/css/style.css">
     <link rel="stylesheet" href="build/css/themes/all-themes.css">
     <link rel="stylesheet" href="build/css/estilos.css">
-    <script src="build/js/sweetalert.min.js"></script>  
+    <script src="build/js/sweetalert.min.js"></script> 
 
     <script src="build/js/jquery.min.js"></script>
     <script src="build/js/plugins/DataTable/jquery.dataTables.min.js"></script>
     <script src="build/js/plugins/DataTable/dataTables.bootstrap.min.js"></script>
 </head>
 <body>
+    
     <?php echo $contenido ?>
 
     <script src="build/js/plugins/bootstrap/bootstrap.min.js"></script>

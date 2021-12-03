@@ -6,6 +6,7 @@ use Controllers\AdminController;
 use Controllers\CategoriaController;
 use Controllers\ColorController;
 use Controllers\ProductoController;
+use Controllers\ClienteController;
 use MVC\Router;
 
 $router = new Router();
@@ -21,10 +22,8 @@ $router = new Router();
     // method get
     $router->get('/color',[ColorController::class,'Color']);
     $router->get('/color/listar',[ColorController::class,'listarColor']);
-    $router->get('/color/pagination',[ColorController::class,'pagination']);
 
     // method post
-    $router->post('/color/buscar',[ColorController::class,'buscarNombre']);
     $router->post('/color/eliminar',[ColorController::class,'eliminarColor']);
     $router->post('/color/guardar',[ColorController::class,'crearColor']);
     $router->post('/color/editar',[ColorController::class,'editColor']);
@@ -35,7 +34,7 @@ $router = new Router();
     $router->get('/producto',[ProductoController::class,'index']);
     $router->get('/producto/getCategoria',[ProductoController::class,'obtenerCat']);
     $router->get('/producto/getProducto',[ProductoController::class,'getProducto']);
-    $router->get("/producto/pagination",[ProductoController::class,"pagination"]);
+    $router->get('/producto/prueba',[ProductoController::class,"listarP"]);
 
     // method post
     $router->post('/producto/crear',[ProductoController::class,'guardar']);
@@ -43,8 +42,7 @@ $router = new Router();
     $router->post('/producto/getProForm',[ProductoController::class,'getProductoId']);
     $router->post('/producto/estado',[ProductoController::class,"estado"]);
     $router->post("/producto/eliminar",[ProductoController::class,"eliminar"]);
-    $router->post("/producto/buscarNombre",[ProductoController::class,"buscarNombre"]);
-
+    
 //Categoria
     // method get
     $router->get('/categoria',[CategoriaController::class, 'index']);

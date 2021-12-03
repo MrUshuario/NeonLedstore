@@ -7,27 +7,18 @@ use Model\Producto;
 use MVC\Router;
 use Intervention\Image\ImageManagerStatic as Image;
 
-class ProductoController
+class ProductoController 
 {
     public static function index(Router $router)
     {
-        if(empty($_GET['pag'])){
-            header("location: /producto?pag=1");
-        }
         $router->render('dashboard/producto', []);
     }
 
-    public static function pagination(){
+    public static function listarP()
+    {
         $pr = new Producto();
-        if(empty($_GET['pag'])){
-            header("location: /producto?pag=1");
-        }
-        $get = filter_var($_GET['pag'], FILTER_VALIDATE_INT);
-        $pagination = $pr->listarLimit(2, $get);
-        echo json_encode([
-            "pags"=>$pagination['pags'],
-            "res"=> $pagination['limit']
-        ]);
+
+        echo json_encode(["data"=>$pr::listarCatXProd()]);
     }
 
     public static function obtenerCat()
@@ -85,7 +76,7 @@ class ProductoController
             $producto = Producto::find($id);
 
             echo json_encode([
-                "producto" => $producto
+                "data" => $producto
             ]);
         }
     }
@@ -153,17 +144,6 @@ class ProductoController
 
             echo json_encode([
                 "res" => $resultado
-            ]);
-        }
-    }
-
-    public static function buscarNombre()
-    {
-        if($_SERVER['REQUEST_METHOD'] == 'POST'){
-            $producto = new Producto($_POST);
-
-            echo json_encode([
-                "producto" => $producto->searchNombre()
             ]);
         }
     }

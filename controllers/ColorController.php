@@ -3,7 +3,6 @@
 
 namespace Controllers;
 
-use COM;
 use Model\Color;
 use MVC\Router;
 
@@ -13,15 +12,13 @@ class ColorController {
         $listado = Color::listar();
         
         $json = json_encode([
-            "listado" => $listado
+            "data" => $listado
         ]);
         echo $json;
     }
 
     public static function Color(Router $router){
-        if(empty($_GET['pag'])){
-            header("location: /color?pag=1");
-        }
+        
         $router->render("dashboard/color",[]);
     }
 

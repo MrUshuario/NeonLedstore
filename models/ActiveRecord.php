@@ -73,8 +73,10 @@ class ActiveRecord {
     public static function listar(){
         $query = "SELECT * FROM ".static::$tabla;
         $resultado = static::consultarSQL($query);
-        // $resultado = self::$db->query($query);
+        //$resultado = self::$db->query($query);
         return $resultado;
+        // return $resultado->fetch_array_assoc();
+        // return mysqli_fetch_assoc($resultado);
     }
 
     public static function listarNombre($nombre) {
