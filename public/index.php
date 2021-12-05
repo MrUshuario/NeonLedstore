@@ -47,7 +47,6 @@ $router = new Router();
     // method get
     $router->get('/categoria',[CategoriaController::class, 'index']);
     $router->get('/categoria/listar',[CategoriaController::class, 'listados']);
-    $router->get('/categoria/pagination',[CategoriaController::class,'pagination']);
 
     // method post
     $router->post('/categoria/crear',[CategoriaController::class, 'crear']);
@@ -55,8 +54,7 @@ $router = new Router();
     $router->post('/categoria/getCategoria',[CategoriaController::class,'getCategoria']);
     $router->post('/categoria/actualizar',[CategoriaController::class,'actualizar']);
     $router->post('/categoria/eliminar',[CategoriaController::class,'eliminar']);
-    $router->post("/categoria/buscar",[CategoriaController::class,'buscarNomCat']);
-
+  
 //Cliente
     //method get
     $router->get('/cliente',[ClienteController::class,'index']);

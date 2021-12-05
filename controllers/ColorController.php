@@ -91,7 +91,7 @@ class ColorController {
             $color = Color::find($id);
 
             $json = json_encode([
-                "color"=>$color
+                "data"=>$color
             ]);
              
             echo $json;

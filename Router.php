@@ -40,6 +40,8 @@ class Router {
         //Proteger las rutas
         if(in_array($urlActual,$rutas_protegidas) && !$id){
             header("location: /login");
+        } else if ($id==1 && $urlActual == '/login'){
+            header("location: /dashboard");
         }
 
         if($fn){

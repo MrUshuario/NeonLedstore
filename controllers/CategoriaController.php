@@ -11,10 +11,7 @@ class CategoriaController
 {
 
     public static function index(Router $router)
-    {   
-        if(empty($_GET['pag'])){
-            header("location: /producto?pag=1");
-        }
+    {
         $router->render('dashboard/categoria', []);
     }
 
@@ -50,7 +47,7 @@ class CategoriaController
         $listados = Categoria::listar();
 
         $json = json_encode([
-            "listas" => $listados
+            "data" => $listados
         ]);
 
         echo $json;
@@ -92,7 +89,7 @@ class CategoriaController
             $resultado = Categoria::find($id);
 
             echo json_encode([
-                "resp" => $resultado
+                "data" => $resultado
             ]);
         }
     }
