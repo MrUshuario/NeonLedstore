@@ -1,6 +1,4 @@
-const contenedorProducto = document.querySelector("#tablaproducto tbody");
 const img = document.querySelector("#pro_img");
-
 
 /** DataTables  */
 

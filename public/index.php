@@ -7,6 +7,7 @@ use Controllers\CategoriaController;
 use Controllers\ColorController;
 use Controllers\ProductoController;
 use Controllers\ClienteController;
+use Controllers\PrincipalController;
 use MVC\Router;
 
 $router = new Router();
@@ -59,5 +60,19 @@ $router = new Router();
     //method get
     $router->get('/cliente',[ClienteController::class,'index']);
 
-$router->comprobarRutas();
+// Principal
+    // Principal
+        //METHOD GET
+        $router->get("/", [PrincipalController::class,'index']);
+        $router->get("/nosotros",[PrincipalController::class,'nosotros']);
+        $router->get("/productos",[PrincipalController::class,'productos']);-
+        $router->get("/contacto",[PrincipalController::class,"contacto"]);
+        $router->get("/servicios",[PrincipalController::class,"servicios"]);
 
+       //METHOD POST
+        $router->post("/contacto/enviar",[PrincipalController::class,"contactoEmail"]);
+    // //Landig Page
+    $router->get("/landingpage", [PrincipalController::class, 'landig']);
+
+
+    $router->comprobarRutas();

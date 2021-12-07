@@ -32,7 +32,6 @@ function obtenerData() {
     clean();
 
     let id = e.target.dataset.idcolor;
-    console.log(id);
 
     $.ajax({
       type: "POST",

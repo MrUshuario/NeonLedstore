@@ -40,7 +40,7 @@ class Router {
         //Proteger las rutas
         if(in_array($urlActual,$rutas_protegidas) && !$id){
             header("location: /login");
-        } else if ($id==1 && $urlActual == '/login'){
+        } else if (!empty($_SESSION['id']) && $urlActual == '/login'){
             header("location: /dashboard");
         }
 
@@ -80,17 +80,17 @@ class Router {
         include __DIR__."/views/loginlayout.php";
     }
 
-    public function renderAjax($view, $datos=[]){
+    public function renderPrincipal($view, $datos=[]){
         foreach ($datos as $key => $value) {
             $$key = $value;
         }
 
         ob_start();//Almacenamiento en memoria durante un momento...
-        include __DIR__."/views/ajax/$view.php";
+        include __DIR__."/views/principal/$view.php";
 
         $contenido = ob_get_clean(); //Limpia elbuffer
 
-        include __DIR__."/views/ajax.php";
+        include __DIR__."/views/layoutPrincipal.php";
         
     }
 }
