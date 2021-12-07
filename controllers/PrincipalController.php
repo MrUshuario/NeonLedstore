@@ -42,11 +42,11 @@ class PrincipalController {
             $mail->SMTPSecure= PHPMailer::ENCRYPTION_SMTPS;
             $mail->SMTPAuth=true;
             $mail->Host='smtp.gmail.com';
-            $mail->Username = 'angelpretell2001@gmail.com';
-            $mail->Password = 'tgaxqcjecrcegwru';
+            $mail->Username = 'israeldavi0904@gmail.com';
+            $mail->Password = 'atmzeesqgcyhtzsl';
 
             $mail->setFrom('neonledstore@gmail.com','LedStore.com');
-            $mail->addAddress('angelpretell2001@gmail.com');
+            $mail->addAddress('israeldavi0904@gmail.com');
             $mail->Subject = "Tienes un nuevo mensaje";
 
             //Habilitar HTML
