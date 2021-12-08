@@ -13,12 +13,12 @@
             <!-- Basic Examples -->
             <div class="row clearfix">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <div class="card">
+                    <div class="card border border-info">
                         <div class="header">
-                            <h2>
+                            <h2 class= "card-header" >
                                 CLIENTES
                             </h2>
-                            <ul class="header-dropdown m-t--5">
+                            <ul style="line-height: 2.8;" class="header-dropdown m-t--5">
                                 <button type="button" class="btn bg-teal waves-effect"data-bs-toggle="modal" data-bs-target="#modalProducto">
                                     <i class="material-icons">add_circle</i>
                                     <span>AGREGAR NUEVO</span>
@@ -29,7 +29,7 @@
                             <div class="table-responsive">
                                 <table class="table table-bordered table-striped table-hover js-basic-example dataTable">
                                     <thead>
-                                        <tr>
+                                        <tr class="table-info">
                                             <th>Name</th>
                                             <th>Position</th>
                                             <th>Office</th>
