@@ -31,25 +31,25 @@
             <li class="header">Menú</li>
             <li class="<?= end($currentURL) == 'dashboard' ? 'active' : 'inactive' ?>">
                 <a href="/dashboard">
-                    <i class="material-icons">home</i>
+                    <i class="fas fa-house-user" style="line-height: 2.3;" ></i>
                     <span>Home</span>
                 </a>
             </li>
             <li class="<?= end($currentURL) == 'users' ? 'active' : 'inactive' ?>">
                 <a href="/cliente">
-                    <i class="material-icons">Clientes</i>
+                    <i class="fas fa-portrait" style="line-height: 2.3;" ></i>
                     <span>Clientes</span>
                 </a>
             </li>
             <li class="<?= end($currentURL) == 'products' ? 'active' : 'inactive' ?>">
                 <a href="/producto">
-                    <i class="material-icons">shopping_basket</i>
+                    <i class="fas fa-archive" style="line-height: 2.3;"></i>
                     <span>Productos</span>
                 </a>
             </li>
             <li class="<?= end($currentURL) == 'products' ? 'active' : 'inactive' ?>">
                 <a href="/categoria">
-                    <i class="material-icons">category</i>
+                    <i class="fas fa-th-large" style="line-height: 2.3;"></i>
                     <span>Categoria</span>
                 </a>
             </li>
