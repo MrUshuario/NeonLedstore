@@ -79,10 +79,6 @@ function saveColor() {
       rgb: rgb,
     };
     if (id == "") {
-      const data = {
-        nombre: nombre,
-        rgb: rgb,
-      };
       createColor(data);
     } else {
       updateColor(data);
