@@ -20,6 +20,8 @@ class Router {
 
         // Arreglo de rutas protegidas
         $rutas_protegidas = [
+            '/productoxcolor','/productoxcolor/listar','/productoxcolor/eliminar','/productoxcolor/guardar',
+            '/productoxcolor/editar','/productoxcolor/getColor',
             '/dashboard','/color','/color/listar','/color/buscar','/color/eliminar',
             '/color/guardar','/color/editar','/color/getColor', '/producto', '/producto/getCategoria',
             '/producto/getProducto','/producto/crear','/producto/editar','/producto/getProForm',

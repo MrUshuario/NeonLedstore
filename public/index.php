@@ -8,6 +8,7 @@ use Controllers\ColorController;
 use Controllers\ProductoController;
 use Controllers\ClienteController;
 use Controllers\PrincipalController;
+use Controllers\ProductoxColorController; #agrege este
 use MVC\Router;
 
 $router = new Router();
@@ -30,6 +31,17 @@ $router = new Router();
     $router->post('/color/editar',[ColorController::class,'editColor']);
     $router->post('/color/getColor',[ColorController::class,'getColor']);
 
+/////////PRODUCTO X COLOR
+    // method get
+    $router->get('/productoxcolor',[ProductoxColorController::class,'ProductoxColor']);
+    $router->get('/productoxcolor/listar',[ProductoxColorController::class,'listarProductoxColor']);
+
+    // method post
+    $router->post('/productoxcolor/eliminar',[ProductoxColorController::class,'eliminarProductoxColor']);
+    $router->post('/productoxcolor/guardar',[ProductoxColorController::class,'crearProductoxColor']);
+    $router->post('/productoxcolor/editar',[ProductoxColorController::class,'editProductoxColor']);
+    $router->post('/productoxcolor/getColor',[ProductoxColorController::class,'getProductoxColor']);
+    //////
 //Productos
     // method get
     $router->get('/producto',[ProductoController::class,'index']);

@@ -53,6 +53,19 @@
                     <span>Categoria</span>
                 </a>
             </li>
+            <li class="<?= end($currentURL) == 'colors' ? 'active' : 'inactive' ?>">
+                <a href="/color">
+                 <i class="fas fa-tint iconos"></i>
+                    <span>Colores</span>
+                </a>
+            </li>
+            <li class="<?= end($currentURL) == 'ProductoxColor' ? 'active' : 'inactive' ?>">
+                <a style= "text-decoration:none" href="/productoxcolor">
+                <i class="fas fa-fill-drip iconos "></i>
+                    <span>Producto x Color</span>
+                </a>
+            </li>
+            
         </ul>
     </div>
     <!-- #Menu -->
