@@ -1,2 +1,2 @@
 vendor/
-includes/config/
+includes/config/database.php
