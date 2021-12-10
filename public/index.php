@@ -33,14 +33,17 @@ $router = new Router();
 
 /////////PRODUCTO X COLOR
     // method get
-    $router->get('/productoxcolor',[ProductoxColorController::class,'ProductoxColor']);
+    $router->get('/productoxcolor',[ProductoxColorController::class,'index']);
     $router->get('/productoxcolor/listar',[ProductoxColorController::class,'listarProductoxColor']);
 
+    $router->get('/productoxcolor/getProducto',[ProductoxColorController::class,'getProducto']);
+    $router->get('/productoxcolor/getColor',[ProductoxColorController::class,'getColor']);
+
     // method post
-    $router->post('/productoxcolor/eliminar',[ProductoxColorController::class,'eliminarProductoxColor']);
-    $router->post('/productoxcolor/guardar',[ProductoxColorController::class,'crearProductoxColor']);
-    $router->post('/productoxcolor/editar',[ProductoxColorController::class,'editProductoxColor']);
-    $router->post('/productoxcolor/getColor',[ProductoxColorController::class,'getProductoxColor']);
+    $router->post('/productoxcolor/create',[ProductoxColorController::class,'create']);
+    $router->post('/productoxcolor/update',[ProductoxColorController::class,'update']);
+    $router->post('/productoxcolor/delete',[ProductoxColorController::class,'delete']);
+    $router->post('/productoxcolor/obtener',[ProductoxColorController::class,'obtener']);
     //////
 //Productos
     // method get

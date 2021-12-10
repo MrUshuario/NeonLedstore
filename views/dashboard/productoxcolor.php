@@ -23,7 +23,7 @@
                     </div>
                     <div class="body">
                         <div class="table-responsive">
-                            <table class="table table-striped table-hover  w-100 table-light table-fixed" id="tablacolor">
+                            <table class="table table-striped table-hover  w-100 table-light table-fixed" id="tablaproductoxcolor">
                                 <thead class="table-dark sticky">
                                     <tr>
                                         <th>id</th>
@@ -73,4 +73,4 @@
     </div>
 </div>
 
-<script src="build/js/ajaxColor.js"></script>
+<script src="build/js/ProductoxColor.js"></script>
