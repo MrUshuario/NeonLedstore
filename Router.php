@@ -25,7 +25,8 @@ class Router {
             '/producto/getProducto','/producto/crear','/producto/editar','/producto/getProForm',
             '/producto/estado',"/producto/eliminar","/producto/buscarNombre", '/categoria',
             '/categoria/listar','/categoria/crear','/categoria/estado','/categoria/getCategoria',
-            '/categoria/actualizar', '/categoria/eliminar',"/categoria/buscar",'/cliente'
+            '/categoria/actualizar', '/categoria/eliminar',"/categoria/buscar",'/cliente',
+            '/productoColor'
         ];
 
         $urlActual = $_SERVER['PATH_INFO'] ?? '/';

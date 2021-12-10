@@ -8,6 +8,7 @@ use Controllers\ColorController;
 use Controllers\ProductoController;
 use Controllers\ClienteController;
 use Controllers\PrincipalController;
+use Controllers\ProductoColorController;
 use MVC\Router;
 
 $router = new Router();
@@ -56,6 +57,20 @@ $router = new Router();
     $router->post('/categoria/actualizar',[CategoriaController::class,'actualizar']);
     $router->post('/categoria/eliminar',[CategoriaController::class,'eliminar']);
   
+
+// ProductoColor
+    //method get
+    $router->get('/productoColor',[ProductoColorController::class,'index']);
+    $router->get('/productoColor/listar',[ProductoColorController::class,'listar']);
+    $router->get('/productoColor/getProducto',[ProductoColorController::class,'getProducto']);
+    $router->get('/productoColor/getColor',[ProductoColorController::class,'getColor']);
+    
+    //method post
+    $router->post('/productoColor/create',[ProductoColorController::class,'create']);
+    $router->post('/productoColor/update',[ProductoColorController::class,'update']);
+    $router->post('/productoColor/delete',[ProductoColorController::class,'delete']);
+    $router->post('/productoColor/obtener',[ProductoColorController::class,'obtener']);
+
 //Cliente
     //method get
     $router->get('/cliente',[ClienteController::class,'index']);
