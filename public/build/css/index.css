@@ -5,3 +5,42 @@ footer{border-top:5px solid #fff}footer .subtitulo{font-size:25px}footer .parraf
             padding-top: 150px!important;
     }
 }
+
+.productos-tienda {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+#items {
+    flex: 1 0 100%;
+}
+
+
+@media (min-width: 558px){
+    .productos-tienda {
+        flex-direction: row;
+    }
+
+    #items {
+        flex: 1 0 25%;
+    }
+}
+
+@media (min-width: 768px){
+    .filtro {
+        flex: 1 0 25%;
+    }
+    
+    #items {
+        flex: 1 0 20%;
+    }
+
+    .productos {
+        flex: 1 0 75%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+}

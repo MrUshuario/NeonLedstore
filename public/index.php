@@ -8,7 +8,7 @@ use Controllers\ColorController;
 use Controllers\ProductoController;
 use Controllers\ClienteController;
 use Controllers\PrincipalController;
-use Controllers\ProductoxColorController; #agrege este
+use Controllers\ProductoColorController; 
 use MVC\Router;
 
 $router = new Router();
@@ -31,21 +31,20 @@ $router = new Router();
     $router->post('/color/editar',[ColorController::class,'editColor']);
     $router->post('/color/getColor',[ColorController::class,'getColor']);
 
-/////////PRODUCTO X COLOR
-    // method get
-    $router->get('/productoxcolor',[ProductoxColorController::class,'index']);
-    $router->get('/productoxcolor/listar',[ProductoxColorController::class,'listarProductoxColor']);
 
-    $router->get('/productoxcolor/getProducto',[ProductoxColorController::class,'getProducto']);
-    $router->get('/productoxcolor/getColor',[ProductoxColorController::class,'getColor']);
+    // method get
+    $router->get('/productocolor',[ProductoColorController::class,'index']);
+    $router->get('/productocolor/listar',[ProductoColorController::class,'listar']);
+
+    $router->get('/productocolor/getProducto',[ProductoColorController::class,'getProducto']);
+    $router->get('/productocolor/getColor',[ProductoColorController::class,'getColor']);
 
     // method post
-    $router->post('/productoxcolor/create',[ProductoxColorController::class,'create']);
-    $router->post('/productoxcolor/update',[ProductoxColorController::class,'update']);
-    $router->post('/productoxcolor/delete',[ProductoxColorController::class,'delete']);
-    $router->post('/productoxcolor/obtener',[ProductoxColorController::class,'obtener']);
-    //////
-//Productos
+    $router->post('/productocolor/create',[ProductoColorController::class,'create']);
+    $router->post('/productocolor/update',[ProductoColorController::class,'update']);
+    $router->post('/productocolor/delete',[ProductoColorController::class,'delete']);
+    $router->post('/productocolor/obtener',[ProductoColorController::class,'obtener']);
+
     // method get
     $router->get('/producto',[ProductoController::class,'index']);
     $router->get('/producto/getCategoria',[ProductoController::class,'obtenerCat']);

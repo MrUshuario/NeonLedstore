@@ -2,11 +2,11 @@ $(document).ready(function(){
     saveCorreo();
 });
 
-function prueba1(id){
+function enviarEmail(data){
     $.ajax({
         type:"POST",
         url:"/contacto/enviar",
-        data: {id},
+        data:data,
         success: function(e){
             console.log(e);
         }
@@ -16,7 +16,12 @@ function prueba1(id){
 function saveCorreo(){
     $("#formContact").on('submit', function(e){
         e.preventDefault();
-        
-        prueba1(1);
+        const data = {
+            nombre: $("#nombre").val().trim(),
+            correo: $("#correo").val().trim(),
+            telefono: $("#telefono").val().trim(),
+            pregunta: $("#pregunta").val().trim()
+        };
+        enviarEmail(data);
     });
 }

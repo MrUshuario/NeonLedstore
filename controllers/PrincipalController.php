@@ -250,11 +250,10 @@ class PrincipalController {
                     <img class="img__sent" src="https://i.ibb.co/zXP3BkD/sent.png" alt="">
                     <p class="text">Un nuevo usuario quiere contactarse:</p>
                     <div class="texts">
-                        <p><b>Nombres:</b> nombre</p>
-                        <p><b>Teléfono:</b> telefono</p>
-                        <p><b>Correo:</b> correo</p>
-                        <p><b>Interesado en:</b> Interes</p>
-                        <p><b>Mensaje:</b> pregunta</p>
+                        <p><b>Nombres:</b> '.$_POST["nombre"].'</p>
+                        <p><b>Teléfono:</b> '.$_POST["telefono"].'</p>
+                        <p><b>Correo:</b> '.$_POST["correo"].'</p>
+                        <p><b>Mensaje:</b> '.$_POST["pregunta"].'</p>
                     </div>
                     <div class="pie">
                         <img class="" src="https://i.ibb.co/Wf5jqrL/logo.webp" alt="">
@@ -274,8 +273,10 @@ class PrincipalController {
 
             echo json_encode([
                 "prueba" => $mail->send(),
-                ""=>$mail->ErrorInfo
+                ""=>$mail->ErrorInfo,
+                "post"=>$_POST
             ]);
         }
     }
+    
 }

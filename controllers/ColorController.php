@@ -57,7 +57,7 @@ class ColorController {
         }
     }
 
-    public static function editColor(Router $router){
+    public static function editColor(){
         
         if($_SERVER['REQUEST_METHOD'] == 'POST'){
             $color = Color::find($_POST['id']);
