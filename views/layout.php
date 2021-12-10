@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
     <!-- ICONOS FONT AWESOME -->
     <script src="https://kit.fontawesome.com/f788fcfb82.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="build/css/tablasCRUD.css">
 
     
     <link rel="stylesheet" href="build/css/bootstrap.min.css">
