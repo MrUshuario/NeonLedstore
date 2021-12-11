@@ -60,7 +60,7 @@
                 </a>
             </li>
             <li class="<?= end($currentURL) == 'productoColor' ? 'active' : 'inactive' ?>">
-                <a style= "text-decoration:none" href="/productocolor">
+                <a style= "text-decoration:none" href="/productoColor">
                 <i class="fas fa-fill-drip iconos "></i>
                     <span>Producto x Color</span>
                 </a>

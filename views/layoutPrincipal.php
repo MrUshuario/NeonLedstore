@@ -22,6 +22,7 @@
     <header class="bg-black">
         <div class="container container-responsive">
             <nav class="contenido navbar navbar-expand-lg navbar-light bg-black">
+                
                 <div class="container-fluid">
                     <a class="navbar-brand" href="/"><img class="w-100" src="/build/img/logo.webp" alt="logo neon led store" width="55px" height="55px"></a>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -83,6 +84,18 @@
                             <span class="amburguesaContenido navbar-toggler-icon bg-dark"></span>
                         </button>
                     </div>
+                </div> 
+                <!--falta el reponsive-->
+                <div class="neonbotton neontabla">
+                <a href="#"> 
+                <i class="fas fa-user"> <span style="font-family: Trebuchet MS">Iniciar sesión</span></i>
+                </a>
+                
+                </div>
+                <div class="neonbotton neontabla">
+                <a href="#"> 
+                <i class="fas fa-shopping-cart compra"></i>
+                </a>
                 </div>
             </nav>
         </div>

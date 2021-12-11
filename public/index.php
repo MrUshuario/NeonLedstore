@@ -8,7 +8,7 @@ use Controllers\ColorController;
 use Controllers\ProductoController;
 use Controllers\ClienteController;
 use Controllers\PrincipalController;
-use Controllers\ProductoColorController; 
+use Controllers\ProductoColorController;
 use MVC\Router;
 
 $router = new Router();
@@ -31,20 +31,7 @@ $router = new Router();
     $router->post('/color/editar',[ColorController::class,'editColor']);
     $router->post('/color/getColor',[ColorController::class,'getColor']);
 
-
-    // method get
-    $router->get('/productocolor',[ProductoColorController::class,'index']);
-    $router->get('/productocolor/listar',[ProductoColorController::class,'listar']);
-
-    $router->get('/productocolor/getProducto',[ProductoColorController::class,'getProducto']);
-    $router->get('/productocolor/getColor',[ProductoColorController::class,'getColor']);
-
-    // method post
-    $router->post('/productocolor/create',[ProductoColorController::class,'create']);
-    $router->post('/productocolor/update',[ProductoColorController::class,'update']);
-    $router->post('/productocolor/delete',[ProductoColorController::class,'delete']);
-    $router->post('/productocolor/obtener',[ProductoColorController::class,'obtener']);
-
+//Productos
     // method get
     $router->get('/producto',[ProductoController::class,'index']);
     $router->get('/producto/getCategoria',[ProductoController::class,'obtenerCat']);
@@ -70,6 +57,20 @@ $router = new Router();
     $router->post('/categoria/actualizar',[CategoriaController::class,'actualizar']);
     $router->post('/categoria/eliminar',[CategoriaController::class,'eliminar']);
   
+
+// ProductoColor
+    //method get
+    $router->get('/productoColor',[ProductoColorController::class,'index']);
+    $router->get('/productoColor/listar',[ProductoColorController::class,'listar']);
+    $router->get('/productoColor/getProducto',[ProductoColorController::class,'getProducto']);
+    $router->get('/productoColor/getColor',[ProductoColorController::class,'getColor']);
+    
+    //method post
+    $router->post('/productoColor/create',[ProductoColorController::class,'create']);
+    $router->post('/productoColor/update',[ProductoColorController::class,'update']);
+    $router->post('/productoColor/delete',[ProductoColorController::class,'delete']);
+    $router->post('/productoColor/obtener',[ProductoColorController::class,'obtener']);
+
 //Cliente
     //method get
     $router->get('/cliente',[ClienteController::class,'index']);
