@@ -31,25 +31,25 @@
             <li class="header">Menú</li>
             <li class="<?= end($currentURL) == 'dashboard' ? 'active' : 'inactive' ?>">
                 <a href="/dashboard">
-                    <i class="fas fa-house-user" style="line-height: 2.3;" ></i>
+                    <i class="fas fa-house-user iconos" ></i>
                     <span>Home</span>
                 </a>
             </li>
             <li class="<?= end($currentURL) == 'users' ? 'active' : 'inactive' ?>">
                 <a href="/cliente">
-                    <i class="fas fa-portrait" style="line-height: 2.3;" ></i>
+                    <i class="fas fa-portrait iconos" ></i>
                     <span>Clientes</span>
                 </a>
             </li>
             <li class="<?= end($currentURL) == 'products' ? 'active' : 'inactive' ?>">
                 <a href="/producto">
-                    <i class="fas fa-archive" style="line-height: 2.3;"></i>
+                    <i class="fas fa-archive iconos"></i>
                     <span>Productos</span>
                 </a>
             </li>
             <li class="<?= end($currentURL) == 'products' ? 'active' : 'inactive' ?>">
                 <a href="/categoria">
-                    <i class="fas fa-th-large" style="line-height: 2.3;"></i>
+                    <i class="fas fa-th-large iconos"></i>
                     <span>Categoria</span>
                 </a>
             </li>
@@ -59,7 +59,7 @@
                     <span>Colores</span>
                 </a>
             </li>
-            <li class="<?= end($currentURL) == 'ProductoxColor' ? 'active' : 'inactive' ?>">
+            <li class="<?= end($currentURL) == 'productoColor' ? 'active' : 'inactive' ?>">
                 <a style= "text-decoration:none" href="/productoColor">
                 <i class="fas fa-fill-drip iconos "></i>
                     <span>Producto x Color</span>

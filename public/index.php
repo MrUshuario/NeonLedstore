@@ -80,9 +80,13 @@ $router = new Router();
         //METHOD GET
         $router->get("/", [PrincipalController::class,'index']);
         $router->get("/nosotros",[PrincipalController::class,'nosotros']);
-        $router->get("/productos",[PrincipalController::class,'productos']);-
+        $router->get("/productos",[PrincipalController::class,'productos']);
         $router->get("/contacto",[PrincipalController::class,"contacto"]);
         $router->get("/servicios",[PrincipalController::class,"servicios"]);
+
+        //formularios
+        $router->get("/usuarioLogeo",[PrincipalController::class,"usuarioLogeo"]);
+        $router->get("/usuarioRegistro",[PrincipalController::class,"usuarioRegistro"]);
 
        //METHOD POST
         $router->post("/contacto/enviar",[PrincipalController::class,"contactoEmail"]);
