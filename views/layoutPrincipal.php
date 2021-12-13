@@ -87,7 +87,7 @@
                 </div> 
                 <!--falta el reponsive-->
                 <div class="neonbotton neontabla">
-                <a href="#"> 
+                <a href="/usuarioLogeo"> 
                 <i class="fas fa-user"> <span style="font-family: Trebuchet MS">Iniciar sesión</span></i>
                 </a>
                 
@@ -112,6 +112,32 @@
                 <div class="col-12 order-1 order-sm-1 col-sm-4 pt-3">
                     <p class="parrafoFooter">Somos fabricantes e importamos articulos neon led, pantallas led y paneles
                         electronicos. Producto hecho en Perú. </p>
+                        <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
                 </div>
                 <div class="col-12 order-3 order-sm-2 col-sm-5 pt-3">
                     <a href="http://maps.google.com/?q=jr. Paruro 1401 tda. 130 sótano, CC shopping center, Cercado de Lima 15001" target="_blank" class="parrafoFooter text-white"><i class="fas fa-map-marker-alt"></i>Jr. Paruro 1401 tda 130 CC Shoping Center Paruro, Cercado de Lima</a>
