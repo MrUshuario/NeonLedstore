@@ -32,6 +32,15 @@ class PrincipalController {
         $router->renderPrincipal("servicio",[]);
     }
 
+    //formulario registro cliente
+    public static function usuarioLogeo(Router $router){
+        $router->renderPrincipal("usuarioLogeo",[]);
+    }
+
+    public static function usuarioRegistro(Router $router){
+        $router->renderPrincipal("usuarioRegistro",[]);
+    }
+
     // Logica - Contacto
     public static function contactoEmail(){
         if($_SERVER['REQUEST_METHOD'] == 'POST'){
