@@ -60,6 +60,8 @@
 
     <?php echo $contenido ?>
 
+
+    
     <script src="build/js/script.js"></script>
 
     <!-- FontAwesome -->
