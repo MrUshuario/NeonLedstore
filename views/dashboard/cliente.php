@@ -35,6 +35,7 @@
                                             <th>Correo</th>
                                             <th>Clave</th>
                                             <th>Estado</th>
+                                            <th>Editar/Borrar</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -99,3 +100,5 @@
                     </div>
                 </div>
 </body>
+
+<script src="build/js/ajax.cliente.js"></script>
