@@ -27,9 +27,11 @@
                         </div>
                         <div class="body">
                             <div class="table-responsive">
-                                <table class="table table-bordered table-striped table-hover js-basic-example dataTable" id="tablacliente">
-                                    <thead>
-                                        <tr class="table-info">
+                                <!-- <table class="table table-bordered table-striped table-hover js-basic-example dataTable" id="tablacliente">
+                                    <thead> -->
+                                    <table class="table table-striped table-hover table-light table-fixed" id="tablacliente">
+                                <thead class="table-dark sticky">
+                                        <tr >
                                             <th>Nombres</th>
                                             <th>Apellidos</th>
                                             <th>Correo</th>
