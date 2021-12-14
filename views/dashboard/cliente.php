@@ -59,8 +59,8 @@
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="cerrar"></button>
                             </div>
                             <div class="modal-body">
-                                <form action="post" id="formCliente">
-                                    
+                                <form  id="formCliente" enctype="multipart/form-data">
+                                    <input type="hidden" id="id">
                                     <div class="mb-3">
                                     <label for="nombre">Nombre Cliente</label>
                                     <input type="text" class="form-control" id="cli_nombre">
