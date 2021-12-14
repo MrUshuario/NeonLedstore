@@ -24,11 +24,11 @@ class Cliente extends ActiveRecord {
         $this->cli_clave = $args['cli_clave'] ?? null;
         $this->token = $args['token'] ?? null;
     }
-    /*
+    
     public function verificarCorreo(){
         $query = "SELECT * FROM ".static::$tabla." WHERE cli_email='".$this->cli_email."'";
         $resultado = self::$db->query($query);
         return $resultado;
-    } */
+    } 
 
 }

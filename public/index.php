@@ -76,14 +76,14 @@ $router = new Router();
     //RUTAS AUN NO PROTEGIDAS
     //method get
     $router->get('/cliente',[ClienteController::class,'index']);
-    $router->get('/cliente/listar',[ClienteController::class,'listar']); //aun no implementado
+    $router->get('/cliente/listar',[ClienteController::class,'listar']); 
     $router->get('/cliente/getCliente',[ClienteController::class,'getCliente']); //aun no implementado
 
     //method post
-    $router->get('/cliente/create',[ClienteController::class,'getCliente']); //aun no implementado
+    $router->post('/cliente/create',[ClienteController::class,'create']); //PROBLEMAS PARA LLAMAR
     $router->post('/cliente/estado',[CategoriaController::class,'cambiarEstado']); //aun no implementado
-    $router->get('/cliente/update',[ClienteController::class,'getCliente']); //aun no implementado
-    $router->get('/cliente/delete',[ClienteController::class,'getCliente']); //aun no implementado
+    $router->post('/cliente/update',[ClienteController::class,'update']); //aun no implementado
+    $router->post('/cliente/delete',[ClienteController::class,'create']); //aun no implementado
 
 
 // Principal
