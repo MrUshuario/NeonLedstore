@@ -60,7 +60,7 @@
 
     <?php echo $contenido ?>
 
-    <footer class="bg-black">
+    <footer class="bg-black border-top-white">
         <div class="footer contenedor">
             <div class="descripcion">
                 <span>Tu diseño, tu espacio</span>

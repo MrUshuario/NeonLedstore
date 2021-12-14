@@ -130,6 +130,10 @@ a {
 }
 
 /** Footer */
+.border-top-white {
+  border-top: 5px solid #fff;
+}
+
 .footer {
   color: #fff;
   display: flex;
