@@ -13,6 +13,12 @@ a {
   font-family: "Open Sans", sans-serif;
 }
 
+.contenedor {
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+}
+
 .nav {
   display: flex;
   flex-direction: column;
@@ -123,4 +129,104 @@ a {
   }
 }
 
+/** Footer */
+.footer {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  font-family: 'Open Sans', sans-serif;
+}
 
+.descripcion span {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.descripcion p {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  margin-left: 5px;
+  font-size: .8rem;
+}
+
+.descripcion {
+  order: 1;
+}
+
+.info{
+  order: 3;
+  margin-top: 10px;
+}
+
+.redes{
+  margin: 10px 0;
+  display: flex;
+  order: 2;
+}
+
+.redes i {
+  font-size: 1.8rem;
+  margin-right: 10px;
+}
+
+.fa-facebook {
+  color: rgb(6, 3, 187);
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+.fa-instagram {
+  color: rgb(189, 8, 129);
+  background-color: #fff;
+  border-radius: 40%;
+}
+
+.fa-pinterest {
+  color: rgb(224, 0, 0);
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+.ubicacion, .telefono, .email {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.ubicacion i, .telefono i, .email i {
+  margin-right: 10px;
+  font-size: 1.3rem;
+}
+
+.email span, .telefono span, .ubicacion span {
+  font-size: .7rem;
+}
+
+@media (min-width: 560px){
+  .footer {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .descripcion {
+    order: 1;
+    flex: 0 1 33%;
+  }
+  
+  .info{
+    order: 2;
+    flex: 0 1 33%;
+    margin-top: 10px;
+  }
+  
+  .redes{
+    order: 3;
+    flex: 0 1 33%;
+    justify-content: center;
+    align-items: center;
+  }
+}

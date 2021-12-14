@@ -25,7 +25,7 @@
     <link rel="stylesheet" href="build/css/index.css">
     <script src="build/js/jquery.min.js"></script>
 
-     <!--PRUEBAS CONTACTO -->
+    <!--PRUEBAS CONTACTO -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
@@ -60,8 +60,36 @@
 
     <?php echo $contenido ?>
 
+    <footer class="bg-black">
+        <div class="footer contenedor">
+            <div class="descripcion">
+                <span>Tu diseño, tu espacio</span>
+                <p>
+                    Somos fabricante e importamos articulo neon led, pantalla led y paneles electronicos. Producto hecho en Perú
+                </p>
+            </div>
+            <div class="info">
+                <div class="ubicacion">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Jr. Paruro 1401 tda 130 CC Shoping Center Paruro, Cercado de Lima</span>
+                </div>
+                <div class="telefono">
+                    <i class="fas fa-mobile-alt"></i>
+                    <span>994 078 320</span>
+                </div>
+                <div class="email">
+                    <i class="far fa-envelope"></i>
+                    <span>info.neonleadstore@gmail.com</span>
+                </div>
+            </div>
+            <div class="redes">
+                <i class="fab fa-facebook"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-pinterest"></i>
+            </div>
+        </div>
+    </footer>
 
-    
     <script src="build/js/script.js"></script>
 
     <!-- FontAwesome -->
