@@ -50,13 +50,72 @@ class ClienteController {
             //ya existe
             else {
                 $json = json_encode ([
-                    "STATUS"=>3,
-                    "mensaje"=>"Correo ya registrado",
+                    "STATUS"=>2,
+                    "mensaje"=>"Este correo ya existe!!!",
                     "c"=>$cliente
                 ]);   
             }
             echo $json;
         }
-    } 
+    }
+    
+    public static function getCliente(Router $router){
+        if($_SERVER['REQUEST_METHOD'] === 'POST'){ // Hay triple =
+            $id = $_POST['id'];
+            $cliente = Cliente::find($id);
+            $json = json_encode([
+                "data"=>$cliente
+            ]);
+            
+            echo $json;
+        }
+    }
+
+    public static function delete(Router $router){
+        if($_SERVER['REQUEST_METHOD'] == 'POST'){
+            $id = $_POST['id'];
+            $id = filter_var($id, FILTER_VALIDATE_INT);
+            $cliente = Cliente::find($id);
+            $el = $cliente->eliminar();
+            $json = json_encode($el);
+        
+            echo $json;
+        }
+    }
+
+    public static function update(){
+        
+        if($_SERVER['REQUEST_METHOD'] == 'POST'){
+            $cliente = Cliente::find($_POST['id']);
+            $cliente->sincronizar($_POST);
+
+            $dd = $cliente->actualizar();
+
+            $json = json_encode($dd);
+
+            echo $json;
+        }
+        
+    }
+
+    public static function estado()
+    {
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            $cliente = new Cliente($_POST);
+
+            if ($cliente->pro_estado == "1") {
+                $cliente->pro_estado = "0";
+                $resultado = $cliente->editEstado(); // PERSONALIZADO 
+            } else {
+                $cliente->pro_estado = "1";
+                $resultado = $cliente->editEstado(); // PERSONALIZADO
+            }
+
+            echo json_encode([
+                "cli_estado" => $cliente->cli_estado,
+                "resultado" => $resultado
+            ]);
+        }
+    }
 
 }
