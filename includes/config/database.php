@@ -1,7 +1,7 @@
 <?php
 function conexionDB()
 {
-    $db = new mysqli('localhost', 'root', '', 'ghxumdmy_neonledstore');
+    $db = new mysqli('localhost', 'root', '1234', 'ghxumdmy_neonledstore');
     mysqli_set_charset($db, "utf8");
     if (!$db) {
         echo "no se conecto";
