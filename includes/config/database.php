@@ -8,5 +8,6 @@ function conexionDB()
         exit;
     }
 
+    
     return $db;
 }
