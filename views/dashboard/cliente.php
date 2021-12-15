@@ -19,7 +19,7 @@
                                 CLIENTES
                             </h2>
                             <ul style="line-height: 2.8;" class="header-dropdown m-t--5">
-                                <button type="button" class="btn bg-teal waves-effect"data-bs-toggle="modal" data-bs-target="#modalCliente">
+                                <button id="model-cliente" type="button" class="btn bg-teal waves-effect"data-bs-toggle="modal" data-bs-target="#modalCliente">
                                     <i class="material-icons">add_circle</i>
                                     <span>Agregar Cliente</span>
                                 </button>
@@ -87,8 +87,8 @@
                                     <label for="nombre">Estado Cliente</label>
                                     <select id="cli_estado" class="form-control">
                                     <option value="">--SELECCIONE--</option>
-                                    <option value="0">0</option>
-                                    <option value="1">1</option>
+                                    <option value=0>0</option>
+                                    <option value=1>1</option>
                                     </select>
                                     </div>
 
