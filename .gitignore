@@ -1,3 +1,5 @@
+#Se ignora la carpeta vendor
 vendor
 
-includes
+# Se ignora la carpeta includes
+include/
