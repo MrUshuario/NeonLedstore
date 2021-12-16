@@ -2,4 +2,4 @@
 vendor
 
 # Se ignora la carpeta includes
-include/
+include/config/
