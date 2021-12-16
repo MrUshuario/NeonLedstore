@@ -30,7 +30,7 @@ class ClienteController {
             $cliente = new Cliente($_POST);
             $verificarCorreo = $cliente->verificarCorreo();
             if ($verificarCorreo->num_rows == 0) {
-                $resultado = $cliente->crear();
+                $resultado = $cliente->crear(); //PROBLEMA, LO CREA PASANDO EL
                 
                 if($resultado) {
                     $listado = Cliente::listar();
@@ -100,22 +100,28 @@ class ClienteController {
 
     public static function estado()
     {
-        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-            $cliente = new Cliente($_POST);
+        $cliente = new Cliente();
 
-            if ($cliente->pro_estado == "1") {
-                $cliente->pro_estado = "0";
-                $resultado = $cliente->editEstado(); // PERSONALIZADO 
-            } else {
-                $cliente->pro_estado = "1";
-                $resultado = $cliente->editEstado(); // PERSONALIZADO
-            }
-
-            echo json_encode([
-                "cli_estado" => $cliente->cli_estado,
-                "resultado" => $resultado
-            ]);
+        if ($_POST['cli_estado'] == "1") {
+            $args = [
+                "cli_estado" => "0",
+                "id" => $_POST['id']
+            ];
+            $cliente->sincronizar($args);
+            $resultado = $cliente->actualizarEstado();
+        } else if ($_POST['cat_estado'] == "0") {
+            $args = [
+                "cat_estado" => "1",
+                "id" => $_POST['id']
+            ];
+            $cliente->sincronizar($args);
+            $resultado = $cliente->actualizarEstado();
         }
-    }
 
+        echo json_encode([
+            "bool" => $resultado,
+            "estado" => $args['cat_estado'],
+            "id" => $args['id']
+        ]);
+    }
 }

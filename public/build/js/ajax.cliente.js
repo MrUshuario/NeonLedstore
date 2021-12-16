@@ -208,13 +208,16 @@ function updateStatus(){
   $(document).on("click","#btnEstado",function(e){
     const id = e.target.dataset.idcliente;
     const estadoText = e.target.textContent;
-
+    const data = { id: id, cli_estado: estadoText};
+    console.log(data);
     $.ajax({
-      url: "/cliente/estado",
       type: "POST",
-      data:{id: id, cli_estado: estadoText},
-      success: function(ef){
-        const json = JSON.parse(ef);
+      url: "/cliente/estado",
+      data: data,
+      success: function(e){
+        console.log(e)
+        const json = JSON.parse(e);
+        
         const { cli_estado, resultado } = json;
         console.log(cli_estado, resultado)
         e.target.textContent = cli_estado;
