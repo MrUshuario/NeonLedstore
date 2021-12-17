@@ -75,7 +75,7 @@ AGREGO EL SCROLL) -->
                     <span>Graficos</span>
                 </a>
             </li>
-            <!--AL ULTIMO HAY QUE AGREGARLE LA CLASE ULTIMO PARA QUE PUEDA SCROLLEAR BIEN -->
+            <!--AL ULTIMO HAY QUE AGREGARLE LA CLASE ULTIMO PsdsARA QUE PUEDA SCROLLEAR BIEN -->
             <li class="<?= end($currentURL) == 'configuracion' ? 'active' : 'inactive' ?> ultimo">
                 <a href="/configuracion">
                 <i class="fas fa-cog iconos "></i>
