@@ -1,5 +1,5 @@
 
-<div class="contacto bg-black container-fluid">
+<div class="bg-black container-fluid">
     <div class="row">
         <!--<img src="/build/img/contacto/jovenLuzMovil.webp" srcset="/build/img/contacto/jovenLuzMovil.webp 420w, /build/img/contacto/jovenLuzMovil.webp 1095w" alt="jovenLuz" class="fondoContacto position-absolute p-0"> -->
     </div>

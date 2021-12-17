@@ -1,25 +1,23 @@
 
-
-<div class="landingPage bg-black">
-        <div class="container-fluid text-white text-center">
+<div class="container-fluid bg-black">
+    
+<div class="row">
+        <!--<img src="/build/img/contacto/jovenLuzMovil.webp" srcset="/build/img/contacto/jovenLuzMovil.webp 420w, /build/img/contacto/jovenLuzMovil.webp 1095w" alt="jovenLuz" class="fondoContacto position-absolute p-0"> -->
+    </div>
+        <div class="container-fluid text-center">
             <main class="main row pb-5 d-flex justify-content-center">
-                <img src="/build/img/jovenEscuchandoMovil.webp"
-                    srcset="/build/img/jovenEscuchandoMovil.webp 420w, /build/img/jovenEscuchando.webp 870w"
-                    alt="jovenEscuchando"
-                    class="mainFondo position-absolute">
-                <div class="mainContent col-8 my-5 pb-3">
-                    <img class="mainImg mx-auto d-none d-sm-block" src="/build/img/webp" alt="logo">
-                    <h1 class="mainTitle my-3 fs-2 neones">¿Quieres tener un negocio visualmente atractivo?</h1>
+                <div class="neontabla fondoplomo col-8 my-5 pb-3">
+                    <h1 class="my-3 fs-2 neones p-50">¿Quieres tener un negocio visualmente atractivo?</h1>
                     <div class="row d-flex justify-content-center">
                         <form class="landingPageForm col-12 col-sm-5" method="POST" action="/build/enviingPage">
                             <div class="">
-                                <input type="text" class="textInput neontextlanding text-center form-control my-1 my-sm-5 border-0" name="nombre" placeholder="Nombres y Apellidos" required>
+                                <input type="text" class="neontextlanding bg-transparent text-center form-control my-1 my-sm-5 border-0" name="nombre" placeholder="Nombres y Apellidos" required>
                             </div>
                             <div class="">
-                                <input type="email" class="emailInput neontextlanding text-center form-control my-1 my-sm-5 border-0" name="correo" placeholder="Correo Electrónico" required>
+                                <input type="email" class="neontextlanding bg-transparent text-center form-control my-1 my-sm-5 border-0" name="correo" placeholder="Correo Electrónico" required>
                             </div>
                             <div class="">
-                                <input type="tel" class="telInput neontextlanding text-center form-control my-1 my-sm-5 border-0" name="telefono" id="telefono" placeholder="Número de celular" required>
+                                <input type="tel" class="neontextlanding bg-transparent text-center form-control my-1 my-sm-5 border-0" name="telefono" id="telefono" placeholder="Número de celular" required>
                             </div>
                             <button type="submit" class="neonbottonlanding btn btn-primary my-0 my-sm-3 border-0">Obtén una asesoría personalizada GRATIS!</button>
                         </form>

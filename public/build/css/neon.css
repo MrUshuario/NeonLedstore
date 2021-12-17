@@ -16,6 +16,11 @@
     box-shadow:  0 0 5px cyan, 0 0 10px cyan ;
 }
 
+.neontabla.fondoplomo {
+
+ background: rgba(138, 149, 151, 0.3)
+}
+
 
 .neontabla a {
     /* El margin right, */ 
@@ -56,7 +61,7 @@
     text-align: center;
     color: white !important;
     margin: 0;
-    font-size: 50px;
+    font-size: 45px;
     text-shadow: 0 0 5px red, 0 0 15px red, 0 0 30px red, 0 0 40px red;
     font-family: 'Dancing Script', cursive;
 }
@@ -160,3 +165,6 @@
         
     }
 }
+
+/*SALVADO DE INDEX.CSS, puede servir para el fondo */
+.mainFondo{height:870px;object-fit:cover}
