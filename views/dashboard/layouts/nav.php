@@ -65,12 +65,19 @@
                     <span>Producto x Color</span>
                 </a>
             </li>
+            <li class="<?= end($currentURL) == 'graficos' ? 'active' : 'inactive' ?>">
+                <a style= "text-decoration:none" href="/graficos">
+                <i class="fas fa-border-all iconos "></i>
+                    <span>Graficos</span>
+                </a>
+            </li>
             <li class="<?= end($currentURL) == 'configuracion' ? 'active' : 'inactive' ?>">
-                <a style= "text-decoration:none" href="/configuracion ">
+                <a style= "text-decoration:none" href="/configuracion">
                 <i class="fas fa-cog iconos "></i>
                     <span>configuracion</span>
                 </a>
             </li>
+
             
         </ul>
     </div>
