@@ -9,6 +9,8 @@ use Controllers\ProductoController;
 use Controllers\ClienteController;
 use Controllers\PrincipalController;
 use Controllers\ProductoColorController;
+use Controllers\GraficosController;
+use Controllers\ConfiguracionController;
 use MVC\Router;
 
 $router = new Router();

@@ -1,3 +1,7 @@
+<!-- Menu debe tener OVERFLOW (si se pasa más de lo permito de su altura, siga conteniendo más elementos y no afecte el diseño de la pagina
+AGREGO EL SCROLL) -->
+
+
 <?php $currentURL = explode('/', $_SERVER['PHP_SELF']); ?>
 <!-- Left Sidebar -->
 <aside id="leftsidebar" class="sidebar">
@@ -60,19 +64,20 @@
                 </a>
             </li>
             <li class="<?= end($currentURL) == 'productoColor' ? 'active' : 'inactive' ?>">
-                <a style= "text-decoration:none" href="/productoColor">
+                <a href="/productoColor">
                 <i class="fas fa-fill-drip iconos "></i>
                     <span>Producto x Color</span>
                 </a>
             </li>
             <li class="<?= end($currentURL) == 'graficos' ? 'active' : 'inactive' ?>">
-                <a style= "text-decoration:none" href="/graficos">
+                <a href="/graficos">
                 <i class="fas fa-border-all iconos "></i>
                     <span>Graficos</span>
                 </a>
             </li>
-            <li class="<?= end($currentURL) == 'configuracion' ? 'active' : 'inactive' ?>">
-                <a style= "text-decoration:none" href="/configuracion">
+            <!--AL ULTIMO HAY QUE AGREGARLE LA CLASE ULTIMO PARA QUE PUEDA SCROLLEAR BIEN -->
+            <li class="<?= end($currentURL) == 'configuracion' ? 'active' : 'inactive' ?> ultimo">
+                <a href="/configuracion">
                 <i class="fas fa-cog iconos "></i>
                     <span>configuracion</span>
                 </a>
