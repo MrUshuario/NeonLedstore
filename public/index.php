@@ -58,7 +58,7 @@ $router = new Router();
     $router->post('/categoria/eliminar',[CategoriaController::class,'eliminar']);
   
 
-// ProductoColor
+//ProductoColor
     //method get
     $router->get('/productoColor',[ProductoColorController::class,'index']);
     $router->get('/productoColor/listar',[ProductoColorController::class,'listar']);
@@ -106,5 +106,10 @@ $router = new Router();
     // //Landig Page
     $router->get("/landingpage", [PrincipalController::class, 'landig']);
 
-
+// BotonConfiguracion
+    $router->get("/configuracion", [AdminController::class,'indexConfig']);
+    $router->get("/configuracion/getData", [AdminController::class,'dataConfig']);
+    
+    $router->post("/configuracion/verificar", [AdminController::class,'verificar']);
+    $router->post("/configuracion/updatePassword", [AdminController::class,'updatePassword']);
     $router->comprobarRutas();

@@ -72,19 +72,6 @@ class ColorController {
         
     }
 
-    public static function buscarNombre(Router $router) {
-        if($_SERVER["REQUEST_METHOD"] == "POST"){
-            $nombre = $_POST['nombre'];
-            $listar = Color::listarNombre($nombre);
-            $json = json_encode([
-                "resp"=>$listar
-            ]);
-
-            echo $json;
-        }
-        
-    }
-
     public static function getColor(Router $router){
         if($_SERVER['REQUEST_METHOD'] === 'POST'){
             $id = $_POST['id'];

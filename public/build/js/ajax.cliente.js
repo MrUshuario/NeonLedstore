@@ -218,7 +218,7 @@ function updateStatus(){
         const { cli_estado, resultado } = json;
         console.log(cli_estado, resultado)
         e.target.textContent = cli_estado;
-        if(pro_estado == 1){
+        if(cli_estado == 1){
           e.target.classList.remove("btn-danger");
           e.target.classList.add("btn-success");
         }else {

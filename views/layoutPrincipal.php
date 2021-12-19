@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="build/css/fontawesome/css/all.min.css">
 
     <!-- Bootstrap 5 CSS -->
-    <link rel="stylesheet" href="build/css/bootstrap/bootstrap.min.js">
+    <link rel="stylesheet" href="build/css/bootstrap/bootstrap.min.css">
 
     <!-- Normalize CSS -->
     <link rel="stylesheet" href="build/css/normalize/normalize.css">

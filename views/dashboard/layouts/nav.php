@@ -66,7 +66,7 @@
                 </a>
             </li>
             <li class="<?= end($currentURL) == 'configuracion' ? 'active' : 'inactive' ?>">
-                <a style= "text-decoration:none" href="/configuracion ">
+                <a style= "text-decoration:none" data-idadmin="<?php echo $_SESSION['id'] ?>" href="/configuracion ">
                 <i class="fas fa-cog iconos "></i>
                     <span>configuracion</span>
                 </a>

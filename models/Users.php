@@ -48,4 +48,16 @@ class Users extends ActiveRecord{
         return $boolean;
     }
 
+    // metodo para verificar el password antiguo para cambiar a una nueva contraseña
+    public static function verificarKey($pass1){
+        $query = 'SELECT * FROM '.static::$tabla.' where id ='.$_SESSION['id'];
+        $resultado = self::$db->query($query);
+
+        $pass = $resultado->fetch_object();
+
+        $autenticar = password_verify($pass1, $pass->pass);
+
+        return $autenticar;
+    }
+
 }
