@@ -108,4 +108,4 @@
         </div>
     </section>
 
-    <script src="build/js/ajax.producto.js"></script>
+    <script src="build/js/ajax/ajax.producto.js"></script>

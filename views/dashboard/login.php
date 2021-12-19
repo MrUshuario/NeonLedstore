@@ -17,4 +17,4 @@
     </form>
 </div>
 
-<script src="build/js/ajaxlogin.js"></script>
+<script src="build/js/ajax/ajaxlogin.js"></script>

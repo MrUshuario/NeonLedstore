@@ -81,4 +81,4 @@
     </div>
 </section>
 
-<script src="build/js/ajax.productoColor.js"></script>
+<script src="build/js/ajax/ajax.productoColor.js"></script>

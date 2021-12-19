@@ -89,4 +89,4 @@
 </div>
 
 
-<script src="build/js/ajax.categoria.js"></script>
+<script src="build/js/ajax/ajax.categoria.js"></script>

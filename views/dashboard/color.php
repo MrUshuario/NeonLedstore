@@ -72,4 +72,4 @@
     </div>
 </div>
 
-<script src="build/js/ajaxColor.js"></script>
+<script src="build/js/ajax/ajaxColor.js"></script>
