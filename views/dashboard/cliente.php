@@ -1,4 +1,4 @@
-<body class="theme-red">
+
     <?php require 'layouts/loader.php'; ?>
     <!-- Overlay For Sidebars -->
     <div class="overlay"></div>
@@ -101,6 +101,6 @@
                         </div>
                     </div>
                 </div>
-</body>
+
 
 <script src="build/js/ajax.cliente.js"></script>

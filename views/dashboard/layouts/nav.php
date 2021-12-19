@@ -1,3 +1,7 @@
+<!-- Menu debe tener OVERFLOW (si se pasa más de lo permito de su altura, siga conteniendo más elementos y no afecte el diseño de la pagina
+AGREGO EL SCROLL) -->
+
+
 <?php $currentURL = explode('/', $_SERVER['PHP_SELF']); ?>
 <!-- Left Sidebar -->
 <aside id="leftsidebar" class="sidebar">
@@ -60,17 +64,30 @@
                 </a>
             </li>
             <li class="<?= end($currentURL) == 'productoColor' ? 'active' : 'inactive' ?>">
-                <a style= "text-decoration:none" href="/productoColor">
+                <a href="/productoColor">
                 <i class="fas fa-fill-drip iconos "></i>
                     <span>Producto x Color</span>
                 </a>
             </li>
+<<<<<<< HEAD
             <li class="<?= end($currentURL) == 'configuracion' ? 'active' : 'inactive' ?>">
                 <a style= "text-decoration:none" data-idadmin="<?php echo $_SESSION['id'] ?>" href="/configuracion ">
+=======
+            <li class="<?= end($currentURL) == 'graficos' ? 'active' : 'inactive' ?>">
+                <a href="/graficos">
+                <i class="fas fa-border-all iconos "></i>
+                    <span>Graficos</span>
+                </a>
+            </li>
+            <!--AL ULTIMO HAY QUE AGREGARLE LA CLASE ULTIMO PsdsARA QUE PUEDA SCROLLEAR BIEN -->
+            <li class="<?= end($currentURL) == 'configuracion' ? 'active' : 'inactive' ?> ultimo">
+                <a href="/configuracion">
+>>>>>>> 7d869cc3d14c92f7592ba5732413050d86f5d799
                 <i class="fas fa-cog iconos "></i>
                     <span>configuracion</span>
                 </a>
             </li>
+
             
         </ul>
     </div>

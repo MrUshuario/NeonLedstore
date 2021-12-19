@@ -9,6 +9,8 @@ use Controllers\ProductoController;
 use Controllers\ClienteController;
 use Controllers\PrincipalController;
 use Controllers\ProductoColorController;
+use Controllers\GraficosController;
+use Controllers\ConfiguracionController;
 use MVC\Router;
 
 $router = new Router();
@@ -82,9 +84,14 @@ $router = new Router();
     //method post
     $router->post('/cliente/getCliente',[ClienteController::class,'getCliente']);
     $router->post('/cliente/create',[ClienteController::class,'create']);
-    $router->post('/cliente/estado',[CategoriaController::class,'cambiarEstado']); //aun no implementado
+    $router->post('/cliente/estado',[ClienteController::class,'estado']); //aun no implementado
     $router->post('/cliente/update',[ClienteController::class,'update']); 
-    $router->post('/cliente/delete',[ClienteController::class,'delete']); 
+    $router->post('/cliente/delete',[ClienteController::class,'delete']);
+
+//configuración
+    $router->get('/configuracion',[ConfiguracionController::class,'index']);
+//graficos
+    $router->get('/graficos',[GraficosController::class,'index']);
 
 
 // Principal
