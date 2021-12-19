@@ -90,4 +90,9 @@ class AdminController  {
         
     }
     
+    public static function cerrar(){
+        session_destroy();
+        header("location: /login");
+    }
+
 }

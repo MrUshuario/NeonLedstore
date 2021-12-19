@@ -28,7 +28,9 @@ class Router {
             '/categoria/actualizar', '/categoria/eliminar',"/categoria/buscar",'/cliente',
             '/cliente/listar','/cliente/getCliente','/cliente/create','/cliente/estado',
             '/cliente/update','/cliente/delete',
-            '/configuracion','/graficos',
+            '/configuracion', '/configuracion/getData','/configuracion/verificar','/configuracion/updatePassword',
+            '/cerrar',
+            '/graficos',
             '/productoColor','/productoColor/listar','/productoColor/getProducto',
             '/productoColor/getColor','/productoColor/create','/productoColor/update',
             '/productoColor/delete','/productoColor/obtener'

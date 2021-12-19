@@ -88,14 +88,24 @@ $router = new Router();
     $router->post('/cliente/update',[ClienteController::class,'update']); 
     $router->post('/cliente/delete',[ClienteController::class,'delete']);
 
-//configuración
-    $router->get('/configuracion',[ConfiguracionController::class,'index']);
+// BotonConfiguracion
+    // method get
+    $router->get("/configuracion", [AdminController::class,'indexConfig']);
+    $router->get("/configuracion/getData", [AdminController::class,'dataConfig']);
+    
+    // method post
+    $router->post("/configuracion/verificar", [AdminController::class,'verificar']);
+    $router->post("/configuracion/updatePassword", [AdminController::class,'updatePassword']);
+    
+// Cerrar Session - DASHBOARD
+    //method get
+    $router->get("/cerrar", [AdminController::class, 'cerrar']);
+
 //graficos
     $router->get('/graficos',[GraficosController::class,'index']);
 
 
 // Principal
-    // Principal
         //METHOD GET
         $router->get("/", [PrincipalController::class,'index']);
         $router->get("/nosotros",[PrincipalController::class,'nosotros']);
@@ -110,13 +120,9 @@ $router = new Router();
        //METHOD POST
         $router->post("/contacto/enviar",[PrincipalController::class,"contactoEmail"]);
         $router->post("/landingpage/enviar",[PrincipalController::class,"contactolandingEmail"]);
-    // //Landig Page
+    //Landig Page
     $router->get("/landingpage", [PrincipalController::class, 'landig']);
 
-// BotonConfiguracion
-    $router->get("/configuracion", [AdminController::class,'indexConfig']);
-    $router->get("/configuracion/getData", [AdminController::class,'dataConfig']);
-    
-    $router->post("/configuracion/verificar", [AdminController::class,'verificar']);
-    $router->post("/configuracion/updatePassword", [AdminController::class,'updatePassword']);
+
+
     $router->comprobarRutas();

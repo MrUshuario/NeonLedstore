@@ -70,12 +70,18 @@ AGREGO EL SCROLL) -->
                 </a>
             </li>
             <li class="<?= end($currentURL) == 'configuracion' ? 'active' : 'inactive' ?>">
-                <a style= "text-decoration:none" data-idadmin="<?php echo $_SESSION['id'] ?>" href="/configuracion ">
+                <a style= "text-decoration:none" href="/configuracion ">
                 <i class="fas fa-cog iconos "></i>
                     <span>configuracion</span>
                 </a>
             </li>
 
+            <li class="<?= end($currentURL) == 'cerrar' ? 'active' : 'inactive' ?>">
+                <a style= "text-decoration:none" href="/cerrar">
+                <i class="fas fa-times-circle iconos"></i>
+                    <span>Cerrar Session</span>
+                </a>
+            </li>
             
         </ul>
     </div>
