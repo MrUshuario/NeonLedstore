@@ -29,6 +29,7 @@
     <script src="build/js/jquery.min.js"></script>
     <script src="build/js/plugins/DataTable/jquery.dataTables.min.js"></script>
     <script src="build/js/plugins/DataTable/dataTables.bootstrap.min.js"></script>
+    <script src="build/js/chart.min.js"></script>
 </head>
 <body>
     

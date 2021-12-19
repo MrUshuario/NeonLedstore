@@ -67,12 +67,14 @@ class AdminController  {
         ]);
     }
 
+    // verifica 
     public static function verificar(){
         echo  json_encode([
             'res' => Users::verificarKey($_POST['passwordV'])
         ]);
     }
 
+    // Actualiza la contraseña del administrador
     public static function updatePassword(){
         $id = filter_var($_SESSION['id'], FILTER_VALIDATE_INT);
 
@@ -90,9 +92,14 @@ class AdminController  {
         
     }
     
+    // Cerrar session
     public static function cerrar(){
         session_destroy();
         header("location: /login");
+    }
+
+    public static function grafico(){
+        
     }
 
 }
