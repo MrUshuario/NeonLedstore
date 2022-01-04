@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php require 'layouts/loader.php'; ?>
     <!-- Overlay For Sidebars -->
     <div class="overlay"></div>
@@ -95,3 +96,6 @@
         }
 
     </script>
+=======
+Hola Mundo
+>>>>>>> master

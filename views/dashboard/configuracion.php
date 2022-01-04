@@ -1,12 +1,3 @@
-<?php include 'layouts/loader.php'; ?>
-<!-- Overlay For Sidebars -->
-<div class="overlay"></div>
-<!-- #END# Overlay For Sidebars -->
-<?php include 'layouts/header.php'; ?>
-<section>
-    <?php include 'layouts/nav.php'; ?>
-</section>
-
 <style>
     label {
         margin-right: 10px;
@@ -58,7 +49,7 @@
                     <div id="respuesta" class="m-1 d-none">
                         <label>Contraseña nueva:</label>
                         <input type="password" class="form-control" id="passnuevo1">
-                    
+
                         <label>Confirmar contraseña</label>
                         <input type="password" class="form-control" id="passnuevo2">
                         <div id="mensaje"></div>
