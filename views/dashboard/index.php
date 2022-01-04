@@ -22,7 +22,7 @@
         let chartVar = document.querySelector("#MiGrafica").getContext('2d');
 
         let chart = new Chart(chartVar, {
-            type: 'line',//line, radar, bar
+            type: 'bar',//line, radar, bar
             data: {
                 labels: ['Vino','Tequila','Cerveza','Ron'],
                 datasets: [
