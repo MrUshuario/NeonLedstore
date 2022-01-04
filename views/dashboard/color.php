@@ -1,39 +1,30 @@
-<!-- CONTENT -->
-<section class="content">
-    <div class="container-fluid">
-        <div class="row clearfix">
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <div class="card">
-                    <div class="header">
-                        <h2>Color</h2>
-                        <ul class="header-dropdown m-t-5">
-                            <button type="button" id="model-register" class="btn bg-teal waves-effect" data-bs-toggle="modal" data-bs-target="#modalColor">
-                                <i class="material-icons">add_circle</i>
-                                <span>AGREGAR NUEVO</span>
-                            </button>
-                        </ul>
-                    </div>
-                    <div class="body">
-                        <div class="table-responsive">
-                            <table class="table table-striped table-hover  w-100 table-light table-fixed" id="tablacolor">
-                                <thead class="table-dark sticky">
-                                    <tr>
-                                        <th>Nombre</th>
-                                        <th>Codigo de color</th>
-                                        <th></th>
-                                    </tr>
-                                </thead>
-                                <tbody>
+<div class="content-principal container mt-20">
+    <div class="flex-between">
+        <h3>Color</h3>
 
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <button type="button" id="model-register" data-bs-toggle="modal" data-bs-target="#modalColor" class="btn-inline btn-success flex-center">
+            <i class="fas fa-plus-circle"></i> Agregar
+        </button>
     </div>
-</section>
+</div>
+
+<div class="content-principal container mt-20">
+    <div class="table-responsive">
+        <table class="table table-purple table-striped table-hover  w-100 table-light table-fixed" id="tablacolor">
+            <thead class="table-dark sticky">
+                <tr>
+                    <th>Nombre</th>
+                    <th>Codigo de color</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </div>
+</div>
+
 
 <div class="modal fade" id="modalColor" tabindex="-1" aria-labelledby="modalColor" aria-hidden="true">
     <div class="modal-dialog">
