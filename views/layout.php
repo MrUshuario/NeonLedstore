@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="build/css/plugins/bootstrap/dataTables.bootstrap.min.css">
 
     <link rel="stylesheet" href="build/css/style.css">
+    <link rel="stylesheet" href="build/css/neon.css">
     <link rel="stylesheet" href="build/css/themes/all-themes.css">
     <link rel="stylesheet" href="build/css/estilos.css">
     <script src="build/js/sweetalert.min.js"></script>
@@ -58,7 +59,7 @@
             <div class="app-dashboard">
                 <span class="app-title">Apps</span>
                 <ul class="app-list">
-                    <li><i class="far fa-envelope"></i> Email</li>
+                    <li><a href="#"><i class="far fa-envelope"></i> Email</a></li>
                     <li><i class="far fa-comment-dots"></i> Chat</li>
                     <li><i class="far fa-check-square"></i> Todo</li>
                     <li><i class="far fa-calendar"></i> Calendar</li>
