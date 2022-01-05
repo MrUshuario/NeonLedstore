@@ -58,7 +58,7 @@
             <div class="app-dashboard">
                 <span class="app-title">Apps</span>
                 <ul class="app-list">
-                    <li><i class="far fa-envelope"></i> Email</li>
+                    <li><a href="/color"><i class="far fa-envelope"></i>color</a></li>
                     <li><i class="far fa-comment-dots"></i> Chat</li>
                     <li><i class="far fa-check-square"></i> Todo</li>
                     <li><i class="far fa-calendar"></i> Calendar</li>
