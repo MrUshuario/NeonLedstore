@@ -119,6 +119,36 @@ a {
   border-bottom: 1px solid #fff;
 }
 
+.overflow-scroll {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  max-height: auto;
+}
+
+.color-dark {
+  color: #000;
+}
+
+.btn-inline {
+  display: inline;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.fa-plus-circle {
+  font-size: 1.5rem;
+  margin-right: 10px;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+}
+
 .btn {
   display: block;
   width: 100%;
@@ -260,7 +290,9 @@ a {
 .list-nav::-webkit-scrollbar,
 .list-nav1::-webkit-scrollbar,
 .list-nav2::-webkit-scrollbar,
-.nav-dashboard::-webkit-scrollbar {
+.nav-dashboard::-webkit-scrollbar,
+.overflow-scroll::-webkit-scrollbar,
+.table-responsive::-webkit-scrollbar {
   /* background-color: rgba(255, 255, 255, 0.5); */
   width: 5px;
   border-radius: 2px;
@@ -269,7 +301,9 @@ a {
 .list-nav::-webkit-scrollbar-thumb,
 .list-nav1::-webkit-scrollbar-thumb,
 .list-nav2::-webkit-scrollbar-thumb,
-.nav-dashboard::-webkit-scrollbar-thumb {
+.nav-dashboard::-webkit-scrollbar-thumb,
+.overflow-scroll::-webkit-scrollbar-thumb,
+.table-responsive::-webkit-scrollbar-thumb {
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 5px;
 }

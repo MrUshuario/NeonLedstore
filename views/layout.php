@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Panel de Control</title>
+    <link rel="shortcut icon" href="build/img/login/logo.webp" type="image/x-icon">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
@@ -96,8 +97,8 @@
             </div>
 
         </div>
-        <div class="content-dashboard">
-            <div class="container flex-between nav-content">
+        <div class="content-dashboard overflow-scroll position-relative">
+            <div class="container flex-between nav-content ">
                 <nav class="nav-content-dashboard">
                     <a href="#">
                         <i class="fas fa-clipboard-check"></i>
@@ -117,14 +118,14 @@
                     <img src="build/img/login/logo.webp" alt="">
                 </div>
             </div>
-            <div class="content-principal container mt-20">
-                <?php echo $contenido; ?>
-            </div>
+
+            <?php echo $contenido; ?>
+
         </div>
     </div>
 
     <script src="build/js/plugins/bootstrap/bootstrap.min.js"></script>
-    <script src="js/script.js"></script>
+    <script src="build/js/script.js"></script>
     <!-- <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script> -->
     <!-- <script src="build/js/plugins/bootstrap-select/bootstrap-select.js"></script> -->
     <!-- <script src="build/js/plugins/jquery-datatable/jquery.dataTables.js"></script> -->

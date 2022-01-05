@@ -2,7 +2,7 @@ const img = document.querySelector("#pro_img");
 
 /** DataTables  */
 
-$(document).ready(function() {
+$(document).ready(function () {
   tableAll();
   getCategoria();
   obtenerData();
@@ -12,110 +12,112 @@ $(document).ready(function() {
   deleteProduct();
 });
 
-function tableAll(){
-  const table = $('#tablaproducto').DataTable({
-    "destroy":true,
-    "ajax":{
-      "method":"GET",
-      "url":"/producto/prueba"
+function tableAll() {
+  const table = $("#tablaproducto").DataTable({
+    destroy: true,
+    ajax: {
+      method: "GET",
+      url: "/producto/prueba",
     },
-    "columns": [
-        { "data": "pro_categoria" },
-        { "data": "pro_nombre" },
-        { "data": "pro_precio" },
-        { "data": null,
-          render: function(data, type, row){
-            return `<button data-idpro="${data.id}" class="btn ${data.pro_estado == 'Activo'? 'btn-success' : 'btn-danger'}" id="btnEstado">${data.pro_estado}</button>`;
-          }
+    columns: [
+      { data: "pro_categoria" },
+      { data: "pro_nombre" },
+      { data: "pro_precio" },
+      {
+        data: null,
+        render: function (data, type, row) {
+          return `<button data-idpro="${data.id}" class="btn ${
+            data.pro_estado == "Activo" ? "btn-success" : "btn-danger"
+          }" id="btnEstado">${data.pro_estado}</button>`;
         },
-        { "data": null,
-          render: function(data, type, row){
-            return `<button class="btn btn-warning" data-idpro="${data.id}" id="edit" data-bs-toggle="modal" data-bs-target="#modalProducto" >Edit</button>
-            <button class="btn btn-danger" data-idpro="${data.id}" id="delete">Delete</button>`
-          }
-        }
-    ]
+      },
+      {
+        data: null,
+        render: function (data, type, row) {
+          return `<button class="btn-inline btn-warning" data-idpro="${data.id}" id="edit" data-bs-toggle="modal" data-bs-target="#modalProducto" ><i class="far fa-edit"></i></button>
+            <button class="btn-inline btn-danger" data-idpro="${data.id}" id="delete"><i class="far fa-trash-alt"></i></button>`;
+        },
+      },
+    ],
   });
-
 }
 
-function cleanForm(){
-  $(document).on("click","#model-register", function(){
+function cleanForm() {
+  $(document).on("click", "#model-register", function () {
     clean();
-  })
+  });
 }
 
-function obtenerData(){
-  $(document).on("click", "#edit", function(e){
+function obtenerData() {
+  $(document).on("click", "#edit", function (e) {
     clean();
     let idpro = e.target.dataset.idpro;
     console.log(idpro);
 
     $.ajax({
-      type:"POST",
-      url:"/producto/getProForm",
-      data:{id: idpro},
+      type: "POST",
+      url: "/producto/getProForm",
+      data: { id: idpro },
       success: function (e) {
         const { data } = JSON.parse(e);
-        
+
         $("#id").val(data.id);
         $("#pro_categoria").val(data.pro_categoria);
         $("#pro_nombre").val(data.pro_nombre);
         $("#pro_descripcion").val(data.pro_descripcion);
         $("#pro_precio").val(data.pro_precio);
         $("#pro_estado").val(data.pro_estado);
-        const tmn =data.pro_tamano.split("x");
+        const tmn = data.pro_tamano.split("x");
         $("#t-1").val(tmn[0]);
         $("#t-2").val(tmn[1]);
-        
-        // Mostrar imagen
-        img.src= `/imagenes/${data.pro_imagen}`;
-        img.classList.add("w-100","imgCP");
 
-        $("#title").text("Actualizar Productos")
+        // Mostrar imagen
+        img.src = `/imagenes/${data.pro_imagen}`;
+        img.classList.add("w-100", "imgCP");
+
+        $("#title").text("Actualizar Productos");
         $("#save").text("Actualizar");
-      }
-    })
-    
+      },
+    });
   });
 }
 
-function deleteProduct(){
-  $(document).on("click","#delete",function(e){
+function deleteProduct() {
+  $(document).on("click", "#delete", function (e) {
     let idpro = e.target.dataset.idpro;
     swal({
       title: "¿Estas seguro de eliminar este producto?",
       icon: "warning",
       buttons: true,
       dangerMode: true,
-    }).then(function(e){
-      if(e){
-         $.ajax({
-         url:"/producto/eliminar",
-         type: "POST",
-         data: {id: idpro},
-         success: function(){
-           tableAll();
-         }
-       })
+    }).then(function (e) {
+      if (e) {
+        $.ajax({
+          url: "/producto/eliminar",
+          type: "POST",
+          data: { id: idpro },
+          success: function () {
+            tableAll();
+          },
+        });
       }
-    })
+    });
   });
 }
 
-function clean(){
-    $("#id").val("");
-    $("#pro_categoria").val("");
-    $("#pro_nombre").val("");
-    $("#pro_descripcion").val("");
-    $("#pro_precio").val("");
-    $("#pro_estado").val("");
-    $("#t-1").val("");
-    $("#t-2").val("");
-    img.src="";
+function clean() {
+  $("#id").val("");
+  $("#pro_categoria").val("");
+  $("#pro_nombre").val("");
+  $("#pro_descripcion").val("");
+  $("#pro_precio").val("");
+  $("#pro_estado").val("");
+  $("#t-1").val("");
+  $("#t-2").val("");
+  img.src = "";
 
-    $("#title").text("Registrar Productos")
-    $("#save").text("Guardar");
+  $("#title").text("Registrar Productos");
+  $("#save").text("Guardar");
 }
 
 function getCategoria() {
@@ -134,12 +136,12 @@ function getCategoria() {
           `;
         }
       });
-    }
+    },
   });
 }
 
-function saveProduct(){  
-  $("#formProducto").submit(function(e){
+function saveProduct() {
+  $("#formProducto").submit(function (e) {
     e.preventDefault();
     // Variables
     const id = $("#id").val();
@@ -162,17 +164,25 @@ function saveProduct(){
     formData.append("pro_tamano", tamanio);
     formData.append("pro_estado", estado);
 
-    if(id==""){
-      if( imagen == undefined || estado == "" || categoria == "" || nombre=="" || precio == "" || tm1 == "" || tm2 == "" ){
+    if (id == "") {
+      if (
+        imagen == undefined ||
+        estado == "" ||
+        categoria == "" ||
+        nombre == "" ||
+        precio == "" ||
+        tm1 == "" ||
+        tm2 == ""
+      ) {
         swal({
-          title:"Completar los campos requeridos",
-          icon: "error"
+          title: "Completar los campos requeridos",
+          icon: "error",
         });
       } else {
         // Call method create product
         create(formData);
       }
-    }else {
+    } else {
       formData.append("id", id);
       // Call method update producto
       update(formData);
@@ -180,68 +190,68 @@ function saveProduct(){
   });
 }
 
-function create(formData){
+function create(formData) {
   $.ajax({
     url: "/producto/crear",
     type: "POST",
     data: formData,
-    processData: false,  // tell jQuery not to process the data
+    processData: false, // tell jQuery not to process the data
     contentType: false,
     success: function (e) {
-      $('#modalProducto').modal('hide');
+      $("#modalProducto").modal("hide");
       tableAll();
       swal({
-        title:"Registro Exitoso",
-        icon:"success"
+        title: "Registro Exitoso",
+        icon: "success",
       });
-    }
+    },
   });
 }
 
-function update(formData){
+function update(formData) {
   $.ajax({
     url: "/producto/editar",
     type: "POST",
     data: formData,
-    processData: false,  // tell jQuery not to process the data
+    processData: false, // tell jQuery not to process the data
     contentType: false,
-    success: function (e) { 
+    success: function (e) {
       const json = JSON.parse(e);
       const resp = json.res;
-      if(resp){
-        $('#modalProducto').modal('hide');
+      if (resp) {
+        $("#modalProducto").modal("hide");
         tableAll();
         swal({
-          title:"Editado correctamente",
-          icon:"success"
+          title: "Editado correctamente",
+          icon: "success",
         });
       }
-    }
-  }); 
+    },
+  });
 }
 
-function updateStatus(){
-  $(document).on("click","#btnEstado",function(e){
+function updateStatus() {
+  $(document).on("click", "#btnEstado", function (e) {
     const idpro = e.target.dataset.idpro;
     const estadoText = e.target.textContent;
 
     $.ajax({
       url: "/producto/estado",
       type: "POST",
-      data:{id: idpro, pro_estado: estadoText},
-      success: function(ef){
+      data: { id: idpro, pro_estado: estadoText },
+      success: function (ef) {
         const json = JSON.parse(ef);
         const { pro_estado, resultado } = json;
-        console.log(pro_estado, resultado)
+        console.log(pro_estado, resultado);
         e.target.textContent = pro_estado;
-        if(pro_estado == 'Activo'){
+        if (pro_estado == "Activo") {
           e.target.classList.remove("btn-danger");
           e.target.classList.add("btn-success");
-        }else {
+        } else {
           e.target.classList.remove("btn-success");
           e.target.classList.add("btn-danger");
         }
-      }
+      },
     });
-  })
+  });
 }
