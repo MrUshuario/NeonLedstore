@@ -72,12 +72,12 @@ function saveCategoria() {
           icon: "error",
         });
         const data = {
-            id,
-            nombre,
-            imagen,
-            link,
-            estado
-        }
+          id,
+          nombre,
+          imagen,
+          link,
+          estado,
+        };
         console.log(data);
       } else {
         createCategoria(formData);
@@ -169,8 +169,8 @@ function tablaCategoria() {
       {
         data: null,
         render: function (data, type, row) {
-          return `<button class="btn btn-warning" id="edit" data-bs-toggle="modal" data-idcategoria=${data.id} data-bs-target="#modalCategoria" >Edit</button>
-                    <button class="btn btn-danger" id="delete" data-idcategoria=${data.id}>Delete</button>`;
+          return `<button class="btn-inline btn-warning" id="edit" data-bs-toggle="modal" data-idcategoria=${data.id} data-bs-target="#modalCategoria" ><i class="far fa-edit"></i></button>
+                    <button class="btn-inline btn-danger" id="delete" data-idcategoria=${data.id}><i class="far fa-trash-alt"></i></button>`;
         },
       },
     ],

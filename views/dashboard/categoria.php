@@ -1,53 +1,40 @@
-<!-- CONTENT -->
-<section class="content">
-    <div class="container-fluid">
-        <div class="row clearfix">
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <div class="card">
-                    <div class="header">
-                        <h2>
-                            Categoria
-                        </h2>
-                        <ul class="header-dropdown m-t-5">
-                            <button type="button" id="model-register" class="btn bg-teal waves-effect" data-bs-toggle="modal" data-bs-target="#modalCategoria">
-                                <i class="material-icons">add_circle</i>
-                                <span>AGREGAR NUEVO</span>
-                            </button>
-                        </ul>
-                    </div>
-                    <div class="body">
-                        <div class="table-responsive">
-                            <table class="table table-striped table-hover table-light table-fixed" id="tablacategoria">
-                                <thead class="table-dark sticky">
-                                    <tr>
-                                        <th>#</th>
-                                        <th>Nombre</th>
-                                        <th>link</th>
-                                        <th>estado</th>
-                                        <th></th>
-                                    </tr>
-                                </thead>
-                                <tbody>
+<div class="content-principal container mt-20">
+    <div class="flex-between">
+        <h3>CATEGORIAS</h3>
 
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <button type="button" id="model-register" data-bs-toggle="modal" data-bs-target="#modalCategoria" class="btn-inline btn-success flex-center">
+            <i class="fas fa-plus-circle"></i> Agregar
+        </button>
     </div>
-</section>
+</div>
+
+<div class="content-principal container mt-20">
+    <div class="table-responsive">
+        <table class="table table-purple table-striped table-hover table-light table-fixed w-100" id="tablacategoria">
+            <thead class="table-dark sticky">
+                <tr>
+                    <th>#</th>
+                    <th>Nombre</th>
+                    <th>link</th>
+                    <th>estado</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+</div>
 
 <div class="modal fade" id="modalCategoria" tabindex="-1" aria-labelledby="modalColor" aria-hidden="true">
     <div class="modal-dialog modal-dialog-scrollable">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="modalColor">Guardar Producto</h5>
+                <h5 class="modal-title" id="modalColor">Guardar Categoria</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="cerrar"></button>
             </div>
             <div class="modal-body">
-                <form id="formCategoria" enctype="multipart/form-data">
+                <form id="formCategoria" enctype="multipart/form-data" class="color-dark">
                     <input type="hidden" id="id">
                     <div class="mb-3">
                         <label for="nombre">Nombre de categora</label>
@@ -71,8 +58,8 @@
                         </select>
                     </div>
                     <div class="modal-footer">
-                        <button type="reset" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                        <button type="submit" class="btn btn-primary" id="save">Guardar</button>
+                        <button type="reset" class="btn-inline btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        <button type="submit" class="btn-inline btn-primary" id="save">Guardar</button>
                     </div>
                 </form>
             </div>

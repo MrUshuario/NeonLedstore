@@ -36,8 +36,8 @@ function listar() {
       {
         data: null,
         render: function (data, type, row) {
-          return `<button class="btn btn-warning" data-id="${data.id}" id="edit" data-bs-toggle="modal" data-bs-target="#modalProducto" >Edit</button>
-                <button class="btn btn-danger" data-id="${data.id}" id="delete">Delete</button>`;
+          return `<button class="btn-inline btn-warning" data-id="${data.id}" id="edit" data-bs-toggle="modal" data-bs-target="#modalProducto" ><i class="far fa-edit"></i></button>
+                <button class="btn-inline btn-danger" data-id="${data.id}" id="delete"><i class="far fa-trash-alt"></i></button>`;
         },
       },
     ],
@@ -103,34 +103,33 @@ function updatePC(data) {
 }
 
 function deletePC(id) {
-    $(document).on("click","#delete",function(e){
-        let id = e.target.dataset.id;
-        swal({
-            title: "¿Estas seguro de eliminar este producto?",
-            icon: "warning",
-            buttons: true,
-            dangerMode: true,
-          }).then(function(e){
-              if(e){
-                $.ajax({
-                    method: "POST",
-                    url: "/productoColor/delete",
-                    data: {id},
-                    success: function (e) {
-                        const { res } = JSON.parse(e);
-                      if (res) {
-                        
-                        swal({
-                          title: "Se elimino exitosamente",
-                          icon: "success",
-                        });
-                        listar();
-                      }
-                    },
-                });
-              }
-          })
-    })
+  $(document).on("click", "#delete", function (e) {
+    let id = e.target.dataset.id;
+    swal({
+      title: "¿Estas seguro de eliminar este producto?",
+      icon: "warning",
+      buttons: true,
+      dangerMode: true,
+    }).then(function (e) {
+      if (e) {
+        $.ajax({
+          method: "POST",
+          url: "/productoColor/delete",
+          data: { id },
+          success: function (e) {
+            const { res } = JSON.parse(e);
+            if (res) {
+              swal({
+                title: "Se elimino exitosamente",
+                icon: "success",
+              });
+              listar();
+            }
+          },
+        });
+      }
+    });
+  });
 }
 
 function obtenerData() {
