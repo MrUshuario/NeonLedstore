@@ -1,48 +1,34 @@
-<!-- CONTENT -->
-<section class="content">
-    <div class="container-fluid">
-        <!-- Basic Examples -->
-        <div class="row clearfix">
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <div class="card border border-info">
-                    <div class="header">
-                        <h2 class="card-header">
-                            CLIENTES
-                        </h2>
-                        <ul style="line-height: 2.8;" class="header-dropdown m-t--5">
-                            <button id="model-cliente" type="button" class="btn bg-teal waves-effect" data-bs-toggle="modal" data-bs-target="#modalCliente">
-                                <i class="material-icons">add_circle</i>
-                                <span>Agregar Cliente</span>
-                            </button>
-                        </ul>
-                    </div>
-                    <div class="body">
-                        <div class="table-responsive">
-                            <!-- <table class="table table-bordered table-striped table-hover js-basic-example dataTable" id="tablacliente">
-                                    <thead> -->
-                            <table class="table table-striped table-hover table-light table-fixed" id="tablacliente">
-                                <thead class="table-dark sticky">
-                                    <tr>
-                                        <th>Nombres</th>
-                                        <th>Apellidos</th>
-                                        <th>Correo</th>
-                                        <th>Clave</th>
-                                        <th>Estado</th>
-                                        <th>Editar/Borrar</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- #END# Basic Examples -->
+<div class="content-principal container mt-20">
+    <div class="flex-between">
+        <h3>Color</h3>
+        <button type="button" id="model-cliente" data-bs-toggle="modal" data-bs-target="#modalCliente" class="btn-inline btn-success flex-center">
+            <i class="fas fa-plus-circle"></i> Agregar Cliente
+        </button>
     </div>
-</section>
+</div>
+
+<div class="content-principal container mt-20">
+    <div class="table-responsive">
+        <table class="table table-purple table-striped table-hover  w-100 table-light table-fixed" id="tablacliente">
+             <!--PARA PONER CON BLANCO: table table-striped table-hover table-light table-fixed w-100-->    
+            <thead class="table-dark sticky">
+                <tr>
+                    <th>Nombres</th>
+                    <th>Apellidos</th>
+                    <th>Correo</th>
+                    <th>Clave</th>
+                    <th>Estado</th>
+                    <th>Editar/Borrar</th>
+                </tr>
+                </thead>
+                <tbody>
+
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
 <!-- ./CONTENT -->
 <div class="modal fade" id="modalCliente" tabindex="-1" aria-labelledby="modalCliente" aria-hidden="true">
     <div class="modal-dialog modal-dialog-scrollable">

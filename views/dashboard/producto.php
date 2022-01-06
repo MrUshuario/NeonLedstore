@@ -1,11 +1,9 @@
 <div class="content-principal container mt-20">
     <div class="flex-between">
-        <h3>PRODUCTOS</h3>
-
+        <h3>Productos</h3>
         <button type="button" id="model-register" data-bs-toggle="modal" data-bs-target="#modalProducto" class="btn-inline btn-success flex-center">
-            <i class="fas fa-plus-circle"></i> Agregar
+            <i class="fas fa-plus-circle"></i> Agregar Producto
         </button>
-
     </div>
 </div>
 
