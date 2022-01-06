@@ -37,7 +37,51 @@ html {
     }
     50% {
         transform: translatex(50%);
+  html {
+    box-sizing: border-box;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+.body {
+    height: 100vh;
+}
+
+.login {
+    height: 100%;
+    background-image: url(../img/8.jpg);
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    justify-content: space-between;
+}
+
+.titulo-login {
+    display: none;
+    flex: 0 1 70%;
+}
+
+.titulo-login h1 {
+    color:#b5d9e8 ;
+    font-weight: 400;
+    overflow: hidden;
+    animation: desplazar normal 5s;
+}
+
+@keyframes desplazar {
+    0% {
+        transform: translateX(0);
     }
+    50% {
+        transform: translatex(50%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+  }
     100% {
         transform: translateX(0);
     }
