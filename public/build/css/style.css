@@ -49,7 +49,11 @@ a {
 }
 
 .body {
+<<<<<<< HEAD
+  background-image: url(../img/img1.jpg);
+=======
   background-image: url(../img/login/img1.jpg);
+>>>>>>> master
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;

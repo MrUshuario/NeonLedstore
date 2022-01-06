@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
     <!-- ICONOS FONT AWESOME -->
     <script src="https://kit.fontawesome.com/f788fcfb82.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="build/css/tablasCRUD.css">
+    <link rel="stylesheet" href="build/css/PomaEstiloDashboard.css">
 
 
     <link rel="stylesheet" href="build/css/bootstrap.min.css">
@@ -60,10 +60,15 @@
             <div class="app-dashboard">
                 <span class="app-title">Apps</span>
                 <ul class="app-list">
-                    <li><a href="#"><i class="far fa-envelope"></i> Email</a></li>
-                    <li><i class="far fa-comment-dots"></i> Chat</li>
-                    <li><i class="far fa-check-square"></i> Todo</li>
-                    <li><i class="far fa-calendar"></i> Calendar</li>
+                    <li><a href="/dashboard"> <i class="fas fa-house-user"></i> Home</a></li>
+                    <li><a href="/color"><i class="far fa-envelope"></i> Color</a></li>
+                    <li><a href="/cliente"><i class="fas fa-portrait" ></i> Clientes</a></li>
+                    <li><a href="/producto"><i class="fas fa-archive"></i> Productos</a></li>
+                    <li><a href="/categoria"><i class="fas fa-th-large"></i> Categoria</a></li>
+                    <li><a href="/color"><i class="fas fa-tint"></i>Colores</a></li>
+                    <li><a href="/productoColor"><i class="fas fa-fill-drip"></i>Producto x Color</a></li>
+                    <li><a href="/configuracion"><i class="fas fa-cog"></i>Configuración</a></li>
+                    <li><a href="/cerrar"><i class="fas fa-times-circle"></i>Cerrar Session</a></li>
                     <li class="hover-caja">
                         <div class="flex-between" id="btnApp-1">
                             <span>
