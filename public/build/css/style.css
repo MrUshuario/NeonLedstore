@@ -37,7 +37,7 @@ a {
 }
 
 .table-purple {
-  --bs-table-bg: #10153b;
+  --bs-table-bg:#3b2f45 ;
   --bs-table-striped-bg: #10153b;
   --bs-table-striped-color: #fff;
   --bs-table-active-bg: #10153b;
