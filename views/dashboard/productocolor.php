@@ -10,7 +10,7 @@
 
 <div class="content-principal container mt-20">
     <div class="table-responsive">
-        <table class="table table-striped table-hover table-light table-fixed w-100" id="tablaproductocolor">
+        <table class="table table-purple table-striped table-hover  w-100 table-light table-fixed" id="tablaproductocolor">
             <thead class="table-dark sticky">
                 <tr>
                     <th>Producto</th>
