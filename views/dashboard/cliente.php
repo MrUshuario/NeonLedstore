@@ -64,8 +64,8 @@
                         <label for="nombre">Estado Cliente</label>
                         <select id="cli_estado" class="form-control">
                             <option value="">--SELECCIONE--</option>
-                            <option value=0>0</option>
-                            <option value=1>1</option>
+                            <option value=0>Inactivo</option>
+                            <option value=1>Activo</option>
                         </select>
                     </div>
 
