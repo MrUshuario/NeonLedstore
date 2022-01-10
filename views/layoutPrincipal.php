@@ -64,7 +64,7 @@
                             </li>
                             <li class="listaContenido nav-item px-2  border-2 border-light">
                                 <a class="enlace nav-link px-0 py-0" aria-current="page" href="/contacto">
-                                    <div class="botones text-white px-3 rounded-medium">  <i class="fas fa-shopping-cart p-5"></i>CONTACTO</div>
+                                    <div class="botones text-white px-3 rounded-medium"> CONTACTO</div>
                                    
                                 </a>
                             </li>
