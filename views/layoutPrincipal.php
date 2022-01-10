@@ -64,12 +64,15 @@
                             </li>
                             <li class="listaContenido nav-item px-2  border-2 border-light">
                                 <a class="enlace nav-link px-0 py-0" aria-current="page" href="/contacto">
-                                    <div class="botones text-white px-3 rounded-medium">CONTACTO</div>
+                                    <div class="botones text-white px-3 rounded-medium">  <i class="fas fa-shopping-cart p-5"></i>CONTACTO</div>
+                                   
                                 </a>
                             </li>
 
                         </ul>
                     </div>
+
+
                     <div class="d-flex position-absolute" style="top: 1em; right:1em">
                         <div class="navbar-brand iconoUsuario ">
                             <!-- <?php //if ($this->sessionValidate == true) : 
