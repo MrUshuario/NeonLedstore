@@ -49,11 +49,7 @@ a {
 }
 
 .body {
-<<<<<<< HEAD
-  background-image: url(../img/img1.jpg);
-=======
-  background-image: url(../img/login/img1.jpg);
->>>>>>> master
+  background-image: url(../img/login/img1.webp);
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -66,7 +62,6 @@ a {
 }
 
 .body:before {
-  content: "";
   position: absolute;
   top: 0;
   bottom: 0;

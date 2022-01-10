@@ -8,7 +8,6 @@
     }
 </style>
 
-<section class="content">
     <div class="container-fluid">
         <div class="row clearfix">
             <div class="card">
