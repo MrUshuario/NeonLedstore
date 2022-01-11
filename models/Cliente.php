@@ -24,7 +24,7 @@ class Cliente extends ActiveRecord {
         $this->cli_email = $args['cli_email'] ?? null;
         $this->cli_clave = $args['cli_clave'] ?? null;
         $this->token = $args['token'] ?? null;
-        $this->token = $args['cli_estado'] ?? null;
+        $this->cli_estado = $args['cli_estado'] ?? null;
     }
     
     public function verificarCorreo(){
@@ -35,7 +35,7 @@ class Cliente extends ActiveRecord {
     
     public function editEstado()
     {
-        $query = "UPDATE " . static::$tabla . " SET cli_estado='" . $this->pro_estado . "' WHERE id=" . $this->id;
+        $query = "UPDATE " . static::$tabla . " SET cli_estado='" . $this->cli_estado . "' WHERE id=" . $this->id;
         $resultado = self::$db->query($query);
         return $resultado;
     }

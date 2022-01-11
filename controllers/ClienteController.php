@@ -100,7 +100,12 @@ class ClienteController {
 
     public static function estado()
     {
-        $cliente = new Cliente();
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+        $cliente = new Cliente($_POST);
+        $estado = $_POST['cli_estado'];
+        echo json_encode([$estado]);
+        echo json_encode([$cliente]);
+        
 
         if ($_POST['cli_estado'] == "1") {
             $args = [
@@ -108,20 +113,21 @@ class ClienteController {
                 "id" => $_POST['id']
             ];
             $cliente->sincronizar($args);
-            $resultado = $cliente->actualizarEstado();
-        } else if ($_POST['cat_estado'] == "0") {
+            $resultado = $cliente->editEstado();
+        } else if ($_POST['cli_estado'] == "0") {
             $args = [
                 "cat_estado" => "1",
                 "id" => $_POST['id']
             ];
             $cliente->sincronizar($args);
-            $resultado = $cliente->actualizarEstado();
+            $resultado = $cliente->editEstado();
         }
 
         echo json_encode([
             "bool" => $resultado,
-            "estado" => $args['cat_estado'],
+            "estado" => $args['cli_estado'],
             "id" => $args['id']
         ]);
+        }
     }
 }

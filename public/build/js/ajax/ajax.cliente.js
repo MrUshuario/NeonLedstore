@@ -47,7 +47,7 @@ function saveCliente(){
     let cli_apellidos = $("#cli_apellidos").val();
     let cli_email = $("#cli_email").val();
     let cli_clave = $("#cli_clave").val();
-    let token = null; /*FALTA EL TOKEN                ADVERTENCIA */
+    let token = "123"; /*FALTA EL TOKEN                ADVERTENCIA */
     let cli_estado = $("#cli_estado").val();
     
     const data = {
@@ -207,17 +207,16 @@ function deleteCliente() {
 function updateStatus(){
   $(document).on("click","#btnEstado",function(e){
     const id = e.target.dataset.idcliente;
-    const estadoText = e.target.textContent;
+    const estadoText = e.target.textContent;    
     const data = { id: id, cli_estado: estadoText};
     console.log(data);
     $.ajax({
-      type: "POST",
       url: "/cliente/estado",
+      type: "POST",
       data: data,
       success: function(e){
         console.log(e)
-        const json = JSON.parse(e);
-        
+        const json = JSON.parse(e);        
         const { cli_estado, resultado } = json;
         console.log(cli_estado, resultado)
         e.target.textContent = cli_estado;
