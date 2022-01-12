@@ -1,7 +1,7 @@
 
 .neontabla {
     border: 2px solid white;
-    box-shadow: 60px -16px teal;
+    box-shadow: 60px -16px fucsia;
     border-radius: 60px;
     padding-bottom: 8px;
 
@@ -102,7 +102,7 @@
 }
 
 .neontextlanding::-webkit-input-placeholder {
-    color: purple;
+    color: white ;
 }
 
 
