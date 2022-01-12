@@ -209,18 +209,18 @@ function updateStatus(){
     const id = e.target.dataset.idcliente;
     const estadoText = e.target.textContent;    
     const data = { id: id, cli_estado: estadoText};
-    console.log(data);
+    
     $.ajax({
       url: "/cliente/estado",
       type: "POST",
       data: data,
-      success: function(e){
-        console.log(e)
-        const json = JSON.parse(e);        
-        const { cli_estado, resultado } = json;
+      success: function(ec){
+        console.log(ec)
+        const data = JSON.parse(ec);
+        const { cli_estado, resultado } = data;
         console.log(cli_estado, resultado)
         e.target.textContent = cli_estado;
-        if(cli_estado == 1){
+        if(cli_estado == "1"){
           e.target.classList.remove("btn-danger");
           e.target.classList.add("btn-success");
         }else {
