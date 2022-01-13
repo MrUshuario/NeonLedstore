@@ -115,6 +115,7 @@ function updateStatus() {
           e.target.classList.remove("btn-success");
           e.target.classList.add("btn-danger");
         }
+        }
       },
     });
   });
