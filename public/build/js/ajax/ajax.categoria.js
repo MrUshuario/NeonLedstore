@@ -97,15 +97,18 @@ function updateStatus() {
       id: id,
       cat_estado: value,
     };
+    console.log(data); // borrar luego
     $.ajax({
       url: "/categoria/estado",
       type: "POST",
       data: data,
       success: (resp) => {
-        let json = JSON.parse(resp);
-        console.log(json.estado);
+        const json = JSON.parse(resp);
+        const { cat_estado, resultado } = json;
+        console.log(cat_estado);
         e.target.value = json.estado;
-        if (json.estado == "ACTIVO") {
+        if (cat_estado == "ACTIVO") {
+          e.target.value=cat_estado
           e.target.classList.remove("btn-danger");
           e.target.classList.add("btn-success");
         } else {
@@ -159,6 +162,7 @@ function tablaCategoria() {
       {
         data: null,
         render: function (data, type, row) {
+          
           return `<input type="button" id="btnEstado" class="btn ${
             data.cat_estado.toLowerCase() == "activo"
               ? "btn-success"

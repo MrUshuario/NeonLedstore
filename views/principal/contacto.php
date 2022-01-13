@@ -42,8 +42,8 @@
                                 <div class="container">
                                 <div class="row">
                                     <div class="col-12 my-auto mx-auto">
-                                   <a href="#"> <i class="fab fa-instagram iconoFont"></i> <input class="p-2 bg-transparent neontextlanding  border-0 border rounded me-1 me-sm-4 my-3 d-block text-white" type="text" name="Instagram" id="Instagram" value="Neon_Led_Store" readonly> </a><br><br><br>
-                                   <a href="#"> <i class="fab fa-facebook iconoFont"></i> <input class="p-2 bg-transparent neontextlanding  border-0 border  rounded me-1 me-sm-4 my-3 d-block text-white" type="text" name="facebook" id="facebook" value="Neon Led Store" readonly> </a>
+                                   <a href="https://www.instagram.com/neon_led_store/?hl=es"> <i class="fab fa-instagram iconoFont"></i> <input class="p-2 bg-transparent neontextlanding  border-0 border rounded me-1 me-sm-4 my-3 d-block text-white" type="text" name="Instagram" id="Instagram" value="Neon_Led_Store" readonly> </a><br><br><br>
+                                   <a href="https://www.facebook.com/Neon-Led-store-100244098454782"> <i class="fab fa-facebook iconoFont"></i> <input class="p-2 bg-transparent neontextlanding  border-0 border  rounded me-1 me-sm-4 my-3 d-block text-white" type="text" name="facebook" id="facebook" value="Neon Led Store" readonly> </a>
                                     </div>
                                 </div>
                                 </div>

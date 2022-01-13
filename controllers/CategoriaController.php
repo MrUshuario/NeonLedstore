@@ -55,29 +55,24 @@ class CategoriaController
 
     public static function cambiarEstado()
     {
-        $color = new Categoria();
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+        $categoria = new Categoria($_POST);
 
-        if ($_POST['cat_estado'] == "ACTIVO") {
-            $args = [
-                "cat_estado" => "INACTIVO",
-                "id" => $_POST['id']
-            ];
-            $color->sincronizar($args);
-            $resultado = $color->actualizarEstado();
-        } else if ($_POST['cat_estado'] == "INACTIVO") {
-            $args = [
-                "cat_estado" => "ACTIVO",
-                "id" => $_POST['id']
-            ];
-            $color->sincronizar($args);
-            $resultado = $color->actualizarEstado();
+        if ($categoria->cat_estado == "ACTIVO") {
+
+            $categoria->cat_estado = "INACTIVO";
+            $resultado = $categoria->actualizarEstado();
+
+        } else {
+            $categoria->cat_estado = "ACTIVO";
+            $resultado = $categoria->actualizarEstado();
         }
-
+        
         echo json_encode([
             "bool" => $resultado,
-            "estado" => $args['cat_estado'],
-            "id" => $args['id']
+            "cat_estado" =>  $categoria->cat_estado
         ]);
+        }
     }
 
     public static function getCategoria()

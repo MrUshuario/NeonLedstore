@@ -13,7 +13,7 @@
         <table class="table table-purple table-striped table-hover table-light table-fixed w-100" id="tablacategoria">
             <thead class="table-dark sticky">
                 <tr>
-                    <th>#</th>
+                    <th>Imagen</th>
                     <th>Nombre</th>
                     <th>link</th>
                     <th>estado</th>

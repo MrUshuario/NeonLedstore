@@ -218,7 +218,6 @@ function updateStatus(){
         console.log(ec)
         const data = JSON.parse(ec);
         const { cli_estado, resultado } = data;
-        console.log(cli_estado, resultado)
         e.target.textContent = cli_estado;
         if(cli_estado == "1"){
           e.target.classList.remove("btn-danger");
