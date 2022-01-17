@@ -103,7 +103,7 @@
                                                 <div class="paleta paletaRosa dropdown-item rounded-circle mx-auto" data-id="8"></div>
                                             </li>
                                             <li class="itemFiltroColor col-6 pt-2">
-                                                <div class="paleta paletaBlanco dropdown-item rounded-circle mx-auto" data-id="9"></div>
+                                                <div style="background-color:#fff;" class="paletaCeleste dropdown-item rounded-circle mx-auto" data-id="9"></div>
                                             </li>
                                             <li class="itemFiltroColor col-5 pt-2">
                                                 <div class="paleta paletaNaranja dropdown-item rounded-circle mx-auto" data-id="10"></div>
