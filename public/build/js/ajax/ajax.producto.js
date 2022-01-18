@@ -34,8 +34,8 @@ function tableAll() {
       {
         data: null,
         render: function (data, type, row) {
-          return `<button class="btn-inline btn-warning" data-idpro="${data.id}" id="edit" data-bs-toggle="modal" data-bs-target="#modalProducto" ><i class="far fa-edit"></i></button>
-            <button class="btn-inline btn-danger" data-idpro="${data.id}" id="delete"><i class="far fa-trash-alt"></i></button>`;
+          return `<button class="btn-inline btn-warning" data-idpro="${data.id}" id="edit" data-bs-toggle="modal" data-bs-target="#modalProducto" >edit</button>
+            <button class="btn-inline btn-danger" data-idpro="${data.id}" id="delete">del</button>`;
         },
       },
     ],

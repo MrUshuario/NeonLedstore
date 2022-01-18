@@ -19,8 +19,8 @@ function tableColor() {
       {
         data: null,
         render: function (data, type, row) {
-          return `<button class="btn-inline btn-warning" data-idcolor="${data.id}" id="edit" data-bs-toggle="modal" data-bs-target="#modalColor"><i class="far fa-edit"></i></button>
-          <button class="btn-inline btn-danger" data-idcolor="${data.id}" id="delete"><i class="far fa-trash-alt"></i></button>`;
+          return `<button class="btn-inline btn-warning" data-idcolor="${data.id}" id="edit" data-bs-toggle="modal" data-bs-target="#modalColor">edit</i></button>
+          <button class="btn-inline btn-danger" data-idcolor="${data.id}" id="delete">del</i></button>`;
         },
       },
     ],

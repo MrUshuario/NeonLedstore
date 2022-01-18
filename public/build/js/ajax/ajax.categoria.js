@@ -173,8 +173,8 @@ function tablaCategoria() {
       {
         data: null,
         render: function (data, type, row) {
-          return `<button class="btn-inline btn-warning" id="edit" data-bs-toggle="modal" data-idcategoria=${data.id} data-bs-target="#modalCategoria" ><i class="far fa-edit"></i></button>
-                    <button class="btn-inline btn-danger" id="delete" data-idcategoria=${data.id}><i class="far fa-trash-alt"></i></button>`;
+          return `<button class="btn-inline btn-warning" id="edit" data-bs-toggle="modal" data-idcategoria=${data.id} data-bs-target="#modalCategoria" >edi</i></button>
+                    <button class="btn-inline btn-danger" id="delete" data-idcategoria=${data.id}>del</button>`;
         },
       },
     ],

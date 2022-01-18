@@ -29,7 +29,7 @@ function verificarKey(){
     $("#pass").on('change', function(e){
         // console.log(e.target.value);
         let passVerificar = e.target.value;
-
+        console.log("verificado");
         const data = {
             passwordV: passVerificar
         }

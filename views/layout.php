@@ -40,12 +40,14 @@
                 <h3>Neon Led Store</h3>
                 <i class="fas fa-bullseye"></i>
             </div>
-            <button class="btn-dashboard" id="btn-list">
+
+            <!--BOTONES EXTRAS POR SI SE NECESITA AGREGAR -->
+            <!--<button class="btn-dashboard" id="btn-list">
                 <span>
                     <i class="fas fa-home"></i> Dashboard
                 </span>
                 <i class="fas fa-chevron-down"></i>
-            </button>
+            </button> 
             <div class="nav-dashboard-element">
                 <ul class="list-nav height-0">
                     <li>
@@ -56,6 +58,7 @@
                     </li>
                 </ul>
             </div>
+            -->
 
             <div class="app-dashboard">
                 <span class="app-title">Apps</span>
@@ -67,8 +70,8 @@
                     <li><a href="/categoria"><i class="fas fa-th-large"></i> Categoria</a></li>
                     <li><a href="/color"><i class="fas fa-tint"></i>Colores</a></li>
                     <li><a href="/productoColor"><i class="fas fa-fill-drip"></i>Producto x Color</a></li>
-                    <li><a href="/configuracion"><i class="fas fa-cog"></i>Configuración</a></li>
-                    <li><a href="/cerrar"><i class="fas fa-times-circle"></i>Cerrar Session</a></li>
+                    
+                    <!-- por si se requieren más botones
                     <li class="hover-caja">
                         <div class="flex-between" id="btnApp-1">
                             <span>
@@ -98,23 +101,22 @@
                             <li>Chanchito</li>
                             <li>Feliz</li>
                         </ul>
-                    </li>
+                    </li> -->
                 </ul>
             </div>
 
         </div>
+
         <div class="content-dashboard overflow-scroll position-relative">
             <div class="container flex-between nav-content ">
                 <nav class="nav-content-dashboard">
-                    <a href="#">
-                        <i class="fas fa-clipboard-check"></i>
+                    <a href="/configuracion">
+                    <i class="fas fa-cog"></i>
                     </a>
-                    <a href="#">
-                        <i class="far fa-user"></i>
+                    <a href="/cerrar">
+                    <i class="fas fa-times-circle"></i>
                     </a>
-                    <a href="#">
-                        <i class="far fa-calendar"></i>
-                    </a>
+
                 </nav>
                 <div class="user-content">
                     <div class="role-name">
