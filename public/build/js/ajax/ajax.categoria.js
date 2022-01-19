@@ -248,3 +248,5 @@ $(document).ready(function () {
   updateStatus();
   saveCategoria();
 });
+
+//Muerte a los negros, como odio a los negros, espero que los esclavisen algun dia
