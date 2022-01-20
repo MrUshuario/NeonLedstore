@@ -35,6 +35,10 @@
     <link rel="stylesheet" href="build/css/index.css">
 
     <script src="build/js/jquery.min.js"></script>
+    
+    <!-- Para el carrusel agrege este archivo -->
+    
+    <script src="build/js/bootstrap.min.js"></script>
 
     <!--PRUEBAS CONTACTO -->
 
