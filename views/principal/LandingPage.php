@@ -1,8 +1,9 @@
 <div class="landingPage bg-black">
 
-<div  class="contenido">
-<!-- (1) INICIO ARTISTA: LEAXTOR -->
- <!--Titulo y botones-->
+  <!--INICIA CARRUSEL lAYOUTpRINCIPAL.php, AGREGAR LOS SCRIPT NECESARIO PARA QUE FUNCIONES, SI SUBES UN NUEVO SCRIPT, PUBLIC/BUILD/JS 
+    https://www.youtube.com/watch?v=N7JXmnaVWL0&t=269s-->
+    <div  class="carrusel">
+    <!--Titulo y botones-->
 	<section class="pt-3 pb-3">
             <div class="container-fluid">
                 <div class="row">
@@ -82,14 +83,48 @@
             </div>
         </section>
         </div>
-        <!--cambiar carrusel-->
-        <div class="container-fluid text-white text-center">
+        <!--FINAL DEL CARRUSEL-->
 
+
+    <!--CENTRADO Y BLANCO-->
+    <div class="container-fluid text-white text-center">
+        <!--BOTON DEL MODAL-->
         <button type="button" id="model-register" class="neonbottonlanding btn btn-primary my-0 my-sm-3 border-0" data-bs-toggle="modal" data-bs-target="#modalAsesoria">
             Obtén una asesoría personalizada GRATIS!
-            </button>
+        </button>
 
+        <!--Inicio Modal-->
+        <div class="modal fade" id="modalAsesoria" tabindex="-1" aria-labelledby="modalAsesoria" aria-hidden="true">
+            <div class="modal-dialog">
 
+                <div class="modal-content rounded-25">
+                <main class="main rounded-25 row pb-5 d-flex justify-content-center">
+                
+                    <div class="mainContent col-8 my-5 pb-3">
+                        <h1 class="my-3 fs-2 neones p-50">¿Quieres tener un negocio visualmente atractivo?</h1>
+                        <div class="row d-flex justify-content-center">
+
+                        <form class="landingPageForm col-12 col-sm-10" method="POST" action="/build/enviingPage">
+                            <div class="">
+                                <input type="text" class="neontextlanding bg-transparent text-center form-control my-1 my-sm-5 border-0" name="nombre" placeholder="Nombres y Apellidos" required>
+                            </div>
+                            <div class="">
+                                <input type="email" class="neontextlanding bg-transparent text-center form-control my-1 my-sm-5 border-0" name="correo" placeholder="Correo Electrónico" required>
+                            </div>
+                            <div class="">
+                                <input type="tel" class="neontextlanding bg-transparent text-center form-control my-1 my-sm-5 border-0" name="telefono" id="telefono" placeholder="Número de celular" required>
+                            </div> <!--crea tu propio boton, lo agregas en NEON.css -->
+                            <button type="submit" class="neonbottonlanding btn btn-primary my-0 my-sm-3 border-0">Pedir asesoria</button>
+                        </form>
+                    </div>     
+                    </div>
+                </main>
+                </div>
+            </div>
+            </div>
+            <!--Final Modal-->
+
+        <!--fondo anterior-->
            <!-- <main class="main row pb-5 d-flex justify-content-center">
 
                 <img src="/build/img/jovenEscuchandoMovil.webp"  srcset="/build/img/jovenEscuchandoMovil.webp 420w, /build/img/jovenEscuchando.webp 870w" alt="jovenEscuchando" class="mainFondo position-absolute">
@@ -127,38 +162,6 @@
 
                 </div>
             </div>
-
-            
-
-            <div class="modal fade" id="modalAsesoria" tabindex="-1" aria-labelledby="modalAsesoria" aria-hidden="true">
-            <div class="modal-dialog">
-
-                <div class="modal-content rounded-25">
-                <main class="main rounded-25 row pb-5 d-flex justify-content-center">
-                
-                    <div class="mainContent col-8 my-5 pb-3">
-                        <h1 class="my-3 fs-2 neones p-50">¿Quieres tener un negocio visualmente atractivo?</h1>
-                        <div class="row d-flex justify-content-center">
-
-                        <form class="landingPageForm col-12 col-sm-10" method="POST" action="/build/enviingPage">
-                            <div class="">
-                                <input type="text" class="neontextlanding bg-transparent text-center form-control my-1 my-sm-5 border-0" name="nombre" placeholder="Nombres y Apellidos" required>
-                            </div>
-                            <div class="">
-                                <input type="email" class="neontextlanding bg-transparent text-center form-control my-1 my-sm-5 border-0" name="correo" placeholder="Correo Electrónico" required>
-                            </div>
-                            <div class="">
-                                <input type="tel" class="neontextlanding bg-transparent text-center form-control my-1 my-sm-5 border-0" name="telefono" id="telefono" placeholder="Número de celular" required>
-                            </div>
-                            <button type="submit" class="neonbottonlanding btn btn-primary my-0 my-sm-3 border-0">Pedir asesoria</button>
-                        </form>
-                    </div>     
-                    </div>
-                </main>
-                </div>
-            </div>
-            </div>
-
            
 
             <div class="personalizado row d-flex align-items-end ">
