@@ -91,7 +91,7 @@
     border: 2px solid white !important;
     color: white;
     margin: 30;
-    font-size: 20px;
+    font-size: 0.9rem;
     text-shadow: 0 0 15px , 0 0 16px rgb(4,41,95);
     box-shadow: inset 0 0 5px white, 0 0 10px white;
 }
@@ -168,3 +168,14 @@
 
 /*SALVADO DE INDEX.CSS, puede servir para el fondo */
 .mainFondo{height:870px;object-fit:cover}
+
+
+/*MODAL LANDING PAGE*/
+#padreModalLanding{
+    background-color: transparent;
+    border-color: transparent;
+}
+
+/* .modal-field{
+    padding-bottom: 1.7rem;
+} */
