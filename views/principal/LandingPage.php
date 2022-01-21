@@ -97,7 +97,7 @@
         <div class="modal fade" id="modalAsesoria" tabindex="-1" aria-labelledby="modalAsesoria" aria-hidden="true">
             <div class="modal-dialog">
 
-                <div class="modal-content rounded-25">
+                <div class="modal-content rounded-25" id="padreModalLanding">
                 <main class="main rounded-25 row pb-5 d-flex justify-content-center">
                 
                     <div class="mainContent col-8 my-5 pb-3">
@@ -105,16 +105,16 @@
                         <div class="row d-flex justify-content-center">
 
                         <form class="landingPageForm col-12 col-sm-10" method="POST" action="/build/enviingPage">
-                            <div class="">
-                                <input type="text" class="neontextlanding bg-transparent text-center form-control my-1 my-sm-5 border-0" name="nombre" placeholder="Nombres y Apellidos" required>
+                            <div class="modal-field">
+                                <input type="text" class="neontextlanding bg-transparent text-center form-control my-3 border-0" name="nombre" placeholder="Nombres y Apellidos" required>
                             </div>
-                            <div class="">
-                                <input type="email" class="neontextlanding bg-transparent text-center form-control my-1 my-sm-5 border-0" name="correo" placeholder="Correo Electrónico" required>
+                            <div class="modal-field">
+                                <input type="email" class="neontextlanding bg-transparent text-center form-control my-3 border-0" name="correo" placeholder="Correo Electrónico" required>
                             </div>
-                            <div class="">
-                                <input type="tel" class="neontextlanding bg-transparent text-center form-control my-1 my-sm-5 border-0" name="telefono" id="telefono" placeholder="Número de celular" required>
+                            <div class="modal-field">
+                                <input type="tel" class="neontextlanding bg-transparent text-center form-control my-3 border-0 mb-3" name="telefono" id="telefono" placeholder="Número de celular" required>
                             </div> <!--crea tu propio boton, lo agregas en NEON.css -->
-                            <button type="submit" class="neonbottonlanding btn btn-primary my-0 my-sm-3 border-0">Pedir asesoria</button>
+                            <button type="submit" class="neonbottonlanding btn btn-primary my-sm-3 border-0">Pedir asesoria</button>
                         </form>
                     </div>     
                     </div>
