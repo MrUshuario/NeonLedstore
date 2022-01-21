@@ -47,7 +47,7 @@ function saveCliente(){
     let cli_apellidos = $("#cli_apellidos").val();
     let cli_email = $("#cli_email").val();
     let cli_clave = $("#cli_clave").val();
-    let token = "123"; /*FALTA EL TOKEN                ADVERTENCIA */
+    let token = ""; /* no sirve*/
     let cli_estado = $("#cli_estado").val();
     
     const data = {
@@ -71,7 +71,7 @@ function saveCliente(){
       }
 
     }else {
-     
+     /* poner como arriba un if que mantenga que todo este relleno, y uno que verifique que el correo tenga un @*/
       update(data);
       
     }
@@ -84,12 +84,6 @@ function create(data) {
     data: data,
     type: "POST",
     success: function(e) {
-    /*  $('#modalCliente').modal('hide');
-      tableAll();
-      swal({
-        title: "Registro exitoso",
-        icon: "success"
-      }); */
       let json = JSON.parse(e);
       switch (json.STATUS) {
         case 1:
@@ -101,12 +95,6 @@ function create(data) {
           });
           break;
         case 2:
-          swal({
-            title: json.mensaje,
-            icon: "error",
-          });
-          break;
-        case 3:
           swal({
             title: json.mensaje,
             icon: "error",

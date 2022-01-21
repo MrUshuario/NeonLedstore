@@ -13,6 +13,7 @@
     <!-- ICONOS FONT AWESOME -->
     <script src="https://kit.fontawesome.com/f788fcfb82.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="build/css/PomaEstiloDashboard.css">
+    <link rel="stylesheet" href="build/css/neon.css">
 
 
     <link rel="stylesheet" href="build/css/bootstrap.min.css">
@@ -20,7 +21,6 @@
     <link rel="stylesheet" href="build/css/plugins/bootstrap/dataTables.bootstrap.min.css">
 
     <link rel="stylesheet" href="build/css/style.css">
-    <link rel="stylesheet" href="build/css/neon.css">
     <link rel="stylesheet" href="build/css/themes/all-themes.css">
     <link rel="stylesheet" href="build/css/estilos.css">
     <script src="build/js/sweetalert.min.js"></script>
@@ -64,7 +64,6 @@
                 <span class="app-title">Apps</span>
                 <ul class="app-list">
                     <li><a href="/dashboard"> <i class="fas fa-house-user"></i> Home</a></li>
-                    <li><a href="/color"><i class="far fa-envelope"></i> Color</a></li>
                     <li><a href="/cliente"><i class="fas fa-portrait" ></i> Clientes</a></li>
                     <li><a href="/producto"><i class="fas fa-archive"></i> Productos</a></li>
                     <li><a href="/categoria"><i class="fas fa-th-large"></i> Categoria</a></li>

@@ -84,7 +84,7 @@ $router = new Router();
     //method post
     $router->post('/cliente/getCliente',[ClienteController::class,'getCliente']);
     $router->post('/cliente/create',[ClienteController::class,'create']);
-    $router->post('/cliente/estado',[ClienteController::class,'estado']); //aun no implementado
+    $router->post('/cliente/estado',[ClienteController::class,'estado']); 
     $router->post('/cliente/update',[ClienteController::class,'update']); 
     $router->post('/cliente/delete',[ClienteController::class,'delete']);
 

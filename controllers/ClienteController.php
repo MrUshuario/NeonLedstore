@@ -30,7 +30,7 @@ class ClienteController {
             $cliente = new Cliente($_POST);
             $verificarCorreo = $cliente->verificarCorreo();
             if ($verificarCorreo->num_rows == 0) {
-                $resultado = $cliente->crear(); //PROBLEMA, LO CREA PASANDO EL
+                $resultado = $cliente->crear(); 
                 
                 if($resultado) {
                     $listado = Cliente::listar();
@@ -60,7 +60,7 @@ class ClienteController {
     }
     
     public static function getCliente(Router $router){
-        if($_SERVER['REQUEST_METHOD'] === 'POST'){ // Hay triple =
+        if($_SERVER['REQUEST_METHOD'] == 'POST'){ 
             $id = $_POST['id'];
             $cliente = Cliente::find($id);
             $json = json_encode([
