@@ -9,7 +9,7 @@
                 <div class="row">
                     <div class="col-6">
 					<!--TITUTLO -->
-                        <h3 class="mb-3" id="Leaxtor">Servicios para el Negocio </h3> <!--no olvidar darle su ID-->
+                        <h3 class="mb-3" id="gi">Servicios para el Negocio </h3> <!--no olvidar darle su ID-->
                     </div>
 					<!--USO: LOS BOTONES, DEBEN TENER DE HREF, EL MISMO QUE DIV -->
                     <div class="col-6 text-right">
