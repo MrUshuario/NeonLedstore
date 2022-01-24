@@ -128,7 +128,7 @@ ALTER TABLE `tab_admin`
 --
 -- Indices de la tabla `tab_categoria`
 --
-ALTER TABLE `Categoría`
+ALTER TABLE `tab_categoría`
   ADD PRIMARY KEY (`cat_id`);
 
 --
