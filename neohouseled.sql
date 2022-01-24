@@ -20,7 +20,7 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `neohouseled`
 --
-CREATE DATABASE IF NOT EXISTS `neohouseled` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci;
+CREATE DATABASE IF NOT EXISTS `neohouseled` DEFAULT CHARACTER SET utf8mb4;
 USE `neohouseled`;
 
 -- --------------------------------------------------------
@@ -33,7 +33,7 @@ CREATE TABLE `Admin` (
   `Admin_id` int NOT NULL,
   `Admin_email` varchar(120) NOT NULL,
   `Admin_clave` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -45,7 +45,7 @@ CREATE TABLE `Categoría` (
   `Cat_id` tinyint NOT NULL,
   `Cat_nombre` varchar(40) NOT NULL,
   `Cat_activo` char(1) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `Categoría`
@@ -70,7 +70,7 @@ CREATE TABLE `Cliente` (
   `Cli_email` varchar(120) NOT NULL,
   `Cli_clave` varchar(120) NOT NULL,
   `Cli_estado` varchar(120) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -83,7 +83,7 @@ CREATE TABLE `Compra` (
   `Compra_fecha` datetime NOT NULL,
   `Precio_total` float NOT NULL,
   `Cli_id` int NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -96,7 +96,7 @@ CREATE TABLE `Compra_detalle` (
   `Prod_id` int NOT NULL,
   `Det_cantidad` int NOT NULL,
   `Det_color` varchar(30) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -112,7 +112,7 @@ CREATE TABLE `Productos` (
   `Prod_precio` float NOT NULL,
   `Prod_tamaño` varchar(20) NOT NULL,
   `Prod_activo` char(1) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Índices para tablas volcadas
