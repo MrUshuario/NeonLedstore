@@ -29,10 +29,10 @@ USE `neohouseled`;
 -- Estructura de tabla para la tabla `Admin`
 --
 
-CREATE TABLE `Admin` (
-  `Admin_id` int NOT NULL,
-  `Admin_email` varchar(120) NOT NULL,
-  `Admin_clave` varchar(255) NOT NULL
+CREATE TABLE `tab_admin` (
+  `admin_id` int NOT NULL,
+  `admin_email` varchar(120) NOT NULL,
+  `admin_clave` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -41,17 +41,17 @@ CREATE TABLE `Admin` (
 -- Estructura de tabla para la tabla `Categoría`
 --
 
-CREATE TABLE `Categoría` (
-  `Cat_id` tinyint NOT NULL,
-  `Cat_nombre` varchar(40) NOT NULL,
-  `Cat_activo` char(1) NOT NULL
+CREATE TABLE `tab_categoría` (
+  `cat_id` tinyint NOT NULL,
+  `cat_nombre` varchar(40) NOT NULL,
+  `cat_activo` char(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `Categoría`
 --
 
-INSERT INTO `Categoría` (`Cat_id`, `Cat_nombre`, `Cat_activo`) VALUES
+INSERT INTO `tab_categoría` (`cat_id`, `cat_nombre`, `cat_activo`) VALUES
 (1, 'Personajes', '1'),
 (2, 'Texto', '1'),
 (3, 'Objetos', '1'),
@@ -60,16 +60,16 @@ INSERT INTO `Categoría` (`Cat_id`, `Cat_nombre`, `Cat_activo`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `Cliente`
+-- Estructura de tabla para la tabla `tab_clientes`
 --
 
-CREATE TABLE `Cliente` (
-  `Cli_id` int NOT NULL,
-  `Cli_nombre` varchar(120) NOT NULL,
-  `Cli_apellidos` varchar(120) NOT NULL,
-  `Cli_email` varchar(120) NOT NULL,
-  `Cli_clave` varchar(120) NOT NULL,
-  `Cli_estado` varchar(120) NOT NULL
+CREATE TABLE `tab_clientes` (
+  `cli_id` int NOT NULL,
+  `cli_nombre` varchar(120) NOT NULL,
+  `cli_apellidos` varchar(120) NOT NULL,
+  `cli_email` varchar(120) NOT NULL,
+  `cli_clave` varchar(120) NOT NULL,
+  `cli_estado` varchar(120) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -78,24 +78,25 @@ CREATE TABLE `Cliente` (
 -- Estructura de tabla para la tabla `Compra`
 --
 
-CREATE TABLE `Compra` (
-  `Cod_compra` int NOT NULL,
-  `Compra_fecha` datetime NOT NULL,
-  `Precio_total` float NOT NULL,
-  `Cli_id` int NOT NULL
+CREATE TABLE `tab_compra` (
+  `cod_com` int NOT NULL,
+  `comp_fecha` datetime NOT NULL,
+  `precio_total` float NOT NULL,
+  `cli_id` int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `Compra_detalle`
+-- Estructura de tabla para la tabla `tab_compra_detalle`
 --
 
-CREATE TABLE `Compra_detalle` (
-  `Cod_compra` int NOT NULL,
-  `Prod_id` int NOT NULL,
-  `Det_cantidad` int NOT NULL,
-  `Det_color` varchar(30) NOT NULL
+CREATE TABLE `tab_compra_detalle` (
+  `cod_det` int NOT NULL,
+    `cod_com` int NOT NULL,
+  `prod_id` int NOT NULL,
+  `det_cantidad` int NOT NULL,
+  `det_color` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -104,14 +105,14 @@ CREATE TABLE `Compra_detalle` (
 -- Estructura de tabla para la tabla `Productos`
 --
 
-CREATE TABLE `Productos` (
-  `Prod_id` int NOT NULL,
-  `Cat_id` tinyint NOT NULL,
-  `Prod_nombre` varchar(100) NOT NULL,
-  `Prod_descrpcion` varchar(255) NOT NULL,
-  `Prod_precio` float NOT NULL,
-  `Prod_tamaño` varchar(20) NOT NULL,
-  `Prod_activo` char(1) NOT NULL
+CREATE TABLE `tab_producto` (
+  `prod_id` int NOT NULL,
+  `cat_id` tinyint NOT NULL,
+  `pro_nombre` varchar(100) NOT NULL,
+  `pro_descrpcion` varchar(255) NOT NULL,
+  `pro_precio` float NOT NULL,
+  `pro_tamaño` varchar(20) NOT NULL,
+  `pro_activo` char(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -121,32 +122,32 @@ CREATE TABLE `Productos` (
 --
 -- Indices de la tabla `Admin`
 --
-ALTER TABLE `Admin`
-  ADD PRIMARY KEY (`Admin_id`);
+ALTER TABLE `tab_admin`
+  ADD PRIMARY KEY (`admin_id`);
 
 --
--- Indices de la tabla `Categoría`
+-- Indices de la tabla `tab_categoria`
 --
 ALTER TABLE `Categoría`
-  ADD PRIMARY KEY (`Cat_id`);
+  ADD PRIMARY KEY (`cat_id`);
 
 --
--- Indices de la tabla `Cliente`
+-- Indices de la tabla `tab_cliente`
 --
-ALTER TABLE `Cliente`
-  ADD PRIMARY KEY (`Cli_id`);
+ALTER TABLE `tab_cliente`
+  ADD PRIMARY KEY (`cli_id`);
 
 --
 -- Indices de la tabla `Compra`
 --
-ALTER TABLE `Compra`
-  ADD PRIMARY KEY (`Cod_compra`);
+ALTER TABLE `tab_compra`
+  ADD PRIMARY KEY (`cod_comp`);
 
 --
 -- Indices de la tabla `Productos`
 --
-ALTER TABLE `Productos`
-  ADD PRIMARY KEY (`Prod_id`);
+ALTER TABLE `tab_producto`
+  ADD PRIMARY KEY (`pro_id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
