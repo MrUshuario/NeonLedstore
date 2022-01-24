@@ -176,6 +176,8 @@
     border-color: transparent;
 }
 
-/* .modal-field{
-    padding-bottom: 1.7rem;
-} */
+@media(max-width: 700px){
+    #btn-modal-asesoria {
+        transform: scale(0.7);
+    }
+}
