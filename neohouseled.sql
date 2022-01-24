@@ -148,6 +148,14 @@ ALTER TABLE `tab_compra`
 --
 ALTER TABLE `tab_producto`
   ADD PRIMARY KEY (`pro_id`);
+  
+  ALTER TABLE `tab_compra` ADD CONSTRAINT `tab_compra`_`cli_id`_`tab_clientes`_`cli_id` FOREIGN KEY (`cli_id`) REFERENCES `tab_clientes`(`cli_id`);
+
+ALTER TABLE `tab_compra_detalle` ADD CONSTRAINT `tab_compra_detalle`_`cod_com`_`tab_compra`_`cod_com` FOREIGN KEY (`cod_com`) REFERENCES `tab_compra`(`cod_com`);
+
+ALTER TABLE `tab_compra_detalle` ADD CONSTRAINT `tab_compra_detalle`_`prod_id`_`tab_producto`_`prod_id` FOREIGN KEY (`prod_id`) REFERENCES `tab_producto`(`prod_id`);
+
+ALTER TABLE `tab_producto` ADD CONSTRAINT `tab_producto`_`cat_id`_tab_categoría_`cat_id` FOREIGN KEY (`cat_id`) REFERENCES tab_categoría(`cat_id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
