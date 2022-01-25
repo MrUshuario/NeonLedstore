@@ -24,7 +24,7 @@
         </div>
     </section>
 
-    
+    <button class="button-contact col-6 btn m-2 mx-auto d-block neonbotton neontabla" type="submit" name="enviar" id="enviar">Enviar</button>
     <section class="bg-black text-white pb-5">
         <div class="container">
             <article class="p-1 mb-5">

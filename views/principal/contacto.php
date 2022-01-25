@@ -22,7 +22,7 @@
                                     <div class="col-6 my-auto mx-auto" >
                                     <textarea class="p-2 neontextlanding border-0 border bg-transparent rounded w-100 me-1 me-sm-4 my-3 d-block text-white" rows="9" type="text" name="consulta" id="consulta" placeholder="¿Que desea consultarnos?" ></textarea> 
                                     </div>
-                                    <button class="button-contact col-6 btn m-2 mx-auto d-block neonbotton neontabla" name="enviar" id="enviar">Enviar</button>
+                                    <button class="button-contact col-6 btn m-2 mx-auto d-block neonbotton neontabla" type="submit" name="enviar" id="enviar">Enviar</button>
                                 </div>
                                 </div>
                         </div>
@@ -34,7 +34,7 @@
 <!--redes sociales desaparecer en movil-->
     <div class="container">
         <section class="row pb-5">
-            <form id="datosempresa" method="POST">
+            
                 <div class="container">
                     <div class="row text-white mx-1 mx-sm-5 pt-3 mb-2 d-flex justify-content-end">
                     <div class="col-lg-5 border neontabla redesociales">
@@ -67,7 +67,7 @@
                     </div>
                     </div>
                 </div>
-            </form>
+           
         </section>
     </div>
 

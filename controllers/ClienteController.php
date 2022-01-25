@@ -45,7 +45,7 @@ class ClienteController {
                         "STATUS"=>2,
                         "mensaje"=>"Error al registrar"
                     ]);
-                }
+                } // habria un tercer caso con no se puede borrar padres
             }
             //ya existe
             else {
