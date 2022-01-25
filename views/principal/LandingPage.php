@@ -2,88 +2,16 @@
 
   <!--INICIA CARRUSEL lAYOUTpRINCIPAL.php, AGREGAR LOS SCRIPT NECESARIO PARA QUE FUNCIONES, SI SUBES UN NUEVO SCRIPT, PUBLIC/BUILD/JS 
     https://www.youtube.com/watch?v=N7JXmnaVWL0&t=269s-->
-    <div  class="carrusel">
-    <!--Titulo y botones-->
-	<section class="pt-3 pb-3">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-6">
-					<!--TITUTLO -->
-                        <h3 class="mb-3" id="gi">Servicios para el Negocio </h3> <!--no olvidar darle su ID-->
-                    </div>
-					<!--USO: LOS BOTONES, DEBEN TENER DE HREF, EL MISMO QUE DIV -->
-                    <div class="col-6 text-right">
-                        <a class="btn btn-primary mb-3 mr-1" href="#carusel1" role="button" data-slide="prev">
-                            <i class="fa fa-arrow-left"></i>
-                        </a>
-                        <a class="btn btn-primary mb-3 " href="#carusel1" role="button" data-slide="next">
-                            <i class="fa fa-arrow-right"></i>
-                        </a>
-                    </div>
-                    <div class="col-12">
-					<!--de este div su id debe ser igual al href de los botones-->
-                        <div id="carusel1" class="carousel slide" data-ride="carousel">
-                            <div class="carousel-inner">
-								<!--verticales ES col-md-2 -->
-								<!--Horizontales ES col-md-4 -->
-
-									<!--INICIO VAGON-->
-									<div class="carousel-item active"> <!--el primero tiene el ACTIVE, los demas no-->
-									<div class="row">
-									<!--IMAGEN 1-->
-                                        <div class="col-md-6 mb-3">
-                                            <div class="card">
-                                                 <img height="300"  alt="100%x180"
-                                                     src="/build/img/landingPage/jovenEscuchandoMovil.webp" />
-                                                <div class="card-body">
-                                                    <h4 class="neones">aaaaaaaaaaaa</h4>
-                                                </div>
-                                            </div>
-                                        </div>
-										<!-- cerrando vagon -->
-                                        <!--IMAGEN 1-->
-                                        <div class="col-md-6 mb-3">
-                                            <div class="card">
-                                                 <img height="300"  alt="100%x180"
-                                                     src="/build/img/landingPage/jovenEscuchandoMovil.webp" />
-                                                <div class="card-body">
-                                                    <h4 class="neones">eeee</h4>
-                                                </div>
-                                            </div>
-                                        </div>
-										<!-- cerrando vagon -->
-                                    </div>
-                                </div>
-								<!-- FIN DEL VAGON -->
-								
-								
-                                <!--INICIO VAGON-->
-									<div class="carousel-item "> <!--el primero tiene el ACTIVE, los demas no-->
-									<div class="row">
-									<!--IMAGEN 1-->
-                                        <div class="col-md-12 mb-3">
-                                            <div class="card">
-                                                 <img  height="300" alt="100%x180"
-                                                     src="/build/img/contacto/jovenLuz.webp" />
-                                                <div class="card-body">
-                                                    <h4 class="neones">Plus</h4>
-                                                </div>
-                                            </div>
-                                        </div>
-
-										<!-- cerrando vagon -->
-                                    </div>
-                                </div>
-								<!-- FIN DEL VAGON -->
-                                <!--cerrando el div -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <div class="contenedor-carrusel">
+        <div class="carrusel-atras botones-carrusel">
+            &#60
         </div>
-        <!--FINAL DEL CARRUSEL-->
+        <div class="carrusel-atras botones-carrusel">
+            &#62
+        </div>
+        <img src="../../public/build/img/" alt="">
+    </div>
+  <!--FINAL DEL CARRUSEL-->
 
 
     <!--CENTRADO Y BLANCO-->
@@ -114,7 +42,7 @@
                             <div class="modal-field">
                                 <input type="tel" class="neontextlanding bg-transparent text-center form-control my-3 border-0 mb-3" name="telefono" id="telefono" placeholder="Número de celular" required>
                             </div> <!--crea tu propio boton, lo agregas en NEON.css -->
-                            <button type="submit" class="neonbottonlanding btn btn-primary my-sm-3 border-0">Pedir asesoria</button>
+                            <button type="submit" class="neonbottonlanding btn btn-primary my-sm-3 border-0" id="btn-modal-asesoria">Pedir asesoria</button>
                         </form>
                     </div>     
                     </div>

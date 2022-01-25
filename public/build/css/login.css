@@ -37,12 +37,11 @@ html {
     }
     50% {
         transform: translatex(50%);
-    }
-  html {
+    }html {
     box-sizing: border-box;
     font-family: 'Roboto Condensed', sans-serif;
-    } }
-    *, *:before, *:after {
+}
+}*, *:before, *:after {
     box-sizing: inherit;
 }
 
