@@ -1,9 +1,7 @@
 <div class="content-principal container mt-20">
     <div class="flex-between">
-        <h3>Color</h3>
-        <button type="button" id="model-cliente" data-bs-toggle="modal" data-bs-target="#modalCliente" class="btn-inline btn-success flex-center">
-            <i class="fas fa-plus-circle"></i> Agregar Cliente
-        </button>
+        <h3>Compra </h3>
+
     </div>
 </div>
 
@@ -60,19 +58,9 @@
                         <input type="password" class="form-control" id="cli_clave">
                     </div>
 
-                    <div class="mb-3">
-                        <label for="nombre">Estado Cliente</label>
-                        <select id="cli_estado" class="form-control">
-                            <option value="">--SELECCIONE--</option>
-                            <option value="0">Inactivo</option>
-                            <option value="1">Activo</option>
-                        </select>
-                    </div>
+                    
 
-                    <div class="modal-footer">
-                        <button type="reset" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                        <button type="submit" class="btn btn-primary" id="save">Guardar</button>
-                    </div>
+                    
                 </form>
             </div>
         </div>
