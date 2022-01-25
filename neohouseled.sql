@@ -64,7 +64,9 @@ CREATE TABLE `tab_cliente` (
 --
 
 INSERT INTO `tab_cliente` (`id`, `cli_nombre`, `cli_apellidos`, `cli_email`, `cli_clave`, `cli_estado`) VALUES
-(1, 'Edgar', 'Poma', 'lenonpoma@gmail.com', '12345', '1');
+(1, 'Edgar', 'Poma', 'lenonpoma@gmail.com', '12345', '1'), 
+(2, 'Isabella ', 'Montoya ', 'isabellam.montoya.im@gmail.com ', '4678', '1'), 
+(3, 'Melissa', 'Dumas', 'mdumas@gmail.com', '04367', '1');
 
 -- --------------------------------------------------------
 
