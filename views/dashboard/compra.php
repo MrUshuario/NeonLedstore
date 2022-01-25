@@ -1,4 +1,4 @@
-<div class="content-principal container mt-20">
+< class="content-principal container mt-20">
     <div class="flex-between">
         <h3>Compra </h3>
 
