@@ -14,14 +14,17 @@ function enviarEmail(data){
 }
 
 function saveCorreo(){
-    $("#formContact").on('submit', function(e){
+    console.log("hola");
+    $("#formContact").submit(function(e){
         e.preventDefault();
         const data = {
             nombre: $("#nombre").val().trim(),
             correo: $("#correo").val().trim(),
             telefono: $("#telefono").val().trim(),
-            pregunta: $("#pregunta").val().trim()
+            pregunta: $("#consulta").val().trim()
         };
-        enviarEmail(data);
+        console.log(data);
+       // enviarEmail(data);
     });
 }
+
