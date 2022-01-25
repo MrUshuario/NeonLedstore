@@ -20,7 +20,7 @@ function saveCorreo(){
             nombre: $("#nombre").val().trim(),
             correo: $("#correo").val().trim(),
             telefono: $("#telefono").val().trim(),
-            pregunta: $("#pregunta").val().trim()
+            consulta: $("#consulta").val().trim()
         };
         enviarEmail(data);
     });

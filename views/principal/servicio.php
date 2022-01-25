@@ -41,7 +41,7 @@
 
             </div>
             <div class="pt-3 pb-3">
-            <a href="/productos" class="btn weight-bolder text-white bg-primary-button"  style="width: 100%;  font-size: larger;">Conoce Nuestros Diseños</a>
+            <a href="/servicioCatalogo" class="btn weight-bolder text-white bg-primary-button"  style="width: 100%;  font-size: larger;">Conoce Nuestros Diseños</a>
             </div>
         </div>
         <div class="col-lg-3" style="width: 22.5em; height: 450px;">

@@ -171,15 +171,15 @@ class PrincipalController {
 
             $mail->isSMTP();
             $mail->Port = 465;
-            //$mail->SMTPDebug = SMTP::DEBUG_SERVER;  
+            //$mail->SMTPDebug = SMTP::DEBUG_SERVER;  -> solo para ver acciones del ruteo del mail
             $mail->SMTPSecure= PHPMailer::ENCRYPTION_SMTPS;
             $mail->SMTPAuth=true;
             $mail->Host='smtp.gmail.com';
-            $mail->Username = 'israeldavi0904@gmail.com';
-            $mail->Password = 'atmzeesqgcyhtzsl';
+            $mail->Username = 'renzolco26@gmail.com';
+            $mail->Password = 'Renzo13578';
 
-            $mail->setFrom('neonledstore@gmail.com','LedStore.com');
-            $mail->addAddress('israeldavi0904@gmail.com');
+            $mail->setFrom('neonledstore@gmail.com','NeonLedStore.com');//direccion desde donde se enviará
+            $mail->addAddress('renzolco26@gmail.com'); ////direccion del que recibe
             $mail->Subject = "Tienes un nuevo mensaje";
 
             //Habilitar HTML
@@ -187,8 +187,7 @@ class PrincipalController {
             $mail->CharSet= 'UTF-8';
 
             // Definir el contenido
-            $contenido = '
-            <!DOCTYPE html>
+            $contenido = '<!DOCTYPE html>
             <html lang="es_ES">
             <head>
                 <meta charset="UTF-8">
@@ -269,8 +268,7 @@ class PrincipalController {
                     </div>
                 </div>
             </body>
-            </html>
-            ';
+            </html>';
 
             $mail->Body = $contenido;
 
