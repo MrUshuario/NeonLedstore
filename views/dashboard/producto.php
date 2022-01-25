@@ -14,10 +14,12 @@
             <thead class="table-dark sticky">
                 <tr>
                     <th>Categoria</th>
-                    <th>Producto</th>
-                    <th>precio</th>
-                    <th>estado</th>
-                    <th></th>
+                    <th>Nombre </th>
+                    <th>Descripción </th>
+                    <th>Precio </th>
+                    <th>Imagen </th>
+                    <th>Tamaño </th>
+                    <th>Estado </th>
                 </tr>
             </thead>
             <tbody>
