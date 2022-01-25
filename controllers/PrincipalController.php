@@ -12,8 +12,16 @@ class PrincipalController {
         $router->renderPrincipal('index',[]);
     }
 
-    public static function landig(Router $router){
-        $router->renderPrincipal('landingPage',[]);
+    public static function landingNegocio(Router $router){
+        $router->renderPrincipal('landingPageNegocio',[]);
+    }
+
+    public static function landingEvento(Router $router){
+        $router->renderPrincipal('landingPageEvento',[]);
+    }
+
+    public static function landingHogar(Router $router){
+        $router->renderPrincipal('landingPageHogar',[]);
     }
 
     public static function nosotros(Router $router){

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 25-01-2022 a las 15:37:55
+-- Tiempo de generación: 25-01-2022 a las 17:40:34
 -- Versión del servidor: 10.1.32-MariaDB
 -- Versión de PHP: 5.6.36
 
@@ -29,7 +29,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `tab_categoria` (
-  `cat_id` tinyint(4) NOT NULL,
+  `id` tinyint(4) NOT NULL,
   `cat_nombre` varchar(40) NOT NULL,
   `cat_activo` char(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -38,7 +38,7 @@ CREATE TABLE `tab_categoria` (
 -- Volcado de datos para la tabla `tab_categoria`
 --
 
-INSERT INTO `tab_categoria` (`cat_id`, `cat_nombre`, `cat_activo`) VALUES
+INSERT INTO `tab_categoria` (`id`, `cat_nombre`, `cat_activo`) VALUES
 (1, 'Personajes', '1'),
 (2, 'Texto', '1'),
 (3, 'Objetos', '1'),
@@ -51,7 +51,7 @@ INSERT INTO `tab_categoria` (`cat_id`, `cat_nombre`, `cat_activo`) VALUES
 --
 
 CREATE TABLE `tab_cliente` (
-  `cli_id` int(11) NOT NULL,
+  `id` int(11) NOT NULL,
   `cli_nombre` varchar(120) DEFAULT NULL,
   `cli_apellidos` varchar(120) DEFAULT NULL,
   `cli_email` varchar(120) DEFAULT NULL,
@@ -63,7 +63,7 @@ CREATE TABLE `tab_cliente` (
 -- Volcado de datos para la tabla `tab_cliente`
 --
 
-INSERT INTO `tab_cliente` (`cli_id`, `cli_nombre`, `cli_apellidos`, `cli_email`, `cli_clave`, `cli_estado`) VALUES
+INSERT INTO `tab_cliente` (`id`, `cli_nombre`, `cli_apellidos`, `cli_email`, `cli_clave`, `cli_estado`) VALUES
 (1, 'Edgar', 'Poma', 'lenonpoma@gmail.com', '12345', '1');
 
 -- --------------------------------------------------------
@@ -73,7 +73,7 @@ INSERT INTO `tab_cliente` (`cli_id`, `cli_nombre`, `cli_apellidos`, `cli_email`,
 --
 
 CREATE TABLE `tab_compra` (
-  `cod_com` int(11) NOT NULL,
+  `id` int(11) NOT NULL,
   `com_fecha` datetime DEFAULT NULL,
   `precio_total` float DEFAULT NULL,
   `cli_id` int(11) DEFAULT NULL
@@ -86,8 +86,8 @@ CREATE TABLE `tab_compra` (
 --
 
 CREATE TABLE `tab_compra_detalle` (
-  `cod_det` int(11) NOT NULL,
-  `cod_com` int(11) DEFAULT NULL,
+  `id` int(11) NOT NULL,
+  `cod_id` int(11) DEFAULT NULL,
   `pro_id` int(11) DEFAULT NULL,
   `det_cantidad` int(11) DEFAULT NULL,
   `det_color` varchar(30) DEFAULT NULL
@@ -100,7 +100,7 @@ CREATE TABLE `tab_compra_detalle` (
 --
 
 CREATE TABLE `tab_producto` (
-  `pro_id` int(11) NOT NULL,
+  `id` int(11) NOT NULL,
   `cat_id` tinyint(4) DEFAULT NULL,
   `pro_nombre` varchar(100) DEFAULT NULL,
   `pro_descrpcion` varchar(255) DEFAULT NULL,
@@ -138,34 +138,34 @@ INSERT INTO `tab_user` (`id`, `user`, `pass`) VALUES
 -- Indices de la tabla `tab_categoria`
 --
 ALTER TABLE `tab_categoria`
-  ADD PRIMARY KEY (`cat_id`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indices de la tabla `tab_cliente`
 --
 ALTER TABLE `tab_cliente`
-  ADD PRIMARY KEY (`cli_id`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indices de la tabla `tab_compra`
 --
 ALTER TABLE `tab_compra`
-  ADD PRIMARY KEY (`cod_com`),
+  ADD PRIMARY KEY (`id`),
   ADD KEY `FK_cliente` (`cli_id`);
 
 --
 -- Indices de la tabla `tab_compra_detalle`
 --
 ALTER TABLE `tab_compra_detalle`
-  ADD PRIMARY KEY (`cod_det`),
-  ADD KEY `cod_com` (`cod_com`),
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `cod_com` (`cod_id`),
   ADD KEY `pro_id` (`pro_id`);
 
 --
 -- Indices de la tabla `tab_producto`
 --
 ALTER TABLE `tab_producto`
-  ADD PRIMARY KEY (`pro_id`),
+  ADD PRIMARY KEY (`id`),
   ADD KEY `cat_id` (`cat_id`);
 
 --
@@ -182,31 +182,31 @@ ALTER TABLE `tab_user`
 -- AUTO_INCREMENT de la tabla `tab_categoria`
 --
 ALTER TABLE `tab_categoria`
-  MODIFY `cat_id` tinyint(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` tinyint(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `tab_cliente`
 --
 ALTER TABLE `tab_cliente`
-  MODIFY `cli_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `tab_compra`
 --
 ALTER TABLE `tab_compra`
-  MODIFY `cod_com` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `tab_compra_detalle`
 --
 ALTER TABLE `tab_compra_detalle`
-  MODIFY `cod_det` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `tab_producto`
 --
 ALTER TABLE `tab_producto`
-  MODIFY `pro_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `tab_user`
@@ -222,20 +222,20 @@ ALTER TABLE `tab_user`
 -- Filtros para la tabla `tab_compra`
 --
 ALTER TABLE `tab_compra`
-  ADD CONSTRAINT `FK_cliente` FOREIGN KEY (`cli_id`) REFERENCES `tab_cliente` (`cli_id`);
+  ADD CONSTRAINT `fk_cli_id` FOREIGN KEY (`cli_id`) REFERENCES `tab_cliente` (`id`);
 
 --
 -- Filtros para la tabla `tab_compra_detalle`
 --
 ALTER TABLE `tab_compra_detalle`
-  ADD CONSTRAINT `tab_compra_detalle_ibfk_1` FOREIGN KEY (`cod_com`) REFERENCES `tab_compra` (`cod_com`),
-  ADD CONSTRAINT `tab_compra_detalle_ibfk_2` FOREIGN KEY (`pro_id`) REFERENCES `tab_producto` (`pro_id`);
+  ADD CONSTRAINT `fk_cod_id` FOREIGN KEY (`cod_id`) REFERENCES `tab_compra` (`id`),
+  ADD CONSTRAINT `fk_pro_id` FOREIGN KEY (`pro_id`) REFERENCES `tab_producto` (`id`);
 
 --
 -- Filtros para la tabla `tab_producto`
 --
 ALTER TABLE `tab_producto`
-  ADD CONSTRAINT `tab_producto_ibfk_1` FOREIGN KEY (`cat_id`) REFERENCES `tab_categoria` (`cat_id`);
+  ADD CONSTRAINT `fk_cat_id` FOREIGN KEY (`cat_id`) REFERENCES `tab_categoria` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

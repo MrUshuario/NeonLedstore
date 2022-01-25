@@ -22,7 +22,7 @@ function tableAll(){
       {data:"cli_clave"}, 
       { data: null,
           render: function(data, type, row){
-            return `<button data-idcliente="${data.id}" class="btn ${data.cli_estado == 1? 'btn-success' : 'btn-danger'}" id="btnEstado">${data.cli_estado}</button>`;
+            return `<button data-idcliente="${data.id}" class="btn ${data.cli_estado == "1"? 'btn-success' : 'btn-danger'}" id="btnEstado">${data.cli_estado}</button>`;
           }
       },
       
@@ -47,7 +47,6 @@ function saveCliente(){
     let cli_apellidos = $("#cli_apellidos").val();
     let cli_email = $("#cli_email").val();
     let cli_clave = $("#cli_clave").val();
-    let token = ""; /* no sirve*/
     let cli_estado = $("#cli_estado").val();
     
     const data = {
@@ -56,7 +55,6 @@ function saveCliente(){
       cli_apellidos: cli_apellidos,
       cli_email: cli_email,
       cli_clave: cli_clave,
-      token: token,
       cli_estado: cli_estado,
     };
     console.log(id);

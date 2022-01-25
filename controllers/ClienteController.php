@@ -62,6 +62,7 @@ class ClienteController {
     public static function getCliente(Router $router){
         if($_SERVER['REQUEST_METHOD'] == 'POST'){ 
             $id = $_POST['id'];
+            $id = intval($id);
             $cliente = Cliente::find($id);
             $json = json_encode([
                 "data"=>$cliente

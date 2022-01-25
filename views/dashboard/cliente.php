@@ -15,7 +15,7 @@
                 <tr>
                     <th>Nombres</th>
                     <th>Apellidos</th>
-                    <th>Correo</th>
+                    <th>email</th>
                     <th>Clave</th>
                     <th>Estado</th>
                     <th>Editar/Borrar</th>
@@ -64,8 +64,8 @@
                         <label for="nombre">Estado Cliente</label>
                         <select id="cli_estado" class="form-control">
                             <option value="">--SELECCIONE--</option>
-                            <option value=0>Inactivo</option>
-                            <option value=1>Activo</option>
+                            <option value="0">Inactivo</option>
+                            <option value="1">Activo</option>
                         </select>
                     </div>
 

@@ -120,8 +120,12 @@ $router = new Router();
        //METHOD POST
         $router->post("/contacto/enviar",[PrincipalController::class,"contactoEmail"]);
         $router->post("/landingpage/enviar",[PrincipalController::class,"contactolandingEmail"]);
-    //Landig Page
-    $router->get("/landingpage", [PrincipalController::class, 'landig']);
+
+        //Landig Page
+        $router->get("/landingPageNegocio", [PrincipalController::class, 'landingNegocio']);
+        $router->get("/landingPageEvento", [PrincipalController::class, 'landingEvento']);
+        $router->get("/landingPageHogar", [PrincipalController::class, 'landingHogar']);
+
 
 
 
