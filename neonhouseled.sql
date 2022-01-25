@@ -36,8 +36,12 @@ CREATE TABLE tab_user (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
+--Volcado de datos para la tabla user--
 
---
+INSERT INTO tab_user (user_id, user_email, user_clave) VALUES
+
+(1, 'isabellam.montoya.im@gmail.com ' , 'esan2018');
+(2, '18100102@ue.edu.pe' , 'Itis1812');
 -- Estructura de tabla para la tabla `tab_categoria`
 --
 
