@@ -4,11 +4,12 @@ require_once __DIR__.'/../include/app.php';
 
 use Controllers\AdminController;
 use Controllers\CategoriaController;
-use Controllers\ColorController;
+use Controllers\ColorController; //borrar
+use Controllers\CompraDetalleController;
 use Controllers\ProductoController;
 use Controllers\ClienteController;
 use Controllers\PrincipalController;
-use Controllers\ProductoColorController;
+use Controllers\ProductoColorController; //borar
 use Controllers\GraficosController;
 use Controllers\ConfiguracionController;
 use MVC\Router;
@@ -22,7 +23,10 @@ $router = new Router();
 // Zona Privada
     $router->post('/login/verificar',[AdminController::class,'index1']);
 
-//Color
+//Compra DETALLE
+    $router->get('/compraDetalle',[CompraDetalleController::class,'CompraDetalle']);
+//Color 
+/*
     // method get
     $router->get('/color',[ColorController::class,'Color']);
     $router->get('/color/listar',[ColorController::class,'listarColor']);
@@ -31,7 +35,7 @@ $router = new Router();
     $router->post('/color/eliminar',[ColorController::class,'eliminarColor']);
     $router->post('/color/guardar',[ColorController::class,'crearColor']);
     $router->post('/color/editar',[ColorController::class,'editColor']);
-    $router->post('/color/getColor',[ColorController::class,'getColor']);
+    $router->post('/color/getColor',[ColorController::class,'getColor']); */
 
 //Productos
     // method get
