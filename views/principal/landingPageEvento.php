@@ -68,29 +68,61 @@
 
             </div>
 
-            <div class="teMostraremos row py-2 py-sm-5">
+<!--LandingPageEvento-->
+        <section class="landin1">
+                <h1 class="title">¡TE MOSTRAMOS LOS MEJORES DISEÑOS!</h1>
 
-                <h2 class="teMostraremosTitle">Te mostraremos nuestros diseños</h2>
+                    <div class="container">
 
-                <div class="col-4 my-2 my-sm-5 d-none d-sm-block">
+                        <div class="card">
+                            <img src="\build\img\graduación.webp">
+                                <h4>Graduación</h4>
+                    </div>
 
-                    <img class="teMostraremosImage mx-auto d-block" src="/build/img/viendoZamba.webp" alt="logo" loading="lazy">
+                        <div class="card">
+                            <img src="\build\img\matrimonio.webp">
+                                <h4>Matrimonio</h4>
+                    </div>
 
-                </div>
+                     <div class="card">
+                            <img src="\build\img\aniversario.webp">
+                                <h4>Aniversario</h4>
+                    </div>
 
-                <div class="col-4 my-2 my-sm-5 d-none d-sm-block">
+                    <div class="card">
+                            <img src="\build\img\recepción.webp">
+                                <h4>Recepción</h4>
+                    </div>
+        
+                    <div class="card">
+                            <img src="\build\img\sala-nocturna.webp">
+                                <h4>Sala Nocturna</h4>
+                    </div>
 
-                    <img class="teMostraremosImage mx-auto d-block" src="/build/img/zamba.webp" alt="logo" loading="lazy">
+                    <div class="card">
+                            <img src="\build\img\pista-de-baile.webp">
+                                <h4>Pista de Baile</h4>
+                    </div>
 
-                </div>
+                    <div class="card">
+                            <img src="\build\img\concierto.webp">
+                                <h4>Concierto</h4>
+                    </div>
 
-                <div class="col-4 my-2 my-sm-5 d-none d-sm-block">
+                        <div class="card">
+                            <img src="\build\img\festival.webp">
+                                <h4>Festival</h4>
+                    </div>
 
-                    <img class="teMostraremosImage mx-auto d-block" src="/build/img/puma.webp" alt="logo" loading="lazy">
+                        <div class="card">
+                            <img src="\build\img\reunion.webp">
+                                <h4>Reuniones</h4>
+                        </div>
 
-                </div>
-            </div>
+                    </div>
+            </section>     
            
+<!--Fin LandinPageEvento-->
 
             <div class="personalizado row d-flex align-items-end ">
 
