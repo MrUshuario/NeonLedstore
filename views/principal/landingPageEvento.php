@@ -69,7 +69,8 @@
             </div>
 
 <!--LandingPageEvento-->
-        <section class="landin1">
+            <div class="landin1 arreglo">
+
                 <h1 class="title">¡TE MOSTRAMOS LOS MEJORES DISEÑOS!</h1>
 
                     <div class="container">
@@ -120,41 +121,41 @@
                         </div>
 
                     </div>
-            </section>     
+            </div>   
            
 <!--Fin LandinPageEvento-->
 
-            <div class="personalizado row d-flex align-items-end ">
+<div class="personalizado row d-flex align-items-end ">
 
-                <div class="col-12 col-sm-4 my-3 my-sm-5">
+<div class="col-12 col-sm-4 my-3 my-sm-5">
 
-                    <img class="personalizadoImage mx-auto d-block" src="/build/img/nightJazz.webp" alt="logo" loading="lazy">
+    <img class="personalizadoImage mx-auto d-block" src="/build/img/nightJazz.webp" alt="logo" loading="lazy">
 
-                    <p class="personalizadoParagraph border border-5 rounded-3 text-center m-3 p-3 lh-sm">Ofrecemos diseños personalizados a pedido del cliente</p>
+    <p class="personalizadoParagraph border border-5 rounded-3 text-center m-3 p-3 lh-sm">Ofrecemos diseños personalizados a pedido del cliente</p>
 
-                </div>
+</div>
 
-                <div class="col-12 col-sm-4 my-3 my-sm-5">
+<div class="col-12 col-sm-4 my-3 my-sm-5">
 
-                    <img class="personalizadoImage mx-auto d-block" src="/build/img/hotAndFresh.webp" alt="logo" loading="lazy">
+    <img class="personalizadoImage mx-auto d-block" src="/build/img/hotAndFresh.webp" alt="logo" loading="lazy">
 
-                    <p class="deliveryParagraph border border-5 rounded-3 text-center m-3 py-3 px-5 lh-sm">Delivery gratis a todos los distritos de Lima y Provincia</p>
+    <p class="deliveryParagraph border border-5 rounded-3 text-center m-3 py-3 px-5 lh-sm">Delivery gratis a todos los distritos de Lima y Provincia</p>
 
-                </div>
+</div>
 
-                <div class="col-12 col-sm-4 my-3 my-sm-5">
+<div class="col-12 col-sm-4 my-3 my-sm-5">
 
-                    <div class="row">
+    <div class="row">
 
-                        <img class="personalizadoImage cocktails mx-auto d-block" src="/build/img/cocktails.webp" alt="logo" loading="lazy">   
+        <img class="personalizadoImage cocktails mx-auto d-block" src="/build/img/cocktails.webp" alt="logo" loading="lazy">   
 
-                    </div>
+    </div>
 
-                    <p class="fabricantesParagraph border border-5 rounded-3 text-center m-3 p-3 lh-sm">Somos fabricantes y ofrecemos los productos a un excelente precio</p>
+    <p class="fabricantesParagraph border border-5 rounded-3 text-center m-3 p-3 lh-sm">Somos fabricantes y ofrecemos los productos a un excelente precio</p>
 
-                </div>
+</div>
 
-            </div>
+</div>
 
             <div class="row empresasQue py-2 py-sm-5">
 
