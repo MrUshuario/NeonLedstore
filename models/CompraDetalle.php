@@ -4,37 +4,62 @@ namespace Model;
 
 use Model\ActiveRecord;
 
-class Cliente extends ActiveRecord {
-    protected static $tabla = "tab_cliente";
-    protected static $columnaDB = ['id', 'cli_nombre', 'cli_apellidos', 'cli_email', 'cli_clave', 'cli_estado'];
+class CompraDetalle extends ActiveRecord {
+
+    protected static $tabla = "tab_compra_detalle";
+
+    protected static $columnaDB = ['id', 'cod_id', 'pro_id', 'det_cantidad',  'det_color'];
 
     public $id;
-    public $cli_nombre;
-    public $cli_apellidos;
-    public $cli_email;
-    public $cli_clave;
-    public $cli_estado;
+
+    public $cod_id;
+
+    public $pro_id;
+
+    public $det_cantidad;
+
+    public $det_color;
 
     public function __construct($args = [])
+
     {
+
         $this->id = $args['id'] ?? null;
-        $this->cli_nombre = $args['cli_nombre'] ?? null;
-        $this->cli_apellidos = $args['cli_apellidos'] ?? null;
-        $this->cli_email = $args['cli_email'] ?? null;
-        $this->cli_clave = $args['cli_clave'] ?? null;
-        $this->cli_estado = $args['cli_estado'] ?? null;
+
+        $this->cli_nombre = $args['cod_id'] ?? null;
+
+        $this->cli_apellidos = $args['pro_id'] ?? null;
+
+        $this->cli_email = $args['det_cantidad'] ?? null;
+
+        $this->cli_clave = $args['det_color' ] ?? null;
+
     }
+
     
-    public function verificarCorreo(){
-        $query = "SELECT * FROM ".static::$tabla." WHERE cli_email='".$this->cli_email."'";
+
+    public function verificarCod(){
+
+        $query = "SELECT * FROM ".static::$tabla." WHERE cod_id='".$this->cod_id."'";
+
         $resultado = self::$db->query($query);
+
         return $resultado;
+
     }
+
     
-    public function editEstado()
+
+    public function editCantidad()
+
     {
-        $query = "UPDATE " . static::$tabla . " SET cli_estado='" . $this->cli_estado . "' WHERE id=" . $this->id;
+
+        $query = "UPDATE " . static::$tabla . " SET det_cantidad ='" . $this->det_cantidad . "' WHERE id=" . $this->id;
+
         $resultado = self::$db->query($query);
+
         return $resultado;
+
     }
+
 }
