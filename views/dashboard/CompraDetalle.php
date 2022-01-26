@@ -29,7 +29,7 @@
                     <th>Detalle compra </th>
 
                     <th>Detalle color </th>
-
+	
                 </tr>
 
                 </thead>
