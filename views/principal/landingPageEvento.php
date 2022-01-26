@@ -76,7 +76,7 @@
                     <div class="container">
 
                         <div class="card">
-                            <img src="\build\img\graduación.webp">
+                            <img src="\build\img\graduacion.webp">
                                 <h4>Graduación</h4>
                     </div>
 
@@ -91,7 +91,7 @@
                     </div>
 
                     <div class="card">
-                            <img src="\build\img\recepción.webp">
+                            <img src="\build\img\recepcion.webp">
                                 <h4>Recepción</h4>
                     </div>
         
