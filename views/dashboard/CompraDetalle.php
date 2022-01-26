@@ -30,7 +30,7 @@
 
                     <th>Detalle color </th>
 	
-               <tr> Editar/ Eliminar </tr>
+               <th> Editar/ Eliminar </th>
 
                 </thead>
 
@@ -49,9 +49,7 @@
 <div class="modal fade" id="modalCliente" tabindex="-1" aria-labelledby="modalCliente" aria-hidden="true">
 
     <div class="modal-dialog modal-dialog-scrollable">
-<button value="Editar" title="Editar" class="btn btn-primary" ><i class="fa fa-check-square-o" aria-hidden="true" ></i></button>
-	    <button value="Eliminr" title="Eliminar" class="btn btn-danger" ><i class="fa fa-minus-square-o" aria-hidden="true" ></i></button>
-
+	    
 	    
         </div>
 
