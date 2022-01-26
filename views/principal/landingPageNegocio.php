@@ -68,29 +68,66 @@
 
             </div>
 
-            <div class="teMostraremos row py-2 py-sm-5">
 
-                <h2 class="teMostraremosTitle">Te mostraremos nuestros diseños</h2>
+<!--LandingPageNegocio-->
+            <div class="landin1 arreglo">
 
-                <div class="col-4 my-2 my-sm-5 d-none d-sm-block">
+                <h1 class="title">¡TE MOSTRAMOS LOS MEJORES DISEÑOS!</h1>
 
-                    <img class="teMostraremosImage mx-auto d-block" src="/build/img/viendoZamba.webp" alt="logo" loading="lazy">
+                    <div class="container">
 
-                </div>
+                        <div class="card">
+                            <img src="\build\img\landingPage\lp-negocio\bar.webp">
+                                <h4>Bar</h4>
+                        </div>
 
-                <div class="col-4 my-2 my-sm-5 d-none d-sm-block">
+                        <div class="card">
+                            <img src="\build\img\landingPage\lp-negocio\cine.webp">
+                                <h4>Cine</h4>
+                        </div>
 
-                    <img class="teMostraremosImage mx-auto d-block" src="/build/img/zamba.webp" alt="logo" loading="lazy">
+                        <div class="card">
+                            <img src="\build\img\landingPage\lp-negocio\imagen3.webp">
+                                <h4>Coffe Shop
+                                </h4>
+                        </div>
 
-                </div>
+                        <div class="card">
+                            <img src="\build\img\landingPage\lp-negocio\restaurante.webp">
+                                <h4>Restaurante</h4>
+                         </div>
 
-                <div class="col-4 my-2 my-sm-5 d-none d-sm-block">
+                        <div class="card">
+                            <img src="\build\img\landingPage\lp-negocio\Boutique.webp">
+                                <h4>Boutique</h4>
+                        </div>
 
-                    <img class="teMostraremosImage mx-auto d-block" src="/build/img/puma.webp" alt="logo" loading="lazy">
+                        <div class="card">
+                            <img src="\build\img\landingPage\lp-negocio\tienda.webp">
+                                <h4>Tienda Comercial</h4>
+                        </div>
 
-                </div>
-            </div>
-           
+                        <div class="card">
+                            <img src="\build\img\landingPage\lp-negocio\seminario.webp">
+                                <h4>Seminario</h4>
+                        </div>
+
+                        <div class="card">
+                            <img src="\build\img\landingPage\lp-negocio\negocio-recepcion.webp">
+                                <h4>Recepción</h4>
+                        </div>
+
+                        <div class="card">
+                            <img src="\build\img\landingPage\lp-negocio\club-campestre.webp">
+                                <h4>Reuniones</h4>
+                        </div>
+
+                    </div>
+            </div>   
+
+<!--Fin LandinPageNegocio-->
+
+            
 
             <div class="personalizado row d-flex align-items-end ">
 

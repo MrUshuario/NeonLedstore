@@ -76,47 +76,47 @@
                     <div class="container">
 
                         <div class="card">
-                            <img src="\build\img\graduacion.webp">
+                            <img src="\build\img\landingPage\lp-evento\graduacion.webp">
                                 <h4>Graduación</h4>
-                    </div>
+                        </div>
 
                         <div class="card">
-                            <img src="\build\img\matrimonio.webp">
+                            <img src="\build\img\landingPage\lp-evento\matrimonio.webp">
                                 <h4>Matrimonio</h4>
-                    </div>
+                        </div>
 
-                     <div class="card">
-                            <img src="\build\img\aniversario.webp">
+                        <div class="card">
+                            <img src="\build\img\landingPage\lp-evento\aniversario.webp">
                                 <h4>Aniversario</h4>
-                    </div>
+                        </div>
 
-                    <div class="card">
-                            <img src="\build\img\recepcion.webp">
+                        <div class="card">
+                            <img src="\build\img\landingPage\lp-evento\recepcion.webp">
                                 <h4>Recepción</h4>
-                    </div>
+                        </div>
         
-                    <div class="card">
-                            <img src="\build\img\sala-nocturna.webp">
+                        <div class="card">
+                            <img src="\build\img\landingPage\lp-evento\sala-nocturna.webp">
                                 <h4>Sala Nocturna</h4>
-                    </div>
+                        </div>
 
-                    <div class="card">
-                            <img src="\build\img\pista-de-baile.webp">
+                        <div class="card">
+                            <img src="\build\img\landingPage\lp-evento\pista-de-baile.webp">
                                 <h4>Pista de Baile</h4>
-                    </div>
+                        </div>
 
-                    <div class="card">
-                            <img src="\build\img\concierto.webp">
+                        <div class="card">
+                            <img src="\build\img\landingPage\lp-evento\concierto.webp">
                                 <h4>Concierto</h4>
-                    </div>
+                        </div>
 
                         <div class="card">
-                            <img src="\build\img\festival.webp">
+                            <img src="\build\img\landingPage\lp-evento\festival.webp">
                                 <h4>Festival</h4>
-                    </div>
+                        </div>
 
                         <div class="card">
-                            <img src="\build\img\reunion.webp">
+                            <img src="\build\img\landingPage\lp-evento\reunion.webp">
                                 <h4>Reuniones</h4>
                         </div>
 

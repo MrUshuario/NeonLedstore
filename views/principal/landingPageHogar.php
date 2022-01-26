@@ -86,28 +86,62 @@
 
             </div>
 
-            <div class="teMostraremos row py-2 py-sm-5">
+            <!--LandingPageEvento-->
+            <div class="landin1 arreglo">
 
-                <h2 class="teMostraremosTitle">Te mostraremos nuestros diseños</h2>
+                <h1 class="title">¡TE MOSTRAMOS LOS MEJORES DISEÑOS!</h1>
 
-                <div class="col-4 my-2 my-sm-5 d-none d-sm-block">
+                    <div class="container">
 
-                    <img class="teMostraremosImage mx-auto d-block" src="/build/img/viendoZamba.webp" alt="logo" loading="lazy">
+                        <div class="card">
+                            <img src="\build\img\landingPage\lp-hogar\dormitoriokid.webp">
+                                <h4>Dormitorio Kid</h4>
+                        </div>
 
-                </div>
+                        <div class="card">
+                            <img src="\build\img\landingPage\lp-hogar\dormitoriojuv.webp">
+                                <h4>Dormitorio Juvenil</h4>
+                        </div>
 
-                <div class="col-4 my-2 my-sm-5 d-none d-sm-block">
+                        <div class="card">
+                            <img src="\build\img\landingPage\lp-hogar\dormitoriomatri.webp">
+                                <h4>Matrimonial</h4>
+                        </div>
 
-                    <img class="teMostraremosImage mx-auto d-block" src="/build/img/zamba.webp" alt="logo" loading="lazy">
+                        <div class="card">
+                            <img src="\build\img\landingPage\lp-hogar\puertaled.webp">
+                                <h4>Puerta Led</h4>
+                        </div>
+        
+                        <div class="card">
+                            <img src="\build\img\landingPage\lp-hogar\pasadizo.webp">
+                                <h4>Pasadizo</h4>
+                        </div>
 
-                </div>
+                        <div class="card">
+                            <img src="\build\img\landingPage\lp-hogar\espaciogamer.webp">
+                                <h4>Gamer</h4>
+                        </div>
 
-                <div class="col-4 my-2 my-sm-5 d-none d-sm-block">
+                        <div class="card">
+                            <img src="\build\img\landingPage\lp-hogar\mesadecorativa.webp">
+                                <h4>Mesa Decorativa</h4>
+                        </div>
 
-                    <img class="teMostraremosImage mx-auto d-block" src="/build/img/puma.webp" alt="logo" loading="lazy">
+                        <div class="card">
+                            <img src="\build\img\landingPage\lp-hogar\mesanoche.webp">
+                                <h4>Mesa Noche</h4>
+                        </div>
 
-                </div>
-            </div>
+                        <div class="card">
+                            <img src="\build\img\landingPage\lp-hogar\salavisitas.webp">
+                                <h4>Sala Visitas</h4>
+                        </div>
+
+                    </div>
+            </div>   
+           
+<!--Fin LandinPageEvento-->
            
 
             <div class="personalizado row d-flex align-items-end ">
