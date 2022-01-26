@@ -129,8 +129,9 @@ CREATE TABLE `tab_user` (
 
 INSERT INTO `tab_user` (`id`, `user`, `pass`) VALUES
 (1, 'adminNLS', '$2y$10$LgeWXAVuGEPOgd5LCSg.A.YF/PoSVhPBpTX4P9MApwRR6axty84dK'),
-(2, 'isabellam.montoya.im@gmail.com', 'esan2018'),
-(3, '18100102@ue.edu.pe', 'Itis1812');
+(2, 'isabellam.montoya.im@gmail.com', '37342ac90656f687bc8dd96f6243f4a7'),
+(3, '18100102@ue.edu.pe', 'e70f7f031bed60c54604bf0a88732e59') ;
+
 
 --
 -- Índices para tablas volcadas
