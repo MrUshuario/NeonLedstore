@@ -62,10 +62,10 @@
 }
 
 .landin1 .container .card{
-    width: 350px;
+    width: 250px;
     height:auto;
     border-radius: 8px;
-    box-shadow: 0 3px 3px rgba(141, 15, 245, 0.2);
+    box-shadow: 0 7px 7px rgba(141, 15, 245, 0.2);
     overflow:hidden;
     margin: 20px;
     text-align:center;
@@ -82,13 +82,13 @@
 }
 
 .landin1 .container .card img{
-    width: 300px;
+    width: 250px;
     height: 200px;
     border-radius: 10px;
 }
 
 .landin1 .container .card h4{
-    font-weight: 200;
-    color: blanchedalmond;
+    font-weight: 100;
+    color: rgb(255, 255, 255);
 }
 /*fin landingevento*/
