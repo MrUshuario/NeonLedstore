@@ -2,15 +2,15 @@
 
 namespace Controllers;
 
-use Model\Cliente;
+use Model\Compra;
 use MVC\Router;
 
-class ClienteController {
+class CompraController {
 
-    public static function index (Router $router){
+    public static function Compra (Router $router){
 
 
-        $router->render("dashboard/cliente",[]);
+        $router->render("dashboard/compra",[]);
     }
 
     public static function listar(Router $router){
@@ -67,6 +67,7 @@ class ClienteController {
             $json = json_encode([
                 "data"=>$cliente
             ]);
+            
             echo $json;
         }
     }

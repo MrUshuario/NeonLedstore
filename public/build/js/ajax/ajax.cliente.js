@@ -155,7 +155,6 @@ function obtenerData() {
         $("#cli_apellidos").val(data.cli_apellidos);
         $("#cli_email").val(data.cli_email)
         $("#cli_clave").val(data.cli_clave)
-        $("#cli_token").val(data.token)
         $("#cli_estado").val(data.cli_estado)
       },
     });

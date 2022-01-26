@@ -15,28 +15,36 @@ class CategoriaController
         $router->render('dashboard/categoria', []);
     }
 
-    public static function crear()
-    {
-        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    public static function create(Router $router){
+        if($_SERVER["REQUEST_METHOD"] == "POST"){
             $categoria = new Categoria($_POST);
-
-            $nombreImg = md5(uniqid(rand(), true)) . ".webp";
-
-            if ($_FILES['cat_imagen']['tmp_name']) {
-                $image = Image::make($_FILES['cat_imagen']['tmp_name'])->fit(800, 600);
-                $categoria->setImagen($nombreImg);
+            $verificarNombre = $categoria->verificarNombre();
+            if ($verificarNombre->num_rows == 0) {
+                $resultado = $categoria->crear(); 
+                
+                if($resultado) {
+                    $listado = Categoria::listar();
+                    $json = json_encode([
+                        "STATUS"=>1,
+                        "mensaje"=>"Registro Correcto",
+                        "listas"=>$listado,
+                        "c"=>$categoria
+                    ]);
+                }  else {
+                    $json = json_encode([
+                        "STATUS"=>2,
+                        "mensaje"=>"Error al registrar"
+                    ]);
+                } // habria un tercer caso con no se puede borrar padres
             }
-
-            if (!is_dir(CARPETA_IMAGENES)) {
-                mkdir(CARPETA_IMAGENES);
+            //ya existe
+            else {
+                $json = json_encode ([
+                    "STATUS"=>2,
+                    "mensaje"=>"Esta categoria ya existe!!!",
+                    "c"=>$categoria
+                ]);   
             }
-
-            $image->save(CARPETA_IMAGENES . $nombreImg);
-            $resultado = $categoria->crear();
-
-            $json = json_encode([
-                'res' => $categoria
-            ]);
             echo $json;
         }
     }
@@ -75,8 +83,7 @@ class CategoriaController
         }
     }
 
-    public static function getCategoria()
-    {
+    public static function getCategoria(){
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $id = $_POST['id'];
             $id = filter_var($id, FILTER_VALIDATE_INT);
