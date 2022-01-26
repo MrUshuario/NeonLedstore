@@ -1,7 +1,6 @@
 <div class="landingPage bg-black">
 
-  <!--INICIA CARRUSEL lAYOUTpRINCIPAL.php, AGREGAR LOS SCRIPT NECESARIO PARA QUE FUNCIONES, SI SUBES UN NUEVO SCRIPT, PUBLIC/BUILD/JS 
-    https://www.youtube.com/watch?v=N7JXmnaVWL0&t=269s-->
+  <!--INICIO CARRUSEL Bootstrap 5-->
     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -27,8 +26,8 @@
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Next</span>
   </button>
-</div>
-<br>
+    </div>
+    <br>
   <!--FINAL DEL CARRUSEL-->
 
 
