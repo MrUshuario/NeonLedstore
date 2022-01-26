@@ -26,13 +26,13 @@ class CompraDetalle extends ActiveRecord {
 
         $this->id = $args['id'] ?? null;
 
-        $this->cli_nombre = $args['cod_id'] ?? null;
+        $this->cod_id = $args['cod_id'] ?? null;
 
-        $this->cli_apellidos = $args['pro_id'] ?? null;
+        $this->pro_id = $args['pro_id'] ?? null;
 
-        $this->cli_email = $args['det_cantidad'] ?? null;
+        $this->det_cantidad = $args['det_cantidad'] ?? null;
 
-        $this->cli_clave = $args['det_color' ] ?? null;
+        $this->det_color = $args['det_color' ] ?? null;
 
     }
 
