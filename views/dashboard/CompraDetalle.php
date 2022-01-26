@@ -22,7 +22,9 @@
 
                     <th>Codigo detalle</th>
 
-					<th>Codigo compra</th>                    <th>Producto ID</th>
+					<th>Codigo compra</th> 
+                    
+                    <th>Producto ID</th>
 
                     <th>Detalle compra </th>
 

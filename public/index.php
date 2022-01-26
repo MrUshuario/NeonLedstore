@@ -12,6 +12,7 @@ use Controllers\PrincipalController;
 use Controllers\ProductoColorController; //borar
 use Controllers\GraficosController;
 use Controllers\ConfiguracionController;
+use Controllers\CompraController;
 use MVC\Router;
 
 $router = new Router();
@@ -23,8 +24,12 @@ $router = new Router();
 // Zona Privada
     $router->post('/login/verificar',[AdminController::class,'index1']);
 
+    //Compra 
+    $router->get('/compra',[CompraController::class,'Compra']);
+
 //Compra DETALLE
     $router->get('/compraDetalle',[CompraDetalleController::class,'CompraDetalle']);
+
 //Color 
 /*
     // method get
@@ -57,7 +62,7 @@ $router = new Router();
     $router->get('/categoria/listar',[CategoriaController::class, 'listados']);
 
     // method post
-    $router->post('/categoria/crear',[CategoriaController::class, 'crear']);
+    $router->post('/categoria/crear',[CategoriaController::class, 'create']);
     $router->post('/categoria/estado',[CategoriaController::class,'cambiarEstado']);
     $router->post('/categoria/getCategoria',[CategoriaController::class,'getCategoria']);
     $router->post('/categoria/actualizar',[CategoriaController::class,'actualizar']);

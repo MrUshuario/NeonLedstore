@@ -6,59 +6,36 @@ use Model\ActiveRecord;
 
 class Categoria extends ActiveRecord{
 
-    protected static $tabla = 'tab_categorias';
-    protected static $columnaDB   = ['id','cat_nombre','cat_imagen','cat_link','cat_estado'];
+    protected static $tabla = 'tab_categoria';
+    protected static $columnaDB   = ['id','cat_nombre','cat_activo'];
 
     public $id; 
     public $cat_nombre;
-    public $cat_imagen;
-    public $cat_link;
-    public $cat_estado;
+    public $cat_activo;
 
     public function __construct ($args = []){
         $this->id = $args['id'] ?? null;
         $this->cat_nombre = $args['cat_nombre'] ?? null;
-        $this->cat_imagen = $args['cat_imagen'] ?? null;
-        $this->cat_link = $args['cat_link'] ?? null;
-        $this->cat_estado = $args['cat_estado'] ?? null;
+        $this->cat_activo = $args['cat_activo'] ?? null;
     }
-
-    public function setImagen($img){
-        //Eliminar la imagen previa al editar o eliminar
-        if(!is_null($this->id)){
-            $this->borrarImagen();
-        }
-
-        //Asignar al atributo de imagen el nombre de la imagen
-        if($img){
-            $this->cat_imagen = $img;
-        }
-    }
-
-    public function borrarImagen(){
-        //Comprobar si existe el archivo
-        $existArchivo = file_exists(CARPETA_IMAGENES.$this->cat_imagen);
-        if($existArchivo){
-            // unlink(CARPETA_IMAGENES.$this->cat_imagen);
-            return $this->cat_imagen;
-        }
-    }
-
+    
     public function actualizarEstado(){
-        $query = "UPDATE ".static::$tabla." SET cat_estado = '".$this->cat_estado."' where id =".$this->id." limit 1";
+        $query = "UPDATE ".static::$tabla." SET cat_activo = '".$this->cat_activo."' where id =".$this->id;
         $resultado = self::$db->query($query);
         return $resultado;
     }
 
-    public function actualizarSinImg(){   
-        $query = "UPDATE ".static::$tabla." SET cat_nombre= '".$this->cat_nombre."', cat_link='".$this->cat_link."', cat_estado='".$this->cat_estado."' WHERE id=".$this->id." limit 1";
+    public function verificarNombre(){
+        $query = "SELECT * FROM ".static::$tabla." WHERE cat_nombre='".$this->cat_nombre."'";
         $resultado = self::$db->query($query);
         return $resultado;
     }
 
+/* no sirve
     public static function listarNombre($nombre) {
         $query = "SELECT * FROM ".static::$tabla. " WHERE cat_nombre like '%".$nombre."%'";
         $resultado = static::consultarSQL($query);
         return $resultado;
     }
+*/
 }

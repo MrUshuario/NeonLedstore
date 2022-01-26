@@ -24,13 +24,11 @@
 
                 <tr>
 
-                    <th>Id</th>
-
                     <th>Nombre</th>
 
                     <th>estado</th>
 
-                    <th></th>
+                    <th>Editar/borrar</th>
 
                 </tr>
 
@@ -78,15 +76,15 @@
 
                     <div class="mb-3">
 
-                        <label for="cat_estado">Estado</label>
+                        <label for="cat_activo">Estado</label>
 
-                        <select id="cat_estado" class="form-control">
+                        <select id="cat_activo" class="form-control">
 
                             <option value="">--SELECCIONE--</option>
 
-                            <option value="ACTIVO">Activo</option>
+                            <option value="1">Activo</option>
 
-                            <option value="INACTIVO">Inactivo</option>
+                            <option value="0">Inactivo</option>
 
                         </select>
 

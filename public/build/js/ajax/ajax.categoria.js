@@ -1,4 +1,11 @@
-const img = document.querySelector("#img");
+$(document).ready(function () {
+  tablaCategoria();
+  cleanButton();
+  obtenerData();
+  cleanButton();
+  updateStatus();
+  saveCategoria();
+});
 
 function createCategoria(formData) {
   $.ajax({
@@ -8,19 +15,24 @@ function createCategoria(formData) {
     processData: false, // tell jQuery not to process the data
     contentType: false,
     success: function (resp) {
-      let { res } = JSON.parse(resp);
-      if (res) {
+      let res = JSON.parse(resp);
+      console.log(res);
+      switch (res.STATUS) {
+      case 2:
+        swal({
+          title: res.mensaje,
+          icon: "error",
+        });
+        break;
+      
+      case 1:
         $("#modalCategoria").modal("hide");
         tablaCategoria();
         swal({
-          title: "Registro completo",
+          title: res.mensaje,
           icon: "success",
         });
-      } else {
-        swal({
-          title: "Error en el registro",
-          icon: "error",
-        });
+        break;
       }
     },
   });
@@ -49,34 +61,23 @@ function saveCategoria() {
     e.preventDefault();
     //Variables del formulario
     let id = $("#id").val();
-    let nombre = $("#cat_nombre").val().trim();
-    let imagen = $("#cat_imagen")[0].files[0];
-    let link = $("#cat_link").val().trim();
-    let estado = $("#cat_estado").val().trim();
+    let cat_nombre = $("#cat_nombre").val();
+    let cat_activo = $("#cat_activo").val();
 
     const formData = new FormData();
-    formData.append("cat_nombre", nombre);
-    formData.append("cat_imagen", imagen);
-    formData.append("cat_link", link);
-    formData.append("cat_estado", estado);
+    formData.append("cat_nombre", cat_nombre);
+    formData.append("cat_activo", cat_activo);
 
     if (id == "") {
-      if (
-        imagen == undefined ||
-        nombre === "" ||
-        link === "" ||
-        estado == null
-      ) {
+      if (cat_nombre == "" || cat_activo == "") {
         swal({
           title: "Completar los campos requeridos",
           icon: "error",
         });
         const data = {
           id,
-          nombre,
-          imagen,
-          link,
-          estado,
+          cat_nombre,
+          cat_activo,
         };
         console.log(data);
       } else {
@@ -151,25 +152,11 @@ function tablaCategoria() {
       url: "/categoria/listar",
     },
     columns: [
-      {
-        data: null,
-        render: function (data, type, row) {
-          return `<img width="160px" src="imagenes/${data.cat_imagen}" id="imgrow">`;
-        },
-      },
-      { data: "cat_nombre" },
-      { data: "cat_link" },
-      {
-        data: null,
-        render: function (data, type, row) {
-          
-          return `<input type="button" id="btnEstado" class="btn ${
-            data.cat_estado.toLowerCase() == "activo"
-              ? "btn-success"
-              : "btn-danger"
-          }" data-id="${data.id}" value="${data.cat_estado.toUpperCase()}">`;
-        },
-      },
+      {data:  "cat_nombre"},
+      {data:  null,
+        render: function(data, type, row){
+          return `<button data-idcliente="${data.id}" class="btn ${data.cat_activo == "1"? 'btn-success' : 'btn-danger'}" id="btnEstado">${data.cat_activo}</button>`;
+        }},
       {
         data: null,
         render: function (data, type, row) {
@@ -192,17 +179,11 @@ function obtenerData() {
       data: data,
       type: "POST",
       success: function (e) {
+        console.log(e); 
         const { data } = JSON.parse(e);
-
         $("#id").val(data.id);
         $("#cat_nombre").val(data.cat_nombre);
-        $("#cat_link").val(data.cat_link);
-        $("#cat_estado").val(data.cat_estado);
-
-        // Poner las imagenes
-        img.src = `/imagenes/${data.cat_imagen}`;
-        img.width = 150;
-        img.height = 150;
+        $("#cat_activo").val(data.cat_activo);
       },
     });
   });
@@ -211,11 +192,7 @@ function obtenerData() {
 function clean() {
   $("#id").val("");
   $("#cat_nombre").val("");
-  $("#cat_link").val("");
-  $("#cat_estado").val("");
-  img.src = "";
-  img.width = 0;
-  img.height = 0;
+  $("#cat_activo").val("");
 }
 
 function deleteButton() {
@@ -240,11 +217,4 @@ function cleanButton() {
   });
 }
 
-$(document).ready(function () {
-  tablaCategoria();
-  cleanButton();
-  obtenerData();
-  cleanButton();
-  updateStatus();
-  saveCategoria();
-});
+
