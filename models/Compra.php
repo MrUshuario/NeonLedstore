@@ -7,10 +7,10 @@ use Model\ActiveRecord;
 //aun no hecho
 class Compra extends ActiveRecord {
     protected static $tabla = "tab_compra";
-    protected static $columnaDB = ['cod_com', 'comp_fecha ', 'precio_total ', 'cli_id'];
+    protected static $columnaDB = ['id', 'com_fecha ', 'precio_total ', 'cli_id'];
 
-    public $cod_com;
-    public $comp_fecha;
+    public $id;
+    public $com_fecha;
     public $precio_total;
     public $cli_id;
     
@@ -18,10 +18,10 @@ class Compra extends ActiveRecord {
 
     public function __construct($args = [])
     {
-        $this->id = $args['cod_com '] ?? null;
-        $this->cli_nombre = $args['comp_fecha '] ?? null;
-        $this->cli_apellidos = $args['precio_total '] ?? null;
-        $this->cli_email = $args['cli_id'] ?? null;
+        $this->id = $args['id '] ?? null;
+        $this->com_fecha = $args['com_fecha '] ?? null;
+        $this->precio_total = $args['precio_total '] ?? null;
+        $this->cli_id = $args['cli_id'] ?? null;
   }
     
     public function verificarCompra(){
