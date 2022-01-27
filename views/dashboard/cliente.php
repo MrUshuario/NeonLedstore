@@ -37,14 +37,8 @@
                 <h5 class="modal-title" id="title">Guardar Cliente</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="cerrar"></button>
             </div>
- <-- ./BOTÓN DE EDITAR Y ELIMINAR -->
-
-<button type="button" id="btnModificar" class="btn btn-success">Modificar</button>
-
-          <button type="button" id="btnBorrar" class="btn btn-danger">Borrar</button>
-
-
-          
+ 
+        
             <div class="modal-body">
                 <form id="formCliente" enctype="multipart/form-data">
                     <input type="hidden" id="id">
