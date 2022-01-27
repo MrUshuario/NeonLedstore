@@ -5,7 +5,9 @@ $(document).ready(function () {
   cleanButton();
   updateStatus();
   saveCategoria();
+  deleteButton();
 });
+
 
 function createCategoria(formData) {
   $.ajax({
@@ -46,6 +48,7 @@ function updateCategoria(formData) {
     processData: false,
     contentType: false,
     success: function (response) {
+      console.log(response);
       let json = JSON.parse(response);
       const { resp, cat } = json;
       if (resp) {
@@ -133,7 +136,7 @@ function deleteCategoria(id) {
           title: "Se elimino correctamente la categoria",
           icon: "success",
         });
-        llenarTabla();
+        tablaCategoria();
       } else {
         swal({
           title: "No se pudo eliminar, al estar alineado con otro datos",
@@ -179,7 +182,7 @@ function obtenerData() {
       data: data,
       type: "POST",
       success: function (e) {
-        console.log(e); 
+        console.log(e);  // borrar al terminar
         const { data } = JSON.parse(e);
         $("#id").val(data.id);
         $("#cat_nombre").val(data.cat_nombre);

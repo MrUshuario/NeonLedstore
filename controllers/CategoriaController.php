@@ -98,30 +98,14 @@ class CategoriaController
 
     public static function actualizar()
     {
-        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $categoria = Categoria::find($_POST['id']);
             $categoria->sincronizar($_POST);
 
-            $nombreImg = md5(uniqid(rand(), true)) . ".webp";
-
-            if($categoria->cat_imagen !== 'undefined'){
-                if ($_FILES['cat_imagen']['tmp_name'] ) {
-                    $image = Image::make($_FILES['cat_imagen']['tmp_name'])->fit(800, 600);
-                    $categoria->setImagen($nombreImg);
-                }
-    
-                if ($_FILES['cat_imagen']['tmp_name']) {
-                    $image->save(CARPETA_IMAGENES . $nombreImg);
-                }
-                
-                $resultado = $categoria->actualizar();
-            }else {
-                $resultado = $categoria->actualizarSinImg();
-            }            
-            
+            $resultado = $categoria->actualizar();
+          
             echo json_encode([
                 "resp" => $resultado,
-                "img"=> $_POST
             ]);;
         }
         
@@ -134,9 +118,6 @@ class CategoriaController
 
             $categoria = Categoria::find($id);
             $resultado = $categoria->eliminar();
-            if($resultado){
-                $categoria->borrarImagen();
-            }
             
             echo json_encode([
                 "res"=>$resultado
