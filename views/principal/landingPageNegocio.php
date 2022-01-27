@@ -89,7 +89,7 @@
 <!--LandingPageNegocio-->
             <div class="landin1 arreglo">
 
-                <h1 class="title">¡TE MOSTRAMOS LOS MEJORES DISEÑOS!</h1>
+                <h1 class="title">¡LOS MEJORES DISEÑOS PARA NEGOCIOS!</h1>
 
                     <div class="container">
 
@@ -158,7 +158,7 @@
 
                 <div class="col-12 col-sm-4 my-3 my-sm-5">
 
-                    <img class="personalizadoImage mx-auto d-block" src="/build/img/hotAndFresh.webp" alt="logo" loading="lazy">
+                    <img class="personalizadoImage mx-auto d-block" src="/build/img/delivery.webp" alt="logo" loading="lazy">
 
                     <p class="deliveryParagraph border border-5 rounded-3 text-center m-3 py-3 px-5 lh-sm">Delivery gratis a todos los distritos de Lima y Provincia</p>
 
@@ -168,7 +168,7 @@
 
                     <div class="row">
 
-                        <img class="personalizadoImage cocktails mx-auto d-block" src="/build/img/cocktails.webp" alt="logo" loading="lazy">   
+                        <img class="personalizadoImage precio mx-auto d-block" src="/build/img/precio.webp" alt="logo" loading="lazy">   
 
                     </div>
 
