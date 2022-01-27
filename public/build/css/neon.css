@@ -182,4 +182,18 @@
     }
 }
 
+.btnmorado{
+    display: block;
+    width: 100px;
+    height: 40px;
+    text-align: center;
+    padding-top: 5px;
+    margin: auto;
+    border-radius: 10px;
+}
 
+.btnmorado:hover{
+    background: #a945c7;
+    box-shadow: 0 0 5px #a945c7, 0 0 8px
+    #a945c7, 0 0 15px #a945c7;
+}

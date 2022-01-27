@@ -15,7 +15,7 @@
                 <img class="w-100 h-100 img-cover" width="100%"  src="/build/img/5.webp" alt="IT WAS ALL A DREAM en luces de neon">
                 </div>
                 <div class="col-lg-3"  style="width: 22.5em; height: 450px;">
-                <img class="w-100 h-100 img-cover " width="100%"  src="/build/src/img/7.webp" alt="ALL WE HAVE IS NOW en luces de neon">
+                <img class="w-100 h-100 img-cover " width="100%"  src="/build/img/guitarra.webp" alt="ALL WE HAVE IS NOW en luces de neon">
                 </div>
                 <div class="col-lg-3"  style="width: 22.5em; height: 450px;">
                 <img class="w-100 h-100 img-cover" width="100%"  src="/build/img/9.webp" alt="Slim�0�7s">
@@ -24,7 +24,6 @@
         </div>
     </section>
 
-    <button class="button-contact col-6 btn m-2 mx-auto d-block neonbotton neontabla" type="submit" name="enviar" id="enviar">Enviar</button>
     <section class="bg-black text-white pb-5">
         <div class="container">
             <article class="p-1 mb-5">
@@ -37,7 +36,7 @@
                     <h3>NEON DESIGN</h3>
                 </div>
                 <div class="col-lg-3 text-center w-50"  style="height: auto;">
-                    <a href="/productos/" class="text-white px-3 boton-ver_mas btn-animation rounded-medium ">VER MAS</a>
+                    <a href="/productos" class="text-white px-3 boton-ver_mas btn-animation rounded-medium ">VER MAS</a>
                 </div>
             </div>
             

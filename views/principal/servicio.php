@@ -41,7 +41,7 @@
 
             </div>
             <div class="pt-3 pb-3">
-            <a href="/landingPageHogar" class="btn weight-bolder text-white bg-primary-button"  style="width: 100%; font-size: larger;">Ver Diseños</a>
+            <a href="/landingPageHogar" class="btnmorado weight-bolder text-white bg-primary-button"  style="width: 100%; font-size: larger;">Ver Diseños</a>
             </div>
         </div>
         <div class="col-lg-3" style="width: 22.5em; height: 450px;">
@@ -55,7 +55,7 @@
 
             </div>
             <div class="pt-3 pb-3">
-            <a href="/landingPageEvento" class="btn weight-bolder text-white bg-primary-button"  style="width: 100%;  font-size: larger;">Ver Diseños</a>
+            <a href="/landingPageEvento" class="btnmorado weight-bolder text-white bg-primary-button"  style="width: 100%;  font-size: larger;">Ver Diseños</a>
             </div>
         </div>
         <div class="col-lg-3" style="width: 22.5em; height: 450px;">
@@ -67,7 +67,7 @@
 
             </div>
             <div class="pt-3 pb-3">
-                <a href="/landingPageNegocio" class="btn weight-bolder text-white bg-primary-button"  style="width: 100%;  font-size: larger;">Ver Diseños</a>
+                <a href="/landingPageNegocio" class="btnmorado weight-bolder text-white bg-primary-button"  style="width: 100%;  font-size: larger;">Ver Diseños</a>
             </div>
         </div>
     </div>
