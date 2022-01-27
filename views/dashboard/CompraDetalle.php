@@ -30,7 +30,7 @@
 
                     <th>Detalle color </th>
 	
-               <th> Editar/ Eliminar </th>
+               
 
                 </thead>
 
