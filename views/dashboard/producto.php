@@ -20,6 +20,7 @@
                     <th>Imagen </th>
                     <th>Tamaño </th>
                     <th>Estado </th>
+                    <th>Editar/Eliminar </th>
                 </tr>
             </thead>
             <tbody>
