@@ -104,7 +104,7 @@ CREATE TABLE `tab_producto` (
   `id` int NOT NULL,
   `cat_id` tinyint DEFAULT NULL,
   `pro_nombre` varchar(100) DEFAULT NULL,
-  `pro_descrpcion` varchar(255) DEFAULT NULL,
+  `pro_descripcion` varchar(255) DEFAULT NULL,
   `pro_precio` float DEFAULT NULL,
   `pro_tamaño` varchar(20) DEFAULT NULL,
   `pro_activo` char(1) DEFAULT NULL
