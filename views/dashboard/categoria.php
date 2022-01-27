@@ -63,7 +63,11 @@
                 <form id="formCategoria" enctype="multipart/form-data" class="color-dark">
 
                     <input type="hidden" id="id">
+<button type="button" id="btnModificar" class="btn btn-success">Modificar</button>
 
+          <button type="button" id="btnBorrar" class="btn btn-success">Borrar</button>
+
+          
                     <div class="mb-3">
 
                         <label for="nombre">Nombre de categora</label>
