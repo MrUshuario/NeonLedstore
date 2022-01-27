@@ -63,8 +63,7 @@
                 <form id="formCategoria" enctype="multipart/form-data" class="color-dark">
 
                     <input type="hidden" id="id">
-                    
-                    - - BOTÓN EDITAR Y ELIMINAR - - 
+                    <-- ./BOTÓN DE EDITAR Y ELIMINAR -->
 <button type="button" id="btnModificar" class="btn btn-success">Modificar</button>
 
           <button type="button" id="btnBorrar" class="btn btn-danger">Borrar</button>
