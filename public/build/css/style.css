@@ -788,6 +788,7 @@ a {
 
 }
 
+/* interrumpe a un div pagination de otra pagina
 .pagination{
 
     position: absolute;
@@ -806,7 +807,7 @@ a {
 
     width: 100%;
 
-}
+} */
 
 .pag-item{
 
