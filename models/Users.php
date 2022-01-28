@@ -6,18 +6,18 @@ use Model\ActiveRecord;
 
 class Users extends ActiveRecord{
     protected static $tabla ="tab_user";
-    protected static $columnaDB = ['id','user','pass','role'];
+    protected static $columnaDB = ['id','user','pass'];
 
     public $id;
     public $user;
     public $pass;
-    public $role;
+    
 
     public function __construct($args=[]){
         $this->id = $args['id'] ?? null;
         $this->user = $args['user'] ?? null;
         $this->pass = $args['pass'] ?? null;
-        $this->role = $args['role'] ?? null;
+        
     }
 
     public function login(){

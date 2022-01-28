@@ -237,6 +237,9 @@ ALTER TABLE `tab_compra_detalle`
 --
 ALTER TABLE `tab_producto`
   ADD CONSTRAINT `fk_cat_id` FOREIGN KEY (`cat_id`) REFERENCES `tab_categoria` (`id`);
+
+ALTER TABLE `tab_producto` ADD `pro_imagen` FLOAT NOT NULL ;
+
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

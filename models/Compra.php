@@ -5,37 +5,30 @@ namespace Model;
 use Model\ActiveRecord;
 
 //aun no hecho
-class Cliente extends ActiveRecord {
-    protected static $tabla = "tab_cliente";
-    protected static $columnaDB = ['id', 'cli_nombre', 'cli_apellidos', 'cli_email', 'cli_clave', 'cli_estado'];
+class Compra extends ActiveRecord {
+    protected static $tabla = "tab_compra";
+    protected static $columnaDB = ['id', 'com_fecha ', 'precio_total ', 'cli_id'];
 
     public $id;
-    public $cli_nombre;
-    public $cli_apellidos;
-    public $cli_email;
-    public $cli_clave;
-    public $cli_estado;
+    public $com_fecha;
+    public $precio_total;
+    public $cli_id;
+    
+    
 
     public function __construct($args = [])
     {
-        $this->id = $args['id'] ?? null;
-        $this->cli_nombre = $args['cli_nombre'] ?? null;
-        $this->cli_apellidos = $args['cli_apellidos'] ?? null;
-        $this->cli_email = $args['cli_email'] ?? null;
-        $this->cli_clave = $args['cli_clave'] ?? null;
-        $this->cli_estado = $args['cli_estado'] ?? null;
-    }
+        $this->id = $args['id '] ?? null;
+        $this->com_fecha = $args['com_fecha '] ?? null;
+        $this->precio_total = $args['precio_total '] ?? null;
+        $this->cli_id = $args['cli_id'] ?? null;
+  }
     
-    public function verificarCorreo(){
-        $query = "SELECT * FROM ".static::$tabla." WHERE cli_email='".$this->cli_email."'";
+    public function verificarCompra(){
+        $query = "SELECT * FROM ".static::$tabla." WHERE cli_id ='".$this->cli_id."'";
         $resultado = self::$db->query($query);
         return $resultado;
     }
     
-    public function editEstado()
-    {
-        $query = "UPDATE " . static::$tabla . " SET cli_estado='" . $this->cli_estado . "' WHERE id=" . $this->id;
-        $resultado = self::$db->query($query);
-        return $resultado;
-    }
+  
 }
