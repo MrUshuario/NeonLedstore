@@ -16,7 +16,7 @@
                     <th>Categoria</th>
                     <th>Nombre </th>
                     <th>Descripción </th>
-                    <th>Precio </th>
+                    <th>Precio (s/) </th>
                     <th>Imagen </th>
                     <th>Tamaño </th>
                     <th>Estado </th>
