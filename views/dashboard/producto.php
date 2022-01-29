@@ -13,7 +13,7 @@
         <table class="table table-purple table-striped table-hover  w-100 table-light table-fixed" id="tablaproducto">
             <thead class="table-dark sticky">
                 <tr>
-                    <th>Categoria</th>
+                    <th> Nombre Categoría </th>
                     <th>Nombre </th>
                     <th>Descripción </th>
                     <th>Precio (s/) </th>
