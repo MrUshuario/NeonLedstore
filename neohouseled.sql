@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3306
--- Tiempo de generación: 26-01-2022 a las 17:08:57
+-- Tiempo de generación: 29-01-2022 a las 01:00:10
 -- Versión del servidor: 8.0.28
 -- Versión de PHP: 7.4.3
 
@@ -104,11 +104,34 @@ CREATE TABLE `tab_producto` (
   `id` int NOT NULL,
   `cat_id` tinyint DEFAULT NULL,
   `pro_nombre` varchar(100) DEFAULT NULL,
-  `pro_descripcion` varchar(255) DEFAULT NULL,
+  `pro_descripcion` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
   `pro_precio` float DEFAULT NULL,
   `pro_tamaño` varchar(20) DEFAULT NULL,
+<<<<<<< HEAD:neohouseled.sql
   `pro_activo` char(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 
+=======
+  `pro_activo` char(1) DEFAULT NULL,
+  `pro_imagen` float DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+>>>>>>> 4374351dcc91940417f47b4d321b4cc5e3fc6599:neohouse.sql
+
+--
+-- Volcado de datos para la tabla `tab_producto`
+--
+
+INSERT INTO `tab_producto` (`id`, `cat_id`, `pro_nombre`, `pro_descripcion`, `pro_precio`, `pro_tamaño`, `pro_activo`, `pro_imagen`) VALUES
+(1, 3, 'Corazones de angel y diablo', 'Corazones de angel y diablo de neón', 349, '30cmX40cm', '1', NULL),
+(2, 3, 'Diamante ', 'Diamante en neón ', 239, '30cmX40cm', '1', NULL),
+(3, 2, 'DO NOT ENTER', 'Letrero de DO NOT ENTER en neón ', 339, '40cmX40cm', '1', NULL),
+(4, 1, 'Flamenco ', 'Flamenco en neón ', 299, '40cmX40cm', '1', NULL),
+(5, 3, 'Boca ', 'Flamenco en neón ', 289, '40cmX25cm', '1', NULL),
+(6, 3, 'Labios ', 'Labios en neón ', 259, '40cmX20cm', '1', NULL),
+(8, 2, 'TIK TOK', 'Letrero TIK TOK en neón ', 349, '35cmX30cm', '1', NULL),
+(9, 2, 'LOVE X3', 'Letrero LOVEX3 en neón ', 329, '30cmX30cm', '1', NULL),
+(10, 3, 'OJOS', 'Letrero OJOS  en neón ', 299, '40cmX30cm', '1', NULL),
+(11, 3, 'PESTAÑAS', 'Letrero de PESTAÑAS  en neón ', 229, '40cmX20cm', '1', NULL),
+(12, 3, 'HELADO', 'Paleta de helado en neón ', 219, '30cmX20cm', '1', NULL);
 
 -- --------------------------------------------------------
 
@@ -127,9 +150,13 @@ CREATE TABLE `tab_user` (
 --
 
 INSERT INTO `tab_user` (`id`, `user`, `pass`) VALUES
+<<<<<<< HEAD:neohouseled.sql
 (1, 'adminNLS', '$2y$10$LgeWXAVuGEPOgd5LCSg.A.YF/PoSVhPBpTX4P9MApwRR6axty84dK'),
 (2, 'isabellam.montoya.im@gmail.com', 'd84cb4c8d90f9f7429db81ef5ae58a7c'),
 (3, '18100102@ue.edu.pe', 'c71fc34d162fe4d62d8d4e86ecf132b3');
+=======
+(1, 'adminNLS', '659454c72935a37772189b6f4a25d72b'),
+>>>>>>> 4374351dcc91940417f47b4d321b4cc5e3fc6599:neohouse.sql
 
 --
 -- Índices para tablas volcadas
@@ -207,7 +234,7 @@ ALTER TABLE `tab_compra_detalle`
 -- AUTO_INCREMENT de la tabla `tab_producto`
 --
 ALTER TABLE `tab_producto`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT de la tabla `tab_user`
@@ -237,9 +264,6 @@ ALTER TABLE `tab_compra_detalle`
 --
 ALTER TABLE `tab_producto`
   ADD CONSTRAINT `fk_cat_id` FOREIGN KEY (`cat_id`) REFERENCES `tab_categoria` (`id`);
-
-ALTER TABLE `tab_producto` ADD `pro_imagen` FLOAT NOT NULL ;
-
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
