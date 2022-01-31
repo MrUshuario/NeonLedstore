@@ -77,8 +77,14 @@ CREATE TABLE `tab_compra` (
   `id` int NOT NULL,
   `com_fecha` datetime DEFAULT NULL,
   `precio_total` float DEFAULT NULL,
+<<<<<<< HEAD
   `cli_id` int DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 
+=======
+  `cli_id` int DEFAULT NULL, 
+  `estado` varchar(20) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+>>>>>>> bfeb8e6c353ed2c7feacb35f73217eff3f647376
 
 -- --------------------------------------------------------
 
@@ -106,7 +112,7 @@ CREATE TABLE `tab_producto` (
   `pro_nombre` varchar(100) DEFAULT NULL,
   `pro_descripcion` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
   `pro_precio` float DEFAULT NULL,
-  `pro_tamaño` varchar(20) DEFAULT NULL,
+  `pro_tamano` varchar(20) DEFAULT NULL,
   `pro_activo` char(1) DEFAULT NULL,
   `pro_imagen` float DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
@@ -115,7 +121,7 @@ CREATE TABLE `tab_producto` (
 -- Volcado de datos para la tabla `tab_producto`
 --
 
-INSERT INTO `tab_producto` (`id`, `cat_id`, `pro_nombre`, `pro_descripcion`, `pro_precio`, `pro_tamaño`, `pro_activo`, `pro_imagen`) VALUES
+INSERT INTO `tab_producto` (`id`, `cat_id`, `pro_nombre`, `pro_descripcion`, `pro_precio`, `pro_tamano`, `pro_activo`, `pro_imagen`) VALUES
 (1, 3, 'Corazones de angel y diablo', 'Corazones de angel y diablo de neón', 349, '30cmX40cm', '1', NULL),
 (2, 3, 'Diamante ', 'Diamante en neón ', 239, '30cmX40cm', '1', NULL),
 (3, 2, 'DO NOT ENTER', 'Letrero de DO NOT ENTER en neón ', 339, '40cmX40cm', '1', NULL),
