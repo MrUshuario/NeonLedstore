@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `neohouse`
+-- Base de datos: `neohouseled`
 --
 
 -- --------------------------------------------------------
@@ -31,7 +31,7 @@ CREATE TABLE `tab_categoria` (
   `id` tinyint NOT NULL,
   `cat_nombre` varchar(40) NOT NULL,
   `cat_activo` char(1) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 
 
 --
 -- Volcado de datos para la tabla `tab_categoria`
@@ -56,7 +56,7 @@ CREATE TABLE `tab_cliente` (
   `cli_email` varchar(120) DEFAULT NULL,
   `cli_clave` varchar(255) DEFAULT NULL,
   `cli_estado` char(1) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 
 
 --
 -- Volcado de datos para la tabla `tab_cliente`
@@ -78,7 +78,7 @@ CREATE TABLE `tab_compra` (
   `com_fecha` datetime DEFAULT NULL,
   `precio_total` float DEFAULT NULL,
   `cli_id` int DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 
 
 -- --------------------------------------------------------
 
@@ -92,7 +92,7 @@ CREATE TABLE `tab_compra_detalle` (
   `pro_id` int DEFAULT NULL,
   `det_cantidad` int DEFAULT NULL,
   `det_color` varchar(30) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 
 
 -- --------------------------------------------------------
 
@@ -108,7 +108,7 @@ CREATE TABLE `tab_producto` (
   `pro_precio` float DEFAULT NULL,
   `pro_tamaño` varchar(20) DEFAULT NULL,
   `pro_activo` char(1) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 
 
 -- --------------------------------------------------------
 
@@ -120,14 +120,14 @@ CREATE TABLE `tab_user` (
   `id` int NOT NULL,
   `user` varchar(125) NOT NULL,
   `pass` varchar(250) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 
 
 --
 -- Volcado de datos para la tabla `tab_user`
 --
 
 INSERT INTO `tab_user` (`id`, `user`, `pass`) VALUES
-(1, 'adminNLS', '659454c72935a37772189b6f4a25d72b'),
+(1, 'adminNLS', '$2y$10$LgeWXAVuGEPOgd5LCSg.A.YF/PoSVhPBpTX4P9MApwRR6axty84dK'),
 (2, 'isabellam.montoya.im@gmail.com', 'd84cb4c8d90f9f7429db81ef5ae58a7c'),
 (3, '18100102@ue.edu.pe', 'c71fc34d162fe4d62d8d4e86ecf132b3');
 

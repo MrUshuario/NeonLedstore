@@ -66,19 +66,19 @@ class CategoriaController
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $categoria = new Categoria($_POST);
 
-        if ($categoria->cat_estado == "ACTIVO") {
+        if ($categoria->cat_activo == 1) {
 
-            $categoria->cat_estado = "INACTIVO";
+            $categoria->cat_activo = 0;
             $resultado = $categoria->actualizarEstado();
 
         } else {
-            $categoria->cat_estado = "ACTIVO";
+            $categoria->cat_activo = 1;
             $resultado = $categoria->actualizarEstado();
         }
         
         echo json_encode([
             "bool" => $resultado,
-            "cat_estado" =>  $categoria->cat_estado
+            "cat_activo" =>  $categoria->cat_activo
         ]);
         }
     }

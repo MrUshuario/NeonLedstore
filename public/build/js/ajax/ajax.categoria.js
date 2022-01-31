@@ -95,11 +95,11 @@ function saveCategoria() {
 
 function updateStatus() {
   $(document).on("click", "#btnEstado", (e) => {
-    let id = e.target.dataset.id;
+    let id = e.target.dataset.idcategoria;
     let value = e.target.value;
     const data = {
       id: id,
-      cat_estado: value,
+      cat_activo: value,
     };
     console.log(data); // borrar luego
     $.ajax({
@@ -108,11 +108,11 @@ function updateStatus() {
       data: data,
       success: (resp) => {
         const json = JSON.parse(resp);
-        const { cat_estado, resultado } = json;
-        console.log(cat_estado);
+        const { cat_activo, resultado } = json;
+        console.log(cat_activo);
         e.target.value = json.estado;
-        if (cat_estado == "ACTIVO") {
-          e.target.value=cat_estado
+        if (cat_activo == 1) {
+          e.target.value=cat_activo
           e.target.classList.remove("btn-danger");
           e.target.classList.add("btn-success");
         } else {
@@ -158,7 +158,7 @@ function tablaCategoria() {
       {data:  "cat_nombre"},
       {data:  null,
         render: function(data, type, row){
-          return `<button data-idcliente="${data.id}" class="btn ${data.cat_activo == "1"? 'btn-success' : 'btn-danger'}" id="btnEstado">${data.cat_activo}</button>`;
+          return `<button data-idcategoria="${data.id}" class="btn ${data.cat_activo == "1"? 'btn-success' : 'btn-danger'}" id="btnEstado">${data.cat_activo}</button>`;
         }},
       {
         data: null,

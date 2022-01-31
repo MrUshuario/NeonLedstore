@@ -24,7 +24,7 @@ function saveCorreo(){
             consulta: $("#consulta").val().trim()
         };
         console.log(data);
-       // enviarEmail(data);
+        enviarEmail(data);
     });
 } //hola
 
