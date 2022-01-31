@@ -16,11 +16,14 @@ class ProductoController
 
     public static function listarP()
     {
-        $pr = new Producto();
 
-        echo json_encode(["data"=>$pr::listarCatXProd()]);
+        $listar = Producto::listarCatXProd();
+        echo json_encode([
+            "data" => $listar
+        ]);
     }
 
+    //creo que esto no sirve
     public static function obtenerCat()
     {
         $categoria = Categoria::listar();

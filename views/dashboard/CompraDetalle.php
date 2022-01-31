@@ -12,13 +12,13 @@
 
     <div class="table-responsive">
 
-        <table class="table table-purple table-striped table-hover  w-100 table-light table-fixed" id="tablacliente">
+        <table class="table table-purple table-striped table-hover  w-100 table-light table-fixed" id="CompraDetalle">
 
              <!--PARA PONER CON BLANCO: table table-striped table-hover table-light table-fixed w-100-->    
 
             <thead class="table-dark sticky">
 
-                
+            <tr>
 
                     <th>Codigo detalle</th>
 
@@ -30,8 +30,7 @@
 
                     <th>Detalle color </th>
 	
-               
-
+            </tr>
                 </thead>
 
                 <tbody>

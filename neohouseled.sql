@@ -107,14 +107,9 @@ CREATE TABLE `tab_producto` (
   `pro_descripcion` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
   `pro_precio` float DEFAULT NULL,
   `pro_tamaño` varchar(20) DEFAULT NULL,
-<<<<<<< HEAD:neohouseled.sql
-  `pro_activo` char(1) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 
-=======
   `pro_activo` char(1) DEFAULT NULL,
   `pro_imagen` float DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
->>>>>>> 4374351dcc91940417f47b4d321b4cc5e3fc6599:neohouse.sql
 
 --
 -- Volcado de datos para la tabla `tab_producto`
@@ -150,13 +145,9 @@ CREATE TABLE `tab_user` (
 --
 
 INSERT INTO `tab_user` (`id`, `user`, `pass`) VALUES
-<<<<<<< HEAD:neohouseled.sql
 (1, 'adminNLS', '$2y$10$LgeWXAVuGEPOgd5LCSg.A.YF/PoSVhPBpTX4P9MApwRR6axty84dK'),
 (2, 'isabellam.montoya.im@gmail.com', 'd84cb4c8d90f9f7429db81ef5ae58a7c'),
 (3, '18100102@ue.edu.pe', 'c71fc34d162fe4d62d8d4e86ecf132b3');
-=======
-(1, 'adminNLS', '659454c72935a37772189b6f4a25d72b'),
->>>>>>> 4374351dcc91940417f47b4d321b4cc5e3fc6599:neohouse.sql
 
 --
 -- Índices para tablas volcadas

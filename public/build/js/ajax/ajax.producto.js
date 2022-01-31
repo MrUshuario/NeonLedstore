@@ -17,18 +17,23 @@ function tableAll() {
     destroy: true,
     ajax: {
       method: "GET",
-      url: "/producto/prueba",
+      url: "/producto/listar",
     },
     columns: [
-      { data: "pro_categoria" },
-      { data: "pro_nombre" },
-      { data: "pro_precio" },
+      { data: "NombreCategoria" },
+      { data: null,
+        render: function (data, type, row) {
+          return `${data.pro_nombre} : ${data.pro_descripcion}`;
+        },},
+      { data: "pro_precio"},
+      { data: "pro_imagen"}, //aqui la imagen
+      { data: "pro_tamano"},
       {
         data: null,
         render: function (data, type, row) {
           return `<button data-idpro="${data.id}" class="btn ${
-            data.pro_estado == "Activo" ? "btn-success" : "btn-danger"
-          }" id="btnEstado">${data.pro_estado}</button>`;
+            data.pro_activo == "1" ? "btn-success" : "btn-danger"
+          }" id="btnEstado">${data.pro_activo}</button>`;
         },
       },
       {
@@ -120,7 +125,8 @@ function clean() {
   $("#save").text("Guardar");
 }
 
-function getCategoria() {
+//posiblemente lo borre
+/*function getCategoria() {
   const select = document.querySelector("#pro_categoria");
   $.ajax({
     type: "GET",
@@ -138,7 +144,7 @@ function getCategoria() {
       });
     },
   });
-}
+} */
 
 function saveProduct() {
   $("#formProducto").submit(function (e) {
