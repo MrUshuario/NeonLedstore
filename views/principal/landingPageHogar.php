@@ -10,13 +10,13 @@
   </div>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="/build/img/landingPage/lp-hogar/h1.jpg" class="d-block w-100" alt="..." id="theImage1">
+      <img src="/build/img/landingPage/lp-hogar/h1.jpg" class="d-block w-100" alt="..." id="theImageH1">
     </div>
     <div class="carousel-item">
-      <img src="/build/img/landingPage/lp-hogar/h2.jpg" class="d-block w-100" alt="..." id="theImage2">
+      <img src="/build/img/landingPage/lp-hogar/h2.jpg" class="d-block w-100" alt="..." id="theImageH2">
     </div>
     <div class="carousel-item">
-      <img src="/build/img/landingPage/lp-hogar/h3.jpg" class="d-block w-100" alt="..." id="theImage3">
+      <img src="/build/img/landingPage/lp-hogar/h3.jpg" class="d-block w-100" alt="..." id="theImageH3">
     </div>
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -259,8 +259,8 @@
 <script>
     function pictureChange()
     {
-        document.getElementById("theImage1").src="/build/img/landingPage/lp-hogar/h1-alt.jpg";
-        document.getElementById("theImage2").src="/build/img/landingPage/lp-hogar/h2-alt.jpg";
-        document.getElementById("theImage3").src="/build/img/landingPage/lp-hogar/h3-alt.jpg";
-}
+        document.getElementById("theImageH1").src="/build/img/landingPage/lp-hogar/h1-alt.jpg";
+        document.getElementById("theImageH2").src="/build/img/landingPage/lp-hogar/h2-alt.jpg";
+        document.getElementById("theImageH3").src="/build/img/landingPage/lp-hogar/h3-alt.jpg";
+    }
 </script>
