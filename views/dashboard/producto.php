@@ -57,15 +57,17 @@
                         <label for="">Precio</label>
                         <input type="number" id="pro_precio" class="form-control" step="0.05">
                     </div>
+                    <!--
                     <div class="mb-3">
                         <label for="">Imagen</label>
                         <input type="file" id="pro_imagen" class="form-control">
                     </div>
+                    -->
                     <img id="pro_img">
                     <div class="mb-3">
                         <label for="">Tamaño de producto (cm)</label>
                         <div class="tmn-input">
-                            <input type="number" step="0.10" min="1.0" id="t-1"> X <input type="number" step="0.10" min="1.0" id="t-2">
+                            <input type="text"  id="t-1"> X <input type="text" id="t-2">
                         </div>
                     </div>
                     <div class="mb-3">

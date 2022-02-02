@@ -29,7 +29,7 @@ class Producto  extends ActiveRecord
         $this->pro_tamano = $args['pro_tamano'] ?? null;
         $this->pro_activo = $args['pro_activo'] ?? null;
         //extra ATENTOS QUE PUEDE GENERAR ERRORES
-        $this->NombreCategoria = $args['NombreCategoria'] ?? null;
+        //$this->NombreCategoria = $args['NombreCategoria'] ?? null;
     }
     public function setImagen($img)
     {
@@ -56,7 +56,7 @@ class Producto  extends ActiveRecord
     public static function listarCatXProd()
     {
         $query =
-        "SELECT p.id, p.cat_id, p.pro_nombre, p.pro_descripcion, p.pro_precio, p.pro_imagen, p.pro_tamano, p.pro_activo, c.cat_nombre AS NombreCategoria 
+        "SELECT p.id, p.pro_nombre, p.pro_descripcion, p.pro_precio, p.pro_imagen, p.pro_tamano, p.pro_activo, c.cat_nombre AS cat_id 
         FROM tab_producto AS p INNER JOIN tab_categoria AS c 
         ON p.cat_id = c.id";
 
