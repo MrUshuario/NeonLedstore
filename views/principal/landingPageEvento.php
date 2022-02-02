@@ -254,7 +254,7 @@
 
 
 <script>
-    function pictureChange()
+function pictureChange()
     {
         document.getElementById("theImageE1").src="/build/img/landingPage/lp-hogar/h1-alt.jpg";
         document.getElementById("theImageE2").src="/build/img/landingPage/lp-hogar/h2-alt.jpg";

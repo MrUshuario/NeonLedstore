@@ -96,10 +96,11 @@ function saveCategoria() {
 function updateStatus() {
   $(document).on("click", "#btnEstado", (e) => {
     let id = e.target.dataset.idcategoria;
-    let value = e.target.value;
+    let estadoText = e.target.textContent;
+    //es value en ves de textConten si trabajan con int
     const data = {
       id: id,
-      cat_activo: value,
+      cat_activo: estadoText,
     };
     console.log(data); // borrar luego
     $.ajax({
@@ -110,9 +111,8 @@ function updateStatus() {
         const json = JSON.parse(resp);
         const { cat_activo, resultado } = json;
         console.log(cat_activo);
-        e.target.value = json.estado;
+        e.target.textContent = cat_activo;
         if (cat_activo == 1) {
-          e.target.value=cat_activo
           e.target.classList.remove("btn-danger");
           e.target.classList.add("btn-success");
         } else {

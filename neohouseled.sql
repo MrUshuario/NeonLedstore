@@ -77,14 +77,9 @@ CREATE TABLE `tab_compra` (
   `id` int NOT NULL,
   `com_fecha` datetime DEFAULT NULL,
   `precio_total` float DEFAULT NULL,
-<<<<<<< HEAD
-  `cli_id` int DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 
-=======
   `cli_id` int DEFAULT NULL, 
   `estado` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
->>>>>>> bfeb8e6c353ed2c7feacb35f73217eff3f647376
 
 -- --------------------------------------------------------
 
