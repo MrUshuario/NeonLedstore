@@ -198,3 +198,37 @@
     box-shadow: 0 0 5px #a945c7, 0 0 8px
     #a945c7, 0 0 15px #a945c7;
 }
+
+.w1-100:hover{
+
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -o-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05)       
+}
+
+.w2-100:hover{
+
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -o-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05)       
+}
+
+.w3-100:hover{
+
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -o-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05)       
+}
+
+.w4-100:hover,.w5-100:hover{
+    -webkit-transform:scale(1.1);
+    transform:scale(1.1);
+    overflow:hidden;     
+}
+

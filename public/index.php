@@ -128,7 +128,7 @@ $router = new Router();
 
        //METHOD POST
         $router->post("/contacto/enviar",[PrincipalController::class,"contactoEmail"]);
-        $router->post("/landingpage/enviar",[PrincipalController::class,"contactolandingEmail"]);
+        //$router->post("/landingpage/enviar",[PrincipalController::class,"contactolandingEmail"]);
 
         //Landig Page
         $router->get("/landingPageNegocio", [PrincipalController::class, 'landingNegocio']);
