@@ -273,7 +273,7 @@
 
     <script defer type="text/javascript" src="/build/js/app.js"></script> 
 
-     <script defer src="/src/js/login.js"></script> 
+    <!-- <script defer src="/src/js/login.js"></script> -->
 
     <script src="build/js/plugins/bootstrap/bootstrap.min.js"></script>
 
