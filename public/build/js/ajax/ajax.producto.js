@@ -66,7 +66,8 @@ function obtenerData() {
         const { data } = JSON.parse(e);
 
         $("#id").val(data.id);
-        $("#cat_id").val(data.pro_categoria);
+        $("#pro_categoria").val(data.cat_id);
+        console.log(data.cat_id);
         $("#pro_nombre").val(data.pro_nombre);
         $("#pro_descripcion").val(data.pro_descripcion);
         $("#pro_precio").val(data.pro_precio);
@@ -115,7 +116,7 @@ function clean() {
   $("#pro_nombre").val("");
   $("#pro_descripcion").val("");
   $("#pro_precio").val("");
-  $("#pro_estado").val("");
+  
   $("#t-1").val("");
   $("#t-2").val("");
   img.src = "";
@@ -126,7 +127,7 @@ function clean() {
 
 //posiblemente lo borre
 function getCategoria() {
-  const select = document.querySelector("#pro_estado");
+  const proestado = document.querySelector("#pro_categoria");
   $.ajax({
     type: "GET",
     url: "/producto/getCategoria",
@@ -137,16 +138,17 @@ function getCategoria() {
       lists.forEach((list) => {
         const { cat_activo, cat_nombre, id } = list;
         if (cat_activo == "1") {
-          select.innerHTML += `
+          proestado.append(new Option(cat_nombre,id));
+          /*proestado.innerHTML += `
             <option value="${id}">${cat_nombre}</option>
-          `;
+          `;*/
         }
       });
     },
   });
 } 
 
-
+/*¨esta funcion es más para un select con producto
 function getProducto() {
   const idproducto = document.querySelector("#id_producto");
   $.ajax({
@@ -162,7 +164,7 @@ function getProducto() {
       });
     },
   });
-}
+} */
 
 
 

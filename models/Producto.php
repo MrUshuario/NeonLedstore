@@ -31,6 +31,9 @@ class Producto  extends ActiveRecord
         //extra ATENTOS QUE PUEDE GENERAR ERRORES
         //$this->NombreCategoria = $args['NombreCategoria'] ?? null;
     }
+
+
+    ///FUNCIONES PARA BORRAR UNA IMAGEN; seguro no lo necesitamos
     public function setImagen($img)
     {
         //Eliminar la imagen previa al editar o eliminar
