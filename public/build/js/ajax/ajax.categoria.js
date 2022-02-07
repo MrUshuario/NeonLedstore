@@ -5,7 +5,9 @@ $(document).ready(function () {
   cleanButton();
   updateStatus();
   saveCategoria();
+  deleteButton();
 });
+
 
 function createCategoria(formData) {
   $.ajax({
@@ -46,6 +48,7 @@ function updateCategoria(formData) {
     processData: false,
     contentType: false,
     success: function (response) {
+      console.log(response);
       let json = JSON.parse(response);
       const { resp, cat } = json;
       if (resp) {
@@ -92,11 +95,12 @@ function saveCategoria() {
 
 function updateStatus() {
   $(document).on("click", "#btnEstado", (e) => {
-    let id = e.target.dataset.id;
-    let value = e.target.value;
+    let id = e.target.dataset.idcategoria;
+    let estadoText = e.target.textContent;
+    //es value en ves de textConten si trabajan con int
     const data = {
       id: id,
-      cat_estado: value,
+      cat_activo: estadoText,
     };
     console.log(data); // borrar luego
     $.ajax({
@@ -105,11 +109,10 @@ function updateStatus() {
       data: data,
       success: (resp) => {
         const json = JSON.parse(resp);
-        const { cat_estado, resultado } = json;
-        console.log(cat_estado);
-        e.target.value = json.estado;
-        if (cat_estado == "ACTIVO") {
-          e.target.value=cat_estado
+        const { cat_activo, resultado } = json;
+        console.log(cat_activo);
+        e.target.textContent = cat_activo;
+        if (cat_activo == 1) {
           e.target.classList.remove("btn-danger");
           e.target.classList.add("btn-success");
         } else {
@@ -133,7 +136,7 @@ function deleteCategoria(id) {
           title: "Se elimino correctamente la categoria",
           icon: "success",
         });
-        llenarTabla();
+        tablaCategoria();
       } else {
         swal({
           title: "No se pudo eliminar, al estar alineado con otro datos",
@@ -155,7 +158,7 @@ function tablaCategoria() {
       {data:  "cat_nombre"},
       {data:  null,
         render: function(data, type, row){
-          return `<button data-idcliente="${data.id}" class="btn ${data.cat_activo == "1"? 'btn-success' : 'btn-danger'}" id="btnEstado">${data.cat_activo}</button>`;
+          return `<button data-idcategoria="${data.id}" class="btn ${data.cat_activo == "1"? 'btn-success' : 'btn-danger'}" id="btnEstado">${data.cat_activo}</button>`;
         }},
       {
         data: null,
@@ -179,7 +182,7 @@ function obtenerData() {
       data: data,
       type: "POST",
       success: function (e) {
-        console.log(e); 
+        console.log(e);  // borrar al terminar
         const { data } = JSON.parse(e);
         $("#id").val(data.id);
         $("#cat_nombre").val(data.cat_nombre);

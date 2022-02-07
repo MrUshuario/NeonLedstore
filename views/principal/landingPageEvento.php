@@ -69,11 +69,6 @@
             </div>
             <!--Final Modal-->
 
-        <!--fondo anterior-->
-           <!-- <main class="main row pb-5 d-flex justify-content-center">
-
-                <img src="/build/img/jovenEscuchandoMovil.webp"  srcset="/build/img/jovenEscuchandoMovil.webp 420w, /build/img/jovenEscuchando.webp 870w" alt="jovenEscuchando" class="mainFondo position-absolute">
-            </main> -->
 
             <div class="row questionNosotros py-2 py-sm-5 d-flex justify-content-center">
 

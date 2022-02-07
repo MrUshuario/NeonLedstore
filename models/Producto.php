@@ -28,7 +28,12 @@ class Producto  extends ActiveRecord
         $this->pro_imagen = $args['pro_imagen'] ?? null;
         $this->pro_tamano = $args['pro_tamano'] ?? null;
         $this->pro_activo = $args['pro_activo'] ?? null;
+        //extra ATENTOS QUE PUEDE GENERAR ERRORES
+        //$this->NombreCategoria = $args['NombreCategoria'] ?? null;
     }
+
+
+    ///FUNCIONES PARA BORRAR UNA IMAGEN; seguro no lo necesitamos
     public function setImagen($img)
     {
         //Eliminar la imagen previa al editar o eliminar
@@ -53,7 +58,11 @@ class Producto  extends ActiveRecord
 
     public static function listarCatXProd()
     {
-        $query = "SELECT p.id as id, pro_nombre, pro_descripcion, pro_precio, pro_imagen, pro_tamano, pro_activo, cat_nombre as cat_id FROM tab_producto p inner join tab_categorias c ON c.id = p.pro_categoria ";
+        $query =
+        "SELECT p.id, p.pro_nombre, p.pro_descripcion, p.pro_precio, p.pro_imagen, p.pro_tamano, p.pro_activo, c.cat_nombre AS cat_id 
+        FROM tab_producto AS p INNER JOIN tab_categoria AS c 
+        ON p.cat_id = c.id";
+
         $resultado = static::consultarSQL($query);
         return $resultado;
     }
@@ -72,6 +81,8 @@ class Producto  extends ActiveRecord
         return $resultado;
     }
 
+
+    // creo que no sirve
     public function searchNombre()
     {
         $query="select p.id as id, pro_nombre, pro_descripcion, pro_precio, pro_imagen, pro_tamano, pro_activo, cat_nombre as pro_categoria from ".static::$tabla." p inner join tab_categorias c ON c.id = p.pro_categoria where pro_nombre LIKE '%".$this->pro_nombre."%'";

@@ -1,3 +1,4 @@
+//posiblemente lo borre
 const img = document.querySelector("#pro_img");
 
 /** DataTables  */
@@ -17,18 +18,23 @@ function tableAll() {
     destroy: true,
     ajax: {
       method: "GET",
-      url: "/producto/prueba",
+      url: "/producto/listar",
     },
     columns: [
-      { data: "pro_categoria" },
-      { data: "pro_nombre" },
-      { data: "pro_precio" },
+      { data: "cat_id" },
+      { data: null,
+        render: function (data, type, row) {
+          return `${data.pro_nombre} : ${data.pro_descripcion}`;
+        },},
+      { data: "pro_precio"},
+      { data: "pro_imagen"}, //aqui la imagen
+      { data: "pro_tamano"},
       {
         data: null,
         render: function (data, type, row) {
           return `<button data-idpro="${data.id}" class="btn ${
-            data.pro_estado == "Activo" ? "btn-success" : "btn-danger"
-          }" id="btnEstado">${data.pro_estado}</button>`;
+            data.pro_activo == "1" ? "btn-success" : "btn-danger"
+          }" id="btnEstado">${data.pro_activo}</button>`;
         },
       },
       {
@@ -52,8 +58,6 @@ function obtenerData() {
   $(document).on("click", "#edit", function (e) {
     clean();
     let idpro = e.target.dataset.idpro;
-    console.log(idpro);
-
     $.ajax({
       type: "POST",
       url: "/producto/getProForm",
@@ -62,12 +66,13 @@ function obtenerData() {
         const { data } = JSON.parse(e);
 
         $("#id").val(data.id);
-        $("#pro_categoria").val(data.pro_categoria);
+        $("#pro_categoria").val(data.cat_id);
+        console.log(data.cat_id);
         $("#pro_nombre").val(data.pro_nombre);
         $("#pro_descripcion").val(data.pro_descripcion);
         $("#pro_precio").val(data.pro_precio);
         $("#pro_estado").val(data.pro_estado);
-        const tmn = data.pro_tamano.split("x");
+        const tmn = data.pro_tamano.split("X");
         $("#t-1").val(tmn[0]);
         $("#t-2").val(tmn[1]);
 
@@ -111,7 +116,7 @@ function clean() {
   $("#pro_nombre").val("");
   $("#pro_descripcion").val("");
   $("#pro_precio").val("");
-  $("#pro_estado").val("");
+  
   $("#t-1").val("");
   $("#t-2").val("");
   img.src = "";
@@ -120,25 +125,48 @@ function clean() {
   $("#save").text("Guardar");
 }
 
+//posiblemente lo borre
 function getCategoria() {
-  const select = document.querySelector("#pro_categoria");
+  const proestado = document.querySelector("#pro_categoria");
   $.ajax({
     type: "GET",
     url: "/producto/getCategoria",
     success: function (e) {
       let json = JSON.parse(e);
       const lists = json.listCat;
+      console.log(lists);
       lists.forEach((list) => {
-        const { cat_estado, cat_nombre, id } = list;
-        if (cat_estado === "ACTIVO") {
-          select.innerHTML += `
+        const { cat_activo, cat_nombre, id } = list;
+        if (cat_activo == "1") {
+          proestado.append(new Option(cat_nombre,id));
+          /*proestado.innerHTML += `
             <option value="${id}">${cat_nombre}</option>
-          `;
+          `;*/
         }
       });
     },
   });
-}
+} 
+
+/*¨esta funcion es más para un select con producto
+function getProducto() {
+  const idproducto = document.querySelector("#id_producto");
+  $.ajax({
+    method: "GET",
+    url: "/productoColor/getProducto",
+    success: function (el) {
+      const { data } = JSON.parse(el);
+      const idproducto = document.querySelector("#id_producto");
+      data.forEach((e) => {
+        if (e.pro_estado == "Activo") {
+          idproducto.innerHTML += `<option value="${e.id}">${e.pro_nombre} - S/.${e.pro_precio}</option>`;
+        }
+      });
+    },
+  });
+} */
+
+
 
 function saveProduct() {
   $("#formProducto").submit(function (e) {

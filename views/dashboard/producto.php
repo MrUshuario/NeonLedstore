@@ -13,9 +13,8 @@
         <table class="table table-purple table-striped table-hover  w-100 table-light table-fixed" id="tablaproducto">
             <thead class="table-dark sticky">
                 <tr>
-                    <th> Nombre Categoría </th>
-                    <th>Nombre </th>
-                    <th>Descripción </th>
+                    <th>Categoría</th>
+                    <th>Nombre y Descripcion</th>
                     <th>Precio (s/) </th>
                     <th>Imagen </th>
                     <th>Tamaño </th>
@@ -58,23 +57,25 @@
                         <label for="">Precio</label>
                         <input type="number" id="pro_precio" class="form-control" step="0.05">
                     </div>
+                    <!--
                     <div class="mb-3">
                         <label for="">Imagen</label>
                         <input type="file" id="pro_imagen" class="form-control">
                     </div>
+                    -->
                     <img id="pro_img">
                     <div class="mb-3">
-                        <label for="">Tamaño de producto</label>
+                        <label for="">Tamaño de producto (cm)</label>
                         <div class="tmn-input">
-                            <input type="number" step="0.10" min="1.0" id="t-1"> X <input type="number" step="0.10" min="1.0" id="t-2">
+                            <input type="text"  id="t-1"> X <input type="text" id="t-2">
                         </div>
                     </div>
                     <div class="mb-3">
                         <label for="pro_estado">estado</label>
                         <select id="pro_estado" class="form-control">
                             <option value="">-SELECCIONE--</option>
-                            <option value="Activo">ACTIVO</option>
-                            <option value="Inactivo">INACTIVO</option>
+                            <option value="0">ACTIVO</option>
+                            <option value="1">INACTIVO</option>
                         </select>
                     </div>
                     <div class="modal-footer">

@@ -11,10 +11,10 @@ function enviarEmail(data){
             console.log(e);
         }
     });
+    formContact.reset();
 }
 
 function saveCorreo(){
-    console.log("hola");
     $("#formContact").submit(function(e){
         e.preventDefault();
         const data = {
@@ -23,8 +23,7 @@ function saveCorreo(){
             telefono: $("#telefono").val().trim(),
             consulta: $("#consulta").val().trim()
         };
-        console.log(data);
-       // enviarEmail(data);
+        
+        enviarEmail(data);
     });
-} //hola
-
+}

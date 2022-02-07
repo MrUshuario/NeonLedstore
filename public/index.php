@@ -47,7 +47,7 @@ $router = new Router();
     $router->get('/producto',[ProductoController::class,'index']);
     $router->get('/producto/getCategoria',[ProductoController::class,'obtenerCat']);
     $router->get('/producto/getProducto',[ProductoController::class,'getProducto']);
-    $router->get('/producto/prueba',[ProductoController::class,"listarP"]);
+    $router->get('/producto/listar',[ProductoController::class,"listarP"]);
 
     // method post
     $router->post('/producto/crear',[ProductoController::class,'guardar']);
@@ -128,7 +128,7 @@ $router = new Router();
 
        //METHOD POST
         $router->post("/contacto/enviar",[PrincipalController::class,"contactoEmail"]);
-        $router->post("/landingpage/enviar",[PrincipalController::class,"contactolandingEmail"]);
+        //$router->post("/landingpage/enviar",[PrincipalController::class,"contactolandingEmail"]);
 
         //Landig Page
         $router->get("/landingPageNegocio", [PrincipalController::class, 'landingNegocio']);

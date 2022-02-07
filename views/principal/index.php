@@ -1,6 +1,6 @@
 <section class="portada-container bg-black">
         <div class="container container-responsive">
-        <img src="/build/img/11.webp" style="width: 100%; height: 100%; object-fit:cover;">
+        <img src="/build/img/imgHome.webp" style="width: 100%; height: 100%; object-fit:cover;">
         </div>
     <section>
 
@@ -12,13 +12,13 @@
             </article>
             <div class="row gap-3 w-100 justify-center m-0 " >
                 <div class="col-lg-3"  style="width: 22.5em; height: 450px;">
-                <img class="w-100 h-100 img-cover" width="100%"  src="/build/img/5.webp" alt="IT WAS ALL A DREAM en luces de neon">
+                <img class="w1-100 h-100 img-cover" width="100%"  src="/build/img/5.webp" alt="IT WAS ALL A DREAM en luces de neon">
                 </div>
                 <div class="col-lg-3"  style="width: 22.5em; height: 450px;">
-                <img class="w-100 h-100 img-cover " width="100%"  src="/build/img/guitarra.webp" alt="ALL WE HAVE IS NOW en luces de neon">
+                <img class="w2-100 h-100 img-cover " width="100%"  src="/build/img/guitarra.webp" alt="ALL WE HAVE IS NOW en luces de neon">
                 </div>
                 <div class="col-lg-3"  style="width: 22.5em; height: 450px;">
-                <img class="w-100 h-100 img-cover" width="100%"  src="/build/img/9.webp" alt="Slim�0�7s">
+                <img class="w3-100 h-100 img-cover" width="100%"  src="/build/img/9.webp" alt="Slim�0�7s">
                 </div>
             </div> 
         </div>
@@ -42,10 +42,10 @@
             
             <div class="w-100 d-flex justify-content-around m-0 gap-3" style="gap:0em">
                 <div class="col-lg-3 w-50" style="max-width: 400px;">
-                    <img class="w-100 h-100 img-cover" width="100%"  src="/build/img/1.webp" alt="All Mad Here en luces de neon">
+                    <img class="w4-100 h-100 img-cover" width="100%"  src="/build/img/1.webp" alt="All Mad Here en luces de neon">
                 </div>
                 <div class="col-lg-3 w-50"style="max-width: 400px;">
-                    <img class="w-100 h-100 img-cover " width="100%"  src="/build/img/10.webp" alt="Pizza en luces de neon">
+                    <img class="w5-100 h-100 img-cover " width="100%"  src="/build/img/10.webp" alt="Pizza en luces de neon">
                 </div>
             </div>
 
