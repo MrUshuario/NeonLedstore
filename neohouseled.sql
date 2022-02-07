@@ -79,7 +79,7 @@ CREATE TABLE `tab_compra` (
   `precio_total` float DEFAULT NULL,
   `cli_id` int DEFAULT NULL, 
   `estado` varchar(20) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ;
 
 -- --------------------------------------------------------
 
@@ -105,12 +105,12 @@ CREATE TABLE `tab_producto` (
   `id` int NOT NULL,
   `cat_id` tinyint DEFAULT NULL,
   `pro_nombre` varchar(100) DEFAULT NULL,
-  `pro_descripcion` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `pro_descripcion` varchar(255) CHARACTER SET utf8mb4 ,
   `pro_precio` float DEFAULT NULL,
   `pro_tamano` varchar(20) DEFAULT NULL,
   `pro_activo` char(1) DEFAULT NULL,
   `pro_imagen` float DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ;
 
 --
 -- Volcado de datos para la tabla `tab_producto`

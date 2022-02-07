@@ -7,15 +7,15 @@
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
   </div>
-  <div class="carousel-inner">
+  <div class="carousel-inner"  >
     <div class="carousel-item active">
-      <img src="/build/img/landingPage/lp-evento/e1.jpg" class="d-block w-100" alt="..." id="theImageE1">
+      <img src="/build/img/landingPage/lp-evento/e1.jpg" class="d-block w-100" id="imgCarrusEvento1" alt="...">
     </div>
     <div class="carousel-item">
-      <img src="/build/img/landingPage/lp-evento/e2.jpg" class="d-block w-100" alt="..." id="theImageE2">
+      <img src="/build/img/landingPage/lp-evento/e2.jpg" class="d-block w-100" id="imgCarrusEvento2" alt="...">
     </div>
     <div class="carousel-item">
-      <img src="/build/img/landingPage/lp-evento/e3.jpg" class="d-block w-100" alt="..." id="theImageE3">
+      <img src="/build/img/landingPage/lp-evento/e3.jpg" class="d-block w-100" id="imgCarrusEvento3" alt="...">   
     </div>
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -49,20 +49,19 @@
                         <h1 class="my-3 fs-2 neones p-50">¿Quieres tener un Evento visualmente atractivo?</h1>
                         <div class="row d-flex justify-content-center">
 
-                            <!-- FORM INHABILITADO PARA HACER PRUEBAS CON EL BOTON SUBMIT, POSTERIORMENTE REMOVER ONSUBMIT Y ANADIR ACTION  action="/build/enviingPage"   -->
-                            <form class="landingPageForm col-12 col-sm-10" method="POST" onsubmit="return false;">
-                                <div class="modal-field">
-                                    <input type="text" class="neontextlanding bg-transparent text-center form-control my-3 border-0" name="nombre" placeholder="Nombres y Apellidos" required>
-                                </div>
-                                <div class="modal-field">
-                                    <input type="email" class="neontextlanding bg-transparent text-center form-control my-3 border-0" name="correo" placeholder="Correo Electrónico" required>
-                                </div>
-                                <div class="modal-field">
-                                    <input type="tel" class="neontextlanding bg-transparent text-center form-control my-3 border-0 mb-3" name="telefono" id="telefono" placeholder="Número de celular" required>
-                                </div> <!--crea tu propio boton, lo agregas en NEON.css -->
-                                <button type="submit" class="neonbottonlanding btn btn-primary my-sm-3 border-0" id="btn-modal-asesoria" onclick="pictureChange()">Pedir asesoria</button>
-                            </form>
-                        </div>     
+                        <form class="landingPageForm col-12 col-sm-10" method="POST" action="/build/enviingPage">
+                            <div class="modal-field">
+                                <input type="text" class="neontextlanding bg-transparent text-center form-control my-3 border-0" name="nombre" placeholder="Nombres y Apellidos" required>
+                            </div>
+                            <div class="modal-field">
+                                <input type="email" class="neontextlanding bg-transparent text-center form-control my-3 border-0" name="correo" placeholder="Correo Electrónico" required>
+                            </div>
+                            <div class="modal-field">
+                                <input type="tel" class="neontextlanding bg-transparent text-center form-control my-3 border-0 mb-3" name="telefono" id="telefono" placeholder="Número de celular" required>
+                            </div> <!--crea tu propio boton, lo agregas en NEON.css -->
+                            <button type="submit" class="neonbottonlanding btn btn-primary my-sm-3 border-0" id="btn-modal-asesoria" onclick="cambiarEvento()">Pedir asesoria</button>
+                        </form>
+                    </div>     
                     </div>
                 </main>
                 </div>
@@ -251,13 +250,5 @@
         </div>
 
     </div>
-
-
-<script>
-function pictureChange()
-    {
-        document.getElementById("theImageE1").src="/build/img/landingPage/lp-hogar/h1-alt.jpg";
-        document.getElementById("theImageE2").src="/build/img/landingPage/lp-hogar/h2-alt.jpg";
-        document.getElementById("theImageE3").src="/build/img/landingPage/lp-hogar/h3-alt.jpg";
-    }
-</script>
+<script type="text/javascript" src="\build\js\ajax\ajaxconfi-carucel.js">
+</script>    

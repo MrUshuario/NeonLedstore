@@ -9,13 +9,13 @@
   </div>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="/build/img/landingPage/lp-negocio/n1.jpg" class="d-block w-100" alt="..." id="theImageN1">
+      <img src="/build/img/landingPage/lp-negocio/n1.jpg" class="d-block w-100" id="imgCarrusNegocio1" alt="...">
     </div>
     <div class="carousel-item">
-      <img src="/build/img/landingPage/lp-negocio/n2.jpg" class="d-block w-100" alt="..." id="theImageN2">
+      <img src="/build/img/landingPage/lp-negocio/n2.jpg" class="d-block w-100" id="imgCarrusNegocio2" alt="...">
     </div>
     <div class="carousel-item">
-      <img src="/build/img/landingPage/lp-negocio/n3.jpg" class="d-block w-100" alt="..." id="theImageN3">
+      <img src="/build/img/landingPage/lp-negocio/n3.jpg" class="d-block w-100" id="imgCarrusNegocio3" alt="...">
     </div>
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -49,20 +49,19 @@
                         <h1 class="my-3 fs-2 neones p-50">¿Quieres tener un negocio visualmente atractivo?</h1>
                         <div class="row d-flex justify-content-center">
 
-                            <!-- FORM INHABILITADO PARA HACER PRUEBAS CON EL BOTON SUBMIT, POSTERIORMENTE REMOVER ONSUBMIT Y ANADIR ACTION  action="/build/enviingPage"  -->
-                            <form class="landingPageForm col-12 col-sm-10" method="POST" onsubmit="return false;">
-                                <div class="modal-field">
-                                    <input type="text" class="neontextlanding bg-transparent text-center form-control my-3 border-0" name="nombre" placeholder="Nombres y Apellidos" required>
-                                </div>
-                                <div class="modal-field">
-                                    <input type="email" class="neontextlanding bg-transparent text-center form-control my-3 border-0" name="correo" placeholder="Correo Electrónico" required>
-                                </div>
-                                <div class="modal-field">
-                                    <input type="tel" class="neontextlanding bg-transparent text-center form-control my-3 border-0 mb-3" name="telefono" id="telefono" placeholder="Número de celular" required>
-                                </div> <!--crea tu propio boton, lo agregas en NEON.css -->
-                                <button type="submit" class="neonbottonlanding btn btn-primary my-sm-3 border-0" id="btn-modal-asesoria" onclick="pictureChange()">Pedir asesoria</button>
-                            </form>
-                        </div>     
+                        <form class="landingPageForm col-12 col-sm-10" method="POST" action="/build/enviingPage">
+                            <div class="modal-field">
+                                <input type="text" class="neontextlanding bg-transparent text-center form-control my-3 border-0" name="nombre" placeholder="Nombres y Apellidos" required>
+                            </div>
+                            <div class="modal-field">
+                                <input type="email" class="neontextlanding bg-transparent text-center form-control my-3 border-0" name="correo" placeholder="Correo Electrónico" required>
+                            </div>
+                            <div class="modal-field">
+                                <input type="tel" class="neontextlanding bg-transparent text-center form-control my-3 border-0 mb-3" name="telefono" id="telefono" placeholder="Número de celular" required>
+                            </div> <!--crea tu propio boton, lo agregas en NEON.css -->
+                            <button type="submit" class="neonbottonlanding btn btn-primary my-sm-3 border-0"  id="btn-modal-asesoria Negocio" onclick="cambiarNegocio()">Pedir asesoria</button>
+                        </form>
+                    </div>     
                     </div>
                 </main>
                 </div>
@@ -256,12 +255,4 @@
 
     </div>
 
-
-<script>
-    function pictureChange()
-    {
-        document.getElementById("theImageN1").src="/build/img/landingPage/lp-hogar/h1-alt.jpg";
-        document.getElementById("theImageN2").src="/build/img/landingPage/lp-hogar/h2-alt.jpg";
-        document.getElementById("theImageN3").src="/build/img/landingPage/lp-hogar/h3-alt.jpg";
-    }
-</script>
+<script type="text/javascript" src="\build\js\ajax\ajaxconfi-carucel.js"></script> 
