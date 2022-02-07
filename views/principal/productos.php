@@ -1,4 +1,4 @@
-  <link rel="stylesheet" href="grid.css">
+
 
 <body class="grid-container">
 
@@ -74,72 +74,66 @@
 
   <button class="accordion-button collapsed filtroCategoria float-left text-start bg-black text-white fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
 
-  <select name="cbx_categoria ">
+    <select name="cbx_categoria ">
 
-  <?php
+    <?php    
 
-  
+    $conexion=conectar();
 
-  $conexion=conectar();
+    echo "<option value=''> -------------- </option>";
 
-  
+    $consulta="select * from tab_categoría ";    
 
-  echo "<option value=""> -------------- </option>";
+    $filas=listar($conexion,$consulta);
 
-  $consulta="select * from tab_categoría ";    
+    foreach($filas as $fila) {
 
-  $filas=listar($conexion,$consulta);
+    
 
-  foreach($filas as $fila) {
+    echo "<option value='".$fila["cat_nombre"]."'></option>";
 
-  
+    }
 
-  echo "<option value='" $fila["cat_nombre"]."'></option>";
+    ?>
 
-  }
+    <script>
+    if(isset($_POST["buscar"])){
 
-  ?>
+    $filtros = [];
 
-  if(isset($_POST["buscar"])){
+    if(isset($_POST["Categoria "]) && $_POST["Categoria"] != ''){
 
-  
+    }
 
-  $filtros = [];
+    if (!empty($filtros)) {
 
-  if(isset($_POST["Categoria "]) && $_POST["Categoria"] != ''){
+    $filtros = " WHERE cat_activo ='1' " . implode(' AND ', $filtros);
 
-  }
+    } else {
 
-  if (!empty($filtros)) {
+    $filtros = '';
 
-  $filtros = " WHERE cat_activo ='1' " . implode(' AND ', $filtros);
+    }
 
-  } else {
+    
 
-  $filtros = '';
+    $busqueda="SELECT * FROM tab_categoría " . $filtros;
 
-  }
+    $filas=listar($conexion,$busqueda);
 
-  
+    foreach($filas as $fila) {
 
-  $busqueda="SELECT * FROM tab_categoría " . $filtros;
+    echo "<td class='lis'>" . $fila["cat_nombre"] . "</td>";
 
-  $filas=listar($conexion,$busqueda);
+    echo "</tr>";
 
-  foreach($filas as $fila) {
+    }
 
-  echo "<td class='lis'>" . $fila["cat_nombre"] . "</td>";
+    echo "</table>";
 
-  echo "</tr>";
-
-  }
-
-  echo "</table>";
-
-  }
-
-  </select>
-
+    }
+    <script>
+    </select>
   </button>
 
  
