@@ -31,7 +31,7 @@ CREATE TABLE `tab_categoria` (
   `id` tinyint NOT NULL,
   `cat_nombre` varchar(40) NOT NULL,
   `cat_activo` char(1) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `tab_categoria`
@@ -56,7 +56,7 @@ CREATE TABLE `tab_cliente` (
   `cli_email` varchar(120) DEFAULT NULL,
   `cli_clave` varchar(255) DEFAULT NULL,
   `cli_estado` char(1) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `tab_cliente`
@@ -79,7 +79,7 @@ CREATE TABLE `tab_compra` (
   `precio_total` float DEFAULT NULL,
   `cli_id` int DEFAULT NULL, 
   `estado` varchar(20) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ;
 
 -- --------------------------------------------------------
 
@@ -93,7 +93,7 @@ CREATE TABLE `tab_compra_detalle` (
   `pro_id` int DEFAULT NULL,
   `det_cantidad` int DEFAULT NULL,
   `det_color` varchar(30) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ;
 
 -- --------------------------------------------------------
 
@@ -105,12 +105,12 @@ CREATE TABLE `tab_producto` (
   `id` int NOT NULL,
   `cat_id` tinyint DEFAULT NULL,
   `pro_nombre` varchar(100) DEFAULT NULL,
-  `pro_descripcion` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `pro_descripcion` varchar(255) CHARACTER SET utf8mb4 ,
   `pro_precio` float DEFAULT NULL,
   `pro_tamano` varchar(20) DEFAULT NULL,
   `pro_activo` char(1) DEFAULT NULL,
   `pro_imagen` float DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ;
 
 --
 -- Volcado de datos para la tabla `tab_producto`
@@ -139,14 +139,14 @@ CREATE TABLE `tab_user` (
   `id` int NOT NULL,
   `user` varchar(125) NOT NULL,
   `pass` varchar(250) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ;
 
 --
 -- Volcado de datos para la tabla `tab_user`
 --
 
 INSERT INTO `tab_user` (`id`, `user`, `pass`) VALUES
-(1, 'adminNLS', '659454c72935a37772189b6f4a25d72b'),
+(1, 'adminNLS', '12345'),
 
 --
 -- Índices para tablas volcadas
