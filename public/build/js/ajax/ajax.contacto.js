@@ -11,6 +11,7 @@ function enviarEmail(data){
             console.log(e);
         }
     });
+    formContact.reset();
 }
 
 function saveCorreo(){
@@ -22,6 +23,7 @@ function saveCorreo(){
             telefono: $("#telefono").val().trim(),
             consulta: $("#consulta").val().trim()
         };
+        
         enviarEmail(data);
     });
 }
