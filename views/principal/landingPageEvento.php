@@ -39,7 +39,7 @@
         </button>
 
         <!--Inicio Modal-->
-        <div class="modal fade" id="modalAsesoria" tabindex="-1" aria-labelledby="modalAsesoria" aria-hidden="true">
+            <div class="modal fade" id="modalAsesoria" tabindex="-1" aria-labelledby="modalAsesoria" aria-hidden="true">
             <div class="modal-dialog">
 
                 <div class="modal-content rounded-25" id="padreModalLanding">
@@ -49,9 +49,8 @@
                         <h1 class="my-3 fs-2 neones p-50">¿Quieres tener un Evento visualmente atractivo?</h1>
                         <div class="row d-flex justify-content-center">
 
-                        <form class="landingPageForm col-12 col-sm-10" method="POST" action="/build/enviingPage">
+                        <form class="landingPageForm col-12 col-sm-10" method="POST">
                             <div class="modal-field">
-                                <input type="text" class="neontextlanding bg-transparent text-center form-control my-3 border-0" name="nombre" placeholder="Nombres y Apellidos" required>
                             </div>
                             <div class="modal-field">
                                 <input type="email" class="neontextlanding bg-transparent text-center form-control my-3 border-0" name="correo" placeholder="Correo Electrónico" required>
