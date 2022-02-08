@@ -24,11 +24,15 @@ class Compra extends ActiveRecord {
         $this->cli_id = $args['cli_id'] ?? null;
   }
     
-    public function verificarCompra(){
-        $query = "SELECT * FROM ".static::$tabla." WHERE cli_id ='".$this->cli_id."'";
-        $resultado = self::$db->query($query);
-        return $resultado;
-    }
-    
-  
+
+  public static function compraXCliente()
+  {
+    $query = "SELECT  co.id, co.com_fecha, co.precio_total, concat(co.cli_id,',',cl.cli_nombre)  AS cli_id 
+    FROM tab_compra AS co INNER JOIN tab_cliente AS cl 
+    ON co.id = cl.id";
+
+      $resultado = static::consultarSQL($query);
+      return $resultado;
+  }
+
 }
