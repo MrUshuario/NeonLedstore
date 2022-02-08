@@ -11,7 +11,21 @@ function enviarEmail(data){
             console.log(e);
         }
     });
-    formContact.reset();
+
+
+    $('#formContact').submit(function(e){
+        Swal.fire({
+            icon: 'success',
+            title: 'Consulta Enviada',
+            text: '¡Revise su Correo!',
+            showConfirmButton: false,
+            timer: 2500,
+        
+})
+
+})
+
+formContact.reset();
 }
 
 function saveCorreo(){
