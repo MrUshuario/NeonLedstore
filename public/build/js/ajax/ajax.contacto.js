@@ -33,6 +33,7 @@ function saveCorreo(){
         e.preventDefault();
         const data = {
             nombre: $("#nombre").val().trim(),
+            apellidos: $("#apellidos").val().trim(),
             correo: $("#correo").val().trim(),
             telefono: $("#telefono").val().trim(),
             consulta: $("#consulta").val().trim()
