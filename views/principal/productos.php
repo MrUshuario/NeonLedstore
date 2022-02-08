@@ -94,12 +94,13 @@
 
   
 
-  echo "<option value='" $fila["cat_nombre"]."'></option>";
+  echo "<option value='" .$fila["cat_nombre"]."'></option>";
 
   }
 
   ?>
 
+<script>
   if(isset($_POST["buscar"])){
 
   
@@ -137,7 +138,7 @@
   echo "</table>";
 
   }
-
+</script>
   </select>
 
   </button>

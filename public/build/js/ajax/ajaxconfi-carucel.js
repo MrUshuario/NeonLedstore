@@ -113,4 +113,15 @@
             clickNegocio="img1";
         } 
     }
+    function swift() {
+        swal('Listo','Datos enviados correctamente','success');
+    }
+
+    function Evento() {
+        cambiarEvento();
+        swift();
+    }
+
+// Swift de los formularios 
+
     
