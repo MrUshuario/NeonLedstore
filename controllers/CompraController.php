@@ -13,9 +13,9 @@ class CompraController {
         $router->render("dashboard/compra",[]);
     }
 
-    public static function listar(Router $router){
+    public static function listar(){
 
-        $listado = Cliente::listar();
+        $listado = Compra::compraXCliente();
        
         $json = json_encode([
             "data" => $listado
@@ -28,7 +28,7 @@ class CompraController {
     public static function create(Router $router){
         if($_SERVER["REQUEST_METHOD"] == "POST"){
             $cliente = new Cliente($_POST);
-            $verificarCorreo = $cliente->verificarCorreo();
+            #$verificarCorreo = $cliente->verificarCorreo();
             if ($verificarCorreo->num_rows == 0) {
                 $resultado = $cliente->crear(); 
                 

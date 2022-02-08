@@ -10,11 +10,6 @@ html {
   height: 100%;
 }
 
-body {
-  font-family: open sans;
-  font-size: 16px;
-  min-height: 100%;
-}
 
 .grid-container > * {
 
@@ -37,13 +32,13 @@ body {
 color:white ;
 }
 
-.main {
-  grid-area: main;
-  background-color: black ;
+.ma {
+  grid-area: ma;
+  background-color: black;
 }
 
-.footer {
-  grid-area: footer;
+.end {
+  grid-area: end;
   background-color: black ;
   color :white ;
 }
@@ -54,9 +49,9 @@ color:white ;
   grid-template:
 
     "navbar"  50px
-    "main"    auto
+    "ma"    auto
     "sidebar" 100px
-    "footer"  auto;
+    "end"  auto;
 }
 
 @media (min-width: 600px) {
@@ -65,12 +60,13 @@ color:white ;
     grid-template:
 
       "navbar  navbar" auto
-      "sidebar main"   auto
-      "footer  footer" 400px /
+      "sidebar ma"   auto
+      "end  end" 400px /
       200px    auto;
   }
 }
-.galeria{
+
+.galeria{
     font-family: open sans;
     color:white ;
 }

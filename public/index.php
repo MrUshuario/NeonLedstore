@@ -23,12 +23,7 @@ $router = new Router();
 
 // Zona Privada
     $router->post('/login/verificar',[AdminController::class,'index1']);
-
-    //Compra 
-    $router->get('/compra',[CompraController::class,'Compra']);
-
-//Compra DETALLE
-    $router->get('/compraDetalle',[CompraDetalleController::class,'CompraDetalle']);
+   
 
 //Color 
 /*
@@ -96,6 +91,27 @@ $router = new Router();
     $router->post('/cliente/estado',[ClienteController::class,'estado']); 
     $router->post('/cliente/update',[ClienteController::class,'update']); 
     $router->post('/cliente/delete',[ClienteController::class,'delete']);
+
+//CompraDetalle
+
+    //method get 
+    $router->get('/compraDetalle',[CompraDetalleController::class,'CompraDetalle']);
+    $router->get('/compraDetalle/listar',[CompraDetalleController::class,'listar']); 
+     //aun no implementado
+
+    //method post
+    $router->post('/compraDetalle/create',[CompraDetalleController::class,'create']);
+
+//Compra
+
+    //method get 
+    $router->get('/compra',[CompraController::class,'Compra']);
+    $router->get('/compra/listar',[CompraController::class,'listar']); 
+     //aun no implementado
+
+    //method post
+    $router->post('/compra/create',[CompraController::class,'create']);
+
 
 // BotonConfiguracion
     // method get

@@ -38,14 +38,15 @@ class CompraDetalle extends ActiveRecord {
 
     
 
-    public function verificarCod(){
 
-        $query = "SELECT * FROM ".static::$tabla." WHERE cod_id='".$this->cod_id."'";
-
-        $resultado = self::$db->query($query);
-
+    public static function compradetXProducto()
+    {
+      $query = "SELECT  co.id, co.cod_id, co.det_cantidad, co.det_color, concat(co.pro_id,',',pro.pro_nombre)  AS pro_id
+      FROM tab_compra_detalle AS co INNER JOIN tab_producto AS pro
+      ON co.id = pro.id";
+  
+        $resultado = static::consultarSQL($query);
         return $resultado;
-
     }
 
     

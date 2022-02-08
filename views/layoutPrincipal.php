@@ -52,9 +52,16 @@
 
     <link rel="stylesheet" href="build/css/principal/navs.css">
 
+    <link rel="stylesheet" href="build/css/grid.css">
+
     <link rel="stylesheet" href="build/css/neon.css">
 
     <link rel="stylesheet" href="build/css/estilos.css">
+
+    <!-- Modal Consulta Enviada(Correo) -->
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 
 </head>
