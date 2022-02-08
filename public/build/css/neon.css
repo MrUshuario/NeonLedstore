@@ -238,4 +238,12 @@ option {
     background-color:rgb(71, 18, 60); 
 }
 
+/*restringir solo numeros en contacto*/
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+input[type=number] { -moz-appearance:textfield; }
 
