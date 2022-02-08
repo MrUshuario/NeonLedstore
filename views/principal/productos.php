@@ -272,7 +272,7 @@ Precio
 
 <div class="overlay">
 
-<h2>ver detalle </h2>
+<h2>Ver detalle </h2>
 
 </div>
 
