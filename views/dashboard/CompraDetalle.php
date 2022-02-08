@@ -56,4 +56,4 @@
 
 </div>
 
-<script src="build/js/ajax/ajax.cliente.js"></script>
+<script src="build/js/ajax/ajax.compraDetalle.js"></script>

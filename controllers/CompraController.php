@@ -15,7 +15,7 @@ class CompraController {
 
     public static function listar(Router $router){
 
-        $listado = Cliente::listar();
+        $listado = Compra::listar();
        
         $json = json_encode([
             "data" => $listado
