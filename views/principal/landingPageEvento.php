@@ -48,12 +48,12 @@
                         <h1 class="my-3 fs-2 neones p-50">¿Quieres tener un Evento visualmente atractivo?</h1>
                         <div class="row d-flex justify-content-center">
 
-                        <form class="landingPageForm col-12 col-sm-10" method="POST" action="/build/enviingPage">
+                        <form class="landingPageForm col-12 col-sm-10" method="POST">
                             <div class="modal-field">
                                 <input type="text" class="neontextlanding bg-transparent text-center form-control my-3 border-0" name="nombre" id="nombre" placeholder="Nombres" required>
                             </div>
                             <div class="modal-field">
-                                <input type="text" class="neontextlanding bg-transparent text-center form-control my-3 border-0" name="apellido" id="apellido" placeholder="Apellidos" required>
+                                <input type="text" class="neontextlanding bg-transparent text-center form-control my-3 border-0" name="apellido" id="apellidos" placeholder="Apellidos" required>
                             </div>
                             <div class="modal-field">
                                 <input type="email" class="neontextlanding bg-transparent text-center form-control my-3 border-0" name="correo" id="correo" placeholder="Correo Electrónico" required>

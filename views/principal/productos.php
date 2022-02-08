@@ -16,7 +16,7 @@
 
 <h1 class="title-product py-1 py-sm-3 text-start fw-bold">PRODUCTO</h1>
 
-<picture class="h-100 w-100 d-flex items-center">
+<picture class="w-100 d-flex items-center">
 
 <source media="(min-width: 576px)" srcset="/build/img/productos/brideToBe.webp">
 
@@ -32,7 +32,7 @@
 
                       <div class="h-100 d-flex align-items-center">
 
-                      <div class="contenedorTexto col-6 col-sm-4 pt-5 pt-sm-3 ">
+                      <div class="contenedorTexto ">
 
                       <p class="parrafo">Actualmente los diseños de neon led se han vuelto una tendencia interesante y
 

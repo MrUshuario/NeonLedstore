@@ -212,7 +212,7 @@ class PrincipalController {
                                 <table width="100%">
                                     <tr>
                                         <td style="text-align: center;">
-                                            <p style="font-size: 20px; font-weight: bold;">Hola '.$_POST['nombre'].', su consulta será procesada en la brevedad posible. ¡Gracias por contactarnos!</p>
+                                            <p style="font-size: 20px; font-weight: bold;">Hola '.$_POST['nombre'].' '.$_POST['apellidos'].', su consulta será procesada en la brevedad posible. ¡Gracias por contactarnos!</p>
                                             <p style="font-size: 16px; line-height: 23px; padding: 5px 0 15px;">En Neon Led Store te ayudamos a crear una nueva experiencia. Contamos con el toque ideal que necesitas para dejar impresionados a tu familia con una produccion visual espectacular, ingeniosa y de la mejor calidad; Realizamos paneles personalizados y a tu preferencia, descubre los mejores decorativos en luces Led y aprovecha nuestras grandes promociones.</p>
                                             <a href="https://neonled-store.com/" class="button">Visitar sitio web</a>
                                         </td>
