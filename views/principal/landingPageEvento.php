@@ -1,5 +1,4 @@
 <div class="landingPage bg-black">
-
   <!--INICIO CARRUSEL Bootstrap 5-->
   <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-indicators">
@@ -39,7 +38,7 @@
         </button>
 
         <!--Inicio Modal-->
-            <div class="modal fade" id="modalAsesoria" tabindex="-1" aria-labelledby="modalAsesoria" aria-hidden="true">
+        <div class="modal fade" id="modalAsesoria" tabindex="-1" aria-labelledby="modalAsesoria" aria-hidden="true">
             <div class="modal-dialog">
 
                 <div class="modal-content rounded-25" id="padreModalLanding">
@@ -49,17 +48,20 @@
                         <h1 class="my-3 fs-2 neones p-50">¿Quieres tener un Evento visualmente atractivo?</h1>
                         <div class="row d-flex justify-content-center">
 
-                        <form class="landingPageForm col-12 col-sm-10" method="POST">
+                        <form class="landingPageForm col-12 col-sm-10" method="POST" action="/build/enviingPage">
                             <div class="modal-field">
-                                <input type="text" class="neontextlanding bg-transparent text-center form-control my-3 border-0" name="nombre" placeholder="Nombres y Apellidos" required>
+                                <input type="text" class="neontextlanding bg-transparent text-center form-control my-3 border-0" name="nombre" id="nombre" placeholder="Nombres" required>
                             </div>
                             <div class="modal-field">
-                                <input type="email" class="neontextlanding bg-transparent text-center form-control my-3 border-0" name="correo" placeholder="Correo Electrónico" required>
+                                <input type="text" class="neontextlanding bg-transparent text-center form-control my-3 border-0" name="apellido" id="apellido" placeholder="Apellidos" required>
+                            </div>
+                            <div class="modal-field">
+                                <input type="email" class="neontextlanding bg-transparent text-center form-control my-3 border-0" name="correo" id="correo" placeholder="Correo Electrónico" required>
                             </div>
                             <div class="modal-field">
                                 <input type="tel" class="neontextlanding bg-transparent text-center form-control my-3 border-0 mb-3" name="telefono" id="telefono" placeholder="Número de celular" required>
                             </div> <!--crea tu propio boton, lo agregas en NEON.css -->
-                            <button type="submit" class="neonbottonlanding btn btn-primary my-sm-3 border-0" id="btn-modal-asesoria" onclick="cambiarEvento()">Pedir asesoria</button>
+                            <button type="submit" class="neonbottonlanding btn btn-primary my-sm-3 border-0" id="btn-modal-asesoria" onclick="Evento()">Pedir asesoria</button>
                         </form>
                     </div>     
                     </div>
