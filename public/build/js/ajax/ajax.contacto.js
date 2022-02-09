@@ -8,24 +8,36 @@ function enviarEmail(data){
         url:"/contacto/enviar",
         data:data,
         success: function(e){
+                
+            /*formContact.reset();   */
+
+            if (e){
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Envío Exitoso',
+                    width: 350,
+                    /*text: '¡Revise su correo!', */
+                    showConfirmButton: false,
+                    timer: 2500,
+                    footer: '¡Revise su correo!'          
+                })
+            } else {
+                Swal.fire({
+                        icon: 'error',
+                        title: 'Oops!',
+                        text: '¡Error al enviar!',
+                        showConfirmButton: false,
+                        timer: 2500,
+                        footer: 'Intente Denuevo'
+                })
+            
+            }
             console.log(e);
         }
     });
 
+    formContact.reset();
 
-    $('#formContact').submit(function(e){
-        Swal.fire({
-            icon: 'success',
-            title: 'Consulta Enviada',
-            text: '¡Revise su Correo!',
-            showConfirmButton: false,
-            timer: 2500,
-        
-})
-
-})
-
-formContact.reset();
 }
 
 function saveCorreo(){
