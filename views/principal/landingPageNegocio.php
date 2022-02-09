@@ -1,5 +1,5 @@
 <div class="landingPage bg-black">
-
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <!--INICIO CARRUSEL Bootstrap 5-->
   <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-indicators">
@@ -52,7 +52,7 @@
                         <form class="formContact landingPageForm col-12 col-sm-10" method="POST">
                             <input type="hidden" id="consulta" value="formNegocio">
                             <div class="modal-field">
-                                <input type="text" class="neontextlanding bg-transparent text-center form-control my-3 border-0" name="nombre" id="nombre" placeholder="Apellidos" required>
+                                <input type="text" class="neontextlanding bg-transparent text-center form-control my-3 border-0" name="nombre" id="nombre" placeholder="Nombres" required>
                             </div>
                             <div class="modal-field">
                                 <input type="text" class="neontextlanding bg-transparent text-center form-control my-3 border-0" name="apellido" id="apellidos" placeholder="Apellidos" required>
