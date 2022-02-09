@@ -21,7 +21,6 @@
  background: rgba(175, 179, 164, 0.3)
 }
 
-
 .neontabla a {
     /* El margin right, */ 
     margin-left: 10px;
@@ -231,19 +230,4 @@
     transform:scale(1.1);
     overflow:hidden;     
 }
-
-
-option { 
-    color:white; 
-    background-color:rgb(71, 18, 60); 
-}
-
-/*restringir solo numeros en contacto*/
-input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button { 
-  -webkit-appearance: none; 
-  margin: 0; 
-}
-
-input[type=number] { -moz-appearance:textfield; }
 

@@ -17,6 +17,7 @@
                     <th>Apellidos</th>
                     <th>email</th>
                     <th>Clave</th>
+                    <th>Telefono</th>
                     <th>Estado</th>
                     <th>Editar/Borrar</th>
                 </tr>
@@ -59,6 +60,11 @@
                     <div class="mb-3">
                         <label for="nombre">Clave Cliente</label>
                         <input type="password" class="form-control" id="cli_clave">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="nombre">Telefono Cliente</label>
+                        <input type="number" class="form-control" id="cli_telefono">
                     </div>
 
                     <div class="mb-3">
