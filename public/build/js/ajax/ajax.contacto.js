@@ -42,7 +42,7 @@ function enviarEmail(data){
 }
 
 function saveCorreo(){
-    $("#formContact").submit(function(e){
+    $(".formContact").submit(function(e){
         e.preventDefault();
         const data = {
             nombre: $("#nombre").val().trim(),
