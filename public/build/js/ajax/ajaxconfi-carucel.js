@@ -53,9 +53,9 @@
             imagen3.src="/build/img/landingPage/lp-hogar/h3.jpg";
             
             clickHogar="img2";
-            console.log(clickHogar);
+            
         } else if(clickHogar=="img2"){
-            imagen.src="/build/img/landingPage/lp-hogar/h4.jpg";
+            imagen.src="/build/img/landingPage/lp-hogar/h4.jpeg";
 
             imagen2.src="/build/img/landingPage/lp-hogar/h5.jpg";
 
@@ -113,11 +113,20 @@
             clickNegocio="img1";
         } 
     }
+
+
     function capturaData() {
         var nombre=document.getElementById("nombre").value;
-        console.log(nombre);
+        var apellidos=document.getElementById("apellidos").value;
+        var correo=document.getElementById("correo").value;
+        alert("Recopilando informacion " + nombre);
+
+        function mostar(){
+            swal('Listo!','Datos enviados correctamente','success');
+        }
     }
 
+    
     function Evento() {
         cambiarEvento();
         capturaData();
