@@ -119,11 +119,18 @@
         var nombre=document.getElementById("nombre").value;
         var apellidos=document.getElementById("apellidos").value;
         var correo=document.getElementById("correo").value;
-        alert("Recopilando informacion " + nombre);
+        var telefono=document.getElementById("telefono").value;
+        alert("nombre " + nombre + " telefono " + telefono);
+        console.log("Recopilacion de información");
 
-        function mostar(){
+        if (nombre=="" || apellidos=="" || correo=="" || telefono=="") {
+            swal('Error','Datos por completar','error');
+            console.log("error a mostrar");
+        } else {
             swal('Listo!','Datos enviados correctamente','success');
+            console.log("entrando a mostrar");
         }
+        
     }
 
     
