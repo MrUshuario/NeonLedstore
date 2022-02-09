@@ -49,7 +49,8 @@
                         <h1 class="my-3 fs-2 neones p-50">¿Quieres tener un Evento visualmente atractivo?</h1>
                         <div class="row d-flex justify-content-center">
 
-                        <form class="landingPageForm col-12 col-sm-10" method="POST" action="/home">
+                        <form class="landingPageForm col-12 col-sm-10" method="POST">
+                            <input type="hidden" id="consulta" value="formNegocio"> <!-- a futuro cambiar value a formEvento -->
                             <div class="modal-field">
                                 <input type="text" class="neontextlanding bg-transparent text-center form-control my-3 border-0" name="nombre" placeholder="Nombres y Apellidos" required>
                             </div>
@@ -80,175 +81,110 @@
 
             </div>
 
-<!--LandingPageEvento-->
-            <div class="landin1 arreglo">
+    <!--LandingPageEvento-->
+    <div class="landin1 arreglo">
+        <h1 class="title">¡LOS MEJORES DISEÑOS PARA EVENTOS!</h1>
+        <div class="container">
+            <div class="card">
+                <img src="\build\img\landingPage\lp-evento\graduacion.webp">
+                    <h4>Graduación</h4>
+            </div>
+            <div class="card">
+                <img src="\build\img\landingPage\lp-evento\matrimonio.webp">
+                    <h4>Matrimonio</h4>
+            </div>
+            <div class="card">
+                <img src="\build\img\landingPage\lp-evento\aniversario.webp">
+                    <h4>Aniversario</h4>
+            </div>
+            <div class="card">
+                <img src="\build\img\landingPage\lp-evento\recepcion.webp">
+                    <h4>Recepción</h4>
+            </div>
+            <div class="card">
+                <img src="\build\img\landingPage\lp-evento\sala-nocturna.webp">
+                    <h4>Sala Nocturna</h4>
+            </div>
+            <div class="card">
+                <img src="\build\img\landingPage\lp-evento\pista-de-baile.webp">
+                    <h4>Pista de Baile</h4>
+            </div>
+            <div class="card">
+                <img src="\build\img\landingPage\lp-evento\concierto.webp">
+                    <h4>Concierto</h4>
+            </div>
+            <div class="card">
+                <img src="\build\img\landingPage\lp-evento\festival.webp">
+                    <h4>Festival</h4>
+            </div>
+            <div class="card">
+                <img src="\build\img\landingPage\lp-evento\reunion.webp">
+                    <h4>Reuniones</h4>
+            </div>
+        </div>
+    </div>   
 
-                <h1 class="title">¡LOS MEJORES DISEÑOS PARA EVENTOS!</h1>
-
-                    <div class="container">
-
-                        <div class="card">
-                            <img src="\build\img\landingPage\lp-evento\graduacion.webp">
-                                <h4>Graduación</h4>
-                        </div>
-
-                        <div class="card">
-                            <img src="\build\img\landingPage\lp-evento\matrimonio.webp">
-                                <h4>Matrimonio</h4>
-                        </div>
-
-                        <div class="card">
-                            <img src="\build\img\landingPage\lp-evento\aniversario.webp">
-                                <h4>Aniversario</h4>
-                        </div>
-
-                        <div class="card">
-                            <img src="\build\img\landingPage\lp-evento\recepcion.webp">
-                                <h4>Recepción</h4>
-                        </div>
-        
-                        <div class="card">
-                            <img src="\build\img\landingPage\lp-evento\sala-nocturna.webp">
-                                <h4>Sala Nocturna</h4>
-                        </div>
-
-                        <div class="card">
-                            <img src="\build\img\landingPage\lp-evento\pista-de-baile.webp">
-                                <h4>Pista de Baile</h4>
-                        </div>
-
-                        <div class="card">
-                            <img src="\build\img\landingPage\lp-evento\concierto.webp">
-                                <h4>Concierto</h4>
-                        </div>
-
-                        <div class="card">
-                            <img src="\build\img\landingPage\lp-evento\festival.webp">
-                                <h4>Festival</h4>
-                        </div>
-
-                        <div class="card">
-                            <img src="\build\img\landingPage\lp-evento\reunion.webp">
-                                <h4>Reuniones</h4>
-                        </div>
-
-                    </div>
-            </div>   
-           
 <!--Fin LandinPageEvento-->
 
-<div class="personalizado row d-flex align-items-end ">
-
-<div class="col-12 col-sm-4 my-3 my-sm-5">
-
-    <img class="personalizadoImage mx-auto d-block" src="/build/img/nightJazz.webp" alt="logo" loading="lazy">
-
-    <p class="personalizadoParagraph border border-5 rounded-3 text-center m-3 p-3 lh-sm">Ofrecemos diseños personalizados a pedido del cliente</p>
-
-</div>
-
-<div class="col-12 col-sm-4 my-3 my-sm-5">
-
-    <img class="personalizadoImage mx-auto d-block" src="/build/img/delivery.webp" alt="logo" loading="lazy">
-
-    <p class="deliveryParagraph border border-5 rounded-3 text-center m-3 py-3 px-5 lh-sm">Delivery gratis a todos los distritos de Lima y Provincia</p>
-
-</div>
-
-<div class="col-12 col-sm-4 my-3 my-sm-5">
-
-    <div class="row">
-
-        <img class="personalizadoImage precio mx-auto d-block" src="/build/img/precio.webp" alt="logo" loading="lazy">   
-
-    </div>
-
-    <p class="fabricantesParagraph border border-5 rounded-3 text-center m-3 p-3 lh-sm">Somos fabricantes y ofrecemos los productos a un excelente precio</p>
-
-</div>
-
-</div>
-
-            <div class="row empresasQue py-2 py-sm-5">
-
-                <h2 class="empresasQueTitle mb-2 mb-sm-5">Empresas que trabajan con nosotros</h2>
-
-                <div class="col-3 d-none d-sm-block">
-
-                    <img class="empresasQueImage mx-auto d-block" src="/build/img/metacolor.webp" alt="logo" loading="lazy">
-
-                </div>
-
-                <div class="col-3 d-none d-sm-block">
-
-                    <img class="empresasQueImage mx-auto d-block" src="/build/img/digimedia.webp" alt="logo" loading="lazy">
-
-                </div>
-
-                <div class="col-3 d-none d-sm-block">
-
-                    <img class="empresasQueImage mx-auto d-block" src="/build/img/nocheDePatas.webp" alt="logo" loading="lazy">
-
-                </div>
-
-                <div class="col-3 d-none d-sm-block">
-
-                    <img class="empresasQueImage mx-auto d-block" src="/build/img/aje.webp" alt="logo" loading="lazy">
-
-                </div>
-
-                <div id="carouselExampleControls2" class="carousel slide col-12 my-3 d-block d-sm-none" data-bs-ride="carousel">
-
-                    <div class="carousel-inner row m-0">
-
-                        <div class="carousel-item col-6 col-sm-12 active " data-bs-interval="2000">
-
-                            <img class="empresasQueImage mx-auto d-block" src="/build/img/metacolor.webp" alt="logo" loading="lazy">
-
-                        </div>
-
-                        <div class="carousel-item col-6 col-sm-12" data-bs-interval="2000">
-
-                            <img class="empresasQueImage mx-auto d-block" src="/build/img/digimedia.webp" alt="logo" loading="lazy">
-
-                        </div>
-
-                        <div class="carousel-item col-6 col-sm-12" data-bs-interval="2000">
-
-                            <img class="empresasQueImage mx-auto d-block" src="/build/img/nocheDePatas.webp" alt="logo" loading="lazy">
-
-                        </div>
-
-                        <div class="carousel-item col-6 col-sm-12" data-bs-interval="2000">
-
-                            <img class="empresasQueImage mx-auto d-block" src="/build/img/aje.webp" alt="logo" loading="lazy">
-
-                        </div>
-
-                    </div>
-
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls2" data-bs-slide="prev">
-
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-
-                        <span class="visually-hidden">Previous</span>
-
-                    </button>
-
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls2" data-bs-slide="next">
-
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-
-                        <span class="visually-hidden">Next</span>
-
-                    </button>
-
-                </div>
-
-            </div>
-
+    <div class="personalizado row d-flex align-items-end">
+        <div class="col-12 col-sm-4 my-3 my-sm-5">
+            <img class="personalizadoImage mx-auto d-block" src="/build/img/nightJazz.webp" alt="logo" loading="lazy">
+            <p class="personalizadoParagraph border border-5 rounded-3 text-center m-3 p-3 lh-sm">Ofrecemos diseños personalizados a pedido del cliente</p>
         </div>
-
+        <div class="col-12 col-sm-4 my-3 my-sm-5">
+            <img class="personalizadoImage mx-auto d-block" src="/build/img/delivery.webp" alt="logo" loading="lazy">
+            <p class="deliveryParagraph border border-5 rounded-3 text-center m-3 py-3 px-5 lh-sm">Delivery gratis a todos los distritos de Lima y Provincia</p>
+        </div>
+        <div class="col-12 col-sm-4 my-3 my-sm-5">
+            <div class="row">
+                <img class="personalizadoImage precio mx-auto d-block" src="/build/img/precio.webp" alt="logo" loading="lazy">   
+            </div>
+            <p class="fabricantesParagraph border border-5 rounded-3 text-center m-3 p-3 lh-sm">Somos fabricantes y ofrecemos los productos a un excelente precio</p>
+        </div>
     </div>
-<script type="text/javascript" src="\build\js\ajax\ajaxconfi-carucel.js">
-</script>    
+
+    <div class="row empresasQue py-2 py-sm-5">
+        <h2 class="empresasQueTitle mb-2 mb-sm-5">Empresas que trabajan con nosotros</h2>
+        <div class="col-3 d-none d-sm-block">
+            <img class="empresasQueImage mx-auto d-block" src="/build/img/metacolor.webp" alt="logo" loading="lazy">
+        </div>
+        <div class="col-3 d-none d-sm-block">
+            <img class="empresasQueImage mx-auto d-block" src="/build/img/digimedia.webp" alt="logo" loading="lazy">
+        </div>
+        <div class="col-3 d-none d-sm-block">
+            <img class="empresasQueImage mx-auto d-block" src="/build/img/nocheDePatas.webp" alt="logo" loading="lazy">
+        </div>
+        <div class="col-3 d-none d-sm-block">
+            <img class="empresasQueImage mx-auto d-block" src="/build/img/aje.webp" alt="logo" loading="lazy">
+        </div>
+        <div id="carouselExampleControls2" class="carousel slide col-12 my-3 d-block d-sm-none" data-bs-ride="carousel">
+            <div class="carousel-inner row m-0">
+                <div class="carousel-item col-6 col-sm-12 active " data-bs-interval="2000">
+                    <img class="empresasQueImage mx-auto d-block" src="/build/img/metacolor.webp" alt="logo" loading="lazy">
+                </div>
+                <div class="carousel-item col-6 col-sm-12" data-bs-interval="2000">
+                    <img class="empresasQueImage mx-auto d-block" src="/build/img/digimedia.webp" alt="logo" loading="lazy">
+                </div>
+                <div class="carousel-item col-6 col-sm-12" data-bs-interval="2000">
+                    <img class="empresasQueImage mx-auto d-block" src="/build/img/nocheDePatas.webp" alt="logo" loading="lazy">
+                </div>
+                <div class="carousel-item col-6 col-sm-12" data-bs-interval="2000">
+                    <img class="empresasQueImage mx-auto d-block" src="/build/img/aje.webp" alt="logo" loading="lazy">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls2" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls2" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="\build\js\ajax\ajaxconfi-carucel.js"></script>
+
+<script src="build/js/ajax/ajax.contacto.js"></script>

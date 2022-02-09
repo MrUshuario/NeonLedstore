@@ -111,7 +111,7 @@
                         <div class="card">
                             <img src="\build\img\landingPage\lp-negocio\restaurante.webp">
                                 <h4>Restaurante</h4>
-                         </div>
+                        </div>
 
                         <div class="card">
                             <img src="\build\img\landingPage\lp-negocio\Boutique.webp">
