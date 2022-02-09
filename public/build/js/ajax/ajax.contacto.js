@@ -37,7 +37,7 @@ function enviarEmail(data){
         }
     });
 
-    formContact.reset();
+    formContact1.reset();
 
 }
 
@@ -51,7 +51,7 @@ function saveCorreo(){
             telefono: $("#telefono").val().trim(),
             consulta: $("#consulta").val().trim()
         };
-        
+        console.log(data);
         enviarEmail(data);
     });
 }

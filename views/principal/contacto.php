@@ -5,7 +5,7 @@
     <p type="hidden" class="titulocont"> Contacto </p>
     <div class="container">
         <section class="row pb-3">
-            <form class="formContact" method="POST">
+            <form class="formContact" id="formContact1" method="POST">
                 <div class="container">
                     <div class="row text-white mx-1 mx-sm-5 pt-3 mb-2 d-flex justify-content-end">
                         <div class="formulario col-12 col-sm-12  border neontabla">
