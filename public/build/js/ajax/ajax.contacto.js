@@ -22,6 +22,9 @@ function enviarEmail(data){
                     timer: 2500,
                     footer: '¡Revise su correo!'          
                 })
+
+                console.log(data.nombre);
+
             } else {
                 Swal.fire({
                         icon: 'error',
@@ -37,7 +40,7 @@ function enviarEmail(data){
         }
     });
 
-    formContact.reset();
+    formContact1.reset();
 
 }
 
