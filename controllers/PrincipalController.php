@@ -308,11 +308,11 @@ class PrincipalController {
 
             $mail->Body = $contenido;
 
-            if($mail->send()){
+            /*if($mail->send()){
                 $mensaje= 'Mensaje enviado Correctamente';
             }else{
                 $mensaje = 'El mensaje no se pudo enviar';
-            }
+            }*/
 
             echo json_encode([
                 "prueba" => $mail->send(),
