@@ -66,7 +66,7 @@
         } else {
             imagen.src="/build/img/landingPage/lp-hogar/h2.jpg";
 
-            imagen2.src="/build/img/landingPage/lp-hogar/h4.jpg";
+            imagen2.src="/build/img/landingPage/lp-hogar/h4.jpeg";
 
             imagen3.src="/build/img/landingPage/lp-hogar/h1.jpg";
 
@@ -113,16 +113,16 @@
             clickNegocio="img1";
         } 
     }
-
-
-    function capturaData() {
+    
+    // Swift de los formularios 
+    // caputra de data Evento
+    
+    function capturaDataEvento() {
         var nombre=document.getElementById("nombre").value;
         var apellidos=document.getElementById("apellidos").value;
         var correo=document.getElementById("correo").value;
         var telefono=document.getElementById("telefono").value;
-        alert("nombre " + nombre + " telefono " + telefono);
-        console.log("Recopilacion de información");
-
+        
         if (nombre=="" || apellidos=="" || correo=="" || telefono=="") {
             swal('Error','Datos por completar','error');
             console.log("error a mostrar");
@@ -132,13 +132,56 @@
         }
         
     }
+    
+    // caputra de data Hogar
 
+    function capturaDataHogar() {
+        var nombre=document.getElementById("nombre").value;
+        var apellidos=document.getElementById("apellidos").value;
+        var correo=document.getElementById("correo").value;
+        var telefono=document.getElementById("telefono").value;
+        
+        if (nombre=="" || apellidos=="" || correo=="" || telefono=="") {
+            swal('Error','Datos por completar','error');
+            console.log("error a mostrar");
+        } else {
+            swal('Listo!','Datos enviados correctamente','success');
+            console.log("entrando a mostrar");
+        }
+    }
+
+    // caputra de data Negocio
+
+    function capturaDataNegocio() {
+        var nombre=document.getElementById("nombre").value;
+        var apellidos=document.getElementById("apellidos").value;
+        var correo=document.getElementById("correo").value;
+        var telefono=document.getElementById("telefono").value;
+        
+        if (nombre=="" || apellidos=="" || correo=="" || telefono=="") {
+            swal('Error','Datos por completar','error');
+            console.log("error a mostrar");
+        } else {
+            swal('Listo!','Datos enviados correctamente','success');
+            console.log("entrando a mostrar");
+        }
+        
+    }
     
     function Evento() {
         cambiarEvento();
-        capturaData();
+        capturaDataEvento();
     }
 
-// Swift de los formularios 
+    function Hogar() {
+        cambiarHogar();
+        capturaDataHogar();
+    }
+
+    function Negocio() {
+        cambiarNegocio();
+        capturaDataNegocio();
+    }
+
 
     
