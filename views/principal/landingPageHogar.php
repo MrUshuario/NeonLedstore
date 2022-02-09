@@ -1,5 +1,5 @@
 <div class="landingPage bg-black">
-
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <!--INICIA CARRUSEL lAYOUTpRINCIPAL.php, AGREGAR LOS SCRIPT NECESARIO PARA QUE FUNCIONES, SI SUBES UN NUEVO SCRIPT, PUBLIC/BUILD/JS 
     https://www.youtube.com/watch?v=N7JXmnaVWL0&t=269s-->
     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
@@ -53,7 +53,7 @@
 
                         <form class="landingPageForm col-12 col-sm-10" method="POST">
                             <div class="modal-field">
-                                <input type="text" class="neontextlanding bg-transparent text-center form-control my-3 border-0" name="nombre" id="nombre" placeholder="Apellidos" required>
+                                <input type="text" class="neontextlanding bg-transparent text-center form-control my-3 border-0" name="nombre" id="nombre" placeholder="Nombres" required>
                             </div>
                             <div class="modal-field">
                                 <input type="text" class="neontextlanding bg-transparent text-center form-control my-3 border-0" name="apellido" id="apellidos" placeholder="Apellidos" required>
@@ -64,7 +64,7 @@
                             <div class="modal-field">
                                 <input type="number" class="neontextlanding bg-transparent text-center form-control my-3 border-0 mb-3" name="telefono" id="telefono" placeholder="Número de celular" required>
                             </div> <!--crea tu propio boton, lo agregas en NEON.css -->
-                            <button type="submit" class="neonbottonlanding btn btn-primary my-sm-3 border-0" id="btn-modal-asesoria" onclick="cambiarHogar()">Pedir asesoria</button>
+                            <button type="submit" class="neonbottonlanding btn btn-primary my-sm-3 border-0" id="btn-modal-asesoria" onclick="Hogar()">Pedir asesoria</button>
                         </form>
                     </div>     
                     </div>
