@@ -53,9 +53,9 @@
             imagen3.src="/build/img/landingPage/lp-hogar/h3.jpg";
             
             clickHogar="img2";
-            console.log(clickHogar);
+            
         } else if(clickHogar=="img2"){
-            imagen.src="/build/img/landingPage/lp-hogar/h4.jpg";
+            imagen.src="/build/img/landingPage/lp-hogar/h4.jpeg";
 
             imagen2.src="/build/img/landingPage/lp-hogar/h5.jpg";
 
@@ -113,4 +113,32 @@
             clickNegocio="img1";
         } 
     }
+
+
+    function capturaData() {
+        var nombre=document.getElementById("nombre").value;
+        var apellidos=document.getElementById("apellidos").value;
+        var correo=document.getElementById("correo").value;
+        var telefono=document.getElementById("telefono").value;
+        alert("nombre " + nombre + " telefono " + telefono);
+        console.log("Recopilacion de información");
+
+        if (nombre=="" || apellidos=="" || correo=="" || telefono=="") {
+            swal('Error','Datos por completar','error');
+            console.log("error a mostrar");
+        } else {
+            swal('Listo!','Datos enviados correctamente','success');
+            console.log("entrando a mostrar");
+        }
+        
+    }
+
+    
+    function Evento() {
+        cambiarEvento();
+        capturaData();
+    }
+
+// Swift de los formularios 
+
     
