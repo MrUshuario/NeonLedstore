@@ -16,7 +16,7 @@
 
 <h1 class="title-product py-1 py-sm-3 text-start fw-bold">PRODUCTO</h1>
 
-<picture class="w-100 d-flex items-center">
+<picture class="h-100 w-100 d-flex items-center">
 
 <source media="(min-width: 576px)" srcset="/build/img/productos/brideToBe.webp">
 
@@ -32,7 +32,7 @@
 
                       <div class="h-100 d-flex align-items-center">
 
-                      <div class="contenedorTexto ">
+                      <div class="contenedorTexto col-6 col-sm-4 pt-5 pt-sm-3 ">
 
                       <p class="parrafo">Actualmente los diseños de neon led se han vuelto una tendencia interesante y
 
@@ -48,7 +48,7 @@
 
 </nav>
 
-<aside class="sidebar">
+<aside class="aside">
 
 <article class="article1 pb-5">
 
@@ -134,13 +134,13 @@ Precio
 
 </div>
 
-</aside>
+</aside >
 
  
 
  
 
-<article class="ma">
+<ma class="ma">
 
 <div class="galeria">
 
@@ -272,7 +272,7 @@ Precio
 
 <div class="overlay">
 
-<h2>ver detalle </h2>
+<h2>Ver detalle </h2>
 
 </div>
 
@@ -294,117 +294,10 @@ Precio
 
 </div>
 
+</ma>
+
 </article>
 
  
 
-<end class="end">
-
-<article class="article2 p-1 p-sm-5">
-
-<div class="container">
-
-<div class="row d-flex justify-content-between mx-1 mx-sm-5 pb-3">
-
-<h2 class="tituloFotos text-white mb-4">FOTOS DE PRODUCTO</h2>
-
-<div class="col-5 py-1 py-sm-5">
-
-<picture>
-
-<source media="(min-width: 576px)" srcset="/build/img/s/isThisFustFantasy.webp">
-
-<img class="w-100" src="/build/img/productos/isThisFustFantasyMovil.webp" alt="isThisFustFantasy" loading="lazy">
-
-</picture>
-
-</div>
-
-<div class="col-5 py-2 py-sm-5">
-
-<picture>
-
-<source media="(min-width: 576px)" srcset="/build/img/productos/thania.webp">
-
-<img class="w-100" src="/build/img/productos/thaniaMovil.webp" alt="thania" loading="lazy">
-
-</picture>
-
-</div>
-
-<div class="col-5 py-2 py-sm-5">
-
-<picture>
-
-<source media="(min-width: 576px)" srcset="/build/img/productos/flamenco2.webp">
-
-<img class="w-100" src="/build/img/productos/flamenco2Movil.webp" alt="flamenco2" loading="lazy">
-
-</picture>
-
-</div>
-
-<div class="col-5 py-2 py-sm-5">
-
-<picture>
-
-<source media="(min-width: 576px)" srcset="/build/img/productos/slicesOpenLate.webp">
-
-<img class="w-100" src="/build/img/productos/slicesOpenLateMovil.webp" alt="slicesOpenLate" loading="lazy">
-
-</picture>
-
-</div>
-
-<div class="col-5 py-2 py-sm-5">
-
-<picture>
-
-<source media="(min-width: 576px)" srcset="/build/img/productos/tarro.webp">
-
-<img class="w-100" src="/build/img/productos/tarroMovil.webp" alt="tarro" loading="lazy">
-
-</picture>
-
-</div>
-
-<div class="col-5 py-2 py-sm-5">
-
-<picture>
-
-<source media="(min-width: 576px)" srcset="/build/img/productos/amongus.webp">
-
-<img class="w-100" src="/build/img/productos/amongusMovil.webp" alt="amongus" loading="lazy">
-
-</picture>
-
-</div>
-
-</div>
-
-<div class="col-12 col-sm-8 px-5">
-
-<h2 class="tituloFormulario text-center text-white">Contáctanos</h2>                       
-
-<input class="p-2 input-contact border-0 border-bottom bg-black rounded w-100 me-1 me-sm-4 my-3 d-block text-white" type="text" name="nombre" id="nombre" placeholder="Nombre" required>
-
-<input class="p-2 input-contact border-0 border-bottom bg-black rounded w-100 me-1 me-sm-4 my-3 d-block text-white" type="email" name="correo" id="correo" placeholder="Correo" required>
-
-<input class="p-2 input-contact border-0 border-bottom bg-black rounded w-100 me-1 me-sm-4 my-3 d-block text-white" type="number" name="telefono" id="telefono" pattern="[0-9]{9,12}" placeholder="N° de celular" required>
-
-<input class="p-2 input-contact border-0 border-bottom bg-black rounded w-100 me-1 me-sm-4 my-3 d-block text-white" type="text" name="pregunta" id="pregunta" placeholder="Mensaje" required>
-
-<button class="button-contact btn m-2 mx-auto d-block text-white border-white" name="enviar" id="enviar">Enviar</button>
-
-</div>
-
-<div class="col-12 col-sm-4 py-2 p-1 p-sm-3 border">
-
-<img class="imagenFormulario mx-auto d-block my-3" src="/build/img/productos/neonLedStore.webp" alt="introNLS" loading="lazy">
-
-</div>
-
-</end>
-
-</div>
-
+ 
