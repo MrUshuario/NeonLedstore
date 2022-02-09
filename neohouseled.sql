@@ -256,6 +256,55 @@ ALTER TABLE `tab_compra_detalle`
 --
 ALTER TABLE `tab_producto`
   ADD CONSTRAINT `fk_cat_id` FOREIGN KEY (`cat_id`) REFERENCES `tab_categoria` (`id`);
+
+CREATE TABLE `tab_roles` (
+
+`id` INT(5) NOT NULL PRIMARY KEY,
+
+`rol_nombre` INT NOT NULL);
+
+
+DROP TABLE IF EXISTS tab_cliente;
+
+
+CREATE TABLE tab_cliente (
+
+`id` INT NOT NULL PRIMARY KEY,
+
+`cli_nombre` VARCHAR(120),
+
+`cli_apellidos` VARCHAR(120),
+
+`cli_email` VARCHAR(120),
+
+`cli_clave` VARCHAR(255),
+
+`cli_estado` CHAR(1),
+
+`rol_id` INT(5) NOT NULL,
+
+`cli_telefono` VARCHAR(10) NOT NULL);
+
+ALTER TABLE tab_cliente ADD CONSTRAINT tab_cliente_`rol_id`_tab_roles_id FOREIGN KEY (`rol_id`) REFERENCES tab_roles(id);
+
+CREATE TABLE `tab_visitantes` (
+
+`id` INT NOT NULL PRIMARY KEY,
+
+`vit_nombre` VARCHAR(120),
+
+`vit_apellidos` VARCHAR(120),
+
+`vit_email` VARCHAR(120),
+
+`vit_telefono` VARCHAR(10) NOT NULL,
+
+`rol_id` INT(5) NOT NULL,
+
+FOREIGN KEY(`rol_id`) REFERENCES tab_roles(id));
+
+
+
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
