@@ -19,7 +19,8 @@ function tableAll(){
       {data:"cli_nombre"},
       {data:"cli_apellidos"},
       {data:"cli_email"},
-      {data:"cli_clave"}, 
+      {data:"cli_clave"},
+      {data:"cli_telefono"},  
       { data: null,
           render: function(data, type, row){
             return `<button data-idcliente="${data.id}" class="btn ${data.cli_estado == "1"? 'btn-success' : 'btn-danger'}" id="btnEstado">${data.cli_estado}</button>`;
@@ -47,6 +48,7 @@ function saveCliente(){
     let cli_apellidos = $("#cli_apellidos").val();
     let cli_email = $("#cli_email").val();
     let cli_clave = $("#cli_clave").val();
+    let cli_telefono = $("#cli_telefono").val();
     let cli_estado = $("#cli_estado").val();
     
     const data = {
@@ -55,11 +57,12 @@ function saveCliente(){
       cli_apellidos: cli_apellidos,
       cli_email: cli_email,
       cli_clave: cli_clave,
+      cli_telefono: cli_telefono,
       cli_estado: cli_estado,
     };
     console.log(id);
     if (id=="") {
-      if (cli_nombre == "" || cli_apellidos == "" || cli_email == "" || cli_clave == "" || cli_estado == ""){
+      if (cli_nombre == "" || cli_apellidos == "" || cli_email == "" || cli_clave == "" || cli_estado == "" || cli_telefono == ""){
         swal({
           title:"Completar los campos requeridos",
           icon: "error"
@@ -126,6 +129,7 @@ function clean() {
   $("#cli_apellidos").val("");
   $("#cli_email").val("")
   $("#cli_clave").val("")
+  $("#cli_telefono").val("")
   $("#cli_estado").val("")
 }
 
@@ -155,6 +159,7 @@ function obtenerData() {
         $("#cli_apellidos").val(data.cli_apellidos);
         $("#cli_email").val(data.cli_email)
         $("#cli_clave").val(data.cli_clave)
+        $("#cli_telefono").val(data.cli_telefono)
         $("#cli_estado").val(data.cli_estado)
       },
     });
