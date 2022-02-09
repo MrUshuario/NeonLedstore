@@ -27,11 +27,11 @@
             imgCar="img3";
 
         } else {
-            imagen.src="/build/img/landingPage/lp-evento/e5.jpg";
+            imagen.src="/build/img/landingPage/lp-evento/e4.jpg";
 
             imagen2.src="/build/img/landingPage/lp-evento/e3.jpg";
 
-            imagen3.src="/build/img/landingPage/lp-evento/e2.jpg";
+            imagen3.src="/build/img/landingPage/lp-evento/e5.jpg";
 
             imgCar="img1";
         } 
@@ -54,6 +54,7 @@
             
             clickHogar="img2";
             console.log(clickHogar);
+            
         } else if(clickHogar=="img2"){
             imagen.src="/build/img/landingPage/lp-hogar/h4.jpg";
 
@@ -104,11 +105,11 @@
             clickNegocio="img3";
 
         } else {
-            imagen.src="/build/img/landingPage/lp-negocio/n3.jpg";
+            imagen.src="/build/img/landingPage/lp-negocio/n4.jpg";
 
-            imagen2.src="/build/img/landingPage/lp-negocio/n1.jpg";
+            imagen2.src="/build/img/landingPage/lp-negocio/n3.jpg";
 
-            imagen3.src="/build/img/landingPage/lp-negocio/n5.jpg";
+            imagen3.src="/build/img/landingPage/lp-negocio/n2.jpg";
 
             clickNegocio="img1";
         } 

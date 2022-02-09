@@ -8,10 +8,11 @@ function enviarEmail(data){
         url:"/contacto/enviar",
         data:data,
         success: function(e){
-                
+            let json = JSON.parse(e);
+
             /*formContact.reset();   */
 
-            if (e){
+            if (json.prueba == true){
                 Swal.fire({
                     icon: 'success',
                     title: 'Envío Exitoso',
