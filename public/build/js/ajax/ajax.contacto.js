@@ -51,7 +51,7 @@ function saveCorreo(){
             telefono: $("#telefono").val().trim(),
             consulta: $("#consulta").val().trim()
         };
-        console.log(data);
+        console.log(entreando);
         enviarEmail(data);
     });
 }
