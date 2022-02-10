@@ -42,22 +42,22 @@
                     <input type="hidden" id="id">
                     <div class="mb-3">
                         <label for="nombre">Nombre Visitante</label>
-                        <input type="text" class="form-control" id="cli_nombre">
+                        <input type="text" class="form-control" id="vis_nombre">
                     </div>
 
                     <div class="mb-3">
                         <label for="nombre">Apellido Visitante</label>
-                        <input type="text" class="form-control" id="cli_apellidos">
+                        <input type="text" class="form-control" id="vis_apellidos">
                     </div>
 
                     <div class="mb-3">
                         <label for="nombre">Email Visitante</label>
-                        <input type="text" class="form-control" id="cli_email">
+                        <input type="text" class="form-control" id="vis_email">
                     </div>
 
                     <div class="mb-3">
                         <label for="nombre">Telefono Visitante</label>
-                        <input type="number" class="form-control" id="cli_telefono">
+                        <input type="number" class="form-control" id="vis_telefono">
                     </div>
 
                     <div class="modal-footer">
