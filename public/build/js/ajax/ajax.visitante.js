@@ -60,6 +60,11 @@ function saveVisitante(){
           icon: "error"
         });
       } else {
+        function validarEmailReg(evento){
+
+exprEMAIL= new RegExp (/^[\w-\.]{3,}@([\w-]{2,}\.)*([\w-]{2,}\.)[\w-]{2,4}$/);
+
+email=document.getElementById("vis_email").value;
         create(data)
       }
 
