@@ -13,6 +13,7 @@ use Controllers\ProductoColorController; //borar
 use Controllers\GraficosController;
 use Controllers\ConfiguracionController;
 use Controllers\CompraController;
+use Controllers\VisitanteController;
 use MVC\Router;
 
 $router = new Router();
@@ -91,6 +92,22 @@ $router = new Router();
     $router->post('/cliente/estado',[ClienteController::class,'estado']); 
     $router->post('/cliente/update',[ClienteController::class,'update']); 
     $router->post('/cliente/delete',[ClienteController::class,'delete']);
+
+//Visitantes
+
+    //RUTAS AUN NO PROTEGIDAS
+    //method get 
+    $router->get('/visitante',[VisitanteController::class,'index']);
+    $router->get('/visitante/listar',[VisitanteController::class,'listar']); 
+     //aun no implementado
+
+    //method post
+    $router->post('/visitante/getVisitante',[VisitanteController::class,'getVisitante']);
+    $router->post('/visitante/create',[VisitanteController::class,'create']);
+    $router->post('/visitante/estado',[VisitanteController::class,'estado']); 
+    $router->post('/visitante/update',[VisitanteController::class,'update']); 
+    $router->post('/visitante/delete',[VisitanteController::class,'delete']);
+
 
 //CompraDetalle
 
