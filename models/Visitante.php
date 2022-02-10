@@ -30,10 +30,5 @@ class Visitante extends ActiveRecord {
         return $resultado;
     }
     
-    public function editEstado()
-    {
-        $query = "UPDATE " . static::$tabla . " SET cli_estado='" . $this->cli_estado . "' WHERE id=" . $this->id;
-        $resultado = self::$db->query($query);
-        return $resultado;
-    }
+    
 }
