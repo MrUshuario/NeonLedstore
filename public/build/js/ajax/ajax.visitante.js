@@ -41,7 +41,7 @@ function saveVisitante(){
     let vis_apellidos = $("#vis_apellidos").val();
     let vis_email = $("#vis_email").val();
     let vis_telefono = $("#vis_telefono").val();
-    let vis_estado = $("#vis_estado").val();
+    
     //renzo realizar
     const data = {
       id: id,
@@ -126,7 +126,7 @@ function clean() {
 }
 
 function cleanForm() {
-  $(document).on("click", "#model-cliente", function () {
+  $(document).on("click", "#model-visitante", function () {
     clean();
   });
 }
@@ -141,7 +141,7 @@ function obtenerData() {
     };
     $.ajax({
       type: "POST",
-      url: "/visitante/getCliente",
+      url: "/visitante/getVisitante ",
       data: data,
       success: function (e) {
         console.log(e); 
@@ -158,7 +158,7 @@ function obtenerData() {
   });
 }
 
-function deleteCliente() {
+function deleteVisitante() {
   $(document).on("click", "#delete", function (e) {
     let id = e.target.dataset.idvisitante;
     swal({
