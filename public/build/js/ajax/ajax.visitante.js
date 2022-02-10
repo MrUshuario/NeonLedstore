@@ -32,18 +32,17 @@ function tableAll(){
 
 }
 
-function saveCliente(){
-  $("#formCliente").submit(function(e){
+function saveVisitante(){
+  $("#formVisitante").submit(function(e){
     e.preventDefault();
 
     let id = $("#id").val();
-    let cli_nombre = $("#cli_nombre").val();
-    let cli_apellidos = $("#cli_apellidos").val();
-    let cli_email = $("#cli_email").val();
-    let cli_clave = $("#cli_clave").val();
-    let cli_telefono = $("#cli_telefono").val();
-    let cli_estado = $("#cli_estado").val();
-    
+    let vis_nombre = $("#vis_nombre").val();
+    let vis_apellidos = $("#vis_apellidos").val();
+    let vis_email = $("#vis_email").val();
+    let vis_telefono = $("#vis_telefono").val();
+    let vis_estado = $("#vis_estado").val();
+    //renzo realizar
     const data = {
       id: id,
       cli_nombre: cli_nombre,
@@ -116,6 +115,7 @@ function update(data) {
   });
 }
 
+//ISABELA 
 function clean() {
   $("#id").val("");
   $("#cli_nombre").val("");
@@ -131,12 +131,12 @@ function cleanForm() {
     clean();
   });
 }
-
+//ISABELA
 function obtenerData() {
   $(document).on("click", "#edit", function (e) {
     clean();
 
-    let id = e.target.dataset.idcliente;
+    let id = e.target.dataset.idvisitante;
     const data = {
       id: id,
     };
