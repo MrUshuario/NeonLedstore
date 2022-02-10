@@ -61,7 +61,7 @@ class PrincipalController {
             $mail->SMTPAuth=true;
             $mail->Host ='smtp.gmail.com';
             $mail->Username = 'renleds22@gmail.com';
-            $mail->Password = 'Neon2022';
+            $mail->Password = 'LedStore-2022';
 
             $mail->setFrom('renleds22@gmail.com','NeonLedStore'); //direccion desde donde se enviará
             $mail->addAddress($_POST['correo']); ////direccion de usuario que recibe

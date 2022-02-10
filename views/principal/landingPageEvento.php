@@ -49,7 +49,7 @@
                         <h1 class="my-3 fs-2 neones p-50">¿Quieres tener un Evento visualmente atractivo?</h1>
                         <div class="row d-flex justify-content-center">
 
-                        <form class="landingPageForm col-12 col-sm-10" method="POST">
+                        <form class="formContact landingPageForm col-12 col-sm-10" method="POST">
                             <input type="hidden" id="consulta" value="formNegocio"> <!-- a futuro cambiar value a formEvento -->
                             <div class="modal-field">
                                 <input type="text" class="neontextlanding bg-transparent text-center form-control my-3 border-0" name="nombre" id="nombre" placeholder="Nombres" required>
