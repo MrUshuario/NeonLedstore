@@ -9,10 +9,10 @@ function enviarEmail(data){
         data:data,
         success: function(e){
             let json = JSON.parse(e);
-
+                
             /*formContact.reset();   */
 
-            if (json.prueba == true){
+            if (e){
                 Swal.fire({
                     icon: 'success',
                     title: 'Envío Exitoso',
@@ -37,7 +37,9 @@ function enviarEmail(data){
         }
     });
 
-    formContact1.reset();
+    //formContact1.reset();    esta linea existe para limpiar el form de contacto.php, comentada
+    //porque trae problemas con los form de los landingPage.
+    //Posible solucion: leer #consulta y usar switch
 
 }
 
@@ -51,7 +53,8 @@ function saveCorreo(){
             telefono: $("#telefono").val().trim(),
             consulta: $("#consulta").val().trim()
         };
-        console.log(entreando);
+        
         enviarEmail(data);
+        console.log(data)
     });
 }

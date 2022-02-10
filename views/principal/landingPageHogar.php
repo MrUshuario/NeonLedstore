@@ -51,7 +51,7 @@
                     <div class="row d-flex justify-content-center">
                             <!-- FORM INHABILITADO PARA HACER PRUEBAS CON EL BOTON SUBMIT, POSTERIORMENTE REMOVER ONSUBMIT-->
 
-                        <form class="landingPageForm col-12 col-sm-10" method="POST">
+                        <form class="formContact landingPageForm col-12 col-sm-10" method="POST">
                             <input type="hidden" id="consulta" value="formNegocio"> <!-- a futuro cambiar value a formHogar -->
                             <div class="modal-field">
                                 <input type="text" class="neontextlanding bg-transparent text-center form-control my-3 border-0" name="nombre" id="nombre" placeholder="Nombres" required>
