@@ -12,7 +12,7 @@ function enviarEmail(data){
                 
             /*formContact.reset();   */
 
-            if (e){
+            if (json.prueba == true){
                 Swal.fire({
                     icon: 'success',
                     title: 'Envío Exitoso',
@@ -34,6 +34,8 @@ function enviarEmail(data){
             
             }
             console.log(e);
+            console.log(data.nombre);
+
         }
     });
 

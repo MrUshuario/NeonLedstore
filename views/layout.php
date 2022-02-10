@@ -69,6 +69,7 @@
                     <li><a href="/categoria"><i class="fas fa-th-large"></i> Categoria</a></li>
                     <li><a href="/compraDetalle"><i class="fas fa-tags"></i></i>Compra Detalle</a></li>
                     <li><a href="/compra"><i class="fas fa-shopping-basket"></i></i>Compra</a></li>
+                    <li><a href="/visitante"><i class="fas fa-person-booth"></i></i>Visitantes</a></li>
                     
                     <!-- por si se requieren más botones
                     <li class="hover-caja">
