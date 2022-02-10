@@ -49,7 +49,8 @@
                         <h1 class="my-3 fs-2 neones p-50">¿Quieres tener un negocio visualmente atractivo?</h1>
                         <div class="row d-flex justify-content-center">
 
-                        <form class="landingPageForm col-12 col-sm-10" method="POST">
+                        <form class="formContact landingPageForm col-12 col-sm-10" method="POST" action="">
+                            <input type="hidden" id="consulta" value="formNegocio">
                             <div class="modal-field">
                                 <input type="text" class="neontextlanding bg-transparent text-center form-control my-3 border-0" name="nombre" id="nombre" placeholder="Nombres" required>
                             </div>
@@ -62,7 +63,7 @@
                             <div class="modal-field">
                                 <input type="number" class="neontextlanding bg-transparent text-center form-control my-3 border-0 mb-3" name="telefono" id="telefono" placeholder="Número de celular" required>
                             </div> <!--crea tu propio boton, lo agregas en NEON.css -->
-                            <button type="submit" class="neonbottonlanding btn btn-primary my-sm-3 border-0"  id="btn-modal-asesoria Negocio" onclick="Negocio()">Pedir asesoria</button>
+                            <button type="submit" class="neonbottonlanding btn btn-primary my-sm-3 border-0"  id="btn-modal-asesoria Negocio">Pedir asesoria</button>
                         </form>
                     </div>     
                     </div>
@@ -110,7 +111,7 @@
                         <div class="card">
                             <img src="\build\img\landingPage\lp-negocio\restaurante.webp">
                                 <h4>Restaurante</h4>
-                         </div>
+                        </div>
 
                         <div class="card">
                             <img src="\build\img\landingPage\lp-negocio\Boutique.webp">
@@ -259,3 +260,5 @@
     </div>
 
 <script type="text/javascript" src="\build\js\ajax\ajaxconfi-carucel.js"></script> 
+
+<script src="build/js/ajax/ajax.contacto.js"></script>
