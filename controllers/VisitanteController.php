@@ -86,8 +86,8 @@ class VisitanteController {
     public static function update(){
         
         if($_SERVER['REQUEST_METHOD'] == 'POST'){
-            $cliente = Visitante::find($_POST['id']);
-            $cliente->sincronizar($_POST);
+            $visitante = Visitante::find($_POST['id']);
+            $visitante->sincronizar($_POST);
 
             $dd = $visitante->actualizar();
 
