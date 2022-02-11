@@ -36,7 +36,7 @@ class VisitanteController {
                     $listado = Visitante::listar();
                     $json = json_encode([
                         "STATUS"=>1,
-                        "mensaje"=>"Registro Correcto",
+                        "mensaje"=>"Registro Agregado",
                         "listas"=>$listado,
                         "v"=>$visitante
                     ]);

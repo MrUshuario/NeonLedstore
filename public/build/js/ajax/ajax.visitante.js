@@ -48,9 +48,7 @@ function saveVisitante(){
       vis_nombre: vis_nombre,
       vis_apellidos: vis_apellidos,
       vis_email: vis_email,
-   
       vis_telefono: vis_telefono,
-  
     };
     console.log(id);
     if (id=="") {
@@ -124,7 +122,7 @@ function clean() {
   $("#vis_apellidos").val("");
   $("#vis_email").val("")
   $("#vis_telefono").val("")
-  
+
 }
 
 function cleanForm() {
@@ -175,7 +173,7 @@ function deleteVisitante() {
           success: (e) => {
             if (e) {
               tableAll();
-              swal("eliminado correctamente!", {
+              swal("Eliminado correctamente!", {
                 icon: "success",
               });
             }

@@ -1,6 +1,6 @@
 <div class="content-principal container mt-20">
     <div class="flex-between">
-        <h3>Color</h3>
+        <h3>Visitantes</h3>
         <button type="button" id="model-Visitante" data-bs-toggle="modal" data-bs-target="#modalVisitante" class="btn-inline btn-success flex-center">
             <i class="fas fa-plus-circle"></i> Agregar Visitante
         </button>
@@ -15,9 +15,9 @@
                 <tr>
                     <th>Nombres</th>
                     <th>Apellidos</th>
-                    <th>email</th>
+                    <th>Email</th>
                     <th>Telefono</th>
-                    <th>Editar/Borrar</th>
+                    <th>Editar / Borrar</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -61,8 +61,8 @@
                     </div>
 
                     <div class="modal-footer">
-                        <button type="reset" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                         <button type="submit" class="btn btn-primary" id="save">Guardar</button>
+                        <button type="reset" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                     </div>
                 </form>
             </div>
