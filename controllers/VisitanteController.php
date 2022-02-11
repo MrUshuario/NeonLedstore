@@ -27,18 +27,18 @@ class VisitanteController {
 
     public static function create(Router $router){
         if($_SERVER["REQUEST_METHOD"] == "POST"){
-            $cliente = new Cliente($_POST);
-            $verificarCorreo = $cliente->verificarCorreo();
+            $visitante = new Visitante($_POST);
+            $verificarCorreo = $visitante->verificarCorreo();
             if ($verificarCorreo->num_rows == 0) {
-                $resultado = $cliente->crear(); 
+                $resultado = $visitante->crear(); 
                 
                 if($resultado) {
-                    $listado = Cliente::listar();
+                    $listado = Visitante::listar();
                     $json = json_encode([
                         "STATUS"=>1,
-                        "mensaje"=>"Registro Correcto",
+                        "mensaje"=>"Registro Agregado",
                         "listas"=>$listado,
-                        "c"=>$cliente
+                        "c"=>$visitante
                     ]);
                 }  else {
                     $json = json_encode([
@@ -52,20 +52,20 @@ class VisitanteController {
                 $json = json_encode ([
                     "STATUS"=>2,
                     "mensaje"=>"Este correo ya existe!!!",
-                    "c"=>$cliente
+                    "c"=>$visitante
                 ]);   
             }
             echo $json;
         }
     }
     
-    public static function getCliente(Router $router){
+    public static function getVisitante(Router $router){ //cliente<>visitante
         if($_SERVER['REQUEST_METHOD'] == 'POST'){ 
             $id = $_POST['id'];
             $id = intval($id);
-            $cliente = Cliente::find($id);
+            $visitante = Visitante::find($id);
             $json = json_encode([
-                "data"=>$cliente
+                "data"=>$visitante
             ]);
             echo $json;
         }
@@ -86,10 +86,10 @@ class VisitanteController {
     public static function update(){
         
         if($_SERVER['REQUEST_METHOD'] == 'POST'){
-            $cliente = Cliente::find($_POST['id']);
-            $cliente->sincronizar($_POST);
+            $visitante = Visitante::find($_POST['id']);
+            $visitante->sincronizar($_POST);
 
-            $dd = $cliente->actualizar();
+            $dd = $visitante->actualizar();
 
             $json = json_encode($dd);
 
@@ -98,7 +98,7 @@ class VisitanteController {
         
     }
 
-    public static function estado()
+  /* public static function estado()
     {
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $cliente = new Cliente($_POST);        
@@ -119,5 +119,6 @@ class VisitanteController {
         ]);
 
         }
-    }
+    } */
 }
+

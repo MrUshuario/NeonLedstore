@@ -1,6 +1,6 @@
 <div class="content-principal container mt-20">
     <div class="flex-between">
-        <h3>Color</h3>
+        <h3>Visitantes</h3>
         <button type="button" id="model-Visitante" data-bs-toggle="modal" data-bs-target="#modalVisitante" class="btn-inline btn-success flex-center">
             <i class="fas fa-plus-circle"></i> Agregar Visitante
         </button>
@@ -15,9 +15,9 @@
                 <tr>
                     <th>Nombres</th>
                     <th>Apellidos</th>
-                    <th>email</th>
+                    <th>Email</th>
                     <th>Telefono</th>
-                    <th>Editar/Borrar</th>
+                    <th>Editar / Borrar</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -42,27 +42,27 @@
                     <input type="hidden" id="id">
                     <div class="mb-3">
                         <label for="nombre">Nombre Visitante</label>
-                        <input type="text" class="form-control" id="cli_nombre">
+                        <input type="text" class="form-control" id="vis_nombre">
                     </div>
 
                     <div class="mb-3">
                         <label for="nombre">Apellido Visitante</label>
-                        <input type="text" class="form-control" id="cli_apellidos">
+                        <input type="text" class="form-control" id="vis_apellidos">
                     </div>
 
                     <div class="mb-3">
                         <label for="nombre">Email Visitante</label>
-                        <input type="text" class="form-control" id="cli_email">
+                        <input type="text" class="form-control" id="vis_email">
                     </div>
 
                     <div class="mb-3">
                         <label for="nombre">Telefono Visitante</label>
-                        <input type="number" class="form-control" id="cli_telefono">
+                        <input type="number" class="form-control" id="vis_telefono">
                     </div>
 
                     <div class="modal-footer">
-                        <button type="reset" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                         <button type="submit" class="btn btn-primary" id="save">Guardar</button>
+                        <button type="reset" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                     </div>
                 </form>
             </div>
