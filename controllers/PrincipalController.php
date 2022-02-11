@@ -53,7 +53,6 @@ class PrincipalController {
     public static function contactoEmail(){
         if($_SERVER['REQUEST_METHOD'] == 'POST'){
             $mail = new PHPMailer();
-
             $mail->isSMTP();
             $mail->Port = 465;
             //$mail->SMTPDebug = SMTP::DEBUG_SERVER;  -> solo para ver acciones del ruteo del mail

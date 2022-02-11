@@ -8,6 +8,7 @@ function enviarEmail(data){
         url:"/contacto/enviar",
         data:data,
         success: function(e){
+            console.log(e);
             let json = JSON.parse(e);
                 
             /*formContact.reset();   */
