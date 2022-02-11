@@ -54,7 +54,7 @@ function saveVisitante(){
     };
     console.log(id);
     if (id=="") {
-      if (vis_nombre == "" || vis_apellidos == "" || vis_email == "" || vis_clave == "" || vis_telefono == ""){
+      if (vis_nombre == "" || vis_apellidos == "" || vis_email == "" || vis_telefono == ""){
         swal({
           title:"Completar los campos requeridos",
           icon: "error"
