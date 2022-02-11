@@ -1,11 +1,14 @@
 <?php 
 
 namespace Controllers;
+//llama contraseña
+include 'contra.php';
 
 use MVC\Router;
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 
+define('contra', $contrasena);
 
 class PrincipalController {
     public static function index(Router $router){
@@ -60,7 +63,8 @@ class PrincipalController {
             $mail->SMTPAuth=true;
             $mail->Host ='smtp.gmail.com';
             $mail->Username = 'renleds22@gmail.com';
-            $mail->Password = 'LedStore-2022';
+            //temporal llamamos una contraseña para ocultarla
+            $mail->Password = contra;
 
             $mail->setFrom('renleds22@gmail.com','NeonLedStore'); //direccion desde donde se enviará
             $mail->addAddress($_POST['correo']); ////direccion de usuario que recibe
