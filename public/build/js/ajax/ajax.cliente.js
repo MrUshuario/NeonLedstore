@@ -72,7 +72,7 @@ function saveCliente(){
       }
 
     }else {
-     /* poner como arriba un if que mantenga que todo este relleno, y uno que verifique que el correo tenga un @*/
+     //  REVISAR
       update(data);
       
     }
@@ -135,12 +135,14 @@ function clean() {
 
 function cleanForm() {
   $(document).on("click", "#model-cliente", function () {
+
     clean();
   });
 }
 
 function obtenerData() {
   $(document).on("click", "#edit", function (e) {
+
     clean();
 
     let id = e.target.dataset.idcliente;

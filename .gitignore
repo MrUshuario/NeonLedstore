@@ -3,3 +3,5 @@ vendor
 
 # Se ignora la carpeta includes
 include/config/
+
+controllers/contra.php

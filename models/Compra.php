@@ -23,7 +23,6 @@ class Compra extends ActiveRecord {
         $this->precio_total = $args['precio_total '] ?? null;
         $this->cli_id = $args['cli_id'] ?? null;
   }
-    
 
   public static function compraXCliente()
   {

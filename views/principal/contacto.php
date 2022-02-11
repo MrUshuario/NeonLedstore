@@ -24,9 +24,9 @@
                                             <label for="formConsulta">Opción de Interés:  </label>
                                                 <select class="p-2 neontextlanding  border-0 border bg-transparent rounded w-100 me-1 me-sm-4 my-3 d-block text-black" name="consulta" id="consulta" placeholder="Elija Opcion"><br>             
                                                     <option disabled selected="">--- Seleccione ---</option>
-                                                    <option value="formHogar">Hogar</option>
-	                                                <option value="formEvento">Evento</option>
-	                                                <option value="formNegocio">Negocio</option>
+                                                    <option id="formHogar" value="formHogar">Hogar</option>
+	                                                <option id="formEvento" value="formEvento">Evento</option>
+	                                                <option id="formNegocio" value="formNegocio">Negocio</option>
                                                 </select>
                                     </div>
                                     <button class="button-contact col-5 btn m-2 mx-auto d-block neonbotton neontabla" type="submit" name="enviar" id="enviar">Enviar</button>

@@ -48,25 +48,25 @@ function saveVisitante(){
       vis_nombre: vis_nombre,
       vis_apellidos: vis_apellidos,
       vis_email: vis_email,
-   
       vis_telefono: vis_telefono,
-  
     };
     console.log(id);
     if (id=="") {
-      if (vis_nombre == "" || vis_apellidos == "" || vis_email == "" || vis_clave == "" || vis_telefono == ""){
+      if (vis_nombre == "" || vis_apellidos == "" || vis_email == "" || vis_telefono == ""){
         swal({
           title:"Completar los campos requeridos",
           icon: "error"
         });
       } else {
         create(data)
-      }
+      } 
+        //function validarEmailReg(evento){
+        //exprEMAIL= new RegExp (/^[\w-\.]{3,}@([\w-]{2,}\.)*([\w-]{2,}\.)[\w-]{2,4}$/);
+        //email=document.getElementById("vis_email").value;
 
     }else {
      /* poner como arriba un if que mantenga que todo este relleno, y uno que verifique que el correo tenga un @*/
       update(data);
-      
     }
   });
 }
@@ -122,11 +122,11 @@ function clean() {
   $("#vis_apellidos").val("");
   $("#vis_email").val("")
   $("#vis_telefono").val("")
-  
+
 }
 
 function cleanForm() {
-  $(document).on("click", "#model-visitante", function () {
+  $(document).on("click", "#model-Visitante", function () {
     clean();
   });
 }
@@ -141,7 +141,7 @@ function obtenerData() {
     };
     $.ajax({
       type: "POST",
-      url: "/visitante/getVisitante ",
+      url: "/visitante/getVisitante",
       data: data,
       success: function (e) {
         console.log(e); 
@@ -150,9 +150,7 @@ function obtenerData() {
         $("#vis_nombre").val(data.vis_nombre);
         $("#vis_apellidos").val(data.vis_apellidos);
         $("#vis_email").val(data.vis_email)
-        
         $("#vis_telefono").val(data.vis_telefono)
-        
       },
     });
   });
@@ -175,7 +173,7 @@ function deleteVisitante() {
           success: (e) => {
             if (e) {
               tableAll();
-              swal("eliminado correctamente!", {
+              swal("Eliminado correctamente!", {
                 icon: "success",
               });
             }
@@ -184,10 +182,4 @@ function deleteVisitante() {
       }
     });
   });
-}
-
-
-      }
-    });
-  })
 }
