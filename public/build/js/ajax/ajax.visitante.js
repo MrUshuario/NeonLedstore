@@ -60,18 +60,15 @@ function saveVisitante(){
           icon: "error"
         });
       } else {
+        create(data)
+      } 
         //function validarEmailReg(evento){
-
-//exprEMAIL= new RegExp (/^[\w-\.]{3,}@([\w-]{2,}\.)*([\w-]{2,}\.)[\w-]{2,4}$/);
-
-/email=document.getElementById("vis_email").value;
-        //create(data)/
-      }
+        //exprEMAIL= new RegExp (/^[\w-\.]{3,}@([\w-]{2,}\.)*([\w-]{2,}\.)[\w-]{2,4}$/);
+        //email=document.getElementById("vis_email").value;
 
     }else {
      /* poner como arriba un if que mantenga que todo este relleno, y uno que verifique que el correo tenga un @*/
       update(data);
-      
     }
   });
 }
@@ -146,7 +143,7 @@ function obtenerData() {
     };
     $.ajax({
       type: "POST",
-      url: "/visitante/getVisitante ",
+      url: "/visitante/getVisitante",
       data: data,
       success: function (e) {
         console.log(e); 
@@ -155,9 +152,7 @@ function obtenerData() {
         $("#vis_nombre").val(data.vis_nombre);
         $("#vis_apellidos").val(data.vis_apellidos);
         $("#vis_email").val(data.vis_email)
-        
         $("#vis_telefono").val(data.vis_telefono)
-        
       },
     });
   });
@@ -189,10 +184,4 @@ function deleteVisitante() {
       }
     });
   });
-}
-
-
-      }
-    });
-  })
 }

@@ -72,11 +72,7 @@ function saveCliente(){
       }
 
     }else {
-     /  REVISAR/
-      
-}
-}
-      }
+     //  REVISAR
       update(data);
       
     }

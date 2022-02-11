@@ -63,7 +63,7 @@ class VisitanteController {
         if($_SERVER['REQUEST_METHOD'] == 'POST'){ 
             $id = $_POST['id'];
             $id = intval($id);
-            $cliente = Visitante::find($id);
+            $visitante = Visitante::find($id);
             $json = json_encode([
                 "data"=>$visitante
             ]);
