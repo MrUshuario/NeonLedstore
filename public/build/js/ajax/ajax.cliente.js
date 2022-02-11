@@ -135,12 +135,14 @@ function clean() {
 
 function cleanForm() {
   $(document).on("click", "#model-cliente", function () {
+
     clean();
   });
 }
 
 function obtenerData() {
   $(document).on("click", "#edit", function (e) {
+
     clean();
 
     let id = e.target.dataset.idcliente;

@@ -128,7 +128,7 @@ function clean() {
 }
 
 function cleanForm() {
-  $(document).on("click", "#model-visitante", function () {
+  $(document).on("click", "#model-Visitante", function () {
     clean();
   });
 }
