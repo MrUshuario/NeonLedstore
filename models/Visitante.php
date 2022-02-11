@@ -29,5 +29,5 @@ class Visitante extends ActiveRecord {
         $resultado = self::$db->query($query);
         return $resultado;
     }
-    
+
 }

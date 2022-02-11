@@ -4,7 +4,7 @@ $(document).ready(function () {
   cleanForm();
   obtenerData();
   deleteVisitante();
-  updateStatus();
+  
 
 });
 
@@ -42,6 +42,7 @@ function saveVisitante(){
     let vis_email = $("#vis_email").val();
     let vis_telefono = $("#vis_telefono").val();
     
+    //renzo realizar
     const data = {
       id: id,
       vis_nombre: vis_nombre,
@@ -58,12 +59,14 @@ function saveVisitante(){
         });
       } else {
         create(data)
-      }
+      } 
+        //function validarEmailReg(evento){
+        //exprEMAIL= new RegExp (/^[\w-\.]{3,}@([\w-]{2,}\.)*([\w-]{2,}\.)[\w-]{2,4}$/);
+        //email=document.getElementById("vis_email").value;
 
     }else {
      /* poner como arriba un if que mantenga que todo este relleno, y uno que verifique que el correo tenga un @*/
       update(data);
-      
     }
   });
 }
@@ -112,20 +115,22 @@ function update(data) {
   });
 }
 
+//ISABELA 
 function clean() {
   $("#id").val("");
   $("#vis_nombre").val("");
   $("#vis_apellidos").val("");
   $("#vis_email").val("")
   $("#vis_telefono").val("")
+
 }
 
 function cleanForm() {
-  $(document).on("click", "#model-visitante", function () {
+  $(document).on("click", "#model-Visitante", function () {
     clean();
   });
 }
-
+//ISABELA
 function obtenerData() {
   $(document).on("click", "#edit", function (e) {
     clean();
@@ -178,32 +183,3 @@ function deleteVisitante() {
     });
   });
 }
-
-/*
-function updateStatus(){
-  $(document).on("click","#btnEstado",function(e){
-    const id = e.target.dataset.idcliente;
-    const estadoText = e.target.textContent;    
-    const data = { id: id, cli_estado: estadoText};
-    
-    $.ajax({
-      url: "/cliente/estado",
-      type: "POST",
-      data: data,
-      success: function(ec){
-        console.log(ec)
-        const data = JSON.parse(ec);
-        const { cli_estado, resultado } = data;
-        e.target.textContent = cli_estado;
-        if(cli_estado == "1"){
-          e.target.classList.remove("btn-danger");
-          e.target.classList.add("btn-success");
-        }else {
-          e.target.classList.remove("btn-success");
-          e.target.classList.add("btn-danger");
-        }
-      }
-    });
-  })
-}
-*/

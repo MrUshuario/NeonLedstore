@@ -72,7 +72,7 @@ function saveCliente(){
       }
 
     }else {
-     /* poner como arriba un if que mantenga que todo este relleno, y uno que verifique que el correo tenga un @*/
+     //  REVISAR
       update(data);
       
     }
