@@ -1,9 +1,10 @@
 
 .neontabla {
     border: 2px solid white;
-     box-shadow: inset 0 0 5px red, 0 0 10px red;
+    box-shadow: inset 0 0 5px red, 0 0 10px red;
     border-radius: 60px;
     padding-bottom: 8px;
+    font-family: 'Roboto Condensed', 'sans-serif';
 
 }
 
@@ -18,7 +19,7 @@
 
 .neontabla.fondoplomo {
 
- background: rgba(175, 179, 164, 0.3)
+    background: rgba(175, 179, 164, 0.3)
 }
 
 .neontabla a {
