@@ -93,7 +93,7 @@
 <div class="container d-flex justify-content-center">
 
     <div class="text-center mw-60">
-        <h2 class="weight-bolder h1">¿Qué esperas para decorar tu hogar o negocio con nosotros?</h2>
+        <h2>¿Qué esperas para decorar tu hogar o negocio con nosotros?</h2>
 
     </div>
 
