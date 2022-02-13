@@ -76,7 +76,14 @@ swal({
 
         })
              } ;
+        		if($("#cli_nombre").val().indexOf(' [^a-zA-Z \-]|( )|(\-\-)|(^\s*$) ', 0) == -1 || $("#cli_nombre").val().indexOf('.', 0) == -1) {swal({
+swal({
+          title:"Completar con solo letras". 
+          icon: "error"
 
+        })
+
+       } ;
 
 		return false;
 
