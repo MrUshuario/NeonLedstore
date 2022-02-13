@@ -5,7 +5,6 @@ $(document).ready(function () {
   obtenerData();
   deleteCliente();
   updateStatus();
-  VerificarEmail() ;
 });
 
 function tableAll(){
@@ -68,7 +67,7 @@ function saveCliente(){
           icon: "error"
         });
       } else {
-        		if($("#cli_email").val().indexOf('@', 0) == -1 || $("#cli_email").val().indexOf('.', 0) == -1) {
+if($("#cli_email").val().indexOf('@', 0) == -1 || $("#cli_email").val().indexOf('.', 0) == -1) {
 swal({
 
           title:"El correo electrónico introducido no es válido.",
