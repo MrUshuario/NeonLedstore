@@ -3,9 +3,9 @@
 <div class="container d-flex justify-content-center">
 
     <div class="text-center mw-60">
-        <h2 class="weight-bolder h1">¿Ya conoces nuestros servicios?</h2>
+        <h2>¿Ya conoces nuestros servicios?</h2>
         <div class="d-flex justify-content-center">
-            <h3 class="mw-90">¡Enterate de todos nuestros servicios y promociones registrandote en nuestra pagina!</h3>
+            <h3>¡Entérate de todos nuestros servicios y promociones registrandote en nuestra pagina!</h3>
         </div>
     </div>
 

@@ -4,4 +4,5 @@ vendor
 # Se ignora la carpeta includes
 include/config/
 
+#Contrasena oculta
 controllers/contra.php
