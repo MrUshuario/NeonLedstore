@@ -1,4 +1,4 @@
-p,h1,h2,h3,h4,h5,h6,a{
+p,h1,h2,h3,h4,h5,h6,a,button{
     font-family: 'Roboto Condensed','sans-serif';
 }
 
@@ -24,6 +24,9 @@ p{
     font-style: italic;
 }
 
+form{
+    font-family: 'Roboto Condensed','sans-serif';
+}
 
 .form-color {
     display: block;
