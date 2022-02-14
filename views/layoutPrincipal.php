@@ -20,6 +20,8 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Open+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+
     <!-- FontAwesome -->
 
     <link rel="stylesheet" href="build/css/fontawesome/css/all.min.css">

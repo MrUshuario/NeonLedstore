@@ -43,11 +43,23 @@ class CompraDetalle extends ActiveRecord {
     {
       $query = "SELECT  co.id, co.cod_id, co.det_cantidad, co.det_color, concat(co.pro_id,',',pro.pro_nombre)  AS pro_id
       FROM tab_compra_detalle AS co INNER JOIN tab_producto AS pro
-      ON co.id = pro.id";
+      ON co.pro_id = pro.id";
   
         $resultado = static::consultarSQL($query);
         return $resultado;
     }
+
+    public static function conseguirproductos($cod_id)
+    { // los AS son incorrectos, pero es para que no de errores al salirse del molde
+        $query = "select pro_nombre AS id, pro_precio AS cod_id, tab_compra_detalle.det_cantidad AS det_cantidad, 
+        (pro_precio*tab_compra_detalle.det_cantidad) AS 'det_color' from tab_producto
+        INNER JOIN tab_compra_detalle
+        ON tab_compra_detalle.pro_id = tab_producto.id
+        WHERE cod_id = ${cod_id}";
+
+        $resultado = static::consultarSQL($query);
+        return $resultado;
+    } 
 
     
 

@@ -5,6 +5,8 @@ $(document).ready(function () {
   obtenerData();
   deleteCliente();
   updateStatus();
+  conseguirproductos();
+
 
 });
 
@@ -18,7 +20,11 @@ function tableAll(){
     columns: [
       {data:"id"},
       {data:"com_fecha"},
-      {data:"precio_total"}, 
+      {data: null,
+        render: function(data,type,row){
+          return `<button class="btn-inline btn-info" data-idcodigo="${data.id}" id="categoriaPro">${data.precio_total}</button>`;
+        }
+      },
       {data: "cli_id"}
     ]
   }); 
@@ -175,6 +181,28 @@ function deleteCliente() {
     });
   });
 }
+
+function   conseguirproductos(){
+  $(document).on("click", "#categoriaPro", function (e) {
+  let cod_id = e.target.dataset.idcodigo;
+  const table = $('#productoCategoria').DataTable({
+    "destroy":true,
+    "ajax":{
+      "data": { cod_id: cod_id }, //esto talvez me cause problemas
+      "method":"POST",
+      "url":"/compra/conseguirproductos"
+    }, 
+    columns: [
+      {data:"id"},
+      {data:"cod_id"},
+      {data:"det_cantidad"}, 
+      {data: "det_color"}
+    ]
+  }); 
+  }); 
+  }
+
+
 
 function updateStatus(){
   $(document).on("click","#btnEstado",function(e){

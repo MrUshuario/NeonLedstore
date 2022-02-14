@@ -3,6 +3,7 @@
 namespace Controllers;
 
 use Model\Compra;
+use Model\CompraDetalle;
 use MVC\Router;
 
 class CompraController {
@@ -23,6 +24,21 @@ class CompraController {
         echo $json;
     }
 
+    public static function conseguirproductos(){
+
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            $cod_id = $_POST['cod_id'];
+            $cod_id = filter_var($cod_id, FILTER_VALIDATE_INT); // me puede dar problemas
+
+            $listado = CompraDetalle::conseguirproductos($cod_id);
+
+            echo json_encode([
+                "data" => $listado
+            ]);
+        }
+
+        
+    }
 
 
     public static function create(Router $router){
