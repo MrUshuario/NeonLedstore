@@ -108,7 +108,7 @@ $router = new Router();
     $router->post('/visitante/update',[VisitanteController::class,'update']); 
     $router->post('/visitante/delete',[VisitanteController::class,'delete']);
 
-
+    
 //CompraDetalle
 
     //method get 

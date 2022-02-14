@@ -3,6 +3,7 @@
 namespace Controllers;
 
 use Model\Visitante;
+use Model\VisitanteContacto;
 use MVC\Router;
 
 class VisitanteController {
@@ -98,5 +99,5 @@ class VisitanteController {
         
     }
 
-     
+ 
 }
