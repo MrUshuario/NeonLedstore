@@ -230,12 +230,4 @@
     transform:scale(1.1);
     overflow:hidden;     
 }
-/*Color al selector Contacto*/
-#formHogar { color:rgb(255, 255, 255); 
-    background-color:rgb(100, 16, 121); }
 
-#formEvento { color:rgb(255, 255, 255); 
-    background-color:rgb(100, 16, 121); }
-
-#formNegocio{ color:rgb(255, 255, 255); 
-    background-color:rgb(100, 16, 121); }

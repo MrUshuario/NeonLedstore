@@ -113,7 +113,7 @@ $router = new Router();
 
     //method get 
     $router->get('/compraDetalle',[CompraDetalleController::class,'CompraDetalle']);
-    $router->get('/compraDetalle/listar',[CompraDetalleController::class,'listar']); 
+    $router->get('/compraDetalle/listar',[CompraDetalleController::class,'listar']);
      //aun no implementado
 
     //method post
@@ -123,7 +123,9 @@ $router = new Router();
 
     //method get 
     $router->get('/compra',[CompraController::class,'Compra']);
-    $router->get('/compra/listar',[CompraController::class,'listar']); 
+    $router->get('/compra/listar',[CompraController::class,'listar']);
+    //POST
+    $router->post('/compra/conseguirproductos',[CompraController::class,'conseguirproductos']);
      //aun no implementado
 
     //method post
