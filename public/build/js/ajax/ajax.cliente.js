@@ -5,7 +5,6 @@ $(document).ready(function () {
   obtenerData();
   deleteCliente();
   updateStatus();
-
 });
 
 function tableAll(){
@@ -68,15 +67,55 @@ function saveCliente(){
           icon: "error"
         });
       } else {
+if($("#cli_email").val().indexOf('@', 0) == -1 || $("#cli_email").val().indexOf('.', 0) == -1) {
+swal({
+
+          title:"El correo electrónico introducido no es válido.",
+
+          icon: "error"
+
+        })
+             } ;
+        		if($("#cli_nombre").val().indexOf(' [^a-zA-Z \-]|( )|(\-\-)|(^\s*$) ', 0) == -1 || $("#cli_nombre").val().indexOf('.', 0) == -1) 
+			{swal({
+
+          title:"Completar con solo letras". 
+          icon: "error"
+
+        })
+
+       } ;
+        		if($("#cli_apellidos").val().indexOf(' [^a-zA-Z \-]|( )|(\-\-)|(^\s*$) ', 0) == -1 || $("#cli_apellidos").val().indexOf('.', 0) == -1) 			{swal({
+
+          title:"Completar con solo letras". 
+
+          icon: "error"
+
+        })
+
+       } ;
+	      if($("#cli_telefono").val().indexOf('/[^0-9]/g ', 0) == -1 {swal({
+          title:"Completar con solo números ". 
+
+          icon: "error"
+
+        })
+
+       } ;
+		return false;
+
+		}
+          
+        } else{
         create(data)
       }
 
     }else {
-     //  REVISAR
+     
       update(data);
       
     }
-  });
+  };
 }
 
 function create(data) {
