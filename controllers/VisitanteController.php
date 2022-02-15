@@ -3,6 +3,7 @@
 namespace Controllers;
 
 use Model\Visitante;
+use Model\VisitanteContacto;
 use MVC\Router;
 
 class VisitanteController {
@@ -25,7 +26,7 @@ class VisitanteController {
 
 
 
-    public static function create(Router $router){
+    public static function create(Router $router){ //verificar si el correo agregado existe, insertar create2 y que actualice en el panel
         if($_SERVER["REQUEST_METHOD"] == "POST"){
             $visitante = new Visitante($_POST);
             $verificarCorreo = $visitante->verificarCorreo();
@@ -86,7 +87,7 @@ class VisitanteController {
     public static function update(){
         
         if($_SERVER['REQUEST_METHOD'] == 'POST'){
-            $visitante = Visitante::find($_POST['id']);
+            $visitante = Visitante::find($_POST['id']);// AGREGAR UN NUEVO UPDATE id -> correo
             $visitante->sincronizar($_POST);
 
             $dd = $visitante->actualizar();
@@ -98,5 +99,61 @@ class VisitanteController {
         
     }
 
-     
+    //--------------------------------//
+
+    public static function create2(Router $router){ //verificar si el correo agregado existe, insertando create2 y que actualice en el panel
+        if($_SERVER["REQUEST_METHOD"] == "POST"){
+            $visitante = new Visitante($_POST);
+            $verificarCorreo = $visitante->verificarCorreo();
+            if ($verificarCorreo->num_rows == 0) {
+                $resultado = $visitante->crear(); 
+
+                $json = json_encode([
+                   
+                    "mensaje"=>"Visitante creado"
+ 
+                ]);
+             
+            }
+
+            else{
+            
+                //$visitante->sincronizar($_POST);
+                $dd = $visitante->actualizarconCorreo();
+    
+                $json = json_encode([
+                   
+                    "mensaje"=>"Visitante actualizado"
+ 
+                ]);
+    
+            
+            }
+ 
+            echo $json;
+        } 
+    
+
+} 
+
+/*
+
+
+    public static function update2(){
+        
+        if($_SERVER['REQUEST_METHOD'] == 'POST'){
+            $visitante = Visitante::find($_POST['correo']);// AGREGAR UN NUEVO UPDATE id -> correo
+            $visitante->sincronizar($_POST);
+
+            $dd = $visitante->actualizar();
+
+            $json = json_encode($dd);
+
+            echo $json;
+        }
+        
+    }
+ 
+}
+*/
 }

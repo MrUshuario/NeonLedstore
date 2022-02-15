@@ -8,7 +8,6 @@ function enviarEmail(data){
         url:"/contacto/enviar",
         data:data,
         success: function(e){
-            console.log(e);
             let json = JSON.parse(e);
                 
             /*formContact.reset();   */
@@ -56,8 +55,45 @@ function saveCorreo(){
             telefono: $("#telefono").val().trim(),
             consulta: $("#consulta").val().trim()
         };
+
+        const data2 = {
+            //id = null,
+            vis_nombre: $("#nombre").val().trim(),
+            vis_apellidos: $("#apellidos").val().trim(),
+            vis_email: $("#correo").val().trim(),
+            vis_telefono: $("#telefono").val().trim(),
+        };
         
         enviarEmail(data);
         console.log(data)
+
+        createContactoVis(data2)
     });
 }
+
+
+//--------------
+
+
+function createContactoVis(data) {
+    $.ajax ({
+      url: "visitante/create2",
+      data: data,
+      type: "POST",
+      success: function(e) {
+
+        console.log(e);
+        let json = JSON.parse(e);
+
+        console.log("Visitante creado")
+        console.log(json)
+  
+      },
+    });
+
+  }
+
+
+
+
+
