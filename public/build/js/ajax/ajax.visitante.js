@@ -44,7 +44,7 @@ function saveVisitante(){
     let vis_email = $("#vis_email").val();
     let vis_telefono = $("#vis_telefono").val();
     
-    //renzo realizar
+   
     const data = {
       id: id,
       vis_nombre: vis_nombre,
@@ -117,7 +117,7 @@ function update(data) {
   });
 }
 
-//ISABELA 
+
 function clean() {
   $("#id").val("");
   $("#vis_nombre").val("");
@@ -132,7 +132,7 @@ function cleanForm() {
     clean();
   });
 }
-//ISABELA
+
 function obtenerData() {
   $(document).on("click", "#edit", function (e) {
     clean();
@@ -200,7 +200,7 @@ function saveContactoVis(){
     let vis_email = $("#vis_email").val();
     let vis_telefono = $("#vis_telefono").val();
     
-    //renzo realizar
+   
     const data = {
    
       id: id,

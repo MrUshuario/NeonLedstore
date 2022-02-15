@@ -77,19 +77,22 @@ function saveCorreo(){
 
 function createContactoVis(data) {
     $.ajax ({
-      url: "visitante/create",
+      url: "visitante/create2",
       data: data,
       type: "POST",
       success: function(e) {
+
+        console.log(e);
         let json = JSON.parse(e);
 
-        console.log("Cliente creado")
+        console.log("Visitante creado")
         console.log(json)
   
       },
     });
 
   }
+
 
 
 
