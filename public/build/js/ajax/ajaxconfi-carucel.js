@@ -46,7 +46,7 @@
         var imagen3=document.getElementById("imgCarrusHogar3");
 
         if (clickHogar=="img1") {
-            imagen.src="/build/img/landingPage/lp-hogar/h1.jpg";
+            imagen.src="/build/img/landingPage/lp-hogar/h1.jpg"; //Imagen no encontrada
             
             imagen2.src="/build/img/landingPage/lp-hogar/h2.jpg";
 
