@@ -45,10 +45,49 @@ function enviarEmail(data){
 
 }
 
+    function enviarEmail2(data){
+            setTimeout(() => {
+                $.ajax({
+                    type:"POST",
+                    url:"/contacto/enviar",
+                    data:data,
+                    success: function(e){
+                        let json = JSON.parse(e);
+            
+                        console.log(e);
+                        console.log("Segundo valor enviado");
+            
+                    }
+                });
+                
+            }, 10000); // Actualizar a 3 horas
+        }
+
+
+        function enviarEmail3(data){
+            setTimeout(() => {
+                $.ajax({
+                    type:"POST",
+                    url:"/contacto/enviar",
+                    data:data,
+                    success: function(e){
+                        let json = JSON.parse(e);
+            
+                        console.log(e);
+                        console.log("Tercer valor enviado");
+            
+                    }
+                });
+                
+            }, 15000); // Actualizar a 15 horas
+            
+        }
+
 function saveCorreo(){
     $(".formContact").submit(function(e){
         e.preventDefault();
         const data = {
+            contador: $("#contador").val().trim(),
             nombre: $("#nombre").val().trim(),
             apellidos: $("#apellidos").val().trim(),
             correo: $("#correo").val().trim(),
@@ -64,8 +103,14 @@ function saveCorreo(){
             vis_telefono: $("#telefono").val().trim(),
         };
         
+
         enviarEmail(data);
-        console.log(data)
+        data.contador=2;
+        console.log(data.contador)
+        enviarEmail2(data);
+        data.contador=3;
+        console.log(data.contador)
+        enviarEmail3(data);
 
         createContactoVis(data2)
     });
@@ -92,8 +137,3 @@ function createContactoVis(data) {
     });
 
   }
-
-
-
-
-

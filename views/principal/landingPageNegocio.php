@@ -52,6 +52,9 @@
                         <form class="formContact landingPageForm col-12 col-sm-10" method="POST">
                             <input type="hidden" id="consulta" value="formNegocio">
                             <div class="modal-field">
+                                <input type="hidden" class="neontextlanding bg-transparent text-center form-control my-3 border-0" name="contador" id="contador" value=1>
+                            </div>
+                            <div class="modal-field">
                                 <input type="text" class="neontextlanding bg-transparent text-center form-control my-3 border-0" name="nombre" id="nombre" placeholder="Nombres" required>
                             </div>
                             <div class="modal-field">
@@ -63,7 +66,7 @@
                             <div class="modal-field">
                                 <input type="number" class="neontextlanding bg-transparent text-center form-control my-3 border-0 mb-3" name="telefono" id="telefono" placeholder="Número de celular" required>
                             </div> <!--crea tu propio boton, lo agregas en NEON.css -->
-                            <button type="submit" class="neonbottonlanding btn btn-primary my-sm-3 border-0"  id="btn-modal-asesoria Negocio">Pedir asesoria</button>
+                            <button type="submit" class="neonbottonlanding btn btn-primary my-sm-3 border-0"  id="btn-modal-asesoria Negocio" onclick="Hogar();">Pedir asesoria</button>
                         </form>
                     </div>     
                     </div>
@@ -111,7 +114,7 @@
                         <div class="card">
                             <img src="\build\img\landingPage\lp-negocio\restaurante.webp">
                                 <h4>Restaurante</h4>
-                        </div>
+                         </div>
 
                         <div class="card">
                             <img src="\build\img\landingPage\lp-negocio\Boutique.webp">
