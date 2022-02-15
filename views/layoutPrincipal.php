@@ -12,7 +12,7 @@
 
     <title>Neon Led Store</title>
 
-    <!-- Fonts Google - OpenSans -->
+    <!-- Google Fonts -->
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
 
@@ -21,6 +21,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Open+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
 
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
 
     <!-- FontAwesome -->
 
@@ -37,18 +39,6 @@
     <link rel="stylesheet" href="build/css/index.css">
 
     <script src="build/js/jquery.min.js"></script>
-    
-    <!-- Para el carrusel DE LANDINGPAGE.PHP agrege este archivo -->
-    
-    <!-- <script src="build/js/bootstrap.min.js"></script> -->
-
-    <!--PRUEBAS CONTACTO -->
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
 
     <!-- CSS -->
 
@@ -161,7 +151,7 @@
 
                                     <a href="/login" class="text-white d-flex ">
 
-                                       <i class="fas fa-user"></i>
+                                        <i class="fas fa-user"></i>
 
                                     </a>
 
