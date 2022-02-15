@@ -46,7 +46,7 @@
         var imagen3=document.getElementById("imgCarrusHogar3");
 
         if (clickHogar=="img1") {
-            imagen.src="/build/img/landingPage/lp-hogar/h1.jpg"; //Imagen no encontrada
+            imagen.src="/build/img/landingPage/lp-hogar/h1.jpg";
             
             imagen2.src="/build/img/landingPage/lp-hogar/h2.jpg";
 
@@ -55,7 +55,7 @@
             clickHogar="img2";
             
         } else if(clickHogar=="img2"){
-            imagen.src="/build/img/landingPage/lp-hogar/h4.jpeg";
+            imagen.src="/build/img/landingPage/lp-hogar/h4.jpg";
 
             imagen2.src="/build/img/landingPage/lp-hogar/h5.jpg";
 
@@ -66,7 +66,7 @@
         } else {
             imagen.src="/build/img/landingPage/lp-hogar/h2.jpg";
 
-            imagen2.src="/build/img/landingPage/lp-hogar/h4.jpeg";
+            imagen2.src="/build/img/landingPage/lp-hogar/h4.jpg";
 
             imagen3.src="/build/img/landingPage/lp-hogar/h1.jpg";
 
