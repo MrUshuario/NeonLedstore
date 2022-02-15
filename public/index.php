@@ -99,6 +99,7 @@ $router = new Router();
     //method get 
     $router->get('/visitante',[VisitanteController::class,'index']);
     $router->get('/visitante/listar',[VisitanteController::class,'listar']); 
+
      //aun no implementado
 
     //method post
@@ -107,6 +108,7 @@ $router = new Router();
     $router->post('/visitante/estado',[VisitanteController::class,'estado']); 
     $router->post('/visitante/update',[VisitanteController::class,'update']); 
     $router->post('/visitante/delete',[VisitanteController::class,'delete']);
+    $router->post('/visitante/create2',[VisitanteController::class,'create2']);
 
     
 //CompraDetalle

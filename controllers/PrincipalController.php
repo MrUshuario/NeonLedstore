@@ -58,6 +58,7 @@ class PrincipalController {
             $mail = new PHPMailer();
             $mail->isSMTP();
             $mail->Port = 465;
+            //$mail->Timeout = 6000;
             //$mail->SMTPDebug = SMTP::DEBUG_SERVER;  -> solo para ver acciones del ruteo del mail
             $mail->SMTPSecure= PHPMailer::ENCRYPTION_SMTPS;
             $mail->SMTPAuth=true;
