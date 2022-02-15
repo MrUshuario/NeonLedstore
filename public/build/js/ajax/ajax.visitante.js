@@ -4,6 +4,8 @@ $(document).ready(function () {
   cleanForm();
   obtenerData();
   deleteVisitante();
+  createContactoVis();
+  saveContactoVis()
   
 
 });
@@ -183,3 +185,36 @@ function deleteVisitante() {
     });
   });
 }
+
+/* Registro de visitantes en Contacto */
+
+
+
+function saveContactoVis(){
+  $("#formContact1").submit(function(e){
+    e.preventDefault();
+
+    let id = $("#id").val();
+    let vis_nombre = $("#vis_nombre").val();
+    let vis_apellidos = $("#vis_apellidos").val();
+    let vis_email = $("#vis_email").val();
+    let vis_telefono = $("#vis_telefono").val();
+    
+    //renzo realizar
+    const data = {
+   
+      id: id,
+      vis_nombre: vis_nombre,
+      vis_apellidos: vis_apellidos,
+      vis_email: vis_email,
+      vis_telefono: vis_telefono,
+    };
+    console.log(id);
+  
+     
+      createContactoVis(data)
+ 
+
+  });
+}
+
