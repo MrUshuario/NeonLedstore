@@ -46,7 +46,9 @@ function saveCliente(){
     let cli_nombre = $("#cli_nombre").val();
     let cli_apellidos = $("#cli_apellidos").val();
     let cli_email = $("#cli_email").val();
-    let cli_clave = $("#cli_clave").val();
+    let cli_clave = $("#cli_clave").val(); /* crea una variable donde guardar clicalve, luego lo hasheas*/
+    //y finalmente ya estando hasheada/(encriptada) lo guardas en cli_clave
+    //tienes un ejemplo AdminController el primer archivo
     let cli_telefono = $("#cli_telefono").val();
     let cli_estado = $("#cli_estado").val();
     
@@ -67,7 +69,7 @@ function saveCliente(){
           icon: "error"
         });
       } else {
-          //procede a hacer las validaciones
+          /*
                 if($("#cli_email").val().indexOf('@', 0) == -1 || $("#cli_email").val().indexOf('.', 0) == -1) 
           {swal({
               title:"El correo electrónico introducido no es válido.",
@@ -105,6 +107,16 @@ function saveCliente(){
       
     }
   });
+} */
+      create(data)
+      }
+
+      }else {
+
+      update(data);
+
+      }
+      });
 }
 
 function create(data) {
