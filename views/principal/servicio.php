@@ -58,7 +58,7 @@
             <a href="/landingPageEvento" class="btnmorado weight-bolder text-white bg-primary-button"  style="width: 100%;  font-size: larger;">Ver Diseños</a>
             </div>
         </div>
-        <div class="col-lg-3" style="width: 22.5em; height: 450px;">
+        <div class="col-lg-3" style="width: 22.5em; height: 450px;" id="ser-gal3">
             <div class="w-100 h-100 position-relative">
                 <div class="position-absolute w-100 p-3 py-4 bg-black-opacity" style="bottom: 0;">
                     <p class="h4 w-100 text-center text-shadow-lg">Rediseña Tu Espacio o Negocio</p>

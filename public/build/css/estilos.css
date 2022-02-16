@@ -123,3 +123,9 @@ form{
 }
 /*fin landingevento*/
 
+/*Pagina servicios, correccion responsive*/
+@media only screen and (max-width: 1200px) and (min-width: 1025px)  {
+    #ser-gal3{
+        margin-top: 100px;
+    }
+}
