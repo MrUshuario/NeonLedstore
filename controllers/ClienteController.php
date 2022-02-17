@@ -120,4 +120,27 @@ class ClienteController {
 
         }
     }
+
+    public static function rol()
+    {
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+        $cliente = new Cliente($_POST);        
+
+        if ($cliente->cli_rol == "1") {
+
+            $cliente->cli_rol = "2";
+            $resultado = $cliente->editRol();
+
+        } else {
+            $cliente->cli_rol = "1";
+            $resultado = $cliente->editRol();
+        }
+        //ESTO SIRVE NO ES UN SOLO IMPRIMIR
+        echo json_encode([
+            "cli_rol" => $cliente->cli_rol,
+            "resultado" => $resultado
+        ]);
+
+        }
+    }
 }

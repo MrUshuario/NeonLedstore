@@ -51,6 +51,7 @@ function saveCliente(){
     //tienes un ejemplo AdminController el primer archivo
     let cli_telefono = $("#cli_telefono").val();
     let cli_estado = $("#cli_estado").val();
+    let cli_rol= $("#cli_rol").val();
     
     const data = {
       id: id,
@@ -60,10 +61,11 @@ function saveCliente(){
       cli_clave: cli_clave,
       cli_telefono: cli_telefono,
       cli_estado: cli_estado,
+      cli_rol: cli_rol,
     };
     console.log(id);
     if (id=="") {
-      if (cli_nombre == "" || cli_apellidos == "" || cli_email == "" || cli_clave == "" || cli_estado == "" || cli_telefono == ""){
+      if (cli_nombre == "" || cli_apellidos == "" || cli_email == "" || cli_clave == "" || cli_estado == "" || cli_telefono == "" || cli_rol == ""){
         swal({
           title:"Completar los campos requeridos",
           icon: "error"
@@ -171,6 +173,7 @@ function clean() {
   $("#cli_clave").val("")
   $("#cli_telefono").val("")
   $("#cli_estado").val("")
+  $("#cli_rol").val("")
 }
 
 function cleanForm() {

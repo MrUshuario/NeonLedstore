@@ -1,6 +1,6 @@
 <div class="content-principal container mt-20">
     <div class="flex-between">
-        <h3>Color</h3>
+        <h3>Clientes</h3>
         <button type="button" id="model-cliente" data-bs-toggle="modal" data-bs-target="#modalCliente" class="btn-inline btn-success flex-center">
             <i class="fas fa-plus-circle"></i> Agregar Cliente
         </button>
@@ -73,6 +73,15 @@
                             <option value="">--SELECCIONE--</option>
                             <option value="0">Inactivo</option>
                             <option value="1">Activo</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="nombre">Rol</label>
+                        <select id="cli_estado" class="form-control">
+                            <option value="">--SELECCIONE--</option>
+                            <option value="1">Adiministrador</option>
+                            <option value="2">Cliente</option>
                         </select>
                     </div>
 
