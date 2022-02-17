@@ -88,6 +88,7 @@ function saveCorreo(){
         e.preventDefault();
         const data = {
             contador: $("#contador").val().trim(),
+            contacto: $("#contacto").val().trim(),
             nombre: $("#nombre").val().trim(),
             apellidos: $("#apellidos").val().trim(),
             correo: $("#correo").val().trim(),
@@ -95,7 +96,7 @@ function saveCorreo(){
             consulta: $("#consulta").val().trim()
         };
 
-        const data2 = {
+        const data2 = { //guarda datos de visitante con correo repetido
             //id = null,
             vis_nombre: $("#nombre").val().trim(),
             vis_apellidos: $("#apellidos").val().trim(),

@@ -13,7 +13,9 @@
                                 <div class="container">
                                 <div class="row">
                                     <div class="col-6 my-auto mx-auto">
+                                        <!--variables invisibles-->
                                     <input class="p-2 neontextlanding  border-0 border bg-transparent rounded w-100 me-1 me-sm-4 my-3 d-block text-white" type="hidden" name="contador" id="contador" value=1>
+                                   <input class="p-2 neontextlanding  border-0 border bg-transparent rounded w-100 me-1 me-sm-4 my-3 d-block text-white" type="hidden" name="contacto" id="contacto" value=1>
                                     <input class="p-2 neontextlanding  border-0 border bg-transparent rounded w-100 me-1 me-sm-4 my-3 d-block text-white" type="text" name="nombre" id="nombre" placeholder="Nombre" required> <br>
                                     <input class="p-2 neontextlanding  border-0 border bg-transparent rounded w-100 me-1 me-sm-4 my-3 d-block text-white" type="text" name="apellidos" id="apellidos" placeholder="Apellidos" required> <br>
                                     <input class="p-2 neontextlanding  border-0 border bg-transparent rounded w-100 me-1 me-sm-4 my-3 d-block text-white" type="email" name="correo" id="correo" placeholder="Correo Electronico" required> <br>
