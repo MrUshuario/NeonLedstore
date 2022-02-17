@@ -25,7 +25,7 @@ function tableAll(){
             return `<button data-idcliente="${data.id}" class="btn ${data.cli_estado == "1"? 'btn-success' : 'btn-danger'}" id="btnEstado">${data.cli_estado}</button>`;
           }
       },
-      
+      {data:"cli_rol"},  
       {data: null,
         render: function(data,type,row){
           return `<button class="btn-inline btn-warning" data-idcliente="${data.id}" id="edit" data-bs-toggle="modal" data-bs-target="#modalCliente" >Edit</button>
@@ -46,9 +46,7 @@ function saveCliente(){
     let cli_nombre = $("#cli_nombre").val();
     let cli_apellidos = $("#cli_apellidos").val();
     let cli_email = $("#cli_email").val();
-    let cli_clave = $("#cli_clave").val(); /* crea una variable donde guardar clicalve, luego lo hasheas*/
-    //y finalmente ya estando hasheada/(encriptada) lo guardas en cli_clave
-    //tienes un ejemplo AdminController el primer archivo
+    let cli_clave = $("#cli_clave").val();
     let cli_telefono = $("#cli_telefono").val();
     let cli_estado = $("#cli_estado").val();
     let cli_rol= $("#cli_rol").val();
@@ -63,9 +61,8 @@ function saveCliente(){
       cli_estado: cli_estado,
       cli_rol: cli_rol,
     };
-    console.log(id);
     if (id=="") {
-      if (cli_nombre == "" || cli_apellidos == "" || cli_email == "" || cli_clave == "" || cli_estado == "" || cli_telefono == "" || cli_rol == ""){
+      if (cli_nombre == "" || cli_apellidos == "" || cli_email == "" || cli_clave == ""  || cli_telefono == "" || cli_estado == "" || cli_rol == ""){
         swal({
           title:"Completar los campos requeridos",
           icon: "error"
@@ -110,6 +107,7 @@ function saveCliente(){
     }
   });
 } */
+      console.log(data);
       create(data)
       }
 
@@ -157,7 +155,7 @@ function update(data) {
       $('#modalCliente').modal('hide');
       tableAll();
       swal({
-        title: "Editado correctamente",
+        title: "Editado Correctamente",
         icon: "success"
       });
     }
@@ -206,6 +204,7 @@ function obtenerData() {
         $("#cli_clave").val(data.cli_clave)
         $("#cli_telefono").val(data.cli_telefono)
         $("#cli_estado").val(data.cli_estado)
+        $("#cli_rol").val(data.cli_rol)
       },
     });
   });

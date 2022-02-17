@@ -27,6 +27,7 @@ class ClienteController {
 
     public static function create(Router $router){
         if($_SERVER["REQUEST_METHOD"] == "POST"){
+            $_POST['cli_clave'] = password_hash($_POST['cli_clave'], PASSWORD_DEFAULT);
             $cliente = new Cliente($_POST);
             $verificarCorreo = $cliente->verificarCorreo();
             if ($verificarCorreo->num_rows == 0) {
@@ -36,14 +37,16 @@ class ClienteController {
                     $listado = Cliente::listar();
                     $json = json_encode([
                         "STATUS"=>1,
-                        "mensaje"=>"Registro Correcto",
+                        "mensaje"=>"Registro Agregado",
                         "listas"=>$listado,
                         "c"=>$cliente
                     ]);
                 }  else {
                     $json = json_encode([
                         "STATUS"=>2,
-                        "mensaje"=>"Error al registrar"
+                        "mensaje"=>"Error al registrar",
+                        "c"=>$cliente,
+                        "b"=>$resultado,
                     ]);
                 } // habria un tercer caso con no se puede borrar padres
             }
@@ -121,26 +124,5 @@ class ClienteController {
         }
     }
 
-    public static function rol()
-    {
-        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-        $cliente = new Cliente($_POST);        
-
-        if ($cliente->cli_rol == "1") {
-
-            $cliente->cli_rol = "2";
-            $resultado = $cliente->editRol();
-
-        } else {
-            $cliente->cli_rol = "1";
-            $resultado = $cliente->editRol();
-        }
-        //ESTO SIRVE NO ES UN SOLO IMPRIMIR
-        echo json_encode([
-            "cli_rol" => $cliente->cli_rol,
-            "resultado" => $resultado
-        ]);
-
-        }
-    }
+   
 }

@@ -15,10 +15,11 @@
                 <tr>
                     <th>Nombres</th>
                     <th>Apellidos</th>
-                    <th>email</th>
+                    <th>Email</th>
                     <th>Clave</th>
-                    <th>Telefono</th>
+                    <th>Teléfono</th>
                     <th>Estado</th>
+                    <th>Rol</th>
                     <th>Editar/Borrar</th>
                 </tr>
                 </thead>
@@ -48,7 +49,7 @@
                     </div>
 
                     <div class="mb-3">
-                        <label for="nombre">Apellido Cliente</label>
+                        <label for="nombre">Apellidos Cliente</label>
                         <input type="text" class="form-control" id="cli_apellidos">
                     </div>
 
@@ -78,9 +79,9 @@
 
                     <div class="mb-3">
                         <label for="nombre">Rol</label>
-                        <select id="cli_estado" class="form-control">
+                        <select id="cli_rol" class="form-control">
                             <option value="">--SELECCIONE--</option>
-                            <option value="1">Adiministrador</option>
+                            <option value="1">Administrador</option>
                             <option value="2">Cliente</option>
                         </select>
                     </div>

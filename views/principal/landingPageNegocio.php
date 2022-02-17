@@ -30,7 +30,6 @@
     <br>
   <!--FINAL DEL CARRUSEL-->
 
-
     <!--CENTRADO Y BLANCO-->
     <div class="container-fluid text-white text-center">
         <!--BOTON DEL MODAL-->
