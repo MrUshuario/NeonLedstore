@@ -26,4 +26,3 @@ idBtnListApp2.addEventListener("click", function (e) {
 
 
 
-

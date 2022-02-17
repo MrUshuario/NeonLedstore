@@ -46,9 +46,7 @@ function saveCliente(){
     let cli_nombre = $("#cli_nombre").val();
     let cli_apellidos = $("#cli_apellidos").val();
     let cli_email = $("#cli_email").val();
-    let cli_clave = $("#cli_clave").val(); /* crea una variable donde guardar clicalve, luego lo hasheas*/
-    //y finalmente ya estando hasheada/(encriptada) lo guardas en cli_clave
-    //tienes un ejemplo AdminController el primer archivo
+    let cli_clave = $("#cli_clave").val();
     let cli_telefono = $("#cli_telefono").val();
     let cli_estado = $("#cli_estado").val();
     
@@ -60,8 +58,8 @@ function saveCliente(){
       cli_clave: cli_clave,
       cli_telefono: cli_telefono,
       cli_estado: cli_estado,
+      cli_rol: 2,
     };
-    console.log(id);
     if (id=="") {
       if (cli_nombre == "" || cli_apellidos == "" || cli_email == "" || cli_clave == "" || cli_estado == "" || cli_telefono == ""){
         swal({
@@ -108,6 +106,7 @@ function saveCliente(){
     }
   });
 } */
+      console.log(data);
       create(data)
       }
 

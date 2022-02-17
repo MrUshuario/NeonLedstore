@@ -27,6 +27,7 @@ class ClienteController {
 
     public static function create(Router $router){
         if($_SERVER["REQUEST_METHOD"] == "POST"){
+            $_POST['cli_clave'] = password_hash($_POST['cli_clave'], PASSWORD_DEFAULT);
             $cliente = new Cliente($_POST);
             $verificarCorreo = $cliente->verificarCorreo();
             if ($verificarCorreo->num_rows == 0) {
@@ -43,7 +44,9 @@ class ClienteController {
                 }  else {
                     $json = json_encode([
                         "STATUS"=>2,
-                        "mensaje"=>"Error al registrar"
+                        "mensaje"=>"Error al registrar",
+                        "c"=>$cliente,
+                        "b"=>$resultado,
                     ]);
                 } // habria un tercer caso con no se puede borrar padres
             }
