@@ -1,6 +1,6 @@
 <div class="content-principal container mt-20">
     <div class="flex-between">
-        <h3>Color</h3>
+        <h3>Clientes</h3>
         <button type="button" id="model-cliente" data-bs-toggle="modal" data-bs-target="#modalCliente" class="btn-inline btn-success flex-center">
             <i class="fas fa-plus-circle"></i> Agregar Cliente
         </button>
@@ -15,10 +15,11 @@
                 <tr>
                     <th>Nombres</th>
                     <th>Apellidos</th>
-                    <th>email</th>
+                    <th>Email</th>
                     <th>Clave</th>
-                    <th>Telefono</th>
+                    <th>Teléfono</th>
                     <th>Estado</th>
+                    <th>Rol</th>
                     <th>Editar/Borrar</th>
                 </tr>
                 </thead>
@@ -48,7 +49,7 @@
                     </div>
 
                     <div class="mb-3">
-                        <label for="nombre">Apellido Cliente</label>
+                        <label for="nombre">Apellidos Cliente</label>
                         <input type="text" class="form-control" id="cli_apellidos">
                     </div>
 
@@ -73,6 +74,15 @@
                             <option value="">--SELECCIONE--</option>
                             <option value="0">Inactivo</option>
                             <option value="1">Activo</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="nombre">Rol</label>
+                        <select id="cli_rol" class="form-control">
+                            <option value="">--SELECCIONE--</option>
+                            <option value="1">Administrador</option>
+                            <option value="2">Cliente</option>
                         </select>
                     </div>
 

@@ -25,7 +25,7 @@ function tableAll(){
             return `<button data-idcliente="${data.id}" class="btn ${data.cli_estado == "1"? 'btn-success' : 'btn-danger'}" id="btnEstado">${data.cli_estado}</button>`;
           }
       },
-      
+      {data:"cli_rol"},  
       {data: null,
         render: function(data,type,row){
           return `<button class="btn-inline btn-warning" data-idcliente="${data.id}" id="edit" data-bs-toggle="modal" data-bs-target="#modalCliente" >Edit</button>
@@ -49,6 +49,7 @@ function saveCliente(){
     let cli_clave = $("#cli_clave").val();
     let cli_telefono = $("#cli_telefono").val();
     let cli_estado = $("#cli_estado").val();
+    let cli_rol= $("#cli_rol").val();
     
     const data = {
       id: id,
@@ -58,10 +59,10 @@ function saveCliente(){
       cli_clave: cli_clave,
       cli_telefono: cli_telefono,
       cli_estado: cli_estado,
-      cli_rol: 2,
+      cli_rol: cli_rol,
     };
     if (id=="") {
-      if (cli_nombre == "" || cli_apellidos == "" || cli_email == "" || cli_clave == "" || cli_estado == "" || cli_telefono == ""){
+      if (cli_nombre == "" || cli_apellidos == "" || cli_email == "" || cli_clave == ""  || cli_telefono == "" || cli_estado == "" || cli_rol == ""){
         swal({
           title:"Completar los campos requeridos",
           icon: "error"
@@ -154,7 +155,7 @@ function update(data) {
       $('#modalCliente').modal('hide');
       tableAll();
       swal({
-        title: "Editado correctamente",
+        title: "Editado Correctamente",
         icon: "success"
       });
     }
@@ -170,6 +171,7 @@ function clean() {
   $("#cli_clave").val("")
   $("#cli_telefono").val("")
   $("#cli_estado").val("")
+  $("#cli_rol").val("")
 }
 
 function cleanForm() {
@@ -202,6 +204,7 @@ function obtenerData() {
         $("#cli_clave").val(data.cli_clave)
         $("#cli_telefono").val(data.cli_telefono)
         $("#cli_estado").val(data.cli_estado)
+        $("#cli_rol").val(data.cli_rol)
       },
     });
   });
