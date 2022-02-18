@@ -6,15 +6,15 @@ use Model\ActiveRecord;
 
 class Cliente extends ActiveRecord {
     protected static $tabla = "tab_cliente";
-    protected static $columnaDB = ['id', 'cli_nombre', 'cli_apellidos', 'cli_email', 'cli_clave', 'cli_estado', 'cli_telefono','cli_rol'];
+    protected static $columnaDB = ['id', 'cli_nombre', 'cli_apellidos', 'cli_email', 'cli_clave', 'cli_telefono', 'cli_estado','cli_rol'];
 
     public $id;
     public $cli_nombre;
     public $cli_apellidos;
     public $cli_email;
     public $cli_clave;
-    public $cli_estado;
     public $cli_telefono;
+    public $cli_estado;
     public $cli_rol;
 
     public function __construct($args = [])
@@ -24,8 +24,8 @@ class Cliente extends ActiveRecord {
         $this->cli_apellidos = $args['cli_apellidos'] ?? null;
         $this->cli_email = $args['cli_email'] ?? null;
         $this->cli_clave = $args['cli_clave'] ?? null;
-        $this->cli_estado = $args['cli_estado'] ?? null;
         $this->cli_telefono = $args['cli_telefono'] ?? null;
+        $this->cli_estado = $args['cli_estado'] ?? null;
         $this->cli_rol = $args['cli_rol'] ?? null;
     }
     
