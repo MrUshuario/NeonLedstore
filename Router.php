@@ -21,20 +21,27 @@ class Router {
 
         // Arreglo de rutas protegidas
         $rutas_protegidas = [
-            '/dashboard','/color','/color/listar','/color/buscar','/color/eliminar',
-            '/color/guardar','/color/editar','/color/getColor', '/producto', '/producto/getCategoria',
-            '/producto/getProducto','/producto/crear','/producto/editar','/producto/getProForm',
-            '/producto/estado',"/producto/eliminar","/producto/buscarNombre", '/categoria',
-            '/categoria/listar','/categoria/crear','/categoria/estado','/categoria/getCategoria',
-            '/categoria/actualizar', '/categoria/eliminar',"/categoria/buscar",'/cliente',
-            '/cliente/listar','/cliente/getCliente','/cliente/create','/cliente/estado',
-            '/cliente/update','/cliente/delete',
+            '/dashboard',
+            // producto
+            '/producto','/producto/crear','/producto/editar','/producto/getProForm',
+            '/producto/estado',"/producto/eliminar","/producto/buscarNombre",
+            // categoria 
+            '/categoria','/categoria/listar','/categoria/crear','/categoria/estado','/categoria/getCategoria',
+            '/categoria/actualizar', '/categoria/eliminar',"/categoria/buscar",
+            // cliente
+            '/cliente','/cliente/listar','/cliente/getCliente','/cliente/create','/cliente/estado','/cliente/update','/cliente/delete', 
+            // visitante
+            '/visitante','/visitante/listar','/visitante/getVisitante','/visitante/create',
+            '/visitante/estado','/visitante/update','/visitante/delete','/visitante/create2',
+            // compraDetalle
+            '/compraDetalle','/compraDetalle/listar','/compraDetalle/create',
+            // compra
+            '/compra','/compra/listar','/compra/conseguirproductos','/compra/create',
+            // configuracion
             '/configuracion', '/configuracion/getData','/configuracion/verificar','/configuracion/updatePassword',
+            // otros
             '/cerrar',
-            '/graficos',
-            '/productoColor','/productoColor/listar','/productoColor/getProducto',
-            '/productoColor/getColor','/productoColor/create','/productoColor/update',
-            '/productoColor/delete','/productoColor/obtener'
+            '/graficos'
         ];
 
         $urlActual = $_SERVER['PATH_INFO'] ?? '/';
