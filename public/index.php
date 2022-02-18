@@ -4,12 +4,12 @@ require_once __DIR__.'/../include/app.php';
 
 use Controllers\AdminController;
 use Controllers\CategoriaController;
-use Controllers\ColorController; //borrar
+
 use Controllers\CompraDetalleController;
 use Controllers\ProductoController;
 use Controllers\ClienteController;
 use Controllers\PrincipalController;
-use Controllers\ProductoColorController; //borar
+
 use Controllers\GraficosController;
 use Controllers\ConfiguracionController;
 use Controllers\CompraController;
@@ -25,19 +25,6 @@ $router = new Router();
 // Zona Privada
     $router->post('/login/verificar',[AdminController::class,'index1']);
    
-
-//Color 
-/*
-    // method get
-    $router->get('/color',[ColorController::class,'Color']);
-    $router->get('/color/listar',[ColorController::class,'listarColor']);
-
-    // method post
-    $router->post('/color/eliminar',[ColorController::class,'eliminarColor']);
-    $router->post('/color/guardar',[ColorController::class,'crearColor']);
-    $router->post('/color/editar',[ColorController::class,'editColor']);
-    $router->post('/color/getColor',[ColorController::class,'getColor']); */
-
 //Productos
     // method get
     $router->get('/producto',[ProductoController::class,'index']);
@@ -64,19 +51,6 @@ $router = new Router();
     $router->post('/categoria/actualizar',[CategoriaController::class,'actualizar']);
     $router->post('/categoria/eliminar',[CategoriaController::class,'eliminar']);
   
-
-//ProductoColor
-    //method get
-    $router->get('/productoColor',[ProductoColorController::class,'index']);
-    $router->get('/productoColor/listar',[ProductoColorController::class,'listar']);
-    $router->get('/productoColor/getProducto',[ProductoColorController::class,'getProducto']);
-    $router->get('/productoColor/getColor',[ProductoColorController::class,'getColor']);
-    
-    //method post
-    $router->post('/productoColor/create',[ProductoColorController::class,'create']);
-    $router->post('/productoColor/update',[ProductoColorController::class,'update']);
-    $router->post('/productoColor/delete',[ProductoColorController::class,'delete']);
-    $router->post('/productoColor/obtener',[ProductoColorController::class,'obtener']);
 
 //Cliente
 
@@ -108,7 +82,7 @@ $router = new Router();
     $router->post('/visitante/estado',[VisitanteController::class,'estado']); 
     $router->post('/visitante/update',[VisitanteController::class,'update']); 
     $router->post('/visitante/delete',[VisitanteController::class,'delete']);
-    $router->post('/visitante/create2',[VisitanteController::class,'create2']);
+    $router->post('/visitante/create2',[VisitanteController::class,'create2']); //no estar rutasprotegidas
 
     
 //CompraDetalle
