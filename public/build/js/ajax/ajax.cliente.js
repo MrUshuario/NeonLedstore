@@ -18,7 +18,7 @@ function tableAll(){
       {data:"cli_nombre"},
       {data:"cli_apellidos"},
       {data:"cli_email"},
-      {data:"cli_clave"},
+      //{data:"cli_clave"}, // si quiero ver calve descomentar cliente.php linea 19
       {data:"cli_telefono"},  
       { data: null,
           render: function(data, type, row){
@@ -201,7 +201,7 @@ function obtenerData() {
         $("#cli_nombre").val(data.cli_nombre);
         $("#cli_apellidos").val(data.cli_apellidos);
         $("#cli_email").val(data.cli_email)
-        $("#cli_clave").val(data.cli_clave)
+        //$("#cli_clave").val(data.cli_clave)
         $("#cli_telefono").val(data.cli_telefono)
         $("#cli_estado").val(data.cli_estado)
         $("#cli_rol").val(data.cli_rol)

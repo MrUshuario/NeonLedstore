@@ -20,7 +20,9 @@ class Router {
         $id = $_SESSION['id'] ?? null;
 
         // Arreglo de rutas protegidas
-        $rutas_protegidas = [
+        $rutas_protegidas = [ 
+            // BORRAR TODO LO QUE DICE COLOR y productocolor (no producto)
+            // proteger y ordenar todo lo demas
             '/dashboard','/color','/color/listar','/color/buscar','/color/eliminar',
             '/color/guardar','/color/editar','/color/getColor', '/producto', '/producto/getCategoria',
             '/producto/getProducto','/producto/crear','/producto/editar','/producto/getProForm',

@@ -16,7 +16,7 @@
                     <th>Nombres</th>
                     <th>Apellidos</th>
                     <th>Email</th>
-                    <th>Clave</th>
+                    <!--<th>Clave</th>-->
                     <th>Teléfono</th>
                     <th>Estado</th>
                     <th>Rol</th>
