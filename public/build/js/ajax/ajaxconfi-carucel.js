@@ -123,13 +123,13 @@
         var correo=document.getElementById("correo").value;
         var telefono=document.getElementById("telefono").value;
         
-        if (nombre=="" || apellidos=="" || correo=="" || telefono=="") {
+        /*if (nombre=="" || apellidos=="" || correo=="" || telefono=="") {
             swal('Error','Datos por completar','error');
             console.log("error a mostrar");
         } else {
             swal('Listo!','Datos enviados correctamente','success');
             console.log("entrando a mostrar");
-        }
+        }*/
         
     }
     
@@ -141,13 +141,13 @@
         var correo=document.getElementById("correo").value;
         var telefono=document.getElementById("telefono").value;
         
-        if (nombre=="" || apellidos=="" || correo=="" || telefono=="") {
+        /*if (nombre=="" || apellidos=="" || correo=="" || telefono=="") {
             swal('Error','Datos por completar','error');
             console.log("error a mostrar");
         } else {
             swal('Listo!','Datos enviados correctamente','success');
             console.log("entrando a mostrar");
-        }
+        }*/
     }
 
     // caputra de data Negocio
@@ -158,13 +158,13 @@
         var correo=document.getElementById("correo").value;
         var telefono=document.getElementById("telefono").value;
         
-        if (nombre=="" || apellidos=="" || correo=="" || telefono=="") {
+        /*if (nombre=="" || apellidos=="" || correo=="" || telefono=="") {
             swal('Error','Datos por completar','error');
             console.log("error a mostrar");
         } else {
             swal('Listo!','Datos enviados correctamente','success');
             console.log("entrando a mostrar");
-        }
+        }*/
         
     }
     
