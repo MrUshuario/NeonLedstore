@@ -1,6 +1,7 @@
 $(document).ready(function () {
   tableAll();
   saveCliente();
+  encriptar();
   cleanForm();
   obtenerData();
   deleteCliente();
@@ -37,6 +38,9 @@ function tableAll(){
   }); 
 
 }
+
+
+
 
 function saveCliente(){
   $("#formCliente").submit(function(e){
