@@ -34,7 +34,6 @@
                         <div class="filtros border border-light border-4 border-bottom-0 border-start-0  d-flex align-items-center fw-bold">
                             Filtros
                         </div>
-
                         <div class="accordion" id="accordionPanelsStayOpenExample">
                             <div class="cajaFiltroCategoria accordion-item border-bottom-0 border-start-0 border-4 border-light rounded-0 bg-black">
                                 <h2 class="accordion-header w-100 text-white d-flex justify-content-center items-center" id="panelsStayOpen-headingOne">
@@ -44,6 +43,7 @@
                                 </h2>
                                 <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingOne">
                                     <div class="accordion-body" id="filtro_categoria">
+                                        <!--IMPRIME TODO LO DE CATEGORIA-->
                                     </div>
                                 </div>
                             </div>
@@ -68,69 +68,12 @@
                                     </div>
                                 </div>
                             </div>
-
-                            <div class="cajaFiltroColor accordion-item border border-4 border-light border-start-0 bg-black">
-                                <h2 class="accordion-header w-100 text-white d-flex justify-content-center items-center" id="panelsStayOpen-headingThree">
-                                    <button class="accordion-button collapsed filtroColor float-left text-start bg-black text-white fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
-                                        Color
-                                    </button>
-                                </h2>
-                                <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
-                                    <div class="accordion-body">
-                                        <ul class="row w-100  bg-black" id="contenedor-color">
-                                            <li class="itemFiltroColor col-6 pt-2">
-                                                <div class="paleta paletaMorada dropdown-item rounded-circle mx-auto" data-id="1"></div>
-                                            </li>
-                                            <li class="itemFiltroColor col-5 pt-2">
-                                                <div class="paleta paletaAzul dropdown-item rounded-circle mx-auto" data-id="2"></div>
-                                            </li>
-                                            <li class="itemFiltroColor col-6 pt-2">
-                                                <div class="paleta paletaRojo dropdown-item rounded-circle mx-auto" data-id="3"></div>
-                                            </li>
-                                            <li class="itemFiltroColor col-5 pt-2">
-                                                <div class="paleta paletaAmarillo dropdown-item rounded-circle mx-auto" data-id="4"></div>
-                                            </li>
-                                            <li class="itemFiltroColor col-6 pt-2">
-                                                <div class="paleta paletaVerde dropdown-item rounded-circle mx-auto" data-id="5"></div>
-                                            </li>
-                                            <li class="itemFiltroColor col-5 pt-2">
-                                                <div class="paleta paletaCeleste dropdown-item rounded-circle mx-auto" data-id="6"></div>
-                                            </li>
-                                            <li class="itemFiltroColor col-6 pt-2">
-                                                <div class="paleta paletaNegro dropdown-item rounded-circle mx-auto border" data-id="7"></div>
-                                            </li>
-                                            <li class="itemFiltroColor col-5 pt-2">
-                                                <div class="paleta paletaRosa dropdown-item rounded-circle mx-auto" data-id="8"></div>
-                                            </li>
-                                            <li class="itemFiltroColor col-6 pt-2">
-                                                <div style="background-color:#fff;" class="paletaCeleste dropdown-item rounded-circle mx-auto" data-id="9"></div>
-                                            </li>
-                                            <li class="itemFiltroColor col-5 pt-2">
-                                                <div class="paleta paletaNaranja dropdown-item rounded-circle mx-auto" data-id="10"></div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-
                         </div>
 
-                        <div class="buscar">
-                            <input type="text" class="entradaBuscar bg-black text-white w-100 mt-2" name="buscar" id="entradaBuscar" placeholder="Buscar">
-                        </div>
+                       
                     </div>
                 </div>
-
-                <div class="busqueda container pt-4">
-                    <div class="row d-flex justify-content-center">
-                        <div class="col-7 col-sm-3">
-                            <h3 class="tituloOrdenar text-white text-center">Ordenar por</h3>
-                            <button type="button" class="recomendado bg-black text-white w-100 mt-2 btn btn-dark">Recomendado</button>
-                        </div>
-                    </div>
-                    <div class="articles-section row pt-3" id="articles-section">
-                        <!---
-                    
+                    <!---
                         <div class='productCard col-6 p-1 col-lg-4 text-white align-self-end'>
                             <div class=''>
                                 <a href='producto'>
@@ -152,8 +95,6 @@
                             </div>
                         </div>
                         -->
-                    </div>
-                </div>
         </article>
 
 <article class="article2 p-1 p-sm-5">

@@ -42,7 +42,7 @@ function getCategoria() {
         console.log(list);
         if (cat_activo == 1) {
           console.log("impreso");
-          select.innerHTML +=
+          select.innerHTML +=  // IMPRIME EL BOTON //EXTENDER Y SACAR FONDO NEGRO
           `<ul class="categoriaList w-100 bg-black p-0 text-center">
           <button class="btn-inline btn-dark" data-idcategoria="${id}" id="categoria" > ${cat_nombre}</button>
             </ul>`
