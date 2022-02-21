@@ -61,10 +61,10 @@
                                 <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
                                     <div class="accordion-body border">
                                         <div class="range bg-dark p-2">
-                                            <div class="container mt-4">
-                                                <input type="range" id="inputrange" class="js-range-slider" name="my_range" value="" tabindex="-1" readonly="">
-                                            </div>
-                                                <p class="text-center">Precio S/.140 - S/.860</p>
+                                        <div class="contenedor">
+                                            <input type="range" min="100" max="900" id="Rango" class="slider">
+                                            <p class="valor">Precio: <span id="value"></span></p>
+                                        </div>
                                                 <div class="row d-flex justify-content-center">
                                                     <button id="optrange" name="btn_range" class="precio btn btn-secondary col-6">Filtrar</button>
                                                 </div>
