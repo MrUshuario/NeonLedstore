@@ -106,7 +106,7 @@ color:white ;
 
     display:flex;
 
-    width: 85%;
+    width: 80%;
 
     margin: auto;
 
@@ -131,7 +131,16 @@ color:white ;
     box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, .75)
 
 }
+@media (max-width: 700px) {
 
+  .contenedor-imagenes .imagen{
+
+  width: 48%;
+  height: 160px;
+
+  }
+
+}
 .imagen img{
 
     width: 100%;
@@ -195,3 +204,5 @@ color:white ;
     font-size:10px;
 
 }
+
+
