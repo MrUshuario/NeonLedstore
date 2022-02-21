@@ -118,16 +118,16 @@ class ProductoController
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $producto = new Producto($_POST);
 
-            if ($producto->pro_estado == 'Activo') {
-                $producto->pro_estado = "Inactivo";
+            if ($producto->pro_activo == "1") {
+                $producto->pro_activo = "0";
                 $resultado = $producto->editEstado();
             } else {
-                $producto->pro_estado = "Activo";
+                $producto->pro_activo = "1";
                 $resultado = $producto->editEstado();
             }
 
             echo json_encode([
-                "pro_estado" => $producto->pro_estado,
+                "pro_activo" => $producto->pro_activo,
                 "resultado" => $resultado
             ]);
         }

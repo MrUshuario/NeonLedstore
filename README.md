@@ -2,5 +2,7 @@
 -   cd public
 ## Ya dentro de la carpeta public agregar el siguiente comando
 -   php -S localhost:8000
-## (BORRAR) Clave  con la que cifraremos contraseñas EAS
-- convenio
+## Nuestro sistema de clave es un simple Hash
+- Hash
+## Crear archivo contra.php (La variable contrasena debe contener la contraseña de email)
+- $contrasena

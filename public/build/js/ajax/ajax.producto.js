@@ -71,7 +71,7 @@ function obtenerData() {
         $("#pro_nombre").val(data.pro_nombre);
         $("#pro_descripcion").val(data.pro_descripcion);
         $("#pro_precio").val(data.pro_precio);
-        $("#pro_estado").val(data.pro_estado);
+        $("#pro_activo").val(data.pro_activo);
         const tmn = data.pro_tamano.split("X");
         $("#t-1").val(tmn[0]);
         $("#t-2").val(tmn[1]);
@@ -158,7 +158,7 @@ function getProducto() {
       const { data } = JSON.parse(el);
       const idproducto = document.querySelector("#id_producto");
       data.forEach((e) => {
-        if (e.pro_estado == "Activo") {
+        if (e.pro_activo == "Activo") {
           idproducto.innerHTML += `<option value="${e.id}">${e.pro_nombre} - S/.${e.pro_precio}</option>`;
         }
       });
@@ -181,7 +181,7 @@ function saveProduct() {
     const tm1 = document.querySelector("#t-1").value;
     const tm2 = document.querySelector("#t-2").value;
     const tamanio = tm1 + "x" + tm2;
-    const estado = $("#pro_estado").val();
+    const estado = $("#pro_activo").val();
 
     const formData = new FormData();
     formData.append("pro_categoria", categoria);
@@ -190,7 +190,7 @@ function saveProduct() {
     formData.append("pro_precio", precio);
     formData.append("pro_imagen", imagen);
     formData.append("pro_tamano", tamanio);
-    formData.append("pro_estado", estado);
+    formData.append("pro_activo", estado);
 
     if (id == "") {
       if (
@@ -266,13 +266,13 @@ function updateStatus() {
     $.ajax({
       url: "/producto/estado",
       type: "POST",
-      data: { id: idpro, pro_estado: estadoText },
+      data: { id: idpro, pro_activo: estadoText },
       success: function (ef) {
         const json = JSON.parse(ef);
-        const { pro_estado, resultado } = json;
-        console.log(pro_estado, resultado);
-        e.target.textContent = pro_estado;
-        if (pro_estado == "Activo") {
+        const { pro_activo, resultado } = json;
+        console.log(pro_activo, resultado);
+        e.target.textContent = pro_activo;
+        if (pro_activo == "1") {
           e.target.classList.remove("btn-danger");
           e.target.classList.add("btn-success");
         } else {
