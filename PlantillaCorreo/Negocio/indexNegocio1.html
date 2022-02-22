@@ -4,14 +4,53 @@
 	<meta charset="utf-8">
 	<title>holi</title>
 
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+
+
 <style type="text/css">
 
-a{
+
+	a{
 		text-decoration: none;
 		color: #1f97e7;
 	}
+	p,h1,h2,h3,h4,h5,h6,a,button{
+		font-family: 'Roboto Condensed','sans-serif';
+	}
 
+	h1,h3,h5{
+		font-weight: 700;
+	}
 
+	h2,h6{
+		font-weight: 300;
+	}
+
+	h4{
+		font-weight: 400;
+	}
+
+	h4{
+		font-style: italic;
+	}
+
+	p{
+		font-size: 20px;
+		font-weight: 300;
+	}
+
+	.columna{
+		margin-top: -18px;
+		margin-bottom: -18px;
+	}
+
+	.footer{
+		font-style: italic;
+	}
+
+	#brand{
+		font-style: normal;
+	}
 
 
 </style>
@@ -57,16 +96,16 @@ a{
 	
 	<tr>
 		<td style="background-color: #ecf0f1">
-			<div style="color: #34495e; margin: 2% 7% 2%; text-align: justify;font-family: sans-serif">
-				<h2 style="color: #e67e22; margin: 0 0 5px">¡NeonLed Store le dará vida a tu Negocio!</h2>
-				<p style="margin: 2px; font-size: 15px">
-					Somos una empresa que realizamos pedidos a diseño para que decores tu negocio con las luces 
-					LED que más te gusten. Seguimo las ultimas tendencias para darle estilo a tu negocio y la imagen 
-					que quieres transmitir a tus clientes, aprovecha las grandes ofertas y promociones disponibles en todas nuestra categorías:</p>
-				<ul style="font-size: 15px;  margin: 10px 0">
-					<li>Objetos Decorativos Led</li>
-					<li>Textos y Letreros Luminososo</li>
-					<li>Personajes Led Ilustrativos </li>
+			<div style="color: #34495e; margin: 2% 7% 2%; text-align: justify;">
+				<h1 style="color: #e67e22; margin: 0 0 5px">¡NeonLed Store le dará vida a tu Negocio!</h1>
+				<p style="margin: 2px;">
+					Somos una empresa que realiza pedidos a diseño para que decores tu negocio con las luces 
+					LED que más te gusten. Seguimos las últimas tendencias para darle estilo a tu negocio y la imagen 
+					que quieres transmitir a tus clientes. Aprovecha las grandes ofertas y promociones disponibles en todas nuestra categorías:</p>
+				<ul style="display: flex; flex-direction:column; align-content: center;">
+					<li class="columna"><p>Objetos Decorativos Led</p></li>
+					<li class="columna"><p>Textos y Letreros Luminososo</p></li>
+					<li class="columna"><p>Personajes Led Ilustrativos</p></li>
 				</ul>				
 				<div style="width: 100%; text-align: center"><br>
 					<a style="text-decoration: none; border-radius: 5px; padding: 11px 15px; color: white; background-color: #3498db" href="https://www.neonhouseled.com/">Visitar página</a>	
@@ -83,7 +122,7 @@ a{
 		</td>
 	</tr>
 <!-- FOOTER SECTION -->
-	<tr>
+	<tr class="footer">
 		<td style="background-color: #1a1a1a; color: #fff;">
 			<table width="100%">
 				<tr>
@@ -93,7 +132,7 @@ a{
 						<p>Jr. Paruro 1401 tda 130 CC Shoping Center</p>
 						<p>Celular: 994078320</p>
 						<p>Email: <a href="mailto:info.neonledstore@gmail.com">info.neonledstore@gmail.com</a></p>													
-							<p style="color: #d353f3; font-size: 12px; text-align: center;margin: 30px 0 0">&#169; 2022 Neon House Led</p>		
+							<p style="color: #d353f3; font-size: 12px; text-align: center;margin: 30px 0 0" id="brand">&#169; 2022 Neon House Led</p>		
 					</td>			
 				</tr>										
 			</table>
