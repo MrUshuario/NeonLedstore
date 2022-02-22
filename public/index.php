@@ -141,6 +141,9 @@ $router = new Router();
         $router->post("/contacto/enviar",[PrincipalController::class,"contactoEmail"]);
         //$router->post("/landingpage/enviar",[PrincipalController::class,"contactolandingEmail"]);
 
+        //registrocliente
+        //productodetallado
+
         //Landig Page
         $router->get("/landingPageNegocio", [PrincipalController::class, 'landingNegocio']);
         $router->get("/landingPageEvento", [PrincipalController::class, 'landingEvento']);
