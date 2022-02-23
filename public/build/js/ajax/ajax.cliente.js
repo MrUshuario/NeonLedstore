@@ -1,7 +1,6 @@
 $(document).ready(function () {
   tableAll();
   saveCliente();
-  encriptar();
   cleanForm();
   obtenerData();
   deleteCliente();
@@ -187,7 +186,6 @@ function cleanForm() {
 
 function obtenerData() {
   $(document).on("click", "#edit", function (e) {
-
     clean();
 
     let id = e.target.dataset.idcliente;

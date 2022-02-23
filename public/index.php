@@ -33,6 +33,7 @@ $router = new Router();
     $router->get('/producto/getCategoria',[ProductoController::class,'obtenerCat']);
     $router->get('/producto/getProducto',[ProductoController::class,'getProducto']);
     $router->get('/producto/listar',[ProductoController::class,"listarP"]);
+    $router->get('/producto/conseguirproducto',[ProductoController::class,"conseguirproducto"]);
 
     // method post
     $router->post('/producto/crear',[ProductoController::class,'guardar']);

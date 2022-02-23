@@ -88,7 +88,7 @@
                         <div class="container">
                             
                             <div class="galproductos arreglo">
-                                <div class="container">
+                                <div class="container" id="productoimprimir">
                                     <div class="card2">
                                         <img src="\build\img\landingPage\lp-hogar\dormitoriokid.webp">                                        
                                     </div>

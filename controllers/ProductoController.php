@@ -33,6 +33,16 @@ class ProductoController
         ]);
     }
 
+    ///productos para el frontend
+    public static function conseguirproducto(Router $router)
+    {
+        $productos = Producto::listar();
+
+        echo json_encode([
+            "listPro" => $productos
+        ]);
+    }
+
     public static function guardar()
     {
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
