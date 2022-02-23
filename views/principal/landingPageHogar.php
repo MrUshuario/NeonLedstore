@@ -90,7 +90,7 @@
 
             </div>
 
-            <!--LandingPageEvento-->
+            <!--LandingPageHogar-->
             <div class="landin1 arreglo">
 
                 <h1 class="title">¡LOS MEJORES DISEÑOS PARA EL HOGAR!</h1>
@@ -145,7 +145,7 @@
                     </div>
             </div>   
 
-<!--Fin LandinPageEvento-->
+<!--Fin LandinPageHogar-->
 
 
         <div class="personalizado row d-flex align-items-end ">
