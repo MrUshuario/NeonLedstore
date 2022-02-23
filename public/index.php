@@ -140,7 +140,7 @@ $router = new Router();
         $router->get("/nosotros",[PrincipalController::class,'nosotros']);
         $router->get("/productos",[PrincipalController::class,'productos']);
         $router->get("/contacto",[PrincipalController::class,"contacto"]);
-        $router->get("/servicio",[PrincipalController::class,"servicios"]);
+        $router->get("/servicios",[PrincipalController::class,"servicios"]);
 
         //formularios
         $router->get("/usuarioLogeo",[PrincipalController::class,"usuarioLogeo"]);
