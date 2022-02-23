@@ -25,238 +25,130 @@
         </div>
     </main>
 
-
-    <div class="container" style="display: inline">
-        <section class="row pb-5"> 
-
-            <div class="container">
-                <div class="row text-white mx-1 mx-sm-5 pt-3 mb-2 d-flex">
-                    <!-- FILTRO -->    
-                    <div class="col-lg-3">
+    
+    <!-- INICIO DE FILTRO -->
+    <!--
+    <div class="container" style="display: inline">                 
+        <div class="row text-white mx-1 mx-sm-5 pt-3 mb-2 d-flex">
                         
-                        <div class="filtros border border-light border-4 border-bottom-0 border-start-0  d-flex align-items-center fw-bold">
-                            Filtros
-                        </div>
-                        <div class="accordion" id="accordionPanelsStayOpenExample">
-                            <div class="cajaFiltroCategoria accordion-item border-bottom-0 border-start-0 border-4 border-light rounded-0 bg-black">
-                                <h2 class="accordion-header border border-light w-100 text-white d-flex justify-content-center items-center" id="panelsStayOpen-headingOne">
-                                    <button class="accordion-button collapsed filtroCategoria float-left text-start bg-black text-white fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-                                        Categoría
-                                    </button>
-                                </h2>
-                                <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingOne">
-                                    <div class="accordion-body border" id="filtro_categoria">
-                                    <!--IMPRIME TODO LO DE CATEGORIA-->
-                                    </div>
-                                </div>
-                            </div>
+            <div class="col-lg-3">
                         
-                        
-                            <div class="cajaFiltroPrecio accordion-item border border-4 border-bottom-0 border-light border-start-0 bg-black">
-                                <h2 class="accordion-header w-100 text-white d-flex justify-content-center items-center" id="panelsStayOpen-headingTwo">
-                                    <button class="accordion-button border border-light collapsed filtroPrecio float-left text-start bg-black text-white fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
-                                        Precio
-                                    </button>
-                                </h2>
-                                <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
-                                    <div class="accordion-body border">
-                                        <div class="range bg-dark p-2">
-                                        <div class="contenedor">
-                                            <input type="range" min="100" max="900" id="Rango" class="slider">
-                                            <p class="valor">Precio: <span id="value"></span></p>
-                                        </div>
-                                                <div class="row d-flex justify-content-center">
-                                                    <button id="optrange" name="btn_range" class="precio btn btn-secondary col-6">Filtrar</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                      
-                        </div>                  
-                
-                        <!--FIN FILTRO-->
-
-                        <div class="col-lg-9">     
-                            <div class="container">
-                                <div class="row">          
-                                    <h2 class="title-product py-sm-3 text-white text-center fw-bold">GALERÍA DE PRODUCTOS</h2>               
-
-
-                                <ma class="ma">
-                                    <div class="galeria">
-
-                                        <div class="contenedor-imagenes">
-
-                                            <div class="imagen">
-
-                                                <img src="build/img/productos/brideToBe.webp" alt="">
-
-                                                    <div class="overlay">
-
-                                                        <h2>ver detalle </h2>
-
-                                                    </div>
-
-                                            </div>
-
-                                            <div class="imagen">
-
-                                                <img src="build/img/productos/brideToBe.webp" alt="">
-
-                                                    <div class="overlay">
-
-                                                        <h2>ver detalle </h2>
-
-                                                    </div>
-
-                                            </div>
-
-                                            <div class="imagen">
-
-                                                <img src="build/img/productos/brideToBe.webp" alt="">
-
-                                                    <div class="overlay">
-
-                                                        <h2>ver detalle </h2>
-
-                                                    </div>
-
-                                            </div>
-
-                                            <div class="imagen">
-
-                                                <img src="build/img/productos/brideToBe.webp" alt="">
-
-                                                    <div class="overlay">
-
-                                                        <h2>ver detalle </h2>
-
-                                                    </div>
-
-                                            </div>
-
-                                            <div class="imagen">
-
-                                                <img src="build/img/productos/brideToBe.webp" alt="">
-
-                                                    <div class="overlay">
-
-                                                        <h2>ver detalle </h2>
-
-                                                    </div>
-
-                                            </div>
-
-                                            <div class="imagen">
-
-                                                <img src="build/img/productos/brideToBe.webp" alt="">
-
-                                                    <div class="overlay">
-
-                                                        <h2>ver detalle </h2>
-
-                                                    </div>
-
-                                            </div>
-
-                                            <div class="imagen">
-
-                                                <img src="build/img/productos/brideToBe.webp" alt="">
-
-                                                    <div class="overlay">
-
-                                                        <h2>ver detalle </h2>
-
-                                                    </div>
-
-                                            </div>
-
-                                            <div class="imagen">
-
-                                                <img src="build/img/productos/brideToBe.webp" alt="">
-
-                                                    <div class="overlay">
-
-                                                        <h2>ver detalle </h2>
-
-                                                    </div>
-
-                                            </div>
-
-                                            <div class="imagen">
-
-                                                <img src="build/img/productos/brideToBe.webp" alt="">
-
-                                                    <div class="overlay">
-
-                                                        <h2>ver detalle </h2>
-
-                                                    </div>
-
-                                            </div>
-
-                                            <div class="imagen">
-
-                                                <img src="build/img/productos/brideToBe.webp" alt="">
-
-                                                    <div class="overlay">
-
-                                                        <h2>ver detalle </h2>
-
-                                                    </div>
-
-                                            </div> 
-
-                                            <div class="imagen">
-
-                                                <img src="build/img/productos/brideToBe.webp" alt="">
-
-                                                    <div class="overlay">
-
-                                                        <h2>Ver detalle </h2>
-
-                                                    </div>
-
-                                            </div>
-
-                                            <div class="imagen">
-
-                                                <img src="build/img/productos/brideToBe.webp" alt="">
-
-                                                    <div class="overlay">
-
-                                                        <h2>ver detalle </h2>
-
-                                                    </div>
-
-                                            </div> 
-
-                                        </div>
-
-                                    </div>
-                                </ma>
+                <div class="filtros border border-light border-4 border-bottom-0 border-start-0  d-flex align-items-center fw-bold">
+                    Filtros
+                </div>
+                <div class="accordion" id="accordionPanelsStayOpenExample">
+                    <div class="cajaFiltroCategoria accordion-item border-bottom-0 border-start-0 border-4 border-light rounded-0 bg-black">
+                        <h2 class="accordion-header border border-light w-100 text-white d-flex justify-content-center items-center" id="panelsStayOpen-headingOne">
+                            <button class="accordion-button collapsed filtroCategoria float-left text-start bg-black text-white fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                                Categoría
+                            </button>
+                        </h2>
+                        <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingOne">
+                            <div class="accordion-body border" id="filtro_categoria">
+                            //IMPRIME TODO LO DE CATEGORIA
                             </div>
                         </div>
                     </div>
+                                                
+                    <div class="cajaFiltroPrecio accordion-item border border-4 border-bottom-0 border-light border-start-0 bg-black">
+                        <h2 class="accordion-header w-100 text-white d-flex justify-content-center items-center" id="panelsStayOpen-headingTwo">
+                            <button class="accordion-button border border-light collapsed filtroPrecio float-left text-start bg-black text-white fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                                Precio
+                            </button>
+                        </h2>
+                        <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+                            <div class="accordion-body border">
+                                <div class="range bg-dark p-2">
+                                    <div class="contenedor">
+                                        <input type="range" min="100" max="900" id="Rango" class="slider">
+                                            <p class="valor">Precio: <span id="value"></span></p>
+                                    </div>
+                                    <div class="row d-flex justify-content-center">
+                                        <button id="optrange" name="btn_range" class="precio btn btn-secondary col-6">Filtrar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>                    
+            </div>                                         
+        </div>                      
+    </div>
+    -->
+
+    <!--FIN de FILTRO-->
+    
+    <div class="container">
+        <section class="row pb-3"> 
+
+            <div class="container">
+                <div class="row text-white mx-2 mx-sm-7 pt-5 mb-3 d-flex justify-content-end">              
+                    <div class="col-12 col-sm-12  border neontabla"><br>
+                            <h2 class= "neones">Galería de Productos</h2>
+                        <div class="container">
+                            
+                            <div class="galproductos arreglo">
+                                <div class="container">
+                                    <div class="card2">
+                                        <img src="\build\img\landingPage\lp-hogar\dormitoriokid.webp">                                        
+                                    </div>
+
+                                    <div class="card2">
+                                        <img src="\build\img\landingPage\lp-hogar\dormitoriojuv.webp">                                            
+                                    </div>
+
+                                    <div class="card2">
+                                        <img src="\build\img\landingPage\lp-hogar\dormitoriomatri.webp">                                         
+                                    </div>
+
+                                    <div class="card2">
+                                        <img src="\build\img\landingPage\lp-hogar\puertaled.webp">                                           
+                                    </div>
+            
+                                    <div class="card2">
+                                        <img src="\build\img\landingPage\lp-hogar\pasadizo.webp">                                          
+                                    </div>
+
+                                    <div class="card2">
+                                        <img src="\build\img\landingPage\lp-hogar\espaciogamer.webp">                                           
+                                    </div>
+
+                                    <div class="card2">
+                                        <img src="\build\img\landingPage\lp-hogar\mesadecorativa.webp">                                          
+                                    </div>
+
+                                    <div class="card2">
+                                        <img src="\build\img\landingPage\lp-hogar\mesanoche.webp">                                           
+                                    </div>
+
+                                    <div class="card2">
+                                        <img src="\build\img\landingPage\lp-hogar\salavisitas.webp">                                           
+                                    </div>
+
+                                    <div class="card2">
+                                        <img src="\build\img\landingPage\lp-hogar\pasadizo.webp">                                          
+                                    </div>
+
+                                    <div class="card2">
+                                        <img src="\build\img\landingPage\lp-hogar\espaciogamer.webp">                                           
+                                    </div>
+
+                                    <div class="card2">
+                                        <img src="\build\img\landingPage\lp-hogar\mesadecorativa.webp">                                          
+                                    </div>
+                                </div>
+                            </div>   
+
+                        </div>
+                    </div>
                 </div>
-
             </div>
-                
-            </div>
-
+           
         </section>
     </div>
 
 
 </div>        
-
-
-
-
-
-
 
 
 <script src="build/js/ajax/ajax.filtrado.js"></script>
