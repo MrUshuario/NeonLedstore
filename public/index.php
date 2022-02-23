@@ -14,6 +14,8 @@ use Controllers\GraficosController;
 use Controllers\ConfiguracionController;
 use Controllers\CompraController;
 use Controllers\VisitanteController;
+use Controllers\RegistroClienteController;
+use Controllers\ProductoDetalladoController;
 use MVC\Router;
 
 $router = new Router();
@@ -123,7 +125,14 @@ $router = new Router();
 
 //graficos
     $router->get('/graficos',[GraficosController::class,'index']);
-
+    
+// RegistroCliente
+    
+    $router->get('/RegistroCliente',[RegistroClienteController::class,'regCliente']);
+    
+//ProductoDetallado
+    
+    $router->get('/ProductoDetallado',[ProductoDetalladoController::class,'proDetallado']);
 
 // Principal
         //METHOD GET
@@ -131,7 +140,7 @@ $router = new Router();
         $router->get("/nosotros",[PrincipalController::class,'nosotros']);
         $router->get("/productos",[PrincipalController::class,'productos']);
         $router->get("/contacto",[PrincipalController::class,"contacto"]);
-        $router->get("/servicios",[PrincipalController::class,"servicios"]);
+        $router->get("/servicio",[PrincipalController::class,"servicios"]);
 
         //formularios
         $router->get("/usuarioLogeo",[PrincipalController::class,"usuarioLogeo"]);
@@ -145,6 +154,8 @@ $router = new Router();
         $router->get("/landingPageNegocio", [PrincipalController::class, 'landingNegocio']);
         $router->get("/landingPageEvento", [PrincipalController::class, 'landingEvento']);
         $router->get("/landingPageHogar", [PrincipalController::class, 'landingHogar']);
+        $router->get("/RegistroCliente", [PrincipalController::class, 'regCliente']);
+        $router->get("/ProductoDetallado", [PrincipalController::class, 'proDetallado']);
 
 
 
