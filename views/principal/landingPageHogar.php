@@ -98,47 +98,47 @@
                     <div class="container">
 
                         <div class="card">
-                            <img src="\build\img\landingPage\lp-hogar\dormitoriokid.webp">
+                            <img src="build/img/landingPage/lp-hogar/dormitoriokid.webp">
                                 <h4>Dormitorio Kid</h4>
                         </div>
 
                         <div class="card">
-                            <img src="\build\img\landingPage\lp-hogar\dormitoriojuv.webp">
+                            <img src="build/img/landingPage/lp-hogar/dormitoriojuv.webp">
                                 <h4>Dormitorio Juvenil</h4>
                         </div>
 
                         <div class="card">
-                            <img src="\build\img\landingPage\lp-hogar\dormitoriomatri.webp">
+                            <img src="build/img/landingPage/lp-hogar/dormitoriomatri.webp">
                                 <h4>Matrimonial</h4>
                         </div>
 
                         <div class="card">
-                            <img src="\build\img\landingPage\lp-hogar\puertaled.webp">
+                            <img src="build/img/landingPage/lp-hogar/puertaled.webp">
                                 <h4>Puerta Led</h4>
                         </div>
         
                         <div class="card">
-                            <img src="\build\img\landingPage\lp-hogar\pasadizo.webp">
+                            <img src="build/img/landingPage/lp-hogar/pasadizo.webp">
                                 <h4>Pasadizo</h4>
                         </div>
 
                         <div class="card">
-                            <img src="\build\img\landingPage\lp-hogar\espaciogamer.webp">
+                            <img src="build/img/landingPage/lp-hogar/espaciogamer.webp">
                                 <h4>Gamer</h4>
                         </div>
 
                         <div class="card">
-                            <img src="\build\img\landingPage\lp-hogar\mesadecorativa.webp">
+                            <img src="build/img/landingPage/lp-hogar/mesadecorativa.webp">
                                 <h4>Mesa Decorativa</h4>
                         </div>
 
                         <div class="card">
-                            <img src="\build\img\landingPage\lp-hogar\mesanoche.webp">
+                            <img src="build/img/landingPage/lp-hogar/mesanoche.webp">
                                 <h4>Mesa Noche</h4>
                         </div>
 
                         <div class="card">
-                            <img src="\build\img\landingPage\lp-hogar\salavisitas.webp">
+                            <img src="build/img/landingPage/lp-hogar/salavisitas.webp">
                                 <h4>Sala Visitas</h4>
                         </div>
 

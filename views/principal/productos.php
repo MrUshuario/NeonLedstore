@@ -90,51 +90,51 @@
                             <div class="galproductos arreglo">
                                 <div class="container" id="productoimprimir">
                                     <div class="card2">
-                                        <img src="\build\img\landingPage\lp-hogar\dormitoriokid.webp">                                        
+                                        <img src="build/img/landingPage/lp-hogar/dormitoriokid.webp">                                        
                                     </div>
 
                                     <div class="card2">
-                                        <img src="\build\img\landingPage\lp-hogar\dormitoriojuv.webp">                                            
+                                        <img src="build/img/landingPage/lp-hogar/dormitoriojuv.webp">                                            
                                     </div>
 
                                     <div class="card2">
-                                        <img src="\build\img\landingPage\lp-hogar\dormitoriomatri.webp">                                         
+                                        <img src="build/img/landingPage/lp-hogar/dormitoriomatri.webp">                                         
                                     </div>
 
                                     <div class="card2">
-                                        <img src="\build\img\landingPage\lp-hogar\puertaled.webp">                                           
+                                        <img src="build/img/landingPage/lp-hogar/puertaled.webp">                                           
                                     </div>
             
                                     <div class="card2">
-                                        <img src="\build\img\landingPage\lp-hogar\pasadizo.webp">                                          
+                                        <img src="build/img/landingPage/lp-hogar/pasadizo.webp">                                          
                                     </div>
 
                                     <div class="card2">
-                                        <img src="\build\img\landingPage\lp-hogar\espaciogamer.webp">                                           
+                                        <img src="build/img/landingPage/lp-hogar/espaciogamer.webp">                                           
                                     </div>
 
                                     <div class="card2">
-                                        <img src="\build\img\landingPage\lp-hogar\mesadecorativa.webp">                                          
+                                        <img src="build/img/landingPage/lp-hogar/mesadecorativa.webp">                                          
                                     </div>
 
                                     <div class="card2">
-                                        <img src="\build\img\landingPage\lp-hogar\mesanoche.webp">                                           
+                                        <img src="build/img/landingPage/lp-hogar/mesanoche.webp">                                           
                                     </div>
 
                                     <div class="card2">
-                                        <img src="\build\img\landingPage\lp-hogar\salavisitas.webp">                                           
+                                        <img src="build/img/landingPage/lp-hogar/salavisitas.webp">                                           
                                     </div>
 
                                     <div class="card2">
-                                        <img src="\build\img\landingPage\lp-hogar\pasadizo.webp">                                          
+                                        <img src="build/img/landingPage/lp-hogar/pasadizo.webp">                                          
                                     </div>
 
                                     <div class="card2">
-                                        <img src="\build\img\landingPage\lp-hogar\espaciogamer.webp">                                           
+                                        <img src="build/img/landingPage/lp-hogar/espaciogamer.webp">                                           
                                     </div>
 
                                     <div class="card2">
-                                        <img src="\build\img\landingPage\lp-hogar\mesadecorativa.webp">                                          
+                                        <img src="build/img/landingPage/lp-hogar/mesadecorativa.webp">                                          
                                     </div>
                                 </div>
                             </div>   

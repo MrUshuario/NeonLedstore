@@ -95,48 +95,48 @@
                     <div class="container">
 
                         <div class="card">
-                            <img src="\build\img\landingPage\lp-negocio\bar.webp">
+                            <img src="build/img/landingPage/lp-negocio/bar.webp">
                                 <h4>Bar</h4>
                         </div>
 
                         <div class="card">
-                            <img src="\build\img\landingPage\lp-negocio\cine.webp">
+                            <img src="build/img/landingPage/lp-negocio/cine.webp">
                                 <h4>Cine</h4>
                         </div>
 
                         <div class="card">
-                            <img src="\build\img\landingPage\lp-negocio\imagen3.webp">
+                            <img src="build/img/landingPage/lp-negocio/imagen3.webp">
                                 <h4>Coffe Shop
                                 </h4>
                         </div>
 
                         <div class="card">
-                            <img src="\build\img\landingPage\lp-negocio\restaurante.webp">
+                            <img src="build/img/landingPage/lp-negocio/restaurante.webp">
                                 <h4>Restaurante</h4>
                          </div>
 
                         <div class="card">
-                            <img src="\build\img\landingPage\lp-negocio\Boutique.webp">
+                            <img src="build/img/landingPage/lp-negocio/Boutique.webp">
                                 <h4>Boutique</h4>
                         </div>
 
                         <div class="card">
-                            <img src="\build\img\landingPage\lp-negocio\tienda.webp">
+                            <img src="build/img/landingPage/lp-negocio/tienda.webp">
                                 <h4>Tienda Comercial</h4>
                         </div>
 
                         <div class="card">
-                            <img src="\build\img\landingPage\lp-negocio\seminario.webp">
+                            <img src="build/img/landingPage/lp-negocio/seminario.webp">
                                 <h4>Seminario</h4>
                         </div>
 
                         <div class="card">
-                            <img src="\build\img\landingPage\lp-negocio\negocio-recepcion.webp">
+                            <img src="build/img/landingPage/lp-negocio/negocio-recepcion.webp">
                                 <h4>Recepción</h4>
                         </div>
 
                         <div class="card">
-                            <img src="\build\img\landingPage\lp-negocio\club-campestre.webp">
+                            <img src="build/img/landingPage/lp-negocio/club-campestre.webp">
                                 <h4>Reuniones</h4>
                         </div>
 

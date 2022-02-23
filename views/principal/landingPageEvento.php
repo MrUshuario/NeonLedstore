@@ -92,39 +92,39 @@
         <h1 class="title">¡LOS MEJORES DISEÑOS PARA EVENTOS!</h1>
         <div class="container">
             <div class="card">
-                <img src="\build\img\landingPage\lp-evento\graduacion.webp">
+                <img src="build/img/landingPage/lp-evento/graduacion.webp">
                     <h4>Graduación</h4>
             </div>
             <div class="card">
-                <img src="\build\img\landingPage\lp-evento\matrimonio.webp">
+                <img src="build/img/landingPage/lp-evento/matrimonio.webp">
                     <h4>Matrimonio</h4>
             </div>
             <div class="card">
-                <img src="\build\img\landingPage\lp-evento\aniversario.webp">
+                <img src="build/img/landingPage/lp-evento/aniversario.webp">
                     <h4>Aniversario</h4>
             </div>
             <div class="card">
-                <img src="\build\img\landingPage\lp-evento\recepcion.webp">
+                <img src="build/img/landingPage/lp-evento/recepcion.webp">
                     <h4>Recepción</h4>
             </div>
             <div class="card">
-                <img src="\build\img\landingPage\lp-evento\sala-nocturna.webp">
+                <img src="build/img/landingPage/lp-evento/sala-nocturna.webp">
                     <h4>Sala Nocturna</h4>
             </div>
             <div class="card">
-                <img src="\build\img\landingPage\lp-evento\pista-de-baile.webp">
+                <img src="build/img/landingPage/lp-evento/pista-de-baile.webp">
                     <h4>Pista de Baile</h4>
             </div>
             <div class="card">
-                <img src="\build\img\landingPage\lp-evento\concierto.webp">
+                <img src="build/img/landingPage/lp-evento/concierto.webp">
                     <h4>Concierto</h4>
             </div>
             <div class="card">
-                <img src="\build\img\landingPage\lp-evento\festival.webp">
+                <img src="build/img/landingPage/lp-evento/festival.webp">
                     <h4>Festival</h4>
             </div>
             <div class="card">
-                <img src="\build\img\landingPage\lp-evento\reunion.webp">
+                <img src="build/img/landingPage/lp-evento/reunion.webp">
                     <h4>Reuniones</h4>
             </div>
         </div>
