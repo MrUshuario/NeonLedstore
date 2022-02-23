@@ -52,6 +52,15 @@ class PrincipalController {
         $router->renderPrincipal("usuarioRegistro",[]);
     }
 
+    // ProductoDetallado
+    public static function proDetallado (Router $router){
+        $router->renderPrincipal("ProductoDetallado",[]);
+    }
+    // RegistroCliente
+    public static function regCliente (Router $router){
+        $router->renderPrincipal("RegistroCliente",[]);
+    }
+
     // Logica - Contacto
     public static function contactoEmail(){
         if($_SERVER['REQUEST_METHOD'] == 'POST'){
