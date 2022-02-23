@@ -29,7 +29,9 @@ class Router {
             '/categoria','/categoria/listar','/categoria/crear','/categoria/estado','/categoria/getCategoria',
             '/categoria/actualizar', '/categoria/eliminar',"/categoria/buscar",
             // cliente
-            '/cliente','/cliente/listar','/cliente/getCliente','/cliente/create','/cliente/estado','/cliente/update','/cliente/delete', 
+            '/cliente','/cliente/listar','/cliente/getCliente','/cliente/estado','/cliente/update','/cliente/delete',
+            //cliente/create
+
             // visitante
             '/visitante','/visitante/listar','/visitante/getVisitante','/visitante/create',
             '/visitante/estado','/visitante/update','/visitante/delete','/visitante/create2',
