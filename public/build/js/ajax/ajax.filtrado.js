@@ -3,7 +3,7 @@ $(document).ready(function () {
   tableAll();
   getCategoria();
   getProducto();
-  obtenerData();
+  obtenerProducto();
   cleanForm();
   saveProduct();
   updateStatus();
@@ -18,9 +18,7 @@ function cleanForm() {
 
 }
 
-function obtenerData() {
- 
-}
+
 
 function deleteProduct() {
  
@@ -63,20 +61,21 @@ function getProducto() {
     type: "GET",
     url: "/producto/conseguirproducto",
     success: function (e) {
-      console.log(e)
       let json = JSON.parse(e);
       const lists = json.listPro;
       console.log(lists)
       lists.forEach((list) => {
-        const { id, cat_id, pro_nombre, pro_descripcion, pro_precio, pro_imagen, pro_tamano, pro_activo} = list;
+        const { id, cat_id, pro_nombre, pro_imagen, pro_activo} = list;
         if (pro_activo == 1) {
-          console.log("Imprimir producto");
-          select.innerHTML +=  // IMPRIME EL BOTON //EXTENDER Y SACAR FONDO NEGRO
+          select.innerHTML +=  // IMPRIME EL BOTON //EXTENDER Y SACAR FONDO NEGRO // ID EN IMAGEN //texto borrar
           `
+          <button class="bg-black border-0" " id="promodal" data-bs-toggle="modal" data-bs-target="#modalProducto">
           <div class="card2">
           <p>${pro_nombre}</p>
-          <img src="/build/img/landingPage/lp-hogar/dormitoriokid.webp">                                        
-          </div>` 
+          <img data-idpro="${id}" src="/build/img/landingPage/lp-hogar/dormitoriokid.webp">                                        
+          </div>
+          </button>
+          ` 
           ;
         }
       });
@@ -84,6 +83,41 @@ function getProducto() {
   });
 }
 
+function obtenerProducto() {
+  $(document).on("click", "#promodal", function (e) {
+    clean(); //crear un clean que vacie el modal
+    let id = e.target.dataset.idpro;
+    const data = {
+      id: id,
+    };
+    $.ajax({
+      type: "POST",
+      url: "/producto/getProForm",
+      data: data ,
+      success: function (e) {
+        const { data } = JSON.parse(e);
+        console.log(data);
+        // $("#id").val(data.id);
+        // $("#pro_categoria").val(data.cat_id);
+        // console.log(data.cat_id);
+        // $("#pro_nombre").val(data.pro_nombre);
+        // $("#pro_descripcion").val(data.pro_descripcion);
+        // $("#pro_precio").val(data.pro_precio);
+        // $("#pro_activo").val(data.pro_activo);
+        // const tmn = data.pro_tamano.split("X");
+        // $("#t-1").val(tmn[0]);
+        // $("#t-2").val(tmn[1]);
+
+        // // Mostrar imagen
+        // img.src = `/imagenes/${data.pro_imagen}`;
+        // img.classList.add("w-100", "imgCP");
+
+        // $("#title").text("Actualizar Productos");
+        // $("#save").text("Actualizar");
+      },
+    });
+  });
+}
 function saveProduct() {
   
   

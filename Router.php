@@ -23,7 +23,7 @@ class Router {
         $rutas_protegidas = [
             '/dashboard',
             // producto
-            '/producto','/producto/crear','/producto/editar','/producto/getProForm',
+            '/producto','/producto/crear','/producto/editar', //'/producto/getProForm',
             '/producto/estado',"/producto/eliminar","/producto/buscarNombre",
             // categoria 
             '/categoria','/categoria/listar','/categoria/crear','/categoria/estado','/categoria/getCategoria',
@@ -34,7 +34,7 @@ class Router {
 
             // visitante
             '/visitante','/visitante/listar','/visitante/getVisitante','/visitante/create',
-            '/visitante/estado','/visitante/update','/visitante/delete','/visitante/create2',
+            '/visitante/estado','/visitante/update','/visitante/delete', //'/visitante/create2', 
             // compraDetalle
             '/compraDetalle','/compraDetalle/listar','/compraDetalle/create',
             // compra
