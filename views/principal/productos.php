@@ -89,53 +89,7 @@
                             
                             <div class="galproductos arreglo">
                                 <div class="container" id="productoimprimir">
-                                    <div class="card2">
-                                        <img src="build/img/landingPage/lp-hogar/dormitoriokid.webp">                                        
-                                    </div>
-
-                                    <div class="card2">
-                                        <img src="build/img/landingPage/lp-hogar/dormitoriojuv.webp">                                            
-                                    </div>
-
-                                    <div class="card2">
-                                        <img src="build/img/landingPage/lp-hogar/dormitoriomatri.webp">                                         
-                                    </div>
-
-                                    <div class="card2">
-                                        <img src="build/img/landingPage/lp-hogar/puertaled.webp">                                           
-                                    </div>
-            
-                                    <div class="card2">
-                                        <img src="build/img/landingPage/lp-hogar/pasadizo.webp">                                          
-                                    </div>
-
-                                    <div class="card2">
-                                        <img src="build/img/landingPage/lp-hogar/espaciogamer.webp">                                           
-                                    </div>
-
-                                    <div class="card2">
-                                        <img src="build/img/landingPage/lp-hogar/mesadecorativa.webp">                                          
-                                    </div>
-
-                                    <div class="card2">
-                                        <img src="build/img/landingPage/lp-hogar/mesanoche.webp">                                           
-                                    </div>
-
-                                    <div class="card2">
-                                        <img src="build/img/landingPage/lp-hogar/salavisitas.webp">                                           
-                                    </div>
-
-                                    <div class="card2">
-                                        <img src="build/img/landingPage/lp-hogar/pasadizo.webp">                                          
-                                    </div>
-
-                                    <div class="card2">
-                                        <img src="build/img/landingPage/lp-hogar/espaciogamer.webp">                                           
-                                    </div>
-
-                                    <div class="card2">
-                                        <img src="build/img/landingPage/lp-hogar/mesadecorativa.webp">                                          
-                                    </div>
+                                   <!--IMPRIMIRA IMAGENES-->
                                 </div>
                             </div>   
 
@@ -146,6 +100,47 @@
            
         </section>
     </div>
+
+
+    <!--MODAL DE PRODUCTOS
+    background-color: rgba(0,0,0);
+    border-radius: 70px;
+    -->
+    <div class="modal fade" id="modalProducto" tabindex="-1" aria-labelledby="modalAsesoria" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content rounded-25" id="padreModalLanding">
+                <main class="main rounded-25 row pb-5 d-flex justify-content-center">
+                <!--Modificar para que quede como lo piden -->
+                    <div class="mainConte col-8 my-5 pb-3">
+                        <h1 class="my-3 fs-2 neones p-50">¿Quieres tener un negocio visualmente atractivo?</h1>
+                        <div class="row d-flex justify-content-center">
+
+                        <form class="formContact landingPageForm col-12 col-sm-10" method="POST">
+                            <input type="hidden" id="consulta" value="formNegocio">
+                            <div class="modal-field">
+                                <input type="hidden" class="neontextlanding bg-transparent text-center form-control my-3 border-0" name="contador" id="contador" value=1>
+                            </div>
+                            <div class="modal-field">
+                                <input type="text" class="neontextlanding bg-transparent text-center form-control my-3 border-0" name="nombre" id="nombre" placeholder="Nombres" required>
+                            </div>
+                            <div class="modal-field">
+                                <input type="text" class="neontextlanding bg-transparent text-center form-control my-3 border-0" name="apellido" id="apellidos" placeholder="Apellidos" required>
+                            </div>
+                            <div class="modal-field">
+                                <input type="email" class="neontextlanding bg-transparent text-center form-control my-3 border-0" name="correo" id="correo" placeholder="Correo Electrónico" required>
+                            </div>
+                            <div class="modal-field">
+                                <input type="number" class="neontextlanding bg-transparent text-center form-control my-3 border-0 mb-3" name="telefono" id="telefono" placeholder="Número de celular" required>
+                            </div> <!--crea tu propio boton, lo agregas en NEON.css -->
+                            <button type="submit" class="neonbottonlanding btn btn-primary my-sm-3 border-0"  id="btn-modal-asesoria Negocio" onclick="Negocio();">Pedir asesoria</button>
+                        </form>
+                    </div>     
+                    </div>
+
+                </main>
+                </div>
+            </div>
+            </div>
 
 
 </div>        

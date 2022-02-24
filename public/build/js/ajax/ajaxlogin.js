@@ -16,7 +16,7 @@ $(document).ready(function(){
             data: data,
             type: 'POST',
             success: function(response){
-                let json = JSON.parse(response);
+            let json = JSON.parse(response);
             console.log(json.mensaje)
             const status = json.STATUS;
                 if(status == 1){
