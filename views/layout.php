@@ -41,8 +41,8 @@
                 <i class="fas fa-bullseye"></i>
             </div>
 
-            <!--BOTONES EXTRAS POR SI SE NECESITA AGREGAR -->
-            <!--<button class="btn-dashboard" id="btn-list">
+            <!--BOTONES EXTRAS POR SI SE NECESITA AGREGAR DISPLAY NONE-->
+            <button class="btn-dashboard" id="btn-list" style="display: none"> 
                 <span>
                     <i class="fas fa-home"></i> Dashboard
                 </span>
@@ -58,7 +58,7 @@
                     </li>
                 </ul>
             </div>
-            -->
+            
 
             <div class="app-dashboard">
                 <span class="app-title">Apps</span>
@@ -71,8 +71,9 @@
                     <li><a href="/compra"><i class="fas fa-shopping-basket"></i></i>Compra</a></li>
                     <li><a href="/visitante"><i class="fas fa-person-booth"></i></i>Visitantes</a></li>
                     
-                    <!-- por si se requieren más botones
-                    <li class="hover-caja">
+                    <!-- por si se requieren más botones -->
+                    <!-- borrar display none si se desea ver -->
+                    <li class="hover-caja" style="display: none">
                         <div class="flex-between" id="btnApp-1">
                             <span>
                                 <i class="fas fa-cash-register"></i> eCommerce
@@ -87,7 +88,8 @@
                             <li>Feliz</li>
                         </ul>
                     </li>
-                    <li class="hover-caja">
+                     <!-- borrar display none si se desea ver -->
+                    <li class="hover-caja" style="display: none">
                         <div class="flex-between" id="btnApp-2">
                             <span>
                                 <i class="far fa-user"></i> User
@@ -101,7 +103,7 @@
                             <li>Chanchito</li>
                             <li>Feliz</li>
                         </ul>
-                    </li> -->
+                    </li> 
                 </ul>
             </div>
 
