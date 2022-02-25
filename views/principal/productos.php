@@ -4,19 +4,20 @@
             <div class="row text-white d-flex justify-content-around">
                 <div class="d-flex flex-column col-6 col-sm-4">
                     <h1 class="title-product py-1 py-sm-3 text-start fw-bold">PRODUCTO</h1>
-                        <div class="h-100 w-100 d-flex items-center">
-                            <img class="img-product w-100" src="/build/img/productos/brideToBe.webp" style="border-radius: 15px">
+                        <div class="w-100 d-flex items-center">
+                            <img class="img-product w-100" src="/build/img/productos/brideToBe.webp" style="border-radius: 15px;">
                         </div>
                 </div>
                 <div class="contenedorTexto col-6 col-sm-4 pt-5 pt-sm-3 ">
                     <h1 class="subtitulo text-center fw-bold">NEÓN DESIGN</h2>
-                        <div class="h-100 d-flex align-items-center">
+                        <div class="h-100 d-flex align-items-justify">
                             <aside class="">
                                 <p class="parrafo">Actualmente los diseños de neon led se han vuelto una tendencia interesante y
                                 diferente para cualquier evento, negocio o para la decoración de tu hogar.
                                 En NEON LED STORE realizamos paneles 100% personalizados al estilo de tu marca
                                 o para lo que tu evento necesita. Recuerda que puedes cotizar cualquier diseño con
-                                    <span><a class="enlaceNosotros" href="/nosotros">nosotros.</a></span>
+                                nosotros.
+                                <!--<span><a styleclass="enlaceNosotros" href="/nosotros">nosotros.</a>-->
                                 </p>
                             </aside>
                         </div>
@@ -84,7 +85,7 @@
             <div class="container">
                 <div class="row text-white mx-2 mx-sm-7 pt-5 mb-3 d-flex justify-content-end">              
                     <div class="col-12 col-sm-12  border neontabla"><br>
-                            <h2 class= "neones">Galería de Productos</h2>
+                            <h3 class= "neones" style="font-family:Roboto Condensed">GALERÍA DE PRODUCTOS</h3>
                         <div class="container">
                             
                             <div class="galproductos arreglo">
@@ -106,43 +107,7 @@
     background-color: rgba(0,0,0);
     border-radius: 70px;
     -->
-    <div class="modal fade" id="modalProducto" tabindex="-1" aria-labelledby="modalAsesoria" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content rounded-25" id="padreModalLanding">
-                <main class="main rounded-25 row pb-5 d-flex justify-content-center">
-                <!--Modificar para que quede como lo piden -->
-                    <div class="mainConte col-8 my-5 pb-3">
-                        <h1 class="my-3 fs-2 neones p-50">aqui va Nombre Producto</h1>
-                        <div class="row d-flex justify-content-center">
-
-                        <form class="modalPro col-12 col-sm-10" method="POST">
-                            <div class="modal-field">
-                                <label>Precio: </label>
-                                <input class="neontextlanding bg-transparent text-center form-control my-3 border-0">
-                            </div>
-                            <div class="modal-field">
-                                <label>Tamaño: </label>
-                                <input type="" class="neontextlanding bg-transparent text-center form-control my-3 border-0">
-                            </div>
-                            <div class="modal-field">
-                                <label>Color: </label>
-                                    <select class="p-2 neontextlanding bg-transparent rounded w-100 me-1 me-sm-4 my-3 d-block text-black" name="consulta" id="consulta" placeholder="Elija Opcion"><br>             
-                                        <option disabled selected="">--- Seleccione ---</option>
-                                        <option id="pro-color" value="color1">Color 1</option>
-	                                    <option id="pro-color" value="color2">Color 2</option>
-	                                    
-                                    </select>
-                            </div>
-                            <a href="/ProductoDetallado" class="neonbtnVermas btn btn-primary my-sm-3 border-0"  style="width: auto;">Ver más</a>
-                            
-                        </form>
-                    </div>     
-                    </div>
-
-                </main>
-                </div>
-            </div>
-        </div>
+    
 
 
 </div>        
