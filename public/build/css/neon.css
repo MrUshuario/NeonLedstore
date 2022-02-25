@@ -303,3 +303,61 @@
     margin-top: 50px;
     opacity: 0.7;
 }
+
+/* estilo de la pagina RegistroCliente */
+.espacio{
+    margin: 50px auto;
+}
+.medio-registro{
+    width: 50%;
+    
+    position: relative;
+    top: 90%;
+    left: 20%;     
+    padding-left: 8%; 
+    height: 530px;   
+}
+
+.altura-regi{
+    padding-top: 20px;
+}
+
+
+/* contenido de la pagina RegistroCliente */
+.tamaño-reg{
+    height: 810px;
+}
+.culto{
+    margin-bottom: 15px;
+}
+.check{
+    margin: 5px;
+    top: 3px;
+    position: relative;
+}
+.pregunta-Reg{
+    float: right;
+    display: flex;
+    margin-right: -45px;
+}
+.espacio-reg{
+    margin-left: 6%;
+    width: 77%;
+}
+.footer-registro{
+    margin-top: 10px;
+}
+.record-right{
+    float: left;
+    display: flex;
+}
+.record-regis{
+    margin-left: 10px;
+}
+.enlace-registro{
+    top: 3px;
+    position: relative;
+}
+
+
+
