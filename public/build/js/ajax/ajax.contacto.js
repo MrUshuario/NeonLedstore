@@ -87,8 +87,7 @@ function saveCorreo(){
     $(".formContact").submit(function(e){
         e.preventDefault();
         const data = {
-            contador: $("#contador").val().trim(),
-            contacto: $("#contacto").val().trim(),
+            contador: $("#contador").val().trim(),           
             nombre: $("#nombre").val().trim(),
             apellidos: $("#apellidos").val().trim(),
             correo: $("#correo").val().trim(),
