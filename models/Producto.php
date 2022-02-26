@@ -66,7 +66,7 @@ class Producto  extends ActiveRecord
         $resultado = static::consultarSQL($query);
         return $resultado;
     }
-
+    // no srive
     public function editSinImg()
     {
         $query = "UPDATE " . static::$tabla . " SET pro_nombre='" . $this->pro_nombre . "', pro_descripcion='" . $this->pro_descripcion . "', pro_precio='" . $this->pro_precio . "', pro_tamano='" . $this->pro_tamano . "', pro_activo='" . $this->pro_activo . "' where id = " . $this->id;
@@ -82,7 +82,7 @@ class Producto  extends ActiveRecord
     }
 
 
-    // creo que no sirve
+    //  que no sirve
     public function searchNombre()
     {
         $query="select p.id as id, pro_nombre, pro_descripcion, pro_precio, pro_imagen, pro_tamano, pro_activo, cat_nombre as pro_categoria from ".static::$tabla." p inner join tab_categorias c ON c.id = p.pro_categoria where pro_nombre LIKE '%".$this->pro_nombre."%'";
