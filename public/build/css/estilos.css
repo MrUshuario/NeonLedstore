@@ -179,13 +179,7 @@ form{
 
 /* Modal Producto(imagenes) */
 
-.modal-dialog{
-    background-color: rgba(0,0,0);
-    border-radius: 50px;
-    width: 400px;
-    height: 600px;
-    
-}
+
 
 #pro-color { color:rgb(255, 255, 255); 
     background-color:rgb(100, 16, 121); }
