@@ -27,6 +27,7 @@
     <!-- FontAwesome -->
 
     <link rel="stylesheet" href="build/css/fontawesome/css/all.min.css">
+    <script src="https://kit.fontawesome.com/f788fcfb82.js" crossorigin="anonymous"></script>
 
     <!-- Bootstrap 5 CSS -->
 
