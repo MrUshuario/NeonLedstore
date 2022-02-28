@@ -79,9 +79,9 @@ function getProducto() {
           <div class="modal fade" id="modalProducto${list.id}" tabindex="-1" aria-labelledby="modalAsesoria" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content rounded-25" id="padreModalLanding">
-                <main class="main rounded-25 row pb-5 d-flex justify-content-center">
+                <main class="main rounded-25 row pb-5 d-flex justify-content-center neontextlanding bg-black">
                 <!--Modificar para que quede como lo piden -->
-                    <div class="mainConte col-8 my-5 pb-3">
+                    <div class="mainConte col-8 my-5 pb-3 rouded-55">
                         <h1 class="my-3 fs-2 neones p-50">${pro_nombre}</h1>
                           <div class="row d-flex justify-content-center">
                             <img data-idpro="${id}" src="/build/img/landingPage/lp-hogar/dormitoriokid.webp" style="width: 300px; height:200px; ">   
