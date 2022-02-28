@@ -103,10 +103,45 @@
     </div>
 
 
-    <!--MODAL DE PRODUCTOS
-    background-color: rgba(0,0,0);
-    border-radius: 70px;
-    -->
+    <!--MODAL DE PRODUCTOS-->
+    <div class="modal fade" id="modalProductos" tabindex="-1" aria-labelledby="modalAsesoria" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content rounded-25" id="padreModalLanding">
+                <main class="main rounded-25 row pb-5 d-flex justify-content-center neontextlanding bg-black">
+                <!--Modificar para que quede como lo piden -->
+                    <div class="mainConte col-8 my-5 pb-3 rouded-55">
+                        <h1 id="pro_nombre" class="my-3 fs-2 neones p-50"> </h1>
+                          <div class="row d-flex justify-content-center">
+                            <img src="/build/img/landingPage/lp-hogar/dormitoriokid.webp" style="width: 300px; height:200px; ">   
+                          </div>
+                        <div class="row d-flex justify-content-center">
+
+                        <form class="formMod col-12 col-sm-10">
+                            <input type="hidden" id="id" value="formNegocio">
+                            <div class="modal-field">
+                                <label type="text" id="pro_precio" class="font-weight-bold text-white bg-transparent text-center form-control my-3 border-0"></label>
+                            </div>
+                            <div class="modal-field">
+                                <label type="text" id="pro_tamano" class="font-weight-bold text-white bg-transparent text-center form-control my-3 border-0"></label>
+                            </div>
+                            
+                            <select name="color" class="neontextlanding border-0 border bg-transparent rounded w-100 me-1 me-sm-4 my-3 d-block">
+                                <option id="pro-color" value="1">ROJO</option>
+                                <option id="pro-color" value="2">AZUL</option>
+                                <option id="pro-color" value="3">MULTICOLOR</option>
+                            </select>
+                            <div class="pt-3 pb-3">
+                                <a href="/ProductoDetallado" class="neonbottonlanding btn btn-primary my-sm-3 border-0" style="width: 90%; height:30% font-size: 18px;">Ver más</a>
+                            </div>
+                        </form>
+                       
+                    </div>     
+                    </div>
+
+                </main>
+                </div>
+            </div>
+          </div>
     
 
 
