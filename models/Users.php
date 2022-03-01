@@ -5,23 +5,23 @@ namespace Model;
 use Model\ActiveRecord;
 
 class Users extends ActiveRecord{
-    protected static $tabla ="tab_user";
-    protected static $columnaDB = ['id','user','pass'];
+    protected static $tabla ="tab_cliente";
+    protected static $columnaDB = ['id','cli_email','cli_clave'];
 
     public $id;
-    public $user;
-    public $pass;
+    public $cli_email;
+    public $cli_clave;
     
 
     public function __construct($args=[]){
         $this->id = $args['id'] ?? null;
-        $this->user = $args['user'] ?? null;
-        $this->pass = $args['pass'] ?? null;
+        $this->cli_email = $args['cli_email'] ?? null;
+        $this->cli_clave = $args['cli_clave'] ?? null;
         
     }
 
     public function login(){
-        $query = "SELECT * FROM ".self::$tabla." WHERE user='".$this->user."' LIMIT 1";
+        $query = "SELECT * FROM ".self::$tabla." WHERE cli_email='".$this->cli_email."' LIMIT 1";
         $resultado = self::$db->query($query);
         return $resultado;
     }
@@ -33,12 +33,12 @@ class Users extends ActiveRecord{
     }
 
     public function passwordAuth($resultado) {
-        $user = $resultado->fetch_object();
+        $cli_email = $resultado->fetch_object();
         // Iniciar session        
-        $autenticar = password_verify($this->pass,$user->pass);
+        $autenticar = password_verify($this->cli_clave,$cli_email->cli_clave);
 
         if($autenticar){
-            $_SESSION['id'] = $user->id;
+            $_SESSION['id'] = $cli_email->id;
             $boolean = true;
         }else{
             $_SESSION['id'] = null;
@@ -48,14 +48,14 @@ class Users extends ActiveRecord{
         return $boolean;
     }
 
-    // metodo para verificar el password antiguo para cambiar a una nueva contraseña
-    public static function verificarKey($pass1){
+    // metodo para verificar el contrasenaword antiguo para cambiar a una nueva contraseña
+    public static function verificarKey($cli_clave1){
         $query = 'SELECT * FROM '.static::$tabla.' where id ='.$_SESSION['id'];
         $resultado = self::$db->query($query);
 
-        $pass = $resultado->fetch_object();
+        $cli_clave = $resultado->fetch_object();
 
-        $autenticar = password_verify($pass1, $pass->pass);
+        $autenticar = password_verify($cli_clave1, $cli_clave->cli_clave);
 
         return $autenticar;
     }

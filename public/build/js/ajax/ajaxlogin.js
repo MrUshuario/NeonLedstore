@@ -2,20 +2,22 @@ $(document).ready(function(){
     $("#formLogin").submit(e => {
         e.preventDefault();
         const data = {
-            user: $('#user').val(),
-            pass: $('#pass').val()
-            //role: $('#role').val()
+            cli_email: $('#cli_email').val(),
+            cli_clave: $('#cli_clave').val()
+            //role: $('#cli_rol').val()
         }
         
         // URL donde se ejecutara la verificacion
         const url="/login/verificar";
 
         // Primera forma de hacer POST en Ajax
+        console.log(data);
         $.ajax({
             url: url,
             data: data,
             type: 'POST',
             success: function(response){
+                console.log(response);
             let json = JSON.parse(response);
             console.log(json.mensaje)
             const status = json.STATUS;
