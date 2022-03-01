@@ -117,7 +117,7 @@
                         <div class="row d-flex justify-content-center">
 
                         <form class="formMod col-12 col-sm-10">
-                            <input type="hidden" id="id" value="formNegocio">
+                           
                             <div class="modal-field">
                                 <label type="text" id="pro_precio" class="font-weight-bold text-white bg-transparent text-center form-control my-3 border-0"></label>
                             </div>
@@ -131,10 +131,13 @@
                                 <option id="pro-color" value="3">MULTICOLOR</option>
                             </select>
                             <div class="pt-3 pb-3">
+
+                            <input type="hidden" id="id" value="formNegocio">
+                            
                             <?php
-
-
+                            
                             ?>
+
                                 <a href="/ProductoDetallado" class="neonbottonlanding btn btn-primary my-sm-3 border-0" style="width: 90%; height:30% font-size: 18px;">Ver más</a>
                             </div>
                         </form>

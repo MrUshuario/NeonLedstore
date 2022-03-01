@@ -103,8 +103,38 @@ function obtenerProducto() {
   });
 }
 
+// public static function dashboard(Router $router){
+//   $id = $_SESSION['id'];
+//   $router->render("dashboard/index",["id"=>$id]);
+// }
+//notas enviar un get
+// de donde recibe? de AJAX LOGIN va a verificar
+// $_SESSION['id'] = $user->id;
+// $boolean = true;
 function enviarProducto() {
- 
+  $.ajax({
+    url: url,
+    data: data,
+    type: 'POST',
+    success: function(response){
+    let json = JSON.parse(response);
+    console.log(json.mensaje)
+    const status = json.STATUS;
+        if(status == 1){
+            swal({
+                title: json.mensaje,
+                icon: "success"
+              }).then(()=>{
+                window.location.href ="/dashboard"; 
+              });                      
+        }else{
+            swal({
+                title: json.mensaje,
+                icon: "error",
+            });
+        }
+    }
+});
 }
 
 function saveProduct() {
