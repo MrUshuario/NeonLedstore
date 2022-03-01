@@ -131,6 +131,10 @@
                                 <option id="pro-color" value="3">MULTICOLOR</option>
                             </select>
                             <div class="pt-3 pb-3">
+                            <?php
+
+
+                            ?>
                                 <a href="/ProductoDetallado" class="neonbottonlanding btn btn-primary my-sm-3 border-0" style="width: 90%; height:30% font-size: 18px;">Ver más</a>
                             </div>
                         </form>
