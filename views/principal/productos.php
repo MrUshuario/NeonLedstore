@@ -107,7 +107,7 @@
     <div class="modal fade" id="modalProductos" tabindex="-1" aria-labelledby="modalAsesoria" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content rounded-25" id="padreModalLanding">
-                <main class="main rounded-25 row pb-5 d-flex justify-content-center neontextlanding bg-black">
+                <main class="main rounded-25 row pb-5 d-flex justify-content-center border bg-black">
                 <!--Modificar para que quede como lo piden -->
                     <div class="mainConte col-8 my-5 pb-3 rouded-55">
                         <h1 id="pro_nombre" class="my-3 fs-2 neones p-50"> </h1>
@@ -116,8 +116,20 @@
                           </div>
                         <div class="row d-flex justify-content-center">
 
+<<<<<<< HEAD
                         <!--<form class="formMod col-12 col-sm-10" id="formproducto">-->
                            
+=======
+                        <form action="ProductoDetallado.php" class="formMod col-12 col-sm-10">
+                            <input type="hidden" id="id" value="formNegocio" name="id">
+                            <script> var id = document.getelementbyid('id');
+                            
+                            </script>
+                            <?php
+                                $id = "<script lenguaje='javascript'> document.write(id); </script>";
+                                echo $id;
+                            ?>
+>>>>>>> 2daa015a620b6c73bc55763308e164c6f438710f
                             <div class="modal-field">
                                 <label type="text" id="pro_precio" class="font-weight-bold text-white bg-transparent text-center form-control my-3 border-0"></label>
                             </div>
@@ -131,8 +143,12 @@
                                 <option id="pro-color" value="3">MULTICOLOR</option>
                             </select>
                             <div class="pt-3 pb-3">
+<<<<<<< HEAD
                                 <input type="hidden" id="id" value="formNegocio">
                                 <button  class="btn btn-primary" id="productodet">Guardar</button>
+=======
+                            
+>>>>>>> 2daa015a620b6c73bc55763308e164c6f438710f
                                 <a href="/ProductoDetallado" class="neonbottonlanding btn btn-primary my-sm-3 border-0" style="width: 90%; height:30% font-size: 18px;">Ver más</a>
                             </div>
                         <!-- </form> -->
@@ -151,3 +167,4 @@
 
 
 <script src="build/js/ajax/ajax.filtrado.js"></script>
+
