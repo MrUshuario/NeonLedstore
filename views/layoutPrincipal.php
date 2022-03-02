@@ -140,28 +140,24 @@
 
                                 <div class="d-flex items-center gap-1">
 
-                                    <p class="m-0 text-wrap text-white items-center" style="max-width: 80px; font-size: .8em;white-space: nowrap;
-
-                text-overflow: ellipsis;
-
-                overflow: hidden;">Alias</p>
+                                    
                                 
                                     
-                                <button class="btn btn-primary my-sm-3 border-0 bg-black" style="margin-top: 0 !important;" onclick="window.location.href='/cart/'">Carrito    
+                                    <button class="btn btn-primary my-sm-3 border-0 bg-black" style="margin-top: 3px !important;" onclick="window.location.href='/cart/'">Carrit    
                                         <i class="fas fa-shopping-cart"></i>
                                     </button>
                                     
-                                    <button class="btn btn-primary my-sm-3 border-0 bg-black" style="margin-top: 0 !important;" onclick="window.location.href='/login'">Perfil    
+                                    <button class="btn btn-primary my-sm-3 border-0 bg-black" style="margin-top: 3px !important;" onclick="window.location.href='/login'">Perfil    
                                         <i class="fas fa-user"></i>
                                     </button>
                                     
                                     
-                                    <button class="btn btn-primary my-sm-3 border-0 bg-black" style="margin-top: 0 !important;" onclick="window.location.href='/'">Iniciar Sesion    
+                                    <button class="btn btn-primary my-sm-3 border-0 bg-black" style="margin-top: 3px !important;" onclick="window.location.href='/'">Iniciar Sesion    
                                         <i class="fas fa-sign-in-alt"></i>
                                     </button>
                                     
                                     
-                                    <button class="btn btn-primary my-sm-3 border-0 bg-black" style="margin-top: 0 !important;" onclick="window.location.href='/'">Administrar   
+                                    <button class="btn btn-primary my-sm-3 border-0 bg-black" style="margin-top: 3px !important;" onclick="window.location.href='/'">Administrar   
                                         <i class="fas fa-cog"></i>
                                     </button>
 
