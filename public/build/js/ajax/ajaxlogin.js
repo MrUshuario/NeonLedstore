@@ -3,8 +3,8 @@ $(document).ready(function(){
         e.preventDefault();
         const data = {
             cli_email: $('#cli_email').val(),
-            cli_clave: $('#cli_clave').val()
-            //role: $('#cli_rol').val()
+            cli_clave: $('#cli_clave').val(),
+            cli_rol: $('#cli_rol').val()
         }
         
         // URL donde se ejecutara la verificacion

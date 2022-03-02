@@ -6,17 +6,19 @@ use Model\ActiveRecord;
 
 class Users extends ActiveRecord{
     protected static $tabla ="tab_cliente";
-    protected static $columnaDB = ['id','cli_email','cli_clave'];
+    protected static $columnaDB = ['id','cli_email','cli_clave','cli_rol'];
 
     public $id;
     public $cli_email;
     public $cli_clave;
+    public $cli_rol;
     
 
     public function __construct($args=[]){
         $this->id = $args['id'] ?? null;
         $this->cli_email = $args['cli_email'] ?? null;
         $this->cli_clave = $args['cli_clave'] ?? null;
+        $this->cli_rol = $args['cli_rol'] ?? null;
         
     }
 
