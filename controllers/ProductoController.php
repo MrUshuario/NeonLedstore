@@ -160,4 +160,16 @@ class ProductoController
             ]);
         }
     }
+    //ver informacion del producto más detallado
+    public static function vermas()
+    {
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            $id = $_POST['id'];
+            $_SESSION['pro_vermas'] = $id; //nueva varibale session
+
+            echo json_encode([
+                "mensaje" => $id
+            ]);
+        }
+    }
 }
