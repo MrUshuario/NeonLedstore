@@ -57,12 +57,12 @@
                         <label for="">Precio</label>
                         <input type="number" id="pro_precio" class="form-control" step="0.05">
                     </div>
-                    <!--
+                    
                     <div class="mb-3">
                         <label for="">Imagen</label>
                         <input type="file" id="pro_imagen" class="form-control">
                     </div>
-                    -->
+                    
                     <img id="pro_img">
                     <div class="mb-3">
                         <label for="">Tamaño de producto (cm)</label>

@@ -17,8 +17,8 @@ function data() {
         type: 'GET',
         success: function(e){
             const {data} = JSON.parse(e);
-            document.querySelector("#rol").textContent = data.role;
-            document.querySelector("#user").value = data.user;
+            document.querySelector("#rol").textContent = data.cli_email;
+            document.querySelector("#user").value = data.cli_nombre;
         }   
     });
 }

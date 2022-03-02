@@ -2,6 +2,7 @@
 namespace Controllers;
 
 use Model\Users;
+use Model\Cliente;
 use MVC\Router;
 
 class AdminController  {
@@ -61,7 +62,7 @@ class AdminController  {
     }
 
     public static function dataConfig(){
-        $data = Users::find($_SESSION['id']);
+        $data = Cliente::find($_SESSION['id']); //cambie user por cliente, lo mismo pero con mas informacion
         echo json_encode([
             'data'=>$data
         ]);
