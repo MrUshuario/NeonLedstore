@@ -24,6 +24,8 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
 
+    
+
     <!-- FontAwesome -->
 
     <link rel="stylesheet" href="build/css/fontawesome/css/all.min.css">
@@ -143,7 +145,8 @@
                 text-overflow: ellipsis;
 
                 overflow: hidden;">Alias</p>
-
+                                
+                                    
                                     <a href="/cart/" class="text-white">
 
                                         <i class="fas fa-shopping-cart"></i>
@@ -155,7 +158,18 @@
                                         <i class="fas fa-user"></i>
 
                                     </a>
+                                    <a href="" class="text-white d-flex padding-right-1em">
+ 
+                                    <i class="fas fa-sign-in-alt"></i>
 
+                                    </a>
+                                    <a href="" class="text-white d-flex">
+ 
+                                    <i class="fas fa-cog"></i>
+
+                                    </a>
+
+                                    
                                 </div>
 
                             <?php //else : 
