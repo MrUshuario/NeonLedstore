@@ -24,11 +24,9 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
 
-    
-
     <!-- FontAwesome -->
 
-    <link rel="stylesheet" href="build/css/fontawesome/css/all.min.css">
+    <!--<link rel="stylesheet" href="build/css/fontawesome/css/all.min.css">-->
     <script src="https://kit.fontawesome.com/f788fcfb82.js" crossorigin="anonymous"></script>
 
     <!-- Bootstrap 5 CSS -->
@@ -51,6 +49,8 @@
 
     <link rel="stylesheet" href="build/css/neon.css">
 
+    <link rel="stylesheet" href="build/css/arreglo.css">
+    
     <link rel="stylesheet" href="build/css/estilos.css">
 
     <!-- Modal Consulta Enviada(Correo) -->
