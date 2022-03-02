@@ -136,6 +136,8 @@ $router = new Router();
     
     $router->get('/ProductoDetallado',[ProductoDetalladoController::class,'proDetallado']);
 
+
+
 // Principal
         //METHOD GET
         $router->get("/", [PrincipalController::class,'index']);
@@ -161,6 +163,7 @@ $router = new Router();
         $router->get("/landingPageHogar", [PrincipalController::class, 'landingHogar']);
         $router->get("/RegistroCliente", [PrincipalController::class, 'regCliente']);
         $router->get("/ProductoDetallado", [PrincipalController::class, 'proDetallado']);
+        $router->get("/administrar", [PrincipalController::class, 'administrar']);
 
 
 

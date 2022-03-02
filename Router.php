@@ -43,7 +43,9 @@ class Router {
             '/configuracion', '/configuracion/getData','/configuracion/verificar','/configuracion/updatePassword',
             // otros
             '/graficos',
-            '/cerrar'
+            '/cerrar',
+            // administrar
+            '/administrar',
         ];
 
         $urlActual = $_SERVER['PATH_INFO'] ?? '/';

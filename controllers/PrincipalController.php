@@ -60,6 +60,10 @@ class PrincipalController {
     public static function regCliente (Router $router){
         $router->renderPrincipal("RegistroCliente",[]);
     }
+    // ADMINISTRAR
+    public static function administrar (Router $router){
+        $router->renderPrincipal("administrar",[]);
+    }
 
     // Logica - Contacto
     public static function contactoEmail(){
