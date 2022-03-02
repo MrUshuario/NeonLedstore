@@ -147,27 +147,23 @@
                 overflow: hidden;">Alias</p>
                                 
                                     
-                                    <a href="/cart/" class="text-white">
-
+                                <button class="btn btn-primary my-sm-3 border-0 bg-black" style="margin-top: 0 !important;" onclick="window.location.href='/cart/'">Carrito    
                                         <i class="fas fa-shopping-cart"></i>
-
-                                    </a>
-
-                                    <a href="/login" class="text-white d-flex ">
-
+                                    </button>
+                                    
+                                    <button class="btn btn-primary my-sm-3 border-0 bg-black" style="margin-top: 0 !important;" onclick="window.location.href='/login'">Perfil    
                                         <i class="fas fa-user"></i>
-
-                                    </a>
-                                    <a href="" class="text-white d-flex padding-right-1em">
- 
-                                    <i class="fas fa-sign-in-alt"></i>
-
-                                    </a>
-                                    <a href="" class="text-white d-flex">
- 
-                                    <i class="fas fa-cog"></i>
-
-                                    </a>
+                                    </button>
+                                    
+                                    
+                                    <button class="btn btn-primary my-sm-3 border-0 bg-black" style="margin-top: 0 !important;" onclick="window.location.href='/'">Iniciar Sesion    
+                                        <i class="fas fa-sign-in-alt"></i>
+                                    </button>
+                                    
+                                    
+                                    <button class="btn btn-primary my-sm-3 border-0 bg-black" style="margin-top: 0 !important;" onclick="window.location.href='/'">Administrar   
+                                        <i class="fas fa-cog"></i>
+                                    </button>
 
                                     
                                 </div>

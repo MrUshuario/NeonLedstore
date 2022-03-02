@@ -4,5 +4,5 @@
 -   php -S localhost:8000
 ## Nuestro sistema de clave es un simple Hash
 - Hash
-## Crear archivo contra.php (La variable contrasena debe contener la contraseña de email)
-- $contrasena
+## Usuario admin en comun
+- adminNLS adminNLS adminNLS contrena: 12345 rol admin

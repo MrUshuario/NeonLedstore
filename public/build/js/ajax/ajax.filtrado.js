@@ -103,8 +103,25 @@ function obtenerProducto() {
   });
 }
 
+
 function enviarProducto() {
- 
+  $(document).on("click", "#productodet", function (e) {
+    let id = $("#id").val();
+    const data = {
+      id: id,
+    };
+  $.ajax({
+    url: "/producto/vermas",
+    data: data,
+    type: 'POST',
+    success: function(response){
+    let json = JSON.parse(response);
+    console.log(json.mensaje);
+    //  $_SESSION['pro_vermas'] es la variable que creo
+    window.location.href ="/ProductoDetallado"; 
+        },
+     });
+  });
 }
 
 function saveProduct() {
