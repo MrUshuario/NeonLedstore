@@ -26,14 +26,14 @@ class AdminController  {
                 // depende del resultado del metodo se dara esta condicional
                 // el metodo retorna un booleano
                 if($passAuth){
-                    $resultado = "Bienvenido a Neon House Led";
+                    $resultado = "Bienvenido a Neon Led Store";
 
                     $json = json_encode([
                         "mensaje"=>$resultado,
                         "STATUS"=> 1
                     ]);
                 }else {
-                    $resultado = "Password ingresado incorrectamente";
+                    $resultado = "Password incorrecto";
 
                     $json = json_encode([
                         "mensaje"=>$resultado,

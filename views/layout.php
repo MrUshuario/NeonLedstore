@@ -122,8 +122,8 @@
                 </nav>
                 <div class="user-content">
                     <div class="role-name">
-                        <span class="bold">John Doe</span>
-                        <span>Admin</span>
+                        <span class="bold"><input style="color: white; background-color:transparent; text-align: right; border: 0;" id="cli_nombre" disabled></span>
+                        <span><input style="color: white; background-color:transparent; text-align: right; border: 0;" id="cli_email" disabled></span>
                     </div>
                     <img src="build/img/login/logo.webp" alt="">
                 </div>
@@ -138,7 +138,8 @@
      <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script> 
      <script src="build/js/plugins/bootstrap-select/bootstrap-select.js"></script> 
      <script src="build/js/plugins/jquery-datatable/jquery.dataTables.js"></script> 
-     <script src="build/js/plugins/jquery-datatable/skin/bootstrap/dataTables.bootstrap.js"></script> 
+     <script src="build/js/plugins/jquery-datatable/skin/bootstrap/dataTables.bootstrap.js"></script>
+     <script src="build/js/ajax/ajax.dashboard.js"></script>
 
     </body>
 
