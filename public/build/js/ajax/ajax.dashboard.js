@@ -15,6 +15,7 @@ function data() {
             document.querySelector("#cli_nombre").value = data.cli_nombre;
             $("#cli_email").val(data.cli_email); //para input
             // document.querySelector("#cli_email").value = data.cli_email;  etiqueta
+            
            
         }   
     });
