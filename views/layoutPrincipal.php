@@ -158,7 +158,7 @@
                                     </button>
                                     
                                     
-                                    <button id="Administrar" class="btn btn-primary my-sm-3 border-0 bg-black" style="margin-top: 3px !important;" onclick="window.location.href='/'">Administrar   
+                                    <button id="Administrar" class="btn btn-primary my-sm-3 border-0 bg-black" style="margin-top: 3px !important;" onclick="window.location.href='/administrar'">Administrar   
                                         <i class="fas fa-cog"></i>
                                     </button>
 
