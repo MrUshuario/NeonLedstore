@@ -5,7 +5,7 @@ $(document).ready(function () {
   obtenerData();
   deleteVisitante();
   //borrar
-  createContactoVis();
+  //createContactoVis();
   saveContactoVis()
   
 
@@ -211,7 +211,7 @@ function saveContactoVis(){
       vis_telefono: vis_telefono,
     };
     console.log(id);
-      createContactoVis(data)
+      //createContactoVis(data)
   });
 }
 

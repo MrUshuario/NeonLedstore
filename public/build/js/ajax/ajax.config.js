@@ -46,7 +46,7 @@ function verificarPassword(data){
             const { res } = JSON.parse(e);
             const respuesta = document.querySelector("#respuesta");
             
-            if(res){
+            if(rol){
                 respuesta.classList.remove('d-none');
                 respuesta.classList.add('d-block')
             }else {
