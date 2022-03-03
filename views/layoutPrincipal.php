@@ -28,6 +28,7 @@
 
     <!--<link rel="stylesheet" href="build/css/fontawesome/css/all.min.css">-->
     <script src="https://kit.fontawesome.com/f788fcfb82.js" crossorigin="anonymous"></script>
+    
 
     <!-- Bootstrap 5 CSS -->
 
@@ -143,21 +144,21 @@
                                     
                                 
                                     
-                                    <button class="btn btn-primary my-sm-3 border-0 bg-black" style="margin-top: 3px !important;" onclick="window.location.href='/cart/'">Carrito    
+                                    <button id="Carrito" class="btn btn-primary my-sm-3 border-0 bg-black" style="margin-top: 3px !important;" onclick="window.location.href='/cart/'">Carrito    
                                         <i class="fas fa-shopping-cart"></i>
                                     </button>
                                     
-                                    <button class="btn btn-primary my-sm-3 border-0 bg-black" style="margin-top: 3px !important;" onclick="window.location.href='/login'">Perfil    
+                                    <button id="Perfil" class="btn btn-primary my-sm-3 border-0 bg-black" style="margin-top: 3px !important;" onclick="window.location.href='/login'">Perfil    
                                         <i class="fas fa-user"></i>
                                     </button>
                                     
                                     
-                                    <button class="btn btn-primary my-sm-3 border-0 bg-black" style="margin-top: 3px !important;" onclick="window.location.href='/'">Iniciar Sesion    
+                                    <button id="Iniciar_S" class="btn btn-primary my-sm-3 border-0 bg-black" style="margin-top: 3px !important;" onclick="window.location.href='/'">Iniciar Sesion    
                                         <i class="fas fa-sign-in-alt"></i>
                                     </button>
                                     
                                     
-                                    <button class="btn btn-primary my-sm-3 border-0 bg-black" style="margin-top: 3px !important;" onclick="window.location.href='/'">Administrar   
+                                    <button id="Administrar" class="btn btn-primary my-sm-3 border-0 bg-black" style="margin-top: 3px !important;" onclick="window.location.href='/'">Administrar   
                                         <i class="fas fa-cog"></i>
                                     </button>
 
@@ -285,3 +286,5 @@
 </body>
 
 </html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="build/js/ajax/ajax.layout.js"></script>

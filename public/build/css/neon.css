@@ -359,13 +359,23 @@
     position: relative;
 }
 
-.tamano-carrus{
-    width: 80%;
-    margin: 2% 2%;
-    height: 40%;
-    margin: 10% auto;
-}
-.tam{
-    height:  400px;
+/* estilo de la pagina ProductoDetallado */
+.recipienteProDeta{
+    width: 100%;
+    padding-top: 5%;
+    padding-bottom: 15%;
+    display: flex;
+    justify-content: center;
 }
 
+.tamano-carrus{
+    width: 40%;
+    margin: auto 2%;
+    margin-top: 2.5%;
+}
+.tamano_des{
+    width: 50%;
+}
+.tam{
+    height: 100%;
+}
