@@ -31,7 +31,6 @@ function data() {
     });
 }
 
-
 function verificarKey(){
     // const data = $("#pass");
     $("#pass").on('change', function(e){
