@@ -144,7 +144,7 @@
                                     
                                 
                                     
-                                    <button id="Carrito" class="btn btn-primary my-sm-3 border-0 bg-black" style="margin-top: 3px !important;" onclick="window.location.href='/cart/'">Carrito    
+                                    <button id="Carrito" class="btn btn-primary my-sm-3 border-0 bg-black" style="margin-top: 3px !important;" onclick="window.location.href='/cart'">Carrito    
                                         <i class="fas fa-shopping-cart"></i>
                                     </button>
                                     
