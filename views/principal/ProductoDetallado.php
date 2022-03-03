@@ -1,9 +1,9 @@
 <div class="pt-5 page-container bg-black">
-        <div class="container">
+        <!-- <div class="container">
             <h1 class="text-white display-1 weight-medium m-3">Producto</h1>
         <div class="contenido-grid">
         
-        <!--CONTENIDO-->
+        
         <form class="formMod col-12 col-sm-10">
                             <input type="hidden" id="id" value="formNegocio">
                             <div class="modal-field">
@@ -19,27 +19,64 @@
                                 <option id="pro-color" value="3">MULTICOLOR</option>
                             </select>
         </form>    
-    <br>
+    
+    <br> -->
 
-    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-            <img src="/build/img/landingPage/lp-hogar/h1.jpg" class="d-block w-100" id="imgCarrusHogar1" alt="...">
+
+
+    <div class="recipienteProDeta">
+        <div id="carouselExampleIndicators" class="carousel slide tamano-carrus" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                <img src="/build/img/landingPage/lp-hogar/h1.jpg" class="d-block w-100 tam" id="imgCarrusHogar1" alt="...">
+                </div>
+                <div class="carousel-item">
+                <img src="/build/img/landingPage/lp-hogar/h2.jpg" class="d-block w-100 tam" id="imgCarrusHogar2" alt="...">
+                </div>
+                <div class="carousel-item">
+                <img src="/build/img/landingPage/lp-hogar/h3.jpg" class="d-block w-100 tam" id="imgCarrusHogar3" alt="...">
+                </div>
             </div>
-            <div class="carousel-item">
-            <img src="/build/img/landingPage/lp-hogar/h2.jpg" class="d-block w-100" id="imgCarrusHogar2" alt="...">
-            </div>
-            <div class="carousel-item">
-            <img src="/build/img/landingPage/lp-hogar/h3.jpg" class="d-block w-100" id="imgCarrusHogar3" alt="...">
-            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
+    
+    
+    
+    
+    
+    
+        <!-- Recopilando la parte del compañero -->
+    
+        <div class="row text-white   pt-3 mb-2 d-flex justify-content-end tamano_des">
+                            <div class="formulario col-12 col-sm-12  border neontabla largoCom">
+                                <div class="container">
+                                    <div class="row">
+                                        <p> 
+                                            Aqui tienes que colocar tu codigo ordenado
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+        </div>
     </div>
+
 </div>
+
+<!-- <i class="fa-solid fa-dolly"></i>   <a href="/productos" class="neonbottonlanding btn btn-primary my-sm-3 border-0" style="width: auto; height:auto font-size: 18px;"> Comprar </a>
+                        </form>
+                        <hr> <br>
+                        <p><i class="fa-solid fa-text-height"></i>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat.</p>
+                        <i class="fa-solid fa-angles-left"></i><a href="/productos" class="neonbottonlanding btn btn-primary my-sm-3 border-0" style="width: auto; height:auto font-size: 18px;"> Volver </a>
+                    </div>   
+    </div></div></div></div> -->
