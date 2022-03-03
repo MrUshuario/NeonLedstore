@@ -65,6 +65,11 @@ class PrincipalController {
         $router->renderPrincipal("administrar",[]);
     }
 
+    //carrito de compras
+    public static function cart (Router $router){
+        $router->renderPrincipal("cart",[]);
+    }
+
     // Logica - Contacto
     public static function contactoEmail(){
         if($_SERVER['REQUEST_METHOD'] == 'POST'){
