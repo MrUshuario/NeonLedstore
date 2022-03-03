@@ -359,5 +359,13 @@
     position: relative;
 }
 
-
+.tamano-carrus{
+    width: 80%;
+    margin: 2% 2%;
+    height: 40%;
+    margin: 10% auto;
+}
+.tam{
+    height:  400px;
+}
 
