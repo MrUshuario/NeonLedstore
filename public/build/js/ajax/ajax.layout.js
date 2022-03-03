@@ -20,6 +20,7 @@ function data() {
             console.log("No logeado");
             document.getElementById('Administrar').style.display = 'none';
             document.getElementById('Perfil').style.display = 'none';
+            document.getElementById('Cerrar_S').style.display = 'none';
             } else {
             const {data} = JSON.parse(e);
             console.log(data);
