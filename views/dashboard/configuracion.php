@@ -9,17 +9,17 @@
         <div class="row clearfix">
             
                 <div class="body">
+                <h2 style="text-align:center">Configuración Contraseña</h2>
                     <div class="container">
                     <div class="row">
-                        <div class="col-lg-6">
-                        <h2>Configuracion contraseña</h2>
-                            <h3>Datos del <span id="rol"></span></h3>
+                        <div class="col-lg-3">
+                       
+                            <h3>Usuario: <span id="rol"></span></h3>
                         </div>
 
-                        <div class="col-lg-6">
-                            <div class="form-group">
-                                <label for="user" >Usuario:</label>
-                                <input class="form-control" type="text" id="user" disabled>
+                        <div class="col-lg-5">
+                            <div class="form-group">                             
+                                <input class="form-control" type="text" id="cli_email" disabled>
                             </div>
                         </div>
                         

@@ -6,9 +6,10 @@ use Model\ActiveRecord;
 
 class Users extends ActiveRecord{
     protected static $tabla ="tab_cliente";
-    protected static $columnaDB = ['id','cli_email','cli_clave','cli_rol'];
+    protected static $columnaDB = ['id','cli_nombre','cli_email','cli_clave','cli_rol'];
 
     public $id;
+    public $cli_nombre;
     public $cli_email;
     public $cli_clave;
     public $cli_rol;
@@ -19,6 +20,7 @@ class Users extends ActiveRecord{
         $this->cli_email = $args['cli_email'] ?? null;
         $this->cli_clave = $args['cli_clave'] ?? null;
         $this->cli_rol = $args['cli_rol'] ?? null;
+        
         
     }
 
@@ -41,7 +43,9 @@ class Users extends ActiveRecord{
 
         if($autenticar){
             $_SESSION['id'] = $cli_email->id;
+            $_SESSION['cli_rol'] = $cli_email->cli_rol;
             $boolean = true;
+            
         }else{
             $_SESSION['id'] = null;
             $boolean = false;
@@ -49,6 +53,7 @@ class Users extends ActiveRecord{
 
         return $boolean;
     }
+
 
     // metodo para verificar el contrasenaword antiguo para cambiar a una nueva contraseña
     public static function verificarKey($cli_clave1){

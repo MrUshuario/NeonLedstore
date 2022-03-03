@@ -94,7 +94,7 @@ function obtenerProducto() {
       success: function (e) {
         const { data } = JSON.parse(e);
         console.log(data);
-        $("#id").val(data.id);
+        $("#id").val(data.id);// para input 
         document.getElementById("pro_precio").innerHTML = "Precio: S/."+data.pro_precio;
         document.getElementById("pro_tamano").innerHTML = data.pro_tamano;
         document.getElementById("pro_nombre").innerHTML = data.pro_nombre;
