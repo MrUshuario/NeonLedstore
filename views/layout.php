@@ -122,8 +122,8 @@
                 </nav>
                 <div class="user-content">
                     <div class="role-name">
-                        <span class="bold"><input style="color: white; background-color:transparent; text-align: right; border: 0;" id="cli_nombre" disabled></span>
-                        <span><input style="color: white; background-color:transparent; text-align: right; border: 0;" id="cli_email" disabled></span>
+                        <span class="bold"><input style="color: white; background-color:transparent; text-align: right; border: 0;" id="admi" disabled></span>
+                        <span><input style="color: white; background-color:transparent; text-align: right; border: 0;" id="mail" disabled></span>
                     </div>
                     <img src="build/img/login/logo.webp" alt="">
                 </div>
