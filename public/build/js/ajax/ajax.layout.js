@@ -22,7 +22,7 @@ function data() {
             document.getElementById('Perfil').style.display = 'none';
             document.getElementById('Cerrar_S').style.display = 'none';
             } else {
-            const {data} = JSON.parse(e);
+            var {data} = JSON.parse(e);
             console.log(data);
                 if(data.cli_rol == 1){
                     $(document).ready(function() {
@@ -36,6 +36,21 @@ function data() {
                     document.getElementById('Iniciar_S').style.display = 'none';
                 }
             }
+
+            console.log(data);  
+            if(document.getElementById('cli_nombre')){
+                /* Que hacer si existe */
+                console.log("hola existe");
+                $("#cli_nombre").val(data.cli_nombre);
+                
+                console.log(data.cli_nombre);
+                
+                console.log(data.cli_apellido);
+            
+
+                } 
+            else {
+                /* Que hacer si no existe */}
         }   
     });
 }

@@ -36,14 +36,14 @@
                                 <div class="row">
                                     <div class="col-12 my-auto mx-auto">
                                         <!--variables invisibles-->
-                                    <input class="p-2 neontextlanding  border-0 border bg-transparent rounded w-100 me-1 me-sm-4 my-3 d-block text-white" type="hidden" name="contador" id="contador" value=1>
+                                    <input class="p-2 neontextlanding  border-0 border bg-transparent rounded w-100 me-1 me-sm-4 my-3 d-block text-white" type="hidden" name=" " id=" ">
                                     <div class="container">
                                         <div class="row">
                                             <div class="col-12 my-auto mx-auto">
-                                                <input class="p-2 neontextlanding bg-transparent border-0 border  rounded w-100 me-1 me-sm-4 my-3 d-block text-white" type="text" name="contacto" id="contacto" value="Nombre Cliente" readonly> <br>
-                                                <input class="p-2 neontextlanding bg-transparent border-0 border  rounded w-100 me-1 me-sm-4 my-3 d-block text-white" type="text" name="gmail" id="gmail" value="apellido" readonly> <br>
-                                                <input class="p-2 neontextlanding bg-transparent border-0 border  rounded w-100 me-1 me-sm-4 my-3 d-block text-white" type="text" name="gmail" id="gmail" value="correo" readonly> <br>
-                                                <input class="p-2 neontextlanding bg-transparent border-0 border  rounded w-100 me-1 me-sm-4 my-3 d-block text-white" type="text" name="dirreción" id="dirreción" value="Telefono" readonly> <br>
+                                                <input class="p-2 neontextlanding bg-transparent border-0 border  rounded w-100 me-1 me-sm-4 my-3 d-block text-white" type="text" name="" id="cli_nombre"> <br>
+                                                <input class="p-2 neontextlanding bg-transparent border-0 border  rounded w-100 me-1 me-sm-4 my-3 d-block text-white" type="text" name="gmail" id="gmail" value="apellido"> <br>
+                                                <input class="p-2 neontextlanding bg-transparent border-0 border  rounded w-100 me-1 me-sm-4 my-3 d-block text-white" type="text" name="gmail" id="gmail" value="correo"> <br>
+                                                <input class="p-2 neontextlanding bg-transparent border-0 border  rounded w-100 me-1 me-sm-4 my-3 d-block text-white" type="text" name="dirreción" id="dirreción" value="Telefono"> <br>
                                             </div>
                                         </div>
                      
@@ -61,5 +61,4 @@
 
 
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script src="build/js/ajax/ajax.administrar.js"></script>
 </div>
