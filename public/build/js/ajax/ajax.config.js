@@ -17,16 +17,8 @@ function data() {
         type: 'GET',
         success: function(e){
             const {data} = JSON.parse(e);
-<<<<<<< HEAD
             document.querySelector("#rol").textContent = data.cli_email;
             document.querySelector("#user").value = data.cli_nombre;
-=======
-            console.log(data);
-            document.querySelector("#rol").textContent = data.cli_email;
-            document.querySelector("#user").value = data.cli_nombre;
-            
-           
->>>>>>> CambioTablaUser
         }   
     });
 }
@@ -54,7 +46,7 @@ function verificarPassword(data){
             const { res } = JSON.parse(e);
             const respuesta = document.querySelector("#respuesta");
             
-            if(res){
+            if(rol){
                 respuesta.classList.remove('d-none');
                 respuesta.classList.add('d-block')
             }else {
