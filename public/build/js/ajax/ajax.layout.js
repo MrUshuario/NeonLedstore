@@ -35,10 +35,10 @@ function data() {
                     $(document).ready(function() {
                         $('#Administrar').text(nombre);
                         $('#Administrar').append('   <i class="fas fa-cog"></i>');
-                        document.getElementById('Administrar').style.display = '';
-                        document.getElementById('Carrito').style.display = '';
-                        document.getElementById('Cerrar_S').style.display = '';
                     });
+                    document.getElementById('Administrar').style.display = '';
+                    document.getElementById('Carrito').style.display = '';
+                    document.getElementById('Cerrar_S').style.display = '';
                 }
             }
 

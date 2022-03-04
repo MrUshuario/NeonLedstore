@@ -38,18 +38,18 @@
                 <div class="container">
                     <div class="row">
                         <div class="container">
-                        <h1 class="text-white display-1 weight-medium m-3">Producto</h1>
+                        <h1 id="nombre" class="text-white display-1 weight-medium m-3">Producto</h1>
                             <div>
                                 <form class="formMod col-12 col-sm-10">
 
                                     <input type="hidden" id="id" value="formNegocio">
 
-                                    <div class="modal-field">
-                                    <label type="text" id="pro_precio" class="font-weight-bold text-white bg-transparent text-center form-control my-3 border-0"></label>
+                                    <div style="float: left;" class="modal-field">
+                                    <label id="precio" type="text" id="pro_precio" class="font-weight-bold text-white bg-transparent text-center form-control my-3 border-0">Precio: S/.</label>
                                     </div>
 
-                                    <div class="modal-field">
-                                    <label type="text" id="pro_tamano" class="font-weight-bold text-white bg-transparent text-center form-control my-3 border-0"></label>
+                                    <div style="float: left;"class="modal-field">
+                                    <label id="tamano" type="text" id="pro_tamano" class="font-weight-bold text-white bg-transparent text-center form-control my-3 border-0">Dimensiones: </label>
                                     </div>
                                 
                                     <select name="color" class="neontextlanding border-0 border bg-transparent rounded w-100 me-1 me-sm-4 my-3 d-block">
@@ -62,7 +62,7 @@
                                 </form>
                                 <hr>
                                 <br>
-                                <p>
+                                <p id="detalles">
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                                 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                                 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -74,6 +74,7 @@
                 </div>
             </div>                        
         </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="build/js/ajax/ajax.findproducto.js"></script>
 </div>
 
