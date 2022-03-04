@@ -38,18 +38,18 @@
                 <div class="container">
                     <div class="row">
                         <div class="container">
-                        <h1 id="nombre" class="text-white display-1 weight-medium m-3">Producto</h1>
+                        <h1 id="nombre" class="text-white display-1 weight-medium m-3"></h1>
                             <div>
                                 <form class="formMod col-12 col-sm-10">
 
                                     <input type="hidden" id="id" value="formNegocio">
 
                                     <div style="float: left;" class="modal-field">
-                                    <label id="precio" type="text" id="pro_precio" class="font-weight-bold text-white bg-transparent text-center form-control my-3 border-0">Precio: S/.</label>
+                                    <label id="precio" type="text" id="pro_precio" class="font-weight-bold text-white bg-transparent text-center form-control my-3 border-0"></label>
                                     </div>
 
                                     <div style="float: left;"class="modal-field">
-                                    <label id="tamano" type="text" id="pro_tamano" class="font-weight-bold text-white bg-transparent text-center form-control my-3 border-0">Dimensiones: </label>
+                                    <label id="tamano" type="text" id="pro_tamano" class="font-weight-bold text-white bg-transparent text-center form-control my-3 border-0"></label>
                                     </div>
                                 
                                     <select name="color" class="neontextlanding border-0 border bg-transparent rounded w-100 me-1 me-sm-4 my-3 d-block">
@@ -62,11 +62,7 @@
                                 </form>
                                 <hr>
                                 <br>
-                                <p id="detalles">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                consequat.</p>
+                                <p id="detalles"></p>
                                 <i class="fa-solid fa-angles-left"></i><a href="/productos" class="neonbottonlanding btn btn-primary my-sm-3 border-0" style="width: auto; height:auto font-size: 18px;"> Volver </a>
                             </div>   
                         </div>

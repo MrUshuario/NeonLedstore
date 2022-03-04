@@ -11,9 +11,9 @@ function datapro() {
             console.log(data);
             $(document).ready(function() {
                 $('#nombre').text(data.pro_nombre);
-                $('#precio').append(data.pro_precio);
+                $('#precio').append("Precio: S/.",data.pro_precio);
                 $('#detalles').text(data.pro_descripcion);
-                $('#tamano').append(data.pro_tamano);
+                $('#tamano').append("Dimensiones: ",data.pro_tamano);
             });
         }   
     });
