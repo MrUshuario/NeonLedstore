@@ -41,7 +41,7 @@
         </div>
 
 
-<br>
+    <br>
 
       
 
@@ -55,14 +55,17 @@
                             <h2 class= "neones"><i class="fa-solid fa-user-pen"></i> Datos Personales </h2>
                                 <div class="container">
                                 <div class="row">
-                                    <div class="col-5 my-auto mx-auto">
-                                        <!--variable invisible-->
-                                        <input class="p-2 neontextlanding  border-0 border bg-transparent rounded w-100 me-1 me-sm-4 my-3 d-block text-white" type="hidden" id="id">           
-                                        <input class="p-2 neontextlanding bg-transparent border-0 border  rounded w-100 me-1 me-sm-4 my-3 d-block text-white" type="text" id="cli_nombre"> <br>
-                                        <input class="p-2 neontextlanding bg-transparent border-0 border  rounded w-100 me-1 me-sm-4 my-3 d-block text-white" type="text" id="cli_apellidos" value="apellido"> <br>
-                                        <input class="p-2 neontextlanding bg-transparent border-0 border  rounded w-100 me-1 me-sm-4 my-3 d-block text-white" type="email" id="cli_email" value="correo"> <br>
+                                    <div class="col-5 my-auto mx-auto">          
+                                        <input class="p-2 neontextlanding  border-0 border bg-transparent rounded w-100 me-1 me-sm-4 my-3 d-block text-white" type="hidden" id="id"><!--variable invisible-->
+                                        <label for="nombre" style="color: white;">Nombre: </label>          
+                                        <input class="p-2 neontextlanding bg-transparent border-0 border  rounded w-100 me-1 me-sm-4 my-3 d-block text-white" type="text" id="cli_nombre"><br>
+                                        <label for="nombre" style="color: white;">Apellidos: </label>  
+                                        <input class="p-2 neontextlanding bg-transparent border-0 border  rounded w-100 me-1 me-sm-4 my-3 d-block text-white" type="text" id="cli_apellidos" value="apellido"><br>
+                                        <label for="nombre" style="color: white;">Correo: </label>
+                                        <input class="p-2 neontextlanding bg-transparent border-0 border  rounded w-100 me-1 me-sm-4 my-3 d-block text-white" type="email" id="cli_email" value="correo" disabled><br>
+                                        <label for="nombre" style="color: white;">Teléfono: </label>  
                                         <input class="p-2 neontextlanding bg-transparent border-0 border  rounded w-100 me-1 me-sm-4 my-3 d-block text-white" type="number" id="cli_telefono" value="Telefono"> <br>
-      
+                                        <button type="submit" class="neonbottonlanding btn btn-primary" style="width: auto; height:auto font-size: 20px;" id="save">Guardar</button> <a href="#"><i class="fa-solid fa-key"></i><span> Cambiar Contraseña</span></a>
                                     </div>   
                                 </div>
                         
@@ -72,6 +75,9 @@
         </section>
     </div>
 
+    <!--Inicio Modal Cambio Contraseña-->
+    
+    <!--Fin Modal Contra-->
 
 
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
