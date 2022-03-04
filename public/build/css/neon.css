@@ -380,3 +380,17 @@
     height: 100%;
 }
 
+
+/* estilo de la pagina Administrador */
+.recipient{
+    width: 100%;
+    
+    display: flex;
+    justify-content: center;
+}
+.nav-dashboard{
+    width: 100%;
+}
+.mostrar-res{
+    width: 100%;
+}

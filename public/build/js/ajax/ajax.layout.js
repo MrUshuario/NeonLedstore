@@ -39,10 +39,12 @@ function data() {
 
             console.log(data);  
             if(document.getElementById('cli_nombre')){
-                /* Que hacer si existe */
+                /* guia mostrar nombre  */
                 console.log("hola existe");
                 $("#cli_nombre").val(data.cli_nombre);
-                
+                $("#cli_apellidos").val(data.cli_apellidos);
+                $("#cli_email").val(data.cli_email);
+                $("#cli_telefono").val(data.cli_telefono);
                 console.log(data.cli_nombre);
                 
                 console.log(data.cli_apellido);
@@ -50,7 +52,7 @@ function data() {
 
                 } 
             else {
-                /* Que hacer si no existe */}
+               }
         }   
     });
 }
