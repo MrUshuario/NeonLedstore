@@ -22,7 +22,7 @@ function data() {
             document.getElementById('Perfil').style.display = 'none';
             document.getElementById('Cerrar_S').style.display = 'none';
             } else {
-            const {data} = JSON.parse(e);
+            var {data} = JSON.parse(e);
             console.log(data);
                 if(data.cli_rol == 1){
                     //$(document).ready(function() {
@@ -42,6 +42,23 @@ function data() {
                     });
                 }
             }
+
+            console.log(data);  
+            if(document.getElementById('cli_nombre')){
+                /* guia mostrar nombre  */
+                console.log("hola existe");
+                $("#cli_nombre").val(data.cli_nombre);
+                $("#cli_apellidos").val(data.cli_apellidos);
+                $("#cli_email").val(data.cli_email);
+                $("#cli_telefono").val(data.cli_telefono);
+                console.log(data.cli_nombre);
+                
+                console.log(data.cli_apellido);
+            
+
+                } 
+            else {
+               }
         }   
     });
 }

@@ -39,4 +39,40 @@
                     </div>
                 </div>
         </div>
+
+
+<br>
+
+      
+
+  <!---->     
+    <div class="container">
+        <section class="row pb-5">
+           
+                <div class="container">
+                    <div class="col mx-1 mx-sm-5 pt-3 mb-1 border neontabla">
+                       
+                            <h2 class= "neones"><i class="fa-solid fa-user-pen"></i> Datos Personales </h2>
+                                <div class="container">
+                                <div class="row">
+                                    <div class="col-5 my-auto mx-auto">
+                                        <!--variable invisible-->
+                                        <input class="p-2 neontextlanding  border-0 border bg-transparent rounded w-100 me-1 me-sm-4 my-3 d-block text-white" type="hidden" id="id">           
+                                        <input class="p-2 neontextlanding bg-transparent border-0 border  rounded w-100 me-1 me-sm-4 my-3 d-block text-white" type="text" id="cli_nombre"> <br>
+                                        <input class="p-2 neontextlanding bg-transparent border-0 border  rounded w-100 me-1 me-sm-4 my-3 d-block text-white" type="text" id="cli_apellidos" value="apellido"> <br>
+                                        <input class="p-2 neontextlanding bg-transparent border-0 border  rounded w-100 me-1 me-sm-4 my-3 d-block text-white" type="email" id="cli_email" value="correo"> <br>
+                                        <input class="p-2 neontextlanding bg-transparent border-0 border  rounded w-100 me-1 me-sm-4 my-3 d-block text-white" type="number" id="cli_telefono" value="Telefono"> <br>
+      
+                                    </div>   
+                                </div>
+                        
+                    </div>
+                </div>
+         
+        </section>
+    </div>
+
+
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </div>
