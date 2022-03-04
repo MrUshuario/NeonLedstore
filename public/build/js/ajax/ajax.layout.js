@@ -1,4 +1,4 @@
-const btnSave = document.querySelector("#save");
+const btnSave = document.querySelector("#save"); // borrar
 $(document).ready(function() {
     //$("#pass").val("");
     // boton guardar
@@ -10,6 +10,7 @@ $(document).ready(function() {
     //igualPassword();
     //updatePassword();
 });
+
 function data() {
     $.ajax({
         url: '/configuracion/getData',

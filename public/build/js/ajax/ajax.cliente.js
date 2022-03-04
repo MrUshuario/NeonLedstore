@@ -28,16 +28,22 @@ function tableAll(){
       {data:"cli_rol"},  
       {data: null,
         render: function(data,type,row){
-          return `<button class="btn-inline btn-warning" data-idcliente="${data.id}" id="edit" data-bs-toggle="modal" data-bs-target="#modalCliente"
-          ${data.cli_rol == "1"? 'btn-success' : 'btn-danger'}
-          >Edit</button>
-          <button class="btn-inline btn-danger" data-idcliente="${data.id}" id="delete">Del</button>`;
-
+          return `<button class="btn-inline btn-warning ${data.cli_rol == "1"? 'd-none' : ''}"
+           data-idcliente="${data.id}" id="edit" data-bs-toggle="modal" data-bs-target="#modalCliente" >Edit</button>
+          <button class="btn-inline btn-danger ${data.cli_rol == "1"? 'd-none' : ''}" 
+          data-idcliente="${data.id}" id="delete">Del</button>`;
+        }
+      },
+      {data: null,
+        render: function(data,type,row){
+          return ` <input class="${data.cli_rol == "2"? 'd-none' : ''} form-control"
+          style="width: 100px;"
+          data-idcliente="${data.id}" input-lg w-20 p-3 " placeholder="pass" type="password"  id ="pass">`;
         }
       }
     ]
   }); 
-
+  
 }
 
 

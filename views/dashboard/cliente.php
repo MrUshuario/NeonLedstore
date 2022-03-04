@@ -21,6 +21,7 @@
                     <th>Estado</th>
                     <th>Rol</th>
                     <th>Editar/Borrar</th>
+                    <th>Contraseña</th>
                 </tr>
                 </thead>
                 <tbody>
