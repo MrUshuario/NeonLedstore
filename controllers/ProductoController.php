@@ -172,4 +172,10 @@ class ProductoController
             ]);
         }
     }
+    public static function getdata(){
+        $data = Producto::find($_SESSION['pro_vermas']); //cambie user por cliente, lo mismo pero con mas informacion
+        echo json_encode([
+            'data'=>$data
+        ]);
+    }
 }

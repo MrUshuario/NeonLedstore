@@ -34,6 +34,7 @@ $router = new Router();
     $router->get('/producto/getProducto',[ProductoController::class,'getProducto']);
     $router->get('/producto/listar',[ProductoController::class,"listarP"]);
     $router->get('/producto/conseguirproducto',[ProductoController::class,"conseguirproducto"]);
+    $router->get('/producto/getdata',[ProductoController::class,'getdata']);
 
     // method post
     $router->post('/producto/crear',[ProductoController::class,'guardar']);

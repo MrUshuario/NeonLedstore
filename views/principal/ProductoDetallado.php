@@ -1,3 +1,4 @@
+
 <div class="pt-5 page-container bg-black">
 
 
@@ -73,6 +74,6 @@
                 </div>
             </div>                        
         </div>
-
+        <script src="build/js/ajax/ajax.findproducto.js"></script>
 </div>
 
