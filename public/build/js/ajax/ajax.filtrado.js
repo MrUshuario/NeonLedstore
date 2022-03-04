@@ -1,21 +1,11 @@
 
 $(document).ready(function () {
-  tableAll();
   getCategoria();
   getProducto();
   obtenerProducto();
-  updateStatus();
-  deleteProduct();
   enviarProducto();
 });
 
-function tableAll() {
-
-}
-
-function deleteProduct() {
- 
-}
 
 function clean() {
   $("#id").val("");
@@ -124,22 +114,6 @@ function enviarProducto() {
   });
 }
 
-function saveProduct() {
-  
-  
-}
-
-function create(formData) {
- 
-}
-
-function update(formData) {
- 
-}
-
-function updateStatus() {
-  
-}
 
 // valor del volumen
 /*
