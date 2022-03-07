@@ -148,7 +148,7 @@
                                         <i class="fas fa-shopping-cart"></i>
                                     </button>
                                     
-                                    <button id="Perfil" class="btn btn-primary my-sm-3 border-0 bg-black" style="margin-top: 3px !important;" onclick="window.location.href='/login'">Perfil    
+                                    <button id="Perfil" class="btn btn-primary my-sm-3 border-0 bg-black" style="margin-top: 3px !important;" onclick="window.location.href='/login'">Admin    
                                         <i class="fas fa-user"></i>
                                     </button>
                                     

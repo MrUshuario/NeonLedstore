@@ -132,8 +132,8 @@
                             </select>
                             <div class="pt-3 pb-3">
                                 <input type="hidden" id="id" value="formNegocio">
-                                <button  class="btn btn-primary" id="productodet">Guardar</button>
-                                <a href="/ProductoDetallado" class="neonbottonlanding btn btn-primary my-sm-3 border-0" style="width: 90%; height:30% font-size: 18px;">Ver más</a>
+                                <button onclick="window.location.href='/ProductoDetallado'" class="neonbottonlanding btn btn-primary my-sm-3 border-0" style="width: 90%; height:30% font-size: 18px;" id="productodet">Guardar</button>
+                                
                             </div>
                        </form>
                        

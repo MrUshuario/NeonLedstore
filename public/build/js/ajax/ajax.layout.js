@@ -25,15 +25,21 @@ function data() {
             var {data} = JSON.parse(e);
             console.log(data);
                 if(data.cli_rol == 1){
-                    $(document).ready(function() {
-                        $('#Perfil').text('Admin');
-                        $('#Perfil').append('   <i class="fas fa-user"></i>');
-                    });
+                    //$(document).ready(function() {
+                    //    $('#Perfil').text('Admin');
+                    //    $('#Perfil').append('   <i class="fas fa-user"></i>');
+                    //});
                     document.getElementById('Iniciar_S').style.display = 'none';
                     document.getElementById('Carrito').style.display = 'none';
                     document.getElementById('Administrar').style.display = 'none';
                 }if(data.cli_rol == 2){
+                    var nombre = data.cli_nombre;
                     document.getElementById('Iniciar_S').style.display = 'none';
+                    document.getElementById('Perfil').style.display = 'none';
+                    $(document).ready(function() {
+                        $('#Administrar').text(nombre);
+                        $('#Administrar').append('   <i class="fas fa-cog"></i>');
+                    });
                 }
             }
 
