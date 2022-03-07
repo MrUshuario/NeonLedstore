@@ -133,42 +133,41 @@
 
                     <div class="d-flex position-absolute" style="top: 1em; right:1em">
 
-                        <div class="navbar-brand iconoUsuario ">
+                        <div class="navbar-brand iconoUsuario container ">
 
                             <?php //if ($this->sessionValidate == true) : 
 
                                     ?>
 
-                                <div class="d-flex items-center gap-1 container">
-
-                                <ul class="navbar-nav me-auto mb-2 mb-lg-0"> 
-                                <li class="listaContenido nav-item border-light">
-                                    <button id="Carrito" class="btn btn-primary my-sm-3 border-0 bg-transparent" style=" display: none; margin-top: 3px !important;" onclick="window.location.href='/cart'">Carrito    
+                        <div class="d-flex items-center gap-1 row">
+                            
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0"> 
+                            <div  id="Carrito" class="col"  style=" display: none;">    
+                                    <button class="btn btn-primary my-sm-3 border-0 bg-transparent" onclick="window.location.href='/cart'">Carrito    
                                         <i class="fas fa-shopping-cart"></i>
                                     </button>
-                                </li>    
-                                <li class="listaContenido nav-item border-light">    
-                                    <button id="Perfil" class="btn btn-primary my-sm-3 border-0 bg-transparent" style=" display: none; margin-top: 3px !important;" onclick="window.location.href='/login'">Admin    
+                            </div>
+                            <div  id="Perfil" class="col" style=" display: none;">
+                                    <button class="btn btn-primary my-sm-3 border-0 bg-transparent" onclick="window.location.href='/login'">Admin    
                                         <i class="fas fa-user"></i>
                                     </button>
-                                </li>    
-                                <li class="listaContenido nav-item border-light">      
-                                    <button id="Iniciar_S" class="btn btn-primary my-sm-3 border-0 bg-transparent" style="display: none; margin-top: 3px !important;" onclick="window.location.href='/login'">Iniciar Sesion    
+                            </div>
+                            <div  id="Iniciar_S" class="col" style=" display: none;">   
+                                    <button class="btn btn-primary my-sm-3 border-0 bg-transparent" onclick="window.location.href='/login'">Iniciar Sesion    
                                         <i class="fas fa-sign-in-alt"></i>
                                     </button>
-                                </li>    
-                                <li class="listaContenido nav-item border-light">
-                                    <button id="Administrar" class="btn btn-primary my-sm-3 border-0 bg-transparent" style="display: none; margin-top: 3px !important;" onclick="window.location.href='/administrar'">Administrar   
-                                        <i class="fas fa-cog"></i>
+                            </div>
+                            <div  id="Administrar" class="col" style=" display: none;">    
+                                    <button id="Nombre" class="btn btn-primary my-sm-3 border-0 bg-transparent" onclick="window.location.href='/administrar'">
                                     </button>
-                                </li>
-                                <li class="listaContenido nav-item border-light">     
-                                    <button id="Cerrar_S" class="btn btn-primary my-sm-3 border-0 bg-transparent" style="display: none; margin-top: 3px !important;" onclick="window.location.href='/cerrar'">Cerrar Sesion   
+                            </div>
+                            <div id="Cerrar_S"  class="col" style=" display: none;">
+                                    <button class="btn btn-primary my-sm-3 border-0 bg-transparent" onclick="window.location.href='/cerrar'">Cerrar Sesion   
                                         <i class="fas fa-sign-out-alt"></i>
                                     </button>
-                                </li>    
-                                </ul>
-                                </div>
+                            </div> 
+                        </ul>
+                        </div>
 
                             <?php //else : 
 
