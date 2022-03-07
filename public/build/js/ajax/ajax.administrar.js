@@ -8,9 +8,6 @@ function cambioClassPas() {
     document.getElementById("cambioFontAdmin3").className = "row espacio-admin";
     document.getElementById("cambioFontAdmin").className = "fondo-null espacio-admin";
     document.getElementById("cambioFontAdmin2").className = "fondo-null espacio-admin";
-
-
-
 }
 
 
