@@ -72,6 +72,7 @@ function obtenerData() {
         $("#pro_descripcion").val(data.pro_descripcion);
         $("#pro_precio").val(data.pro_precio);
         $("#pro_activo").val(data.pro_activo);
+        console.log(data.pro_activo)
         const tmn = data.pro_tamano.split("X");
         $("#t-1").val(tmn[0]);
         $("#t-2").val(tmn[1]);
