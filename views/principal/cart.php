@@ -1,6 +1,8 @@
+<section class="bg-black pt-5 pb-5 text-white">
 <div class="content-principal container mt-20">
 
 	<div class="col-12 col-sm-12  border neontabla">
+		<form>
 		<h1 class= "neones" style="font-family:Roboto Condensed"><i class="fa-solid fa-cart-shopping"></i> Lista de Objetos por Comprar</h1><br>
 	
 		<div class="table-responsive">
@@ -16,8 +18,10 @@
 		</table></center>
 		</div>
 		<div class="modal-footer">
-            <button type="submit" class="btn btn-primary" id="save">Guardar</button>
+            <button type="submit" class="btn btn-primary" id="">Guardar</button>
         </div>
+		</form>
 	</div>
 
 </div>
+</section>
