@@ -5,6 +5,7 @@ $(document).ready(function () {
   obtenerData();
   deleteCliente();
   updateStatus();
+  verificarcontra();
 });
 
 function tableAll(){
@@ -27,17 +28,33 @@ function tableAll(){
       },
       {data:"cli_rol"},  
       {data: null,
+        render: function(data,type,row){ //agrege un div botones[id]
+          return `
+          <div class=" ${data.cli_rol == "1"? 'd-none' : ''}" id="botones${data.id}">
+          <button class="btn-inline btn-warning"
+          data-idcliente="${data.id}" id="edit" data-bs-toggle="modal" data-bs-target="#modalCliente" >Edit</button>
+          <button class="btn-inline btn-danger" 
+          data-idcliente="${data.id}" id="delete">Del</button>
+          </div>`;
+        }
+      },
+      {data: null,
         render: function(data,type,row){
-          return `<button class="btn-inline btn-warning" data-idcliente="${data.id}" id="edit" data-bs-toggle="modal" data-bs-target="#modalCliente"
-          ${data.cli_rol == "1"? 'btn-success' : 'btn-danger'}
-          >Edit</button>
-          <button class="btn-inline btn-danger" data-idcliente="${data.id}" id="delete">Del</button>`;
-
+          return `
+          <input class="${data.cli_rol == "2"? 'd-none' : ''} form-control" style="width: 100px;"
+          data-idcliente="${data.id}" input-lg w-20 p-3 " placeholder="pass" type="password"  id ="pass${data.id}">`;
+        }
+      },
+      {data: null,
+        render: function(data,type,row){
+          return `
+          <button class="btn-inline btn-info ${data.cli_rol == "2"? 'd-none' : ''}" data-idcliente="${data.id}" id="verificar">ver</button>
+          `;
         }
       }
     ]
   }); 
-
+  
 }
 
 
@@ -267,4 +284,36 @@ function updateStatus(){
       }
     });
   })
+}
+
+function verificarcontra() {
+  $(document).on("click", "#verificar", function (e) {
+    const id = e.target.dataset.idcliente;
+    let id_pass =  "#pass"+id;
+    let pass = $(id_pass).val();
+
+    console.log(id_pass);
+    console.log(pass);
+    const data = {
+      id: id,
+      pass: pass,
+    };
+    // $.ajax({
+    //   type: "POST",
+    //   url: "/cliente/getCliente",
+    //   data: data,
+    //   success: function (e) {
+    //     console.log(e); 
+    //     const { data } = JSON.parse(e); 
+    //     $("#id").val(data.id);
+    //     $("#cli_nombre").val(data.cli_nombre);
+    //     $("#cli_apellidos").val(data.cli_apellidos);
+    //     $("#cli_email").val(data.cli_email)
+    //     //$("#cli_clave").val(data.cli_clave)
+    //     $("#cli_telefono").val(data.cli_telefono)
+    //     $("#cli_estado").val(data.cli_estado)
+    //     $("#cli_rol").val(data.cli_rol)
+    //   },
+    // });
+  });
 }

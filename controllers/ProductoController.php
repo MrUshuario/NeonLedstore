@@ -129,8 +129,10 @@ class ProductoController
             $producto = new Producto($_POST);
 
             if ($producto->pro_activo == "1") {
+
                 $producto->pro_activo = "0";
                 $resultado = $producto->editEstado();
+                
             } else {
                 $producto->pro_activo = "1";
                 $resultado = $producto->editEstado();
@@ -171,5 +173,11 @@ class ProductoController
                 "mensaje" => $id
             ]);
         }
+    }
+    public static function getdata(){
+        $data = Producto::find($_SESSION['pro_vermas']); //cambie user por cliente, lo mismo pero con mas informacion
+        echo json_encode([
+            'data'=>$data
+        ]);
     }
 }

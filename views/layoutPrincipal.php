@@ -139,34 +139,35 @@
 
                                     ?>
 
-                                <div class="d-flex items-center gap-1">
+                                <div class="d-flex items-center gap-1 container">
 
-                                    
-                                
-                                    
-                                    <button id="Carrito" class="btn btn-primary my-sm-3 border-0 bg-black" style="margin-top: 3px !important;" onclick="window.location.href='/cart'">Carrito    
+                                <ul class="navbar-nav me-auto mb-2 mb-lg-0"> 
+                                <li class="listaContenido nav-item border-light">
+                                    <button id="Carrito" class="btn btn-primary my-sm-3 border-0 bg-transparent" style=" display: none; margin-top: 3px !important;" onclick="window.location.href='/cart'">Carrito    
                                         <i class="fas fa-shopping-cart"></i>
                                     </button>
-                                    
-                                    <button id="Perfil" class="btn btn-primary my-sm-3 border-0 bg-black" style="margin-top: 3px !important;" onclick="window.location.href='/login'">Admin    
+                                </li>    
+                                <li class="listaContenido nav-item border-light">    
+                                    <button id="Perfil" class="btn btn-primary my-sm-3 border-0 bg-transparent" style=" display: none; margin-top: 3px !important;" onclick="window.location.href='/login'">Admin    
                                         <i class="fas fa-user"></i>
                                     </button>
-                                    
-                                    
-                                    <button id="Iniciar_S" class="btn btn-primary my-sm-3 border-0 bg-black" style="margin-top: 3px !important;" onclick="window.location.href='/login'">Iniciar Sesion    
+                                </li>    
+                                <li class="listaContenido nav-item border-light">      
+                                    <button id="Iniciar_S" class="btn btn-primary my-sm-3 border-0 bg-transparent" style="display: none; margin-top: 3px !important;" onclick="window.location.href='/login'">Iniciar Sesion    
                                         <i class="fas fa-sign-in-alt"></i>
                                     </button>
-                                    
-                                    
-                                    <button id="Administrar" class="btn btn-primary my-sm-3 border-0 bg-black" style="margin-top: 3px !important;" onclick="window.location.href='/administrar'">Administrar   
+                                </li>    
+                                <li class="listaContenido nav-item border-light">
+                                    <button id="Administrar" class="btn btn-primary my-sm-3 border-0 bg-transparent" style="display: none; margin-top: 3px !important;" onclick="window.location.href='/administrar'">Administrar   
                                         <i class="fas fa-cog"></i>
                                     </button>
-
-                                    <button id="Cerrar_S" class="btn btn-primary my-sm-3 border-0 bg-black" style="margin-top: 3px !important;" onclick="window.location.href='/cerrar'">Cerrar Sesion   
+                                </li>
+                                <li class="listaContenido nav-item border-light">     
+                                    <button id="Cerrar_S" class="btn btn-primary my-sm-3 border-0 bg-transparent" style="display: none; margin-top: 3px !important;" onclick="window.location.href='/cerrar'">Cerrar Sesion   
                                         <i class="fas fa-sign-out-alt"></i>
                                     </button>
-
-                                    
+                                </li>    
+                                </ul>
                                 </div>
 
                             <?php //else : 
@@ -187,7 +188,7 @@
 
                         <button class="amburguesa navbar-toggler " data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 
-                            <span class="amburguesaContenido navbar-toggler-icon bg-dark"></span>
+                            <span class="amburguesaContenido navbar-toggler-icon bg-black border-transparent"></span>
 
                         </button>
 
