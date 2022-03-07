@@ -15,7 +15,7 @@
                                 <!-- <a href="#"><li class="listaAdmin"><i class="icon_izq_admin fa-solid fa-user-gear"></i>  Sobre el Cliente</li></a> -->
                                 <a href="#"><li class="listaAdmin" onclick="cambioClass()"><i class="icon_izq_admin fa-solid fa-boxes-stacked"></i>  Historial de Factura</li></a>
                                 <a href="#"><li class="listaAdmin" onclick=""><i class="fa-solid fa-lock"></i> Actualizar contraseña</li></a>
-                                <a href="#"><li class="listaAdmin" onclick=""><i class="fa-regular fa-circle-user"></i>  Datos Personales</li></a>
+                                <a href="#"><li class="listaAdmin" onclick="cambioClassPas()"><i class="fa-regular fa-circle-user"></i>  Datos Personales</li></a>
                             </ul>
                             <br>
                             <!--Datos Personales-->     
@@ -90,7 +90,7 @@
 
                             <div class="row espacio-admin" id="cambioFontAdmin2">
 
-                                <div class="">
+                                <div class="col-sm-12">
 
                                     <table class="table table-purple table-striped table-hover  w-100 table-light table-fixed" id="compratabla">
 
@@ -121,17 +121,10 @@
                                 </div>
 
                             </div> <!--fin de segundo registro -->
-                        </div>
-                    </div>
-        </div>
 
-    <br>
-
-
-
-    <!--Form cambio Contraseña-->
-    <div class="container">
-                                <section class="row">
+                            <!--Form cambio Contraseña-->
+                            <div class="container">
+                                <section class="fondo-null espacio-admin" id="cambioFontAdmin3">
                                         <div class="container">
                                             <div class="col mx-1  pt-3 mb-1 border neontabla">
                                                     <h2 class= "neones"><i class="fa-solid fa-key"></i> Cambio Cantraseña </h2>
@@ -165,10 +158,17 @@
                                                 
                                             </div>
                                         </div>
-                                
                                 </section>
                             </div>
                         </div>
+                    </div>
+        </div>
+
+    <br>
+
+
+
+                        
 
     <!--Fin Contraseña-->
 
