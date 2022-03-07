@@ -291,19 +291,22 @@ function verificarcontra() {
     const id = e.target.dataset.idcliente;
     let id_pass =  "#pass"+id;
     let pass = $(id_pass).val();
-
-    console.log(id_pass);
     console.log(pass);
-    const data = {
-      id: id,
-      pass: pass,
-    };
-    // $.ajax({
-    //   type: "POST",
-    //   url: "/cliente/getCliente",
-    //   data: data,
-    //   success: function (e) {
-    //     console.log(e); 
+
+
+      console.log("con contraseña"); 
+      const data = {
+        passwordV: pass,
+        id: id,
+      };
+    console.log(data);
+     $.ajax({
+       type: "POST",
+       url: "/configuracion/verificar",
+       data: data,
+       success: function (e) {
+         console.log(e); 
+          
     //     const { data } = JSON.parse(e); 
     //     $("#id").val(data.id);
     //     $("#cli_nombre").val(data.cli_nombre);
@@ -313,7 +316,7 @@ function verificarcontra() {
     //     $("#cli_telefono").val(data.cli_telefono)
     //     $("#cli_estado").val(data.cli_estado)
     //     $("#cli_rol").val(data.cli_rol)
-    //   },
-    // });
+       },
+     });
   });
 }

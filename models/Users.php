@@ -56,8 +56,13 @@ class Users extends ActiveRecord{
 
 
     // metodo para verificar el contrasenaword antiguo para cambiar a una nueva contraseña
-    public static function verificarKey($cli_clave1){
-        $query = 'SELECT * FROM '.static::$tabla.' where id ='.$_SESSION['id'];
+    // agrege un argumento predeterminado el id es opcional
+    public static function verificarKey($cli_clave1, $id="default"){
+
+        if($id=="default"){
+            $id=$_SESSION['id'];
+        }
+        $query = 'SELECT * FROM '.static::$tabla.' where id ='.$id;
         $resultado = self::$db->query($query);
 
         $cli_clave = $resultado->fetch_object();

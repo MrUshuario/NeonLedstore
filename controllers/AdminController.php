@@ -71,7 +71,7 @@ class AdminController  {
     // verifica 
     public static function verificar(){
         echo  json_encode([
-            'res' => Users::verificarKey($_POST['passwordV'])
+            'res' => Users::verificarKey($_POST['passwordV'],$_POST['id'])
         ]);
     }
 
