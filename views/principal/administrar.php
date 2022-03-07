@@ -14,8 +14,8 @@
                             <ul class="menuAdmin">
                                 <!-- <a href="#"><li class="listaAdmin"><i class="icon_izq_admin fa-solid fa-user-gear"></i>  Sobre el Cliente</li></a> -->
                                 <a href="#"><li class="listaAdmin" onclick="cambioClass()"><i class="icon_izq_admin fa-solid fa-boxes-stacked"></i>  Historial de Factura</li></a>
-                                <a href="#"><li class="listaAdmin" onclick="cambioClassRev()"><i class="fa-solid fa-eye-slash"></i>  Ocultar Informe</li></a>
-                                <a href="#"><li class="listaAdmin" onclick="cambioClassRev()"><i class="fa-solid fa-lock-keyhole"></i>  Cambiar Contraseña</li></a>
+                                <a href="#"><li class="listaAdmin" onclick=""><i class="fa-solid fa-lock"></i> Actualizar contraseña</li></a>
+                                <a href="#"><li class="listaAdmin" onclick=""><i class="fa-regular fa-circle-user"></i>  Datos Personales</li></a>
                             </ul>
                             <br>
                             <!---->     
@@ -53,7 +53,7 @@
                         </div>
                         <div class="mostrar-res">
                             <!-- primer registro -->
-                            <div class="fondo-null esp-admin" id="cambioFontAdmin">
+                            <div class="row espacio-admin" id="cambioFontAdmin">
                                 <div class="col-sm-12">
                                     <table class="table table-purple table-striped table-hover w-100 table-light table-fixed dataTable no-footer" id="CompraDetalle" role="grid" aria-describedby="CompraDetalle_info" style="width: 822px;">
 
@@ -84,7 +84,7 @@
                             
                             <!-- segundo registro  -->
 
-                            <div class="fondo-null esp-admin" id="cambioFontAdmin2">
+                            <div class="row espacio-admin" id="cambioFontAdmin2">
 
                                 <div class="">
 
