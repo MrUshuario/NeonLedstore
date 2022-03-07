@@ -32,16 +32,14 @@ function tableAll() {
       {
         data: null,
         render: function (data, type, row) {
-          return `<button data-idpro="${data.id}" class="btn ${
-            data.pro_activo == "1" ? "btn-success" : "btn-danger"
-          }" id="btnEstado">${data.pro_activo}</button>`;
+          return `<button data-idpro="${data.id}" class="btn ${data.pro_activo == "1" ? "btn-success" : "btn-danger"}" id="btnEstado">${data.pro_activo}</button>`;
         },
       },
       {
         data: null,
         render: function (data, type, row) {
-          return `<button class="btn-inline btn-warning" data-idpro="${data.id}" id="edit" data-bs-toggle="modal" data-bs-target="#modalProducto" >edit</button>
-            <button class="btn-inline btn-danger" data-idpro="${data.id}" id="delete">del</button>`;
+          return `<button class="btn-inline btn-warning" data-idpro="${data.id}" id="edit" data-bs-toggle="modal" data-bs-target="#modalProducto" >Edit</button>
+            <button class="btn-inline btn-danger" data-idpro="${data.id}" id="eliminar">Del</button>`;
         },
       },
     ],
@@ -88,7 +86,7 @@ function obtenerData() {
 }
 
 function deleteProduct() {
-  $(document).on("click", "#delete", function (e) {
+  $(document).on("click", "#eliminar", function (e) {
     let idpro = e.target.dataset.idpro;
     swal({
       title: "¿Estas seguro de eliminar este producto?",
@@ -101,8 +99,14 @@ function deleteProduct() {
           url: "/producto/eliminar",
           type: "POST",
           data: { id: idpro },
-          success: function () {
-            tableAll();
+          success: (e) =>{
+            if (e){
+
+              tableAll();
+              swal("Producto eliminado!!", {
+              icon: "success",
+            });
+            }           
           },
         });
       }
@@ -112,7 +116,7 @@ function deleteProduct() {
 
 function clean() {
   $("#id").val("");
-  $("#pro_categoria").val("");
+  $("#_categoria").val("");
   $("#pro_nombre").val("");
   $("#pro_descripcion").val("");
   $("#pro_precio").val("");
@@ -220,7 +224,7 @@ function saveProduct() {
 
 function create(formData) {
   $.ajax({
-    url: "/producto/crear",
+    url: "producto/create",
     type: "POST",
     data: formData,
     processData: false, // tell jQuery not to process the data
@@ -236,6 +240,7 @@ function create(formData) {
   });
 }
 
+    
 function update(formData) {
   $.ajax({
     url: "/producto/editar",

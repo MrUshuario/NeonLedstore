@@ -52,33 +52,54 @@
                 <div class="container">
                     <div class="col mx-1 mx-sm-5 pt-3 mb-1 border neontabla">
                        
-                            <h2 class= "neones"><i class="fa-solid fa-user-pen"></i> Datos Personales </h2>
-                                <div class="container">
-                                <div class="row">
-                                    <div class="col-5 my-auto mx-auto">          
-                                        <input class="p-2 neontextlanding  border-0 border bg-transparent rounded w-100 me-1 me-sm-4 my-3 d-block text-white" type="hidden" id="id"><!--variable invisible-->
-                                        <label for="nombre" style="color: white;">Nombre: </label>          
-                                        <input class="p-2 neontextlanding bg-transparent border-0 border  rounded w-100 me-1 me-sm-4 my-3 d-block text-white" type="text" id="cli_nombre"><br>
-                                        <label for="nombre" style="color: white;">Apellidos: </label>  
-                                        <input class="p-2 neontextlanding bg-transparent border-0 border  rounded w-100 me-1 me-sm-4 my-3 d-block text-white" type="text" id="cli_apellidos" value="apellido"><br>
-                                        <label for="nombre" style="color: white;">Correo: </label>
-                                        <input class="p-2 neontextlanding bg-transparent border-0 border  rounded w-100 me-1 me-sm-4 my-3 d-block text-white" type="email" id="cli_email" value="correo" disabled><br>
-                                        <label for="nombre" style="color: white;">Teléfono: </label>  
-                                        <input class="p-2 neontextlanding bg-transparent border-0 border  rounded w-100 me-1 me-sm-4 my-3 d-block text-white" type="number" id="cli_telefono" value="Telefono"> <br>
-                                        <button type="submit" class="neonbottonlanding btn btn-primary" style="width: auto; height:auto font-size: 20px;" id="save">Guardar</button> <a href="#"><i class="fa-solid fa-key"></i><span> Cambiar Contraseña</span></a>
-                                    </div>   
-                                </div>
+                        <h2 class= "neones"><i class="fa-solid fa-user-pen"></i> Datos Personales </h2>                      
+                        <div class="container">                      
+                            <div class="row">                         
+                                <div class="col-5 my-auto mx-auto">  
+
+                                
+
+                                    <input class="p-2 neontextlanding  border-0 border bg-transparent rounded w-100 me-1 me-sm-4 my-3 d-block text-white" type="hidden" id="id"><!--variable invisible-->
+                                    <label style="color: white;">Nombre: </label>          
+                                    <input class="p-2 neontextlanding bg-transparent border-0 border  rounded w-100 me-1 me-sm-4 my-3 d-block text-white" type="text" id="cli_nombre"><br>
+                                    <label style="color: white;">Apellidos: </label>  
+                                    <input class="p-2 neontextlanding bg-transparent border-0 border  rounded w-100 me-1 me-sm-4 my-3 d-block text-white" type="text" id="cli_apellidos"><br>
+                                    <label style="color: white;">Correo: </label>
+                                    <input class="p-2 neontextlanding bg-transparent border-0 border  rounded w-100 me-1 me-sm-4 my-3 d-block text-white" type="email" id="cli_email" disabled><br>
+                                    <label style="color: white;">Teléfono: </label>  
+                                    <input class="p-2 neontextlanding bg-transparent border-0 border  rounded w-100 me-1 me-sm-4 my-3 d-block text-white" type="number" id="cli_telefono"><br>
+                                    <button type="submit" class="neonbottonlanding btn btn-primary" style="width: auto; height:auto font-size: 20px;" id="save">Guardar</button>
+                                    
+
+                                  <!--cambio contraseña oculto-->
+
+                                    <div id="formcontra" class="formcontra">
+
+                                            
+                                        <label style="color: white;">Contraseña actual:</label>
+                                        <input class="form-control input-lg" placeholder="Ingrese contraseña actual" style="font-style: italic;" type="password" id ="contra" required><br>
+                                   
+                                        <label style="color: white;">Nueva contraseña:</label>
+                                        <input class="form-control input-lg" placeholder="Ingrese nueva contraseña" style="font-style: italic;" type="password" id = "contranuevo1" required><br>
+                                        <label style="color: white;">Repetir nueva contraseña:</label>
+                                        <input class="form-control input-lg" placeholder="Repite nueva contraseña" style="font-style: italic;" type="password" id = "contranuevo2" required><br>   
+                                                        
+
+                                    </div>
+                                    <button class="neonbottonlanding btn btn-primary" style="width: auto; height:auto font-size: 20px;" id="btncontra" onclick="mostrarform()">Cambiar Contraseña</button> <i class="fa-solid fa-key" style=" color: yellow"></i><br>
+                                    
+              
+                                </div> 
+                                 
+                            </div>
+                            
+                        </div>
                         
                     </div>
                 </div>
-         
         </section>
     </div>
-
-    <!--Inicio Modal Cambio Contraseña-->
+                                   
     
-    <!--Fin Modal Contra-->
-
-
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </div>
