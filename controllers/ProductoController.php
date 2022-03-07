@@ -129,8 +129,10 @@ class ProductoController
             $producto = new Producto($_POST);
 
             if ($producto->pro_activo == "1") {
+
                 $producto->pro_activo = "0";
                 $resultado = $producto->editEstado();
+                
             } else {
                 $producto->pro_activo = "1";
                 $resultado = $producto->editEstado();
