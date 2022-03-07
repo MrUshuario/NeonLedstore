@@ -143,26 +143,26 @@
                             
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0"> 
                             <div  id="Carrito" class="col"  style=" display: none;">    
-                                    <button class="btn btn-primary my-sm-3 border-0 bg-transparent" onclick="window.location.href='/cart'">Carrito    
+                                    <button style="padding-top: 0px !important" class="btn btn-primary my-sm-3 border-0 bg-transparent" onclick="window.location.href='/cart'">Carrito    
                                         <i class="fas fa-shopping-cart"></i>
                                     </button>
                             </div>
                             <div  id="Perfil" class="col" style=" display: none;">
-                                    <button class="btn btn-primary my-sm-3 border-0 bg-transparent" onclick="window.location.href='/login'">Admin    
+                                    <button style="padding-top: 0px !important" class="btn btn-primary my-sm-3 border-0 bg-transparent" onclick="window.location.href='/login'">Admin    
                                         <i class="fas fa-user"></i>
                                     </button>
                             </div>
                             <div  id="Iniciar_S" class="col" style=" display: none;">   
-                                    <button class="btn btn-primary my-sm-3 border-0 bg-transparent" onclick="window.location.href='/login'">Iniciar Sesion    
+                                    <button style="padding-top: 0px !important" class="btn btn-primary my-sm-3 border-0 bg-transparent" onclick="window.location.href='/login'">Iniciar Sesion    
                                         <i class="fas fa-sign-in-alt"></i>
                                     </button>
                             </div>
                             <div  id="Administrar" class="col" style=" display: none;">    
-                                    <button id="Nombre" class="btn btn-primary my-sm-3 border-0 bg-transparent" onclick="window.location.href='/administrar'">
+                                    <button style="padding-top: 0px !important" id="Nombre" class="btn btn-primary my-sm-3 border-0 bg-transparent" onclick="window.location.href='/administrar'">
                                     </button>
                             </div>
                             <div id="Cerrar_S"  class="col" style=" display: none;">
-                                    <button class="btn btn-primary my-sm-3 border-0 bg-transparent" onclick="window.location.href='/cerrar'">Cerrar Sesion   
+                                    <button style="padding-top: 0px !important" class="btn btn-primary my-sm-3 border-0 bg-transparent" onclick="window.location.href='/cerrar'">Cerrar Sesion   
                                         <i class="fas fa-sign-out-alt"></i>
                                     </button>
                             </div> 
