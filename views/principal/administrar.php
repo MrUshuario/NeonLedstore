@@ -1,105 +1,134 @@
 
 <div class="pt-5 page-container bg-black">
-        <div class="container">
+        <div class="container espAdminR">
             <h1 class="text-white display-1 weight-medium m-3">ADMINISTRAR PHP</h1>
         
                     <!--CONTENIDO-->
         
-            <div class="recipient">
-                    <div class="contenedor-menuAdmin">
-                        <!-- <a href="#">Menu  <i class="fa-solid fa-bars"></i> </a> -->
-                        <ul class="menuAdmin">
-                            <li><a href="#"> <i class="icon_izq_admin fa-solid fa-user-gear"></i> Sobre el Cliente </a></li>
-                            <li><a href="#"> <i class="icon_izq_admin fa-solid fa-boxes-stacked"></i> Historial de Factura</a></li>
-                            <!-- <li><a href="#"> <i class="fa-solid fa-user"></i> Usuario</a></li> -->
-                        </ul>
-                    </div>
-                
-                <div class="mostrar-res">
-                    <div class="conten-adminis">
-                    <div class="content-principal container mt-20">
-                        <div class="table-responsive">
+            
+                    <div class="recipient">
+                        <div class="contenedor-menuAdmin">
+                            <div class="sobre-admin">
+                                <h3><i class="fa-solid fa-bars"></i> Sobre el Cliente</h3>
+                            </div>
+                            <ul class="menuAdmin">
+                                <!-- <a href="#"><li class="listaAdmin"><i class="icon_izq_admin fa-solid fa-user-gear"></i>  Sobre el Cliente</li></a> -->
+                                <a href="#"><li class="listaAdmin" onclick="cambioClass()"><i class="icon_izq_admin fa-solid fa-boxes-stacked"></i>  Historial de Factura</li></a>
+                                <a href="#"><li class="listaAdmin" onclick="cambioClassRev()"><i class="fa-solid fa-eye-slash"></i>  Ocultar Informe</li></a>
+                                <a href="#"><li class="listaAdmin" onclick="cambioClassRev()"><i class="fa-solid fa-lock-keyhole"></i>  Cambiar Contraseña</li></a>
+                            </ul>
+                            <br>
+                            <!---->     
+                            <div class="container">
+                                <section class="row">
+                                        <div class="container">
+                                            <div class="col mx-1  pt-3 mb-1 border neontabla">
+                                                    <h2 class= "neones"><i class="fa-solid fa-user-pen"></i> Datos Personales </h2>
+                                                        <div class="container">
+                                                        <div class="row">
+                                                            <div class=" my-auto mx-auto">          
+                                                                <input class="p-2 neontextlanding  border-0 border bg-transparent rounded w-100 me-1 me-sm-4 my-3 d-block text-white" type="hidden" id="id"><!--variable invisible-->
+                                                                <label for="nombre" style="color: white;">Nombre: </label>          
+                                                                <input class="p-2 neontextlanding bg-transparent border-0 border  rounded w-100 me-1 me-sm-4 my-3 d-block text-white" type="text" id="cli_nombre"><br>
+                                                                <label for="nombre" style="color: white;">Apellidos: </label>  
+                                                                <input class="p-2 neontextlanding bg-transparent border-0 border  rounded w-100 me-1 me-sm-4 my-3 d-block text-white" type="text" id="cli_apellidos" value="apellido"><br>
+                                                                <label for="nombre" style="color: white;">Correo: </label>
+                                                                <input class="p-2 neontextlanding bg-transparent border-0 border  rounded w-100 me-1 me-sm-4 my-3 d-block text-white" type="email" id="cli_email" value="correo" disabled><br>
+                                                                <label for="nombre" style="color: white;">Teléfono: </label>  
+                                                                <input class="p-2 neontextlanding bg-transparent border-0 border  rounded w-100 me-1 me-sm-4 my-3 d-block text-white" type="number" id="cli_telefono" value="Telefono"> <br>
 
-                            <div id="CompraDetalle_wrapper" class=""><div class="row"><div class="col-sm-6"><div class="dataTables_length" id="CompraDetalle_length"><label>Show <select name="CompraDetalle_length" aria-controls="CompraDetalle" class="form-control input-sm"><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select> entries</label></div></div><div class="col-sm-6"><div id="CompraDetalle_filter" class="dataTables_filter"><label>Search:<input type="search" class="form-control input-sm" placeholder="" aria-controls="CompraDetalle"></label></div></div></div><div class="row"><div class="col-sm-12"><table class="table table-purple table-striped table-hover w-100 table-light table-fixed dataTable no-footer" id="CompraDetalle" role="grid" aria-describedby="CompraDetalle_info" style="width: 1159px;">
-
-                                <!--PARA PONER CON BLANCO: table table-striped table-hover table-light table-fixed w-100-->    
-
-                                <thead class="table-dark sticky">
-
-                                <tr role="row"><th class="sorting_asc" tabindex="0" aria-controls="CompraDetalle" rowspan="1" colspan="1" aria-label="Codigo detalle: activate to sort column descending" style="width: 217px;" aria-sort="ascending">Codigo detalle</th><th class="sorting" tabindex="0" aria-controls="CompraDetalle" rowspan="1" colspan="1" aria-label="Codigo Compra: activate to sort column ascending" style="width: 231px;">Codigo Compra</th><th class="sorting" tabindex="0" aria-controls="CompraDetalle" rowspan="1" colspan="1" aria-label="Producto ID: activate to sort column ascending" style="width: 184px;">Producto ID</th><th class="sorting" tabindex="0" aria-controls="CompraDetalle" rowspan="1" colspan="1" aria-label="Cantidad: activate to sort column ascending" style="width: 144px;">Cantidad</th><th class="sorting" tabindex="0" aria-controls="CompraDetalle" rowspan="1" colspan="1" aria-label="Detalle color : activate to sort column ascending" style="width: 193px;">Detalle color </th></tr>
-                                    </thead>
-
-                                    <tbody>
-
+                                                                <div class="espacio-AA">
+                                                                    <button type="submit" class="neonbottonlanding btn btn-primary" style="width: auto; height:auto font-size: 20px;" id="save">Guardar</button> 
+                                                                    <a href="#"><i class="fa-solid fa-key"></i><span> Cambiar Contraseña</span></a>
+                                                                </div>
+                                                                
+                                                            </div>   
+                                                        </div>
+                                                
+                                            </div>
+                                        </div>
                                 
-                            </table></div></div><div class="row"><div class="col-sm-5"><div class="dataTables_info" id="CompraDetalle_info" role="status" aria-live="polite">Showing 1 to 2 of 2 entries</div></div><div class="col-sm-7"><div class="dataTables_paginate paging_simple_numbers" id="CompraDetalle_paginate"><ul class="pagination"><li class="paginate_button previous disabled" id="CompraDetalle_previous"><a href="#" aria-controls="CompraDetalle" data-dt-idx="0" tabindex="0">Previous</a></li><li class="paginate_button active"><a href="#" aria-controls="CompraDetalle" data-dt-idx="1" tabindex="0">1</a></li><li class="paginate_button next disabled" id="CompraDetalle_next"><a href="#" aria-controls="CompraDetalle" data-dt-idx="2" tabindex="0">Next</a></li></ul></div></div></div></div>
-
+                                </section>
                             </div>
                         </div>
-                    </div>
-                </div>
-        </div>
+                        <div class="mostrar-res">
+                            <!-- primer registro -->
+                            <div class="fondo-null esp-admin" id="cambioFontAdmin">
+                                <div class="col-sm-12">
+                                    <table class="table table-purple table-striped table-hover w-100 table-light table-fixed dataTable no-footer" id="CompraDetalle" role="grid" aria-describedby="CompraDetalle_info" style="width: 822px;">
 
+                                        <!--PARA PONER CON BLANCO: table table-striped table-hover table-light table-fixed w-100-->    
+
+                                        <thead class="table-dark sticky">
+                                            <tr role="row">
+                                                <th class="sorting_asc" tabindex="0" aria-controls="CompraDetalle" rowspan="1" colspan="1" aria-label="Codigo detalle: activate to sort column descending" aria-sort="ascending" style="width: 143px;">Codigo detalle</th>
+                                                <th class="sorting" tabindex="0" aria-controls="CompraDetalle" rowspan="1" colspan="1" aria-label="Codigo Compra: activate to sort column ascending" style="width: 153px;">Codigo Compra</th>
+                                                <th class="sorting" tabindex="0" aria-controls="CompraDetalle" rowspan="1" colspan="1" aria-label="Producto ID: activate to sort column ascending" style="width: 119px;">Producto ID</th>
+                                                <th class="sorting" tabindex="0" aria-controls="CompraDetalle" rowspan="1" colspan="1" aria-label="Cantidad: activate to sort column ascending" style="width: 91px;">Cantidad</th>
+                                                <th class="sorting" tabindex="0" aria-controls="CompraDetalle" rowspan="1" colspan="1" aria-label="Detalle color : activate to sort column ascending" style="width: 126px;">Detalle color </th>
+                                            </tr>
+                                        </thead>
+
+                                        <tbody>
+                                            <tr role="row" class="odd">
+                                                <td class="sorting_1">1</td>
+                                                <td>0 </td>
+                                                <td>00,ejemplo</td>
+                                                <td>0</td>
+                                                <td>ejemplo</td>
+                                            </tr>
+                                        </tbody>
+                                    </table> 
+                                </div>
+                            </div>
+                            
+                            <!-- segundo registro  -->
+
+                            <div class="fondo-null esp-admin" id="cambioFontAdmin2">
+
+                                <div class="">
+
+                                    <table class="table table-purple table-striped table-hover  w-100 table-light table-fixed" id="compratabla">
+
+                                        <!--PARA PONER CON BLANCO: table table-striped table-hover table-light table-fixed w-100-->    
+
+                                        <thead class="table-dark sticky">
+
+                                            <tr>
+
+                                                <th>Código </th>
+
+                                                <th>Fecha</th>
+
+                                                <th>Precio total </th>
+
+                                                <th>Cliente </th>
+
+                                            </tr>
+
+                                            </thead>
+
+                                            <tbody>
+
+                                        </tbody>
+
+                                    </table>
+
+                                </div>
+
+                            </div> <!--fin de segundo registro -->
+                        </div>
+                    </div>
+        </div>
 
     <br>
 
-      
 
-  <!---->     
-    <div class="container">
-        <section class="row pb-5">
-           
-                <div class="container">
-                    <div class="col mx-1 mx-sm-5 pt-3 mb-1 border neontabla">
-                       
-                        <h2 class= "neones"><i class="fa-solid fa-user-pen"></i> Datos Personales </h2>                      
-                        <div class="container">                      
-                            <div class="row">                         
-                                <div class="col-5 my-auto mx-auto">  
-
-                                
-
-                                    <input class="p-2 neontextlanding  border-0 border bg-transparent rounded w-100 me-1 me-sm-4 my-3 d-block text-white" type="hidden" id="id"><!--variable invisible-->
-                                    <label style="color: white;">Nombre: </label>          
-                                    <input class="p-2 neontextlanding bg-transparent border-0 border  rounded w-100 me-1 me-sm-4 my-3 d-block text-white" type="text" id="cli_nombre"><br>
-                                    <label style="color: white;">Apellidos: </label>  
-                                    <input class="p-2 neontextlanding bg-transparent border-0 border  rounded w-100 me-1 me-sm-4 my-3 d-block text-white" type="text" id="cli_apellidos"><br>
-                                    <label style="color: white;">Correo: </label>
-                                    <input class="p-2 neontextlanding bg-transparent border-0 border  rounded w-100 me-1 me-sm-4 my-3 d-block text-white" type="email" id="cli_email" disabled><br>
-                                    <label style="color: white;">Teléfono: </label>  
-                                    <input class="p-2 neontextlanding bg-transparent border-0 border  rounded w-100 me-1 me-sm-4 my-3 d-block text-white" type="number" id="cli_telefono"><br>
-                                    <button type="submit" class="neonbottonlanding btn btn-primary" style="width: auto; height:auto font-size: 20px;" id="save">Guardar</button>
-                                    
-
-                                  <!--cambio contraseña oculto-->
-
-                                    <div id="formcontra" class="formcontra">
-
-                                            
-                                        <label style="color: white;">Contraseña actual:</label>
-                                        <input class="form-control input-lg" placeholder="Ingrese contraseña actual" style="font-style: italic;" type="password" id ="contra" required><br>
-                                   
-                                        <label style="color: white;">Nueva contraseña:</label>
-                                        <input class="form-control input-lg" placeholder="Ingrese nueva contraseña" style="font-style: italic;" type="password" id = "contranuevo1" required><br>
-                                        <label style="color: white;">Repetir nueva contraseña:</label>
-                                        <input class="form-control input-lg" placeholder="Repite nueva contraseña" style="font-style: italic;" type="password" id = "contranuevo2" required><br>   
-                                                        
-
-                                    </div>
-                                    <button class="neonbottonlanding btn btn-primary" style="width: auto; height:auto font-size: 20px;" id="btncontra" onclick="mostrarform()">Cambiar Contraseña</button> <i class="fa-solid fa-key" style=" color: yellow"></i><br>
-                                    
-              
-                                </div> 
-                                 
-                            </div>
-                            
-                        </div>
-                        
-                    </div>
-                </div>
-        </section>
-    </div>
-                                   
+    <!--Inicio Modal Cambio Contraseña-->
     
+    <!--Fin Modal Contra-->
+
+
+        <script src="build/js/ajax/ajax.administrar.js"></script>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </div>
