@@ -11,7 +11,6 @@ $(document).ready(function() {
     verificarKey();
     igualPassword();
     updatePassword();
-    mostrarform();
 });
 function data() {
     $.ajax({
@@ -69,24 +68,24 @@ function data() {
 //contraseña cambiar-verifcar
 
 
-$(".formcontra").hide(); 
+// $(".formcontra").hide(); 
 
-function mostrarform(){
-    let text = "";
+// function mostrarform(){
+//     let text = "";
     
-    if($("#btncontra").text() == "Cambiar Contraseña"){
-        $(".formcontra").show();
-        text = "Guardar contraseña";
+//     if($("#btncontra").text() == "Cambiar Contraseña"){
+//         $(".formcontra").show();
+//         text = "Guardar contraseña";
      
-    } 
-    else{
-        $(".formcontra").hide();
-        text = "Cambiar Contraseña";
-    }
+//     } 
+//     else{
+//         $(".formcontra").hide();
+//         text = "Cambiar Contraseña";
+//     }
 
-    $("#btncontra").html(text);
+//     $("#btncontra").html(text);
 
-}
+// }
 
 function verificarKey(){
     // const data = $("#pass");
