@@ -1,13 +1,12 @@
-<<<<<<< HEAD
 
-const btnSave = document.querySelector("save");
-=======
-const btnSave = document.querySelector("#save"); // borrar
->>>>>>> e84b5cd38292c73af9d4dd31a6da8c6c835af693
+const btnSave = document.querySelector("#save");
 $(document).ready(function() {
     $("#contra").val("");
     // boton guardar
-    btnSave.disabled =true;
+    if(btnSave!= null){
+        btnSave.disabled =true;
+    }
+    
     // metodos
     data();
     reset();
