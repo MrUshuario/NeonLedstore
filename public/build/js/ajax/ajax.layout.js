@@ -1,9 +1,10 @@
-
-const btnSave = document.querySelector("save");
+const btnSave = document.querySelector("#save");
 $(document).ready(function() {
     $("#contra").val("");
     // boton guardar
-    btnSave.disabled =true;
+    if(btnSave!=null){
+        btnSave.disabled =true;
+    }
     // metodos
     data();
     reset();
