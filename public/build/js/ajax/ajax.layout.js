@@ -11,7 +11,6 @@ $(document).ready(function() {
     verificarKey();
     igualPassword();
     updatePassword();
-    mostrarform();
 });
 function data() {
     $.ajax({
@@ -36,8 +35,8 @@ function data() {
                 }if(data.cli_rol == 2){
                     var nombre = data.cli_nombre;
                     $(document).ready(function() {
-                        $('#Administrar').text(nombre);
-                        $('#Administrar').append('   <i class="fas fa-cog"></i>');
+                        $('#Nombre').text(nombre);
+                        $('#Nombre').append('   <i class="fas fa-cog"></i>');
                     });
                     document.getElementById('Administrar').style.display = '';
                     document.getElementById('Carrito').style.display = '';
@@ -69,24 +68,24 @@ function data() {
 //contraseña cambiar-verifcar
 
 
-$(".formcontra").hide(); 
+// $(".formcontra").hide(); 
 
-function mostrarform(){
-    let text = "";
+// function mostrarform(){
+//     let text = "";
     
-    if($("#btncontra").text() == "Cambiar Contraseña"){
-        $(".formcontra").show();
-        text = "Guardar contraseña";
+//     if($("#btncontra").text() == "Cambiar Contraseña"){
+//         $(".formcontra").show();
+//         text = "Guardar contraseña";
      
-    } 
-    else{
-        $(".formcontra").hide();
-        text = "Cambiar Contraseña";
-    }
+//     } 
+//     else{
+//         $(".formcontra").hide();
+//         text = "Cambiar Contraseña";
+//     }
 
-    $("#btncontra").html(text);
+//     $("#btncontra").html(text);
 
-}
+// }
 
 function verificarKey(){
     // const data = $("#pass");
