@@ -26,7 +26,7 @@
 
                     <th>Nombre</th>
 
-                    <th>estado</th>
+                    <th>Estado</th>
 
                     <th>Editar/borrar</th>
 
@@ -67,7 +67,7 @@
           
                     <div class="mb-3">
 
-                        <label for="nombre">Nombre de categora</label>
+                        <label for="nombre">Nombre de categoria</label>
 
                         <input type="text" class="form-control" id="cat_nombre">
 

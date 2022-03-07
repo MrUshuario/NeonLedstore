@@ -15,7 +15,7 @@
                 <tr>
                     <th>Categoría</th>
                     <th>Nombre y Descripcion</th>
-                    <th>Precio (s/) </th>
+                    <th>Precio (S/.) </th>
                     <th>Imagen </th>
                     <th>Tamaño </th>
                     <th>Estado </th>
@@ -71,11 +71,11 @@
                         </div>
                     </div>
                     <div class="mb-3">
-                        <label for="pro_estado">estado</label>
-                        <select id="pro_estado" class="form-control">
-                            <option value="">-SELECCIONE--</option>
-                            <option value="0">ACTIVO</option>
-                            <option value="1">INACTIVO</option>
+                        <label for="pro_estado">Estado</label>
+                        <select id="pro_activo" class="form-control">
+                            <option value="">--SELECCIONE--</option>
+                            <option value="1">ACTIVO</option>
+                            <option value="0">INACTIVO</option>
                         </select>
                     </div>
                     <div class="modal-footer">
