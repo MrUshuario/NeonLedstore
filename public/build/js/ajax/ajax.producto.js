@@ -32,14 +32,16 @@ function tableAll() {
       {
         data: null,
         render: function (data, type, row) {
-          return `<button data-idpro="${data.id}" class="btn ${data.pro_activo == "1" ? "btn-success" : "btn-danger"}" id="btnEstado">${data.pro_activo}</button>`;
+          return `<button data-idpro="${data.id}" class="btn ${
+            data.pro_activo == "1" ? "btn-success" : "btn-danger"
+          }" id="btnEstado">${data.pro_activo}</button>`;
         },
       },
       {
         data: null,
         render: function (data, type, row) {
-          return `<button class="btn-inline btn-warning" data-idpro="${data.id}" id="edit" data-bs-toggle="modal" data-bs-target="#modalProducto" >Edit</button>
-            <button class="btn-inline btn-danger" data-idpro="${data.id}" id="eliminar">Del</button>`;
+          return `<button class="btn-inline btn-warning" data-idpro="${data.id}" id="edit" data-bs-toggle="modal" data-bs-target="#modalProducto" >edit</button>
+            <button class="btn-inline btn-danger" data-idpro="${data.id}" id="delete">del</button>`;
         },
       },
     ],
@@ -70,7 +72,6 @@ function obtenerData() {
         $("#pro_descripcion").val(data.pro_descripcion);
         $("#pro_precio").val(data.pro_precio);
         $("#pro_activo").val(data.pro_activo);
-        console.log(data.pro_activo)
         const tmn = data.pro_tamano.split("X");
         $("#t-1").val(tmn[0]);
         $("#t-2").val(tmn[1]);
@@ -87,7 +88,7 @@ function obtenerData() {
 }
 
 function deleteProduct() {
-  $(document).on("click", "#eliminar", function (e) {
+  $(document).on("click", "#delete", function (e) {
     let idpro = e.target.dataset.idpro;
     swal({
       title: "¿Estas seguro de eliminar este producto?",
@@ -100,14 +101,8 @@ function deleteProduct() {
           url: "/producto/eliminar",
           type: "POST",
           data: { id: idpro },
-          success: (e) =>{
-            if (e){
-
-              tableAll();
-              swal("Producto eliminado!!", {
-              icon: "success",
-            });
-            }           
+          success: function () {
+            tableAll();
           },
         });
       }
@@ -117,7 +112,7 @@ function deleteProduct() {
 
 function clean() {
   $("#id").val("");
-  $("#_categoria").val("");
+  $("#pro_categoria").val("");
   $("#pro_nombre").val("");
   $("#pro_descripcion").val("");
   $("#pro_precio").val("");
@@ -225,7 +220,7 @@ function saveProduct() {
 
 function create(formData) {
   $.ajax({
-    url: "producto/create",
+    url: "/producto/crear",
     type: "POST",
     data: formData,
     processData: false, // tell jQuery not to process the data
@@ -241,7 +236,6 @@ function create(formData) {
   });
 }
 
-    
 function update(formData) {
   $.ajax({
     url: "/producto/editar",
