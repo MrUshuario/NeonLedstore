@@ -40,9 +40,10 @@ function tableAll(){
       },
       {data: null,
         render: function(data,type,row){
-          return `
+          return `<form>
           <input class="${data.cli_rol == "2"? 'd-none' : ''} form-control" style="width: 100px;"
-          data-idcliente="${data.id}" input-lg w-20 p-3 " placeholder="pass" type="password"  id ="pass${data.id}">`;
+          data-idcliente="${data.id}" input-lg w-20 p-3 " placeholder="pass" type="password"  id ="pass${data.id}">
+          </form>`;
         }
       },
       {data: null,
@@ -290,11 +291,9 @@ function verificarcontra() {
   $(document).on("click", "#verificar", function (e) {
     const id = e.target.dataset.idcliente;
     let id_pass =  "#pass"+id;
+    let botones = "#botones"+id;
+    console.log(botones);
     let pass = $(id_pass).val();
-    console.log(pass);
-
-
-      console.log("con contraseña"); 
       const data = {
         passwordV: pass,
         id: id,
@@ -305,9 +304,14 @@ function verificarcontra() {
        url: "/configuracion/verificar",
        data: data,
        success: function (e) {
-         console.log(e); 
-          
-    //     const { data } = JSON.parse(e); 
+       const data = JSON.parse(e);
+       console.log(data.res);
+       if (data.res) {
+        const respuesta = document.querySelector(botones);
+        respuesta.classList.remove('d-none');
+        respuesta.classList.add('d-block')
+       }
+
     //     $("#id").val(data.id);
     //     $("#cli_nombre").val(data.cli_nombre);
     //     $("#cli_apellidos").val(data.cli_apellidos);
