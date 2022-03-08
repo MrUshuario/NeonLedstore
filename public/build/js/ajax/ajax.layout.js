@@ -17,6 +17,7 @@ function data() {
         url: '/configuracion/getData',
         type: 'GET',
         success: function(e){
+            
             //si no esta logeado enviar un mensaje que empieza con <
             if (e[0] == "<") {
             console.log("No logeado");
@@ -35,6 +36,7 @@ function data() {
                 }if(data.cli_rol == 2){
                     var nombre = data.cli_nombre;
                     $(document).ready(function() {
+                        nombre = nombre.toUpperCase();
                         $('#Nombre').text(nombre);
                         $('#Nombre').append('   <i class="fas fa-cog"></i>');
                     });

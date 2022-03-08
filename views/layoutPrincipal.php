@@ -126,6 +126,67 @@
                                 </a>
 
                             </li>
+                            <li>
+                            <a class="enlace nav-link px-0 py-0">
+
+                                <div class="botones text-white px-3 rounded-medium"></div>
+
+                            </a>
+                            </li>
+                            <li class="listaContenido px-2 border-2 border-light border-end " id='Carrito' style=" display: none;" >
+
+                                <a class="enlace nav-link px-0 py-0" aria-current="page" href="/cart">
+
+                                    <div class="botones text-white px-3 rounded-medium">CARRITO
+                                    <i class="fas fa-shopping-cart"></i>
+                                    </div>
+
+                                </a>
+
+                            </li>
+                            <li class="listaContenido px-2 border-2 border-light border-end " id='Perfil' style=" display: none;">
+
+                                <a class="enlace nav-link px-0 py-0" aria-current="page" href="/login">
+
+                                    <div class="botones text-white px-3 rounded-medium">ADMIN
+                                    <i class="fas fa-user"></i>
+                                    </div>
+
+                                </a>
+
+                            </li>
+                            <li class="listaContenido px-2 border-2 border-light border-end " id='Iniciar_S' style=" display: none;">
+
+                                <a class="enlace nav-link px-0 py-0" aria-current="page" href="/login">
+
+                                    <div class="botones text-white px-3 rounded-medium">INCIAR SESION
+                                    <i class="fas fa-sign-in-alt"></i>
+                                    </div>
+
+                                </a>
+
+                            </li>
+                            <li class="listaContenido px-2 border-2 border-light border-end " id='Administrar' style=" display: none;">
+
+                                <a class="enlace nav-link px-0 py-0" aria-current="page" href="/administrar">
+
+                                    <div id='Nombre' class="botones text-white px-3 rounded-medium">
+                                    </div>
+
+                                </a>
+
+                            </li>
+                            <li class="listaContenido px-2 border-2 border-light" id='Cerrar_S' style=" display: none;">
+
+                                <a class="enlace nav-link px-0 py-0" aria-current="page" href="/cerrar">
+
+                                    <div id='Nombre' class="botones text-white px-3 rounded-medium">CERRAR SESION
+                                    <i class="fas fa-sign-out-alt"></i>
+                                    </div>
+
+                                </a>
+
+                            </li>
 
                         </ul>
 
@@ -141,32 +202,32 @@
 
                         <div class="d-flex items-center gap-1 row">
                             
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0"> 
+                        <!-- <ul class="navbar-nav me-auto mb-2 mb-lg-0"> 
                             <div  id="Carrito" class="col"  style=" display: none;">    
-                                    <button style="padding-top: 0px !important" class="btn btn-primary my-sm-3 border-0 bg-transparent" onclick="window.location.href='/cart'">Carrito    
+                                    <button style="padding-top: 8px !important" class="btn btn-primary border-0 bg-transparent" onclick="window.location.href='/cart'">Carrito    
                                         <i class="fas fa-shopping-cart"></i>
                                     </button>
                             </div>
                             <div  id="Perfil" class="col" style=" display: none;">
-                                    <button style="padding-top: 0px !important" class="btn btn-primary my-sm-3 border-0 bg-transparent" onclick="window.location.href='/login'">Admin    
+                                    <button style="padding-top: 8px !important" class="btn btn-primary border-0 bg-transparent" onclick="window.location.href='/login'">Admin    
                                         <i class="fas fa-user"></i>
                                     </button>
                             </div>
-                            <div  id="Iniciar_S" class="col" style=" display: none;">   
-                                    <button style="padding-top: 0px !important" class="btn btn-primary my-sm-3 border-0 bg-transparent" onclick="window.location.href='/login'">Iniciar Sesion    
+                            <div  id="Iniciar_S" class="col" style=" display: none; padding-top: 0px !important;">   
+                                    <button style="padding-top: 8px !important;" class="btn btn-primary border-0 bg-transparent" onclick="window.location.href='/login'">Iniciar Sesion    
                                         <i class="fas fa-sign-in-alt"></i>
                                     </button>
                             </div>
                             <div  id="Administrar" class="col" style=" display: none;">    
-                                    <button style="padding-top: 0px !important" id="Nombre" class="btn btn-primary my-sm-3 border-0 bg-transparent" onclick="window.location.href='/administrar'">
+                                    <button style="padding-top: 8px !important" id="Nombre" class="btn btn-primary border-0 bg-transparent" onclick="window.location.href='/administrar'">
                                     </button>
                             </div>
                             <div id="Cerrar_S"  class="col" style=" display: none;">
-                                    <button style="padding-top: 0px !important" class="btn btn-primary my-sm-3 border-0 bg-transparent" onclick="window.location.href='/cerrar'">Cerrar Sesion   
+                                    <button style="padding-top: 8px !important" class="btn btn-primary border-0 bg-transparent" onclick="window.location.href='/cerrar'">Cerrar Sesion   
                                         <i class="fas fa-sign-out-alt"></i>
                                     </button>
                             </div> 
-                        </ul>
+                        </ul> -->
                         </div>
 
                             <?php //else : 
