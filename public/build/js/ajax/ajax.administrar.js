@@ -11,7 +11,7 @@ function cambioClassPas() {
 }
 
 function pasar() {
-    
+    // aqui pasaria el div mostrar
 }
 
 
