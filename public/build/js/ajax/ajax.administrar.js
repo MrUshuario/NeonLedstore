@@ -10,5 +10,8 @@ function cambioClassPas() {
     document.getElementById("cambioFontAdmin2").className = "fondo-null espacio-admin";
 }
 
+function pasar() {
+    
+}
 
 

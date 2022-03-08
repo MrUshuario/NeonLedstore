@@ -14,14 +14,14 @@
                             <ul class="menuAdmin">
                                 <!-- <a href="#"><li class="listaAdmin"><i class="icon_izq_admin fa-solid fa-user-gear"></i>  Sobre el Cliente</li></a> -->
                                 <a href="#"><li class="listaAdmin" onclick="cambioClass()"><i class="icon_izq_admin fa-solid fa-boxes-stacked"></i>  Historial de Factura</li></a>
-                                <a href="#"><li class="listaAdmin" onclick=""><i class="fa-solid fa-lock"></i> Actualizar contraseña</li></a>
-                                <a href="#"><li class="listaAdmin" onclick="cambioClassPas()"><i class="fa-regular fa-circle-user"></i>  Datos Personales</li></a>
+                                <a href="#"><li class="listaAdmin" onclick="cambioClassPas()"><i class="fa-solid fa-lock"></i> Actualizar contraseña</li></a>
+                                <a href="#"><li class="listaAdmin" onclick="pasar()"><i class="fa-regular fa-circle-user"></i>  Datos Personales</li></a>
                             </ul>
                             <br>
                             <!--Datos Personales-->     
                             <div class="container">
-                                <section class="row">
-                                        <div class="container">
+                                <section class="row" id="Sucursales">
+                                        <div class="container yo">
                                             <div class="col mx-1  pt-3 mb-1 border neontabla">
                                                     <h2 class= "neones"><i class="fa-solid fa-user-pen"></i> Datos Personales </h2>
                                                         <div class="container">
@@ -55,7 +55,7 @@
 
 
 
-                        <div class="mostrar-res">
+                        <div class="mostrar-res" id="es">
                             <!-- primer registro -->
                             <div class="row espacio-admin" id="cambioFontAdmin">
                                 <div class="col-sm-12">
