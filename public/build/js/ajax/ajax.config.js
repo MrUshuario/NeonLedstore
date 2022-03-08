@@ -30,7 +30,8 @@ function verificarKey(){
         let passVerificar = e.target.value;
         console.log("verificado");
         const data = {
-            passwordV: passVerificar
+            passwordV: passVerificar,
+            id: "default"
         }
 
         verificarPassword(data);
@@ -43,6 +44,7 @@ function verificarPassword(data){
         type:"POST",
         data:data,
         success: function(e){
+            console.log
             const { res } = JSON.parse(e);
             const respuesta = document.querySelector("#respuesta");
             
