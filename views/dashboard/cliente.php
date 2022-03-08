@@ -61,7 +61,7 @@
                     </div>
 
                     <div class="mb-3">
-                        <label for="nombre">Clave Cliente</label>
+                        <label for="nombre">Clave (Dejar vacio para no cambiar la clave)</label>
                         <input type="password" class="form-control" id="cli_clave">
                     </div>
 

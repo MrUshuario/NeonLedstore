@@ -89,7 +89,9 @@ class ClienteController {
     public static function update(){
         
         if($_SERVER['REQUEST_METHOD'] == 'POST'){
-            $_POST['cli_clave'] = password_hash($_POST['cli_clave'], PASSWORD_DEFAULT);
+            if ($_POST['cli_clave'] != null) {
+                $_POST['cli_clave'] = password_hash($_POST['cli_clave'], PASSWORD_DEFAULT);
+            };            
             $cliente = Cliente::find($_POST['id']);
             $cliente->sincronizar($_POST);
 

@@ -71,7 +71,7 @@ function saveCliente(){
     let cli_email = $("#cli_email").val();
     let cli_clave = $("#cli_clave").val();
     let cli_telefono = $("#cli_telefono").val();
-    let cli_estado = $("#cli_estado").val();
+    let cli_estado = $("#cli_estado").val(); 
     let cli_rol= $("#cli_rol").val();
     
     const data = {
@@ -170,10 +170,17 @@ function create(data) {
 }
 
 function update(data) {
+  let data2 = data;
+  console.log(typeof data2);
+  if(data2.cli_clave=="") {
+    console.log("no actualiza la contraseña");
+    delete data2.cli_clave;
+  }
+  console.log(data2);
   $.ajax ({
     url: "cliente/update",
     type: "POST",
-    data: data,
+    data: data2,
     success: function(e) {
       $('#modalCliente').modal('hide');
       tableAll();
