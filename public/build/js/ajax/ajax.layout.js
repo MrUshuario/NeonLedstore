@@ -1,6 +1,6 @@
 const btnSave = document.querySelector("#save");
 $(document).ready(function() {
-    $("#contra").val("");
+    $("#pass").val("");
     // boton guardar
     if(btnSave!=null){
         btnSave.disabled =true;
@@ -8,9 +8,9 @@ $(document).ready(function() {
     // metodos
     data();
     reset();
-    verificarKey();
+    verificarKey2();
     igualPassword();
-    updatePassword();
+    updatePassword2();
 });
 function data() {
     $.ajax({
@@ -65,52 +65,32 @@ function data() {
     });
 }
 
-//contraseña cambiar-verifcar
 
-
-// $(".formcontra").hide(); 
-
-// function mostrarform(){
-//     let text = "";
-    
-//     if($("#btncontra").text() == "Cambiar Contraseña"){
-//         $(".formcontra").show();
-//         text = "Guardar contraseña";
-     
-//     } 
-//     else{
-//         $(".formcontra").hide();
-//         text = "Cambiar Contraseña";
-//     }
-
-//     $("#btncontra").html(text);
-
-// }
-
-function verificarKey(){
+function verificarKey2(){
     // const data = $("#pass");
-    $("#contra").on('change', function(e){
-        // console.log(e.target.value);
+    $("#pass").on('change', function(e){
         let passVerificar = e.target.value;
         console.log("verificado");
         const data = {
             passwordV: passVerificar
         }
 
-        verificarPassword(data);
+        verificarPass(data);
     });
 }
 
-function verificarPassword(data){
+function verificarPass(data){
     $.ajax({
-        url:"/configuracion/verificar",
+        url:"/configuracion/verificarPass",
         type:"POST",
         data:data,
+
         success: function(e){
-            const { res } = JSON.parse(e);
+            console.log(e);
+            var { res } = JSON.parse(e);
             const respcontra = document.querySelector("#respcontra");
             
-            if(rol){
+            if(rol){//chequearrrrrrrrrrrrrr
                 respcontra.classList.remove('d-none');
                 respcontra.classList.add('d-block')
             }else {
@@ -127,9 +107,9 @@ function verificarPassword(data){
 
 
 function igualPassword() {
-    $("#contranuevo2").on('change', function(){
-        const pass1 = document.querySelector("#contranuevo1");
-        const pass2 = document.querySelector("#contranuevo2");
+    $("#passnew2").on('change', function(){
+        const pass1 = document.querySelector("#passnew1");
+        const pass2 = document.querySelector("#passnew2");
 
         // crear un nuevo elemento
         const contenedorPassword = document.querySelector("#mensaje");
@@ -173,47 +153,46 @@ function igualPassword() {
 }
 
 function reset(){
-    $("#btnModal").on('click', function(){
+    $("#btnModal").on('click', function(){//Revisar el btnModal
         limpiarCaja();
     });
 }
 
-function updatePassword(){
-    $("#formpassword").submit(function(e){
+function updatePassword2(){
+    $("#formcontra").submit(function(e){
         e.preventDefault();
 
-        const passnuevo = document.querySelector("#contranuevo2");
-
+        const passnew = document.querySelector("#passnew2");
         const data = {
-            pass: passnuevo.value
+            pass: passnew.value
         };
         
-        updatePass(data);
+        updatepass(data);
     });
 }
 
 function updatePass(data){
     $.ajax({
-        url:"/configuracion/updatePassword",
+        url:"/configuracion/updatePassword2",
         type:"POST",
         data:data,
         success: function(e){
-            const {res} = JSON.parse(e);
+            var {res} = JSON.parse(e);
 
             if(res){
                 swal({
-                    text: 'Contraseña correctamente cambiado',
+                    text: 'Contraseña cambiada',
                     icon: 'success'
                 });
                 limpiarCaja();
-                $("#modalPassword").modal("hide");
+                $("#modalPass").modal("hide");
             }
         }
     })
 }
 
 function limpiarCaja(){
-    // $("#contra").val("");
-    $("#contranuevo1").val("");
-    $("#contranuevo2").val("");
+    // $("#pass").val("");
+    $("#passnew1").val("");
+    $("#passnew2").val("");
 }

@@ -132,19 +132,20 @@
                                                         <div class="row">
                                                             <div class=" my-auto mx-auto">          
                                                                 
-                                                            <form id="formpassword">
+                                                            <form id="formcontra">
                                                                 <div class="form-group">
                                                                     <label style="color: white;">Contraseña actual: </label>
-                                                                    <input class="p-2 neontextlanding bg-transparent border-0 border  rounded w-100 me-1 me-sm-4 my-3" style="font-style: italic;" placeholder="Ingresa tu contraseña actual" type="password" id="contra" required>
+                                                                    <input class="p-2 neontextlanding bg-transparent border-0 border  rounded w-100 me-1 me-sm-4 my-3" style="font-style: italic;" placeholder="Ingresa tu contraseña actual" type="password" id="pass" required>
                                                                 </div>
 
                                                                 <div id="respcontra" class="m-1 d-none">
 
-                                                                    <label>Nueva contraseña</label>
-                                                                    <input class="form-control input-lg" placeholder="Ingresa la nueva contraseña" style="font-style: italic;" type="password" id="contranuevo1" required>
-                                                                    <label>Repetir nueva contraseña</label>
-                                                                    <input class="form-control input-lg" placeholder="Repite la nueva contraseña" style="font-style: italic;" type="password"  id="contranuevo2" required>
+                                                                    <label>Nueva contraseña:</label>
+                                                                    <input class="form-control input-lg" placeholder="Ingresa la nueva contraseña" style="font-style: italic;" type="password" id="passnew1" required>
+                                                                    <label>Repetir nueva contraseña:</label>
+                                                                    <input class="form-control input-lg" placeholder="Repita la nueva contraseña" style="font-style: italic;" type="password"  id="passnew2" required>
 
+                                                                    <div id="mensaje"></div>
 
                                                                     <div class="modal-footer">
                                                                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>

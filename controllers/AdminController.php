@@ -75,6 +75,13 @@ class AdminController  {
         ]);
     }
 
+    //Verifica form Cambio Contrseña
+    public static function verificarPass(){
+        echo  json_encode([
+            'res' => Users::verificarKey2($_POST['passwordV'],$_POST['id'])
+        ]);
+    }
+
     // Actualiza la contraseña del administrador
     public static function updatePassword(){
         $id = filter_var($_SESSION['id'], FILTER_VALIDATE_INT);

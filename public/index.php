@@ -121,6 +121,9 @@ $router = new Router();
     // method post
     $router->post("/configuracion/verificar", [AdminController::class,'verificar']);
     $router->post("/configuracion/updatePassword", [AdminController::class,'updatePassword']);
+    //config contraseña form
+    $router->post("/configuracion/verificarPass", [AdminController::class,'verificarPass']);
+    $router->post("/configuracion/updatePassword2", [AdminController::class,'updatePassword2']);
     
 // Cerrar Session - DASHBOARD
     //method get
