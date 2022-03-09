@@ -27,7 +27,7 @@ $(document).ready(function () {
 
   function saveCliente(){
     if( x==false){
-    $("#formCliente").submit(function(e){
+    $("#formRegistro").submit(function(e){
       e.preventDefault();
   
       let id = $("#id").val();
@@ -49,6 +49,7 @@ $(document).ready(function () {
         cli_estado: cli_estado,
         cli_rol: cli_rol,
       };
+      console.log(data);
       if (id=="") {
           if (cli_nombre == "" || cli_apellidos == "" || cli_email == "" || cli_clave == ""  || cli_telefono == "" || cli_estado == "" || cli_rol == ""){
             swal({
@@ -56,8 +57,7 @@ $(document).ready(function () {
               icon: "error"
             });
           }else{
-            create(data);
-            console.log(data);
+            register(data);
           }
 
         }
@@ -66,17 +66,15 @@ $(document).ready(function () {
     else{
     }
 }
-function create(data) {
+function register(data) {
   $.ajax ({
-    url: "cliente/create",
+    url: "cliente/register",
     data: data,
     type: "POST",
     success: function(e) {
       let json = JSON.parse(e);
       switch (json.STATUS) {
         case 1:
-          tableAll();
-          $("#modalCliente").modal("hide");
           swal({
             title: json.mensaje,
             icon: "success",

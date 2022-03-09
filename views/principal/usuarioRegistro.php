@@ -4,7 +4,7 @@
     </div>
     <div class="container">
         <section class="row pb-5">
-            <form id="formContact" enctype="multipart/form-data">
+            <form id="formRegistro" enctype="multipart/form-data">
                 <div class="container">
                     <div class="row text-white mx-1 mx-sm-5 pt-3 mb-2 d-flex justify-content-end">
                         <div class="formulario ol-lg-5 p-5 border neontabla cyan">
@@ -15,15 +15,15 @@
                             <input type="hidden" id="estado" value="1">
                                 <div class="form-group col-md-6">
                                 <label>Nombres</label>
-                                <input class="p-2 input-contact border-0 border-bottom bg-transparent rounded w-100 me-1 me-sm-4 my-3 d-block text-white" type="text" name="Nombres" id="nombre" placeholder="Nombres" >
+                                <input class="p-2 input-contact border-0 border-bottom bg-transparent rounded w-100 me-1 me-sm-4 my-3 d-block text-white" minlenght="4" type="text" name="Nombres" id="nombre" placeholder="Nombres" >
                                 </div>
                                 <div class="form-group col-md-6">
                                 <label>Apellidos</label>
-                                <input class="p-2 input-contact border-0 border-bottom bg-transparent rounded w-100 me-1 me-sm-4 my-3 d-block text-white" type="text" name="Apellidos" id="apellidos" placeholder="Apellidos" >
+                                <input class="p-2 input-contact border-0 border-bottom bg-transparent rounded w-100 me-1 me-sm-4 my-3 d-block text-white" minlenght="4" type="text" name="Apellidos" id="apellidos" placeholder="Apellidos" >
                                 </div>    
                                 <div class="form-group col-md-6">
                                 <label>Contraseña</label>
-                                <input class="p-2 input-contact border-0 border-bottom bg-transparent rounded w-100 me-1 me-sm-4 my-3 d-block text-white" type="password" name="password" id="clave" placeholder="Contraseña" >
+                                <input class="p-2 input-contact border-0 border-bottom bg-transparent rounded w-100 me-1 me-sm-4 my-3 d-block text-white" minlenght="4" type="password" name="password" id="clave" placeholder="Contraseña" >
                                 </div>
                                 <div class="form-group col-md-6">
                                 <label>Correo Electronico</label>
@@ -34,7 +34,7 @@
                                 <input class="p-2 input-contact border-0 border-bottom bg-transparent rounded w-100 me-1 me-sm-4 my-3 d-block text-white"  minlenght="9" maxlenght="9" type="tel" name="tel" id="telefono" placeholder="Telefono" >
                                 </div>
                                 <div class="input-group">
-                                <button type="submit" class="button-contact btn m-2 mx-auto neonbotton neontabla" name="logeo" id="logeo">Registrarse</button>
+                                <button type="submit" class="neonbottonlanding btn btn-primary my-sm-3 border-0" style="width: 90%; height:30% font-size: 18px;">Guardar</button>
                                 <span class="input-group-addon"></span>
                                 
                                 </div>
@@ -58,9 +58,7 @@
           
           //si no esta logeado enviar un mensaje que empieza con <
           if (e[0] == "<") {
-            
             var x = false;
-            console.log(x);
             console.log("No logeado"); 
           } 
           else{
