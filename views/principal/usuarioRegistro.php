@@ -10,28 +10,27 @@
                         <div class="formulario ol-lg-5 p-5 border neontabla cyan">
                             <h2 class="neones purpura" style="padding-bottom: 10px;">Registrese</h2>   
                             <div class="row"> 
-                            <input type="hidden" id="id">
                             <input type="hidden" id="rol" value="2">
-                            <input type="hidden" id="estado" value="1">
+                            <input type="hidden" id="estado" value="0">
                                 <div class="form-group col-md-6">
-                                <label>Nombres</label>
-                                <input class="p-2 input-contact border-0 border-bottom bg-transparent rounded w-100 me-1 me-sm-4 my-3 d-block text-white" minlenght="4" type="text" name="Nombres" id="nombre" placeholder="Nombres" >
+                                <label class="control-label" for="nombre">Nombres</label>
+                                <input class="form-control p-2 input-contact bg-transparent rounded w-100 me-1 me-sm-4 my-3 text-white" minlenght="4" type="text" name="nombre" id="nombre" placeholder="Nombres" >
                                 </div>
                                 <div class="form-group col-md-6">
-                                <label>Apellidos</label>
-                                <input class="p-2 input-contact border-0 border-bottom bg-transparent rounded w-100 me-1 me-sm-4 my-3 d-block text-white" minlenght="4" type="text" name="Apellidos" id="apellidos" placeholder="Apellidos" >
+                                <label class="control-label" >Apellidos</label>
+                                <input class="form-control p-2 input-contact bg-transparent rounded w-100 me-1 me-sm-4 my-3 text-white" minlenght="4" type="text" name="apellidos" id="apellidos" placeholder="Apellidos" >
                                 </div>    
                                 <div class="form-group col-md-6">
-                                <label>Contraseña</label>
-                                <input class="p-2 input-contact border-0 border-bottom bg-transparent rounded w-100 me-1 me-sm-4 my-3 d-block text-white" minlenght="4" type="password" name="password" id="clave" placeholder="Contraseña" >
+                                <label class="control-label" >Contraseña</label>
+                                <input class="form-control p-2 input-contact bg-transparent rounded w-100 me-1 me-sm-4 my-3 text-white" minlenght="4" type="password" name="clave" id="clave" placeholder="Contraseña" >
                                 </div>
                                 <div class="form-group col-md-6">
-                                <label>Correo Electronico</label>
-                                <input class="p-2 input-contact border-0 border-bottom bg-transparent rounded w-100 me-1 me-sm-4 my-3 d-block text-white" type="email" name="email" id="email" placeholder="Correo" >
+                                <label class="control-label" >Correo Electronico</label>
+                                <input class="form-control p-2 input-contact bg-transparent rounded w-100 me-1 me-sm-4 my-3 text-white" type="email" name="email" id="email" placeholder="Correo" >
                                 </div>
                                 <div class="form-group col-md-6">
-                                <label>Telefono</label>
-                                <input class="p-2 input-contact border-0 border-bottom bg-transparent rounded w-100 me-1 me-sm-4 my-3 d-block text-white"  minlenght="9" maxlenght="9" type="tel" name="tel" id="telefono" placeholder="Telefono" >
+                                <label class="control-label" >Telefono</label>
+                                <input class="form-control p-2 input-contact bg-transparent rounded w-100 me-1 me-sm-4 my-3 text-white"  minlenght="9" maxlenght="9" type="tel" name="telefono" id="telefono" placeholder="Telefono" >
                                 </div>
                                 <div class="input-group">
                                 <button type="submit" class="neonbottonlanding btn btn-primary my-sm-3 border-0" style="width: 90%; height:30% font-size: 18px;">Guardar</button>

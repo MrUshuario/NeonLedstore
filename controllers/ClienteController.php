@@ -61,42 +61,7 @@ class ClienteController {
             echo $json;
         }
     }
-    public static function register(Router $router){
-        if($_SERVER["REQUEST_METHOD"] == "POST"){
-            $_POST['clave'] = password_hash($_POST['clave'], PASSWORD_DEFAULT);
-            $cliente = new Cliente($_POST);
-            $verificarCorreo = $cliente->verificarCorreo();
-            if ($verificarCorreo->num_rows == 0) {
-                $resultado = $cliente->crear(); 
-                
-                if($resultado) {
-                    $listado = Cliente::listar();
-                    $json = json_encode([
-                        "STATUS"=>1,
-                        "mensaje"=>"Registro Agregado",
-                        "listas"=>$listado,
-                        "c"=>$cliente
-                    ]);
-                }  else {
-                    $json = json_encode([
-                        "STATUS"=>2,
-                        "mensaje"=>"Error al registrar",
-                        "c"=>$cliente,
-                        "b"=>$resultado,
-                    ]);
-                } // habria un tercer caso con no se puede borrar padres
-            }
-            //ya existe
-            else {
-                $json = json_encode ([
-                    "STATUS"=>2,
-                    "mensaje"=>"Este correo ya existe!!!",
-                    "c"=>$cliente
-                ]);   
-            }
-            echo $json;
-        }
-    }
+
     
     public static function getCliente(Router $router){
         if($_SERVER['REQUEST_METHOD'] == 'POST'){ 

@@ -57,6 +57,7 @@
     <!-- Modal Consulta Enviada(Correo) -->
     
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="build/js/sweetalert.min.js"></script>
 
 
 </head>
