@@ -8,9 +8,9 @@ $(document).ready(function() {
     // metodos
     data();
     reset();
-    verificarKey2();
+    verificarKey();
     igualPassword();
-    updatePassword2();
+    updatePassword();
 });
 function data() {
     $.ajax({
@@ -44,6 +44,8 @@ function data() {
                 }
             }
 
+            
+
             console.log(data);  
             if(document.getElementById('cli_nombre')){
                 /* guia mostrar nombre  */
@@ -54,52 +56,54 @@ function data() {
                 $("#cli_telefono").val(data.cli_telefono);
                 console.log(data.cli_nombre);
                 
-                console.log(data.cli_apellido);
-            
 
                 } 
-            else {
-                
-               }
+
         }   
+        
     });
 }
 
 
-function verificarKey2(){
+function verificarKey(){
     // const data = $("#pass");
     $("#pass").on('change', function(e){
         let passVerificar = e.target.value;
         console.log("verificado");
         const data = {
-            passwordV: passVerificar
+            passwordV: passVerificar,
+            id: "default"
         }
-
+        console.log(data);
         verificarPass(data);
     });
 }
 
 function verificarPass(data){
     $.ajax({
-        url:"/configuracion/verificarPass",
+        url:"/configuracion/verificar",
         type:"POST",
         data:data,
 
         success: function(e){
             console.log(e);
-            var { res } = JSON.parse(e);
+            const { res } = JSON.parse(e);
             const respcontra = document.querySelector("#respcontra");
             
-            if(rol){//chequearrrrrrrrrrrrrr
+            if(res){
                 respcontra.classList.remove('d-none');
                 respcontra.classList.add('d-block')
             }else {
                 respcontra.classList.remove('d-block');
                 respcontra.classList.add('d-none')
-                swal({
-                    title: "Contraseña ingresada, no es la misma que la contraseña guardada",
-                    icon: "error" 
-                });
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Contraseña ingresada no es la misma a la contraseña guardada',
+                    // text: '¡Error al enviar!',
+                    showConfirmButton: false,
+                    timer: 2500,
+                    footer: 'Intente Denuevo'
+            })
             }
         }
     });
@@ -153,46 +157,52 @@ function igualPassword() {
 }
 
 function reset(){
-    $("#btnModal").on('click', function(){//Revisar el btnModal
+    $("#btncerrar").on('click', function(){
         limpiarCaja();
     });
 }
 
-function updatePassword2(){
+function updatePassword(){
     $("#formcontra").submit(function(e){
         e.preventDefault();
-
+console.log("texto");
         const passnew = document.querySelector("#passnew2");
-        const data = {
-            pass: passnew.value
+        var data = {
+            cli_clave: passnew.value
         };
         
-        updatepass(data);
+        updatePass(data);
     });
 }
 
 function updatePass(data){
     $.ajax({
-        url:"/configuracion/updatePassword2",
-        type:"POST",
-        data:data,
+        url: "/configuracion/updatePassword",
+        type: "POST",
+        data: data,
         success: function(e){
-            var {res} = JSON.parse(e);
+            console.log(e);
+            let { res } = JSON.parse(e);
 
             if(res){
-                swal({
-                    text: 'Contraseña cambiada',
-                    icon: 'success'
-                });
+
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Contraseña Cambiada!',
+                    // text: '¡Error al enviar!',
+                    showConfirmButton: false,
+                    timer: 2500,
+                    // footer: 'Intente Denuevo'
+            })
                 limpiarCaja();
-                $("#modalPass").modal("hide");
+                $("#formcontra").modal("hide");
             }
         }
     })
 }
 
 function limpiarCaja(){
-    // $("#pass").val("");
+    $("#pass").val("");
     $("#passnew1").val("");
     $("#passnew2").val("");
 }

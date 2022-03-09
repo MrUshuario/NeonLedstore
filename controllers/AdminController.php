@@ -75,27 +75,24 @@ class AdminController  {
         ]);
     }
 
-    //Verifica form Cambio Contrseña
-    public static function verificarPass(){
-        echo  json_encode([
-            'res' => Users::verificarKey2($_POST['passwordV'],$_POST['id'])
-        ]);
-    }
+    
 
     // Actualiza la contraseña del administrador
     public static function updatePassword(){
         $id = filter_var($_SESSION['id'], FILTER_VALIDATE_INT);
 
         if($_SERVER['REQUEST_METHOD'] == 'POST'){
-            $passwordHasheado = password_hash($_POST['pass'], PASSWORD_DEFAULT);
-            $post = array("pass"=>$passwordHasheado, "id"=>$id);
+            $passwordHasheado = password_hash($_POST['cli_clave'], PASSWORD_DEFAULT);
+            $post = array("cli_clave"=>$passwordHasheado, "id"=>$id);
             
             $user= Users::find($id);
             $user->sincronizar($post);
 
             $resultado = $user->actualizar();
 
-            echo json_encode(['res'=>$resultado]);
+            echo json_encode(['res'=>$resultado, 
+            'user'=>$user, 'cli_clave'=>$passwordHasheado]);
+
         }
         
     }
