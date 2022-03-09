@@ -398,10 +398,10 @@
 .nav-dashboard{
     width: 100%;
 }
-.mostrar-res{
+.mostrar-res{/*Fondo gris de tabla, form -Administrarphp*/
     width: 100%;
-    background-color: rgba(218, 218, 218, 0.217);
-    border-radius: 5px;
+    background-color: rgba(138, 138, 138, 0.418);
+    border-radius: 20px;
 }
 .contenedor-menuAdmin{
     width: 50%;
@@ -411,10 +411,10 @@ a .listaAdmin{
     height: 40px;
     font-size: 25px;
     list-style-type: none;
-    background-color: rgba(35, 13, 202, 0.449);
+    background-color: rgba(81, 62, 224, 0.658);
     margin-top: 10px;
     border-radius: 5px;
-    color: rgba(255, 255, 255, 0.258);
+    color: rgba(255, 255, 255, 0.829);
     padding: 2px 40px;
     
  }
@@ -425,7 +425,7 @@ a .listaAdmin{
     background-color: #a945c7;
 }
 .listaAdmin:hover{
-    color:#7474c6;
+    color:#ecd981;
  }
 .fondo-null{
     display: none;
@@ -435,7 +435,7 @@ a .listaAdmin{
         width: 80%;
         font-size: 15px;
         list-style-type: none;
-        background-color: rgba(35, 13, 202, 0.449);
+        background-color: rgba(73, 50, 245, 0.616);
         margin-top: 10px;
         border-radius: 5px; 
         padding: 10px 30px;
