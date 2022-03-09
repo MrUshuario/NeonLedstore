@@ -47,8 +47,7 @@ function data() {
             }
 
             
-
-            console.log(data);  
+\
             if(document.getElementById('cli_nombre')){
                 /* guia mostrar nombre  */
                 console.log("hola existe");

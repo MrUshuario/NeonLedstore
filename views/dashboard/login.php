@@ -18,7 +18,7 @@
 </form>
 <div class="enlaces">
     <a href="#"><span>¿Olvidastes tu contraseña?.</span> Haga click</a>
-    <a href="#"><span>¿No tienes usuario?.</span> Crea una cuenta</a>
+    <a href="/usuarioRegistro"><span>¿No tienes usuario?.</span> Crea una cuenta</a>
 </div>
 
 <script src="build/js/ajax/ajaxlogin.js"></script>

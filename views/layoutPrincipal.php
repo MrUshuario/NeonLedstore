@@ -155,7 +155,7 @@
                                 </a>
 
                             </li>
-                            <li class="listaContenido px-2 border-2 border-light border-end " id='Iniciar_S' style=" display: none;">
+                            <li class="listaContenido px-2 border-2 border-light border-end " id='Iniciar_S' style="display: none;">
 
                                 <a class="enlace nav-link px-0 py-0" aria-current="page" href="/login">
 
@@ -166,7 +166,7 @@
                                 </a>
 
                             </li>
-                            <li class="listaContenido px-2 border-2 border-light border-end " id='Administrar' style=" display: none;">
+                            <li class="listaContenido px-2 border-2 border-light border-end " id='Administrar' style="display: none;">
 
                                 <a class="enlace nav-link px-0 py-0" aria-current="page" href="/administrar">
 
@@ -176,7 +176,7 @@
                                 </a>
 
                             </li>
-                            <li class="listaContenido px-2 border-2 border-light" id='Cerrar_S' style=" display: none;">
+                            <li class="listaContenido px-2 border-2 border-light" id='Cerrar_S' style="display: none;">
 
                                 <a class="enlace nav-link px-0 py-0" aria-current="page" href="/cerrar">
 
