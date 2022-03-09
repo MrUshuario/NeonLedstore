@@ -1,6 +1,6 @@
 const btnSave = document.querySelector("#save");
 $(document).ready(function() {
-    $("#contra").val("");
+    $("#pass").val("");
     // boton guardar
     if(btnSave!=null){
         btnSave.disabled =true;
@@ -46,6 +46,8 @@ function data() {
                 }
             }
 
+            
+
             console.log(data);  
             if(document.getElementById('cli_nombre')){
                 /* guia mostrar nombre  */
@@ -56,72 +58,54 @@ function data() {
                 $("#cli_telefono").val(data.cli_telefono);
                 console.log(data.cli_nombre);
                 
-                console.log(data.cli_apellido);
-            
 
                 } 
-            else {
-                
-               }
+
         }   
+        
     });
 }
 
-//contraseña cambiar-verifcar
-
-
-// $(".formcontra").hide(); 
-
-// function mostrarform(){
-//     let text = "";
-    
-//     if($("#btncontra").text() == "Cambiar Contraseña"){
-//         $(".formcontra").show();
-//         text = "Guardar contraseña";
-     
-//     } 
-//     else{
-//         $(".formcontra").hide();
-//         text = "Cambiar Contraseña";
-//     }
-
-//     $("#btncontra").html(text);
-
-// }
 
 function verificarKey(){
     // const data = $("#pass");
-    $("#contra").on('change', function(e){
-        // console.log(e.target.value);
+    $("#pass").on('change', function(e){
         let passVerificar = e.target.value;
         console.log("verificado");
         const data = {
-            passwordV: passVerificar
+            passwordV: passVerificar,
+            id: "default"
         }
-
-        verificarPassword(data);
+        console.log(data);
+        verificarPass(data);
     });
 }
 
-function verificarPassword(data){
+function verificarPass(data){
     $.ajax({
         url:"/configuracion/verificar",
         type:"POST",
         data:data,
+
         success: function(e){
+            console.log(e);
             const { res } = JSON.parse(e);
             const respcontra = document.querySelector("#respcontra");
             
-            if(rol){
+            if(res){
                 respcontra.classList.remove('d-none');
                 respcontra.classList.add('d-block')
             }else {
                 respcontra.classList.remove('d-block');
                 respcontra.classList.add('d-none')
-                swal({
-                    title: "Contraseña ingresada, no es la misma que la contraseña guardada",
-                    icon: "error" 
-                });
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Contraseña ingresada no es la misma a la contraseña guardada',
+                    // text: '¡Error al enviar!',
+                    showConfirmButton: false,
+                    timer: 2500,
+                    footer: 'Intente Denuevo'
+            })
             }
         }
     });
@@ -129,9 +113,9 @@ function verificarPassword(data){
 
 
 function igualPassword() {
-    $("#contranuevo2").on('change', function(){
-        const pass1 = document.querySelector("#contranuevo1");
-        const pass2 = document.querySelector("#contranuevo2");
+    $("#passnew2").on('change', function(){
+        const pass1 = document.querySelector("#passnew1");
+        const pass2 = document.querySelector("#passnew2");
 
         // crear un nuevo elemento
         const contenedorPassword = document.querySelector("#mensaje");
@@ -175,19 +159,18 @@ function igualPassword() {
 }
 
 function reset(){
-    $("#btnModal").on('click', function(){
+    $("#btncerrar").on('click', function(){
         limpiarCaja();
     });
 }
 
 function updatePassword(){
-    $("#formpassword").submit(function(e){
+    $("#formcontra").submit(function(e){
         e.preventDefault();
-
-        const passnuevo = document.querySelector("#contranuevo2");
-
-        const data = {
-            pass: passnuevo.value
+console.log("texto");
+        const passnew = document.querySelector("#passnew2");
+        var data = {
+            cli_clave: passnew.value
         };
         
         updatePass(data);
@@ -196,26 +179,39 @@ function updatePassword(){
 
 function updatePass(data){
     $.ajax({
-        url:"/configuracion/updatePassword",
-        type:"POST",
-        data:data,
+        url: "/configuracion/updatePassword",
+        type: "POST",
+        data: data,
         success: function(e){
-            const {res} = JSON.parse(e);
+            console.log(e);
+            let { res } = JSON.parse(e);
 
             if(res){
-                swal({
-                    text: 'Contraseña correctamente cambiado',
-                    icon: 'success'
-                });
+
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Contraseña Cambiada!',
+                    // text: '¡Error al enviar!',
+                    showConfirmButton: false,
+                    timer: 2500,
+                    // footer: 'Intente Denuevo'
+            })
                 limpiarCaja();
-                $("#modalPassword").modal("hide");
+                $("#formcontra").modal("hide");
             }
         }
     })
 }
 
 function limpiarCaja(){
+<<<<<<< HEAD
+    $("#pass").val("");
+    $("#passnew1").val("");
+    $("#passnew2").val("");
+}
+=======
     // $("#contra").val("");
     $("#contranuevo1").val("");
     $("#contranuevo2").val("");
 }
+>>>>>>> 56ba8a79185ac8d2f4ee9e22204034c123a8823f
