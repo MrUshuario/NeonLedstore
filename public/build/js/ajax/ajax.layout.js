@@ -204,14 +204,7 @@ function updatePass(data){
 }
 
 function limpiarCaja(){
-<<<<<<< HEAD
     $("#pass").val("");
     $("#passnew1").val("");
     $("#passnew2").val("");
 }
-=======
-    // $("#contra").val("");
-    $("#contranuevo1").val("");
-    $("#contranuevo2").val("");
-}
->>>>>>> 56ba8a79185ac8d2f4ee9e22204034c123a8823f
