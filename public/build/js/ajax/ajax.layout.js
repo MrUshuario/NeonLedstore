@@ -45,8 +45,6 @@ function data() {
                     document.getElementById('Cerrar_S').style.display = '';
                 }
             }
-
-            console.log(data);  
             if(document.getElementById('cli_nombre')){
                 /* guia mostrar nombre  */
                 console.log("hola existe");
