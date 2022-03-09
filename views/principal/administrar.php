@@ -8,7 +8,7 @@
                     <div class="recipient">
                         <div class="contenedor-menuAdmin">
                             <div class="sobre-admin">
-                                <h3><i class="fa-solid fa-address-card"></i> Sobre el Cliente</h3>
+                                <h3><i class="fa-solid fa-address-card"></i> Sobre el Cliente: </h3>
                             </div>
                             <ul class="menuAdmin">
                                 <!-- <a href="#"><li class="listaAdmin"><i class="icon_izq_admin fa-solid fa-user-gear"></i>  Sobre el Cliente</li></a> -->

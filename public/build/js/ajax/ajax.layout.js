@@ -101,10 +101,10 @@ function verificarPass(data){
                 Swal.fire({
                     icon: 'error',
                     title: 'Contraseña ingresada no es la misma a la contraseña guardada',
-                    // text: '¡Error al enviar!',
+                    text: '¡Intente Denuevo!',
                     showConfirmButton: false,
-                    timer: 2500,
-                    footer: 'Intente Denuevo'
+                    timer: 2700,
+                    // footer: 'Intente Denuevo'
             })
             }
         }
