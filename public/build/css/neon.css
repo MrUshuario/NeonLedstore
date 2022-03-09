@@ -400,8 +400,7 @@
 }
 .mostrar-res{/*Fondo gris de tabla, form -Administrarphp*/
     width: 100%;
-    background-color: rgba(138, 138, 138, 0.418);
-    border-radius: 20px;
+    background-color:black;
 }
 .contenedor-menuAdmin{
     width: 50%;
