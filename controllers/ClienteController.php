@@ -61,9 +61,11 @@ class ClienteController {
             echo $json;
         }
     }
-    public static function register(Router $router){
+    public static function createRegistro(Router $router){
         if($_SERVER["REQUEST_METHOD"] == "POST"){
-            $_POST['clave'] = password_hash($_POST['clave'], PASSWORD_DEFAULT);
+            $_POST['cli_clave'] = password_hash($_POST['cli_clave'], PASSWORD_DEFAULT);
+            $_POST['cli_rol'] = 2; //siempre sera cliente
+            $_POST['cli_estado'] = 0; //siempre empezara como usuario inactivo
             $cliente = new Cliente($_POST);
             $verificarCorreo = $cliente->verificarCorreo();
             if ($verificarCorreo->num_rows == 0) {
@@ -71,9 +73,10 @@ class ClienteController {
                 
                 if($resultado) {
                     $listado = Cliente::listar();
+                    //agregar metodo para enviar correo de verificacion
                     $json = json_encode([
                         "STATUS"=>1,
-                        "mensaje"=>"Registro Agregado",
+                        "mensaje"=>"Estas Registado",
                         "listas"=>$listado,
                         "c"=>$cliente
                     ]);
@@ -97,6 +100,7 @@ class ClienteController {
             echo $json;
         }
     }
+
     
     public static function getCliente(Router $router){
         if($_SERVER['REQUEST_METHOD'] == 'POST'){ 
