@@ -141,7 +141,7 @@
     </div>
     <script src="build/js/plugins/bootstrap/bootstrap.min.js"></script>
     <script src="build/js/script.js"></script>
-     <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script> 
+     <!-- <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>  -->
      <script src="build/js/plugins/bootstrap-select/bootstrap-select.js"></script> 
      <script src="build/js/plugins/jquery-datatable/jquery.dataTables.js"></script> 
      <script src="build/js/plugins/jquery-datatable/skin/bootstrap/dataTables.bootstrap.js"></script>

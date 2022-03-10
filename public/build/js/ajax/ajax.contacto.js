@@ -34,14 +34,9 @@ function enviarEmail(data){
             
             }
             console.log(e);
-            console.log(data.nombre);
 
         }
     });
-
-    //formContact1.reset();    esta linea existe para limpiar el form de contacto.php, comentada
-    //porque trae problemas con los form de los landingPage.
-    //Posible solucion: leer #consulta y usar switch
 
 }
 
@@ -53,10 +48,7 @@ function enviarEmail(data){
                     data:data,
                     success: function(e){
                         let json = JSON.parse(e);
-            
-                        console.log(e);
-                        console.log("Segundo valor enviado");
-            
+                        console.log("Segundo correo enviado");
                     }
                 });
                 
@@ -72,9 +64,7 @@ function enviarEmail(data){
                     data:data,
                     success: function(e){
                         let json = JSON.parse(e);
-            
-                        console.log(e);
-                        console.log("Tercer valor enviado");
+                        console.log("Tercer correo enviado");
             
                     }
                 });
@@ -101,9 +91,10 @@ function saveCorreo(){
             vis_apellidos: $("#apellidos").val().trim(),
             vis_email: $("#correo").val().trim(),
             vis_telefono: $("#telefono").val().trim(),
+            vis_pregunta: $("#pregunta").val().trim(),
         };
         
-
+        createContactoVis(data2) // esto primero que los correos
         enviarEmail(data);
         data.contador=2;
         console.log(data.contador)
@@ -111,13 +102,11 @@ function saveCorreo(){
         data.contador=3;
         console.log(data.contador)
         enviarEmail3(data);
-
-        createContactoVis(data2)
     });
 }
 
 
-//--------------
+//RENZO
 
 
 function createContactoVis(data) {
@@ -126,14 +115,25 @@ function createContactoVis(data) {
       data: data,
       type: "POST",
       success: function(e) {
-
-        console.log(e);
         let json = JSON.parse(e);
-
         console.log("Visitante creado")
-        console.log(json)
-  
+        //CREAR FUNCION PARA QUE ENVIE EMAIL A LA EMPRESA
+        //ventas@neon-ledstore.com
+        //info.neonledstore@gmail.com
+        enviarEmpresa(data);
       },
     });
+  }
 
+function enviarEmpresa(data){
+    $.ajax ({
+      url: "",
+      data: data,
+      type: "POST",
+      success: function(e) {
+        let json = JSON.parse(e);
+        console.log("Correos enviados a las empresas")
+        
+      },
+    });
   }

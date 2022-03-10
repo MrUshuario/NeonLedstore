@@ -6,7 +6,7 @@ $(document).ready(function () {
   deleteVisitante();
   //borrar
   //createContactoVis();
-  saveContactoVis()
+  //saveContactoVis()
   
 
 });
@@ -22,7 +22,8 @@ function tableAll(){
       {data:"vis_nombre"},
       {data:"vis_apellidos"},
       {data:"vis_email"},
-      {data:"vis_telefono"},  
+      {data:"vis_telefono"},
+      {data:"vis_pregunta"},   
       {data: null,
         render: function(data,type,row){
           return `<button class="btn-inline btn-warning" data-idvisitante="${data.id}" id="edit" data-bs-toggle="modal" data-bs-target="#modalVisitante" >Edit</button>
@@ -44,6 +45,7 @@ function saveVisitante(){
     let vis_apellidos = $("#vis_apellidos").val();
     let vis_email = $("#vis_email").val();
     let vis_telefono = $("#vis_telefono").val();
+    let vis_pregunta = $("#vis_pregunta").val();
     
    
     const data = {
@@ -52,6 +54,7 @@ function saveVisitante(){
       vis_apellidos: vis_apellidos,
       vis_email: vis_email,
       vis_telefono: vis_telefono,
+      vis_pregunta: vis_pregunta, // puede ir vacio
     };
     console.log(id);
     if (id=="") {
@@ -125,6 +128,7 @@ function clean() {
   $("#vis_apellidos").val("");
   $("#vis_email").val("")
   $("#vis_telefono").val("")
+  $("#vis_pregunta").val("");
 
 }
 
@@ -152,8 +156,9 @@ function obtenerData() {
         $("#id").val(data.id);
         $("#vis_nombre").val(data.vis_nombre);
         $("#vis_apellidos").val(data.vis_apellidos);
-        $("#vis_email").val(data.vis_email)
-        $("#vis_telefono").val(data.vis_telefono)
+        $("#vis_email").val(data.vis_email);
+        $("#vis_telefono").val(data.vis_telefono);
+        $("#vis_pregunta").val(data.vis_pregunta)
       },
     });
   });
@@ -187,31 +192,32 @@ function deleteVisitante() {
   });
 }
 
+
+/*creo que esto no sirve por si error verificar ahi*/
 /* Registro de visitantes en Contacto */
 
+// function saveContactoVis(){
+//   $("#formContact1").submit(function(e){
+//     e.preventDefault();
 
-
-function saveContactoVis(){
-  $("#formContact1").submit(function(e){
-    e.preventDefault();
-
-    let id = $("#id").val();
-    let vis_nombre = $("#vis_nombre").val();
-    let vis_apellidos = $("#vis_apellidos").val();
-    let vis_email = $("#vis_email").val();
-    let vis_telefono = $("#vis_telefono").val();
+//     let id = $("#id").val();
+//     let vis_nombre = $("#vis_nombre").val();
+//     let vis_apellidos = $("#vis_apellidos").val();
+//     let vis_email = $("#vis_email").val();
+//     let vis_telefono = $("#vis_telefono").val();
+    
     
    
-    const data = {
+//     const data = {
    
-      id: id,
-      vis_nombre: vis_nombre,
-      vis_apellidos: vis_apellidos,
-      vis_email: vis_email,
-      vis_telefono: vis_telefono,
-    };
-    console.log(id);
-      //createContactoVis(data)
-  });
-}
+//       id: id,
+//       vis_nombre: vis_nombre,
+//       vis_apellidos: vis_apellidos,
+//       vis_email: vis_email,
+//       vis_telefono: vis_telefono,
+//     };
+//     console.log(id);
+//       //createContactoVis(data)
+//   });
+// }
 

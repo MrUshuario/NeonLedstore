@@ -17,6 +17,7 @@
                     <th>Apellidos</th>
                     <th>Email</th>
                     <th>Telefono</th>
+                    <th>Pregunta</th>
                     <th>Editar / Borrar</th>
                 </tr>
                 </thead>
@@ -58,6 +59,11 @@
                     <div class="mb-3">
                         <label for="nombre">Telefono Visitante</label>
                         <input type="number" class="form-control" id="vis_telefono">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="nombre">Pregunta Visitante</label>
+                        <input type="text" class="form-control" id="vis_pregunta">
                     </div>
 
                     <div class="modal-footer">
