@@ -7,16 +7,19 @@ use Model\ActiveRecord;
 class Producto  extends ActiveRecord
 {
     protected static $tabla = 'tab_producto';
-    protected static $columnaDB = ['id', 'cat_id', 'pro_nombre', 'pro_descripcion', 'pro_precio', 'pro_imagen', 'pro_tamano', 'pro_activo'];
+    protected static $columnaDB = ['id', 'cat_id', 'pro_nombre', 'pro_descripcion', 'pro_precio', 'pro_tamano', 'pro_activo', 'pro_imagen1', 'pro_imagen2', 'pro_imagen3'];
 
     public $id; 
     public $cat_id;
     public $pro_nombre;
     public $pro_descripcion;
     public $pro_precio;
-    public $pro_imagen;
+    // public $pro_imagen;
     public $pro_tamano;
     public $pro_activo;
+    public $pro_imagen1;
+    public $pro_imagen2;
+    public $pro_imagen3;
 
     public function __construct($args = [])
     {
@@ -25,9 +28,11 @@ class Producto  extends ActiveRecord
         $this->pro_nombre = $args['pro_nombre'] ?? null;
         $this->pro_descripcion = $args['pro_descripcion'] ?? null;
         $this->pro_precio = $args['pro_precio'] ?? null;
-        $this->pro_imagen = $args['pro_imagen'] ?? null;
         $this->pro_tamano = $args['pro_tamano'] ?? null;
         $this->pro_activo = $args['pro_activo'] ?? null;
+        $this->pro_imagen1 = $args['pro_imagen1'] ?? null;
+        $this->pro_imagen2 = $args['pro_imagen2'] ?? null;
+        $this->pro_imagen3 = $args['pro_imagen3'] ?? null;
         //extra ATENTOS QUE PUEDE GENERAR ERRORES
         //$this->NombreCategoria = $args['NombreCategoria'] ?? null;
     }
@@ -43,7 +48,9 @@ class Producto  extends ActiveRecord
 
         //Asignar al atributo de imagen el nombre de la imagen
         if ($img) {
-            $this->pro_imagen = $img;
+            $this->pro_imagen1 = $img;
+            $this->pro_imagen2 = $img;
+            $this->pro_imagen3 = $img;
         }
     }
 
@@ -59,7 +66,7 @@ class Producto  extends ActiveRecord
     public static function listarCatXProd()
     {
         $query =
-        "SELECT p.id, p.pro_nombre, p.pro_descripcion, p.pro_precio, p.pro_imagen, p.pro_tamano, p.pro_activo, c.cat_nombre AS cat_id 
+        "SELECT p.id, p.pro_nombre, p.pro_descripcion, p.pro_precio, p.pro_tamano, p.pro_activo, p.pro_imagen1, p.pro_imagen2, p.pro_imagen3, c.cat_nombre AS cat_id 
         FROM tab_producto AS p INNER JOIN tab_categoria AS c 
         ON p.cat_id = c.id";
 
@@ -85,7 +92,7 @@ class Producto  extends ActiveRecord
     //  que no sirve
     public function searchNombre()
     {
-        $query="select p.id as id, pro_nombre, pro_descripcion, pro_precio, pro_imagen, pro_tamano, pro_activo, cat_nombre as pro_categoria from ".static::$tabla." p inner join tab_categorias c ON c.id = p.pro_categoria where pro_nombre LIKE '%".$this->pro_nombre."%'";
+        $query="select p.id as id, pro_nombre, pro_descripcion, pro_precio, pro_imagen1, pro_imagen2, pro_imagen3, pro_tamano, pro_activo, cat_nombre as pro_categoria from ".static::$tabla." p inner join tab_categorias c ON c.id = p.pro_categoria where pro_nombre LIKE '%".$this->pro_nombre."%'";
         $resultado = static::consultarSQL($query);
         return $resultado;
     }

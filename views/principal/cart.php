@@ -6,7 +6,7 @@
 		<h1 class= "neones" style="font-family:Roboto Condensed"><i class="fa-solid fa-cart-shopping"></i> Lista de Objetos por Comprar</h1><br>
 	
 		<div class="table-responsive" style="width: 90%">
-		<table class="table table-striped table-hover table-light table-fixed w-100">
+		<table class="table table-striped table-hover table-light table-fixed w-100" id="tablecart">
 		
 			<tr class="text-center">
 				<th>ID PRODUCTO</th><th>NOMBRE</th><th>PRECIO</th><th><i class="fa-solid fa-circle-minus"></i></th>
@@ -25,4 +25,4 @@
 
 </div>
 </section>
-<script type="text/javascript"></script>
+<script src="build/js/ajax/ajax.cart.js"></script>

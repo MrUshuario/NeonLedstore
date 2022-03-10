@@ -16,9 +16,11 @@
                     <th>Categoría</th>
                     <th>Nombre y Descripcion</th>
                     <th>Precio (S/.) </th>
-                    <th>Imagen </th>
                     <th>Tamaño </th>
                     <th>Estado </th>
+                    <th>Imagen1 </th>
+                    <th>Imagen2 </th>
+                    <th>Imagen3 </th>
                     <th>Editar/Eliminar </th>
                 </tr>
             </thead>
@@ -40,38 +42,48 @@
                 <form id="formProducto" enctype="multipart/form-data" class="color-dark">
                     <input type="hidden" id="id">
                     <div class="mb-3">
-                        <label for="pro_categoria">Categoría</label>
+                        <label for="pro_categoria">Categoría:</label>
                         <select id="pro_categoria" class="form-control">
                             <option value="">--Seleccione--</option>
                         </select>
                     </div>
                     <div class="mb-3">
-                        <label for="">Nombre de Producto</label>
+                        <label for="">Nombre de Producto:</label>
                         <input type="text" id="pro_nombre" class="form-control">
                     </div>
                     <div class="mb-3">
-                        <label for="">descripcion</label>
+                        <label for="">Descripcion:</label>
                         <textarea id="pro_descripcion" class="form-control" cols="30" rows="10"></textarea>
                     </div>
                     <div class="mb-3">
-                        <label for="">Precio</label>
+                        <label for="">Precio:</label>
                         <input type="number" id="pro_precio" class="form-control" step="0.05">
                     </div>
                     
                     <div class="mb-3">
-                        <label for="">Imagen</label>
-                        <input type="file" id="pro_imagen" class="form-control">
+                        <label for="">Imagen 1:</label>
+                        <input type="file" id="pro_imagen1" class="form-control">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="">Imagen 2:</label>
+                        <input type="file" id="pro_imagen2" class="form-control">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="">Imagen 3:</label>
+                        <input type="file" id="pro_imagen3" class="form-control">
                     </div>
                     
                     <img id="pro_img">
                     <div class="mb-3">
-                        <label for="">Tamaño de producto (cm)</label>
+                        <label for="">Tamaño de producto (cm):</label>
                         <div class="tmn-input">
                             <input type="text"  id="t-1"> X <input type="text" id="t-2">
                         </div>
                     </div>
                     <div class="mb-3">
-                        <label for="pro_estado">Estado</label>
+                        <label for="pro_estado">Estado:</label>
                         <select id="pro_activo" class="form-control">
                             <option value="">--SELECCIONE--</option>
                             <option value="1">ACTIVO</option>

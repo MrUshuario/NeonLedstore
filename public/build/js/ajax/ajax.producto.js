@@ -27,7 +27,6 @@ function tableAll() {
           return `${data.pro_nombre} : ${data.pro_descripcion}`;
         },},
       { data: "pro_precio"},
-      { data: "pro_imagen"}, //aqui la imagen
       { data: "pro_tamano"},
       {
         data: null,
@@ -37,6 +36,9 @@ function tableAll() {
           }" id="btnEstado">${data.pro_activo}</button>`;
         },
       },
+      { data: "pro_imagen1"},
+      { data: "pro_imagen2"},
+      { data: "pro_imagen3"}, //aqui la imagen
       {
         data: null,
         render: function (data, type, row) {
@@ -77,7 +79,9 @@ function obtenerData() {
         $("#t-2").val(tmn[1]);
 
         // Mostrar imagen
-        img.src = `/imagenes/${data.pro_imagen}`;
+        img.src = `/imagenes/${data.pro_imagen1}`;
+        img.src = `/imagenes/${data.pro_imagen2}`;
+        img.src = `/imagenes/${data.pro_imagen3}`;
         img.classList.add("w-100", "imgCP");
 
         $("#title").text("Actualizar Productos");
@@ -177,10 +181,12 @@ function saveProduct() {
     const nombre = $("#pro_nombre").val().trim();
     const descripcion = $("#pro_descripcion").val().trim();
     const precio = $("#pro_precio").val().trim();
-    const imagen = $("#pro_imagen")[0].files[0];
+    const imagen1 = $("#pro_imagen1")[0].files[0];
+    const imagen2 = $("#pro_imagen2")[0].files[0];
+    const imagen3 = $("#pro_imagen3")[0].files[0];
     const tm1 = document.querySelector("#t-1").value;
     const tm2 = document.querySelector("#t-2").value;
-    const tamanio = tm1 + "x" + tm2;
+    const tamano = tm1 + "x" + tm2;
     const estado = $("#pro_activo").val();
 
     const formData = new FormData();
@@ -188,8 +194,10 @@ function saveProduct() {
     formData.append("pro_nombre", nombre);
     formData.append("pro_descripcion", descripcion);
     formData.append("pro_precio", precio);
-    formData.append("pro_imagen", imagen);
-    formData.append("pro_tamano", tamanio);
+    formData.append("pro_imagen1", imagen1);
+    formData.append("pro_imagen2", imagen2);
+    formData.append("pro_imagen3", imagen3);
+    formData.append("pro_tamano", tamano);
     formData.append("pro_activo", estado);
 
     if (id == "") {

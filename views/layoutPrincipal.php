@@ -42,6 +42,14 @@
 
     <script src="build/js/jquery.min.js"></script>
 
+    <!-- Data Tables -->
+
+    <!-- <link rel="stylesheet" href="build/css/plugins/bootstrap/dataTables.bootstrap.min.css">
+    <script src="build/js/plugins/DataTable/jquery.dataTables.min.js"></script>
+    <script src="build/js/plugins/DataTable/dataTables.bootstrap.min.js"></script>
+    <script src="build/js/plugins/jquery-datatable/jquery.dataTables.js"></script> 
+    <script src="build/js/plugins/jquery-datatable/skin/bootstrap/dataTables.bootstrap.js"></script> -->
+
     <!-- CSS -->
 
     <link rel="stylesheet" href="build/css/principal/navs.css">
