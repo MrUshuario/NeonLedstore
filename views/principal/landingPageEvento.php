@@ -34,7 +34,7 @@
     <!--CENTRADO Y BLANCO-->
     <div class="container-fluid text-white text-center">
         <!--BOTON DEL MODAL-->
-        <button type="button" id="model-register" class="neonbottonlanding btn btn-primary my-0 my-sm-3 border-0" data-bs-toggle="modal" data-bs-target="#modalAsesoria">
+        <button type="button" id="model-register" class="neonbottonlanding btn btn-primary my-0 my-sm-3 border-0" data-bs-toggle="modal" data-bs-target="#modalAsesoria" onclick="AsesoriaEv()">
             Obtén una asesoría personalizada GRATIS!
         </button>
 
@@ -46,7 +46,7 @@
                 <main class="main rounded-25 row pb-5 d-flex justify-content-center">
                 
                     <div class="mainContent col-8 my-5 pb-3">
-                        <h1 class="my-3 fs-2 neones p-50">¿Quieres tener un Evento visualmente atractivo?</h1>
+                        <h3 class="my-3 fs-2 neones p-50">¿Quieres tener un Evento visualmente atractivo?</h3>
                         <div class="row d-flex justify-content-center">
 
                         <form class="formContact landingPageForm col-12 col-sm-10" method="POST">

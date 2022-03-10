@@ -35,7 +35,7 @@
     <!--CENTRADO Y BLANCO-->
     <div class="container-fluid text-white text-center">
         <!--BOTON DEL MODAL-->
-        <button type="button" id="model-register" class="neonbottonlanding btn btn-primary my-0 my-sm-3 border-0" data-bs-toggle="modal" data-bs-target="#modalAsesoria">
+        <button type="button" id="model-register" class="neonbottonlanding btn btn-primary my-0 my-sm-3 border-0" data-bs-toggle="modal" data-bs-target="#modalAsesoria" onclick="AsesoriaHog()">
             Obtén una asesoría personalizada GRATIS!
         </button>
 
@@ -46,8 +46,8 @@
                 <div class="modal-content rounded-25" id="padreModalLanding">
                 <main class="main rounded-25 row pb-5 d-flex justify-content-center">
                 
-                    <div class="mainContent col-8 my-5 pb-3 neontextlanding">
-                    <h1 class="my-3 fs-2 neones p-50">¿Quieres tener un Hogar visualmente atractivo?</h1>
+                    <div class="mainContent col-8 my-5 pb-3">
+                    <h3 class="my-3 fs-2 neones p-50">¿Quieres tener un Hogar visualmente atractivo?</h3>
                     <div class="row d-flex justify-content-center">
                             <!-- FORM INHABILITADO PARA HACER PRUEBAS CON EL BOTON SUBMIT, POSTERIORMENTE REMOVER ONSUBMIT-->
 
