@@ -1,9 +1,8 @@
     
     //Evento Click carrucel Evento
-
     var imgCar="img1";
 
-    function cambiarEvento(){
+    function AsesoriaEv(){
         var imagen=document.getElementById("imgCarrusEvento1");
         var imagen2=document.getElementById("imgCarrusEvento2");
         var imagen3=document.getElementById("imgCarrusEvento3");
@@ -36,14 +35,16 @@
             imgCar="img1";
         } 
     }
-    //Evento Click carrucel Hogar
-
+    
+    
+    //Evento Click carrucel Hogar 
     var clickHogar="img1";
-
-    function cambiarHogar(){
+    
+    function AsesoriaHog(){
         var imagen=document.getElementById("imgCarrusHogar1");
         var imagen2=document.getElementById("imgCarrusHogar2");
         var imagen3=document.getElementById("imgCarrusHogar3");
+        
 
         if (clickHogar=="img1") {
             imagen.src="/build/img/landingPage/lp-hogar/h1.jpg";
@@ -73,15 +74,12 @@
             clickHogar="img1";
         } 
     }
-  
    
 
     //Evento Click carrucel Negocio
-
     var clickNegocio="img1";
 
-    function cambiarNegocio(){
-        
+    function AsesoriaNeg(){      
         var imagen=document.getElementById("imgCarrusNegocio1");
         var imagen2=document.getElementById("imgCarrusNegocio2");
         var imagen3=document.getElementById("imgCarrusNegocio3");
@@ -112,7 +110,7 @@
 
             clickNegocio="img1";
         } 
-    }
+    } 
     
     // Swift de los formularios 
     // caputra de data Evento
@@ -167,21 +165,26 @@
         }*/
         
     }
+
     
     function Evento() {
-        cambiarEvento();
+        AsesoriaEv() 
+        // cambiarEvento();
         capturaDataEvento();
     }
 
     function Hogar() {
-        cambiarHogar();
+        AsesoriaHog()
+        // cambiarHogar();
         capturaDataHogar();
     }
 
     function Negocio() {
-        cambiarNegocio();
+        AsesoriaNeg()
+        // cambiarNegocio();
         capturaDataNegocio();
     }
+
 
 
     

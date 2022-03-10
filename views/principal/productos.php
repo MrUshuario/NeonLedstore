@@ -131,7 +131,7 @@
                             </select>
                             <div class="pt-3 pb-3">
                                 <input type="hidden" id="id" value="formNegocio">
-                                <button type="submit" onclick="window.location.href='/ProductoDetallado'" class="neonbottonlanding btn btn-primary my-sm-3 border-0" style="width: 90%; height:30% font-size: 18px;" id="productodet">Guardar</button>
+                                <button type="submit" onclick="window.location.href='/ProductoDetallado'" class="neonbottonlanding btn btn-primary my-sm-3 border-0" style="width: 40%; height:30% font-size: 20px;" id="productodet">Ver más</button>
                                 
                             </div>
                        </form>
