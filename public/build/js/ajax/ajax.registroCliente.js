@@ -60,7 +60,7 @@ $(document).ready(function () {
 }
 function register(data) {
   $.ajax ({
-    url: "cliente/create",
+    url: "/cliente/createRegistro",
     data: data,
     type: "POST",
     success: function(e) {
@@ -70,8 +70,10 @@ function register(data) {
         case 1:
           swal({
             title: json.mensaje,
-            icon: "success",
-          });
+            icon: "success"
+          }).then(()=>{
+            window.location.href ="/"; 
+          });     
           break;
         case 2:
           swal({
@@ -83,15 +85,16 @@ function register(data) {
     },
   });
 }
-const formulario = document.getElementById('formRegistro');
-const inputs = document.querySelectorAll('#formRegistro input')
+const formulario = document.getElementById('formRegistro'); //guarda el formulario
+const inputs = document.querySelectorAll('#formRegistro input')//guarda cada uno de los inputs del formulario en un array
 const expresiones = {
-	usuario: /^[a-zA-Z0-9\_\-]{4,16}$/, // Letras, numeros, guion y guion_bajo
+	//usuario: /^[a-zA-Z0-9\_\-]{4,16}$/, Letras, numeros, guion y guion_bajo
 	nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
 	password: /^.{4,12}$/, // 4 a 12 digitos.
 	correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
 	telefono: /^\d{7,14}$/ // 7 a 14 numeros.
 }
+//constantes de validacion
 const campos = {
   nombre: false,
   telefono: false,
@@ -150,19 +153,19 @@ const validarform = (e) => {
 }
 
 inputs.forEach((input) => {
-  input.addEventListener('keyup', validarform);
-  input.addEventListener('blur', validarform)
+  input.addEventListener('keyup', validarform);//cada que se levanta una tecla se ejecuta validarform
+  input.addEventListener('blur', validarform)//
 });
 
 formulario.addEventListener('submit', (e) =>{
   e.preventDefault();
-  if(campos.apellidos && campos.clave && campos.email && campos.nombre && campos.telefono){
+  if(campos.apellidos && campos.clave && campos.email && campos.nombre && campos.telefono){//si todos los campos estan en verde, se ejecuta la funcion savecliente
     campos.reset();
     clean();
   }
   else{
     swal({
-      title: 'Verifique los datos ingresados',
+      title: 'Verifique los datos ingresados',//si hay como minimo un campo rojo (false) no se ejecute
       icon: "error",
     });
   }

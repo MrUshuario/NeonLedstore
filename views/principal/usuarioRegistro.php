@@ -1,7 +1,4 @@
 <div class="contacto bg-black container-fluid">
-    <div class="row">
-        <img class="fondoContacto position-absolute bg-black border-black">
-    </div>
     <div class="container">
         <section class="row pb-5">
             <form id="formRegistro" enctype="multipart/form-data">
@@ -10,8 +7,6 @@
                         <div class="formulario ol-lg-5 p-5 border neontabla cyan">
                             <h2 class="neones purpura" style="padding-bottom: 10px;">Registrese</h2>   
                             <div class="row"> 
-                            <input type="hidden" id="rol" value="2">
-                            <input type="hidden" id="estado" value="0">
                                 <div class="form-group col-md-6">
                                 <label class="control-label" for="nombre">Nombres</label>
                                 <input class="form-control p-2 input-contact bg-transparent rounded w-100 me-1 me-sm-4 my-3 text-white" minlenght="4" type="text" name="nombre" id="nombre" placeholder="Nombres" >
