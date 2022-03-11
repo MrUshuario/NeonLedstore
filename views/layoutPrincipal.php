@@ -24,11 +24,15 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
 
+    
+
     <!-- FontAwesome -->
 
     <!--<link rel="stylesheet" href="build/css/fontawesome/css/all.min.css">-->
     <script src="https://kit.fontawesome.com/f788fcfb82.js" crossorigin="anonymous"></script>
-    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
     <!-- Bootstrap 5 CSS -->
 
@@ -165,15 +169,37 @@
 
                             </li>
                             <li class="listaContenido px-2 border-2 border-light border-end " id='Iniciar_S' style="display: none;">
-
-                                <a class="enlace nav-link px-0 py-0" aria-current="page" href="/login">
+                            <div class="dropdown show">
+                                <a class="enlace nav-link px-0 py-0 dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">
 
                                     <div class="botones text-white px-3 rounded-medium">INCIAR SESION
                                     <i class="fas fa-sign-in-alt"></i>
                                     </div>
 
                                 </a>
-
+                                <div class="dropdown-menu bg-black container rounded-25 row pb-5 justify-content-center border border-secondary" aria-labelledby="dropdownMenuLink" style="width: 250px !important;">
+                                <div style="display: flex; align-items: center; justify-content: center; " >
+                                    <form id="formLogin" method="POST" class="formulario">
+                                        <div class="campo" style="padding: 10px; margin-top: 10px;">
+                                            <i class="far fa-envelope input-email text-white my-3 fs-2 neones p-50"></i>
+                                            <input class="form-control-sm p-1 input-contact bg-transparent rounded text-white border" type="text" id="cli_email" placeholder="Correo" required>
+                                        </div>
+                                        <div class="campo" style="padding: 10px;">
+                                            <i class="fas fa-key input-password text-white my-3 fs-2 neones p-50"></i>
+                                            <input class="form-control-sm p-1 input-contact bg-transparent rounded text-white border" type="password" id="cli_clave" placeholder="Contraseña" required>
+                                        </div>
+                                        <button type="submit" style="margin-left: 40px;" class="btn btn-opacity my-sm-3 border-0 text-white">
+                                            <i class="fas fa-sign-in-alt"></i> Iniciar Sesión
+                                        </button>
+                                        <div class="enlaces text-white">
+                                        <a href="#" class="text-white"><span>¿Olvidaste tu contraseña?</span></a>
+                                        <br>
+                                        <a href="/usuarioRegistro" class="text-white"><span>¿No tienes usuario?</span></a>
+                                        </div>
+                                    </form>
+                                </div>
+                                </div>
+                            </div>
                             </li>
                             <li class="listaContenido px-2 border-2 border-light border-end " id='Administrar' style="display: none;">
 
@@ -362,3 +388,4 @@
 </html>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="build/js/ajax/ajax.layout.js"></script>
+<script src="build/js/ajax/ajaxlogin.js"></script>

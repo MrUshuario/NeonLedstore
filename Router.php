@@ -59,8 +59,8 @@ class Router {
 
         //Proteger las rutas
         if(in_array($urlActual,$rutas_protegidas) && !$id){
-            header("location: /login");
-        } else if (!empty($_SESSION['id']) && $urlActual == '/login'){
+            header("location: /");
+        } else if (!empty($_SESSION['id']) && $urlActual == '/'){
             header("location: /dashboard");
         }
 
@@ -97,7 +97,7 @@ class Router {
 
         $contenido = ob_get_clean(); //Limpia elbuffer
 
-        include __DIR__."/views/loginlayout.php";
+        include __DIR__."/views/loginlayout.php";   //no esta siendo usado y no sabemos que hace
     }
 
     public function renderPrincipal($view, $datos=[]){

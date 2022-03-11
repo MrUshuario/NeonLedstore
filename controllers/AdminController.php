@@ -100,7 +100,7 @@ class AdminController  {
     // Cerrar session
     public static function cerrar(){
         session_destroy();
-        header("location: /login");
+        header("location: /");
     }
 
     public static function grafico(){
