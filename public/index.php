@@ -154,6 +154,7 @@ $router = new Router();
 
        //METHOD POST
         $router->post("/contacto/enviar",[PrincipalController::class,"contactoEmail"]);
+        $router->post("/contacto/enviarEmp",[PrincipalController::class,"contactoEmail2"]);//correo llega a empresa
         //$router->post("/landingpage/enviar",[PrincipalController::class,"contactolandingEmail"]);
 
         //registrocliente

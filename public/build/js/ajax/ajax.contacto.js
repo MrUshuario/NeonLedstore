@@ -10,7 +10,7 @@ function enviarEmail(data){
         success: function(e){
             let json = JSON.parse(e);
                 
-            /*formContact.reset();   */
+            // formContact.reset();
 
             if (json.prueba == true){
                 Swal.fire({
@@ -82,6 +82,7 @@ function saveCorreo(){
             apellidos: $("#apellidos").val().trim(),
             correo: $("#correo").val().trim(),
             telefono: $("#telefono").val().trim(),
+            pregunta: $("#pregunta").val().trim(),
             consulta: $("#consulta").val().trim()
         };
 
@@ -126,13 +127,15 @@ function createContactoVis(data) {
   }
 
 function enviarEmpresa(data){
+    console.log(data);
     $.ajax ({
-      url: "",
+      url: "/contacto/enviarEmp",
       data: data,
       type: "POST",
       success: function(e) {
+          console.log(e);
         let json = JSON.parse(e);
-        console.log("Correos enviados a las empresas")
+        console.log("Correo enviado a la empresa")
         
       },
     });
