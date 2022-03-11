@@ -125,9 +125,16 @@
                             </div>
                             
                             <select name="color" class="neontextlanding border-0 border bg-transparent rounded w-100 me-1 me-sm-4 my-3 d-block">
-                                <option id="pro-color" value="1">ROJO</option>
-                                <option id="pro-color" value="2">AZUL</option>
-                                <option id="pro-color" value="3">MULTICOLOR</option>
+                                <option id="proRojo" value="rojo">ROJO</option>
+                                <option id="proAzul" value="azul">AZUL</option>
+                                <option id="proAmari" value="amarillo">AMARILLO</option>
+                                <option id="proAnara" value="anarjando">ANARANJADO</option>
+                                <option id="proCele" value="celeste">CELESTE</option>
+                                <option id="proFuc" value="fucsia">FUCSIA</option>
+                                <option id="proRosa" value="rosado">ROSADO</option>
+                                <option id="proMora" value="morado">MORADO</option>
+                                <option id="proBla" value="blanco">BLANCO</option>
+                                <option id="proMulti" value="multicolor">MULTICOLOR</option>
                             </select>
                             <div class="pt-3 pb-3">
                                 <input type="hidden" id="id" value="formNegocio">

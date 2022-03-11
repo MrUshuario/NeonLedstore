@@ -181,8 +181,35 @@ form{
 
 
 
-#pro-color { color:rgb(255, 255, 255); 
+#proRojo { color:rgb(255, 255, 255); 
     background-color:rgb(100, 16, 121); }
 
+#proAzul { color:rgb(255, 255, 255); 
+        background-color:rgb(100, 16, 121); }
+#proAmari { color:rgb(255, 255, 255); 
+            background-color:rgb(100, 16, 121); }
 
+#proAnara { color:rgb(255, 255, 255); 
+        background-color:rgb(100, 16, 121); }
+    
+#proCele{ color:rgb(255, 255, 255); 
+        background-color:rgb(100, 16, 121); }
+
+#proFuc { color:rgb(255, 255, 255); 
+        background-color:rgb(100, 16, 121); }
+
+#proRosa { color:rgb(255, 255, 255); 
+        background-color:rgb(100, 16, 121); }
+
+#proMora { color:rgb(255, 255, 255); 
+        background-color:rgb(100, 16, 121); }
+
+#proBla { color:rgb(255, 255, 255); 
+        background-color:rgb(100, 16, 121); }
+
+#proMulti { color:rgb(255, 255, 255); 
+        background-color:rgb(100, 16, 121); }
+        
+        
+        
 /* Fin Modal Producto */
