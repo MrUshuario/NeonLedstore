@@ -16,6 +16,7 @@
                     <th>Categoría</th>
                     <th>Nombre y Descripcion</th>
                     <th>Precio (S/.) </th>
+                    <th>Precio Multicolor </th>
                     <th>Tamaño </th>
                     <th>Estado </th>
                     <th>Imagen1 </th>
@@ -58,6 +59,11 @@
                     <div class="mb-3">
                         <label for="">Precio:</label>
                         <input type="number" id="pro_precio" class="form-control" step="0.05">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="">Precio para Multicolor</label>
+                        <input type="number" id="pro_precioMulti" class="form-control" step="0.05">
                     </div>
                     
                     <div class="mb-3">

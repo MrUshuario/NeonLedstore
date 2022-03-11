@@ -16,9 +16,9 @@
                     <th>Nombres</th>
                     <th>Apellidos</th>
                     <th>Email</th>
-                    <!--<th>Clave</th>-->
                     <th>Teléfono</th>
                     <th>Estado</th>
+                    <th>verificado</th>
                     <th>Rol</th>
                     <th>Editar/Borrar</th>
                     <th>Contraseña</th>
@@ -76,6 +76,15 @@
                             <option value="">--SELECCIONE--</option>
                             <option value="0">Inactivo</option>
                             <option value="1">Activo</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="nombre">Correo verificado</label>
+                        <select id="cli_verificado" class="form-control">
+                            <option value="">--SELECCIONE--</option>
+                            <option value="1">Correo verificado</option>
+                            <option value="2">No verificado</option>
                         </select>
                     </div>
 

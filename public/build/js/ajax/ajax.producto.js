@@ -27,6 +27,7 @@ function tableAll() {
           return `${data.pro_nombre} : ${data.pro_descripcion}`;
         },},
       { data: "pro_precio"},
+      { data: "pro_precioMulti"},
       { data: "pro_tamano"},
       {
         data: null,
@@ -73,6 +74,7 @@ function obtenerData() {
         $("#pro_nombre").val(data.pro_nombre);
         $("#pro_descripcion").val(data.pro_descripcion);
         $("#pro_precio").val(data.pro_precio);
+        $("#pro_precioMulti").val(data.pro_precioMulti);
         $("#pro_activo").val(data.pro_activo);
         const tmn = data.pro_tamano.split("X");
         $("#t-1").val(tmn[0]);
@@ -120,6 +122,7 @@ function clean() {
   $("#pro_nombre").val("");
   $("#pro_descripcion").val("");
   $("#pro_precio").val("");
+  $("#pro_precioMulti").val("");
   
   $("#t-1").val("");
   $("#t-2").val("");
@@ -152,26 +155,6 @@ function getCategoria() {
   });
 } 
 
-/*¨esta funcion es más para un select con producto
-function getProducto() {
-  const idproducto = document.querySelector("#id_producto");
-  $.ajax({
-    method: "GET",
-    url: "/productoColor/getProducto",
-    success: function (el) {
-      const { data } = JSON.parse(el);
-      const idproducto = document.querySelector("#id_producto");
-      data.forEach((e) => {
-        if (e.pro_activo == "Activo") {
-          idproducto.innerHTML += `<option value="${e.id}">${e.pro_nombre} - S/.${e.pro_precio}</option>`;
-        }
-      });
-    },
-  });
-} */
-
-
-
 function saveProduct() {
   $("#formProducto").submit(function (e) {
     e.preventDefault();
@@ -181,6 +164,7 @@ function saveProduct() {
     const nombre = $("#pro_nombre").val().trim();
     const descripcion = $("#pro_descripcion").val().trim();
     const precio = $("#pro_precio").val().trim();
+    const precioMulti = $("#pro_precioMulti").val().trim();
     const imagen1 = $("#pro_imagen1")[0].files[0];
     const imagen2 = $("#pro_imagen2")[0].files[0];
     const imagen3 = $("#pro_imagen3")[0].files[0];
@@ -194,6 +178,7 @@ function saveProduct() {
     formData.append("pro_nombre", nombre);
     formData.append("pro_descripcion", descripcion);
     formData.append("pro_precio", precio);
+    formData.append("pro_precioMulti", precioMulti);
     formData.append("pro_imagen1", imagen1);
     formData.append("pro_imagen2", imagen2);
     formData.append("pro_imagen3", imagen3);
@@ -207,6 +192,7 @@ function saveProduct() {
         categoria == "" ||
         nombre == "" ||
         precio == "" ||
+        precioMulti == "" ||
         tm1 == "" ||
         tm2 == ""
       ) {
