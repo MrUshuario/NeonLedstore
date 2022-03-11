@@ -360,7 +360,7 @@ public static function contactoEmail2(){
         $mail->Password = contra;
 
         $mail->setFrom('renleds22@gmail.com','NeonLedStore'); //direccion desde donde se enviará
-        $mail->addAddress('ventas@neon-ledstore.com'); ////direccion de usuario que recibe
+        $mail->addAddress('info.neonledstore@gmail.com'); ////direccion de usuario que recibe
         $mail->Subject = "Nueva Consulta de Cliente";
 
         //Habilitar HTML
