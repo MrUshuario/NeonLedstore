@@ -7,14 +7,14 @@ use Model\ActiveRecord;
 class Producto  extends ActiveRecord
 {
     protected static $tabla = 'tab_producto';
-    protected static $columnaDB = ['id', 'cat_id', 'pro_nombre', 'pro_descripcion', 'pro_precio', 'pro_tamano', 'pro_activo', 'pro_imagen1', 'pro_imagen2', 'pro_imagen3'];
+    protected static $columnaDB = ['id', 'cat_id', 'pro_nombre', 'pro_descripcion', 'pro_precio', 'pro_precioMulti' , 'pro_tamano', 'pro_activo', 'pro_imagen1', 'pro_imagen2', 'pro_imagen3'];
 
     public $id; 
     public $cat_id;
     public $pro_nombre;
     public $pro_descripcion;
     public $pro_precio;
-    // public $pro_imagen;
+    public $pro_precioMulti;
     public $pro_tamano;
     public $pro_activo;
     public $pro_imagen1;
@@ -28,17 +28,43 @@ class Producto  extends ActiveRecord
         $this->pro_nombre = $args['pro_nombre'] ?? null;
         $this->pro_descripcion = $args['pro_descripcion'] ?? null;
         $this->pro_precio = $args['pro_precio'] ?? null;
+        $this->pro_precioMulti = $args['pro_precioMulti'] ?? null;
         $this->pro_tamano = $args['pro_tamano'] ?? null;
         $this->pro_activo = $args['pro_activo'] ?? null;
         $this->pro_imagen1 = $args['pro_imagen1'] ?? null;
         $this->pro_imagen2 = $args['pro_imagen2'] ?? null;
         $this->pro_imagen3 = $args['pro_imagen3'] ?? null;
-        //extra ATENTOS QUE PUEDE GENERAR ERRORES
-        //$this->NombreCategoria = $args['NombreCategoria'] ?? null;
     }
 
+    public function borrarImagen()
+    {
+        //Comprobar si existe el archivo
+        $existArchivo = file_exists(CARPETA_IMAGENES . $this->pro_imagen);
+        if ($existArchivo) {
+            unlink(CARPETA_IMAGENES . $this->pro_imagen);
+        }
+    }
 
-    ///FUNCIONES PARA BORRAR UNA IMAGEN; seguro no lo necesitamos
+    public static function listarCatXProd()
+    {
+        $query =
+        "SELECT p.id, p.pro_nombre, p.pro_descripcion, p.pro_precio, p.pro_precioMulti, p.pro_tamano, p.pro_activo, p.pro_imagen1, p.pro_imagen2, p.pro_imagen3, c.cat_nombre AS cat_id 
+        FROM tab_producto AS p INNER JOIN tab_categoria AS c 
+        ON p.cat_id = c.id";
+
+        $resultado = static::consultarSQL($query);
+        return $resultado;
+    }
+    
+    public function editEstado()
+    {
+        $query = "UPDATE " . static::$tabla . " SET pro_activo='" . $this->pro_activo . "' WHERE id=" . $this->id;
+        $resultado = self::$db->query($query);
+        return $resultado;
+    }
+
+    ///FUNCIONES RELACIONADAS A LAS IMAGENES /////// ( EN PROCESO)
+
     public function setImagen($img)
     {
         //Eliminar la imagen previa al editar o eliminar
@@ -54,40 +80,13 @@ class Producto  extends ActiveRecord
         }
     }
 
-    public function borrarImagen()
-    {
-        //Comprobar si existe el archivo
-        $existArchivo = file_exists(CARPETA_IMAGENES . $this->pro_imagen);
-        if ($existArchivo) {
-            unlink(CARPETA_IMAGENES . $this->pro_imagen);
-        }
-    }
-
-    public static function listarCatXProd()
-    {
-        $query =
-        "SELECT p.id, p.pro_nombre, p.pro_descripcion, p.pro_precio, p.pro_tamano, p.pro_activo, p.pro_imagen1, p.pro_imagen2, p.pro_imagen3, c.cat_nombre AS cat_id 
-        FROM tab_producto AS p INNER JOIN tab_categoria AS c 
-        ON p.cat_id = c.id";
-
-        $resultado = static::consultarSQL($query);
-        return $resultado;
-    }
-    // no srive
+    // no SIRVEN
     public function editSinImg()
     {
         $query = "UPDATE " . static::$tabla . " SET pro_nombre='" . $this->pro_nombre . "', pro_descripcion='" . $this->pro_descripcion . "', pro_precio='" . $this->pro_precio . "', pro_tamano='" . $this->pro_tamano . "', pro_activo='" . $this->pro_activo . "' where id = " . $this->id;
         $resultado = self::$db->query($query);
         return $resultado;
     }
-
-    public function editEstado()
-    {
-        $query = "UPDATE " . static::$tabla . " SET pro_activo='" . $this->pro_activo . "' WHERE id=" . $this->id;
-        $resultado = self::$db->query($query);
-        return $resultado;
-    }
-
 
     //  que no sirve
     public function searchNombre()

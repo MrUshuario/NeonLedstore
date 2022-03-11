@@ -6,7 +6,7 @@ use Model\ActiveRecord;
 
 class Cliente extends ActiveRecord {
     protected static $tabla = "tab_cliente";
-    protected static $columnaDB = ['id', 'cli_nombre', 'cli_apellidos', 'cli_email', 'cli_clave', 'cli_telefono', 'cli_estado','cli_rol'];
+    protected static $columnaDB = ['id', 'cli_nombre', 'cli_apellidos', 'cli_email', 'cli_clave', 'cli_telefono', 'cli_estado','cli_rol','cli_verificado'];
 
     public $id;
     public $cli_nombre;
@@ -16,6 +16,7 @@ class Cliente extends ActiveRecord {
     public $cli_telefono;
     public $cli_estado;
     public $cli_rol;
+    public $cli_verificado;
 
     public function __construct($args = [])
     {
@@ -27,6 +28,7 @@ class Cliente extends ActiveRecord {
         $this->cli_telefono = $args['cli_telefono'] ?? null;
         $this->cli_estado = $args['cli_estado'] ?? null;
         $this->cli_rol = $args['cli_rol'] ?? null;
+        $this->cli_verificado = $args['cli_verificado'] ?? null;
     }
     
     public function verificarCorreo(){

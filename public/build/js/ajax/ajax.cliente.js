@@ -26,6 +26,7 @@ function tableAll(){
             return `<button data-idcliente="${data.id}" class="btn ${data.cli_estado == "1"? 'btn-success' : 'btn-danger'}" id="btnEstado">${data.cli_estado}</button>`;
           }
       },
+      {data:"cli_verificado"},
       {data:"cli_rol"},  
       {data: null,
         render: function(data,type,row){ //agrege un div botones[id]
@@ -73,6 +74,7 @@ function saveCliente(){
     let cli_telefono = $("#cli_telefono").val();
     let cli_estado = $("#cli_estado").val(); 
     let cli_rol= $("#cli_rol").val();
+    let cli_verificado= $("#cli_verificado").val();
     
     const data = {
       id: id,
@@ -83,9 +85,10 @@ function saveCliente(){
       cli_telefono: cli_telefono,
       cli_estado: cli_estado,
       cli_rol: cli_rol,
+      cli_verificado: cli_verificado,
     };
     if (id=="") {
-      if (cli_nombre == "" || cli_apellidos == "" || cli_email == "" || cli_clave == ""  || cli_telefono == "" || cli_estado == "" || cli_rol == ""){
+      if (cli_nombre == "" || cli_apellidos == "" || cli_email == "" || cli_clave == ""  || cli_telefono == "" || cli_estado == "" || cli_rol == "" || cli_verificado == ""){
         swal({
           title:"Completar los campos requeridos",
           icon: "error"
@@ -202,6 +205,7 @@ function clean() {
   $("#cli_telefono").val("")
   $("#cli_estado").val("")
   $("#cli_rol").val("")
+  $("#cli_verificado").val("")
 }
 
 function cleanForm() {
@@ -234,6 +238,7 @@ function obtenerData() {
         $("#cli_telefono").val(data.cli_telefono)
         $("#cli_estado").val(data.cli_estado)
         $("#cli_rol").val(data.cli_rol)
+        $("#cli_verificado").val(data.cli_verificado)
       },
     });
   });
@@ -254,10 +259,16 @@ function deleteCliente() {
           data: { id: id },
           type: "POST",
           success: (e) => {
-            if (e) {
+          let json = JSON.parse(e);
+            if (json.res) {
               tableAll();
               swal("Cliente eliminado correctamente!", {
                 icon: "success",
+              });
+            } else {
+              tableAll();
+              swal("No se pudo eliminar pues tiene relacion con otros campos", {
+                icon: "error",
               });
             }
           },
@@ -318,15 +329,6 @@ function verificarcontra() {
         respuesta.classList.remove('d-none');
         respuesta.classList.add('d-block')
        }
-
-    //     $("#id").val(data.id);
-    //     $("#cli_nombre").val(data.cli_nombre);
-    //     $("#cli_apellidos").val(data.cli_apellidos);
-    //     $("#cli_email").val(data.cli_email)
-    //     //$("#cli_clave").val(data.cli_clave)
-    //     $("#cli_telefono").val(data.cli_telefono)
-    //     $("#cli_estado").val(data.cli_estado)
-    //     $("#cli_rol").val(data.cli_rol)
        },
      });
   });

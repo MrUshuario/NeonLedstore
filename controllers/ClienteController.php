@@ -119,10 +119,14 @@ class ClienteController {
             $id = $_POST['id'];
             $id = filter_var($id, FILTER_VALIDATE_INT);
             $cliente = Cliente::find($id);
-            $el = $cliente->eliminar();
-            $json = json_encode($el);
-        
-            echo $json;
+            $resultado = $cliente->eliminar();
+
+            echo json_encode([
+                "res"=>$resultado
+            ]);
+
+            //$json = json_encode($resultado);
+            //echo $json;
         }
     }
 
