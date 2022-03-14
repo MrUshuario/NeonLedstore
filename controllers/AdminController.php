@@ -57,10 +57,6 @@ class AdminController  {
         $router->render("dashboard/index",["id"=>$id]);
     }
 
-    public static function indexConfig(Router $router){
-        $router->render("dashboard/configuracion",[]);
-    }
-
     public static function dataConfig(){
         $data = Cliente::find($_SESSION['id']); //cambie user por cliente, lo mismo pero con mas informacion
         echo json_encode([

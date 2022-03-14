@@ -60,7 +60,7 @@ class Router {
         //Proteger las rutas
         if(in_array($urlActual,$rutas_protegidas) && !$id){
             header("location: /");
-        } else if (!empty($_SESSION['id']) && $urlActual == '/'){
+        } else if (!empty($_SESSION['id']) && $urlActual == '/home'){
             header("location: /dashboard");
         }
 
