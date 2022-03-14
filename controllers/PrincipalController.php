@@ -39,10 +39,6 @@ class PrincipalController {
         $router->renderPrincipal("contacto",[]);
     }
 
-    public static function servicios(Router $router){
-        $router->renderPrincipal("servicio",[]);
-    }
-
     //formulario registro cliente
     public static function usuarioLogeo(Router $router){
         $router->renderPrincipal("usuarioLogeo",[]);

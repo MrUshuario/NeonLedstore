@@ -112,16 +112,6 @@
 
                             <li class="listaContenido nav-item px-2 border-end border-2 border-light">
 
-                                <a class="enlace nav-link px-0 py-0" aria-current="page" href="/servicios">
-
-                                    <div class="botones text-white px-3 rounded-medium">SERVICIOS</div>
-
-                                </a>
-
-                            </li>
-
-                            <li class="listaContenido nav-item px-2 border-end border-2 border-light">
-
                                 <a class="enlace nav-link px-0 py-0" aria-current="page" href="/nosotros">
 
                                     <div class="botones text-white px-3 rounded-medium">NOSOTROS</div>
@@ -134,7 +124,7 @@
 
                                 <a class="enlace nav-link px-0 py-0" aria-current="page" href="/contacto">
 
-                                    <div class="botones text-white px-3 rounded-medium">CONTACTO</div>
+                                    <div class="botones text-white px-3 rounded-medium">PREGUNTAS</div>
 
                                 </a>
 
