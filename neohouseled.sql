@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 23-02-2022 a las 17:38:17
+-- Tiempo de generación: 14-03-2022 a las 15:54:41
 -- Versión del servidor: 10.1.32-MariaDB
 -- Versión de PHP: 5.6.36
 
@@ -58,22 +58,26 @@ CREATE TABLE `tab_cliente` (
   `cli_clave` varchar(255) DEFAULT NULL,
   `cli_estado` char(1) DEFAULT NULL,
   `cli_telefono` varchar(10) NOT NULL,
-  `cli_rol` int(11) NOT NULL
+  `cli_rol` int(11) NOT NULL,
+  `cli_verificado` char(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `tab_cliente`
 --
 
-INSERT INTO `tab_cliente` (`id`, `cli_nombre`, `cli_apellidos`, `cli_email`, `cli_clave`, `cli_estado`, `cli_telefono`, `cli_rol`) VALUES
-(1, 'Edgar2', 'Poma', 'lenonpoma@gmail.com', '12', '0', '14156', 1),
-(2, 'Isabella ', 'Montoya ', 'isabellam.montoya.im@gmail.com ', '123', '1', '14523', 2),
-(3, 'MelissaeditCLAVE', 'Dumas', 'mdumas@gmail.com', '12345', '0', '1545', 2),
-(4, 'Edgar4', 'Poma', 'lenonaaa@gmail.com', '123', '0', '114456', 1),
-(5, 'PruebaHash', 'Hasheo', 'asdasdasd@gmail', '$2y$10$rs2nyeeS3ZJiiZF.7luZ0ulZ.n0ytpBML9n03awTjIdFh.rEjhjKO', '1', '12345', 2),
-(6, 'aaaa', 'aaaa', 'aaaaa', '$2y$10$/vHNy5zAi.vjWiheOby9uefL.2qUC62c88qAVfDGr.xAIoIwKb4zi', '1', '121212', 2),
-(7, 'asas', 'dasdasd', 'adminNLS@', '$2y$10$TFptw3voA7MuG6aQnURwYOGoaQf1g.Ocri.qWyOoahWAjxDUrhEci', '0', '12', 2),
-(9, 'aaa', 'aaa', 'lenonpoma@gmail2.com', '$2y$10$TXftqj2yne9v/8LCnUdyge/dNT.TkVtDvsJXcTK4MZjCwIdcFRGda', '1', '124', 2);
+INSERT INTO `tab_cliente` (`id`, `cli_nombre`, `cli_apellidos`, `cli_email`, `cli_clave`, `cli_estado`, `cli_telefono`, `cli_rol`, `cli_verificado`) VALUES
+(1, 'Edgar', 'Poma', 'lenonpoma@gmail.com', '$2y$10$1xAhnqRxVVOojBfbNll6FuZ0T/9ecsafGbu2uwpf4YmBSYQgsKndG', '1', '14156', 2, NULL),
+(2, 'Isabella ', 'Montoya ', 'isabellam.montoya.im@gmail.com ', '123', '1', '14523', 2, NULL),
+(3, 'MelissaeditCLAVE', 'Dumas', 'mdumas@gmail.com', '12345', '0', '1545', 2, NULL),
+(4, 'Edgar4', 'Poma', 'lenonaaa@gmail.com', '123', '0', '114456', 1, NULL),
+(7, 'asas', 'dasdasd', 'adminNLS@', '$2y$10$xSMqNH7LGFqXwCr5AGUsae5rbKTEsDjrdRcD8MbhLoAWrUA3F1d8e', '0', '12', 1, NULL),
+(10, 'adminNLS', 'adminNLS', 'adminNLS', '$2y$10$0DC79GuXRJVqnAGVuXk3AO2vRoMaeltcgUGqe9pJa0Ildd60/lRFK', '1', '12345', 1, ''),
+(11, 'para cambiar', 'para cambiar ape', '12345', '$2y$10$cTtWRWJihjEGKA4G7/cvuev/NZ4iyWqpZAjHw14ZQ8Ze39u3CQNRS', '1', '11111', 1, NULL),
+(12, 'ADMINCONTRA898', 'ADMINCONTRA898', 'ADMINCONTRA898email', '$2y$10$4Rpb0TSb1Or/M2H37bSVoOqrwg.R5zpKo7U7tVyp5fCfVCWBIRRhm', '1', '123456', 2, ''),
+(13, 'CLIENTECONTRA123', 'CLIENTECONTRA123ape', 'CLIENTECONTRA123@gmail.com', '$2y$10$vabNeweKcpY/XVQnnfr/XeiAca9bdB8g9BRYeIyFc.cTFyRtJ4gUC', '1', '123456', 2, NULL),
+(40, '123aa', '123aaa', '12345678945', '$2y$10$n0.L.jKaYirYcA1t7682LuwmNcrqt1yivG5bSCC9nY90vH8EsGzzO', '0', '123', 2, '1'),
+(41, 'creacionborrar', 'creacionborrar', 'creacionborrar', '$2y$10$KPPUaTgSzW5v1ymlaLezduYkJc.7FxhiMSanCWRiIosfNY/sI/u8K', '0', '123', 2, NULL);
 
 -- --------------------------------------------------------
 
@@ -137,23 +141,25 @@ CREATE TABLE `tab_producto` (
   `pro_precio` float DEFAULT NULL,
   `pro_tamano` varchar(20) DEFAULT NULL,
   `pro_activo` char(1) DEFAULT NULL,
-  `pro_imagen` float NOT NULL
+  `pro_imagen1` varchar(35) NOT NULL,
+  `pro_imagen2` varchar(35) DEFAULT NULL,
+  `pro_imagen3` varchar(35) DEFAULT NULL,
+  `pro_precioMulti` float DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `tab_producto`
 --
 
-INSERT INTO `tab_producto` (`id`, `cat_id`, `pro_nombre`, `pro_descripcion`, `pro_precio`, `pro_tamano`, `pro_activo`, `pro_imagen`) VALUES
-(1, 4, 'Corazones de angel y diablo', 'Corazones de angel y diablo de neón', 349, '30cmX40cm', '0', 0),
-(2, 4, 'Diamante ', 'Diamante en neón ', 239, '30cmX40cm', '1', 0),
-(3, 2, 'DO NOT ENTER', 'Letrero de DO NOT ENTER en neón ', 339, '40cmX40cm', '1', 0),
-(4, 1, 'Flamenco ', 'Flamenco en neón ', 299, '40cmX40cm', '0', 0),
-(6, 4, 'Labios ', 'Labios en neón ', 259, '40cmX20cm', '1', 0),
-(8, 2, 'TIK TOK', 'Letrero TIK TOK en neón ', 349, '35cmX30cm', '1', 0),
-(10, 4, 'OJOS', 'Letrero OJOS  en neón ', 299, '40cmX30cm', '1', 0),
-(11, 4, 'PESTAÑAS', 'Letrero de PESTAÑAS  en neón ', 229, '40cmX20cm', '0', 0),
-(12, 4, 'HELADO', 'Paleta de helado en neón ', 219, '30cmX20cm', '1', 0);
+INSERT INTO `tab_producto` (`id`, `cat_id`, `pro_nombre`, `pro_descripcion`, `pro_precio`, `pro_tamano`, `pro_activo`, `pro_imagen1`, `pro_imagen2`, `pro_imagen3`, `pro_precioMulti`) VALUES
+(1, 4, 'Corazones de angel y diablo', 'Corazones de angel y diablo de neón', 349, '30cmx40cmx', '1', 'undefined', 'undefined', 'undefined', 10),
+(2, 4, 'Diamante', 'Diamante en neón', 239, '30cmx40cm', '1', 'undefined', 'undefined', 'undefined', 124.9),
+(3, 2, 'DO NOT ENTER', 'Letrero de DO NOT ENTER en neón ', 339, '40cmX40cm', '0', '0', NULL, NULL, NULL),
+(4, 1, 'Flamenco', 'Flamenco en neón', 299, '40cmx40cmxxx', '0', '0', NULL, NULL, NULL),
+(8, 2, 'TIK TOK', 'Letrero TIK TOK en neón ', 349, '35cmX30cm', '0', '0', NULL, NULL, NULL),
+(10, 4, 'OJOS', 'Letrero OJOS  en neón', 299, '40cmx30cm', '0', 'undefined', 'undefined', 'undefined', 125),
+(11, 4, 'PESTAÑAS', 'Letrero de PESTAÑAS  en neón ', 229, '40cmX20cm', '0', '0', NULL, NULL, NULL),
+(12, 4, 'HELADO', 'Paleta de helado en neón ', 219, '30cmX20cm', '0', '0', NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -206,19 +212,22 @@ CREATE TABLE `tab_visitantes` (
   `vis_nombre` varchar(120) DEFAULT NULL,
   `vis_apellidos` varchar(120) DEFAULT NULL,
   `vis_email` varchar(120) DEFAULT NULL,
-  `vis_telefono` varchar(10) NOT NULL
+  `vis_telefono` varchar(10) NOT NULL,
+  `vis_pregunta` varchar(250) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `tab_visitantes`
 --
 
-INSERT INTO `tab_visitantes` (`id`, `vis_nombre`, `vis_apellidos`, `vis_email`, `vis_telefono`) VALUES
-(1, 'Visitante1edit', 'Visitapellido', 'visita@gmail.com', '151515'),
-(6, 'Visitante3', 'Visitapellido', 'visita3@gmail.com', '12121'),
-(7, 'Edgar', 'Poma Chavez', 'lenonpoma@gmail.com', '922574117'),
-(8, 'asdasd', 'asdasd', 'asdasdasd', '1212'),
-(9, 'Usuario12', 'Poma Chavez', 'adddddddffg@gmail.com', '922574117');
+INSERT INTO `tab_visitantes` (`id`, `vis_nombre`, `vis_apellidos`, `vis_email`, `vis_telefono`, `vis_pregunta`) VALUES
+(1, 'Visitante1edit', 'Visitapellido', 'visita@gmail.com', '151515', NULL),
+(6, 'Visitante3', 'Visitapellido', 'visita3@gmail.com', '12121', NULL),
+(7, 'Edgar2', 'visitante2', 'lenonpoma@gmail.com', '922574117', NULL),
+(8, 'asdasd', 'asdasd', 'asdasdasd', '1212', NULL),
+(9, 'Usuario12', 'Poma Chavez', 'adddddddffg@gmail.com', '922574117', NULL),
+(12, 'Pregunta1', 'Pregunta2', 'visita232@gmail.com', '123', '¿Estoy arreglado?'),
+(13, 'Preuba1111', 'Preuba111', 'pruebavis111@gmail.com', '123456', '¿Funciono?');
 
 --
 -- Índices para tablas volcadas
@@ -291,7 +300,7 @@ ALTER TABLE `tab_categoria`
 -- AUTO_INCREMENT de la tabla `tab_cliente`
 --
 ALTER TABLE `tab_cliente`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
 
 --
 -- AUTO_INCREMENT de la tabla `tab_compra`
@@ -321,7 +330,7 @@ ALTER TABLE `tab_user`
 -- AUTO_INCREMENT de la tabla `tab_visitantes`
 --
 ALTER TABLE `tab_visitantes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- Restricciones para tablas volcadas
