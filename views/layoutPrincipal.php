@@ -159,7 +159,7 @@
                             </li>
                             <li class="listaContenido px-2 border-2 border-light border-end " id='Perfil' style=" display: none;">
 
-                                <a class="enlace nav-link px-0 py-0" aria-current="page" href="/login">
+                                <a class="enlace nav-link px-0 py-0" aria-current="page" href="/dashboard">
 
                                     <div class="botones text-white px-3 rounded-medium">ADMIN
                                     <i class="fas fa-user"></i>
@@ -183,11 +183,10 @@
                                         <div class="campo" style="padding: 10px; margin-top: 10px;">
                                             <i class="far fa-envelope input-email text-white my-3 fs-2 neones p-50"></i>
                                             <input class="form-control-sm p-1 input-contact bg-transparent rounded text-white border" type="text" id="cli_email" placeholder="Correo" required>
-                                        </div>
-                                        <div class="campo" style="padding: 10px;">
                                             <i class="fas fa-key input-password text-white my-3 fs-2 neones p-50"></i>
                                             <input class="form-control-sm p-1 input-contact bg-transparent rounded text-white border" type="password" id="cli_clave" placeholder="Contraseña" required>
                                         </div>
+                                        
                                         <button type="submit" style="margin-left: 40px;" class="btn btn-opacity my-sm-3 border-0 text-white">
                                             <i class="fas fa-sign-in-alt"></i> Iniciar Sesión
                                         </button>

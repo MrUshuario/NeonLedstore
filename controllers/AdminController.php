@@ -7,9 +7,6 @@ use MVC\Router;
 
 class AdminController  {
 
-    public static function index(Router $router) {
-        $router->renderLogin("dashboard/login",[]);
-    }
 
     public static function index1(Router $router) {
         if($_SERVER['REQUEST_METHOD'] == 'POST'){

@@ -21,7 +21,6 @@ use MVC\Router;
 $router = new Router();
 
 //Zona Publica 
-    $router->get('/login',[AdminController::class,'index']);
     $router->get('/dashboard',[AdminController::class,'dashboard']);
 
 // Zona Privada
