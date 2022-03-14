@@ -7,9 +7,6 @@ use MVC\Router;
 
 class AdminController  {
 
-    public static function index(Router $router) {
-        $router->renderLogin("dashboard/login",[]);
-    }
 
     public static function index1(Router $router) {
         if($_SERVER['REQUEST_METHOD'] == 'POST'){
@@ -57,10 +54,6 @@ class AdminController  {
         $router->render("dashboard/index",["id"=>$id]);
     }
 
-    public static function indexConfig(Router $router){
-        $router->render("dashboard/configuracion",[]);
-    }
-
     public static function dataConfig(){
         $data = Cliente::find($_SESSION['id']); //cambie user por cliente, lo mismo pero con mas informacion
         echo json_encode([
@@ -100,7 +93,7 @@ class AdminController  {
     // Cerrar session
     public static function cerrar(){
         session_destroy();
-        header("location: /login");
+        header("location: /");
     }
 
     public static function grafico(){

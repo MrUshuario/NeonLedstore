@@ -112,9 +112,6 @@
         <div class="content-dashboard overflow-scroll position-relative">
             <div class="container flex-between nav-content ">
                 <nav class="nav-content-dashboard">
-                    <!--enlace configuracion-->
-                    <a href="/configuracion">
-                    <i class="fas fa-cog"></i>
                     </a>
                     <!--enlace cerrar sesion-->
                     <a href="/cerrar">
