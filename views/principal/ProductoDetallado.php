@@ -52,7 +52,7 @@
                                     <label id="tamano" type="text" id="pro_tamano" class="font-weight-bold text-white bg-transparent text-center form-control my-3 border-0"></label>
                                     </div>
                                 
-                                    <select id="selectcolor" name="color" class="neontextlanding border-0 border bg-transparent rounded w-100 me-1 me-sm-4 my-3 d-block">
+                                    <select id="selectColor" name="color" class="neontextlanding border-0 border bg-transparent rounded w-100 me-1 me-sm-4 my-3 d-block">
                                     <option id="proRojo" value="rojo">ROJO</option>
                                     <option id="proAzul" value="azul">AZUL</option>
                                     <option id="proAmari" value="amarillo">AMARILLO</option>
