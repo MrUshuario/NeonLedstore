@@ -344,6 +344,12 @@
 
                         </a>
 
+                        <a class="reset-href" href="https://vm.tiktok.com/ZMLPybCRx/" target="_blank">
+
+                        <li class="redSocial d-inline me-1"><i class="fa-brands fa-tiktok"></i>
+
+                        </a>
+
                         <a class="reset-href" href="https://www.instagram.com/neon_led_store/?hl=es" target="_blank">
 
                             <li class="redSocial d-inline me-1"><i class="fab fa-instagram fa-2x"></i></li>
