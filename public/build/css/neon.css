@@ -1,8 +1,7 @@
 
 .neontabla {
     border: 2px solid white;
-    box-shadow: inset 0 0 5px red, 0 0 10px red;
-    border-radius: 60px;
+    border-radius: 40px;
     padding-bottom: 8px;
     font-family: 'Roboto Condensed', 'sans-serif';
 
@@ -106,9 +105,9 @@
 }
 
 .neontextlanding {
-    box-shadow: inset 0 0 5px magenta, 0 0 15px magenta;
     float: left;
     color: #fff!important;
+    border: 2px solid white !important;
 }
 
 .neontextlanding::-webkit-input-placeholder {

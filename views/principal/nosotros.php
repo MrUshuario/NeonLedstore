@@ -34,3 +34,54 @@
         </div>
         </div>
     </div>
+    <section class="bg-black text-white pb-5">
+    
+    <div class="container pt-5 pb-5">
+    <h1>Nuestro equipo</h1>
+        <div id="services-gallery" class="row gap-3 w-100 justify-center m-0 ">
+            <div class="col-lg" style="width: 22.5em; height: 380px;">
+                <div class="w-100 h-100 position-relative">
+                    <img class="w-100 h-100 img-cover" width="100%" src="#" alt="">
+
+                </div>
+                <div class="pt-3 pb-3">
+                    <p class="h6 w-100 text-left text-shadow">Cargo: <strong> Chief Executive Oficer</strong></p>
+                    <p class="h6 w-100 text-left text-shadow">Marco Antonio Rodriguez</p>
+                </div>
+            </div>
+            <div class="col-lg" style="width: 22.5em; height: 380px;">
+                <div class="w-100 h-100 position-relative">
+                    <img class="w-100 h-100 img-cover" width="100%" src="#" alt="">
+
+                </div>
+                <div class="pt-3 pb-3">
+                    
+                    <p class="h6 w-100 text-left text-shadow-lg">Cargo: <strong> Chief Executive Oficer</strong></p>
+                    <p class="h6 w-100 text-left text-shadow-lg">Marco Antonio Rodriguez</p>
+                </div>
+            </div>
+            <div class="col-lg" style="width: 22.5em; height: 380px;">
+                <div class="w-100 h-100 position-relative">
+                    <img class="w-100 h-100 img-cover" width="100%" src="#" alt="">
+
+                </div>
+                <div class="pt-3 pb-3">
+                    
+                    <p class="h6 w-100 text-left text-shadow-lg">Cargo: <strong> Chief Executive Oficer</strong></p>
+                    <p class="h6 w-100 text-left text-shadow-lg">Marco Antonio Rodriguez</p>
+                </div>
+            </div>
+            <div class="col-lg" style="width: 22.5em; height: 380px;">
+                <div class="w-100 h-100 position-relative">
+                    <img class="w-100 h-100 img-cover" width="100%" src="#" alt="">
+
+                </div>
+                <div class="pt-3 pb-3">
+                    
+                    <p class="h6 w-100 text-left text-shadow-lg">Cargo: <strong> Chief Executive Oficer</strong></p>
+                    <p class="h6 w-100 text-left text-shadow-lg">Marco Antonio Rodriguez</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
