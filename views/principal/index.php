@@ -1,22 +1,33 @@
 
 
-    <section class="bg-black text-white">
+<section class="bg-black text-white">
 
-    <!-- Me lo vuelven carrusel-->
-    <div class="container">
-                <div class="row gap-3 w-100 justify-center m-0 " >
-                    <div class="col-lg-3"  style="width: 22.5em; height: 450px;">
-                    <img class="w1-100 h-100 img-cover" width="100%"  src="/build/img/5.webp" alt="IT WAS ALL A DREAM en luces de neon">
-                    </div>
-                    <div class="col-lg-3"  style="width: 22.5em; height: 450px;">
-                    <img class="w2-100 h-100 img-cover " width="100%"  src="/build/img/guitarra.webp" alt="ALL WE HAVE IS NOW en luces de neon">
-                    </div>
-                    <div class="col-lg-3"  style="width: 22.5em; height: 450px;">
-                    <img class="w3-100 h-100 img-cover" width="100%"  src="/build/img/9.webp" alt="Slim�0�7s">
-                    </div>
-                </div> 
-            </div>
-    <!-- Me lo vuelven carrusel-->
+    <!-- Carrusel Home-->
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="/build/img/h-img1.webp" class="d-block w-100" id="imgCarrusHogar1">
+        </div>
+        <div class="carousel-item">
+            <img src="/build/img/h-img2.webp" class="d-block w-100" id="imgCarrusHogar2">
+        </div>
+        <div class="carousel-item">
+            <img src="/build/img/h-img3.webp" class="d-block w-100" id="imgCarrusHogar3">
+        </div>
+    </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    </div>
+    <br>
+    <!-- Fin carrusel Home-->
 
     <div class="container">
         
@@ -46,7 +57,7 @@
             </div>
     </div>
     </div>
-    </section>
+</section>
 
     <section class="bg-black pt-5 pb-5 text-white">
 
