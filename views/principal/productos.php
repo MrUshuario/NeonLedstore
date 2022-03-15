@@ -135,7 +135,7 @@
                                 <option id="proRosa" value="ROSADO">ROSADO</option>
                                 <option id="proMora" value="MORADO">MORADO</option>
                                 <option id="proBla" value="BLANCO">BLANCO</option>
-                                <option id="proMulti" value="500">MULTICOLOR</option>
+                                <option id="proMulti" value="MULTICOLOR">MULTICOLOR</option>
                             </select>         
                             <div class="pt-3 pb-3">
                                 <input type="hidden" id="id" value="formNegocio">

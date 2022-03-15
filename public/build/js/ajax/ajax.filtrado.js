@@ -127,10 +127,5 @@ slider.oninput = function() {
 } */
 
 
-function seleccionarColor(){
-  let selectColor = document.getElementById('selectColor');
-  let color = selectColor.value;
 
-  document.getElementById('lblColorSeleccionado').innerText = `Precio del Color: S/.${color}`;
-}
 
