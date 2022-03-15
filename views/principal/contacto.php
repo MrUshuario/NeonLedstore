@@ -79,8 +79,8 @@
                         <div class="formulario col-12 col-sm-12  border neontabla">
                             <h2 class="display-6 text-center weight-medium" style="margin: 40px;">Aun tienes dudas? <strong> Contáctanos!</strong></h2>
                                 <div class="container">
-                                <div class="row">
-                                    <div class="col-6 my-auto mx-auto">
+                                
+                                  
                                         <!--variables invisibles-->
                                     <input class="p-2 neontextlanding  border-0 border bg-transparent rounded w-100 me-1 me-sm-4 my-3 d-block text-white" type="hidden" name="contador" id="contador" value=1>
                                     <input class="p-2 neontextlanding  border-0 border bg-transparent rounded w-100 me-1 me-sm-4 my-3 d-block text-white" type="hidden" name="contacto" id="contacto" value=1>
@@ -101,7 +101,7 @@
                                     </label>
                                     </div>
 
-                                    <div class="col-4 my-auto mx-auto">
+                                   
                                     <textarea  class="p-2 neontextlanding  border-0 border bg-transparent rounded w-100 me-1 me-sm-4 my-3 d-block text-white" type="text" rows="5" name="pregunta" id="pregunta" placeholder="Escriba su pregunta"></textarea> <br>
                                         
                                             <label for="formConsulta">Opción de Interés:  </label>
@@ -111,10 +111,9 @@
 	                                                <option id="formEvento" value="formEvento">Evento</option>
 	                                                <option id="formNegocio" value="formNegocio">Negocio</option>
                                                 </select>
-                                    </div>
+                                  
                                     <button class="button-contact col-5 btn m-2 mx-auto d-block neonbotton neontabla" type="submit" name="enviar" id="enviar">Enviar</button>
-                                </div>
-                                </div>
+
                         </div>
                     </div>
                 </div>
