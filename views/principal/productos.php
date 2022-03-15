@@ -109,7 +109,7 @@
                 <div class="modal-content rounded-25" id="padreModalLanding">
                 <main class="main rounded-25 row pb-5 d-flex justify-content-center border bg-black">
                 <!--Modificar para que quede como lo piden -->
-                    <div class="mainConte col-8 my-5 pb-3 rouded-55">
+                    <div class="mainConte col-8 my-3 pb-2">
                         <h1 id="pro_nombre" class="my-3 fs-2 neones p-50"> </h1>
                           <div class="row d-flex justify-content-center">
                             <img src="/build/img/landingPage/lp-hogar/dormitoriokid.webp" style="width: 300px; height:200px; ">   
@@ -123,15 +123,23 @@
                             <div class="modal-field">
                                 <label type="text" id="pro_tamano" class="font-weight-bold text-white bg-transparent text-center form-control my-3 border-0"></label>
                             </div>
+                            <span id="lblColorSeleccionado" style="color: white;"></span>
                             
-                            <select name="color" class="neontextlanding border-0 border bg-transparent rounded w-100 me-1 me-sm-4 my-3 d-block">
-                                <option id="pro-color" value="1">ROJO</option>
-                                <option id="pro-color" value="2">AZUL</option>
-                                <option id="pro-color" value="3">MULTICOLOR</option>
-                            </select>
+                            <select id="selectColor" name="color" onchange="seleccionarColor();" class="neontextlanding border-0 border bg-transparent rounded w-100 me-1 me-sm-4 my-3 d-block">
+                                <option id="proRojo" value="ROJO">ROJO</option>
+                                <option id="proAzul" value="AZUL">AZUL</option>
+                                <option id="proAmari" value="AMARILLO">AMARILLO</option>
+                                <option id="proAnara" value="ANARANJADO">ANARANJADO</option>
+                                <option id="proCele" value="CELESTE">CELESTE</option>
+                                <option id="proFuc" value="FUCSIA">FUCSIA</option>
+                                <option id="proRosa" value="ROSADO">ROSADO</option>
+                                <option id="proMora" value="MORADO">MORADO</option>
+                                <option id="proBla" value="BLANCO">BLANCO</option>
+                                <option id="proMulti" value="MULTICOLOR">MULTICOLOR</option>
+                            </select>         
                             <div class="pt-3 pb-3">
                                 <input type="hidden" id="id" value="formNegocio">
-                                <button type="submit" onclick="window.location.href='/ProductoDetallado'" class="neonbottonlanding btn btn-primary my-sm-3 border-0" style="width: 40%; height:30% font-size: 20px;" id="productodet">Ver más</button>
+                                <button type="submit" onclick="window.location.href='/ProductoDetallado'" class="neonbottonlanding btn btn-primary d-block mx-auto" style="width: 40%; height:30% font-size: 20px;" id="productodet">Ver más</button>
                                 
                             </div>
                        </form>
