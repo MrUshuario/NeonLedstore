@@ -350,7 +350,7 @@
 
                         <a class="reset-href" href="https://vm.tiktok.com/ZMLPybCRx/" target="_blank">
 
-                        <li class="redSocial d-inline me-1"><i class="fa-brands fa-tiktok"></i>
+                        <li class="redSocial d-inline me-1"><i class="fab fa-tiktok fa-2x"></i></li>
 
                         </a>
 
@@ -362,7 +362,7 @@
 
                         <a class="reset-href" href="https://www.pinterest.com/infoneonledstore/" target="_blank">
 
-                            <li class="redSocial d-inline me-1"><i class="fab fa-pinterest fa-2x"></i></i></li>
+                            <li class="redSocial d-inline me-1"><i class="fab fa-pinterest-square fa-2x"></i></li>
 
                         </a>
 

@@ -10,8 +10,8 @@
 
 <style type="text/css">
 
-    p,h1,h2,h3,h4,h5,h6,a,button{
-		font-family: 'Roboto Condensed','sans-serif';
+    h1,h2,h3,h4,h5,h6,a,button{
+		font-family: sans-serif;
 	}
 
 	h1,h3,h5{
@@ -27,7 +27,7 @@
 	}
 
 	p{
-		font-size: 20px;
+		font-size: 18px;
 		font-weight: 300;
 	}
 
@@ -46,9 +46,9 @@
         text-align: center;
     }
 
-    #registrese{
+    .titulo{
         margin:0;
-        font-size:30px; 
+        font-size:25px; 
         color: #b36fc4;
     }
 
@@ -87,8 +87,8 @@
     <table class="main" cellpadding="0" cellspacing="0">
     <tr>
         <td class="inicio" valign="middle">
-            <h1 id="registrese">
-                ¡Regístrese y Obtenga Promociones!
+            <h1 class="titulo">
+                Hola '.$_POST['nombre'].' '.$_POST['apellidos'].', su consulta será procesada. ¡Gracias por confiar en nosotros!
             </h1>
         </td>
     </tr>
@@ -103,11 +103,10 @@
     <tr>
         <td valign="top">
             <table cellpadding="0" cellspacing="0" style="width: 100%;background-color: #ffffff;padding: 20px; text-align: center;">
-                <tr>
+                <tr>                 
                     <td style="display: inline-block;max-width:270px;width: 100%; text-align: center;">
                         <img src="img/negocio1.webp" style="padding: 0; width: 250px; height: 200px; margin: 5px">
                         <h2>Letreros Salas Gamer</h2>
-                        <p style="margin:0;font-size:16px;color:#444444; margin-bottom:20px">S/.300,00</p>
                     </td>
                     <td style="display: inline-block;max-width:20px;width: 100%">
                         &nbsp;
@@ -115,7 +114,6 @@
                     <td style="display: inline-block;max-width:270px;width: 100%; text-align: center;">
                         <img src="img/negocio2.webp" style="padding: 0; width: 250px; height: 200px; margin: 5px">
                         <h2>Centros Fotográficos</h2>
-                        <p style="margin:0;font-size:16px;color:#444444; margin-bottom:20px">S/.199,00</p>
                     </td>
 
                 </tr>
@@ -123,7 +121,6 @@
                     <td style="display: inline-block;max-width:270px;width: 100%; text-align: center;">
                         <img src="img/negocio3.webp" style="padding: 0; width: 250px; height: 200px; margin: 5px">
                         <h2>Letreros Hospedaje</h2>
-                        <p style="margin:0;font-size:16px;color:#444444; margin-bottom:20px">S/.390,00</p>
                     </td>
                     <td style="display: inline-block;max-width:20px;width: 100%">
                         &nbsp;
@@ -131,7 +128,6 @@
                     <td style="display: inline-block;max-width:270px;width: 100%; text-align: center;">
                         <img src="img/negocio4.webp" style="padding: 0; width: 250px; height: 200px; margin: 5px">
                         <h2>Decoracion Spa</h2>
-                        <p style="margin:0;font-size:16px;color:#444444; margin-bottom:20px">S/.299,00</p>
                     </td>
                 </tr>
                 <td>
@@ -183,7 +179,7 @@
                 <td style="padding: 10px 15px; text-align:center; font-size: 14px;">
                     <a href="https://neonled-store.com/"><img src="img/logo.webp" alt="Logo" width="70px" title="Logo"></a>
                     
-                    <p>Jr. Paruro 1401 tda 130 CC Shoping Center</p>
+                    <p>Jr. Paruro 1401 tda 130 CC Shoping Center, Cercado de Lima.</p>
                     <p>Celular: 994078320</p>
                     <p>Email: <a href="mailto:info.neonledstore@gmail.com" style="color: #37b1e1;">info.neonledstore@gmail.com</a></p>													
                         <p style="color: #d353f3; font-size: 12px; text-align: center;margin: 10px 0 0" id="brand">&#169; 2022 Neon House Led</p>		
