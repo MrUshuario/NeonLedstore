@@ -1,26 +1,22 @@
 
-function cambioClass() {
-    document.getElementById("cambioFontAdmin").className = "row espacio-admin";
-    document.getElementById("cambioFontAdmin2").className = "row espacio-admin";
-    document.getElementById("cambioFontAdmin3").className = "fondo-null espacio-admin";
-    document.getElementById("MostrarDatos").className = "fondo-null espacio-admin";
+function cambioHistorial() {
+    document.getElementById("cambioFontHistorial").className = "row espacio-admin"; // se muestra
+    document.getElementById("cambioDatosUsuarios").className = "fondo-null espacio-admin";
+    document.getElementById("cambioFontContra").className = "fondo-null espacio-admin";
+   
 }
-
-function cambioClassPas() {
-    document.getElementById("cambioFontAdmin3").className = "row espacio-admin";
-    document.getElementById("cambioFontAdmin").className = "fondo-null espacio-admin";
-    document.getElementById("cambioFontAdmin2").className = "fondo-null espacio-admin";
-    document.getElementById("MostrarDatos").className = "fondo-null espacio-admin";
-    
-}
-
-function pasarDatos() {
-    document.getElementById("cambioFontAdmin2").className = "fondo-null espacio-admin";
-    document.getElementById("cambioFontAdmin3").className = "fondo-null espacio-admin";
-    document.getElementById("cambioFontAdmin").className = "fondo-null espacio-admin";
-    document.getElementById("MostrarDatos").className = "row espacio-admin";
-    
+function cambioDatosPersonales() {
+    document.getElementById("cambioFontHistorial").className = "fondo-null espacio-admin";
+    document.getElementById("cambioDatosUsuarios").className = "row espacio-admin"; // se muestra
+    document.getElementById("cambioFontContra").className = "fondo-null espacio-admin";
 } 
+function cambioContrasena() {
+    document.getElementById("cambioFontHistorial").className = "fondo-null espacio-admin";
+    document.getElementById("cambioDatosUsuarios").className = "fondo-null espacio-admin";   
+    document.getElementById("cambioFontContra").className = "row espacio-admin"; // se muestra
+    
+}
+
 
 
 
