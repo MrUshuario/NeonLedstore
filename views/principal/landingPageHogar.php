@@ -46,7 +46,7 @@
                 <div class="modal-content rounded-25" id="padreModalLanding">
                 <main class="main rounded-25 row pb-5 d-flex justify-content-center">
                 
-                    <div class="mainContent col-8 my-5 pb-3">
+                    <div class="mainContent neontabla col-8 my-5 pb-3">
                     <h3 class="my-3 fs-2 neones p-50">¿Quieres tener un Hogar visualmente atractivo?</h3>
                     <div class="row d-flex justify-content-center">
                             <!-- FORM INHABILITADO PARA HACER PRUEBAS CON EL BOTON SUBMIT, POSTERIORMENTE REMOVER ONSUBMIT-->

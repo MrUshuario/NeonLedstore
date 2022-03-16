@@ -46,13 +46,17 @@
 
     <script src="build/js/jquery.min.js"></script>
 
-    <!-- Data Tables -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    
 
-    <!-- <link rel="stylesheet" href="build/css/plugins/bootstrap/dataTables.bootstrap.min.css">
-    <script src="build/js/plugins/DataTable/jquery.dataTables.min.js"></script>
-    <script src="build/js/plugins/DataTable/dataTables.bootstrap.min.js"></script>
-    <script src="build/js/plugins/jquery-datatable/jquery.dataTables.js"></script> 
-    <script src="build/js/plugins/jquery-datatable/skin/bootstrap/dataTables.bootstrap.js"></script> -->
+    <!-- Data Tables -->
+    <script src="build/js/plugins/DataTable/jquery.dataTables.min.js"></script> <!--no obligatorio-->
+    <script src="build/js/plugins/DataTable/dataTables.bootstrap.min.js"></script> <!--no obligatorio-->
+    <script src="build/js/plugins/bootstrap-select/bootstrap-select.js"></script>  <!--no obligatorio-->
+    <script src="build/js/plugins/jquery-datatable/jquery.dataTables.js"></script>  <!--no obligatorio-->
+    <script src="build/js/plugins/jquery-datatable/skin/bootstrap/dataTables.bootstrap.js"></script> <!--no obligatorio-->
+     
+
 
     <!-- CSS -->
 
@@ -378,9 +382,9 @@
 
     <script src="build/js/plugins/bootstrap/bootstrap.min.js"></script>
 
+
 </body>
 
 </html>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="build/js/ajax/ajax.layout.js"></script>
 <script src="build/js/ajax/ajaxlogin.js"></script>

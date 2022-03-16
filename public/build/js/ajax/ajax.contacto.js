@@ -126,6 +126,7 @@ function createContactoVis(data) {
     });
   }
 
+  // correo para enviar mensaje a la empresa
 function enviarEmpresa(data){
     console.log(data);
     $.ajax ({

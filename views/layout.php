@@ -24,14 +24,24 @@
     <link rel="stylesheet" href="build/css/themes/all-themes.css">
     <link rel="stylesheet" href="build/css/estilos.css">
     <script src="build/js/sweetalert.min.js"></script>
-
+    
     <script src="build/js/jquery.min.js"></script>
-    <script src="build/js/plugins/DataTable/jquery.dataTables.min.js"></script>
-    <script src="build/js/plugins/DataTable/dataTables.bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="build/js/chart.min.js"></script>
+    
+
+    <script src="build/js/plugins/DataTable/jquery.dataTables.min.js"></script> <!--no obligatorio-->
+    <script src="build/js/plugins/DataTable/dataTables.bootstrap.min.js"></script> <!--no obligatorio-->
+    <script src="build/js/plugins/bootstrap-select/bootstrap-select.js"></script>  <!--no obligatorio-->
+    <script src="build/js/plugins/jquery-datatable/jquery.dataTables.js"></script>  <!--no obligatorio-->
+    <script src="build/js/plugins/jquery-datatable/skin/bootstrap/dataTables.bootstrap.js"></script> <!--no obligatorio-->
+    
+
+
 </head>
 
 <body>
+    
 
     <div class="body-dashboard">
         <div class="nav-dashboard">
@@ -136,14 +146,11 @@
 
         </div>
     </div>
-    <script src="build/js/plugins/bootstrap/bootstrap.min.js"></script>
+    <script src="build/js/plugins/bootstrap/bootstrap.min.js"></script> <!--DA UN ERROR DE QUE NO EXISTE-->
     <script src="build/js/script.js"></script>
-     <!-- <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>  -->
-     <script src="build/js/plugins/bootstrap-select/bootstrap-select.js"></script> 
-     <script src="build/js/plugins/jquery-datatable/jquery.dataTables.js"></script> 
-     <script src="build/js/plugins/jquery-datatable/skin/bootstrap/dataTables.bootstrap.js"></script>
-     <script src="build/js/ajax/ajax.dashboard.js"></script>
+    <script src="build/js/ajax/ajax.dashboard.js"></script>
 
     </body>
 
 </html>
+
