@@ -108,6 +108,7 @@ $router = new Router();
     $router->get('/compra/clienteverFactura',[CompraController::class,'clienteverFactura']);
     //POST
     $router->post('/compra/conseguirproductos',[CompraController::class,'conseguirproductos']);
+    $router->post('/compra/clientefactura',[CompraController::class,'clientefactura']);
      //aun no implementado
 
     //method post

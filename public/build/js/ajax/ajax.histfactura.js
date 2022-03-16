@@ -24,13 +24,13 @@ function tableAll(){
 }
 
 
-function   conseguirproductos(){
+function conseguirproductos(){
   $(document).on("click", "#categoriaPro", function (e) {
-  let cod_id = e.target.dataset.idcodigo;
+  //let cod_id = e.target.dataset.idcodigo;
   const table = $('#productoCategoria').DataTable({
     "destroy":true,
     "ajax":{
-      "data": { cod_id: cod_id }, //esto talvez me cause problemas
+      // "data": { cod_id: cod_id }, //esto talvez me cause problemas
       "method":"POST",
       "url":"/compra/conseguirproductos"
     }, 

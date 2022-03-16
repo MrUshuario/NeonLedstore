@@ -24,6 +24,17 @@ class CompraController {
         echo $json;
     }
 
+    //el listar para cliente
+    public static function clienteverFactura(){
+
+            $cli_id =  $_SESSION['id'];
+            $cli_id = filter_var($cli_id, FILTER_VALIDATE_INT); // me puede dar problemas
+            $listado = Compra::consultaCliente($cli_id);
+            echo json_encode([
+                "data" => $listado
+            ]);
+    }
+
     public static function conseguirproductos(){
 
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -35,15 +46,18 @@ class CompraController {
             ]);
         }        
     }
+    //conseguirproducto para cliente
+    public static function clientefactura(){
 
-    public static function clienteverFactura(){
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $cli_id =  $_SESSION['id'];
             $cli_id = filter_var($cli_id, FILTER_VALIDATE_INT); // me puede dar problemas
-            $listado = Compra::consultaCliente($cli_id);
+            $listado = CompraDetalle::conseguirproductos($cli_id);
             echo json_encode([
                 "data" => $listado
             ]);
-        }
+        }        
     }
+
+
 }
