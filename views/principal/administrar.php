@@ -21,6 +21,28 @@
 
 
                         <div class="mostrar-res" id="es">
+                            
+                         <!-- segundo registro  -->
+                            <div class="row espacio-admin" id="clientecompraver">
+                                <div class="col-sm-12">
+                                    <table class="table table-purple table-striped table-hover  w-100 table-light table-fixed" id="compratabla">
+                                        <!--PARA PONER CON BLANCO: table table-striped table-hover table-light table-fixed w-100-->    
+                                        <thead class="table-dark sticky">
+                                            <tr>
+                                                <th>Fecha</th>
+                                                <th>Precio total</th>
+                                                <th>Ver detalles</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                        </tbody>
+                                    </table>
+
+                                </div>
+
+                            </div> <!--fin de segundo registro -->
+
+
                             <!-- primer registro -->
                             <div class="row espacio-admin" id="cambioFontAdmin">
                                 <div class="col-sm-12">
@@ -51,41 +73,7 @@
                                 </div>
                             </div>
                             
-                            <!-- segundo registro  -->
-
-                            <div class="row espacio-admin" id="cambioFontAdmin2">
-
-                                <div class="col-sm-12">
-
-                                    <table class="table table-purple table-striped table-hover  w-100 table-light table-fixed" id="compratabla">
-
-                                        <!--PARA PONER CON BLANCO: table table-striped table-hover table-light table-fixed w-100-->    
-
-                                        <thead class="table-dark sticky">
-
-                                            <tr>
-
-                                                <th>Código </th>
-
-                                                <th>Fecha</th>
-
-                                                <th>Precio total </th>
-
-                                                <th>Cliente </th>
-
-                                            </tr>
-
-                                            </thead>
-
-                                            <tbody>
-
-                                        </tbody>
-
-                                    </table>
-
-                                </div>
-
-                            </div> <!--fin de segundo registro -->
+                           
 
 
 
@@ -173,5 +161,6 @@
 
 
         <script src="build/js/ajax/ajax.administrar.js"></script>
+        <script src="build/js/ajax/ajax.histfactura.js"></script>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </div>

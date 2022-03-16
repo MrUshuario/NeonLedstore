@@ -23,7 +23,7 @@ class Compra extends ActiveRecord {
         $this->precio_total = $args['precio_total '] ?? null;
         $this->cli_id = $args['cli_id'] ?? null;
   }
-
+//para que vea el administrador
   public static function compraXCliente()
   {
     $query = "SELECT  co.id, co.com_fecha, co.precio_total, concat(co.cli_id,',',cl.cli_nombre)  AS cli_id 
@@ -33,5 +33,14 @@ class Compra extends ActiveRecord {
       $resultado = static::consultarSQL($query);
       return $resultado;
   }
+//para que vea el cliente
+public static function consultaCliente($cli_id)
+{
+  $query = "SELECT  com_fecha, precio_total
+  FROM tab_compra WHERE cli_id = ${cli_id}";
+
+    $resultado = static::consultarSQL($query);
+    return $resultado;
+}
 
 }
