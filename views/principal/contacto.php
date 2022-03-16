@@ -105,7 +105,7 @@
                                     <textarea  class="p-2 neontextlanding  border-0 border bg-transparent rounded w-100 me-1 me-sm-4 my-3 d-block text-white" type="text" rows="5" name="pregunta" id="pregunta" placeholder="Escriba su pregunta"></textarea> <br>
                                         
                                             <label for="formConsulta">Opción de Interés:  </label>
-                                                <select class="p-2 neontextlanding  border-0 border bg-transparent rounded w-100 me-1 me-sm-4 my-3 d-block text-black" name="consulta" id="consulta" placeholder="Elija Opcion"><br>             
+                                                <select id="consulta" name="consulta" class="p-2 neontextlanding  border-0 border bg-transparent rounded w-100 me-1 me-sm-4 my-3 d-block text-black"><br>             
                                                     
                                                     <option id="formHogar" value="formHogar">Hogar</option>
 	                                                <option id="formEvento" value="formEvento">Evento</option>

@@ -14,8 +14,8 @@
                                 <!-- <a href="#"><li class="listaAdmin"><i class="icon_izq_admin fa-solid fa-user-gear"></i>  Sobre el Cliente</li></a> -->
                                 <a href="#"><li class="listaAdmin" onclick="cambioClass()"><i class="icon_izq_admin fa-solid fa-boxes-stacked"></i>  Historial de Factura</li></a>
                                 <a href="#"><li class="listaAdmin" onclick="pasarDatos()"><i class="fa-regular fa-circle-user"></i>  Datos Personales</li></a>
-                                <a href="#"><li class="listaAdmin" onclick="cambioClassPas()"><i class="fa-solid fa-lock"></i> Actualizar contraseña</li></a>
-                                
+                                <a href="#"><li class="listaAdmin" onclick="cambioClassPas()"><i class="fa-solid fa-lock"></i> Cambiar Contraseña</li></a>
+                                    
                             </ul>                         
                         </div>
 
@@ -23,7 +23,11 @@
                         <div class="mostrar-res" id="es">
                             
                          <!-- principal registro  -->
+<<<<<<< HEAD
                             <div class="row espacio-admin" >
+=======
+                            <div class="row espacio-admin">
+>>>>>>> 159eb5d0a7eb4659d5454ea6287044a45a846e1d
                                 <div class="col-sm-12">
                                     <table class="table table-purple table-striped table-hover  w-100 table-light table-fixed" id="clientecompraver">
                                         <!--PARA PONER CON BLANCO: table table-striped table-hover table-light table-fixed w-100-->    
@@ -166,3 +170,4 @@
 </section>
 <script src="build/js/ajax/ajax.administrar.js"></script>
 <script src="build/js/ajax/ajax.histfactura.js"></script>
+<script src="build/js/ajax/ajax.cambiarContra.js"></script>
