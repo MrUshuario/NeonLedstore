@@ -15,6 +15,7 @@
                                 <a href="#"><li class="listaAdmin" onclick="cambioClass()"><i class="icon_izq_admin fa-solid fa-boxes-stacked"></i>  Historial de Factura</li></a>
                                 <a href="#"><li class="listaAdmin" onclick="pasarDatos()"><i class="fa-regular fa-circle-user"></i>  Datos Personales</li></a>
                                 <a href="#"><li class="listaAdmin" onclick="cambioClassPas()"><i class="fa-solid fa-lock"></i> Actualizar contraseña</li></a>
+                                <a href="#"><li class="listaAdmin" onclick="verificarPas()"><i class="fa-solid fa-lock"></i> Verificar contraseña</li></a>
                                 
                             </ul>                         
                         </div>
