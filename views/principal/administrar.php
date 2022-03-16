@@ -23,11 +23,7 @@
                         <div class="mostrar-res" id="es">
                             
                          <!-- principal registro  -->
-<<<<<<< HEAD
-                            <div class="row espacio-admin" >
-=======
                             <div class="row espacio-admin">
->>>>>>> 159eb5d0a7eb4659d5454ea6287044a45a846e1d
                                 <div class="col-sm-12">
                                     <table class="table table-purple table-striped table-hover  w-100 table-light table-fixed" id="clientecompraver">
                                         <!--PARA PONER CON BLANCO: table table-striped table-hover table-light table-fixed w-100-->    
@@ -171,7 +167,3 @@
 <script src="build/js/ajax/ajax.administrar.js"></script>
 <script src="build/js/ajax/ajax.cambiarContra.js"></script>
 <script src="build/js/ajax/ajax.histfactura.js"></script>
-<<<<<<< HEAD
-<script src="build/js/ajax/ajax.cambiarContra.js"></script>
-=======
->>>>>>> 6c20520a9bf22b58d534da9ad4b969dfa58d5658
