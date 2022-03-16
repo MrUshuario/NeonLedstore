@@ -1,4 +1,4 @@
-
+<section class="bg-black pt-5 pb-5 text-white">
 <div class="pt-5 page-container bg-black">
         <div class="container espAdminR">
             <h2 class="text-white display-1 weight-medium m-3">ADMINISTRAR PHP</h2>
@@ -22,7 +22,7 @@
 
                         <div class="mostrar-res" id="es">
                             
-                         <!-- segundo registro  -->
+                         <!-- principal registro  -->
                             <div class="row espacio-admin" id="clientecompraver">
                                 <div class="col-sm-12">
                                     <table class="table table-purple table-striped table-hover  w-100 table-light table-fixed" id="compratabla">
@@ -40,7 +40,7 @@
 
                                 </div>
 
-                            </div> <!--fin de segundo registro -->
+                            </div> <!--fin de principal registro -->
 
 
                             <!-- primer registro -->
@@ -160,7 +160,9 @@
 <!--Fin Cambio Contraseña-->
 
 
-        <script src="build/js/ajax/ajax.administrar.js"></script>
-        <script src="build/js/ajax/ajax.histfactura.js"></script>
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      
+        <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
 </div>
+</section>
+<script src="build/js/ajax/ajax.administrar.js"></script>
+<script src="build/js/ajax/ajax.histfactura.js"></script>
