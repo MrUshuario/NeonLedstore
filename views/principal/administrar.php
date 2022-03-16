@@ -160,16 +160,10 @@
 <!--Fin Cambio Contraseña-->
 
 
-<<<<<<< HEAD
-        <script src="build/js/ajax/ajax.administrar.js"></script>
-        <script src="build/js/ajax/ajax.cambiarContra.js"></script>
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-</div>
-=======
       
         <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
 </div>
 </section>
 <script src="build/js/ajax/ajax.administrar.js"></script>
+<script src="build/js/ajax/ajax.cambiarContra.js"></script>
 <script src="build/js/ajax/ajax.histfactura.js"></script>
->>>>>>> 50c4d0239d569d211b81b235451e50ebd8ac674c
