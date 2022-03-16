@@ -82,7 +82,9 @@ function obtenerProducto() {
       url: "/producto/getProForm",
       data: data ,
       success: function (e) {
-        const { data } = JSON.parse(e); 
+        const { data } = JSON.parse(e);
+        precioMulti = data.pro_precioMulti; //precioMulti => variable global, para otras func.
+
         $("#id").val(data.id);// para input 
         document.getElementById("pro_precio").innerHTML = "Precio: S/."+data.pro_precio;
         document.getElementById("pro_tamano").innerHTML = data.pro_tamano;
@@ -126,5 +128,17 @@ slider.oninput = function() {
 } */
 
 
+function seleccionarColor(){
+  let selectColor = document.getElementById('selectColor');
+  let color = selectColor.value;
+console.log(precioMulti);
+  if(color == "MULTICOLOR"){
 
+    document.getElementById('lblColorSeleccionado').innerHTML = `<i class="fa-solid fa-tags"></i> Precio Multicolor: S/.${precioMulti}`;
+  }
+  else{
+    document.getElementById('lblColorSeleccionado').innerHTML = ``;
+  }
+  
+}
 

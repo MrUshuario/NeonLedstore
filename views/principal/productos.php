@@ -116,14 +116,15 @@
                           </div>
                         <div class="row d-flex justify-content-center">
 
-                        <form class="formMod col-12 col-sm-10" id="formproducto">
+                        <form class="formMod col-12 col-sm-10 text-center" id="formproducto" >
                             <div class="modal-field">
                                 <label type="text" id="pro_precio" class="font-weight-bold text-white bg-transparent text-center form-control my-3 border-0"></label>
                             </div>
+                            <span id="lblColorSeleccionado" style="color: white; font-weight: bolder;"></span>
                             <div class="modal-field">
                                 <label type="text" id="pro_tamano" class="font-weight-bold text-white bg-transparent text-center form-control my-3 border-0"></label>
                             </div>
-                            <span id="lblColorSeleccionado" style="color: white;"></span>
+                            
                             
                             <select id="selectColor" name="color" onchange="seleccionarColor();" class="neontextlanding border-0 border bg-transparent rounded w-100 me-1 me-sm-4 my-3 d-block">
                                 <option id="proRojo" value="ROJO">ROJO</option>
