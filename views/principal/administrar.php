@@ -169,5 +169,9 @@
 </div>
 </section>
 <script src="build/js/ajax/ajax.administrar.js"></script>
-<script src="build/js/ajax/ajax.histfactura.js"></script>
 <script src="build/js/ajax/ajax.cambiarContra.js"></script>
+<script src="build/js/ajax/ajax.histfactura.js"></script>
+<<<<<<< HEAD
+<script src="build/js/ajax/ajax.cambiarContra.js"></script>
+=======
+>>>>>>> 6c20520a9bf22b58d534da9ad4b969dfa58d5658
