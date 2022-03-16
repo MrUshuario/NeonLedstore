@@ -28,7 +28,7 @@ class Compra extends ActiveRecord {
   {
     $query = "SELECT  co.id, co.com_fecha, co.precio_total, concat(co.cli_id,',',cl.cli_nombre)  AS cli_id 
     FROM tab_compra AS co INNER JOIN tab_cliente AS cl 
-    ON co.id = cl.id";
+    ON co.cli_id = cl.id";
 
       $resultado = static::consultarSQL($query);
       return $resultado;

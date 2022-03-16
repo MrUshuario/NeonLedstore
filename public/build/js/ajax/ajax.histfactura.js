@@ -8,7 +8,7 @@ function tableAll(){
     "destroy":true,
     "ajax":{
       "method":"GET",
-      "url":"compra/clienteverFactura"
+      "url":"/compra/clienteverFactura"
     }, 
     columns: [
       {data:"com_fecha"},

@@ -37,7 +37,7 @@ class CompraController {
     }
 
     public static function clienteverFactura(){
-        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+        if ($_SERVER['REQUEST_METHOD'] == 'GET') {
             $cli_id =  $_SESSION['id'];
             $cli_id = filter_var($cli_id, FILTER_VALIDATE_INT); // me puede dar problemas
             $listado = Compra::consultaCliente($cli_id);

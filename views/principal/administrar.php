@@ -23,9 +23,9 @@
                         <div class="mostrar-res" id="es">
                             
                          <!-- principal registro  -->
-                            <div class="row espacio-admin" id="clientecompraver">
+                            <div class="row espacio-admin" >
                                 <div class="col-sm-12">
-                                    <table class="table table-purple table-striped table-hover  w-100 table-light table-fixed" id="compratabla">
+                                    <table class="table table-purple table-striped table-hover  w-100 table-light table-fixed" id="clientecompraver">
                                         <!--PARA PONER CON BLANCO: table table-striped table-hover table-light table-fixed w-100-->    
                                         <thead class="table-dark sticky">
                                             <tr>
