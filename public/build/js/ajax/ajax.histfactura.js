@@ -24,21 +24,21 @@ function tableAll(){
 }
 
 
-function   conseguirproductos(){
+function conseguirproductos(){
   $(document).on("click", "#categoriaPro", function (e) {
-  let cod_id = e.target.dataset.idcodigo;
+  //let cod_id = e.target.dataset.idcodigo;
   const table = $('#productoCategoria').DataTable({
     "destroy":true,
     "ajax":{
-      "data": { cod_id: cod_id }, //esto talvez me cause problemas
+      // "data": { cod_id: cod_id }, //esto talvez me cause problemas
       "method":"POST",
-      "url":"/compra/conseguirproductos"
+      "url":"/compra/conseguirproductos" // conseguirproductos clientefactura
     }, 
     columns: [
       {data:"id"},
       {data:"cod_id"},
       {data:"det_cantidad"}, 
-      {data: "det_color"}
+      {data: "det_color"} // es total lo enmascare como color
     ]
   }); 
   }); 
