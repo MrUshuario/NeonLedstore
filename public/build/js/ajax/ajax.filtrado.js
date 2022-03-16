@@ -82,8 +82,7 @@ function obtenerProducto() {
       url: "/producto/getProForm",
       data: data ,
       success: function (e) {
-        const { data } = JSON.parse(e);
-        console.log(data);
+        const { data } = JSON.parse(e); 
         $("#id").val(data.id);// para input 
         document.getElementById("pro_precio").innerHTML = "Precio: S/."+data.pro_precio;
         document.getElementById("pro_tamano").innerHTML = data.pro_tamano;
