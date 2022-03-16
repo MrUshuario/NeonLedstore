@@ -105,6 +105,7 @@ $router = new Router();
     //method get 
     $router->get('/compra',[CompraController::class,'Compra']);
     $router->get('/compra/listar',[CompraController::class,'listar']);
+    $router->get('/compra/clienteverFactura',[CompraController::class,'clienteverFactura']);
     //POST
     $router->post('/compra/conseguirproductos',[CompraController::class,'conseguirproductos']);
      //aun no implementado

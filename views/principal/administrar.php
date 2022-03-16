@@ -1,4 +1,4 @@
-
+<section class="bg-black pt-5 pb-5 text-white">
 <div class="pt-5 page-container bg-black">
         <div class="container espAdminR">
             <h2 class="text-white display-1 weight-medium m-3">ADMINISTRAR PHP</h2>
@@ -21,6 +21,28 @@
 
 
                         <div class="mostrar-res" id="es">
+                            
+                         <!-- principal registro  -->
+                            <div class="row espacio-admin">
+                                <div class="col-sm-12">
+                                    <table class="table table-purple table-striped table-hover  w-100 table-light table-fixed" id="clientecompraver">
+                                        <!--PARA PONER CON BLANCO: table table-striped table-hover table-light table-fixed w-100-->    
+                                        <thead class="table-dark sticky">
+                                            <tr>
+                                                <th>Fecha</th>
+                                                <th>Precio total</th>
+                                                <th>Ver detalles</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                        </tbody>
+                                    </table>
+
+                                </div>
+
+                            </div> <!--fin de principal registro -->
+
+
                             <!-- primer registro -->
                             <div class="row espacio-admin" id="cambioFontAdmin">
                                 <div class="col-sm-12">
@@ -51,41 +73,7 @@
                                 </div>
                             </div>
                             
-                            <!-- segundo registro  -->
-
-                            <div class="row espacio-admin" id="cambioFontAdmin2">
-
-                                <div class="col-sm-12">
-
-                                    <table class="table table-purple table-striped table-hover  w-100 table-light table-fixed" id="compratabla">
-
-                                        <!--PARA PONER CON BLANCO: table table-striped table-hover table-light table-fixed w-100-->    
-
-                                        <thead class="table-dark sticky">
-
-                                            <tr>
-
-                                                <th>Código </th>
-
-                                                <th>Fecha</th>
-
-                                                <th>Precio total </th>
-
-                                                <th>Cliente </th>
-
-                                            </tr>
-
-                                            </thead>
-
-                                            <tbody>
-
-                                        </tbody>
-
-                                    </table>
-
-                                </div>
-
-                            </div> <!--fin de segundo registro -->
+                           
 
 
 
@@ -172,7 +160,16 @@
 <!--Fin Cambio Contraseña-->
 
 
+<<<<<<< HEAD
         <script src="build/js/ajax/ajax.administrar.js"></script>
         <script src="build/js/ajax/ajax.cambiarContra.js"></script>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </div>
+=======
+      
+        <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+</div>
+</section>
+<script src="build/js/ajax/ajax.administrar.js"></script>
+<script src="build/js/ajax/ajax.histfactura.js"></script>
+>>>>>>> 50c4d0239d569d211b81b235451e50ebd8ac674c
