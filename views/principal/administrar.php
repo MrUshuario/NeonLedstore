@@ -12,18 +12,19 @@
                             </div>
                             <ul class="menuAdmin">
                                 <!-- <a href="#"><li class="listaAdmin"><i class="icon_izq_admin fa-solid fa-user-gear"></i>  Sobre el Cliente</li></a> -->
-                                <a href="#"><li class="listaAdmin" onclick="cambioClass()"><i class="icon_izq_admin fa-solid fa-boxes-stacked"></i>  Historial de Factura</li></a>
-                                <a href="#"><li class="listaAdmin" onclick="pasarDatos()"><i class="fa-regular fa-circle-user"></i>  Datos Personales</li></a>
-                                <a href="#"><li class="listaAdmin" onclick="cambioClassPas()"><i class="fa-solid fa-lock"></i> Cambiar Contraseña</li></a>
+                                <a href="#"><li class="listaAdmin" onclick="cambioHistorial()"><i class="icon_izq_admin fa-solid fa-boxes-stacked"></i>  Historial de Factura</li></a>
+                                <a href="#"><li class="listaAdmin" onclick="cambioDatosPersonales()"><i class="fa-regular fa-circle-user"></i>  Datos Personales</li></a>
+                                <a href="#"><li class="listaAdmin" onclick="cambioContrasena()"><i class="fa-solid fa-lock"></i> Cambiar Contraseña</li></a>
                                     
                             </ul>                         
                         </div>
 
 
                         <div class="mostrar-res" id="es">
-                            
-                         <!-- principal registro  -->
-                            <div class="row espacio-admin">
+                            <!-- primer registro -->
+                            <div class="row espacio-admin" id="cambioFontHistorial">
+                              <!-- principal registro  -->
+                              <div class="row espacio-admin">
                                 <div class="col-sm-12">
                                     <table class="table table-purple table-striped table-hover  w-100 table-light table-fixed" id="clientecompraver">
                                         <!--PARA PONER CON BLANCO: table table-striped table-hover table-light table-fixed w-100-->    
@@ -41,15 +42,9 @@
                                 </div>
 
                             </div> <!--fin de principal registro -->
-
-
-                            <!-- primer registro -->
-                            <div class="row espacio-admin" id="cambioFontAdmin">
                                 <div class="col-sm-12">
                                     <table class="table table-purple table-striped table-hover w-100 table-light table-fixed dataTable no-footer" id="CompraDetalle" role="grid" aria-describedby="CompraDetalle_info" style="width: 822px;">
-
                                         <!--PARA PONER CON BLANCO: table table-striped table-hover table-light table-fixed w-100-->    
-
                                         <thead class="table-dark sticky">
                                             <tr role="row">
                                                 <th class="sorting_asc" tabindex="0" aria-controls="CompraDetalle" rowspan="1" colspan="1" aria-label="Codigo detalle: activate to sort column descending" aria-sort="ascending" style="width: 143px;">Codigo detalle</th>
@@ -72,14 +67,10 @@
                                     </table> 
                                 </div>
                             </div>
-                            
-                           
-
-
 
                          <!--Datos Personales-->     
                          <div class="container">
-                                <section class="fondo-null espacio-admin" id="MostrarDatos">
+                                <section class="fondo-null espacio-admin" id="cambioDatosUsuarios">
                                         <div class="container yo">
                                             <div class="col mx-1  pt-3 mb-1 border neontabla">
                                                     <h2 class= "neones"><i class="fa-solid fa-user-pen"></i> Datos Personales </h2>
@@ -113,7 +104,7 @@
 
                             <!--Form cambio Contraseña-->
                             <div class="container">
-                                <section class="fondo-null espacio-admin" id="cambioFontAdmin3">
+                                <section class="fondo-null espacio-admin" id="cambioFontContra">
                                         <div class="container">
                                             <div class="col mx-1  pt-3 mb-1 border neontabla">
                                                     <h2 class= "neones"><i class="fa-solid fa-key"></i> Cambio Cantraseña </h2>
