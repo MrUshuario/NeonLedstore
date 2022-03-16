@@ -14,9 +14,8 @@
                                 <!-- <a href="#"><li class="listaAdmin"><i class="icon_izq_admin fa-solid fa-user-gear"></i>  Sobre el Cliente</li></a> -->
                                 <a href="#"><li class="listaAdmin" onclick="cambioClass()"><i class="icon_izq_admin fa-solid fa-boxes-stacked"></i>  Historial de Factura</li></a>
                                 <a href="#"><li class="listaAdmin" onclick="pasarDatos()"><i class="fa-regular fa-circle-user"></i>  Datos Personales</li></a>
-                                <a href="#"><li class="listaAdmin" onclick="cambioClassPas()"><i class="fa-solid fa-lock"></i> Actualizar contraseña</li></a>
-                                <a href="#"><li class="listaAdmin" onclick="verificarPas()"><i class="fa-solid fa-lock"></i> Verificar contraseña</li></a>
-                                
+                                <a href="#"><li class="listaAdmin" onclick="cambioClassPas()"><i class="fa-solid fa-lock"></i> Cambiar Contraseña</li></a>
+                                    
                             </ul>                         
                         </div>
 
@@ -174,5 +173,6 @@
 
 
         <script src="build/js/ajax/ajax.administrar.js"></script>
+        <script src="build/js/ajax/ajax.cambiarContra.js"></script>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </div>
