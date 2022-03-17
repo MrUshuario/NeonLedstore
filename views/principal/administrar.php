@@ -15,7 +15,7 @@
                                 <a href="#"><li class="listaAdmin" onclick="cambioHistorial()"><i class="icon_izq_admin fa-solid fa-boxes-stacked"></i>  Historial de Factura</li></a>
                                 <a href="#"><li class="listaAdmin" onclick="cambioDatosPersonales()"><i class="fa-regular fa-circle-user"></i>  Datos Personales</li></a>
                                 <a href="#"><li class="listaAdmin" onclick="cambioContrasena()"><i class="fa-solid fa-lock"></i> Cambiar Contraseña</li></a>
-                                <a href="#"><li class="listaAdmin" onclick="verificacionCorreo()"><i class="fas fa-user-check"></i> Verificar Correo</li></a>
+                                <a href="#"><li class="listaAdmin" onclick="verificacionCorreo()"><i class="fas fa-user-check"></i> Activar cuenta</li></a>
                             </ul>                         
                         </div>
 
@@ -146,7 +146,7 @@
                               <!-- principal registro  -->
                               <div class="row espacio-admin">
                                 <div class="col-sm-12 border neontabla">
-                                    <button class="btn btn-primary" style="margin-left: 300px; margin-right: 300px; margin-top: 10px; margin-bottom: 10px;">Recibir un correo</button>
+                                    <button class="btn btn-primary neontextlanding bg-black neones3" onclick="correoverificacion()" style="margin-left: 300px; margin-right: 300px; margin-top: 10px; margin-bottom: 10px;">Verificar Correo</button>
                                 </div>
                               </div>
                             </div>

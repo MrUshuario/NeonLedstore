@@ -99,5 +99,33 @@ class AdminController  {
     public static function grafico(){
         
     }
+    public static function correoverificacion(){
+        $data = Cliente::find($_SESSION['id']);
+        
+        $to = $data->cli_email;   
+        $subject = 'Signup | Verificacion'; // Give the email a subject 
+        $message = '
+ 
+            Thanks for signing up!
+            Your account has been created
+            Please click this link to activate your account:
+            http://www.yourwebsite.com/verify.php?email='.$data->cli_email.'
+            
+            '; // Our message above including the link
+                     
+            $headers = 'From:noreply@nls.com' . "\r\n"; // Set from headers
+            mail($to, $subject, $message, $headers); // Send our email
+
+            if(isset($_GET[$data->cli_email]) && !empty($_GET[$data->cli_email])){
+                // Verify data
+                $search = mysql_query("SELECT email active FROM tab_cliente WHERE email='".$data->cli_email."' AND '".$data->cli_verificado."' ='2'") or die(mysql_error()); 
+                $match  = mysql_num_rows($search);
+            }else{
+                // Invalid approach
+            }
+            echo json_encode([
+                'data'=>$data->cli_email
+            ]);
+    }
 
 }

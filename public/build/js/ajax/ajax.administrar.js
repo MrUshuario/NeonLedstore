@@ -25,6 +25,19 @@ function verificacionCorreo(){
     document.getElementById("cambioFontContra").className = "fondo-null espacio-admin";
 }
 
+function correoverificacion(){
+    $.ajax({
+      url: '/configuracion/correoverificacion',
+      type: 'GET',
+      success: function(e){
+        console.log(e);
+        let { res } = JSON.parse(e);
+        if(res){
 
-
+        }else{
+            
+        }
+      }
+    });
+}
 
