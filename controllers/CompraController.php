@@ -57,8 +57,7 @@ class CompraController {
             //metodo de verificación
             $verificar = Compra::verificarCliente($cli_id);
             //obtener datos si sale que el CLI_ID no tiene dicha factura
-            //if ($verificar->num_rows == 0) {
-            if (false) {
+            if ($verificar->num_rows == 0) {
                 echo json_encode([
                     "data" => "false"
                 ]);
