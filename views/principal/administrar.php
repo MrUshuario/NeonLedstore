@@ -56,13 +56,6 @@
                                         </thead>
 
                                         <tbody>
-                                            <tr role="row" class="odd">
-                                                <td class="sorting_1">1</td>
-                                                <td>0 </td>
-                                                <td>00,ejemplo</td>
-                                                <td>0</td>
-                                                <td>ejemplo</td>
-                                            </tr>
                                         </tbody>
                                     </table> 
                                 </div>
@@ -151,8 +144,7 @@
 <!--Fin Cambio Contraseña-->
 
 
-      
-        <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+    
 </div>
 </section>
 <script src="build/js/ajax/ajax.administrar.js"></script>

@@ -23,7 +23,6 @@ function tableAll(){
 
 }
 
-
 function conseguirproductos(){
   $(document).on("click", "#categoriaPro", function (e) {
   let cod_id = e.target.dataset.idcodigo;
