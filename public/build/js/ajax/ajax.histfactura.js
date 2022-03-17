@@ -15,7 +15,7 @@ function tableAll(){
       {data:"precio_total"},
       {data: null,
         render: function(data,type,row){
-          return `<button class="btn-inline btn-info" id="categoriaPro">Ver Detalle</button>`;
+          return `<button class="btn-inline btn-info" data-idcodigo="${data.id}" id="categoriaPro" >Ver Detalle</button>`;
         }
       }
     ]
@@ -23,22 +23,23 @@ function tableAll(){
 
 }
 
-
 function conseguirproductos(){
   $(document).on("click", "#categoriaPro", function (e) {
-  let cod_id = e.target.dataset.idcodigo;
-  const table = $('#productoCategoria').DataTable({
+    let cod_id = e.target.dataset.idcodigo;
+  const table = $('#CompraDetalle').DataTable({
     "destroy":true,
     "ajax":{
       "data": { cod_id: cod_id }, //esto talvez me cause problemas
       "method":"POST",
-      "url":"/compra/conseguirproductos" // conseguirproductos clientefactura
+      "url":"/compra/clientefactura" //  clientefactura
     }, 
     columns: [
       {data:"id"},
       {data:"cod_id"},
       {data:"det_cantidad"}, 
-      {data: "det_color"} // es total lo enmascare como color
+      {data: "pro_id"},
+      {data: "det_color"}
+       // es total lo enmascare como color
     ]
   }); 
   }); 
