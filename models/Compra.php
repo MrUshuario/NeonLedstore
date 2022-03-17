@@ -33,14 +33,24 @@ class Compra extends ActiveRecord {
       $resultado = static::consultarSQL($query);
       return $resultado;
   }
+
+
 //para que vea el cliente
 public static function consultaCliente($cli_id)
 {
-  $query = "SELECT  com_fecha, precio_total
+  $query = "SELECT  com_fecha, precio_total, id
   FROM tab_compra WHERE cli_id = ${cli_id}";
 
     $resultado = static::consultarSQL($query);
     return $resultado;
+}
+
+//verificar cliente al ver su factura, evita que ponga datos fraudulentos // ESTA DANDO ERRORES
+public function verificarCliente($sessionid){
+  $query = "SELECT co.cli_id FROM ".static::$tabla." AS co
+  INNER JOIN tab_cliente AS cl  ON co.cli_id = cl.id WHERE co.cli_id=${sessionid}";
+  $resultado = self::$db->query($query);
+  return $resultado;
 }
 
 }

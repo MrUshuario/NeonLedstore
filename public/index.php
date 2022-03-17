@@ -168,7 +168,8 @@ $router = new Router();
         $router->get("/RegistroCliente", [PrincipalController::class, 'regCliente']);
         $router->get("/ProductoDetallado", [PrincipalController::class, 'proDetallado']);
         $router->get("/administrar", [PrincipalController::class, 'administrar']);
-        $router->get("/cart", [PrincipalController::class, 'cart']);        
+        $router->get("/cart", [PrincipalController::class, 'cart']); 
+        $router->get("/verificado", [PrincipalController::class, 'verificado']);      
 
 
 
