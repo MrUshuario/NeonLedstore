@@ -318,7 +318,7 @@
 
                     <p class="parrafoFooter text-white"><i class="fas fa-mobile-alt"></i>994 078 320</p>
 
-                    <a id="a-email" href="info.neonledstore@gmail.com" class="parrafoFooter text-white"><i class="fas fa-envelope"></i>info.neonledstore@gmail.com</a>
+                    <a id="a-email" href="info.neonledstore@gmail.com" class="parrafoFooter text-white"><i class="fas fa-envelope bg-black"></i>info.neonledstore@gmail.com</a>
 
                     <a class="reset-href" href="https://api.whatsapp.com/send?phone=51994078320" target="_blank">
 
@@ -338,13 +338,13 @@
 
                         <a class="reset-href" href="https://api.whatsapp.com/send?phone=51994078320" target="_blank">
 
-                            <li class="redSocialWhatsapp d-inline me-1"><i class="fab fa-whatsapp fa-2x"></i></li>
+                            <li class="redSocialWhatsapp d-inline me-1"><i class="fab fa-whatsapp fa-2x bg-black"></i></li>
 
                         </a>
 
                         <a class="reset-href" href="https://www.facebook.com/Neon-Led-store-100244098454782" target="_blank">
 
-                            <li class="redSocial d-inline me-1"><i class="fab fa-facebook fa-2x"></i></li>
+                            <li class="redSocial d-inline me-1"><i class="fab fa-facebook fa-2x bg-black"></i></li>
 
                         </a>
 
@@ -354,9 +354,9 @@
 
                         </a>
 
-                        <a class="reset-href" href="https://www.instagram.com/neon_led_store/?hl=es" target="_blank">
+                        <a class="reset-href" href="https://www.instagram.com/nhldecoracioncomercial/?utm_medium=copy_link" target="_blank">
 
-                            <li class="redSocial d-inline me-1"><i class="fab fa-instagram fa-2x"></i></li>
+                            <li class="redSocial d-inline me-1"><i class="fab fa-instagram fa-2x bg-black"></i></li>
 
                         </a>
 
