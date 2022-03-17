@@ -46,7 +46,8 @@ public static function consultaCliente($cli_id)
 }
 
 //verificar cliente al ver su factura, evita que ponga datos fraudulentos // ESTA DANDO ERRORES
-public function verificarCliente($sessionid){
+public static function verificarCliente($sessionid)
+{
   $query = "SELECT co.cli_id FROM ".static::$tabla." AS co
   INNER JOIN tab_cliente AS cl  ON co.cli_id = cl.id WHERE co.cli_id=${sessionid}";
   $resultado = self::$db->query($query);
