@@ -25,6 +25,36 @@ function verificacionCorreo(){
     document.getElementById("cambioFontContra").className = "fondo-null espacio-admin";
 }
 
+function bloquear(duracionBloqueo, boton){  //bloquear el boton para evitar recibir muchos correos
 
+    boton.disabled = true;
+    
+    // habilitarlo después la duración de bloqueo especificada
+    setTimeout(() => boton.disabled = false, duracionBloqueo);
+  
+}
 
+function correoverificacion(){
+    $.ajax({
+      url: '/configuracion/correoverificacion',
+      type: 'GET',
+      success: function(e){
+        console.log(e);
+        let json = JSON.parse(e);
+        if(json.prueba == true){
+            swal({
+                title: 'Revise su correo',
+                icon: "success",
+              });
+            
+        }else{
+            swal({
+                title: "Ups. Hubo un error, intentelo de nuevo.",
+                icon: "error",
+              });
+            
+        }
+      }
+    });
+}
 

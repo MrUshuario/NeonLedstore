@@ -73,7 +73,14 @@
     text-shadow: 0 0 5px red, 0 0 15px red, 0 0 30px red, 0 0 40px red;
     font-family: Concert One;
 }
-
+.neones3 {
+    text-align: center;
+    margin-top: 10px;
+    color: white !important;
+    font-size:20px;
+    text-shadow: 0 0 5px red, 0 0 15px red, 0 0 30px red, 0 0 40px red;
+    font-family: Concert One;
+}
 .neones.azules {
     text-shadow: 0 0 5px blue, 0 0 15px blue, 0 0 30px blue, 0 0 40px blue;
 }
