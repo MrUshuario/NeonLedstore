@@ -1,9 +1,17 @@
 <?php 
 namespace Controllers;
+//llama a conrasena
+include 'contra.php';
+
+define('contra', $contrasena);
 
 use Model\Users;
 use Model\Cliente;
 use MVC\Router;
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+
+
 
 class AdminController  {
 
@@ -101,31 +109,97 @@ class AdminController  {
     }
     public static function correoverificacion(){
         $data = Cliente::find($_SESSION['id']);
-        
-        $to = $data->cli_email;   
-        $subject = 'Signup | Verificacion'; // Give the email a subject 
-        $message = '
- 
-            Thanks for signing up!
-            Your account has been created
-            Please click this link to activate your account:
-            http://www.yourwebsite.com/verify.php?email='.$data->cli_email.'
-            
-            '; // Our message above including the link
-                     
-            $headers = 'From:noreply@nls.com' . "\r\n"; // Set from headers
-            mail($to, $subject, $message, $headers); // Send our email
+        $mail = new PHPMailer();
+        $mail->isSMTP();
+        $mail->Port = 465;
+        //$mail->Timeout = 6000;
+        //$mail->SMTPDebug = SMTP::DEBUG_SERVER;  -> solo para ver acciones del ruteo del mail
+        $mail->SMTPSecure= PHPMailer::ENCRYPTION_SMTPS;
+        $mail->SMTPAuth=true;
+        $mail->Host ='smtp.gmail.com';
+        $mail->Username = 'renleds22@gmail.com';
+        //temporal llamamos una contraseña para ocultarla
+        $mail->Password = contra;
 
-            if(isset($_GET[$data->cli_email]) && !empty($_GET[$data->cli_email])){
-                // Verify data
-                $search = mysql_query("SELECT email active FROM tab_cliente WHERE email='".$data->cli_email."' AND '".$data->cli_verificado."' ='2'") or die(mysql_error()); 
-                $match  = mysql_num_rows($search);
+        $mail->setFrom('renleds22@gmail.com','NeonLedStore'); //direccion desde donde se enviará
+        $mail->addAddress($data->cli_email); ////direccion de usuario que recibe
+        $mail->Subject = "Verificacion de correo";
+
+        //Habilitar HTML
+        $mail->isHTML(true);
+        $mail->CharSet= 'UTF-8';       
+        $contenido = '
+ 
+            Gracias por crear tu cuenta!
+            Por favor haga click en el siguiente enlace para activar su cuenta mientras su sesion esta abierta:
+
+            localhost:8000/verificado?email='.password_hash($data->cli_email, PASSWORD_DEFAULT).'&verificado='.password_hash($data->cli_verificado, PASSWORD_DEFAULT).'
+            
+            '; // cambiar localhost:8000 al url del sitio web cuando este sea subido
+        
+        $mail->Body = $contenido;
+
+        echo json_encode([
+            "prueba" => $mail->send(),
+            ""=>$mail->ErrorInfo
+        ]);
+    }
+    public static function verificado(){
+        
+        $data = Cliente::find($_SESSION['id']);
+        $email = $_GET["email"];
+        $verificado = $_GET["verificado"];
+        if(isset($email) && !empty($email) AND isset($verificado) && !empty($verificado)){
+            // Verify data
+            if(password_hash($data->cli_email, PASSWORD_DEFAULT) == $email AND password_hash($data->cli_verificado, PASSWORD_DEFAULT) == $verificado){
+                mysql_query("UPDATE tab_cliente SET cli_verificado = '1' WHERE email='".$data->cli_email."'") or die(mysql_error()); 
+                //$match  = mysql_num_rows($search); esto era para contar las filas de resultado de otra sentencia que pensaba usar 
+                echo '<section class="bg-black pt-5 pb-5 text-white">
+
+                <div class="container d-flex justify-content-center">
+            
+                    <div class="text-center mw-60">
+                        <h2>Su cuenta ha sido activada!</h2>
+                        <div class="d-flex justify-content-center">
+                            <h3>Gracias por verificar su cuenta, puede continuar con sus compras :)</h3>
+                        </div>
+                    </div>
+            
+                </div>
+            
+                </section>';
             }else{
-                // Invalid approach
+                echo 'aqui 1';
             }
-            echo json_encode([
-                'data'=>$data->cli_email
-            ]);
+            
+        }else{
+            // Invalid approach
+            echo '<section class="bg-black pt-5 pb-5 text-white">
+
+            <div class="container d-flex justify-content-center">
+        
+                <div class="text-center mw-60">
+                    <h2>UPS</h2>
+                    <div class="d-flex justify-content-center">
+                        <h3>Hubo un error en la validacion</h3>
+                    </div>
+                </div>
+        
+            </div>
+        
+            </section>';
+        }
+        echo json_encode([
+            'data'=>$data->cli_verificado
+            
+        ]);
+        echo $email;
+        
+        echo "
+        ";
+
+        echo password_hash($data->cli_email, PASSWORD_DEFAULT);
+        echo $data->cli_email;
     }
 
 }

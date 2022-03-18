@@ -139,7 +139,7 @@
                               <!-- principal registro  -->
                               <div class="row espacio-admin">
                                 <div class="col-sm-12 border neontabla">
-                                    <button class="btn btn-primary neontextlanding bg-black neones3" onclick="correoverificacion()" style="margin-left: 300px; margin-right: 300px; margin-top: 10px; margin-bottom: 10px;">Verificar Correo</button>
+                                    <button id='botonveri' class="btn btn-primary neontextlanding bg-black neones3" onclick="correoverificacion(); bloquear(10000000,this)" style="margin-left: 300px; margin-right: 300px; margin-top: 10px; margin-bottom: 10px;">Verificar Correo</button>
                                 </div>
                               </div>
                             </div>

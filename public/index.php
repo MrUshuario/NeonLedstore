@@ -120,6 +120,7 @@ $router = new Router();
     $router->get("/configuracion", [AdminController::class,'indexConfig']);
     $router->get("/configuracion/getData", [AdminController::class,'dataConfig']);
     $router->get("/configuracion/correoverificacion", [AdminController::class,'correoverificacion']);
+    $router->get("/configuracion/verificado", [AdminController::class,'verificado']);
     
     // method post
     $router->post("/configuracion/verificar", [AdminController::class,'verificar']);
