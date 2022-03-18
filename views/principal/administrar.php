@@ -70,15 +70,15 @@
                                                         <div class="container">
                                                         <div class="row">
                                                             <div class=" my-auto mx-auto">          
-                                                                <input class="p-2 neontextlanding  border-0 border bg-transparent rounded w-100 me-1 me-sm-4 my-3 d-block text-white" type="hidden" id="id"><!--variable invisible-->
+                                                                <input class="p-2 neontextlanding  border-0 border bg-transparent rounded w-100 me-1 me-sm-4 my-3 d-block text-white" type="hidden" id="per_id"><!--variable invisible-->
                                                                 <label for="nombre" style="color: white;">Nombre: </label>          
-                                                                <input class="p-2 neontextlanding bg-transparent border-0 border  rounded w-100 me-1 me-sm-4 my-3 d-block text-white" type="text" id="cli_nombre"><br>
+                                                                <input class="p-2 neontextlanding bg-transparent border-0 border  rounded w-100 me-1 me-sm-4 my-3 d-block text-white" type="text" id="per_nombre"><br>
                                                                 <label for="nombre" style="color: white;">Apellidos: </label>  
-                                                                <input class="p-2 neontextlanding bg-transparent border-0 border  rounded w-100 me-1 me-sm-4 my-3 d-block text-white" type="text" id="cli_apellidos" value="apellido"><br>
+                                                                <input class="p-2 neontextlanding bg-transparent border-0 border  rounded w-100 me-1 me-sm-4 my-3 d-block text-white" type="text" id="per_apellidos" value="apellido"><br>
                                                                 <label for="nombre" style="color: white;">Correo: </label>
-                                                                <input class="p-2 neontextlanding bg-transparent border-0 border  rounded w-100 me-1 me-sm-4 my-3 d-block text-white" type="email" id="cli_email" value="correo" disabled><br>
+                                                                <input class="p-2 neontextlanding bg-transparent border-0 border  rounded w-100 me-1 me-sm-4 my-3 d-block text-white" type="email" id="per_email" disabled><br>
                                                                 <label for="nombre" style="color: white;">Teléfono: </label>  
-                                                                <input class="p-2 neontextlanding bg-transparent border-0 border  rounded w-100 me-1 me-sm-4 my-3 d-block text-white" type="number" id="cli_telefono"> <br>
+                                                                <input class="p-2 neontextlanding bg-transparent border-0 border  rounded w-100 me-1 me-sm-4 my-3 d-block text-white" type="number" id="per_telefono"> <br>
 
                                                                 <div class="espacio-AA">
                                                                     <button type="submit" class="neonbottonlanding btn btn-primary" style="width: auto; height: auto; font-size: 14px;" id="save2">Guardar Datos</button> 
