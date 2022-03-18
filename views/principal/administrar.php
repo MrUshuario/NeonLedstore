@@ -1,14 +1,14 @@
-<section class="bg-black pt-5 pb-5 text-white">
-<div class="pt-5 page-container bg-black">
+<!-- <section class="bg-black pt-5 pb-5 text-white"> -->
+<div class="pt-3 page-container bg-black text-white">
         <div class="container espAdminR">
-            <h2 class="text-white display-1 weight-medium m-3">ADMINISTRAR PHP</h2>
+            <h2 class="text-white display-1 weight-medium m-3">ADMINISTRAR</h2>
         
                     <!--CONTENIDO-->       
             
                     <div class="recipient">
                         <div class="contenedor-menuAdmin">
                             <div class="sobre-admin">
-                                <h3><i class="fa-solid fa-address-card"></i> Sobre el Cliente: </h3>
+                                <h3 class="text-white"><i class="fa-solid fa-address-card"></i> Sobre el Cliente: </h3>
                             </div>
                             <ul class="menuAdmin">
                                 <!-- <a href="#"><li class="listaAdmin"><i class="icon_izq_admin fa-solid fa-user-gear"></i>  Sobre el Cliente</li></a> -->
@@ -24,28 +24,31 @@
                             <!-- primer registro -->
                             <div class="row espacio-admin" id="cambioFontHistorial">
                               <!-- principal registro  -->
-                              <div class="row espacio-admin">
-                                <div class="col-sm-12">
-                                    <table class="table table-purple table-striped table-hover  w-100 table-light table-fixed" id="clientecompraver">
+                                <div class="row espacio-admin border neontabla">
+                                    <div class="pt-3 col-sm-12">
+                                        <table class="table table-purple table-striped table-hover  w-100 table-light table-fixed" id="clientecompraver">
                                         <!--PARA PONER CON BLANCO: table table-striped table-hover table-light table-fixed w-100-->    
-                                        <thead class="table-dark sticky">
-                                            <tr>
-                                                <th>Fecha</th>
-                                                <th>Precio total</th>
-                                                <th>Ver detalles</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                        </tbody>
-                                    </table>
+                                            <thead class="tableAdm">
+                                                <tr>
+                                                    <th>Fecha</th>
+                                                    <th>Precio total</th>
+                                                    <th>Ver detalles</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
 
-                                </div>
+                                            </tbody>
+                                        </table>
 
-                            </div> <!--fin de principal registro -->
+                                    </div>
+                                   
+                                    <hr style="width: 95%">
+                           
+                                <!--fin de principal registro -->
                                 <div class="col-sm-12">
                                     <table class="table table-purple table-striped table-hover w-100 table-light table-fixed dataTable no-footer" id="CompraDetalle" role="grid" aria-describedby="CompraDetalle_info" style="width: 822px;">
                                         <!--PARA PONER CON BLANCO: table table-striped table-hover table-light table-fixed w-100-->    
-                                        <thead class="table-dark sticky">
+                                        <thead class="tableAdm">
                                             <tr role="row">
                                                 <th class="sorting" tabindex="0" aria-controls="CompraDetalle" rowspan="1" colspan="1" aria-label="Producto ID: activate to sort column ascending" style="width: 119px;">Producto ID</th>
                                                 <th class="sorting_asc" tabindex="0" aria-controls="CompraDetalle" rowspan="1" colspan="1" aria-label="Precio Compra: activate to sort column descending" aria-sort="ascending" style="width: 143px;">Precio</th>
@@ -60,9 +63,9 @@
                                     </table> 
                                 </div>
                             </div>
-
+                        </div>
                          <!--Datos Personales-->     
-                         <div class="container">
+                            <div class="container">
                                 <section class="fondo-null espacio-admin" id="cambioDatosUsuarios">
                                         <div class="container yo">
                                             <div class="col mx-1  pt-3 mb-1 border neontabla">
@@ -134,16 +137,17 @@
                                         </div>
                                 </section>
                             </div>
+
                             <div class="container" style="display: flex; align-items: center;">
                                 <section class="fondo-null espacio-admin" id="verificacionCorreo">
                               <!-- principal registro  -->
-                              <div class="row espacio-admin">
-                                <div class="col-sm-12 border neontabla">
+                                <div class="row espacio-admin">
+                                    <div class="col-sm-12 border neontabla">
                                     <button class="btn btn-primary" style="margin-left: 300px; margin-right: 300px; margin-top: 10px; margin-bottom: 10px;">Recibir un correo</button>
+                                    </div>
                                 </div>
-                              </div>
                             </div>
-                        </div>
+                        
                     </div>
         </div>
 
@@ -152,10 +156,9 @@
 
 <!--Fin Cambio Contraseña-->
 
-
     
 </div>
-</section>
+<!-- </section> -->
 <script src="build/js/ajax/ajax.administrar.js"></script>
 <script src="build/js/ajax/ajax.cambiarContra.js"></script>
 <script src="build/js/ajax/ajax.histfactura.js"></script>
