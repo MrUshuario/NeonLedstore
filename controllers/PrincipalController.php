@@ -39,6 +39,10 @@ class PrincipalController {
         $router->renderPrincipal("contacto",[]);
     }
 
+    public static function verificado(Router $router){
+        $router->renderPrincipal("verificado",[]);
+    }
+
     //formulario registro cliente
     public static function usuarioLogeo(Router $router){
         $router->renderPrincipal("usuarioLogeo",[]);

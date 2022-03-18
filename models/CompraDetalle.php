@@ -52,7 +52,7 @@ class CompraDetalle extends ActiveRecord {
     public static function conseguirproductos($cod_id)
     { // los AS son incorrectos, pero es para que no de errores al salirse del molde
         $query = "select pro_nombre AS id, pro_precio AS cod_id, tab_compra_detalle.det_cantidad AS det_cantidad, 
-        (pro_precio*tab_compra_detalle.det_cantidad) AS 'det_color' from tab_producto
+        (pro_precio*tab_compra_detalle.det_cantidad) AS 'pro_id', det_color AS 'det_color' from tab_producto
         INNER JOIN tab_compra_detalle
         ON tab_compra_detalle.pro_id = tab_producto.id
         WHERE cod_id = ${cod_id}";

@@ -15,7 +15,7 @@
                                 <a href="#"><li class="listaAdmin" onclick="cambioHistorial()"><i class="icon_izq_admin fa-solid fa-boxes-stacked"></i>  Historial de Factura</li></a>
                                 <a href="#"><li class="listaAdmin" onclick="cambioDatosPersonales()"><i class="fa-regular fa-circle-user"></i>  Datos Personales</li></a>
                                 <a href="#"><li class="listaAdmin" onclick="cambioContrasena()"><i class="fa-solid fa-lock"></i> Cambiar Contraseña</li></a>
-                                    
+                                <a href="#"><li class="listaAdmin" onclick="verificacionCorreo()"><i class="fas fa-user-check"></i> Verificar Correo</li></a>
                             </ul>                         
                         </div>
 
@@ -47,22 +47,15 @@
                                         <!--PARA PONER CON BLANCO: table table-striped table-hover table-light table-fixed w-100-->    
                                         <thead class="table-dark sticky">
                                             <tr role="row">
-                                                <th class="sorting_asc" tabindex="0" aria-controls="CompraDetalle" rowspan="1" colspan="1" aria-label="Codigo detalle: activate to sort column descending" aria-sort="ascending" style="width: 143px;">Codigo detalle</th>
-                                                <th class="sorting" tabindex="0" aria-controls="CompraDetalle" rowspan="1" colspan="1" aria-label="Codigo Compra: activate to sort column ascending" style="width: 153px;">Codigo Compra</th>
                                                 <th class="sorting" tabindex="0" aria-controls="CompraDetalle" rowspan="1" colspan="1" aria-label="Producto ID: activate to sort column ascending" style="width: 119px;">Producto ID</th>
+                                                <th class="sorting_asc" tabindex="0" aria-controls="CompraDetalle" rowspan="1" colspan="1" aria-label="Precio Compra: activate to sort column descending" aria-sort="ascending" style="width: 143px;">Precio</th>
                                                 <th class="sorting" tabindex="0" aria-controls="CompraDetalle" rowspan="1" colspan="1" aria-label="Cantidad: activate to sort column ascending" style="width: 91px;">Cantidad</th>
-                                                <th class="sorting" tabindex="0" aria-controls="CompraDetalle" rowspan="1" colspan="1" aria-label="Detalle color : activate to sort column ascending" style="width: 126px;">Detalle color </th>
+                                                <th class="sorting" tabindex="0" aria-controls="CompraDetalle" rowspan="1" colspan="1" aria-label="Total: activate to sort column ascending" style="width: 126px;">Total</th>
+                                                <th class="sorting" tabindex="0" aria-controls="CompraDetalle" rowspan="1" colspan="1" aria-label="Detalle Color: activate to sort column ascending" style="width: 153px;">Detalle color </th>
                                             </tr>
                                         </thead>
 
                                         <tbody>
-                                            <tr role="row" class="odd">
-                                                <td class="sorting_1">1</td>
-                                                <td>0 </td>
-                                                <td>00,ejemplo</td>
-                                                <td>0</td>
-                                                <td>ejemplo</td>
-                                            </tr>
                                         </tbody>
                                     </table> 
                                 </div>
@@ -141,6 +134,15 @@
                                         </div>
                                 </section>
                             </div>
+                            <div class="container" style="display: flex; align-items: center;">
+                                <section class="fondo-null espacio-admin" id="verificacionCorreo">
+                              <!-- principal registro  -->
+                              <div class="row espacio-admin">
+                                <div class="col-sm-12 border neontabla">
+                                    <button class="btn btn-primary" style="margin-left: 300px; margin-right: 300px; margin-top: 10px; margin-bottom: 10px;">Recibir un correo</button>
+                                </div>
+                              </div>
+                            </div>
                         </div>
                     </div>
         </div>
@@ -151,8 +153,7 @@
 <!--Fin Cambio Contraseña-->
 
 
-      
-        <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+    
 </div>
 </section>
 <script src="build/js/ajax/ajax.administrar.js"></script>
