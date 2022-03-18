@@ -102,12 +102,41 @@ class PrincipalController {
                 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
                 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <title>Gmail</title>
-            
+                <title>Email Hogar</title>
+                
+                <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+                
                 <style type="text/css">
+                
+                    p,h1,h2,h3,h4,h5,h6,a,button{
+                        font-family: sans-serif;
+                    }
+                
+                    h1,h3,h5{
+                        font-weight: 700;
+                    }
+                
+                    h2,h6{
+                        font-weight: 300;
+                    }
+                
+                    h4{
+                        font-weight: 400;
+                    }
+                
+                    h1,h4{
+                        font-style: italic;
+                    }
+                
+                    p{
+                        font-size: 18px;
+                        font-weight: 300;
+                    }
+                
                     body {
                         margin: 0;
                         background-color: #cccccc;
+                        padding: 0;
                     }
                     table {
                         border-spacing: 0;
@@ -118,14 +147,14 @@ class PrincipalController {
                     img {
                         border: 0;
                     }
-            
+                
                     .wrapper {
                         width: 100%;
                         table-layout: fixed;
                         background-color: #cccccc;
                         padding-bottom: 40px;
-                        }
-            
+                    }
+                
                     .main{
                         background-color: #ffffff;
                         margin: 0 auto;
@@ -134,199 +163,219 @@ class PrincipalController {
                         border-spacing: 0;
                         font-family: sans-serif;
                         color: #4a4a4a;
-            
                     }
-            
-                    .button{
-                        background-color: #368cee;
-                        color: #ffffff;
+                
+                    #btnWeb{
+                        display: inline-block;
+                        background-color: #ffde70;
                         text-decoration: none;
-                        padding: 12px 20px;
-                        border-radius: 10px;
+                        padding:10px 20px;
+                        box-shadow: 0 0 20px rgb(52, 150, 241);
+                        color:#000000;
+                        margin-bottom:15px;
+                        border-radius: 5px
                     }
-            
-            
+                
+                
                     .two-columns{
                         text-align: center;
                         font-size: 0;
                         padding: 20px 0;
                     }
-            
+                
                     .two-columns .column{
-                        width: 100%;
                         max-width: 300px;
                         display: inline-block;
                         vertical-align: top;
                     }
-            
+                
                     .two-columns .padding{
                         padding: 5px;
                     }
-            
+                
                     .two-columns .content{
                         text-align: left;
-                        font-size: 16px;
+                        font-size: 14px;
                         line-height: 18px;
-            
+                
                     }
-            
+                
                     a{
                         text-decoration: none;
                         color: #2164c9;
                     }
-            
+                
                     @media screen and (max-width: 600px) { 
                         .two-columns .content img{
                             width: 300px!important;
                             max-width: 300px!important;
                         }	
-            
+                
                         .padding{
                             padding-right: 0!important;
                             padding-left: 0!important;
                         }
                     }
+                
+                    #brand{
+                        font-style: normal;
+                    }
+                
                 </style>
                 </head>
-                <body>         
+                <body>
+                
                     <center class="wrapper">
-                        <table class="main" width="100%">            
-            <!-- SOCIAL MEDIA ICONS -->
-                        <tr>
-                            <td>
-                                <table width="100%">
-                                    <tr>
-                                        <td style="background-color: #4980d2; padding: 8px 0 5px; text-align: center;">
-                                            <a href="https://www.facebook.com/pages/category/Lighting-Store/Neon-Led-store-100244098454782/"><img src="https://i.postimg.cc/7YXX27qS/logo-facebook.png" width="35px"></a>
-                                            <a href="https://twitter.com/neonhouseleds"><img src="https://i.postimg.cc/dVykYPND/logo-twitter.png" width="35px"></a>
-                                            <a href="https://www.instagram.com/neon_led_store/?hl=es"><img src="https://i.postimg.cc/FzLGSnsR/logo-instagram.png" width="25px"></a>
-                                            <a href="https://www.youtube.com/channel/UCn1kkwB3YeZIuPJnvQcJkiw?view_as=subscriber"><img src="https://i.postimg.cc/nLXdZzbB/logo-youtube.png" width="25px"></a>
-                                        </td>
-                                    </tr>
-                                </table>
-                            </td>
-                        </tr>          
-            <!-- LOGO SECTION -->
-                        <tr>
-                            <td>
-                                <table width="100%">
-                                    <tr>
-                                        <td style="text-align: center; padding: 3px;">
-                                            <a href="https://neonled-store.com/"><img src="https://i.postimg.cc/15SY6sw1/logo.png" alt="Logo" width="100px" title="Logo"></a>
-                                        </td>
-                                    </tr>
-                                </table>
-                            </td>
-                        </tr>          
-            <!-- GIF BANNER IMAGE -->
-                        <tr>
-                            <td>
-                                <a href="#"><img src="https://i.postimg.cc/T39ywY9N/FONDOHOGAR.gif" alt="Banner" width="600px" style="max-width: 100%;"></a>
-                            </td>
-                        </tr>           
-            <!-- TITLE, TEXT & BUTTON -->
-                        <tr>
-                            <td style="padding-bottom: 30px;">
-                                <table width="100%">
-                                    <tr>
-                                        <td style="text-align: center;">
-                                            <p style="font-size: 20px; font-weight: bold;">Hola '.$_POST['nombre'].' '.$_POST['apellidos'].', su consulta será procesada en la brevedad posible. ¡Gracias por contactarnos!</p>
-                                            <p style="font-size: 16px; line-height: 23px; padding: 5px 0 15px;">En Neon Led Store te ayudamos a crear una nueva experiencia. Contamos con el toque ideal que necesitas para dejar impresionados a tu familia con una produccion visual espectacular, ingeniosa y de la mejor calidad; Realizamos paneles personalizados y a tu preferencia, descubre los mejores decorativos en luces Led y aprovecha nuestras grandes promociones.</p>
-                                            <a href="https://neonled-store.com/" class="button">Visitar sitio web</a>
-                                        </td>
-                                    </tr>
-                                </table>
-                            </td>
-                        </tr>         
-            <!-- BLUE BORDER -->
-                        <tr>
-                            <td height="5" style="background-color: rgb(99, 62, 134);"></td>
-                        </tr>          
-            <!-- TWO COLUMN SECTION -->
-                        <tr>
-                            <td>
-                                <table width="100%">
-                                    <tr>
-                                        <td class="two-columns">
-                                            <table class="column">
-                                                <tr>
-                                                    <td class="padding">
-                                                        <table class="content">
-                                                            <tr>
-                                                                <td>
-                                                                    <a href="#"><img src="https://i.postimg.cc/8zrKQ9mC/560x420.webp" alt="" width="270px" style="max-width: 270px;"></a>
-                                                                </td>
-                                                            </tr>
-                                                        </table>
-            
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                            <table class="column">
-                                                <tr>
-                                                    <td class="padding">
-                                                        <table class="content">
-                                                            <tr>
-                                                                <td>
-                                                                    <p style="font-size: 17px; font-weight: bold;"> La mejor iluminación en tu Hogar</p>
-                                                                    <p>Actualmente los diseños de Neon Led se han vuelto una tendencia 
-                                                                    interesante y diferente para la decoración de tu Hogar, conoce los mejores decorativos en luces Led y aprovecha nuestras grandes 
-                                                                    promociones.</p>
-                                                                </td>
-                                                            </tr>
-                                                        </table>
-            
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                    </tr>
-                                </table>
-                            </td>
-                        </tr>           
-            <!-- BLUE BACKGROUND QUOTE -->
-                        <tr>
-                            <td>
-                                <table width="100%">
-                                    <tr>
-                                        <td style="text-align: center; background-color: rgb(99, 62, 134); padding: 5px; color: #ffffff; font-size: 15px;">
-                                            <p style="font-weight: bold;">Somos fabricantes e importamos articulos neon led, pantallas led y paneles electronicos. Producto hecho en Perú.</p>
-                                        </td>
-                                    </tr>
-                                </table>
-                            </td>
-                        </tr>           
-            <!-- FOOTER SECTION -->
-                        <tr>
-                            <td>
-                                <table width="100%">
-                                <tr>
-                                    <td style="padding: 5px 10px; text-align:center;">                          
-                                        <p style="font-size: 16px;">Jr. Paruro 1401 tda 130 CC Shoping Center, Cercado de Lima.</p>
-                                        <p style="font-size: 16px;"> Celular: 994078320</p>
-                                        <p style="font-size: 16px;">Email: <a href="mailto:info.neonledstore@gmail.com" style="color: #2e54fa">info.neonledstore@gmail.com</a></p>
-                                        <p style="color: #d063eb; font-size: 15px; text-align: center;margin: 20px 0px" id="brand">&#169; 2022 Neon House Led</p>								
-                                    </td>                       
-                                </tr>
-                                <tr>
-                                    <td height="14px" style="background-color: #4980d2;"></td>
-                                </tr>
-                                </table>
-                            </td>
-                        </tr>           
-                    </table>
-                </center>
-            </body>
-            </html>';
+                        <table class="main" width="100%">
+                
+                <!-- SOCIAL MEDIA ICONS -->
+                            <tr>
+                                <td>
+                                    <table width="100%">
+                                        <tr>
+                                            <td style="background-color: #000000; padding: 8px 0 5px; text-align: center;">
+                                                <a href="https://www.facebook.com/pages/category/Lighting-Store/Neon-Led-store-100244098454782/"><img src="https://i.postimg.cc/mZ8nybSW/white-facebook.webp" width="30px"></a>
+                                                <a href="https://twitter.com/neonhouseleds"><img src="https://i.postimg.cc/g0VSXd05/white-twitter.webp" width="30px"></a>
+                                                <a href="https://www.instagram.com/neon_led_store/?hl=es"><img src="https://i.postimg.cc/Cxf60bpw/white-instagram.webp" width="30px"></a>
+                                                <a href="https://www.youtube.com/channel/UCn1kkwB3YeZIuPJnvQcJkiw?view_as=subscriber"><img src="https://i.postimg.cc/0jBcRyt6/white-youtube.webp" width="30px"></a>
+                                                <a href="https://www.tiktok.com/@neonhouseled2021?_d=secCgYIASAHKAESPgo8sIPMAxk9q0UdVPEdEKWLyt0NN8Z0Z1Hh9XqLARKK21MPVYrG0u8TUu5%2B88X7407MZJC2Wkin4WS3pz8zGgA%3D&_r=1&language=es&sec_uid=MS4wLjABAAAAHJQMW4_09j5iyS99a_W192R-KbfRVOVx7ZkkLm7rluqMM7NojWd1s1_OSlbh4ryE&sec_user_id=MS4wLjABAAAA_m1SQHyjEzm78KOhiFb5NL4jvK58q9t4h_8UpewaFD95SQXygVq5ACtDv1Gc2w-B&share_app_id=1233&share_author_id=6935916902436193285&share_link_id=8416e899-a3ce-49ba-baac-62e12c1d16b8&social_sharing=v4&source=h5_m&timestamp=1647277909&u_code=de1adc3h11869a&ugbiz_name=Account&user_id=6860668889546736646&utm_campaign=client_share&utm_medium=android&utm_source=whatsapp"><img src="https://i.postimg.cc/0yQcf3CW/tiktok-logo.png" width="25px"></a>
+                                                
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                
+                <!-- LOGO SECTION -->
+                            <tr>
+                                <td>
+                                    <table width="100%">
+                                        <tr>
+                                            <td style="text-align: center; padding: 5px;">
+                                                <a href="https://neonled-store.com/"><img src="https://i.postimg.cc/90kRcBxc/logo.jpg" alt="Logo" width="100px" title="Logo"></a>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                
+                <!-- GIF BANNER IMAGE -->
+                            <tr>
+                                <td>
+                                    <img src="https://i.postimg.cc/T39ywY9N/FONDOHOGAR.gif" alt="Banner" width="600px" style="max-width: 100%;">
+                                </td>
+                            </tr>
+                
+                <!-- TITLE, TEXT & BUTTON -->
+                            <tr>
+                                <td style="padding-bottom: 30px;">
+                                    <table width="100%">
+                                        <tr>
+                                            <td style="text-align: center;">
+                                                <p style="font-size: 20px; font-weight: bold;">Hola '.$_POST['nombre'].' '.$_POST['apellidos'].', su consulta será procesada en la brevedad posible. ¡Gracias por contactarnos!</p>
+                                                <p style="text-align:center; line-height: 23px; padding: 5px 0 15px;">En Neon Led Store te ayudamos a crear una nueva 
+                                                    experiencia. Contamos con el toque ideal que necesitas para dejar impresionados a tu familia con una produccion visual espectacular, 
+                                                    ingeniosa y de la mejor calidad; Realizamos paneles 100% personalizados y a tu preferencia, descubre los mejores decorativos en luces 
+                                                    Led y aprovecha nuestras grandes promociones.</p>
+                                                <a id="btnWeb" href="https://neonled-store.com/">Visitar página web</a>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                
+                <!-- BLUE BORDER -->
+                            <tr>
+                                <td height="5" style="background-color: rgb(99, 62, 134);"></td>
+                            </tr>
+                
+                <!-- TWO COLUMN SECTION -->
+                            <tr>
+                                <td>
+                                    <table width="100%">
+                                        <tr>
+                                            <td class="two-columns">
+                                                <table class="column">
+                                                    <tr>
+                                                        <td class="padding">
+                                                            <table class="content">
+                                                                <tr>
+                                                                    <td>
+                                                                        <a href="#"><img src="https://i.postimg.cc/PJC5KdPf/salaled.webp" alt="" width="270px" style="max-width: 270px;margin-top: 14px;"></a>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                <table class="column">
+                                                    <tr>
+                                                        <td class="padding">
+                                                            <table class="content">
+                                                                <tr>
+                                                                    <td>
+                                                                        <p style="font-weight: bold;"> La mejor iluminacion en tu Hogar:</p>
+                                                                        <p style="text-align: justify;">Los diseños de neon led se han vuelto una tendencia interesante y diferente para cualquier evento, negocio o para la decoración de tu habitación. En NEON LED STORE realizamos paneles 100% personalizados.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                
+                <!-- BLUE BACKGROUND QUOTE -->
+                            <tr>
+                                <td>
+                                    <table width="100%">
+                                        <tr>
+                                            <td style="text-align: center; background-color: rgb(99, 62, 134); padding: 5px; color: #ffffff; font-size: 15px;">
+                                                <p style="font-weight: bold;">Somos fabricantes e importamos articulos neon led, pantallas led y paneles electronicos. Productos hecho en Perú.</p>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                
+                <!-- FOOTER SECTION -->
+                            <tr>
+                                <td>
+                                    <table width="100%">
+                                        <tr>
+                                            <td style="padding: 5px 10px; text-align:center;">
+                                                <a href="https://neonled-store.com/"><img src="https://i.postimg.cc/90kRcBxc/logo.jpg" alt="Logo" width="70px" title="Logo"></a>
+                                                
+                                                <p style="font-size: 15px;">Jr. Paruro 1401 tda 130 CC Shoping Center, Cercado de Lima.</p>
+                                                <p style="font-size: 15px;"> Celular: 994078320</p>
+                                                <p style="font-size: 15px;">Email: <a href="mailto:info.neonledstore@gmail.com" style="color: #2e54fa">info.neonledstore@gmail.com</a></p>
+                                                <p style="color: #d063eb; font-size: 15px; text-align: center;margin: 20px 0px" id="brand">&#169; 2022 Neon House Led</p>								
+                                            </td>
+                                            
+                                        </tr>
+                                        <tr>
+                                            <td height="14px" style="background-color: #000000;"></td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                
+                        </table>
+                    </center>
+                </body>
+                </html>
+                ';
 
             $mail->Body = $contenido;
 
             echo json_encode([
                 "prueba" => $mail->send(),
                 ""=>$mail->ErrorInfo
-            ]);
-        }
-                
+                ]);
             } else if($_REQUEST['consulta'] == "formEvento"){
 
                 $mail = new PHPMailer();
@@ -356,21 +405,16 @@ class PrincipalController {
                 <meta charset="UTF-8">
                 <meta http-equiv="X-UA-Compatible" content="IE=edge">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <title>Correo Evento</title>
-                
-                <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
-                
+                <title>Correo Evento2</title>
                 
                 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-                <link rel="stylesheet" href="style.css">
                 
                 <style type="text/css">
                 
                     body{
                         margin: 0;
                         padding: 0;
-                        font-family: Roboto Condensed;
+                        font-family: sans-serif;
                     }
                 
                     .panel-externo{
@@ -409,7 +453,7 @@ class PrincipalController {
                         background-color: #368cee;
                         color: #ffffff;
                         text-decoration: none;
-                        padding: 10px 10px;
+                        padding: 12px 20px;
                         border-radius: 10px;
                     }
                 
@@ -452,27 +496,26 @@ class PrincipalController {
                                     <table width="100%">
                                         <tr>
                                             <td style="text-align: center; padding: 10px;">
-                                                <a href="https://neonled-store.com/"><img src="img/logo.webp" alt="Logo" width="70px" title="Logo"></a>
+                                                <a href="https://neonled-store.com/"><img src="https://i.postimg.cc/90kRcBxc/logo.jpg" alt="Logo" width="70px" title="Logo"></a>
                                             </td>
                                         </tr>
                                     </table>
                 
                                     <div class="col-md-12">
-                                        <h3 class="mt-3">¡Dale Iluminación a tus Eventos!</h3>
-                                        
+                                        <p style="text-align:center; font-size: 26px; font-weight: bold;">¡Dale Iluminación a tus Eventos!</p>                            
                                     </div>
                                     <div class="col-md-12">
-                                        <img src="img/fondo2.webp" alt="image2" style="width: 100%; height: 90%;">
+                                        <img src="https://i.ibb.co/rpWTGPg/fondo2.webp" alt="image2" style="width: 100%; height: 90%;">
                                     </div>
                 
                                     <div class="col-md-12" style="padding-bottom: 20px;">
                                         <div style="margin: 0px 20px;">
-                                            <h4 style="font-size: 20px; font-weight: bold;">Hola '.$_POST['nombre'].' '.$_POST['apellidos'].', su consulta será procesada. ¡Gracias por contactarnos!</h4>
-                                            <p>
+                                            <h4 style="text-align:center; font-size: 20px; font-weight: bold;">Hola '.$_POST['nombre'].' '.$_POST['apellidos'].', su consulta será procesada. ¡Gracias por contactarnos!</h4>
+                                            <p style="text-align:center; line-height: 23px; padding: 5px 0 15px;">
                                             Aquí en Neon Led Store te ofrecemos la mejor iluminación, con excelentes luces 
                                             led neón de acuerdo a tu preferencia para darle vida a todo tipo de Eventos: Bodas, Cumpleaños, Bautizos, etc. 
                                             </p>
-                                            <a class="button btn-warning" href="https://neonled-store.com/" >Visitar sitio web</a>               
+                                            <a href="https://neonled-store.com/" class="button">Visitar sitio web</a>              
                                         </div>
                                     </div>
                 
@@ -482,26 +525,23 @@ class PrincipalController {
                                     <table>
                                         <tr>
                                             <td style="display: inline-block;width: 100%; text-align: center;">
-                                                <img src="img/evento2-1.webp" style="padding: 0; width: 250px; height: 200px; margin: 3px">
-                                                <h5>Salón Decorativo</h5>
-                                                <p style="margin:0;color:#444444; margin-bottom:20px">S/.300,00</p>
+                                                <img src="https://i.ibb.co/Zmn0MFJ/evento2-1.webp" style="padding: 0; width: 250px; height: 200px; margin: 3px">
+                                                <h5 style="font-size: 16px;">Salón Decorativo</h5>
                                             </td>           
                                             <td style="display: inline-block;width: 100%; text-align: center;">
-                                                <img src="img/evnto2-2.webp" style="padding: 0; width: 250px; height: 200px; margin: 3px">
-                                                <h5>Iluminación Neón</h5>
-                                                <p style="margin:0; color:#444444; margin-bottom:20px">S/.199,00</p>
+                                                <img src="https://i.ibb.co/C0dV44w/evnto2-2.webp" style="padding: 0; width: 250px; height: 200px; margin: 3px">
+                                                <h5 style="font-size: 16px;">Iluminación Neón</h5>         
                                             </td>
                                             <td style="display: inline-block;width: 100%; text-align: center;">
-                                                <img src="img/evento2-3.webp" style="padding: 0; width: 250px; height: 200px; margin: 3px">
-                                                <h5>Iluminación led</h5>
-                                                <p style="margin:0; color:#444444; margin-bottom:5px">S/.199,00</p>
+                                                <img src="https://i.ibb.co/pQy9Zf9/evento2-3.webp" style="padding: 0; width: 250px; height: 200px; margin: 3px">
+                                                <h5 style="font-size: 16px;">Iluminación led</h5>
                                             </td>
                                         </tr>          
                                     </table>  
                 
                                     <div class="col-md-12 p-4">
-                                        <h6>Escríbenos para más detalles</h5>
-                                        <a href="mailto:info.neonledstore@gmail.com" style="font-size: 16px; text-decoration: none;">info.neonledstore@gmail.com</a>
+                                        <h6 style="text-align:center; font-size:15px">Escríbenos para más detalles:</h5>
+                                        <a href="mailto:info.neonledstore@gmail.com" style="font-size: 14px; text-decoration: none;">info.neonledstore@gmail.com</a>
                                     </div>
                 
                                 </div>
@@ -511,14 +551,17 @@ class PrincipalController {
                                 <div class="col-md-15">
                                     <footer style="padding: 2% 19%;">
                                         <div style="text-align: center;margin:auto">
-                                            <a href="https://www.facebook.com/pages/category/Lighting-Store/Neon-Led-store-100244098454782/" style="color: #1654ff;">
-                                                <i class="fa-brands fa-facebook circle"></i>
+                                            <a href="https://www.facebook.com/pages/category/Lighting-Store/Neon-Led-store-100244098454782/">
+                                                <img src="https://i.postimg.cc/QtwJfx00/facebook-logo.png" alt="Logo" width="30px" title="Logo">
                                             </a>
-                                            <a href="https://www.instagram.com/neon_led_store/?hl=es" style="color: #d633ff;">
-                                                <i class="fa-brands fa-instagram circle"></i>
+                                            <a href="https://www.instagram.com/neon_led_store/?hl=es">
+                                                <img src="https://i.postimg.cc/PrPkL6wH/instagram-logo.png" alt="Logo" width="30px" title="Logo">
                                             </a>
-                                            <a href="https://twitter.com/neonhouseleds" style="color: #0ec0f7;">
-                                                <i class="fa-brands fa-twitter circle"></i>
+                                            <a href="https://twitter.com/neonhouseleds">
+                                                <img src="https://i.postimg.cc/8PtjGnVV/Twitter-logo.png" alt="Logo" width="30px" title="Logo">
+                                            </a>
+                                            <a href="https://www.tiktok.com/@neonhouseled2021?_d=secCgYIASAHKAESPgo8sIPMAxk9q0UdVPEdEKWLyt0NN8Z0Z1Hh9XqLARKK21MPVYrG0u8TUu5%2B88X7407MZJC2Wkin4WS3pz8zGgA%3D&_r=1&language=es&sec_uid=MS4wLjABAAAAHJQMW4_09j5iyS99a_W192R-KbfRVOVx7ZkkLm7rluqMM7NojWd1s1_OSlbh4ryE&sec_user_id=MS4wLjABAAAA_m1SQHyjEzm78KOhiFb5NL4jvK58q9t4h_8UpewaFD95SQXygVq5ACtDv1Gc2w-B&share_app_id=1233&share_author_id=6935916902436193285&share_link_id=8416e899-a3ce-49ba-baac-62e12c1d16b8&social_sharing=v4&source=h5_m&timestamp=1647277909&u_code=de1adc3h11869a&ugbiz_name=Account&user_id=6860668889546736646&utm_campaign=client_share&utm_medium=android&utm_source=whatsapp" style="color: #0ec0f7;">
+                                                <img src="https://i.postimg.cc/xdYmTNFw/tiktok-logo2.png" alt="Logo" width="30px" title="Logo">
                                             </a>
                                         </div>
                                         <p style="color: #b52ad8; font-size: 14px; text-align: center;margin: 10px 0 0">&#169; 2022 Neon Led Store</p>
@@ -528,14 +571,15 @@ class PrincipalController {
                         </div>
                     </div>
                 </body>
-                </html>';
+                </html>               
+                ';
 
-            $mail->Body = $contenido;
+                $mail->Body = $contenido;
 
-            echo json_encode([
-                "prueba" => $mail->send(),
-                ""=>$mail->ErrorInfo
-            ]);
+                echo json_encode([
+                    "prueba" => $mail->send(),
+                    ""=>$mail->ErrorInfo
+                ]);
 
             } else if($_REQUEST['consulta'] == "formNegocio"){
 
@@ -565,10 +609,9 @@ class PrincipalController {
                 <head>
                 <meta name="viewport" content="width=device-width, initial-scale=1">
                 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-                <title>Email Negocio</title>
+                <title>Email Negocio3</title>
                 
                 <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
-                
                 
                 <style type="text/css">
                 
@@ -624,13 +667,14 @@ class PrincipalController {
                 
                     #btnRegistrarse{
                         display: inline-block;
-                        background-color: #46f6fc;
+                        background-color: #50d1d1;
                         text-decoration: none;
                         padding:10px 20px;
-                        text-decoration: none; 
+                        box-shadow: 0 0 20px rgb(211, 118, 255);
                         color:#000000;
                         margin-bottom:15px;
-                        border-radius: 5px
+                        border-radius: 5px;
+                        font-size: 18px;
                     }
                 
                     .mifooter{
@@ -658,7 +702,7 @@ class PrincipalController {
                 
                     <tr>
                         <td style="padding: 0">       
-                            <img id="imagen" src="img/fondoNegocio1.webp">
+                            <img id="imagen" src="https://i.postimg.cc/fyjFprk3/fondo-Negocio1.webp">
                         </td>      
                     </tr>
                 
@@ -667,33 +711,33 @@ class PrincipalController {
                             <table cellpadding="0" cellspacing="0" style="width: 100%;background-color: #ffffff;padding: 20px; text-align: center;">
                                 <tr>                 
                                     <td style="display: inline-block;max-width:270px;width: 100%; text-align: center;">
-                                        <img src="img/negocio1.webp" style="padding: 0; width: 250px; height: 200px; margin: 5px">
-                                        <h2>Letreros Salas Gamer</h2>
+                                        <img src="https://i.postimg.cc/zX84K8PT/negocio1.webp" style="padding: 0; width: 250px; height: 200px; margin: 5px">
+                                        <h2>Letreros Gamer</h2>
                                     </td>
                                     <td style="display: inline-block;max-width:20px;width: 100%">
                                         &nbsp;
                                     </td>
                                     <td style="display: inline-block;max-width:270px;width: 100%; text-align: center;">
-                                        <img src="img/negocio2.webp" style="padding: 0; width: 250px; height: 200px; margin: 5px">
+                                        <img src="https://i.postimg.cc/zvjt0HPK/negocio2.webp" style="padding: 0; width: 250px; height: 200px; margin: 5px">
                                         <h2>Centros Fotográficos</h2>
                                     </td>
                 
                                 </tr>
                                 <tr>
                                     <td style="display: inline-block;max-width:270px;width: 100%; text-align: center;">
-                                        <img src="img/negocio3.webp" style="padding: 0; width: 250px; height: 200px; margin: 5px">
+                                        <img src="https://i.postimg.cc/tgxB8MMX/negocio3.webp" style="padding: 0; width: 250px; height: 200px; margin: 5px">
                                         <h2>Letreros Hospedaje</h2>
                                     </td>
                                     <td style="display: inline-block;max-width:20px;width: 100%">
                                         &nbsp;
                                     </td>
                                     <td style="display: inline-block;max-width:270px;width: 100%; text-align: center;">
-                                        <img src="img/negocio4.webp" style="padding: 0; width: 250px; height: 200px; margin: 5px">
-                                        <h2>Decoracion Spa</h2>
+                                        <img src="https://i.postimg.cc/4yJw7NNd/negocio4.webp" style="padding: 0; width: 250px; height: 200px; margin: 5px">
+                                        <h2>Decoracion Spá</h2>
                                     </td>
                                 </tr>
                                 <td>
-                                <a id="btnRegistrarse" href="">Registrarme</a>
+                                    <a id="btnRegistrarse" href="https://neonled-store.com/" >Visitar sitio web</a> 
                                 </td>
                             </table>       
                         </td>
@@ -709,22 +753,22 @@ class PrincipalController {
                                 </tr>
                                 <tr>
                                     <td style="text-align: center;" valign="middle">
-                                        <p style="font-size:16px; color:#000000;margin:20px 0px">Visita nuestras redes sociales:</p>
+                                        <p style="font-size:20px; color:#000000;margin:20px 0px">Visita nuestras redes sociales:</p>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td style="text-align: center;" valign="middle">
-                                        <a href="https://www.facebook.com/Neon-Led-store-100244098454782/" style="display: inline-block;font-size:14px;color:#ffffff;background-color:#4b69b0;padding:4px 10px;text-decoration: none;border-radius:4px;margin:0px 1px 6px 1px;">
-                                            Facebook
+                                        <a href="https://www.facebook.com/pages/category/Lighting-Store/Neon-Led-store-100244098454782/">
+                                            <img src="https://i.postimg.cc/QtwJfx00/facebook-logo.png" width="30px" title="Facebook">
                                         </a>
-                                        <a href="https://www.instagram.com/neon_led_store/" style="display: inline-block;font-size:14px;color:#ffffff;background-color:#ee5be2;padding:4px 10px;text-decoration: none;border-radius:4px;margin:0px 1px 6px 1px;">
-                                        Instagram
+                                        <a href="https://www.instagram.com/neon_led_store/?hl=es">
+                                            <img src="https://i.postimg.cc/PrPkL6wH/instagram-logo.png" width="30px" title="instagram">
                                         </a>
-                                        <a href="" style="display: inline-block;font-size:14px;color:#ffffff;background-color:#e83f3a;padding:4px 10px;text-decoration: none;border-radius:4px;margin:0px 1px 6px 1px;">
-                                            Youtube
+                                        <a href="https://twitter.com/neonhouseleds">
+                                            <img src="https://i.postimg.cc/8PtjGnVV/Twitter-logo.png" width="30px" title="twitter">
                                         </a>
-                                        <a href="https://twitter.com/neonhouseleds" style="display: inline-block;font-size:14px;color:#ffffff;background-color:#37b1e1;padding:4px 10px;text-decoration: none;border-radius:4px;margin:0px 1px 6px 1px;">
-                                            Twitter
+                                        <a href="https://www.tiktok.com/@neonhouseled2021?_d=secCgYIASAHKAESPgo8sIPMAxk9q0UdVPEdEKWLyt0NN8Z0Z1Hh9XqLARKK21MPVYrG0u8TUu5%2B88X7407MZJC2Wkin4WS3pz8zGgA%3D&_r=1&language=es&sec_uid=MS4wLjABAAAAHJQMW4_09j5iyS99a_W192R-KbfRVOVx7ZkkLm7rluqMM7NojWd1s1_OSlbh4ryE&sec_user_id=MS4wLjABAAAA_m1SQHyjEzm78KOhiFb5NL4jvK58q9t4h_8UpewaFD95SQXygVq5ACtDv1Gc2w-B&share_app_id=1233&share_author_id=6935916902436193285&share_link_id=8416e899-a3ce-49ba-baac-62e12c1d16b8&social_sharing=v4&source=h5_m&timestamp=1647277909&u_code=de1adc3h11869a&ugbiz_name=Account&user_id=6860668889546736646&utm_campaign=client_share&utm_medium=android&utm_source=whatsapp" style="color: #0ec0f7;">
+                                            <img src="https://i.postimg.cc/xdYmTNFw/tiktok-logo2.png" width="30px" title="tiktok">
                                         </a>
                                     </td>
                                 </tr>
@@ -739,11 +783,11 @@ class PrincipalController {
                         <table width="100%">
                             <tr>
                                 <td style="padding: 10px 15px; text-align:center; font-size: 14px;">
-                                    <a href="https://neonled-store.com/"><img src="img/logo.webp" alt="Logo" width="70px" title="Logo"></a>
+                                    <a href="https://neonled-store.com/"><img src="https://i.postimg.cc/4xdsQLcB/logo.webp" alt="Logo" width="70px" title="Logo"></a>
                                     
-                                    <p>Jr. Paruro 1401 tda 130 CC Shoping Center, Cercado de Lima.</p>
-                                    <p>Celular: 994078320</p>
-                                    <p>Email: <a href="mailto:info.neonledstore@gmail.com" style="color: #37b1e1;">info.neonledstore@gmail.com</a></p>													
+                                    <p style="font-size: 16px; font-family: comic sans-serif;">Jr. Paruro 1401 tda 130 CC Shoping Center, Cercado de Lima.</p>
+                                    <p style="font-size: 16px;">Celular: 994078320</p>
+                                    <p style="font-size: 16px;">Email: <a href="mailto:info.neonledstore@gmail.com" style="color: #37b1e1;">info.neonledstore@gmail.com</a></p>													
                                         <p style="color: #d353f3; font-size: 12px; text-align: center;margin: 10px 0 0" id="brand">&#169; 2022 Neon House Led</p>		
                                 </td>			
                             </tr>										
@@ -756,19 +800,21 @@ class PrincipalController {
                 </table>
                 
                 </body>
-                </html>';
+                </html>              
+                ';
 
-            $mail->Body = $contenido;
+                $mail->Body = $contenido;
 
-            echo json_encode([
-                "prueba" => $mail->send(),
-                ""=>$mail->ErrorInfo
-            ]);
-
+                echo json_encode([
+                    "prueba" => $mail->send(),
+                    ""=>$mail->ErrorInfo
+                ]);
             }
 
             
+        }
     }
+
 
 
 
@@ -790,7 +836,7 @@ public static function contactoEmailEm(){
         $mail->Password = contra;
 
         $mail->setFrom('renleds22@gmail.com','NeonLedStore'); //direccion desde donde se enviará
-        $mail->addAddress('info.neonledstore@gmail.com'); ////direccion de usuario que recibe
+        $mail->addAddress('rlcarhuachino@unac.edu.pe'); ////direccion de usuario que recibe
         $mail->Subject = "Nueva Consulta de Cliente";
 
         //Habilitar HTML
@@ -799,85 +845,74 @@ public static function contactoEmailEm(){
 
         // Definir el contenido
         $contenido = '<!DOCTYPE html>
-            <html lang="es_ES">
-            <head>
-                <meta charset="UTF-8">
-                <meta http-equiv="X-UA-Compatible" content="IE=edge">
-                <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <title>Email</title>
-                <style>
-                    * {
-                        margin: 0;
-                        box-sizing: border-box;
-                        font-family: Calibri, sans-serif;
-                    }
-            
-                    .container {
-                        width: 80%;
-                        height: 100vh;
-                        margin: 0 auto;
-                    }
-            
-                    h1 {
-                        text-transform: uppercase;
-                        font-size: 3.3rem;
-                        text-align: center;
-                        font-weight: bold;
-                        color: #2154B0;
-                    }
-            
-                    .img__sent {
-                        display: block;
-                        margin: auto;
-                        width: 300px;
-                    }
-            
-                    .text {
-                        text-align: center;
-                        font-size: 1.5rem;
-                        font-weight: 400;
-                        margin-bottom: 5px;
-                    }
-            
-                    .texts {
-                        width: 60%;
-                        margin: 0 auto;
-                        font-size: 1.1rem;
-                        border: 3px double lightslategray;
-                        padding: 3px 7px;
-                    }
-            
-                    .pie {
-                        border: 4px solid lightskyblue;
-                        width: max-content;
-                        padding: 0.7rem;
-                        margin-top: 1.8rem;
-                    }
-            
-                    .pie img {
-                        display: block;
-                        margin: auto;
-                    }
-                </style>
-            </head>
-            <body>
-                <div class="container">
-                    <h1>Neon Led Store</h1>
-                    <img class="img__sent" src="https://i.ibb.co/4mts7RJ/imgcorreo.webp" alt="">
-                    <p class="text">Un nuevo cliente se ha contactado:</p>
-                    <div class="texts">
-                        <p><b>Nombres:</b> '.$_POST['vis_nombre'].'</p>
-                        <p><b>Apellidos:</b> '.$_POST['vis_apellidos'].'</p>
-                        <p><b>Correo:</b> '.$_POST['vis_email'].'</p>
-                        <p><b>Teléfono:</b> '.$_POST['vis_telefono'].'</p>     
-                        <p><b>Mensaje-Pregunta:</b> '.$_POST['vis_pregunta'].'</p>
-                    </div>
-                    <div class="pie">
-                        <img class="" src="https://i.ibb.co/Y2c32Qw/Neon-House-Logo.png" alt="">
-                    </div>
-                </div>
-            </body>
-            </html>';
+        <html lang="es_ES">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Email</title>
+            <style>
+                * {
+                    margin: 0;
+                    box-sizing: border-box;
+                    font-family: Calibri, sans-serif;
+                }
+        
+                .container {
+                    width: 80%;
+                    height: 100vh;
+                    margin: 0 auto;
+                }
+        
+                h1 {
+                    text-transform: uppercase;
+                    font-size: 3.3rem;
+                    text-align: center;
+                    font-weight: bold;
+                    color: #2154B0;
+                }
+        
+                .img__sent {
+                    display: block;
+                    margin: auto;
+                    width: 300px;
+                }
+        
+                .text {
+                    text-align: center;
+                    font-size: 1.5rem;
+                    font-weight: 400;
+                    margin-bottom: 5px;
+                }
+        
+                .texts {
+                    width: 60%;
+                    margin: 0 auto;
+                    font-size: 1.1rem;
+                    border: 3px double lightslategray;
+                    padding: 3px 7px;
+                }
+        
+
+            </style>
+        </head>
+        <body>
+            <div class="container">
+                <h1>Neon Led Store</h1>
+                <img class="img__sent" src="https://i.ibb.co/4mts7RJ/imgcorreo.webp" alt="">
+                <p class="text">Un nuevo cliente se ha contactado:</p>
+                <div class="texts">
+                    <p><b>Nombres:</b> '.$_POST['vis_nombre'].'</p>
+                    <p><b>Apellidos:</b> '.$_POST['vis_apellidos'].'</p>
+                    <p><b>Correo:</b> '.$_POST['vis_email'].'</p>
+                    <p><b>Teléfono:</b> '.$_POST['vis_telefono'].'</p>     
+                    <p><b>Mensaje-Pregunta:</b> '.$_POST['vis_pregunta'].'</p>
+                <br>
+                <img src="https://i.postimg.cc/90kRcBxc/logo.jpg" alt="Logo" width="80px" style="position:relative; left: 41%;">
+              
+            </div>
+        </body>
+        </html>';
 
         $mail->Body = $contenido;
 

@@ -66,6 +66,9 @@
                             <div class="modal-field">
                                 <input type="number" class="neontextlanding bg-transparent text-center form-control my-3 border-0 mb-3" name="telefono" id="telefono" placeholder="Número de celular" required>
                             </div> <!--crea tu propio boton, lo agregas en NEON.css -->
+                            <div class="modal-field">
+                                <input type="hidden" class="neontextlanding bg-transparent text-center form-control my-3 border-0" name="pregunta" id="pregunta" value="Solicita Asesoría">
+                            </div>
                             <button type="submit" class="neonbottonlanding btn btn-primary my-sm-3 border-0" id="btn-modal-asesoria" onclick="Evento()">Pedir asesoria</button>
                         </form>
                     </div>     
