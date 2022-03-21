@@ -99,22 +99,22 @@ class ProductoController
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $producto = Producto::find($_POST['id']);
             $producto->sincronizar($_POST);
-            $nombreImg = md5(uniqid(rand(), true)) . ".webp";
+            // $nombreImg = md5(uniqid(rand(), true)) . ".webp";
 
-            if ($producto->pro_imagen !== 'undefined') {
-                if ($_FILES['pro_imagen']['tmp_name']) {
-                    $image = Image::make($_FILES['pro_imagen']['tmp_name'])->fit(800, 600);
-                    $producto->setImagen($nombreImg);
-                }
+            // if ($producto->pro_imagen !== 'undefined') {
+            //     if ($_FILES['pro_imagen']['tmp_name']) {
+            //         $image = Image::make($_FILES['pro_imagen']['tmp_name'])->fit(800, 600);
+            //         $producto->setImagen($nombreImg);
+            //     }
 
-                if ($_FILES['pro_imagen']['tmp_name']) {
-                    $image->save(CARPETA_IMAGENES . $nombreImg);
-                }
+            //     if ($_FILES['pro_imagen']['tmp_name']) {
+            //         $image->save(CARPETA_IMAGENES . $nombreImg);
+            //     }
 
                 $resultado = $producto->actualizar();
-            } else {
-                $resultado = $producto->editSinImg();
-            }
+            // } else {
+            //    $resultado = $producto->editSinImg();
+            // }
 
             echo json_encode([
                 "dir" => $_POST,

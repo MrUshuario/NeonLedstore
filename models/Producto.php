@@ -36,15 +36,6 @@ class Producto  extends ActiveRecord
         $this->pro_imagen3 = $args['pro_imagen3'] ?? null;
     }
 
-    public function borrarImagen()
-    {
-        //Comprobar si existe el archivo
-        $existArchivo = file_exists(CARPETA_IMAGENES . $this->pro_imagen);
-        if ($existArchivo) {
-            unlink(CARPETA_IMAGENES . $this->pro_imagen);
-        }
-    }
-
     public static function listarCatXProd()
     {
         $query =
@@ -55,7 +46,8 @@ class Producto  extends ActiveRecord
         $resultado = static::consultarSQL($query);
         return $resultado;
     }
-    
+
+    //para editar el estado, se dibuja o no en el frontend.
     public function editEstado()
     {
         $query = "UPDATE " . static::$tabla . " SET pro_activo='" . $this->pro_activo . "' WHERE id=" . $this->id;
@@ -64,6 +56,30 @@ class Producto  extends ActiveRecord
     }
 
     ///FUNCIONES RELACIONADAS A LAS IMAGENES /////// ( EN PROCESO)
+
+    // Esta se usa por ahora
+    public function editSinImg()
+    {
+        $query = "UPDATE " . static::$tabla
+         . " SET pro_nombre='" . $this->pro_nombre
+         . "', pro_descripcion='" . $this->pro_descripcion 
+         . "', pro_precio='" . $this->pro_precio 
+         . "', pro_tamano='" . $this->pro_tamano 
+         . "', pro_activo='" . $this->pro_activo 
+         . "', pro_precioMulti='" . $this->pro_precioMulti 
+         . "' where id = " . $this->id;
+        $resultado = self::$db->query($query);
+        return $resultado;
+    }
+
+    public function borrarImagen()
+    {
+        //Comprobar si existe el archivo
+        $existArchivo = file_exists(CARPETA_IMAGENES . $this->pro_imagen);
+        if ($existArchivo) {
+            unlink(CARPETA_IMAGENES . $this->pro_imagen);
+        }
+    }
 
     public function setImagen($img)
     {
@@ -78,14 +94,6 @@ class Producto  extends ActiveRecord
             $this->pro_imagen2 = $img;
             $this->pro_imagen3 = $img;
         }
-    }
-
-    // no SIRVEN
-    public function editSinImg()
-    {
-        $query = "UPDATE " . static::$tabla . " SET pro_nombre='" . $this->pro_nombre . "', pro_descripcion='" . $this->pro_descripcion . "', pro_precio='" . $this->pro_precio . "', pro_tamano='" . $this->pro_tamano . "', pro_activo='" . $this->pro_activo . "' where id = " . $this->id;
-        $resultado = self::$db->query($query);
-        return $resultado;
     }
 
     //  que no sirve

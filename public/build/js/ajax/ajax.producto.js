@@ -37,8 +37,8 @@ function tableAll() {
           }" id="btnEstado">${data.pro_activo}</button>`;
         },
       },
-      { data: "pro_imagen1"},
-      { data: "pro_imagen2"},
+      { data: "pro_imagen1"}, //aqui la imagen esta blob
+      { data: "pro_imagen2"}, //aqui la imagen
       { data: "pro_imagen3"}, //aqui la imagen
       {
         data: null,
@@ -80,7 +80,7 @@ function obtenerData() {
         $("#t-1").val(tmn[0]);
         $("#t-2").val(tmn[1]);
 
-        // Mostrar imagen
+        // Mostrar imagen por ahora no sirve
         img.src = `/imagenes/${data.pro_imagen1}`;
         img.src = `/imagenes/${data.pro_imagen2}`;
         img.src = `/imagenes/${data.pro_imagen3}`;
@@ -132,7 +132,7 @@ function clean() {
   $("#save").text("Guardar");
 }
 
-//posiblemente lo borre
+//Consigue la lista de categorias del producto y lo imprime en un selector
 function getCategoria() {
   const proestado = document.querySelector("#pro_categoria");
   $.ajax({
@@ -165,9 +165,11 @@ function saveProduct() {
     const descripcion = $("#pro_descripcion").val().trim();
     const precio = $("#pro_precio").val().trim();
     const precioMulti = $("#pro_precioMulti").val().trim();
+    //imagenes, aun no terminado
     const imagen1 = $("#pro_imagen1")[0].files[0];
     const imagen2 = $("#pro_imagen2")[0].files[0];
     const imagen3 = $("#pro_imagen3")[0].files[0];
+    //guardando dimensiones
     const tm1 = document.querySelector("#t-1").value;
     const tm2 = document.querySelector("#t-2").value;
     const tamano = tm1 + "x" + tm2;
@@ -179,9 +181,9 @@ function saveProduct() {
     formData.append("pro_descripcion", descripcion);
     formData.append("pro_precio", precio);
     formData.append("pro_precioMulti", precioMulti);
-    formData.append("pro_imagen1", imagen1);
-    formData.append("pro_imagen2", imagen2);
-    formData.append("pro_imagen3", imagen3);
+    //formData.append("pro_imagen1", imagen1);
+    //formData.append("pro_imagen2", imagen2);
+    //formData.append("pro_imagen3", imagen3);
     formData.append("pro_tamano", tamano);
     formData.append("pro_activo", estado);
 
@@ -238,6 +240,7 @@ function update(formData) {
     processData: false, // tell jQuery not to process the data
     contentType: false,
     success: function (e) {
+      console.log(e);
       const json = JSON.parse(e);
       const resp = json.res;
       if (resp) {
