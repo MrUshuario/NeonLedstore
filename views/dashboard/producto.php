@@ -69,7 +69,7 @@
                     
                     <div class="mb-3">
                         <label for="">Imagen 1:</label>
-                        <input type="file" name="imagen1" id="pro_imagen1" class="form-control">
+                        <input type="file" name="images[]" multiple id="pro_imagen1" class="form-control">
                     </div>
 
                     <div class="mb-3">
