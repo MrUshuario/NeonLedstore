@@ -209,7 +209,48 @@ form{
 
 #proMulti { color:rgb(255, 255, 255); 
         background-color:rgb(100, 16, 121); }
-        
-        
-        
+                      
 /* Fin Modal Producto */
+
+
+/*Tabla Lista productos de compa - tablaAdministrar*/
+
+#tablecart th {
+    font-weight: bold;     
+    padding: 8px;     
+    background: #b9c9fe;
+    border-top: 4px solid #aabcfe;    
+    border-bottom: 1px solid #fff; 
+    color: #039; }
+
+#tablecart td {    
+    padding: 8px;     
+    background: #e8edff;     
+    border-bottom: 1px solid #fff;
+    color: #669;    
+    border-top: 1px solid transparent; }
+
+#tablecart tr:hover td { 
+    background: #d0dafd; 
+    color: #339; }
+
+
+
+
+
+.tableAdm th{
+    font-weight: bold;     
+    padding: 8px;     
+    background: #b9c9fe;
+    border-top: 4px solid #aabcfe;    
+    border-bottom: 1px solid #fff; 
+    color: #039; 
+}
+
+#tableAdm td {    
+    padding: 8px;     
+    background: #e8edff;     
+    border-bottom: 1px solid #fff;
+    color: #669;    
+    border-top: 1px solid transparent; }
+/*Fin Tabla Lista*/
