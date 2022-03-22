@@ -46,6 +46,7 @@ $(document).ready(function () {
         cli_telefono: cli_telefono,
         cli_estado: cli_estado,
         cli_rol: cli_rol,
+        cli_verificado: 2,
       };
       console.log(data);
           if (cli_nombre == "" || cli_apellidos == "" || cli_email == "" || cli_clave == ""  || cli_telefono == "" || cli_estado == "" || cli_rol == ""){

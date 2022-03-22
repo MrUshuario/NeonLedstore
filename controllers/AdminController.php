@@ -10,6 +10,7 @@ use Model\Cliente;
 use MVC\Router;
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
+use Model\ActiveRecord;
 
 
 
@@ -133,7 +134,7 @@ class AdminController  {
             Gracias por crear tu cuenta!
             Por favor haga click en el siguiente enlace para activar su cuenta mientras su sesion esta abierta:
 
-            localhost:8000/verificado?email='.password_hash($data->cli_email, PASSWORD_DEFAULT).'&verificado='.password_hash($data->cli_verificado, PASSWORD_DEFAULT).'
+        localhost:8000/verificado?email='.hash('sha256', $data->cli_email).'&verificado='.hash('sha256', $data->cli_verificado).'
             
             '; // cambiar localhost:8000 al url del sitio web cuando este sea subido
         
@@ -149,11 +150,13 @@ class AdminController  {
         $data = Cliente::find($_SESSION['id']);
         $email = $_GET["email"];
         $verificado = $_GET["verificado"];
+
         if(isset($email) && !empty($email) AND isset($verificado) && !empty($verificado)){
             // Verify data
-            if(password_hash($data->cli_email, PASSWORD_DEFAULT) == $email AND password_hash($data->cli_verificado, PASSWORD_DEFAULT) == $verificado){
-                mysql_query("UPDATE tab_cliente SET cli_verificado = '1' WHERE email='".$data->cli_email."'") or die(mysql_error()); 
-                //$match  = mysql_num_rows($search); esto era para contar las filas de resultado de otra sentencia que pensaba usar 
+            if(hash('sha256',$data->cli_email)==$email AND hash('sha256',$data->cli_verificado) == $verificado){
+                $mysql_query="UPDATE tab_cliente SET cli_verificado = '1' WHERE email='".$data->cli_email."'"; 
+                $resultado = self::$db->query($mysql_query);
+                $resultado->fetch_object();
                 echo '<section class="bg-black pt-5 pb-5 text-white">
 
                 <div class="container d-flex justify-content-center">
@@ -194,12 +197,10 @@ class AdminController  {
             
         ]);
         echo $email;
-        
-        echo "
-        ";
-
-        echo password_hash($data->cli_email, PASSWORD_DEFAULT);
-        echo $data->cli_email;
+        echo '
+        ';
+        echo $email2;
+        echo $compareveri;
     }
 
 }

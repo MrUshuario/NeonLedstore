@@ -40,6 +40,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="cerrar"></button>
             </div>
             <div class="modal-body">
+                <!--El enctype multipart es importante para poder trabajar con imaenes-->
                 <form id="formProducto" enctype="multipart/form-data" class="color-dark">
                     <input type="hidden" id="id">
                     <div class="mb-3">
@@ -68,17 +69,17 @@
                     
                     <div class="mb-3">
                         <label for="">Imagen 1:</label>
-                        <input type="file" id="pro_imagen1" class="form-control">
+                        <input type="file" name="images[]" multiple id="pro_imagen1" class="form-control">
                     </div>
 
                     <div class="mb-3">
                         <label for="">Imagen 2:</label>
-                        <input type="file" id="pro_imagen2" class="form-control">
+                        <input type="file"  name="imagen2" id="pro_imagen2" class="form-control">
                     </div>
 
                     <div class="mb-3">
                         <label for="">Imagen 3:</label>
-                        <input type="file" id="pro_imagen3" class="form-control">
+                        <input type="file"  name="imagen3" id="pro_imagen3" class="form-control">
                     </div>
                     
                     <img id="pro_img">
