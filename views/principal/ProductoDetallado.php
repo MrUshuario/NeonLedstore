@@ -79,14 +79,21 @@
                                     <option id="proMulti" value="MULTICOLOR">MULTICOLOR</option>
                             </select> 
                             <br>
-                            <div class="pt-3 pb-5">
+                            <div class="pt-3 pb-1">
                                 <a href="/productos" class="neonbottonlanding btn btn-primary my-sm-3 border-0" style="width: auto; height:auto font-size: 18px;"> Comprar </a>
                             </div>
                     </form>
                     <hr>
+                    <h4 id="detalles"></h4>
 
-                    <div class="pt-3 pb-5">
-                        <p id="detalles"></p>
+                    <h3 style="color: #fff45e">¡Calidad Garantizada!</h3>                     
+                        <label>Contamos con certificacion de calidad, productos peruanos: </label>
+                    <div class="pt-3 pb-1">                       
+                        <img src="/build/img/SellosCalidad/selloISO.webp" width="80px">&nbsp;
+                        <img src="/build/img/SellosCalidad/logoPeru.webp" width="80px">
+                        <img src="/build/img/SellosCalidad/selloISO.webp" width="80px">
+                    </div>
+                    <div class="pt-1 pb-1">                       
                         <i class="fa-solid fa-angles-left"></i><a href="/productos" class="neonbottonlanding btn btn-primary my-sm-3 border-0" style="width: auto; height:auto font-size: 18px;"> Volver </a>
                     </div>
                                   
