@@ -17,7 +17,7 @@ $(document).ready(function () {
         console.log(e);
         let json = JSON.parse(e);
         if(json.data){
-          select.innerHTML = 
+          document.getElementById('contenedor').innerHTML = 
           `         
           <section class="bg-black pt-5 pb-5 text-white">
 
@@ -35,7 +35,7 @@ $(document).ready(function () {
                 </section>
           ` 
         }else{
-          select.innerHTML = 
+          document.getElementById('contenedor').innerHTML = 
           `         
           <section class="bg-black pt-5 pb-5 text-white">
 

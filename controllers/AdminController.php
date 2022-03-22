@@ -110,40 +110,46 @@ class AdminController extends ActiveRecord {
     }
     public static function correoverificacion(){
         $data = Cliente::find($_SESSION['id']);
-        $mail = new PHPMailer();
-        $mail->isSMTP();
-        $mail->Port = 465;
-        //$mail->Timeout = 6000;
-        //$mail->SMTPDebug = SMTP::DEBUG_SERVER;  -> solo para ver acciones del ruteo del mail
-        $mail->SMTPSecure= PHPMailer::ENCRYPTION_SMTPS;
-        $mail->SMTPAuth=true;
-        $mail->Host ='smtp.gmail.com';
-        $mail->Username = 'renleds22@gmail.com';
-        //temporal llamamos una contraseña para ocultarla
-        $mail->Password = contra;
+        if($data->cli_verificado == '2'){
+            $mail = new PHPMailer();
+            $mail->isSMTP();
+            $mail->Port = 465;
+            //$mail->Timeout = 6000;
+            //$mail->SMTPDebug = SMTP::DEBUG_SERVER;  -> solo para ver acciones del ruteo del mail
+            $mail->SMTPSecure= PHPMailer::ENCRYPTION_SMTPS;
+            $mail->SMTPAuth=true;
+            $mail->Host ='smtp.gmail.com';
+            $mail->Username = 'renleds22@gmail.com';
+            //temporal llamamos una contraseña para ocultarla
+            $mail->Password = contra;
 
-        $mail->setFrom('renleds22@gmail.com','NeonLedStore'); //direccion desde donde se enviará
-        $mail->addAddress($data->cli_email); ////direccion de usuario que recibe
-        $mail->Subject = "Verificacion de correo";
+            $mail->setFrom('renleds22@gmail.com','NeonLedStore'); //direccion desde donde se enviará
+            $mail->addAddress($data->cli_email); ////direccion de usuario que recibe
+            $mail->Subject = "Verificacion de correo";
 
-        //Habilitar HTML
-        $mail->isHTML(true);
-        $mail->CharSet= 'UTF-8';       
-        $contenido = '
- 
-            Gracias por crear tu cuenta!
-            Por favor haga click en el siguiente enlace para activar su cuenta mientras su sesion esta abierta:
+            //Habilitar HTML
+            $mail->isHTML(true);
+            $mail->CharSet= 'UTF-8';       
+            $contenido = '
+    
+                Gracias por crear tu cuenta!
+                Por favor haga click en el siguiente enlace para activar su cuenta mientras su sesion esta abierta:
 
-        localhost:8000/verificado?email='.hash('sha256', $data->cli_email).'&verificado='.hash('sha256', $data->cli_verificado).'
+            localhost:8000/verificado?email='.hash('sha256', $data->cli_email).'&verificado='.hash('sha256', $data->cli_verificado).'
+                
+                '; // cambiar localhost:8000 al url del sitio web cuando este sea subido
             
-            '; // cambiar localhost:8000 al url del sitio web cuando este sea subido
-        
-        $mail->Body = $contenido;
+            $mail->Body = $contenido;
 
-        echo json_encode([
-            "prueba" => $mail->send(),
-            ""=>$mail->ErrorInfo
-        ]);
+            echo json_encode([
+                "prueba" => $mail->send(),
+                ""=>$mail->ErrorInfo
+            ]);
+        }else{
+            echo json_encode([
+                "prueba" => false
+            ]);
+        }
     }
     public static function verificado(){
         
@@ -156,20 +162,6 @@ class AdminController extends ActiveRecord {
             if(hash('sha256',$data->cli_email)==$email AND hash('sha256',$data->cli_verificado) == $verificado){
                 $mysql_query= "UPDATE tab_cliente SET cli_verificado='1' WHERE id='".$data->id."'"; 
                 $resultado = self::$db->query($mysql_query);
-                print '<section class="bg-black pt-5 pb-5 text-white">
-
-                <div class="container d-flex justify-content-center">
-            
-                    <div class="text-center mw-60">
-                        <h2>Su cuenta ha sido activada!</h2>
-                        <div class="d-flex justify-content-center">
-                            <h3>Gracias por verificar su cuenta, puede continuar con sus compras :)</h3>
-                        </div>
-                    </div>
-            
-                </div>
-            
-                </section>';
             }else{
                 $resultado = false;
                 echo 'aqui 1';

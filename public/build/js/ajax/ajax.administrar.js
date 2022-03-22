@@ -46,13 +46,12 @@ function correoverificacion(){
                 title: 'Revise su correo',
                 icon: "success",
               });
-            
+        
         }else{
             swal({
-                title: "Ups. Hubo un error, intentelo de nuevo.",
+                title: "Su correo ya fue verificado",
                 icon: "error",
               });
-            
         }
       }
     });
