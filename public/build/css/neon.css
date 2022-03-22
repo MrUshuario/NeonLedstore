@@ -385,8 +385,8 @@
 }
 
 .tamano-carrus{
-    width: 40%;
-    margin: auto 2%;
+    width: auto;
+    margin: 10% 2%;
     margin-top: 2.5%;
 }
 .tamano_des{
