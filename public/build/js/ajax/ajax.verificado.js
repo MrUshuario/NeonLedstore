@@ -15,6 +15,44 @@ $(document).ready(function () {
       data: datos,
       success: function(e){
         console.log(e);
+        let json = JSON.parse(e);
+        if(json.data){
+          select.innerHTML = 
+          `         
+          <section class="bg-black pt-5 pb-5 text-white">
+
+                <div class="container d-flex justify-content-center">
+            
+                    <div class="text-center mw-60">
+                        <h2>Su cuenta ha sido activada!</h2>
+                        <div class="d-flex justify-content-center">
+                            <h3>Gracias por verificar su cuenta, puede continuar con sus compras :)</h3>
+                        </div>
+                    </div>
+            
+                </div>
+            
+                </section>
+          ` 
+        }else{
+          select.innerHTML = 
+          `         
+          <section class="bg-black pt-5 pb-5 text-white">
+
+            <div class="container d-flex justify-content-center">
+        
+                <div class="text-center mw-60">
+                    <h2>UPS</h2>
+                    <div class="d-flex justify-content-center">
+                        <h3>Hubo un error en la validacion</h3>
+                    </div>
+                </div>
+        
+            </div>
+        
+            </section>
+          ` 
+        }
       }
     });
 }

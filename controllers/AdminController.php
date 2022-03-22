@@ -14,7 +14,7 @@ use Model\ActiveRecord;
 
 
 
-class AdminController  {
+class AdminController extends ActiveRecord {
 
 
     public static function index1(Router $router) {
@@ -154,10 +154,9 @@ class AdminController  {
         if(isset($email) && !empty($email) AND isset($verificado) && !empty($verificado)){
             // Verify data
             if(hash('sha256',$data->cli_email)==$email AND hash('sha256',$data->cli_verificado) == $verificado){
-                $mysql_query="UPDATE tab_cliente SET cli_verificado = '1' WHERE email='".$data->cli_email."'"; 
+                $mysql_query= "UPDATE tab_cliente SET cli_verificado='1' WHERE id='".$data->id."'"; 
                 $resultado = self::$db->query($mysql_query);
-                $resultado->fetch_object();
-                echo '<section class="bg-black pt-5 pb-5 text-white">
+                print '<section class="bg-black pt-5 pb-5 text-white">
 
                 <div class="container d-flex justify-content-center">
             
@@ -172,6 +171,7 @@ class AdminController  {
             
                 </section>';
             }else{
+                $resultado = false;
                 echo 'aqui 1';
             }
             
@@ -193,14 +193,8 @@ class AdminController  {
             </section>';
         }
         echo json_encode([
-            'data'=>$data->cli_verificado
-            
+            "data" => $resultado
         ]);
-        echo $email;
-        echo '
-        ';
-        echo $email2;
-        echo $compareveri;
     }
 
 }
