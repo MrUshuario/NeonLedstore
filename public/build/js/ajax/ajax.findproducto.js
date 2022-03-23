@@ -35,3 +35,5 @@ function seleccionarColor2(){
     }
     
   }
+
+  /*boton funcion comprar, 1ra parte envia con ajax a una url que de a CartController*/

@@ -180,4 +180,10 @@ class ProductoController
             'data'=>$data
         ]);
     }
+
+    /*
+    function
+    $prod = Producto::find($_SESSION['pro_vermas']); 
+    $_SESSUION[lista carrito[]] = add objeto($prod)
+    */
 }

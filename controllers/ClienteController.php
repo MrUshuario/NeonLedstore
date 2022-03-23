@@ -137,16 +137,18 @@ class ClienteController {
                 $_POST['cli_clave'] = password_hash($_POST['cli_clave'], PASSWORD_DEFAULT);
             };            
             $cliente = Cliente::find($_POST['id']);
+
             $cliente->sincronizar($_POST);
-
             $dd = $cliente->actualizar();
-
             $json = json_encode($dd);
-
             echo $json;
         }
         
     }
+
+    //HACER UN UPDDATE 2 PARA CLIENTE, DE SU MODULO, EN ESTE EL CLI ROL DEBE SER SIEMPRE 2 Y VERIFICADO SI CAMBIA EL CORREO DEBE SER 2
+
+            //if ($cliente->cli_correo == $POST['cli_email'])
 
     public static function estado()
     {

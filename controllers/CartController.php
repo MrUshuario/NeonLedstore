@@ -32,6 +32,6 @@ class CartController
     /*
     function
     $prod = Producto::find($_SESSION['pro_vermas']); 
-    $_SESSION[lista carrito[]] = add objeto($prod)
+    $_SESSION[lista_carrito[]] = add objeto($prod)
     */
 }

@@ -143,10 +143,24 @@
                               <!-- principal registro  -->
                               <div class="row espacio-admin">
                                 <div class="col-sm-12 border neontabla">
-                                    <button id='botonveri' class="btn btn-primary neontextlanding bg-black neones3" onclick="correoverificacion(); bloquear(10000000,this)" style="margin-left: 300px; margin-right: 300px; margin-top: 10px; margin-bottom: 10px;">Verificar Correo</button>
+                                    <h2 style="padding: 40px !important;" class="neones">Verificacion y activacion</h2>
+                                    <h5 style="margin-left: 120px" >Al clickear el boton recibira un enlace de confirmacion</h5>
+                                    <button id='botonveri' class="btn btn-primary neontextlanding bg-black " onclick="correoverificacion(); bloquear(10000,this)" style="margin-left: 300px; margin-right: 300px; margin-top: 10px; margin-bottom: 10px;">Verificar Correo</button>
                                 </div>
                             </div>
-                        
+                                </section>
+                    </div>
+
+                    <div class="container" style="display: flex; align-items: center;">
+                                <section class="fondo-null espacio-admin" id="yaverificada">
+                              <!-- principal registro  -->
+                              <div class="row espacio-admin">
+                                <div class="col-sm-12 border neontabla text-white w-100 ">
+                                    <h2 style="padding: 40px !important;" class="neones">Su correo ya se encuentra verificado</h2>
+                                    <p>Tiene acceso a todas las funciones como cliente verificado</p>
+                                </div>
+                            </div>
+                                </section>
                     </div>
         </div>
 
