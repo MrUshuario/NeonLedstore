@@ -36,4 +36,26 @@ function seleccionarColor2(){
     
   }
 
-  /*boton funcion comprar, 1ra parte envia con ajax a una url que de a CartController*/
+function sendCart() 
+{
+    $(document).on("click", "#addcart", function (e) 
+    {
+        let selectColor = document.getElementById('selectColor');
+        let color = selectColor.value;
+        const data = { pro_color : color };
+        console.log(data);
+        //tiene que capturar el valor del color
+        $.ajax({
+        url:"/cart/aggCart",
+        data:data,
+        type:'POST',
+            success: function(e)
+            {
+                console.log(e);
+                let json = JSON.parse(e);
+                console.log("ya funciona");
+                window.location.href ="#"; 
+            }
+        });    
+    })
+}

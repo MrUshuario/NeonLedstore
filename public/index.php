@@ -16,6 +16,7 @@ use Controllers\CompraController;
 use Controllers\VisitanteController;
 use Controllers\RegistroClienteController;
 use Controllers\ProductoDetalladoController;
+use Controllers\CartController;
 use MVC\Router;
 
 $router = new Router();
@@ -159,6 +160,9 @@ $router = new Router();
         $router->post("/contacto/enviar",[PrincipalController::class,"contactoEmail"]);
         $router->post("/contacto/enviarEmp",[PrincipalController::class,"contactoEmailEm"]);//correo llega a empresa
         //$router->post("/landingpage/enviar",[PrincipalController::class,"contactolandingEmail"]);
+
+        // Cart
+        $router->post("/cart/aggCart", [CartController::class, 'aggCart']); 
 
         //registrocliente
         //productodetallado
