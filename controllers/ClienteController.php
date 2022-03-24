@@ -76,14 +76,14 @@ class ClienteController {
                     //agregar metodo para enviar correo de verificacion
                     $json = json_encode([
                         "STATUS"=>1,
-                        "mensaje"=>"Estas Registado",
+                        "mensaje"=>"Estas Registrado",
                         "listas"=>$listado,
                         "c"=>$cliente
                     ]);
                 }  else {
                     $json = json_encode([
                         "STATUS"=>2,
-                        "mensaje"=>"Error al registrar",
+                        "mensaje"=>"Error al Registrar",
                         "c"=>$cliente,
                         "b"=>$resultado,
                     ]);
@@ -149,6 +149,47 @@ class ClienteController {
     //HACER UN UPDDATE 2 PARA CLIENTE, DE SU MODULO, EN ESTE EL CLI ROL DEBE SER SIEMPRE 2 Y VERIFICADO SI CAMBIA EL CORREO DEBE SER 2
 
             //if ($cliente->cli_correo == $POST['cli_email'])
+
+
+    public static function update2(){
+
+        $cliente = Cliente::find($_SESSION['id']);
+        //if es para la verificacion de correo
+    
+        if($cliente->cli_email == $_POST['cli_email']){
+
+            $_POST['cli_verificado'] = 2;
+        }
+
+        //seguridad no cambiar contra, id
+            $_POST['cli_rol'] = 2; //sera cliente                
+         
+        if (isset($_POST['id'], $_POST['cli_clave'], $_POST['cli_estado'])){
+           
+            $json = json_encode([
+                "STATUS"=>2,
+                "mensaje"=>"Error al Actualizar",
+            ]);
+            echo $json;
+        }
+            else {
+                $cliente->sincronizar($_POST);
+                $dd = $cliente->actualizar();
+                               
+                $json = json_encode([
+                    "STATUS"=>1,
+                    "mensaje"=>"Actualizado Correctamente",
+    
+                ]);
+                echo $json;
+            }
+
+
+    }
+         
+     //   
+
+    
 
     public static function estado()
     {

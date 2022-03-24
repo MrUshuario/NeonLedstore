@@ -69,6 +69,7 @@ $router = new Router();
     $router->post('/cliente/create',[ClienteController::class,'create']);
     $router->post('/cliente/estado',[ClienteController::class,'estado']); 
     $router->post('/cliente/update',[ClienteController::class,'update']); 
+    $router->post('/cliente/update2',[ClienteController::class,'update2']);
     $router->post('/cliente/delete',[ClienteController::class,'delete']);
     $router->post('/cliente/createRegistro',[ClienteController::class,'createRegistro']);
 

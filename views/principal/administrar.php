@@ -46,7 +46,7 @@
                            
                                 <!--fin de principal registro -->
                                 <div class="col-sm-12">
-                                    <table class="table table-purple table-striped table-hover w-100 table-light table-fixed dataTable no-footer" id="CompraDetalle" role="grid" aria-describedby="CompraDetalle_info" style="width: 822px;">
+                                    <table class="table table-purple table-striped table-hover w-100 table-light table-fixed" id="CompraDetalle" role="grid" aria-describedby="CompraDetalle_info" style="width: 822px;">
                                         <!--PARA PONER CON BLANCO: table table-striped table-hover table-light table-fixed w-100-->    
                                         <thead class="tableAdm">
                                             <tr role="row">
@@ -72,14 +72,15 @@
                                                     <h2 class= "neones"><i class="fa-solid fa-user-pen"></i> Datos Personales </h2>
                                                         <div class="container">
                                                         <div class="row">
+                                                        <form class="formDatos" id="formDatos" method="POST">
                                                             <div class=" my-auto mx-auto">          
                                                                 <input class="p-2 neontextlanding  border-0 border bg-transparent rounded w-100 me-1 me-sm-4 my-3 d-block text-white" type="hidden" id="per_id"><!--variable invisible-->
                                                                 <label for="nombre" style="color: white;">Nombre: </label>          
                                                                 <input class="p-2 neontextlanding bg-transparent border-0 border  rounded w-100 me-1 me-sm-4 my-3 d-block text-white" type="text" id="per_nombre"><br>
                                                                 <label for="nombre" style="color: white;">Apellidos: </label>  
-                                                                <input class="p-2 neontextlanding bg-transparent border-0 border  rounded w-100 me-1 me-sm-4 my-3 d-block text-white" type="text" id="per_apellidos" value="apellido"><br>
+                                                                <input class="p-2 neontextlanding bg-transparent border-0 border  rounded w-100 me-1 me-sm-4 my-3 d-block text-white" type="text" id="per_apellidos"><br>
                                                                 <label for="nombre" style="color: white;">Correo: </label>
-                                                                <input class="p-2 neontextlanding bg-transparent border-0 border  rounded w-100 me-1 me-sm-4 my-3 d-block text-white" type="email" id="per_email" disabled><br>
+                                                                <input class="p-2 neontextlanding bg-transparent border-0 border  rounded w-100 me-1 me-sm-4 my-3 d-block text-white" type="email" id="per_email"><br>
                                                                 <label for="nombre" style="color: white;">Teléfono: </label>  
                                                                 <input class="p-2 neontextlanding bg-transparent border-0 border  rounded w-100 me-1 me-sm-4 my-3 d-block text-white" type="number" id="per_telefono"> <br>
 
@@ -88,7 +89,8 @@
                                                                     
                                                                 </div>
                                                                 
-                                                            </div>   
+                                                            </div> 
+                                                        </form>  
                                                         </div>
                                                 
                                             </div>
@@ -173,5 +175,6 @@
 </div>
 <!-- </section> -->
 <script src="build/js/ajax/ajax.administrar.js"></script>
+<script src="build/js/ajax/ajax.datosPersonales.js"></script>
 <script src="build/js/ajax/ajax.cambiarContra.js"></script>
 <script src="build/js/ajax/ajax.histfactura.js"></script>

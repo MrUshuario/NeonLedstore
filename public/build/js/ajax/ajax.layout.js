@@ -49,9 +49,9 @@ function data() {
 
             if(document.getElementById('per_nombre')){
                 /* guia mostrar nombre  */
-                console.log("hola existe");
+
                 $("#per_nombre").val(data.cli_nombre);
-                $("per_apellidos").val(data.cli_apellidos);
+                $("#per_apellidos").val(data.cli_apellidos);
                 $("#per_email").val(data.cli_email);
                 $("#per_telefono").val(data.cli_telefono);
                 console.log(data);

@@ -840,7 +840,7 @@ public static function contactoEmailEm(){
         $mail->Password = contra;
 
         $mail->setFrom('renleds22@gmail.com','NeonLedStore'); //direccion desde donde se enviará
-        $mail->addAddress('rlcarhuachino@unac.edu.pe'); ////direccion de usuario que recibe
+        $mail->addAddress('info.neonledstore@gmail.com'); ///correo de Empresa, que recibira el mensaje
         $mail->Subject = "Nueva Consulta de Cliente";
 
         //Habilitar HTML
