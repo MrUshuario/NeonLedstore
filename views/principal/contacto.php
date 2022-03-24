@@ -97,7 +97,7 @@
                                     </label>
                                     <label>
                                     <i class="fas fa-phone-square-alt iconoFont "></i>
-                                    <input class="p-2 neontextlanding border-0 border bg-transparent rounded me-1 me-sm-4 my-3 d-block text-white" type="tel" name="telefono" id="telefono" pattern="[0-9]{9,12}" placeholder="N° de celular"> <br>
+                                    <input class="p-2 neontextlanding border-0 border bg-transparent rounded me-1 me-sm-4 my-3 d-block text-white" type="tel" name="telefono" id="telefono" pattern="[0-9]{9,12}" placeholder="N° de celular" required> <br>
                                     </label>
                                     </div>
 
