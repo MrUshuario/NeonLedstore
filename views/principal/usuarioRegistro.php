@@ -42,24 +42,3 @@
 </div>
 
 <script src="build/js/ajax/ajax.registroCliente.js"></script>
-<script>
-    function sesionactive(){
-    $.ajax({
-      url: '/configuracion/getData',
-      type: 'GET',
-      success: function(e){
-        
-          
-          //si no esta logeado enviar un mensaje que empieza con <
-          if (e[0] == "<") {
-            var x = false;
-            console.log("No logeado"); 
-          } 
-          else{
-            var x = true;
-            document.location.href='/';
-          }
-      }   
-  });
-}
-</script>
