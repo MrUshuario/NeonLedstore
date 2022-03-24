@@ -87,6 +87,7 @@ function saveCliente(){
       cli_rol: cli_rol,
       cli_verificado: cli_verificado,
     };
+    let validador = true; // para verificar que todo este bien
     if (id=="") {
       if (cli_nombre == "" || cli_apellidos == "" || cli_email == "" || cli_clave == ""  || cli_telefono == "" || cli_estado == "" || cli_rol == "" || cli_verificado == ""){
         swal({
@@ -94,56 +95,27 @@ function saveCliente(){
           icon: "error"
         });
       } else {
-          /*
-                if($("#cli_email").val().indexOf('@', 0) == -1 || $("#cli_email").val().indexOf('.', 0) == -1) 
-          {swal({
-              title:"El correo electrónico introducido no es válido.",
-              icon: "error"
-            })
-                } ;
-                if($("#cli_nombre").val().indexOf(' [^a-zA-Z \-]|( )|(\-\-)|(^\s*$) ', 0) == -1 || $("#cli_nombre").val().indexOf('.', 0) == -1) 
-          {swal({
-              title:"Completar con solo letras", 
-              icon: "error"
-            })
-          } ;
-                if($("#cli_apellidos").val().indexOf(' [^a-zA-Z \-]|( )|(\-\-)|(^\s*$) ', 0) == -1 || $("#cli_apellidos").val().indexOf('.', 0) == -1) 			
-            {swal({
-              title:"Completar con solo letras", 
-              icon: "error"
-            })
-          } ;
-            if($("#cli_telefono").val().indexOf('/[^0-9]/g ', 0) == -1) {
+            if(!(/^\d{9}$/.test(cli_telefono))) {
               swal({
-              title:"Completar con solo números ", 
+              title:"Completar con solo números", 
               icon: "error"
-            })
+            }); validador = false;
           } ;
           // fin de las validaciones
-      return false;
-      }
-          
-      } else{
-        create(data)
-      }
-
+          //CREA SI TODO VA BIEN
+            if(validador) {
+              console.log(data);
+              create(data)
+            } else {
+              // no pasa nada ya envio un swal
+            }
+        }
       } else {
       update(data);
       
     }
   });
-} */
-      console.log(data);
-      create(data)
-      }
-
-      }else {
-
-      update(data);
-
-      }
-      });
-}
+} 
 
 function create(data) {
   $.ajax ({

@@ -155,6 +155,11 @@ function getCategoria() {
   });
 } 
 
+// conseguir las imagenes
+$(document).on("change", "#pro_imagen1", function () {
+  console.log(this.files);
+});
+
 function saveProduct() {
   $("#formProducto").submit(function (e) {
     e.preventDefault();
@@ -166,9 +171,9 @@ function saveProduct() {
     const precio = $("#pro_precio").val().trim();
     const precioMulti = $("#pro_precioMulti").val().trim();
     //imagenes, aun no terminado
-    const imagen1 = $("#pro_imagen1")[0].files[0];
-    const imagen2 = $("#pro_imagen2")[0].files[0];
-    const imagen3 = $("#pro_imagen3")[0].files[0];
+    //const imagen1 = $("#pro_imagen1")[0].files[0];
+    //const imagen2 = $("#pro_imagen2")[0].files[0];
+    //const imagen3 = $("#pro_imagen3")[0].files[0];
     //guardando dimensiones
     const tm1 = document.querySelector("#t-1").value;
     const tm2 = document.querySelector("#t-2").value;

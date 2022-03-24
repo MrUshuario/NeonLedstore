@@ -77,12 +77,14 @@
                                     <option id="proMora" value="MORADO">MORADO</option>
                                     <option id="proBla" value="BLANCO">BLANCO</option>
                                     <option id="proMulti" value="MULTICOLOR">MULTICOLOR</option>
-                            </select> 
-                            <br>
-                            <div class="pt-3 pb-1">
-                                <a href="/productos" class="neonbottonlanding btn btn-primary my-sm-3 border-0" style="width: auto; height:auto font-size: 18px;"> Comprar </a>
-                            </div>
-                    </form>
+
+                                </select> 
+                                
+                                <div class="pt-3 pb-3">
+                                <i class="fa-solid fa-dolly"></i><a onclick="sendCart()" class="neonbottonlanding btn btn-primary my-sm-3 border-0" style="width: auto; height:auto font-size: 18px;" id="addcart"> Comprar </a>
+                                </div>
+                            </form>
+
                     <hr>
                     <h4 id="detalles"></h4>
 
