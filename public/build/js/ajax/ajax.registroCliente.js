@@ -49,8 +49,11 @@ $(document).ready(function () {
         cli_verificado: 2,
       };
       console.log(data);
-          if (cli_nombre == "" || cli_apellidos == "" || cli_email == "" || cli_clave == ""  || cli_telefono == "" || cli_estado == "" || cli_rol == ""){
-            
+          if (campos.apellidos == false && campos.clave == false && campos.email == false && campos.nombre ==false && campos.telefono == false){//si todos los campos estan en verde, se ejecuta la funcion savecliente
+            swal({
+              title: 'Verifique los datos ingresados',//si hay como minimo un campo rojo (false) no se ejecute
+              icon: "error",
+            });
           }else{
             register(data);
           }
@@ -160,7 +163,7 @@ inputs.forEach((input) => {
 
 formulario.addEventListener('submit', (e) =>{
   e.preventDefault();
-  if(campos.apellidos && campos.clave && campos.email && campos.nombre && campos.telefono){//si todos los campos estan en verde, se ejecuta la funcion savecliente
+  if(campos.apellidos && campos.clave && campos.email && campos.nombre && campos.telefono){
     campos.reset();
     clean();
   }
