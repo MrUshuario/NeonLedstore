@@ -1,9 +1,6 @@
 $(document).ready(function () {
   tableAll();
-  saveVisitante();
-  cleanForm();
-  obtenerData();
-  deleteVisitante();
+
 });
 
 function tableAll(){
@@ -11,18 +8,20 @@ function tableAll(){
     "destroy":true,
     "ajax":{
       "method":"GET",
-      "url":"visitante/listar"
+      "url":"/direcciones/listar"
     }, 
     columns: [
-      {data:"vis_nombre"},
-      {data:"vis_apellidos"},
-      {data:"vis_email"},
-      {data:"vis_telefono"},
-      {data:"vis_pregunta"},   
+      // {data:"id"},
+      {data:"url_tiktok"},
+      {data:"url_instagram"},
+      {data:"url_pinterest"},
+      {data:"url_facebook"},
+      {data:"url_whatsap"},  
+      {data:"url_correoempresa"}, 
+      {data:"url_correoemisor"},  
       {data: null,
         render: function(data,type,row){
-          return `<button class="btn-inline btn-warning" data-idvisitante="${data.id}" id="edit" data-bs-toggle="modal" data-bs-target="#modalVisitante" >Edit</button>
-          <button class="btn-inline btn-danger" data-idvisitante="${data.id}" id="delete">Del</button>`;
+          return `<button class="btn-inline btn-warning" data-iddireccion="${data.id}" id="edit" data-bs-toggle="modal" data-bs-target="#modalDirecciones">Edit</button>`;
 
         }
       }
@@ -187,32 +186,4 @@ function deleteVisitante() {
   });
 }
 
-
-/*creo que esto no sirve por si error verificar ahi*/
-/* Registro de visitantes en Contacto */
-
-// function saveContactoVis(){
-//   $("#formContact1").submit(function(e){
-//     e.preventDefault();
-
-//     let id = $("#id").val();
-//     let vis_nombre = $("#vis_nombre").val();
-//     let vis_apellidos = $("#vis_apellidos").val();
-//     let vis_email = $("#vis_email").val();
-//     let vis_telefono = $("#vis_telefono").val();
-    
-    
-   
-//     const data = {
-   
-//       id: id,
-//       vis_nombre: vis_nombre,
-//       vis_apellidos: vis_apellidos,
-//       vis_email: vis_email,
-//       vis_telefono: vis_telefono,
-//     };
-//     console.log(id);
-//       //createContactoVis(data)
-//   });
-// }
 

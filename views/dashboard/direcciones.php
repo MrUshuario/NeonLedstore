@@ -17,6 +17,7 @@
                     <th>whatsap</th>
                     <th>correo empresa</th>
                     <th>correo emisor</th>
+                    <th>Editar</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -84,4 +85,4 @@
 </div>
 
 
-<script src="build/js/ajax/ajax.visitante.js"></script>
+<script src="build/js/ajax/ajax.direcciones.js"></script>
