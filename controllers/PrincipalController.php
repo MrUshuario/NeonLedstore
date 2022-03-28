@@ -356,7 +356,7 @@ class PrincipalController {
                                                 
                                                 <p style="font-size: 15px;">Jr. Paruro 1401 tda 130 CC Shoping Center, Cercado de Lima.</p>
                                                 <p style="font-size: 15px;"> Celular: 994078320</p>
-                                                <p style="font-size: 15px;">Email: <a href="mailto:info.neonledstore@gmail.com" style="color: #2e54fa">info.neonledstore@gmail.com</a></p>
+                                                <p style="font-size: 15px;">Email: <a href="mailto:neonledstore20@gmail.com" style="color: #2e54fa">neonledstore20@gmail.com</a></p>
                                                 <p style="color: #d063eb; font-size: 15px; text-align: center;margin: 20px 0px" id="brand">&#169; 2022 Neon House Led</p>								
                                             </td>
                                             
@@ -840,7 +840,7 @@ public static function contactoEmailEm(){
         $mail->Password = contra;
 
         $mail->setFrom('renleds22@gmail.com','NeonLedStore'); //direccion desde donde se enviará
-        $mail->addAddress('info.neonledstore@gmail.com'); ///correo de Empresa, que recibira el mensaje
+        $mail->addAddress('neonledstore20@gmail.com'); ///correo de Empresa, que recibira el mensaje
         $mail->Subject = "Nueva Consulta de Cliente";
 
         //Habilitar HTML

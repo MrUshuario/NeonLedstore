@@ -1,4 +1,5 @@
 const btnSave = document.querySelector("#save");
+
 $(document).ready(function() {
     $("#pass").val("");
     // boton guardar
