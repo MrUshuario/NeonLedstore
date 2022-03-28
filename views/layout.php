@@ -80,6 +80,7 @@
                     <li><a href="/compraDetalle"><i class="fas fa-tags"></i></i>Compra Detalle</a></li>
                     <li><a href="/compra"><i class="fas fa-shopping-basket"></i></i>Compra</a></li>
                     <li><a href="/visitante"><i class="fas fa-person-booth"></i></i>Visitantes</a></li>
+                    <li><a href="/direcciones"><i class="fa-solid fa-envelope"></i></i>Direcciones</a></li>
                     
                     <!-- por si se requieren más botones -->
                     <!-- borrar display none si se desea ver -->

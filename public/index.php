@@ -17,6 +17,7 @@ use Controllers\VisitanteController;
 use Controllers\RegistroClienteController;
 use Controllers\ProductoDetalladoController;
 use Controllers\CartController;
+use Controllers\DireccionesController;
 use MVC\Router;
 
 $router = new Router();
@@ -115,6 +116,11 @@ $router = new Router();
 
     //method post
     $router->post('/compra/create',[CompraController::class,'create']);
+
+//Dirrecciones
+    //metodo get
+    $router->get('/direcciones',[DireccionesController::class,'direcciones']);
+    //metodo post
 
 
 // BotonConfiguracion
