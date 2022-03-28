@@ -1,7 +1,6 @@
 $(document).ready(function () {
   tableAll();
   saveVisitante();
-  cleanForm();
   obtenerData();
   deleteVisitante();
 });
@@ -119,41 +118,39 @@ function update(data) {
 
 function clean() {
   $("#id").val("");
-  $("#vis_nombre").val("");
-  $("#vis_apellidos").val("");
-  $("#vis_email").val("")
-  $("#vis_telefono").val("")
-  $("#vis_pregunta").val("");
-
+  $("#url_tiktok").val("");
+  $("#url_instagram").val("");
+  $("#url_pinterest").val("")
+  $("#url_facebook").val("")
+  $("#url_whatsap").val("");
+  $("#url_correoempresa").val("");
+  $("#url_correoemisor").val("");
 }
 
-function cleanForm() {
-  $(document).on("click", "#model-Visitante", function () {
-    clean();
-  });
-}
 
 function obtenerData() {
   $(document).on("click", "#edit", function (e) {
     clean();
 
-    let id = e.target.dataset.idvisitante;
+    let id = e.target.dataset.iddireccion; //cambiarlo en el boton edit
     const data = {
       id: id,
     };
     $.ajax({
       type: "POST",
-      url: "/visitante/getVisitante",
+      url: "/direccion/getDireccion",
       data: data,
       success: function (e) {
         console.log(e); 
         const { data } = JSON.parse(e); 
         $("#id").val(data.id);
-        $("#vis_nombre").val(data.vis_nombre);
-        $("#vis_apellidos").val(data.vis_apellidos);
-        $("#vis_email").val(data.vis_email);
-        $("#vis_telefono").val(data.vis_telefono);
-        $("#vis_pregunta").val(data.vis_pregunta)
+        $("#url_tiktok").val(data.url_tiktok);
+        $("#url_instagram").val(data.url_instagram);
+        $("#url_pinterest").val(data.url_pinterest);
+        $("#url_facebook").val(data.url_facebook);
+        $("#url_whatsap").val(data.url_whatsap)
+        $("#url_correoempresa").val(data.url_correoempresa)
+        $("#url_correoemisor").val(data.url_correoemisor)
       },
     });
   });
@@ -186,33 +183,4 @@ function deleteVisitante() {
     });
   });
 }
-
-
-/*creo que esto no sirve por si error verificar ahi*/
-/* Registro de visitantes en Contacto */
-
-// function saveContactoVis(){
-//   $("#formContact1").submit(function(e){
-//     e.preventDefault();
-
-//     let id = $("#id").val();
-//     let vis_nombre = $("#vis_nombre").val();
-//     let vis_apellidos = $("#vis_apellidos").val();
-//     let vis_email = $("#vis_email").val();
-//     let vis_telefono = $("#vis_telefono").val();
-    
-    
-   
-//     const data = {
-   
-//       id: id,
-//       vis_nombre: vis_nombre,
-//       vis_apellidos: vis_apellidos,
-//       vis_email: vis_email,
-//       vis_telefono: vis_telefono,
-//     };
-//     console.log(id);
-//       //createContactoVis(data)
-//   });
-// }
 
