@@ -120,6 +120,7 @@ $router = new Router();
 //Dirrecciones
     //metodo get
     $router->get('/direcciones',[DireccionesController::class,'direcciones']);
+    $router->get('/direcciones/listar',[DireccionesController::class,'listar']);
     //metodo post
 
 

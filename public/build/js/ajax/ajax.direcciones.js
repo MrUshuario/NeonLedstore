@@ -1,8 +1,5 @@
 $(document).ready(function () {
   tableAll();
-  saveVisitante();
-  obtenerData();
-  deleteVisitante();
 });
 
 function tableAll(){
@@ -10,18 +7,20 @@ function tableAll(){
     "destroy":true,
     "ajax":{
       "method":"GET",
-      "url":"visitante/listar"
+      "url":"/direcciones/listar"
     }, 
     columns: [
-      {data:"vis_nombre"},
-      {data:"vis_apellidos"},
-      {data:"vis_email"},
-      {data:"vis_telefono"},
-      {data:"vis_pregunta"},   
+      // {data:"id"},
+      {data:"url_tiktok"},
+      {data:"url_instagram"},
+      {data:"url_pinterest"},
+      {data:"url_facebook"},
+      {data:"url_whatsap"},  
+      {data:"url_correoempresa"}, 
+      {data:"url_correoemisor"},  
       {data: null,
         render: function(data,type,row){
-          return `<button class="btn-inline btn-warning" data-idvisitante="${data.id}" id="edit" data-bs-toggle="modal" data-bs-target="#modalVisitante" >Edit</button>
-          <button class="btn-inline btn-danger" data-idvisitante="${data.id}" id="delete">Del</button>`;
+          return `<button class="btn-inline btn-warning" data-iddireccion="${data.id}" id="edit" data-bs-toggle="modal" data-bs-target="#modalDirecciones">Edit</button>`;
 
         }
       }
@@ -152,34 +151,6 @@ function obtenerData() {
         $("#url_correoempresa").val(data.url_correoempresa)
         $("#url_correoemisor").val(data.url_correoemisor)
       },
-    });
-  });
-}
-
-function deleteVisitante() {
-  $(document).on("click", "#delete", function (e) {
-    let id = e.target.dataset.idvisitante;
-    swal({
-      title: "¿Estas seguro de eliminar este visitante?",
-      icon: "warning",
-      buttons: true,
-      dangerMode: true,
-    }).then(function (e) {
-      if (e) {
-        $.ajax({
-          url: "/visitante/delete",
-          data: { id: id },
-          type: "POST",
-          success: (e) => {
-            if (e) {
-              tableAll();
-              swal("Eliminado correctamente!", {
-                icon: "success",
-              });
-            }
-          },
-        });
-      }
     });
   });
 }

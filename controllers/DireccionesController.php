@@ -20,4 +20,17 @@ class DireccionesController
         ]);
         echo $json;
     }
+
+
+    public static function getDirecciones(Router $router){
+        if($_SERVER['REQUEST_METHOD'] == 'POST'){ 
+            $id = $_POST['id'];
+            $id = intval($id);
+            $direcciones = Direcciones::find($id);
+            $json = json_encode([
+                "data"=>$direcciones
+            ]);
+            echo $json;
+        }
+    }
 }

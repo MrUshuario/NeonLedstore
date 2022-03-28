@@ -6,28 +6,27 @@ use Model\ActiveRecord;
 
 class Direcciones extends ActiveRecord{
     protected static $tabla = "tab_direcciones";
-    protected static $columnaDB = ['id', 'cli_nombre', 'cli_apellidos', 'cli_email', 'cli_clave', 'cli_telefono', 'cli_estado','cli_rol','cli_verificado'];
+    protected static $columnaDB = ['id', 'url_tiktok', 'url_instagram', 'url_pinterest', 'url_facebook', 'url_whatsap', 'url_correoempresa', 'url_correoemisor'];
 
     public $id;
-    public $cli_nombre;
-    public $cli_apellidos;
-    public $cli_email;
-    public $cli_clave;
-    public $cli_telefono;
-    public $cli_estado;
-    public $cli_rol;
-    public $cli_verificado;
+    public $url_tiktok;
+    public $url_instagram;
+    public $url_pinterest;
+    public $url_facebook;
+    public $url_whatsap;
+    public $url_correoempresa;
+    public $url_correoemisor;
+
 
     public function __construct($args = [])
     {
         $this->id = $args['id'] ?? null;
-        $this->cli_nombre = $args['cli_nombre'] ?? null;
-        $this->cli_apellidos = $args['cli_apellidos'] ?? null;
-        $this->cli_email = $args['cli_email'] ?? null;
-        $this->cli_clave = $args['cli_clave'] ?? null;
-        $this->cli_telefono = $args['cli_telefono'] ?? null;
-        $this->cli_estado = $args['cli_estado'] ?? null;
-        $this->cli_rol = $args['cli_rol'] ?? null;
-        $this->cli_verificado = $args['cli_verificado'] ?? null;
+        $this->url_tiktok = $args['url_tiktok'] ?? null;
+        $this->url_instagram = $args['url_instagram'] ?? null;
+        $this->url_pinterest = $args['url_pinterest'] ?? null;
+        $this->url_facebook = $args['url_facebook'] ?? null;
+        $this->url_whatsap = $args['url_whatsap'] ?? null;
+        $this->url_correoempresa = $args['url_correoempresa'] ?? null;
+        $this->url_correoemisor = $args['url_correoemisor'] ?? null;
     }
 }
