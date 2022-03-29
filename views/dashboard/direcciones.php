@@ -38,7 +38,7 @@
             </div>
         
             <div class="modal-body">
-                <form id="modalDirecciones" enctype="multipart/form-data">
+                <form id="formDirecciones" enctype="multipart/form-data">
                     <input type="hidden" id="id">
                     <div class="mb-3">
                         <label for="nombre">url tiktok</label>
@@ -57,7 +57,7 @@
 
                     <div class="mb-3">
                         <label for="nombre">url Facebook</label>
-                        <input type="number" class="form-control" id="url_facebook">
+                        <input type="text" class="form-control" id="url_facebook">
                     </div>
 
                     <div class="mb-3">

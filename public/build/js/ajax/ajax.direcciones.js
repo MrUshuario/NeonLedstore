@@ -1,5 +1,7 @@
 $(document).ready(function () {
   tableAll();
+  saveDireccion()
+  obtenerData();
 });
 
 function tableAll(){
@@ -29,90 +31,72 @@ function tableAll(){
 
 }
 
-function saveVisitante(){
-  $("#formVisitante").submit(function(e){
+function saveDireccion(){
+  $("#formDirecciones").submit(function(e){
     e.preventDefault();
 
     let id = $("#id").val();
-    let vis_nombre = $("#vis_nombre").val();
-    let vis_apellidos = $("#vis_apellidos").val();
-    let vis_email = $("#vis_email").val();
-    let vis_telefono = $("#vis_telefono").val();
-    let vis_pregunta = $("#vis_pregunta").val();
+    let url_tiktok = $("#url_tiktok").val();
+    let url_instagram = $("#url_instagram").val();
+    let url_pinterest = $("#url_pinterest").val();
+    let url_facebook = $("#url_facebook").val();
+    let url_whatsap = $("#url_whatsap").val();
+    let url_correoempresa = $("#url_correoempresa").val();
+    let url_correoemisor = $("#url_correoemisor").val();
     
    
     const data = {
       id: id,
-      vis_nombre: vis_nombre,
-      vis_apellidos: vis_apellidos,
-      vis_email: vis_email,
-      vis_telefono: vis_telefono,
-      vis_pregunta: vis_pregunta, // puede ir vacio
+      url_tiktok: url_tiktok,
+      url_instagram: url_instagram,
+      url_pinterest: url_pinterest,
+      url_facebook: url_facebook,
+      url_whatsap: url_whatsap,
+      url_correoempresa: url_correoempresa,
+      url_correoemisor: url_correoemisor
     };
     console.log(id);
     if (id=="") {
-      if (vis_nombre == "" || vis_apellidos == "" || vis_email == "" || vis_telefono == ""){
+      if (url_tiktok == "" || url_instagram == "" || url_pinterest == "" || url_facebook == "" || url_whatsap == "" || url_correoempresa == "" || url_correoemisor == ""){
         swal({
           title:"Completar los campos requeridos",
           icon: "error"
         });
-      } else {
-        create(data)
-      } 
-        //function validarEmailReg(evento){
-        //exprEMAIL= new RegExp (/^[\w-\.]{3,}@([\w-]{2,}\.)*([\w-]{2,}\.)[\w-]{2,4}$/);
-        //email=document.getElementById("vis_email").value;
 
-    }else {
-     /* poner como arriba un if que mantenga que todo este relleno, y uno que verifique que el correo tenga un @*/
+      } 
+      // else {
+      //   // Call method create product
+      //   create(data);
+      // } 
+
+    } 
+      else {
+
       update(data);
     }
   });
 }
 
-function create(data) {
-  $.ajax ({
-    url: "visitante/create",
-    data: data,
-    type: "POST",
-    success: function(e) {
-      let json = JSON.parse(e);
-      switch (json.STATUS) {
-        case 1:
-          tableAll();
-          $("#modalVisitante").modal("hide");
-          swal({
-            title: json.mensaje,
-            icon: "success",
-          });
-          break;
-        case 2:
-          swal({
-            title: json.mensaje,
-            icon: "error",
-          });
-          break;
-      }
-    },
-  });
-}
+
 
 function update(data) {
   $.ajax ({
-    url: "visitante/update",
+    url: "/direcciones/update",
     type: "POST",
     data: data,
     success: function(e) {
-      $('#modalVisitante').modal('hide');
+      console.log(e);
+      $('#modalDirecciones').modal('hide');
       tableAll();
       swal({
-        title: "Editado correctamente",
+        title: "URL Editado Correctamente",
         icon: "success"
       });
     }
 
   });
 }
+
 
 
 function clean() {
@@ -127,17 +111,18 @@ function clean() {
 }
 
 
+
 function obtenerData() {
   $(document).on("click", "#edit", function (e) {
     clean();
 
-    let id = e.target.dataset.iddireccion; //cambiarlo en el boton edit
+    let id = e.target.dataset.iddireccion; 
     const data = {
       id: id,
     };
     $.ajax({
       type: "POST",
-      url: "/direccion/getDireccion",
+      url: "/direcciones/getDireccion",
       data: data,
       success: function (e) {
         console.log(e); 

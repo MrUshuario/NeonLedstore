@@ -122,6 +122,8 @@ $router = new Router();
     $router->get('/direcciones',[DireccionesController::class,'direcciones']);
     $router->get('/direcciones/listar',[DireccionesController::class,'listar']);
     //metodo post
+    $router->post('/direcciones/getDireccion',[DireccionesController::class,'getDireccion']);
+    $router->post('/direcciones/update',[DireccionesController::class,'update']);
 
 
 // BotonConfiguracion

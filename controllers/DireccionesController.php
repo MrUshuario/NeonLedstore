@@ -22,7 +22,7 @@ class DireccionesController
     }
 
 
-    public static function getDirecciones(Router $router){
+    public static function getDireccion(Router $router){
         if($_SERVER['REQUEST_METHOD'] == 'POST'){ 
             $id = $_POST['id'];
             $id = intval($id);
@@ -32,5 +32,22 @@ class DireccionesController
             ]);
             echo $json;
         }
+    }
+
+
+    public static function update(){
+        
+        if($_SERVER['REQUEST_METHOD'] == 'POST'){
+            $direcciones = Direcciones::find($_POST['id']);
+            $direcciones->sincronizar($_POST);
+
+            $resultado = $direcciones->actualizar();
+          
+            echo json_encode([
+                "dir" => $_POST,
+                "res" => $resultado
+            ]);
+        }
+        
     }
 }
