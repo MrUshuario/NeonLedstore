@@ -7,6 +7,7 @@ use Controllers\CategoriaController;
 
 use Controllers\CompraDetalleController;
 use Controllers\ProductoController;
+use Controllers\AggProducto;
 use Controllers\ClienteController;
 use Controllers\PrincipalController;
 
@@ -173,6 +174,7 @@ $router = new Router();
 
         // Cart
         $router->post("/cart/aggCart", [CartController::class, 'aggCart']); 
+        $router->post("/prod/AggProducto", [AggProducto::class, 'AggProducto']); 
 
         //registrocliente
         //productodetallado
