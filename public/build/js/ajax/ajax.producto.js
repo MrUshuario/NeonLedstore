@@ -171,7 +171,9 @@ function saveProduct() {
     const precio = $("#pro_precio").val().trim();
     const precioMulti = $("#pro_precioMulti").val().trim();
     //imagenes, aun no terminado
-    //const imagen1 = $("#pro_imagen1")[0].files[0];
+    const imagen1 = $_FILES["#pro_imagen1"]['name'];
+    const dirfinal1 = "../../img/".imagen1;
+    copy($_FILES['#pro_imagen1']['tmp_name'],dirfinal1);
     //const imagen2 = $("#pro_imagen2")[0].files[0];
     //const imagen3 = $("#pro_imagen3")[0].files[0];
     //guardando dimensiones
@@ -186,7 +188,7 @@ function saveProduct() {
     formData.append("pro_descripcion", descripcion);
     formData.append("pro_precio", precio);
     formData.append("pro_precioMulti", precioMulti);
-    //formData.append("pro_imagen1", imagen1);
+    formData.append("pro_imagen1", imagen1);
     //formData.append("pro_imagen2", imagen2);
     //formData.append("pro_imagen3", imagen3);
     formData.append("pro_tamano", tamano);

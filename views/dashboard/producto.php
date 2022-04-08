@@ -41,7 +41,7 @@
             </div>
             <div class="modal-body">
                 <!--El enctype multipart es importante para poder trabajar con imaenes-->
-                <form id="formProducto" enctype="multipart/form-data" class="color-dark">
+                <form action="../../controllers/AggProducto.php" method="POST" enctype="multipart/form-data" class="color-dark">
                     <input type="hidden" id="id">
                     <div class="mb-3">
                         <label for="pro_categoria">Categoría:</label>
