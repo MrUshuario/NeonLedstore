@@ -174,7 +174,6 @@ $router = new Router();
 
         // Cart
         $router->post("/cart/aggCart", [CartController::class, 'aggCart']); 
-        $router->post("/prod/AggProducto", [AggProducto::class, 'AggProducto']); 
 
         //registrocliente
         //productodetallado
@@ -187,7 +186,7 @@ $router = new Router();
         $router->get("/ProductoDetallado", [PrincipalController::class, 'proDetallado']);
         $router->get("/administrar", [PrincipalController::class, 'administrar']);
         $router->get("/cart", [PrincipalController::class, 'cart']); 
-        $router->get("/verificado", [PrincipalController::class, 'verificado']);      
+        $router->get("/verificado", [PrincipalController::class, 'verificado']);  
 
 
 
