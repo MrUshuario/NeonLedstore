@@ -46,15 +46,15 @@
                            
                                 <!--fin de principal registro -->
                                 <div class="col-sm-12">
-                                    <table class="table table-purple table-striped table-hover w-100 table-light table-fixed" id="CompraDetalle" role="grid" aria-describedby="CompraDetalle_info" style="width: 822px;">
+                                    <table class="table table-purple table-striped table-hover w-100 table-light table-fixed" id="CompraDetalle" role="grid" aria-describedby="CompraDetalle_info" style="width: 90%;">
                                         <!--PARA PONER CON BLANCO: table table-striped table-hover table-light table-fixed w-100-->    
                                         <thead class="tableAdm">
                                             <tr role="row">
-                                                <th class="sorting" tabindex="0" aria-controls="CompraDetalle" rowspan="1" colspan="1" aria-label="Producto ID: activate to sort column ascending" style="width: 119px;">Producto ID</th>
-                                                <th class="sorting_asc" tabindex="0" aria-controls="CompraDetalle" rowspan="1" colspan="1" aria-label="Precio Compra: activate to sort column descending" aria-sort="ascending" style="width: 143px;">Precio</th>
-                                                <th class="sorting" tabindex="0" aria-controls="CompraDetalle" rowspan="1" colspan="1" aria-label="Cantidad: activate to sort column ascending" style="width: 91px;">Cantidad</th>
-                                                <th class="sorting" tabindex="0" aria-controls="CompraDetalle" rowspan="1" colspan="1" aria-label="Total: activate to sort column ascending" style="width: 126px;">Total</th>
-                                                <th class="sorting" tabindex="0" aria-controls="CompraDetalle" rowspan="1" colspan="1" aria-label="Detalle Color: activate to sort column ascending" style="width: 153px;">Detalle color </th>
+                                                <th class="sorting" tabindex="0" aria-controls="CompraDetalle" rowspan="1" colspan="1" aria-label="Producto ID: activate to sort column ascending" style="width: 100px;">Producto ID</th>
+                                                <th class="sorting_asc" tabindex="0" aria-controls="CompraDetalle" rowspan="1" colspan="1" aria-label="Precio Compra: activate to sort column descending" aria-sort="ascending" style="width: 100px;">Precio</th>
+                                                <th class="sorting" tabindex="0" aria-controls="CompraDetalle" rowspan="1" colspan="1" aria-label="Cantidad: activate to sort column ascending" style="width: 90px;">Cantidad</th>
+                                                <th class="sorting" tabindex="0" aria-controls="CompraDetalle" rowspan="1" colspan="1" aria-label="Total: activate to sort column ascending" style="width: 100px;">Total</th>
+                                                <th class="sorting" tabindex="0" aria-controls="CompraDetalle" rowspan="1" colspan="1" aria-label="Detalle Color: activate to sort column ascending" style="width: 120px;">Detalle color </th>
                                             </tr>
                                         </thead>
 
