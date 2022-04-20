@@ -26,7 +26,7 @@
         </div>
 		</form></center>
 	</div>
-
+<!--HOLA -->
 </div>
 </section>
 <script src="build/js/ajax/ajax.cart.js"></script>
