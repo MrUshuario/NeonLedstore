@@ -1,11 +1,12 @@
 <!-- <section class="bg-black pt-5 pb-5 text-white"> -->
 <div class="pt-3 page-container bg-black text-white">
         <div class="container espAdminR">
-            <h2 class="text-white display-1 weight-medium m-3">ADMINISTRAR</h2>
+            <h3 class="text-white display-1 weight-medium mx-3">ADMINISTRAR</h3>
         
                     <!--CONTENIDO-->       
             
                     <div class="recipient">
+
                             <div class="contenedor-menuAdmin">
                                 <div class="sobre-admin">
                                     <h3 class="text-white"><i class="fa-solid fa-address-card"></i> Sobre el Cliente: </h3>
@@ -24,7 +25,7 @@
                             <!-- primer registro -->
                             <div class="row espacio-admin" id="cambioFontHistorial">
                               <!-- principal registro  -->
-                                <div class="row espacio-admin border neontabla">
+                                <div class="col mx-1  pt-3 mb-1 border neontabla">
                                     <div class="pt-3 col-sm-12">
                                         <table class="table table-purple table-striped table-hover  w-100 table-light table-fixed" id="clientecompraver">
                                         <!--PARA PONER CON BLANCO: table table-striped table-hover table-light table-fixed w-100-->    
@@ -46,15 +47,15 @@
                            
                                 <!--fin de principal registro -->
                                 <div class="col-sm-12">
-                                    <table class="table table-purple table-striped table-hover w-100 table-light table-fixed" id="CompraDetalle" role="grid" aria-describedby="CompraDetalle_info" style="width: 90%;">
+                                    <table class="table table-purple table-striped table-hover w-100 table-light table-fixed" id="CompraDetalle" role="grid" aria-describedby="CompraDetalle_info" style="width: 822px;">
                                         <!--PARA PONER CON BLANCO: table table-striped table-hover table-light table-fixed w-100-->    
                                         <thead class="tableAdm">
                                             <tr role="row">
-                                                <th class="sorting" tabindex="0" aria-controls="CompraDetalle" rowspan="1" colspan="1" aria-label="Producto ID: activate to sort column ascending" style="width: 100px;">Producto ID</th>
-                                                <th class="sorting_asc" tabindex="0" aria-controls="CompraDetalle" rowspan="1" colspan="1" aria-label="Precio Compra: activate to sort column descending" aria-sort="ascending" style="width: 100px;">Precio</th>
-                                                <th class="sorting" tabindex="0" aria-controls="CompraDetalle" rowspan="1" colspan="1" aria-label="Cantidad: activate to sort column ascending" style="width: 90px;">Cantidad</th>
-                                                <th class="sorting" tabindex="0" aria-controls="CompraDetalle" rowspan="1" colspan="1" aria-label="Total: activate to sort column ascending" style="width: 100px;">Total</th>
-                                                <th class="sorting" tabindex="0" aria-controls="CompraDetalle" rowspan="1" colspan="1" aria-label="Detalle Color: activate to sort column ascending" style="width: 120px;">Detalle color </th>
+                                                <th class="sorting" tabindex="0" aria-controls="CompraDetalle" rowspan="1" colspan="1" aria-label="Producto ID: activate to sort column ascending">Producto ID</th>
+                                                <th class="sorting_asc" tabindex="0" aria-controls="CompraDetalle" rowspan="1" colspan="1" aria-label="Precio Compra: activate to sort column descending" aria-sort="ascending">Precio</th>
+                                                <th class="sorting" tabindex="0" aria-controls="CompraDetalle" rowspan="1" colspan="1" aria-label="Cantidad: activate to sort column ascending">Cantidad</th>
+                                                <th class="sorting" tabindex="0" aria-controls="CompraDetalle" rowspan="1" colspan="1" aria-label="Total: activate to sort column ascending">Total</th>
+                                                <th class="sorting" tabindex="0" aria-controls="CompraDetalle" rowspan="1" colspan="1" aria-label="Detalle Color: activate to sort column ascending">Detalle color </th>
                                             </tr>
                                         </thead>
 
@@ -140,30 +141,45 @@
                                 </section>
                             </div>
 
-                            <div class="container" style="display: flex; align-items: center;">
-                                <section class="fondo-null espacio-admin" id="verificacionCorreo">
-                              <!-- principal registro  -->
-                              <div class="row espacio-admin">
-                                <div class="col-sm-12 border neontabla">
-                                    <h2 style="padding: 40px !important;" class="neones">Verificacion y activacion</h2>
-                                    <h5 style="margin-left: 120px" >Al clickear el boton recibira un enlace de confirmacion</h5>
-                                    <button id='botonveri' class="btn btn-primary neontextlanding bg-black " onclick="correoverificacion(); bloquear(10000,this)" style="margin-left: 300px; margin-right: 300px; margin-top: 10px; margin-bottom: 10px;">Verificar Correo</button>
-                                </div>
-                            </div>
-                                </section>
-                    </div>
 
-                    <div class="container" style="display: flex; align-items: center;">
+                            <div class="container">
+                                <section class="fondo-null espacio-admin" id="verificacionCorreo">
+                                        <div class="container">
+                                            <div class="col mx-1  pt-3 mb-1 border neontabla">
+                                                <h2 style="margin: 40px;" class="neones"><i class="fa-solid fa-check"></i> Verificacion y Activacion</h2>
+                                                <h5 style="text-align: center;" >Al clickear el boton recibira un enlace de confirmacion</h5>
+                                                
+                                                <div class="espacio-AA">
+                                                    <button class="btn btn-primary neontextlanding bg-black " onclick="correoverificacion(); bloquear(10000,this)" style="width: auto; height: auto; font-size: 14px;">Verificar Correo</button> 
+                                                </div>
+                                                <br>
+                                                <br>
+                                            </div>
+                                        </div>
+                                </section>
+                            </div>
+
+                            <div class="container" style="display: flex; align-items: center;">
                                 <section class="fondo-null espacio-admin" id="yaverificada">
                               <!-- principal registro  -->
-                              <div class="row espacio-admin">
-                                <div class="col-sm-12 border neontabla text-white w-100 ">
-                                    <h2 style="padding: 40px !important;" class="neones">Su correo ya se encuentra verificado</h2>
-                                    <p>Tiene acceso a todas las funciones como cliente verificado</p>
-                                </div>
-                            </div>
+                                    <div class="row espacio-admin">
+                                        <div class="col-sm-12 border neontabla text-white w-100 ">
+                                        <h2 style="margin: 40px;" class="neones"><i class="fa-solid fa-circle-check"></i> Su correo ya se encuentra verificado</h2>
+                                        <p>Tiene acceso a todas las funciones como cliente verificado</p>
+                                        </div>
+                                    </div>
                                 </section>
+                            </div>
+
                     </div>
+
+
+
+
+
+
+
+
         </div>
 
     <br>

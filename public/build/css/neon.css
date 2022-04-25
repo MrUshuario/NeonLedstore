@@ -406,7 +406,7 @@
     color: #a4a4a4c9;
 }
 .recipient{
-    width: 95%;
+    width: 90%;
     
     display: flex;
     justify-content: center;
@@ -421,18 +421,7 @@
 .contenedor-menuAdmin{
     width: 50%;
 }
-a .listaAdmin{
-    width: 97%;
-    height: 40px;
-    font-size: 25px;
-    list-style-type: none;
-    background-color: rgba(81, 62, 224, 0.658);
-    margin-top: 10px;
-    border-radius: 5px;
-    color: rgba(255, 255, 255, 0.829);
-    padding: 2px 40px;
-    
- }
+
  .contenedor-menuAdmin li a{
     text-decoration: none;
  }
@@ -445,10 +434,10 @@ a .listaAdmin{
 .fondo-null{
     display: none;
 }
-@media (max-width: 1499px){
+/* @media (max-width: 1499px){
     a .listaAdmin{
         width: 80%;
-        font-size: 15px;
+        font-size: 16px;
         list-style-type: none;
         background-color: rgba(73, 50, 245, 0.616);
         margin-top: 10px;
@@ -470,18 +459,105 @@ a .listaAdmin{
 }
 @media (max-width: 768px){
     a .listaAdmin{
-        width: 90%;
-        font-size: 10px;
+        width: 80%;
+        font-size: 12px;
         list-style-type: none;
         margin-top: 10px;
         border-radius: 5px;
-        padding: 13px 5px;
+        padding: 5px 7px;
      }
 
-}
+} */
 .espacio-AA{
-    margin: 2% 32%;
+    margin: 2% 35%;
 }
-.espacio-admin{
+/* .espacio-admin{
     margin: auto; 
+} */
+
+
+
+
+
+
+
+
+
+
+
+/*Cambios btns de prueba*/
+
+.contenedor-menuAdmin{
+    position:left;
+    top: 0;
+ /*para que 100pre este fijado en la parte superior*/
+    width: 350px;  /*relacion con margin-left de .mainTitulo*/
+    height: 50vh;
+    background-color:rgb(0, 0, 0);
+    transform: translateX(-350px);
+    transition: transform 0.3s;
+}
+
+@media screen and (min-width: 768px){ /* 768 para pantalla tablet, la barra nav*/
+    .contenedor-menuAdmin{
+        transform: translateX(0);
+    }
+}
+
+@media screen and (max-width: 1024px){ /* 1024 para pantalla escritorio laptop en hd, la barra nav*/
+    .navBtns{
+        transform: translateX(-300px);
+    }
+}
+
+
+.mostrar-res{
+    margin-left: 0; /* 0 sera en modo movil*/
+    min-height: 50vh;
+
+}
+@media screen and (min-width: 768px){ /* 768 para pantalla tablet, la barra nav*/
+    .mostrar-res{
+        margin-left: 60px;
+    }
+}
+
+@media screen and (max-width: 1024px){ /* 1024 para pantalla escritorio laptop en hd, la barra nav*/
+    .mostrar-res{
+        margin-right: 60px;
+    }
+}
+
+
+
+
+.listaAdmin{
+    width: 50px;
+    height: 50px;
+    padding: 7px;
+    border-radius: 10px;
+    background-color: rgb(109, 44, 170);
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 18px;
+    margin-top: auto;
+}
+
+
+
+.toggle-menu{
+    position: absolute;
+    top: 0;
+    left: 400px;
+    font-size: 2.5rem;
+    color: rgb(148, 49, 187);
+    width: 50px;
+    height: 50px;
+    padding: 1rem;
+    z-index: 100;
+}
+@media screen and (min-width: 600px){ /* para pantalla tablet, la barra nav*/
+    .toggle-menu{
+        display:none; /*es para mostrar el icono de hamburguesa cuando este modo tablet o celular*/
+    }
 }
