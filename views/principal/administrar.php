@@ -1,21 +1,24 @@
 <!-- <section class="bg-black pt-5 pb-5 text-white"> -->
 <div class="pt-3 page-container bg-black text-white">
         <div class="container espAdminR">
-            <h2 class="text-white display-1 weight-medium m-3">ADMINISTRAR</h2>
+            <h3 class="text-white display-1 weight-medium mx-3">ADMINISTRAR</h3>
         
                     <!--CONTENIDO-->       
             
                     <div class="recipient">
-                        <div class="contenedor-menuAdmin">
+                        <div class="contenedor-menuAdmin">                  
                             <div class="sobre-admin">
-                                <h3 class="text-white"><i class="fa-solid fa-address-card"></i> Sobre el Cliente: </h3>
+                                <h3 class="text-white">Sobre el Cliente: </h3>
+                            </div>
+                            <div id="toggle-menu" class="toggle-menu">
+                                <i class="fa-solid fa-circle-chevron-down toggle-menu_icons"></i>
                             </div>
                             <ul class="menuAdmin">
                                 <!-- <a href="#"><li class="listaAdmin"><i class="icon_izq_admin fa-solid fa-user-gear"></i>  Sobre el Cliente</li></a> -->
-                                <a href="#"><li class="listaAdmin" onclick="cambioHistorial()"><i class="icon_izq_admin fa-solid fa-boxes-stacked"></i>  Historial de Factura</li></a>
-                                <a href="#"><li class="listaAdmin" onclick="cambioDatosPersonales()"><i class="fa-regular fa-circle-user"></i>  Datos Personales</li></a>
-                                <a href="#"><li class="listaAdmin" onclick="cambioContrasena()"><i class="fa-solid fa-lock"></i> Cambiar Contraseña</li></a>
-                                <a href="#"><li class="listaAdmin" onclick="verificacionCorreo()"><i class="fas fa-user-check"></i> Activar cuenta</li></a>
+                                <a href="#" class="listaAdmin" onclick="cambioHistorial()"><i class="fa-solid fa-boxes-stacked"></i>  Historial de Factura</li></a><br><br>
+                                <a href="#" class="listaAdmin" onclick="cambioDatosPersonales()"><i class="fa-regular fa-circle-user"></i>  Datos Personales</li></a><br><br>
+                                <a href="#" class="listaAdmin" onclick="cambioContrasena()"><i class="fa-solid fa-lock"></i> Cambiar Contraseña</li></a><br><br>
+                                <a href="#" class="listaAdmin" onclick="verificacionCorreo()"><i class="fas fa-user-check"></i> Activar cuenta</li></a>
                             </ul>                         
                         </div>
 
@@ -169,7 +172,16 @@
                                     </div>
                                 </section>
                             </div>
+
                     </div>
+
+
+
+
+
+
+
+
         </div>
 
     <br>
